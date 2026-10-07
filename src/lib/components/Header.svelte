@@ -2,6 +2,7 @@
   import { appState } from '#lib/state/appState.svelte';
   import SlidersHorizontal from 'phosphor-svelte/lib/SlidersHorizontal';
   import ArrowsLeftRight from 'phosphor-svelte/lib/ArrowsLeftRight';
+  import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
 </script>
 
 <header class="flex items-center justify-between shrink-0 bg-white px-3 py-2 rounded-2xl shadow-xs border border-slate-200">
@@ -59,11 +60,22 @@
       {/if}
     </button>
 
+    <!-- Reset Button (Học lại từ đầu) -->
+    <button
+      type="button"
+      onclick={() => appState.resetCurrentTab()}
+      class="w-8.5 h-8.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 flex items-center justify-center text-slate-600 hover:text-pink-600 transition-colors cursor-pointer active:scale-95"
+      title="Học lại từ đầu"
+      aria-label="Học lại từ đầu"
+    >
+      <ArrowClockwise weight="bold" class="w-4 h-4" />
+    </button>
+
     <!-- Settings Button -->
     <button
       type="button"
       onclick={() => (appState.settingsModalOpen = true)}
-      class="w-8.5 h-8.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 flex items-center justify-center text-slate-600 transition-colors cursor-pointer"
+      class="w-8.5 h-8.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 flex items-center justify-center text-slate-600 transition-colors cursor-pointer active:scale-95"
       title="Cài đặt âm thanh"
       aria-label="Cài đặt"
     >

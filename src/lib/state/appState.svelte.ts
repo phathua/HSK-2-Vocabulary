@@ -4,7 +4,7 @@ import { shuffleArray, speakChinese, checkPinyinAnswer } from '#lib/utils/speech
 import { generateDistractors } from '#lib/utils/distractors';
 
 export type HskLevel = 'HSK1' | 'HSK2';
-export type AppTab = 'fill' | 'quiz' | 'flash';
+export type AppTab = 'fill' | 'quiz' | 'flash' | 'speech';
 export type QuizDirection = 'vi_to_zh' | 'zh_to_vi';
 
 const DATA_VERSION = 'v5_fresh_start';
@@ -74,6 +74,16 @@ export class AppState {
   flashUnknown = $state(0);
   flashRevealed = $state(false);
 
+  // 4. Chế độ Phát âm (Speech Recognition)
+  speechDeck = $state<VocabItem[]>([]);
+  currentSpeechItem = $state<VocabItem | null>(null);
+  speechDoneCount = $state(0);
+  speechCorrect = $state(0);
+  speechWrong = $state(0);
+  speechAutoSubmit = $state(true);
+  speechAnswered = $state(false);
+  speechFeedback = $state<{ text: string; type: 'correct' | 'wrong' } | null>(null);
+
   animKey = $state(0);
 
   // Computed totals
@@ -82,6 +92,7 @@ export class AppState {
   );
   totalQuizCount = $derived(this.filteredVocab.length);
   totalFlashCount = $derived(this.filteredVocab.length);
+  totalSpeechCount = $derived(this.filteredVocab.length);
 
   constructor() {
     this.initFromLocalStorage();
@@ -119,10 +130,14 @@ export class AppState {
 
       // Tab
       const tab = localStorage.getItem('HSK_ACTIVE_TAB') as AppTab;
-      if (tab === 'fill' || tab === 'quiz' || tab === 'flash') {
+      if (tab === 'fill' || tab === 'quiz' || tab === 'flash' || tab === 'speech') {
         this.activeTab = tab;
-      } else if (tab === ('quiz' as any)) {
-        this.activeTab = 'fill';
+      }
+
+      // Speech Auto Submit
+      const autoSub = localStorage.getItem('HSK_SPEECH_AUTO_SUBMIT');
+      if (autoSub !== null) {
+        this.speechAutoSubmit = autoSub === 'true';
       }
 
       // Lessons
@@ -151,6 +166,9 @@ export class AppState {
     if (this.flashDeck.length === 0 || !this.currentFlashItem) {
       this.initFlash();
     }
+    if (this.speechDeck.length === 0 || !this.currentSpeechItem) {
+      this.initSpeech();
+    }
   }
 
   saveToLocalStorage() {
@@ -163,6 +181,7 @@ export class AppState {
       localStorage.setItem('HSK2_SELECTED_LESSONS', JSON.stringify(this.selectedLessonsHsk2));
       localStorage.setItem('HSK_AUTOPLAY', this.autoPlay ? 'true' : 'false');
       localStorage.setItem('HSK_VOLUME', this.volume.toString());
+      localStorage.setItem('HSK_SPEECH_AUTO_SUBMIT', this.speechAutoSubmit ? 'true' : 'false');
     } catch {}
   }
 
@@ -183,7 +202,21 @@ export class AppState {
     this.initFill(vocab, false);
     this.initQuiz(vocab);
     this.initFlash();
+    this.initSpeech(vocab);
     this.saveToLocalStorage();
+  }
+
+  // Reset tab hiện tại để học lại từ đầu
+  resetCurrentTab() {
+    if (this.activeTab === 'fill') {
+      this.initFill(undefined, false);
+    } else if (this.activeTab === 'quiz') {
+      this.initQuiz();
+    } else if (this.activeTab === 'flash') {
+      this.initFlash();
+    } else if (this.activeTab === 'speech') {
+      this.initSpeech();
+    }
   }
 
   speakCurrent() {
@@ -191,6 +224,7 @@ export class AppState {
     if (this.activeTab === 'fill') text = this.currentFillItem?.hanzi || '';
     else if (this.activeTab === 'quiz') text = this.currentQuizItem?.hanzi || '';
     else if (this.activeTab === 'flash') text = this.currentFlashItem?.hanzi || '';
+    else if (this.activeTab === 'speech') text = this.currentSpeechItem?.hanzi || '';
 
     if (text) speakChinese(text, this.volume);
   }
@@ -448,6 +482,81 @@ export class AppState {
     if (this.currentFlashItem && this.autoPlay) {
       speakChinese(this.currentFlashItem.hanzi, this.volume);
     }
+    this.saveToLocalStorage();
+  }
+
+  // ==================== 4. CHẾ ĐỘ PHÁT ÂM (SPEECH RECOGNITION) ====================
+  initSpeech(sourceList?: VocabItem[]) {
+    const list = sourceList && sourceList.length > 0 ? sourceList : this.filteredVocab;
+    const shuffled = shuffleArray(list.length > 0 ? list : this.allVocab);
+    const curr = shuffled[shuffled.length - 1] || null;
+
+    this.speechDeck = shuffled;
+    this.currentSpeechItem = curr;
+    this.speechDoneCount = 0;
+    this.speechCorrect = 0;
+    this.speechWrong = 0;
+    this.speechAnswered = false;
+    this.speechFeedback = null;
+    this.animKey++;
+
+    if (curr && this.autoPlay) {
+      speakChinese(curr.hanzi, this.volume);
+    }
+    this.saveToLocalStorage();
+  }
+
+  nextSpeechItem() {
+    this.speechAnswered = false;
+    this.speechFeedback = null;
+    this.animKey++;
+
+    const remaining = [...this.speechDeck];
+    remaining.pop();
+    this.speechDeck = remaining;
+
+    if (remaining.length > 0) {
+      const nextItem = remaining[remaining.length - 1];
+      this.currentSpeechItem = nextItem;
+      if (this.autoPlay) speakChinese(nextItem.hanzi, this.volume);
+    } else {
+      this.currentSpeechItem = null;
+    }
+  }
+
+  checkSpeechAnswer(spokenPinyin: string, spokenHanzi: string) {
+    if (this.speechAnswered || !this.currentSpeechItem) return;
+
+    this.speechAnswered = true;
+    this.speechDoneCount++;
+
+    const targetHanzi = this.currentSpeechItem.hanzi.trim();
+    const targetPinyin = this.currentSpeechItem.pinyin.trim();
+
+    // So khớp hoặc theo Hanzi nhận diện, hoặc so khớp Pinyin
+    const isHanziMatch = spokenHanzi.includes(targetHanzi) || targetHanzi.includes(spokenHanzi);
+    const isPinyinMatch = checkPinyinAnswer(spokenPinyin, targetPinyin);
+
+    const isCorrect = isHanziMatch || isPinyinMatch;
+
+    if (isCorrect) {
+      this.speechCorrect++;
+      this.speechFeedback = {
+        text: 'Phát âm chuẩn xác! 🎉',
+        type: 'correct'
+      };
+    } else {
+      this.speechWrong++;
+      this.speechFeedback = {
+        text: `Chưa chính xác: chuẩn là ${targetPinyin}`,
+        type: 'wrong'
+      };
+    }
+    this.saveToLocalStorage();
+  }
+
+  toggleSpeechAutoSubmit() {
+    this.speechAutoSubmit = !this.speechAutoSubmit;
     this.saveToLocalStorage();
   }
 
