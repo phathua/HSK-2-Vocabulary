@@ -1,0 +1,493 @@
+import { HSK2_VOCABULARY, LESSON_INFOS as HSK2_LESSON_INFOS, type VocabItem, type LessonInfo } from '#lib/data/hsk2Vocabulary';
+import { HSK1_VOCABULARY, HSK1_LESSON_INFOS } from '#lib/data/hsk1Vocabulary';
+import { shuffleArray, speakChinese, checkPinyinAnswer } from '#lib/utils/speech';
+import { generateDistractors } from '#lib/utils/distractors';
+
+export type HskLevel = 'HSK1' | 'HSK2';
+export type AppTab = 'fill' | 'quiz' | 'flash';
+export type QuizDirection = 'vi_to_zh' | 'zh_to_vi';
+
+const DATA_VERSION = 'v5_fresh_start';
+
+export class AppState {
+  // Cấp độ: HSK 1 hoặc HSK 2
+  currentLevel = $state<HskLevel>('HSK2');
+
+  // Điều hướng & Chế độ
+  activeTab = $state<AppTab>('fill');
+  direction = $state<QuizDirection>('vi_to_zh');
+  filterModalOpen = $state(false);
+  settingsModalOpen = $state(false);
+
+  // Cài đặt
+  autoPlay = $state(false);
+  volume = $state(0.7);
+
+  // Bài học chọn lọc (Bài 1-15 cho từng cấp độ)
+  selectedLessonsHsk1 = $state<Record<number, boolean>>({});
+  selectedLessonsHsk2 = $state<Record<number, boolean>>({});
+
+  // Dữ liệu kích hoạt
+  allVocab = $derived(this.currentLevel === 'HSK1' ? HSK1_VOCABULARY : HSK2_VOCABULARY);
+  allLessons = $derived<LessonInfo[]>(this.currentLevel === 'HSK1' ? HSK1_LESSON_INFOS : HSK2_LESSON_INFOS);
+
+  selectedLessons = $derived(
+    this.currentLevel === 'HSK1' ? this.selectedLessonsHsk1 : this.selectedLessonsHsk2
+  );
+
+  filteredVocab = $derived(
+    this.allVocab.filter((item: VocabItem) => this.selectedLessons[item.lesson])
+  );
+
+  activeLessonsCount = $derived(
+    Object.values(this.selectedLessons).filter(Boolean).length
+  );
+
+  // 1. Chế độ Điền từ (Fill Word)
+  fillDeck = $state<VocabItem[]>([]);
+  currentFillItem = $state<VocabItem | null>(null);
+  fillInput = $state('');
+  fillAnswered = $state(false);
+  fillCorrect = $state(0);
+  fillWrong = $state(0);
+  fillSkipCount = $state(0);
+  fillDoneCount = $state(0);
+  wrongFillWords = $state<VocabItem[]>([]);
+  isFillReviewMode = $state(false);
+  fillFeedback = $state<{ text: string; type: 'correct' | 'wrong' | 'skip' | 'hint' } | null>(null);
+  fillHintShown = $state(false);
+
+  // 2. Chế độ Trắc nghiệm (Multiple Choice Quiz)
+  quizDeck = $state<VocabItem[]>([]);
+  currentQuizItem = $state<VocabItem | null>(null);
+  quizOptions = $state<VocabItem[]>([]);
+  quizSelectedId = $state<string | null>(null);
+  quizAnswered = $state(false);
+  quizCorrect = $state(0);
+  quizWrong = $state(0);
+  quizDoneCount = $state(0);
+
+  // 3. Chế độ Flashcard
+  flashDeck = $state<VocabItem[]>([]);
+  currentFlashItem = $state<VocabItem | null>(null);
+  flashKnown = $state(0);
+  flashUnknown = $state(0);
+  flashRevealed = $state(false);
+
+  animKey = $state(0);
+
+  // Computed totals
+  totalFillCount = $derived(
+    this.isFillReviewMode ? this.wrongFillWords.length + this.fillDoneCount : this.filteredVocab.length
+  );
+  totalQuizCount = $derived(this.filteredVocab.length);
+  totalFlashCount = $derived(this.filteredVocab.length);
+
+  constructor() {
+    this.initFromLocalStorage();
+  }
+
+  private initFromLocalStorage() {
+    const defaultLessons: Record<number, boolean> = {};
+    for (let i = 1; i <= 15; i++) defaultLessons[i] = true;
+
+    this.selectedLessonsHsk1 = { ...defaultLessons };
+    this.selectedLessonsHsk2 = { ...defaultLessons };
+
+    if (typeof window === 'undefined') return;
+
+    try {
+      const savedVersion = localStorage.getItem('HSK_DATA_VERSION');
+      if (savedVersion !== DATA_VERSION) {
+        localStorage.setItem('HSK_DATA_VERSION', DATA_VERSION);
+        localStorage.removeItem('HSK_QUIZ_DECK');
+        localStorage.removeItem('HSK_QUIZ_CURRENT');
+        localStorage.removeItem('HSK_QUIZ_DONE');
+        localStorage.removeItem('HSK_FILL_DECK');
+        localStorage.removeItem('HSK_FILL_CURRENT');
+        localStorage.removeItem('HSK_FLASH_DECK');
+        localStorage.removeItem('HSK_FLASH_CURRENT');
+      }
+
+      // Cấp độ
+      const savedLevel = localStorage.getItem('HSK_CURRENT_LEVEL') as HskLevel;
+      if (savedLevel === 'HSK1' || savedLevel === 'HSK2') this.currentLevel = savedLevel;
+
+      // Chiều đảo ngữ
+      const savedDir = localStorage.getItem('HSK_DIRECTION') as QuizDirection;
+      if (savedDir === 'vi_to_zh' || savedDir === 'zh_to_vi') this.direction = savedDir;
+
+      // Tab
+      const tab = localStorage.getItem('HSK_ACTIVE_TAB') as AppTab;
+      if (tab === 'fill' || tab === 'quiz' || tab === 'flash') {
+        this.activeTab = tab;
+      } else if (tab === ('quiz' as any)) {
+        this.activeTab = 'fill';
+      }
+
+      // Lessons
+      const savedHsk1 = localStorage.getItem('HSK1_SELECTED_LESSONS');
+      if (savedHsk1) this.selectedLessonsHsk1 = JSON.parse(savedHsk1);
+
+      const savedHsk2 = localStorage.getItem('HSK2_SELECTED_LESSONS');
+      if (savedHsk2) this.selectedLessonsHsk2 = JSON.parse(savedHsk2);
+
+      // Settings
+      this.autoPlay = localStorage.getItem('HSK_AUTOPLAY') === 'true';
+      const vol = localStorage.getItem('HSK_VOLUME');
+      this.volume = vol ? parseFloat(vol) : 0.7;
+    } catch (e) {
+      console.warn('Could not read from localStorage', e);
+    }
+  }
+
+  ensureInitialized() {
+    if (this.fillDeck.length === 0 || !this.currentFillItem) {
+      this.initFill(undefined, false);
+    }
+    if (this.quizDeck.length === 0 || !this.currentQuizItem) {
+      this.initQuiz();
+    }
+    if (this.flashDeck.length === 0 || !this.currentFlashItem) {
+      this.initFlash();
+    }
+  }
+
+  saveToLocalStorage() {
+    if (typeof window === 'undefined') return;
+    try {
+      localStorage.setItem('HSK_CURRENT_LEVEL', this.currentLevel);
+      localStorage.setItem('HSK_DIRECTION', this.direction);
+      localStorage.setItem('HSK_ACTIVE_TAB', this.activeTab);
+      localStorage.setItem('HSK1_SELECTED_LESSONS', JSON.stringify(this.selectedLessonsHsk1));
+      localStorage.setItem('HSK2_SELECTED_LESSONS', JSON.stringify(this.selectedLessonsHsk2));
+      localStorage.setItem('HSK_AUTOPLAY', this.autoPlay ? 'true' : 'false');
+      localStorage.setItem('HSK_VOLUME', this.volume.toString());
+    } catch {}
+  }
+
+  // Đổi chiều ngôn ngữ Việt ⇄ Trung
+  toggleDirection() {
+    this.direction = this.direction === 'vi_to_zh' ? 'zh_to_vi' : 'vi_to_zh';
+    this.saveToLocalStorage();
+  }
+
+  // Đổi cấp độ HSK1 / HSK2
+  setLevel(level: HskLevel) {
+    if (this.currentLevel === level) return;
+    this.currentLevel = level;
+    const targetLessons = level === 'HSK1' ? this.selectedLessonsHsk1 : this.selectedLessonsHsk2;
+    const vocab = (level === 'HSK1' ? HSK1_VOCABULARY : HSK2_VOCABULARY).filter(
+      (item: VocabItem) => targetLessons[item.lesson]
+    );
+    this.initFill(vocab, false);
+    this.initQuiz(vocab);
+    this.initFlash();
+    this.saveToLocalStorage();
+  }
+
+  speakCurrent() {
+    let text = '';
+    if (this.activeTab === 'fill') text = this.currentFillItem?.hanzi || '';
+    else if (this.activeTab === 'quiz') text = this.currentQuizItem?.hanzi || '';
+    else if (this.activeTab === 'flash') text = this.currentFlashItem?.hanzi || '';
+
+    if (text) speakChinese(text, this.volume);
+  }
+
+  // ==================== 1. CHẾ ĐỘ ĐIỀN TỪ (FILL WORD) ====================
+  initFill(sourceList?: VocabItem[], reviewMode = false) {
+    const list = sourceList && sourceList.length > 0 ? sourceList : this.filteredVocab;
+    const shuffled = shuffleArray(list.length > 0 ? list : this.allVocab);
+    const curr = shuffled[shuffled.length - 1] || null;
+
+    this.fillDeck = shuffled;
+    this.currentFillItem = curr;
+    this.fillCorrect = 0;
+    this.fillWrong = 0;
+    this.fillSkipCount = 0;
+    this.fillDoneCount = 0;
+    this.fillAnswered = false;
+    this.fillInput = '';
+    this.fillFeedback = null;
+    this.fillHintShown = false;
+    if (!reviewMode) this.wrongFillWords = [];
+    this.isFillReviewMode = reviewMode;
+    this.animKey++;
+
+    // Tự động phát âm chỉ khi ở chế độ vi_to_zh hoặc khi người dùng bật autoplay
+    if (curr && this.autoPlay) {
+      speakChinese(curr.hanzi, this.volume);
+    }
+    this.saveToLocalStorage();
+  }
+
+  nextFillItem() {
+    this.fillAnswered = false;
+    this.fillInput = '';
+    this.fillFeedback = null;
+    this.fillHintShown = false;
+    this.animKey++;
+
+    const remaining = [...this.fillDeck];
+    remaining.pop();
+    this.fillDeck = remaining;
+
+    if (remaining.length > 0) {
+      const nextItem = remaining[remaining.length - 1];
+      this.currentFillItem = nextItem;
+      if (this.autoPlay) speakChinese(nextItem.hanzi, this.volume);
+    } else {
+      this.currentFillItem = null;
+    }
+  }
+
+  checkFillAnswer() {
+    if (this.fillAnswered) {
+      this.nextFillItem();
+      return;
+    }
+    if (!this.fillInput.trim() || !this.currentFillItem) return;
+
+    this.fillAnswered = true;
+    this.fillDoneCount++;
+
+    const isZhToVi = this.direction === 'zh_to_vi';
+    let isCorrect = false;
+
+    if (isZhToVi) {
+      // Nhập nghĩa tiếng Việt
+      const inputNorm = this.fillInput.trim().toLowerCase();
+      const vietNorm = this.currentFillItem.viet.toLowerCase();
+      isCorrect = vietNorm.includes(inputNorm) || inputNorm.includes(vietNorm);
+    } else {
+      // Nhập Pinyin tiếng Trung
+      isCorrect = checkPinyinAnswer(this.fillInput, this.currentFillItem.pinyin);
+    }
+
+    if (isCorrect) {
+      this.fillCorrect++;
+      this.fillFeedback = {
+        text: `Chính xác! ${isZhToVi ? `Nghĩa: "${this.currentFillItem.viet}"` : `Pinyin: "${this.currentFillItem.pinyin}"`}`,
+        type: 'correct'
+      };
+      this.wrongFillWords = this.wrongFillWords.filter(w => w.id !== this.currentFillItem!.id);
+      speakChinese(this.currentFillItem.hanzi, this.volume);
+    } else {
+      this.fillWrong++;
+      this.fillFeedback = {
+        text: `Sai rồi! Đáp án: "${isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin}"`,
+        type: 'wrong'
+      };
+      if (!this.wrongFillWords.some(w => w.id === this.currentFillItem!.id)) {
+        this.wrongFillWords = [...this.wrongFillWords, this.currentFillItem];
+      }
+      speakChinese(this.currentFillItem.hanzi, this.volume);
+    }
+  }
+
+  skipFill() {
+    if (this.fillAnswered || !this.currentFillItem) return;
+    this.fillSkipCount++;
+    this.fillDoneCount++;
+    const isZhToVi = this.direction === 'zh_to_vi';
+    this.fillFeedback = {
+      text: `Đáp án: "${isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin}"`,
+      type: 'skip'
+    };
+    this.fillAnswered = true;
+    speakChinese(this.currentFillItem.hanzi, this.volume);
+  }
+
+  hintFill() {
+    if (this.fillAnswered || !this.currentFillItem) return;
+    const isZhToVi = this.direction === 'zh_to_vi';
+    this.fillFeedback = {
+      text: `Gợi ý: "${isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin}"`,
+      type: 'hint'
+    };
+    this.fillHintShown = true;
+  }
+
+  reviewWrongFill() {
+    if (this.wrongFillWords.length === 0) return;
+    this.initFill(this.wrongFillWords, true);
+  }
+
+  // ==================== 2. CHẾ ĐỘ TRẮC NGHIỆM (MULTIPLE CHOICE) ====================
+  initQuiz(sourceList?: VocabItem[]) {
+    const list = sourceList && sourceList.length > 0 ? sourceList : this.filteredVocab;
+    const shuffled = shuffleArray(list.length > 0 ? list : this.allVocab);
+    const curr = shuffled[shuffled.length - 1] || null;
+
+    this.quizDeck = shuffled;
+    this.currentQuizItem = curr;
+    this.quizCorrect = 0;
+    this.quizWrong = 0;
+    this.quizDoneCount = 0;
+    this.quizAnswered = false;
+    this.quizSelectedId = null;
+    this.animKey++;
+
+    if (curr) {
+      this.prepareQuizOptions(curr);
+    }
+  }
+
+  private prepareQuizOptions(target: VocabItem) {
+    const distractors = generateDistractors(target, this.allVocab, 3);
+    this.quizOptions = shuffleArray([target, ...distractors]);
+  }
+
+  selectQuizOption(item: VocabItem) {
+    if (this.quizAnswered || !this.currentQuizItem) return;
+
+    this.quizSelectedId = item.id;
+    this.quizAnswered = true;
+    this.quizDoneCount++;
+
+    const isCorrect = item.id === this.currentQuizItem.id;
+    if (isCorrect) {
+      this.quizCorrect++;
+    } else {
+      this.quizWrong++;
+    }
+
+    // TTS phát âm NGAY SAU KHI chọn câu trả lời (Tuyệt đối không phát âm trước)
+    speakChinese(this.currentQuizItem.hanzi, this.volume);
+  }
+
+  nextQuizItem() {
+    this.quizAnswered = false;
+    this.quizSelectedId = null;
+    this.animKey++;
+
+    const remaining = [...this.quizDeck];
+    remaining.pop();
+    this.quizDeck = remaining;
+
+    if (remaining.length > 0) {
+      const nextItem = remaining[remaining.length - 1];
+      this.currentQuizItem = nextItem;
+      this.prepareQuizOptions(nextItem);
+    } else {
+      this.currentQuizItem = null;
+      this.quizOptions = [];
+    }
+  }
+
+  // ==================== 3. CHẾ ĐỘ FLASHCARD ====================
+  initFlash() {
+    const list = this.filteredVocab.length > 0 ? this.filteredVocab : this.allVocab;
+    const shuffled = shuffleArray(list);
+    const curr = shuffled[shuffled.length - 1] || null;
+
+    this.flashDeck = shuffled;
+    this.currentFlashItem = curr;
+    this.flashKnown = 0;
+    this.flashUnknown = 0;
+    this.flashRevealed = false;
+    this.animKey++;
+
+    if (curr && this.autoPlay) {
+      speakChinese(curr.hanzi, this.volume);
+    }
+    this.saveToLocalStorage();
+  }
+
+  nextFlashItem() {
+    this.flashRevealed = false;
+    this.animKey++;
+    const remaining = [...this.flashDeck];
+    remaining.pop();
+    this.flashDeck = remaining;
+
+    if (remaining.length > 0) {
+      const nextItem = remaining[remaining.length - 1];
+      this.currentFlashItem = nextItem;
+      if (this.autoPlay) speakChinese(nextItem.hanzi, this.volume);
+    } else {
+      this.currentFlashItem = null;
+    }
+    this.saveToLocalStorage();
+  }
+
+  markFlashKnown() {
+    this.flashKnown++;
+    this.nextFlashItem();
+  }
+
+  // Khi "Chưa thuộc": Bỏ qua từ này ngay, chèn lại sau 5 đến 10 từ tiếp theo ngẫu nhiên
+  markFlashUnknown() {
+    this.flashUnknown++;
+    if (!this.currentFlashItem) return;
+
+    const itemToRequeue = this.currentFlashItem;
+    const remaining = [...this.flashDeck];
+    remaining.pop(); // Bỏ từ hiện tại ra khỏi đầu thẻ
+
+    if (remaining.length === 0) {
+      // Chỉ còn 1 từ, giữ lại hỏi tiếp
+      this.flashDeck = [itemToRequeue];
+      this.currentFlashItem = itemToRequeue;
+      this.flashRevealed = false;
+      this.animKey++;
+      return;
+    }
+
+    // Tính toán vị trí chèn lùi lại sau 5 đến 10 từ (hoặc cuối danh sách nếu ngắn hơn)
+    const delay = Math.floor(Math.random() * 6) + 5; // 5 -> 10 từ
+    const targetIndex = Math.max(0, remaining.length - delay);
+    remaining.splice(targetIndex, 0, itemToRequeue);
+
+    this.flashDeck = remaining;
+    this.currentFlashItem = remaining[remaining.length - 1];
+    this.flashRevealed = false;
+    this.animKey++;
+
+    if (this.currentFlashItem && this.autoPlay) {
+      speakChinese(this.currentFlashItem.hanzi, this.volume);
+    }
+    this.saveToLocalStorage();
+  }
+
+  // Lesson Selectors
+  toggleLesson(num: number) {
+    const activeLessons = this.currentLevel === 'HSK1' ? this.selectedLessonsHsk1 : this.selectedLessonsHsk2;
+    if (activeLessons[num] && this.activeLessonsCount <= 1) return;
+    activeLessons[num] = !activeLessons[num];
+
+    const newVocab = this.allVocab.filter((item: VocabItem) => activeLessons[item.lesson]);
+    this.initFill(newVocab, false);
+    this.initQuiz(newVocab);
+    this.initFlash();
+    this.saveToLocalStorage();
+  }
+
+  selectAllLessons() {
+    const all: Record<number, boolean> = {};
+    for (let i = 1; i <= 15; i++) all[i] = true;
+    if (this.currentLevel === 'HSK1') this.selectedLessonsHsk1 = all;
+    else this.selectedLessonsHsk2 = all;
+
+    this.initFill(this.allVocab, false);
+    this.initQuiz(this.allVocab);
+    this.initFlash();
+    this.saveToLocalStorage();
+  }
+
+  deselectAllLessons() {
+    const single: Record<number, boolean> = {};
+    for (let i = 1; i <= 15; i++) single[i] = (i === 1);
+    if (this.currentLevel === 'HSK1') this.selectedLessonsHsk1 = single;
+    else this.selectedLessonsHsk2 = single;
+
+    const singleList = this.allVocab.filter((i: VocabItem) => i.lesson === 1);
+    this.initFill(singleList, false);
+    this.initQuiz(singleList);
+    this.initFlash();
+    this.saveToLocalStorage();
+  }
+}
+
+export const appState = new AppState();
