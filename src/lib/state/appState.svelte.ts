@@ -570,6 +570,7 @@ export class AppState {
     this.initFill(newVocab, false);
     this.initQuiz(newVocab);
     this.initFlash();
+    this.initSpeech(newVocab);
     this.saveToLocalStorage();
   }
 
@@ -582,6 +583,7 @@ export class AppState {
     this.initFill(this.allVocab, false);
     this.initQuiz(this.allVocab);
     this.initFlash();
+    this.initSpeech(this.allVocab);
     this.saveToLocalStorage();
   }
 
@@ -595,6 +597,7 @@ export class AppState {
     this.initFill(singleList, false);
     this.initQuiz(singleList);
     this.initFlash();
+    this.initSpeech(singleList);
     this.saveToLocalStorage();
   }
 }

@@ -21,30 +21,45 @@
 
   let recognition: any = null;
 
-  onMount(() => {
+  function cleanupRecognition() {
+    if (recognition) {
+      try {
+        recognition.onstart = null;
+        recognition.onresult = null;
+        recognition.onspeechend = null;
+        recognition.onend = null;
+        recognition.onerror = null;
+        recognition.abort();
+      } catch {}
+      recognition = null;
+    }
+  }
+
+  function createRecognition() {
+    cleanupRecognition();
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
       speechSupported = false;
       errorMessage = 'Trình duyệt không hỗ trợ Web Speech API (Hãy dùng Chrome hoặc Safari trên iOS 14.5+)';
-      return;
+      return null;
     }
 
     try {
-      recognition = new SpeechRecognition();
-      recognition.lang = 'zh-CN';
-      recognition.continuous = false;
-      recognition.interimResults = true;
-      recognition.maxAlternatives = 1;
+      const rec = new SpeechRecognition();
+      rec.lang = 'zh-CN';
+      rec.continuous = false;
+      rec.interimResults = true;
+      rec.maxAlternatives = 1;
 
-      recognition.onstart = () => {
+      rec.onstart = () => {
         isRecording = true;
         isSpeechFinal = false;
         errorMessage = '';
       };
 
-      recognition.onresult = (event: any) => {
+      rec.onresult = (event: any) => {
         let transcript = '';
         let isFinal = false;
         for (let i = event.resultIndex; i < event.results.length; ++i) {
@@ -65,11 +80,11 @@
         }
       };
 
-      recognition.onspeechend = () => {
+      rec.onspeechend = () => {
         isSpeechFinal = true;
       };
 
-      recognition.onend = () => {
+      rec.onend = () => {
         isRecording = false;
         // Nếu người dùng bật tùy chọn "Tự động xác nhận đáp án" và đã có kết quả nhận diện
         if (appState.speechAutoSubmit && livePinyin && !appState.speechAnswered) {
@@ -77,7 +92,7 @@
         }
       };
 
-      recognition.onerror = (event: any) => {
+      rec.onerror = (event: any) => {
         isRecording = false;
         if (event.error === 'not-allowed') {
           errorMessage = 'Chưa cấp quyền Micro. Vui lòng cho phép Micro trong cài đặt trình duyệt.';
@@ -85,22 +100,30 @@
           errorMessage = `Lỗi nhận dạng: ${event.error}`;
         }
       };
+
+      return rec;
     } catch (err: any) {
       speechSupported = false;
       errorMessage = 'Không thể khởi tạo bộ nhận dạng giọng nói.';
+      return null;
+    }
+  }
+
+  onMount(() => {
+    const SpeechRecognition =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      speechSupported = false;
+      errorMessage = 'Trình duyệt không hỗ trợ Web Speech API (Hãy dùng Chrome hoặc Safari trên iOS 14.5+)';
     }
   });
 
   onDestroy(() => {
-    if (recognition) {
-      try {
-        recognition.abort();
-      } catch {}
-    }
+    cleanupRecognition();
   });
 
   function startRecording() {
-    if (!speechSupported || !recognition) return;
+    if (!speechSupported) return;
     if (appState.speechAnswered) {
       appState.nextSpeechItem();
     }
@@ -108,13 +131,25 @@
     livePinyin = '';
     isSpeechFinal = false;
     errorMessage = '';
+
+    // Hủy âm thanh TTS đang đọc nếu có để tránh khóa micro trên WebKit
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+
+    // Tạo mới một instance recognition cho mỗi lượt nói (Khắc phục triệt để lỗi WebKit iOS chỉ nhận dạng đúng 1 lần)
+    recognition = createRecognition();
+    if (!recognition) return;
+
     try {
       recognition.start();
-    } catch {
-      try {
-        recognition.stop();
-        setTimeout(() => recognition.start(), 100);
-      } catch {}
+    } catch (e: any) {
+      console.warn('SpeechRecognition start failed, retrying:', e);
+      setTimeout(() => {
+        try {
+          recognition?.start();
+        } catch {}
+      }, 150);
     }
   }
 
@@ -136,6 +171,7 @@
 
   function cancelSpoken() {
     stopRecording();
+    cleanupRecognition();
     liveHanzi = '';
     livePinyin = '';
     isSpeechFinal = false;
