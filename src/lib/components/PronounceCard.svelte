@@ -308,12 +308,11 @@
         </div>
 
         <!-- Checkbox: Tự động xác nhận đáp án -->
-        <label class="mt-3 inline-flex items-center gap-2 cursor-pointer select-none text-xs sm:text-sm text-slate-600 hover:text-slate-800">
+        <label class="mt-3 inline-flex items-center gap-2.5 cursor-pointer select-none text-xs sm:text-sm text-slate-600 hover:text-slate-800 transition-colors">
           <input
             type="checkbox"
             checked={appState.speechAutoSubmit}
             onchange={() => appState.toggleSpeechAutoSubmit()}
-            class="w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
           />
           <span class="font-medium">Tự động xác nhận đáp án sau khi nói</span>
         </label>
