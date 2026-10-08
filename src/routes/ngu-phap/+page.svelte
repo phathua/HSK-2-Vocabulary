@@ -106,28 +106,28 @@
 
 <main class="flex-1 flex flex-col min-h-0 my-2 overflow-y-auto pr-1 space-y-3">
   <!-- Hero Section & Learning Dashboard -->
-  <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-4 sm:p-5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
-    <div class="flex items-center gap-3.5 min-w-0">
-      <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 shadow-2xs">
-        <GraduationCap weight="duotone" class="w-7 h-7" />
+  <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-3.5 sm:p-5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-3.5">
+    <div class="flex items-center gap-3 min-w-0">
+      <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 shadow-2xs">
+        <GraduationCap weight="duotone" class="w-6 h-6 sm:w-7 sm:h-7" />
       </div>
-      <div class="min-w-0">
-        <div class="flex items-center gap-2">
-          <h1 class="text-base sm:text-lg font-black text-slate-900 dark:text-slate-100 truncate">
+      <div class="min-w-0 flex-1">
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+          <h1 class="text-sm sm:text-base md:text-lg font-black text-slate-900 dark:text-slate-100 leading-tight">
             Trọng Điểm Ngữ Pháp HSK 2
           </h1>
           <span class="px-2 py-0.5 rounded-lg bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-[10px] font-black uppercase shrink-0">
-            18 Điểm Then Chốt
+            18 Điểm
           </span>
         </div>
-        <p class="text-xs text-slate-500 dark:text-[#8E918F] mt-0.5 font-medium truncate">
-          Trích xuất từ 16 bộ đề thi chuẩn Hanban • Sắp xếp Dễ đến Khó • Mô hình cú pháp trực quan
+        <p class="text-[11px] sm:text-xs text-slate-500 dark:text-[#8E918F] mt-0.5 font-medium leading-relaxed">
+          16 đề thi Hanban • Dễ đến Khó • Cú pháp Lego trực quan
         </p>
       </div>
     </div>
 
     <!-- Learning Dashboard Progress Bar -->
-    <div class="shrink-0 w-full md:w-64 bg-slate-50 dark:bg-[#242526] p-3 rounded-2xl border border-slate-200/70 dark:border-[#323436] space-y-1.5">
+    <div class="shrink-0 w-full md:w-60 bg-slate-50 dark:bg-[#242526] p-2.5 sm:p-3 rounded-2xl border border-slate-200/70 dark:border-[#323436] space-y-1.5">
       <div class="flex items-center justify-between text-xs">
         <span class="font-bold text-slate-700 dark:text-slate-300">Tiến độ đã học</span>
         <span class="font-mono font-bold text-blue-600 dark:text-blue-400">{learnedCount}/{totalPoints} ({progressPercent}%)</span>
