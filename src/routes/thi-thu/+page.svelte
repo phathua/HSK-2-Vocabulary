@@ -7,32 +7,20 @@
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
 
-  const mockExams = [
-    {
-      id: 1,
-      title: 'Đề Thi Thử HSK 2 - Đề Số 1 (Chuẩn Đề Gốc)',
-      duration: '50 phút',
-      questions: '60 câu (35 câu Nghe + 25 câu Đọc)',
-      level: 'HSK 2',
-      tag: 'Phổ biến nhất'
-    },
-    {
-      id: 2,
-      title: 'Đề Thi Thử HSK 2 - Đề Số 2 (Tốc Độ Nhanh)',
-      duration: '45 phút',
-      questions: '60 câu (Phản xạ nhanh)',
-      level: 'HSK 2',
-      tag: 'Mới cập nhật'
-    },
-    {
-      id: 3,
-      title: 'Đề Ôn Luyện Cấp Tốc HSK 1 & 2 Tổng Hợp',
-      duration: '35 phút',
-      questions: '40 câu trọng tâm',
-      level: 'HSK 1-2',
-      tag: 'Cơ bản'
-    }
-  ];
+  import { mockExamsData, type MockExamItem } from '#lib/data/mockExamsList';
+
+  let selectedFilter = $state('all');
+
+  const filteredExams = $derived(
+    selectedFilter === 'all'
+      ? mockExamsData
+      : mockExamsData.filter((e: MockExamItem) => {
+          if (selectedFilter === 'hanban') return e.tag.includes('Đề thi thật') || e.tag.includes('Chính thức');
+          if (selectedFilter === 'sample') return e.tag.includes('Đề mẫu');
+          if (selectedFilter === 'mock') return e.tag.includes('Mock');
+          return true;
+        })
+  );
 </script>
 
 <svelte:head>
@@ -57,35 +45,82 @@
     </div>
   </div>
 
+  <!-- Filter Tabs -->
+  <div class="flex items-center gap-2 mb-4 overflow-x-auto pb-1 text-xs font-bold scrollbar-none">
+    <button
+      type="button"
+      onclick={() => (selectedFilter = 'all')}
+      class="px-4 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap {selectedFilter === 'all'
+        ? 'bg-orange-600 text-white shadow-xs'
+        : 'bg-white dark:bg-[#1B1B1B] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#282A2C]'}"
+    >
+      Tất cả ({mockExamsData.length})
+    </button>
+    <button
+      type="button"
+      onclick={() => (selectedFilter = 'hanban')}
+      class="px-4 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap {selectedFilter === 'hanban'
+        ? 'bg-orange-600 text-white shadow-xs'
+        : 'bg-white dark:bg-[#1B1B1B] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#282A2C]'}"
+    >
+      Đề thi thật Hanban
+    </button>
+    <button
+      type="button"
+      onclick={() => (selectedFilter = 'sample')}
+      class="px-4 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap {selectedFilter === 'sample'
+        ? 'bg-orange-600 text-white shadow-xs'
+        : 'bg-white dark:bg-[#1B1B1B] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#282A2C]'}"
+    >
+      Đề mẫu chuẩn (样卷)
+    </button>
+    <button
+      type="button"
+      onclick={() => (selectedFilter = 'mock')}
+      class="px-4 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap {selectedFilter === 'mock'
+        ? 'bg-orange-600 text-white shadow-xs'
+        : 'bg-white dark:bg-[#1B1B1B] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#282A2C]'}"
+    >
+      Online Mock Test
+    </button>
+  </div>
+
   <!-- Mock Exam List -->
   <div class="space-y-3.5">
-    {#each mockExams as exam}
+    {#each filteredExams as exam}
       <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-5 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-orange-300 dark:hover:border-orange-800 transition-all">
         <div>
-          <div class="flex items-center gap-2 mb-1.5">
-            <span class="text-[11px] font-black px-2.5 py-0.5 rounded-full bg-orange-100 dark:bg-orange-950/70 text-orange-700 dark:text-orange-300">
+          <div class="flex items-center gap-2 mb-1.5 flex-wrap">
+            <span class="text-[11px] font-black px-2.5 py-0.5 rounded-full {exam.badgeColor === 'emerald' ? 'bg-emerald-100 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300' : exam.badgeColor === 'purple' ? 'bg-purple-100 dark:bg-purple-950/70 text-purple-700 dark:text-purple-300' : 'bg-orange-100 dark:bg-orange-950/70 text-orange-700 dark:text-orange-300'}">
               {exam.tag}
             </span>
-            <span class="text-xs font-bold text-slate-400 dark:text-neutral-500">
-              {exam.level}
+            <span class="text-xs font-bold font-mono text-slate-400 dark:text-neutral-400">
+              {exam.code}
             </span>
+            {#if exam.hasAudio}
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400">
+                Audio OGG/MP3
+              </span>
+            {/if}
           </div>
           <h2 class="text-base font-extrabold text-slate-900 dark:text-slate-100">
             {exam.title}
           </h2>
-          <div class="flex items-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400 mt-2">
+          <div class="flex items-center gap-3 text-xs font-semibold text-slate-500 dark:text-slate-400 mt-2 flex-wrap">
             <span class="flex items-center gap-1">
               <Clock weight="duotone" class="w-4 h-4 text-orange-500" />
               {exam.duration}
             </span>
             <span>•</span>
-            <span>{exam.questions}</span>
+            <span>{exam.questionsCount} câu (35 Nghe + 25 Đọc)</span>
+            <span>•</span>
+            <span>{exam.imagesCount} ảnh minh họa</span>
           </div>
         </div>
 
         <button
           type="button"
-          onclick={() => alert(`Tính năng bắt đầu làm đề "${exam.title}" đang chuẩn bị mở!`)}
+          onclick={() => alert(`Chuẩn bị vào phòng thi: ${exam.title} (${exam.code})!`)}
           class="px-5 py-3 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-xs md:text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm active:scale-95 transition-all cursor-pointer"
         >
           <Play weight="bold" class="w-4 h-4" />
