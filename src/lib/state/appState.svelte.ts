@@ -370,7 +370,10 @@ export class AppState {
   }
 
   private prepareQuizOptions(target: VocabItem) {
-    const distractors = generateDistractors(target, this.allVocab, 3);
+    // Ưu tiên lấy từ vựng trong các bài học đang chọn (filteredVocab).
+    // Nếu số từ trong bộ lọc quá ít (< 4 từ), tự động bổ sung từ kho chung allVocab để luôn đủ 4 đáp án.
+    const pool = this.filteredVocab.length >= 4 ? this.filteredVocab : this.allVocab;
+    const distractors = generateDistractors(target, pool, 3);
     this.quizOptions = shuffleArray([target, ...distractors]);
   }
 

@@ -108,7 +108,7 @@
           type="button"
           onclick={() => appState.selectQuizOption(opt)}
           disabled={appState.quizAnswered}
-          class={`min-h-[58px] p-2.5 rounded-2xl font-black text-left flex flex-col justify-center transition-all cursor-pointer border-2 relative select-none ${
+          class={`min-h-[62px] p-2.5 rounded-2xl font-black text-left flex items-center gap-2.5 transition-all cursor-pointer border-2 relative select-none ${
             !isRevealed
               ? 'bg-white hover:bg-slate-50 border-slate-200 active:scale-98 shadow-2xs'
               : isTarget
@@ -118,42 +118,58 @@
               : 'bg-slate-50 border-slate-200 opacity-50'
           }`}
         >
-          <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-0.5">
+          <!-- Badge A, B, C, D to tròn nổi bật -->
+          <div
+            class={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 font-black text-xs sm:text-sm border transition-colors ${
+              !isRevealed
+                ? 'bg-slate-100 text-slate-700 border-slate-200'
+                : isTarget
+                ? 'bg-emerald-500 text-white border-emerald-600'
+                : isSelected
+                ? 'bg-rose-500 text-white border-rose-600'
+                : 'bg-slate-200/60 text-slate-400 border-slate-200'
+            }`}
+          >
             {['A', 'B', 'C', 'D'][idx]}
-          </span>
+          </div>
 
-          {#if !isZhToVi}
-            <!-- Option mode Việt ➔ Trung: hiện Hanzi + Pinyin -->
-            <div class="flex items-baseline gap-1.5 min-w-0">
-              <span class="text-base sm:text-lg font-black text-slate-900 truncate">
-                {opt.hanzi}
+          <div class="flex-1 min-w-0">
+            {#if !isZhToVi}
+              <!-- Option mode Việt ➔ Trung: hiện Hanzi + Pinyin -->
+              <div class="flex items-baseline gap-1.5 min-w-0">
+                <span class="text-base sm:text-lg font-black text-slate-900 truncate">
+                  {opt.hanzi}
+                </span>
+                <span class="text-xs sm:text-sm font-bold text-blue-600 truncate">
+                  {opt.pinyin}
+                </span>
+              </div>
+            {:else}
+              <!-- Option mode Trung ➔ Việt: hiện Nghĩa tiếng Việt -->
+              <span class="text-xs sm:text-sm font-black text-slate-900 leading-snug line-clamp-2">
+                {opt.viet}
               </span>
-              <span class="text-xs sm:text-sm font-bold text-blue-600 truncate">
-                {opt.pinyin}
-              </span>
-            </div>
-          {:else}
-            <!-- Option mode Trung ➔ Việt: hiện Nghĩa tiếng Việt -->
-            <span class="text-xs sm:text-sm font-black text-slate-900 leading-snug line-clamp-2">
-              {opt.viet}
-            </span>
-          {/if}
+            {/if}
+          </div>
         </button>
       {/each}
     </div>
 
-    <!-- Nút Tiếp tục sau khi đã trả lời (Cố định chiều cao, tránh giật layout khi hiện nút) -->
+    <!-- Nút Câu tiếp theo: Luôn hiện diện, xám xịt khi chưa chọn đáp án, sáng xanh nổi bật khi đã chọn -->
     <div class="h-11 sm:h-12 w-full">
-      {#if appState.quizAnswered}
-        <button
-          type="button"
-          onclick={() => appState.nextQuizItem()}
-          class="w-full h-full bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-black text-sm rounded-2xl shadow-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer animate-[pop_0.15s_ease]"
-        >
-          <span>Câu tiếp theo</span>
-          <ArrowRight weight="bold" class="w-4 h-4" />
-        </button>
-      {/if}
+      <button
+        type="button"
+        onclick={() => appState.quizAnswered && appState.nextQuizItem()}
+        disabled={!appState.quizAnswered}
+        class={`w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none ${
+          appState.quizAnswered
+            ? 'bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-md cursor-pointer animate-[pop_0.15s_ease]'
+            : 'bg-slate-200 text-slate-400 border border-slate-300/60 cursor-not-allowed opacity-80'
+        }`}
+      >
+        <span>Câu tiếp theo</span>
+        <ArrowRight weight="bold" class="w-4 h-4" />
+      </button>
     </div>
 
     <!-- Micro Stats Footer -->
