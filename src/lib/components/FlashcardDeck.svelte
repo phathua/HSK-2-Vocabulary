@@ -35,6 +35,7 @@
   let flyingCard = $state<VocabItem | null>(null);
   let flyingOffsetX = $state(0);
   let flyingOffsetY = $state(0);
+  let flyingIsFlipped = $state(false);
 
   // 3D Flip state (local flip card toggle)
   let isFlipped = $state(false);
@@ -120,6 +121,7 @@
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
     const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
     isDragging = true;
+    hasDragged = false;
     startX = clientX;
     startY = clientY;
   }
@@ -131,6 +133,9 @@
     const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
     offsetX = clientX - startX;
     offsetY = clientY - startY;
+    if (Math.abs(offsetX) > 8 || Math.abs(offsetY) > 8) {
+      hasDragged = true;
+    }
   }
 
   function handlePointerUp() {
@@ -159,9 +164,14 @@
   function executeSwipe(direction: 'left' | 'right') {
     if (flyingCard || !appState.currentFlashItem) return;
 
-    // 1. Lưu lại card đang vuốt thành flyingCard
+    // 1. Lưu lại card đang vuốt thành flyingCard, kèm trạng thái lật
     const cardToFly = appState.currentFlashItem;
     flyingCard = cardToFly;
+    flyingIsFlipped = isFlipped;
+
+    // Đặt cờ bỏ transition lật ngay và reset isFlipped về false để thẻ dưới trồi lên luôn phẳng
+    skipFlipTransition = true;
+    isFlipped = false;
     
     // Đặt tọa độ đích ngoài màn hình
     const targetX = direction === 'right' ? window.innerWidth + 350 : -window.innerWidth - 350;
@@ -201,6 +211,7 @@
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           isAppearing = false;
+          skipFlipTransition = false;
         });
       });
     }, 350);
@@ -209,6 +220,12 @@
   // Click card to toggle 3D Flip
   function handleCardClick() {
     registerUserAction();
+    // Chặn hoàn toàn click ma sau khi đã vuốt kéo card
+    if (hasDragged || isLeavingDeck || isAnimating || flyingCard) {
+      hasDragged = false;
+      return;
+    }
+
     if (Math.abs(offsetX) < 10 && Math.abs(offsetY) < 10) {
       isFlipped = !isFlipped;
       if (isFlipped) {
@@ -354,8 +371,11 @@
       >
         <!-- 3D Flip Container -->
         <div
-          class="w-full h-full relative [transform-style:preserve-3d] transition-transform duration-500"
-          style={`transform: rotateY(${isFlipped ? 180 : 0}deg);`}
+          class="w-full h-full relative [transform-style:preserve-3d]"
+          style={`
+            transform: rotateY(${isFlipped ? 180 : 0}deg);
+            transition: ${skipFlipTransition || isAppearing ? 'none' : 'transform 0.5s ease-out'};
+          `}
         >
           <!-- ================= FRONT FACE ================= -->
           <div
@@ -469,26 +489,43 @@
             z-index: 30;
           `}
         >
-          {#if flyingCard.image}
-            <div class="relative mb-3">
-              <img
-                src={flyingCard.image}
-                alt={flyingCard.hanzi}
-                class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-slate-100 shadow-2xs bg-slate-50"
-              />
-            </div>
-          {/if}
-
-          {#if !isZhToVi}
-            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Nghĩa tiếng Việt</span>
-            <div class="text-2xl sm:text-3xl font-black text-slate-900 mb-2 max-w-xs leading-snug">
-              {flyingCard.viet}
-            </div>
-          {:else}
-            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Từ vựng tiếng Trung</span>
-            <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-2">
+          {#if flyingIsFlipped}
+            <!-- Đang lật xem đáp án mà vuốt thì bay ra với mặt đáp án -->
+            <span class="text-[11px] font-bold uppercase tracking-widest text-blue-600 mb-1">Đáp án</span>
+            <div class="text-4xl sm:text-5xl font-black text-slate-900 mb-1">
               {flyingCard.hanzi}
             </div>
+            <div class="text-2xl font-black text-blue-600 mb-3">
+              {flyingCard.pinyin}
+            </div>
+            <div class="px-4 py-2 bg-slate-50 rounded-2xl border border-slate-200 max-w-xs">
+              <span class="text-xs font-bold text-slate-400 block mb-0.5">Tiếng Việt</span>
+              <span class="text-base sm:text-lg font-black text-emerald-600 leading-snug">
+                {flyingCard.viet}
+              </span>
+            </div>
+          {:else}
+            {#if flyingCard.image}
+              <div class="relative mb-3">
+                <img
+                  src={flyingCard.image}
+                  alt={flyingCard.hanzi}
+                  class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-slate-100 shadow-2xs bg-slate-50"
+                />
+              </div>
+            {/if}
+
+            {#if !isZhToVi}
+              <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Nghĩa tiếng Việt</span>
+              <div class="text-2xl sm:text-3xl font-black text-slate-900 mb-2 max-w-xs leading-snug">
+                {flyingCard.viet}
+              </div>
+            {:else}
+              <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Từ vựng tiếng Trung</span>
+              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-2">
+                {flyingCard.hanzi}
+              </div>
+            {/if}
           {/if}
         </div>
       {/if}
