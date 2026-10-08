@@ -57,7 +57,7 @@
 </script>
 
 <!-- Main Fill Word Card -->
-<main class="flex-1 min-h-0 w-full max-w-xl mx-auto bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-5 flex flex-col justify-between items-center text-center relative overflow-hidden transition-colors">
+<main class="flex-1 min-h-0 w-full max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-5 flex flex-col justify-between items-center text-center relative overflow-hidden transition-colors">
   <!-- Top Bar: Nút Bài bên trái, Nút đổi chế độ nổi bật bên phải -->
   <div class="w-full flex items-center justify-between shrink-0 mb-1 z-10">
     <!-- Floating Lesson Select Button -->
@@ -118,7 +118,7 @@
         </div>
 
         <!-- Chữ Hán căn giữa màn hình tuyệt đối, nút Loa TTS neo sang mép phải -->
-        <div class="relative w-full max-w-md flex items-center justify-center mb-1.5 sm:mb-2 px-10">
+        <div class="relative w-full max-w-md md:max-w-lg flex items-center justify-center mb-1.5 sm:mb-2 px-10">
           <div class="text-2xl sm:text-3xl md:text-4xl font-black text-blue-600 dark:text-blue-400 font-sans tracking-tight text-center">
             {appState.currentFillItem.hanzi}
           </div>
@@ -132,14 +132,14 @@
           </button>
         </div>
 
-        <!-- Chế độ 'Chọn từ': Các ô Slot căn giữa tuyệt đối, nút Xoá neo sang mép phải -->
+        <!-- Chế độ 'Chọn từ': Các ô Slot căn giữa tuyệt đối, bề rộng desktop thoải mái hiển thị full 2 vế -->
         {#if isTileMode && appState.fillWordChunks.length > 0}
           {@const isSkipped = appState.fillAnswered && appState.fillFeedback?.type === 'skip'}
           {@const isWrong = appState.fillAnswered && appState.fillFeedback?.type === 'wrong'}
-          <div class="w-full max-w-lg mt-0.5 px-1 flex flex-col items-center gap-1.5">
+          <div class="w-full max-w-xl md:max-w-2xl mt-0.5 px-1 flex flex-col items-center gap-1.5">
             <div class="relative w-full flex items-center justify-center py-0.5 px-10">
-              <!-- Hàng các vế/cụm ô điền từ luôn nằm chính giữa tâm màn hình -->
-              <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 sm:gap-x-4">
+              <!-- Hàng các vế/cụm ô điền từ luôn dàn hàng ngang thoải mái trên desktop -->
+              <div class="flex flex-wrap md:flex-nowrap items-center justify-center gap-x-3 sm:gap-x-4 md:gap-x-5 gap-y-2">
                 {#each appState.fillWordChunks as chunk, cIdx}
                   <div
                     role="group"
@@ -198,8 +198,8 @@
 
             <!-- Nếu trả lời SAI: Hiển thị đáp án đúng màu đỏ ngay bên dưới ô điền chữ -->
             {#if isWrong}
-              <div class="text-xs font-black text-rose-500 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 px-3 py-1.5 rounded-xl animate-fade-in mt-0.5">
-                Đáp án đúng: <span class="underline underline-offset-2">{appState.currentFillItem.pinyin}</span>
+              <div class="text-xs sm:text-sm font-black text-rose-500 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 px-3.5 py-1.5 rounded-xl animate-fade-in mt-1 shadow-2xs">
+                Đáp án đúng: <span class="underline underline-offset-2 tracking-wide">{appState.currentFillItem.pinyin}</span>
               </div>
             {/if}
           </div>
@@ -263,7 +263,7 @@
 
 <!-- Fill Footer Controls -->
 {#if appState.currentFillItem}
-  <footer class="shrink-0 mt-2 w-full max-w-xl mx-auto space-y-1.5 sm:space-y-2">
+  <footer class="shrink-0 mt-2 w-full max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto space-y-1.5 sm:space-y-2">
     <!-- Feedback Banner (Chỉ hiển thị khi ở chế độ Thủ công, chế độ Chọn từ không hiển thị thanh to này) -->
     {#if appState.fillFeedback && !isTileMode}
       <div class={`py-2 px-3 rounded-2xl text-center shadow-xs flex items-center justify-center gap-2 border transition-all ${
