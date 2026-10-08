@@ -2,12 +2,14 @@
   import { onMount, onDestroy } from 'svelte';
   import { appState } from '#lib/state/appState.svelte';
   import { pinyin } from 'pinyin-pro';
+  import { toast } from 'svelte-sonner';
   import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
   import PencilLine from 'phosphor-svelte/lib/PencilLine';
   import Microphone from 'phosphor-svelte/lib/Microphone';
   import Square from 'phosphor-svelte/lib/Square';
   import Check from 'phosphor-svelte/lib/Check';
   import X from 'phosphor-svelte/lib/X';
+  import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
   import Confetti from 'phosphor-svelte/lib/Confetti';
   import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
   import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
@@ -15,11 +17,21 @@
   let isRecording = $state(false);
   let liveHanzi = $state('');
   let livePinyin = $state('');
-  let isSpeechFinal = $state(false);
   let speechSupported = $state(true);
   let errorMessage = $state('');
 
   let recognition: any = null;
+  let activeRecItemId: string | null = null;
+
+  // Lắng nghe thay đổi từ vựng hiện tại: tự động reset sạch sẽ preview và thông báo lỗi
+  $effect(() => {
+    const currentId = appState.currentSpeechItem?.id;
+    if (currentId) {
+      liveHanzi = '';
+      livePinyin = '';
+      errorMessage = '';
+    }
+  });
 
   function cleanupRecognition() {
     if (recognition) {
@@ -33,9 +45,10 @@
       } catch {}
       recognition = null;
     }
+    activeRecItemId = null;
   }
 
-  function createRecognition() {
+  function createRecognition(targetItemId: string) {
     cleanupRecognition();
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
@@ -55,39 +68,35 @@
 
       rec.onstart = () => {
         isRecording = true;
-        isSpeechFinal = false;
         errorMessage = '';
       };
 
       rec.onresult = (event: any) => {
         let transcript = '';
-        let isFinal = false;
         for (let i = event.resultIndex; i < event.results.length; ++i) {
           transcript += event.results[i][0].transcript;
-          if (event.results[i].isFinal) {
-            isFinal = true;
-          }
         }
 
-        liveHanzi = transcript.trim();
-        if (liveHanzi) {
-          // Chuyển ký tự tiếng Trung sang phiên âm Pinyin có dấu thanh điệu
-          livePinyin = pinyin(liveHanzi, { toneType: 'symbol' });
-        }
-
-        if (isFinal) {
-          isSpeechFinal = true;
+        const trimmed = transcript.trim();
+        liveHanzi = trimmed;
+        if (trimmed) {
+          livePinyin = pinyin(trimmed, { toneType: 'symbol' });
         }
       };
 
       rec.onspeechend = () => {
-        isSpeechFinal = true;
+        // Người dùng dừng nói
       };
 
       rec.onend = () => {
         isRecording = false;
-        // Nếu người dùng bật tùy chọn "Tự động xác nhận đáp án" và đã có kết quả nhận diện
-        if (appState.speechAutoSubmit && livePinyin && !appState.speechAnswered) {
+        // Tự động nộp bài nếu bật cấu hình và người dùng đang ở đúng câu đó
+        if (
+          appState.speechAutoSubmit &&
+          livePinyin &&
+          !appState.speechAnswered &&
+          appState.currentSpeechItem?.id === targetItemId
+        ) {
           submitAnswer();
         }
       };
@@ -95,12 +104,13 @@
       rec.onerror = (event: any) => {
         isRecording = false;
         if (event.error === 'not-allowed') {
-          errorMessage = 'Chưa cấp quyền Micro. Vui lòng cho phép Micro trong cài đặt trình duyệt.';
-        } else if (event.error !== 'no-speech') {
+          errorMessage = 'Chưa cấp quyền Micro. Vui lòng cho phép Micro trong cài đặt.';
+        } else if (event.error !== 'no-speech' && event.error !== 'aborted') {
           errorMessage = `Lỗi nhận dạng: ${event.error}`;
         }
       };
 
+      activeRecItemId = targetItemId;
       return rec;
     } catch (err: any) {
       speechSupported = false;
@@ -122,34 +132,57 @@
     cleanupRecognition();
   });
 
-  function startRecording() {
-    if (!speechSupported) return;
-    if (appState.speechAnswered) {
-      appState.nextSpeechItem();
+  function handleNext() {
+    stopRecording();
+    cleanupRecognition();
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
     }
     liveHanzi = '';
     livePinyin = '';
-    isSpeechFinal = false;
+    errorMessage = '';
+    appState.nextSpeechItem();
+  }
+
+  function handleRetry() {
+    stopRecording();
+    cleanupRecognition();
+    liveHanzi = '';
+    livePinyin = '';
+    errorMessage = '';
+    appState.speechAnswered = false;
+    appState.speechFeedback = null;
+  }
+
+  function startRecording() {
+    if (!speechSupported || appState.speechAnswered || !appState.currentSpeechItem) return;
+
+    liveHanzi = '';
+    livePinyin = '';
     errorMessage = '';
 
-    // Hủy âm thanh TTS đang đọc nếu có để tránh khóa micro trên WebKit
+    // Hủy âm thanh TTS đang đọc nếu có
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
 
-    // Tạo mới một instance recognition cho mỗi lượt nói (Khắc phục triệt để lỗi WebKit iOS chỉ nhận dạng đúng 1 lần)
-    recognition = createRecognition();
+    const currentId = appState.currentSpeechItem.id;
+    recognition = createRecognition(currentId);
     if (!recognition) return;
 
+    // GỌI ĐỒNG BỘ TRONG EVENT CLICK ĐỂ BẢO TOÀN USER GESTURE TRÊN WEBKIT / IOS
     try {
       recognition.start();
     } catch (e: any) {
-      console.warn('SpeechRecognition start failed, retrying:', e);
-      setTimeout(() => {
-        try {
-          recognition?.start();
-        } catch {}
-      }, 150);
+      console.warn('SpeechRecognition start failed:', e);
+      try {
+        recognition.stop();
+        setTimeout(() => {
+          try {
+            recognition?.start();
+          } catch {}
+        }, 100);
+      } catch {}
     }
   }
 
@@ -174,13 +207,27 @@
     cleanupRecognition();
     liveHanzi = '';
     livePinyin = '';
-    isSpeechFinal = false;
   }
 
   function submitAnswer() {
     stopRecording();
     if (!livePinyin && !liveHanzi) return;
+
+    const targetHanzi = appState.currentSpeechItem?.hanzi || '';
+    const targetPinyin = appState.currentSpeechItem?.pinyin || '';
+
     appState.checkSpeechAnswer(livePinyin, liveHanzi);
+
+    // Thông báo Toast Sonner nổi bật, không làm chật chội màn hình
+    if (appState.speechFeedback?.type === 'correct') {
+      toast.success('Phát âm chuẩn xác! 🎉', {
+        description: `${targetHanzi} • ${targetPinyin}`
+      });
+    } else {
+      toast.error('Chưa chính xác!', {
+        description: `Chuẩn là: ${targetPinyin} (${targetHanzi})`
+      });
+    }
   }
 
   const isZhToVi = $derived(appState.direction === 'zh_to_vi');
@@ -201,14 +248,14 @@
     </span>
   </button>
 
-  <!-- Floating Audio Speaker Button -->
+  <!-- Floating Audio Speaker Button: Đồng nhất tuyệt đối shape rounded-2xl và màu bg-emerald-500 -->
   <button
     type="button"
     onclick={() => appState.speakCurrent()}
-    class="absolute top-3.5 right-3.5 w-10 sm:w-11 h-10 sm:h-11 rounded-2xl bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 flex items-center justify-center transition-transform cursor-pointer shadow-sm"
+    class="absolute top-3.5 right-3.5 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-2xl w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-sm transition-transform cursor-pointer"
     title="Nghe mẫu phát âm"
   >
-    <SpeakerHigh size={22} weight="bold" />
+    <SpeakerHigh weight="bold" class="w-5 h-5 sm:w-6 sm:h-6" />
   </button>
 
   {#if appState.currentSpeechItem}
@@ -248,27 +295,22 @@
         {/if}
       </div>
 
-      <!-- Live Pinyin Speech Recognition Preview Area -->
-      <div class="min-h-[44px] flex flex-col items-center justify-center my-1">
+      <!-- Live Pinyin Speech Recognition Preview Area: Bỏ khung card xám và bỏ label nhận dạng -->
+      <div class="min-h-[44px] flex flex-col items-center justify-center my-1.5 px-2">
         {#if isRecording && !livePinyin}
           <div class="flex items-center gap-2 text-rose-500 text-sm font-semibold animate-pulse">
             <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
             Đang lắng nghe giọng bạn... Hãy nói to rõ ràng!
           </div>
         {:else if livePinyin}
-          <!-- Chữ phiên âm preview: mờ mờ khi đang nói, đậm đen khi dừng nói -->
-          <div class="text-center px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200">
-            <p
-              class="text-xl sm:text-2xl transition-all duration-200 tracking-wide {isRecording
-                ? 'text-slate-400 font-bold opacity-75'
-                : 'text-slate-900 font-black'}"
-            >
-              {livePinyin}
-            </p>
-            {#if liveHanzi}
-              <p class="text-xs text-slate-400 mt-0.5">Nhận dạng: {liveHanzi}</p>
-            {/if}
-          </div>
+          <!-- Chữ phiên âm preview thoáng sạch, không khung viền xám, mờ khi đang nói và đậm khi dứt câu -->
+          <p
+            class="text-2xl sm:text-3xl transition-all duration-200 tracking-wide {isRecording
+              ? 'text-slate-400 font-bold opacity-75'
+              : 'text-slate-900 font-black'}"
+          >
+            {livePinyin}
+          </p>
         {:else if errorMessage}
           <div class="flex items-center gap-1.5 text-xs font-semibold text-rose-600 bg-rose-50 px-3 py-1.5 rounded-xl border border-rose-100 max-w-xs">
             <WarningCircle size={16} weight="bold" class="flex-shrink-0" />
@@ -279,58 +321,82 @@
         {/if}
       </div>
 
-      <!-- Result Feedback Message when Answered -->
-      {#if appState.speechAnswered && appState.speechFeedback}
-        <div class="mt-2 mb-1 px-4 py-2 rounded-2xl text-sm font-bold border transition-all {appState.speechFeedback.type === 'correct' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-rose-50 text-rose-700 border-rose-200'}">
-          <p>{appState.speechFeedback.text}</p>
-          <p class="text-xs font-semibold mt-0.5 text-slate-500">
-            Đáp án chuẩn: <span class="font-bold text-slate-700">{appState.currentSpeechItem.pinyin}</span> ({appState.currentSpeechItem.hanzi})
-          </p>
-        </div>
-      {/if}
-
       <!-- Interactive Speech Controls Area -->
       <div class="w-full mt-2 flex flex-col items-center">
-        <!-- 3 Buttons Row: [X Cancel] - [Mic Record / Stop] - [Tick Confirm] -->
-        <div class="flex items-center justify-center gap-4 sm:gap-6">
-          <!-- Button X: Hủy / xóa bản ghi -->
-          <button
-            type="button"
-            onclick={cancelSpoken}
-            disabled={!livePinyin && !isRecording}
-            class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-500 disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-sm transition-all cursor-pointer"
-            title="Hủy bỏ / Thử lại"
-          >
-            <X size={22} weight="bold" />
-          </button>
-
-          <!-- Main Big Circular Mic / Stop Button -->
-          <button
-            type="button"
-            onclick={toggleRecord}
-            class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all duration-200 cursor-pointer {isRecording
-              ? 'bg-rose-600 text-white shadow-rose-300 ring-4 ring-rose-200 animate-pulse'
-              : 'bg-gradient-to-tr from-blue-600 to-indigo-600 text-white shadow-blue-200 hover:from-blue-700 hover:to-indigo-700'}"
-            title={isRecording ? 'Dừng ghi âm' : 'Bấm để ghi âm phát âm'}
-          >
-            {#if isRecording}
-              <Square size={28} weight="fill" />
-            {:else}
-              <Microphone size={34} weight="duotone" />
-            {/if}
-          </button>
-
-          <!-- Button Tick: Xác nhận nộp đáp án -->
-          {#if appState.speechAnswered}
+        {#if appState.speechAnswered && appState.speechFeedback?.type === 'correct'}
+          <!-- Khi ĐÚNG: Nút to 'Từ tiếp theo' -->
+          <div class="w-full max-w-xs flex justify-center">
             <button
               type="button"
-              onclick={() => appState.nextSpeechItem()}
-              class="w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 active:scale-95 text-white flex items-center justify-center shadow-md transition-all cursor-pointer"
-              title="Từ tiếp theo"
+              onclick={handleNext}
+              class="w-full h-12 sm:h-14 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-extrabold text-base rounded-2xl shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer"
+              title="Sang từ tiếp theo"
             >
-              <Check size={24} weight="bold" />
+              <span>Từ tiếp theo</span>
+              <ArrowRight size={22} weight="bold" />
             </button>
-          {:else}
+          </div>
+        {:else if appState.speechAnswered && appState.speechFeedback?.type === 'wrong'}
+          <!-- Khi SAI: Nút Thử lại, Bấm nói lại, hoặc Bỏ qua sang từ tiếp theo -->
+          <div class="flex items-center justify-center gap-4 sm:gap-6">
+            <button
+              type="button"
+              onclick={handleRetry}
+              class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-700 flex items-center justify-center shadow-sm cursor-pointer"
+              title="Thử lại"
+            >
+              <ArrowClockwise size={22} weight="bold" />
+            </button>
+
+            <button
+              type="button"
+              onclick={() => { handleRetry(); startRecording(); }}
+              class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all bg-gradient-to-tr from-blue-600 to-indigo-600 text-white cursor-pointer"
+              title="Bấm để phát âm lại"
+            >
+              <Microphone size={34} weight="duotone" />
+            </button>
+
+            <button
+              type="button"
+              onclick={handleNext}
+              class="w-12 h-12 rounded-full bg-slate-800 hover:bg-slate-900 active:scale-95 text-white flex items-center justify-center shadow-md cursor-pointer"
+              title="Bỏ qua sang từ tiếp theo"
+            >
+              <ArrowRight size={22} weight="bold" />
+            </button>
+          </div>
+        {:else}
+          <!-- Khi CHƯA NỘP: 3 nút [X Hủy] - [Mic Ghi âm] - [Tick Xác nhận] -->
+          <div class="flex items-center justify-center gap-4 sm:gap-6">
+            <!-- Button X: Hủy / xóa bản ghi -->
+            <button
+              type="button"
+              onclick={cancelSpoken}
+              disabled={!livePinyin && !isRecording}
+              class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-500 disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-sm transition-all cursor-pointer"
+              title="Hủy bỏ / Thử lại"
+            >
+              <X size={22} weight="bold" />
+            </button>
+
+            <!-- Main Big Circular Mic / Stop Button -->
+            <button
+              type="button"
+              onclick={toggleRecord}
+              class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all duration-200 cursor-pointer {isRecording
+                ? 'bg-rose-600 text-white shadow-rose-300 ring-4 ring-rose-200 animate-pulse'
+                : 'bg-gradient-to-tr from-blue-600 to-indigo-600 text-white shadow-blue-200 hover:from-blue-700 hover:to-indigo-700'}"
+              title={isRecording ? 'Dừng ghi âm' : 'Bấm để ghi âm phát âm'}
+            >
+              {#if isRecording}
+                <Square size={28} weight="fill" />
+              {:else}
+                <Microphone size={34} weight="duotone" />
+              {/if}
+            </button>
+
+            <!-- Button Tick: Xác nhận nộp đáp án -->
             <button
               type="button"
               onclick={submitAnswer}
@@ -340,8 +406,8 @@
             >
               <Check size={24} weight="bold" />
             </button>
-          {/if}
-        </div>
+          </div>
+        {/if}
 
         <!-- Checkbox: Tự động xác nhận đáp án -->
         <label class="mt-3 inline-flex items-center gap-2.5 cursor-pointer select-none text-xs sm:text-sm text-slate-600 hover:text-slate-800 transition-colors">

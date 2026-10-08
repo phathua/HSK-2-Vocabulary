@@ -266,7 +266,7 @@
           class="w-8.5 h-8.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center shadow-2xs active:scale-95 transition-all cursor-pointer"
           title="Phát âm tiếng Trung"
         >
-          <SpeakerHigh weight="duotone" class="w-4 h-4" />
+          <SpeakerHigh weight="bold" class="w-4 h-4" />
         </button>
       </div>
     </div>

@@ -30,10 +30,10 @@
   <button
     type="button"
     onclick={() => appState.speakCurrent()}
-    class="absolute top-3.5 right-3.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-md active:scale-95 transition-transform cursor-pointer"
+    class="absolute top-3.5 right-3.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-sm active:scale-95 transition-transform cursor-pointer"
     title="Phát âm tiếng Trung"
   >
-    <SpeakerHigh weight="duotone" class="w-5 h-5 sm:w-6 sm:h-6" />
+    <SpeakerHigh weight="bold" class="w-5 h-5 sm:w-6 sm:h-6" />
   </button>
 
   {#if appState.currentQuizItem}
