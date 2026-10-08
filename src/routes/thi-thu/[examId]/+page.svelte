@@ -28,16 +28,18 @@
   let showResultModal = $state(false);
   let timerInterval: any = null;
 
-  onMount(() => {
-    if (examId) {
-      getExamData(examId).then((data) => {
-        exam = data;
-        isLoading = false;
-      });
+  $effect(() => {
+    const currentId = page.params.examId;
+    if (currentId) {
+      exam = getExamData(currentId);
+      isLoading = false;
     } else {
+      exam = null;
       isLoading = false;
     }
+  });
 
+  onMount(() => {
     // Start timer for exam mode
     timerInterval = setInterval(() => {
       if (mode === 'exam' && !isSubmitted) {

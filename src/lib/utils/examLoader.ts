@@ -1,33 +1,44 @@
 import type { ExamDetail } from '#lib/types/exam';
 
-// Dynamic loaders for all 16 standardized exams
-const examModules: Record<string, () => Promise<{ default: ExamDetail }>> = {
-  'H2-YJ': () => import('#lib/data/exams/H2-YJ.json'),
-  'H20000': () => import('#lib/data/exams/H20000.json'),
-  'H20901': () => import('#lib/data/exams/H20901.json'),
-  'H20902': () => import('#lib/data/exams/H20902.json'),
-  'H21002': () => import('#lib/data/exams/H21002.json'),
-  'H21003': () => import('#lib/data/exams/H21003.json'),
-  'H21004': () => import('#lib/data/exams/H21004.json'),
-  'H21005': () => import('#lib/data/exams/H21005.json'),
-  'H21006': () => import('#lib/data/exams/H21006.json'),
-  'H21329': () => import('#lib/data/exams/H21329.json'),
-  'H21330': () => import('#lib/data/exams/H21330.json'),
-  'H21331': () => import('#lib/data/exams/H21331.json'),
-  'H21332': () => import('#lib/data/exams/H21332.json'),
-  'H21334': () => import('#lib/data/exams/H21334.json'),
-  'MOCK-CHINESE-TOOLS': () => import('#lib/data/exams/MOCK-CHINESE-TOOLS.json'),
-  'MOCK-HSK-ATLAS': () => import('#lib/data/exams/MOCK-HSK-ATLAS.json')
+// Static direct imports for instant synchronous availability
+import H2_YJ from '#lib/data/exams/H2-YJ.json';
+import H20000 from '#lib/data/exams/H20000.json';
+import H20901 from '#lib/data/exams/H20901.json';
+import H20902 from '#lib/data/exams/H20902.json';
+import H21002 from '#lib/data/exams/H21002.json';
+import H21003 from '#lib/data/exams/H21003.json';
+import H21004 from '#lib/data/exams/H21004.json';
+import H21005 from '#lib/data/exams/H21005.json';
+import H21006 from '#lib/data/exams/H21006.json';
+import H21329 from '#lib/data/exams/H21329.json';
+import H21330 from '#lib/data/exams/H21330.json';
+import H21331 from '#lib/data/exams/H21331.json';
+import H21332 from '#lib/data/exams/H21332.json';
+import H21334 from '#lib/data/exams/H21334.json';
+import MOCK_CHINESE_TOOLS from '#lib/data/exams/MOCK-CHINESE-TOOLS.json';
+import MOCK_HSK_ATLAS from '#lib/data/exams/MOCK-HSK-ATLAS.json';
+
+const examMap: Record<string, any> = {
+  'H2-YJ': H2_YJ,
+  'H20000': H20000,
+  'H20901': H20901,
+  'H20902': H20902,
+  'H21002': H21002,
+  'H21003': H21003,
+  'H21004': H21004,
+  'H21005': H21005,
+  'H21006': H21006,
+  'H21329': H21329,
+  'H21330': H21330,
+  'H21331': H21331,
+  'H21332': H21332,
+  'H21334': H21334,
+  'MOCK-CHINESE-TOOLS': MOCK_CHINESE_TOOLS,
+  'MOCK-HSK-ATLAS': MOCK_HSK_ATLAS
 };
 
-export async function getExamData(code: string): Promise<ExamDetail | null> {
-  const loader = examModules[code];
-  if (!loader) return null;
-  try {
-    const mod = await loader();
-    return mod.default;
-  } catch (err) {
-    console.error(`Failed to load exam ${code}:`, err);
-    return null;
-  }
+export function getExamData(code: string): ExamDetail | null {
+  const data = examMap[code];
+  if (!data) return null;
+  return data as ExamDetail;
 }
