@@ -9,6 +9,7 @@
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import { mockExamsData, type MockExamItem } from '#lib/data/mockExamsList';
+  import { examHistoryState } from '#lib/state/examHistoryState.svelte';
 
   let selectedFilter = $state('all');
 
@@ -140,9 +141,17 @@
 
         <!-- Button Vào thi tinh tế, gọn gàng -->
         <div class="mt-3.5 pt-3 border-t border-slate-100 dark:border-neutral-800/80 flex items-center justify-between">
-          <span class="text-[11px] text-slate-400 dark:text-neutral-500 font-medium">
-            200 điểm tối đa
-          </span>
+          <div>
+            {#if examHistoryState.getBestScore(exam.code) !== null}
+              <span class="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-md">
+                Cao nhất: {examHistoryState.getBestScore(exam.code)}/200đ
+              </span>
+            {:else}
+              <span class="text-[11px] text-slate-400 dark:text-neutral-500 font-medium">
+                200 điểm tối đa
+              </span>
+            {/if}
+          </div>
           <a
             href={`/thi-thu/${exam.id}`}
             class="px-3.5 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-2xs active:scale-95 transition-all cursor-pointer"
