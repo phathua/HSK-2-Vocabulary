@@ -31,24 +31,34 @@
   let isSubmitted = $state(false);
   let showResultModal = $state(false);
   let showExitModal = $state(false);
+  let isScrolled = $state(false);
+  let mainScrollEl: HTMLElement | null = null;
   let timerInterval: any = null;
 
   $effect(() => {
     examRoomState.timeRemainingSeconds = timeRemainingSeconds;
+    examRoomState.isExamMode = mode === 'exam';
+    examRoomState.isSubmitted = isSubmitted;
+    examRoomState.isScrolled = isScrolled;
   });
 
   onMount(() => {
     examRoomState.isActive = true;
     examRoomState.examCode = examId ?? '';
     examRoomState.timeRemainingSeconds = timeRemainingSeconds;
+    examRoomState.isExamMode = mode === 'exam';
+    examRoomState.submitFn = handleSubmitExam;
+    examRoomState.retryFn = handleRetry;
 
-    // Start timer for exam mode
+    // Start timer for exam mode: Chỉ trừ giờ làm bài khi đã kết thúc 60s xem trước đề!
     timerInterval = setInterval(() => {
       if (mode === 'exam' && !isSubmitted) {
-        if (timeRemainingSeconds > 0) {
-          timeRemainingSeconds -= 1;
-        } else {
-          handleSubmitExam();
+        if (!examRoomState.isPreviewPhase) {
+          if (timeRemainingSeconds > 0) {
+            timeRemainingSeconds -= 1;
+          } else {
+            handleSubmitExam();
+          }
         }
       }
     }, 1000);
@@ -62,9 +72,23 @@
 
     window.addEventListener('beforeunload', handleBeforeUnload);
 
+    // Lắng nghe scroll để đồng bộ Header bộ đếm thời gian
+    const handleScroll = () => {
+      if (mainScrollEl) {
+        isScrolled = mainScrollEl.scrollTop > 50;
+      }
+    };
+
+    if (mainScrollEl) {
+      mainScrollEl.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
     return () => {
       if (timerInterval) clearInterval(timerInterval);
       window.removeEventListener('beforeunload', handleBeforeUnload);
+      if (mainScrollEl) {
+        mainScrollEl.removeEventListener('scroll', handleScroll);
+      }
       examRoomState.reset();
     };
   });
@@ -163,7 +187,7 @@
 
 <Header />
 
-<main class="flex-1 flex flex-col min-h-0 my-3 overflow-y-auto pr-1">
+<main bind:this={mainScrollEl} class="flex-1 flex flex-col min-h-0 my-3 overflow-y-auto pr-1">
   {#if isLoading}
     <div class="flex-1 flex items-center justify-center p-12">
       <div class="flex flex-col items-center gap-3">
@@ -197,6 +221,7 @@
       totalCount={exam.total_questions}
       onModeChange={(newMode) => (mode = newMode)}
       onSubmit={handleSubmitExam}
+      onRetry={handleRetry}
       onExitRequest={() => {
         if (mode === 'exam' && !isSubmitted) {
           showExitModal = true;

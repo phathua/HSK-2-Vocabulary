@@ -54,6 +54,9 @@
     }
   }
 
+  let isScrolled = $state(false);
+  let mainScrollContainer: HTMLElement | null = null;
+
   onMount(() => {
     examRoomState.startAudioFn = startAudioPlayback;
 
@@ -76,22 +79,22 @@
       examRoomState.isPreviewPhase = false;
     }
 
-    // IntersectionObserver to detect when the audio card is scrolled out of viewport
-    let observer: IntersectionObserver | null = null;
-    if (typeof window !== 'undefined' && cardElement) {
-      observer = new IntersectionObserver(
-        (entries) => {
-          const entry = entries[0];
-          // Khi card khuất hoàn toàn lên trên (top < 0) -> kích hoạt sticky bar
-          isSticky = !entry.isIntersecting && entry.boundingClientRect.top < 80;
-        },
-        { threshold: 0.1 }
-      );
-      observer.observe(cardElement);
+    // Lắng nghe scroll trên <main> để thu nhỏ card thành thanh mini sticky bar
+    mainScrollContainer = cardElement?.closest('main') as HTMLElement | null;
+
+    const handleScroll = () => {
+      if (!mainScrollContainer) return;
+      isScrolled = mainScrollContainer.scrollTop > 50;
+    };
+
+    if (mainScrollContainer) {
+      mainScrollContainer.addEventListener('scroll', handleScroll, { passive: true });
     }
 
     return () => {
-      if (observer) observer.disconnect();
+      if (mainScrollContainer) {
+        mainScrollContainer.removeEventListener('scroll', handleScroll);
+      }
     };
   });
 
@@ -148,42 +151,42 @@
 </script>
 
 {#if audioSrc}
-  <!-- Audio Card chính: Thiết kế tinh gọn, nút tròn icon-only, ít chữ, không bị vỡ layout -->
+  <!-- Audio Sticky Bar: Luôn ghim top-0 của main container, tự động co gọn khi cuộn -->
   <div
     bind:this={cardElement}
-    class="bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-transparent dark:from-orange-950/40 dark:via-neutral-900 border border-orange-200/80 dark:border-[#282A2C] rounded-2xl p-3 sm:p-3.5 shadow-2xs mb-4"
+    class="sticky top-0 z-30 mb-3 bg-white/95 dark:bg-[#1B1B1B]/95 backdrop-blur-md border border-slate-200 dark:border-[#282A2C] rounded-2xl shadow-xs transition-all duration-200 {isScrolled ? 'p-2 sm:px-3 shadow-md' : 'p-3 sm:p-3.5 bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-transparent dark:from-orange-950/40 dark:via-neutral-900 border-orange-200/80'}"
   >
     <div class="flex items-center justify-between gap-3">
       <div class="flex items-center gap-2.5 min-w-0">
-        <!-- Nút Tròn Icon-only: Nhỏ gọn, tinh tế -->
+        <!-- Nút Tròn Icon-only -->
         {#if isExamMode && isPreviewPhase}
           <button
             type="button"
             onclick={startAudioPlayback}
-            class="w-10 h-10 rounded-full bg-orange-600 hover:bg-orange-700 active:scale-95 text-white flex items-center justify-center shrink-0 shadow-sm cursor-pointer transition-all"
+            class="rounded-full bg-orange-600 hover:bg-orange-700 active:scale-95 text-white flex items-center justify-center shrink-0 shadow-sm cursor-pointer transition-all {isScrolled ? 'w-8 h-8' : 'w-10 h-10'}"
             title="Đang xem trước 60s. Bấm để phát audio ngay!"
             aria-label="Phát audio ngay"
           >
-            <Play weight="fill" class="w-4 h-4 ml-0.5" />
+            <Play weight="fill" class="{isScrolled ? 'w-3.5 h-3.5' : 'w-4 h-4'} ml-0.5" />
           </button>
         {:else if isExamMode && !isPreviewPhase}
           <div
-            class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm"
+            class="rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm {isScrolled ? 'w-8 h-8' : 'w-10 h-10'}"
             title="Đang phát bài thi nghe theo thời gian thực (Khóa tạm dừng)"
           >
-            <SpeakerHigh weight="fill" class="w-4 h-4 animate-pulse" />
+            <SpeakerHigh weight="fill" class="{isScrolled ? 'w-3.5 h-3.5' : 'w-4 h-4'} animate-pulse" />
           </div>
         {:else}
           <button
             type="button"
             onclick={togglePlay}
-            class="w-10 h-10 rounded-full bg-orange-600 hover:bg-orange-700 active:scale-95 text-white flex items-center justify-center shrink-0 shadow-sm cursor-pointer transition-all"
+            class="rounded-full bg-orange-600 hover:bg-orange-700 active:scale-95 text-white flex items-center justify-center shrink-0 shadow-sm cursor-pointer transition-all {isScrolled ? 'w-8 h-8' : 'w-10 h-10'}"
             aria-label={isPlaying ? 'Tạm dừng nghe' : 'Phát âm thanh'}
           >
             {#if isPlaying}
-              <Pause weight="fill" class="w-4 h-4" />
+              <Pause weight="fill" class={isScrolled ? 'w-3.5 h-3.5' : 'w-4 h-4'} />
             {:else}
-              <Play weight="fill" class="w-4 h-4 ml-0.5" />
+              <Play weight="fill" class="{isScrolled ? 'w-3.5 h-3.5' : 'w-4 h-4'} ml-0.5" />
             {/if}
           </button>
         {/if}
@@ -195,13 +198,23 @@
             </span>
           </div>
 
-          <div class="text-[11px] font-mono text-slate-500 dark:text-[#8E918F] mt-0.5">
+          <div class="text-[11px] font-mono text-slate-500 dark:text-[#8E918F] {isScrolled ? 'hidden sm:block' : 'mt-0.5'}">
             {formatTime(currentTime)} / {formatTime(duration)}
           </div>
         </div>
       </div>
 
-      <!-- Trạng thái bên phải: Nhỏ gọn, icon là chính -->
+      <!-- Giữa: Thanh tiến độ trực tiếp hoặc co gọn khi cuộn -->
+      {#if isScrolled}
+        <div class="flex-1 max-w-[120px] sm:max-w-xs h-1 bg-slate-200 dark:bg-neutral-800 rounded-full overflow-hidden">
+          <div
+            class="h-full {isExamMode && isPreviewPhase ? 'bg-amber-500' : 'bg-orange-500'} transition-all duration-150"
+            style="width: {isExamMode && isPreviewPhase ? ((60 - previewSeconds) / 60) * 100 : (duration ? (currentTime / duration) * 100 : 0)}%"
+          ></div>
+        </div>
+      {/if}
+
+      <!-- Trạng thái bên phải -->
       <div class="flex items-center gap-1.5 shrink-0">
         {#if isExamMode}
           {#if isPreviewPhase}
@@ -212,27 +225,29 @@
           {:else}
             <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-100/80 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold text-[11px]">
               <LockSimple class="w-3.5 h-3.5" />
-              <span>Thi thật</span>
+              <span class="hidden sm:inline">Thi thật</span>
             </div>
           {/if}
         {/if}
       </div>
     </div>
 
-    <!-- Thanh tiến độ bài nghe -->
-    <div class="mt-2.5 relative w-full h-1 bg-slate-200/80 dark:bg-neutral-800 rounded-full overflow-hidden">
-      {#if isExamMode && isPreviewPhase}
-        <div
-          class="h-full bg-amber-500 transition-all duration-1000 ease-linear"
-          style="width: {((60 - previewSeconds) / 60) * 100}%"
-        ></div>
-      {:else}
-        <div
-          class="h-full bg-orange-500 transition-all duration-150"
-          style="width: {duration ? (currentTime / duration) * 100 : 0}%"
-        ></div>
-      {/if}
-    </div>
+    <!-- Thanh tiến độ bài nghe khi chưa cuộn -->
+    {#if !isScrolled}
+      <div class="mt-2.5 relative w-full h-1 bg-slate-200/80 dark:bg-neutral-800 rounded-full overflow-hidden">
+        {#if isExamMode && isPreviewPhase}
+          <div
+            class="h-full bg-amber-500 transition-all duration-1000 ease-linear"
+            style="width: {((60 - previewSeconds) / 60) * 100}%"
+          ></div>
+        {:else}
+          <div
+            class="h-full bg-orange-500 transition-all duration-150"
+            style="width: {duration ? (currentTime / duration) * 100 : 0}%"
+          ></div>
+        {/if}
+      </div>
+    {/if}
 
     <!-- Thẻ Audio ẩn -->
     <audio
@@ -244,64 +259,4 @@
       preload="auto"
     ></audio>
   </div>
-
-  <!-- Sticky Mini Audio Bar: Tự động ghim trên cùng khi cuộn vượt qua Audio Card -->
-  {#if isSticky}
-    <div class="sticky top-0 z-40 -mt-2 mb-3 bg-white/95 dark:bg-[#1B1B1B]/95 backdrop-blur-md border border-slate-200 dark:border-[#282A2C] rounded-2xl p-2 px-3 shadow-md transition-all animate-fade-in flex items-center justify-between gap-3">
-      <div class="flex items-center gap-2 min-w-0">
-        {#if isExamMode && isPreviewPhase}
-          <button
-            type="button"
-            onclick={startAudioPlayback}
-            class="w-7 h-7 rounded-full bg-orange-600 text-white flex items-center justify-center shrink-0 shadow-2xs"
-            title="Bấm để phát audio ngay"
-          >
-            <Play weight="fill" class="w-3 h-3 ml-0.5" />
-          </button>
-        {:else if isExamMode && !isPreviewPhase}
-          <div class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
-            <SpeakerHigh weight="fill" class="w-3 h-3 animate-pulse" />
-          </div>
-        {:else}
-          <button
-            type="button"
-            onclick={togglePlay}
-            class="w-7 h-7 rounded-full bg-orange-600 text-white flex items-center justify-center shrink-0"
-          >
-            {#if isPlaying}
-              <Pause weight="fill" class="w-3 h-3" />
-            {:else}
-              <Play weight="fill" class="w-3 h-3 ml-0.5" />
-            {/if}
-          </button>
-        {/if}
-
-        <span class="text-xs font-bold text-slate-900 dark:text-[#E3E3E3] truncate">
-          {examCode}
-        </span>
-        <span class="text-[11px] font-mono text-slate-500 dark:text-[#8E918F]">
-          {formatTime(currentTime)}
-        </span>
-      </div>
-
-      <!-- Mini Progress Bar -->
-      <div class="flex-1 max-w-[140px] sm:max-w-xs h-1 bg-slate-200 dark:bg-neutral-800 rounded-full overflow-hidden">
-        <div
-          class="h-full {isExamMode && isPreviewPhase ? 'bg-amber-500' : 'bg-orange-500'} transition-all duration-150"
-          style="width: {isExamMode && isPreviewPhase ? ((60 - previewSeconds) / 60) * 100 : (duration ? (currentTime / duration) * 100 : 0)}%"
-        ></div>
-      </div>
-
-      <!-- Mini countdown preview or duration -->
-      {#if isExamMode && isPreviewPhase}
-        <span class="text-xs font-mono font-black text-amber-600 dark:text-amber-400 shrink-0">
-          {previewSeconds}s
-        </span>
-      {:else}
-        <span class="text-[11px] font-mono text-slate-400 shrink-0">
-          {formatTime(duration)}
-        </span>
-      {/if}
-    </div>
-  {/if}
 {/if}

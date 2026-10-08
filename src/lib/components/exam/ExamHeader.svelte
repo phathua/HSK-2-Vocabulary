@@ -4,6 +4,7 @@
   import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
   import Lightning from 'phosphor-svelte/lib/Lightning';
   import Exam from 'phosphor-svelte/lib/Exam';
+  import ArrowCounterClockwise from 'phosphor-svelte/lib/ArrowCounterClockwise';
   import type { ExamMode } from '#lib/types/exam';
 
   interface Props {
@@ -15,6 +16,7 @@
     totalCount: number;
     onModeChange: (newMode: ExamMode) => void;
     onSubmit: () => void;
+    onRetry?: () => void;
     onExitRequest?: () => void;
   }
 
@@ -27,6 +29,7 @@
     totalCount,
     onModeChange,
     onSubmit,
+    onRetry,
     onExitRequest
   }: Props = $props();
 
@@ -95,14 +98,29 @@
       </div>
     {/if}
 
-    <!-- Nút Nộp Bài -->
-    <button
-      type="button"
-      onclick={onSubmit}
-      class="px-4 py-2 rounded-2xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-xs md:text-sm flex items-center gap-2 shadow-xs cursor-pointer transition-all shrink-0"
-    >
-      <CheckCircle weight="bold" class="w-4 h-4" />
-      <span>Nộp bài</span>
-    </button>
+    <!-- Các hành động: Nộp bài & Làm lại -->
+    <div class="flex items-center gap-2 shrink-0">
+      {#if onRetry}
+        <button
+          type="button"
+          onclick={onRetry}
+          class="px-3 py-2 rounded-2xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 active:scale-95 text-slate-700 dark:text-slate-200 font-bold text-xs md:text-sm flex items-center gap-1.5 cursor-pointer transition-all shrink-0"
+          title="Làm lại bài từ đầu"
+        >
+          <ArrowCounterClockwise weight="bold" class="w-4 h-4" />
+          <span>Làm lại</span>
+        </button>
+      {/if}
+
+      <!-- Nút Nộp Bài -->
+      <button
+        type="button"
+        onclick={onSubmit}
+        class="px-4 py-2 rounded-2xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-xs md:text-sm flex items-center gap-2 shadow-xs cursor-pointer transition-all shrink-0"
+      >
+        <CheckCircle weight="bold" class="w-4 h-4" />
+        <span>Nộp bài</span>
+      </button>
+    </div>
   </div>
 </div>

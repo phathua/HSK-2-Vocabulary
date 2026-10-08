@@ -14,7 +14,7 @@
     isExamSubmitted?: boolean;
     onSelectAnswer: (val: string) => void;
     onToggleFlag: () => void;
-    onCheckPractice: () => void;
+    onCheckPractice?: () => void;
   }
 
   let {
@@ -59,7 +59,8 @@
     ];
   });
 
-  const shouldReveal = $derived(isExamSubmitted || (mode === 'practice' && isCheckedInPractice));
+  // Chế độ Luyện tập: Bấm là hiện đáp án ngay lập tức (không cần nút check). Chế độ Thi: hiện khi nộp bài
+  const shouldReveal = $derived(isExamSubmitted || (mode === 'practice' && !!selectedAnswer));
   const isCorrect = $derived(shouldReveal && selectedAnswer === question.answer);
 </script>
 
@@ -179,19 +180,6 @@
       </button>
     {/each}
   </div>
-
-  <!-- Nút Chấm điểm nhanh cho Chế độ Luyện Tập Quiz -->
-  {#if mode === 'practice' && !isCheckedInPractice && selectedAnswer}
-    <div class="mt-2 flex justify-end">
-      <button
-        type="button"
-        onclick={onCheckPractice}
-        class="px-3.5 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-xs flex items-center gap-1.5 cursor-pointer transition-all shadow-xs"
-      >
-        <span>Kiểm tra câu này</span>
-      </button>
-    </div>
-  {/if}
 
   <!-- Kết quả & Giải thích / Transcript nghe -->
   {#if shouldReveal}

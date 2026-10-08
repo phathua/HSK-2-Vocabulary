@@ -22,7 +22,11 @@ class ExamRoomState {
   isPlaying = $state(false);
   currentTime = $state(0);
   duration = $state(0);
+  isScrolled = $state(false);
+  isSubmitted = $state(false);
   startAudioFn = $state<(() => void) | null>(null);
+  submitFn = $state<(() => void) | null>(null);
+  retryFn = $state<(() => void) | null>(null);
 
   reset() {
     this.isActive = false;
@@ -34,12 +38,28 @@ class ExamRoomState {
     this.isPlaying = false;
     this.currentTime = 0;
     this.duration = 0;
+    this.isScrolled = false;
+    this.isSubmitted = false;
     this.startAudioFn = null;
+    this.submitFn = null;
+    this.retryFn = null;
   }
 
   startAudio() {
     if (this.startAudioFn) {
       this.startAudioFn();
+    }
+  }
+
+  submit() {
+    if (this.submitFn) {
+      this.submitFn();
+    }
+  }
+
+  retry() {
+    if (this.retryFn) {
+      this.retryFn();
     }
   }
 }
