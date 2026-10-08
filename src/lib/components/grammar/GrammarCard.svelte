@@ -107,15 +107,15 @@
     </div>
 
     <!-- Main Title & Infographic Focal Block (Tựa theo ảnh 1 & ảnh 5) -->
-    <div class="flex items-start gap-3 pt-1">
+    <div class="flex items-start gap-2.5 sm:gap-3 pt-1 min-w-0">
       <!-- Focal block for key characters -->
-      <div class="shrink-0 w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 flex flex-col items-center justify-center text-amber-900 dark:text-amber-200 shadow-2xs">
-        <span class="text-base font-black leading-none">{point.grammarKey}</span>
-        <span class="text-[9px] font-semibold text-amber-700 dark:text-amber-300 mt-0.5 font-mono">{point.grammarKeyPinyin}</span>
+      <div class="shrink-0 min-w-12 px-2 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 flex flex-col items-center justify-center text-amber-900 dark:text-amber-200 shadow-2xs">
+        <span class="text-sm sm:text-base font-black leading-tight text-center">{point.grammarKey}</span>
+        <span class="text-[9px] font-semibold text-amber-700 dark:text-amber-300 mt-0.5 font-mono text-center truncate max-w-16">{point.grammarKeyPinyin}</span>
       </div>
 
       <div class="min-w-0 flex-1">
-        <h2 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-slate-100 leading-snug">
+        <h2 class="text-xs sm:text-sm md:text-base font-extrabold text-slate-900 dark:text-slate-100 leading-snug break-words">
           {point.id}. {point.title}
         </h2>
 
