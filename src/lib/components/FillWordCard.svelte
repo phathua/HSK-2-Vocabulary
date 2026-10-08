@@ -57,58 +57,60 @@
 </script>
 
 <!-- Main Fill Word Card -->
-<main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-center items-center text-center relative overflow-hidden transition-colors">
-  <!-- Top Header Controls Inside Card -->
-  <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
+<main class="flex-1 min-h-0 w-full max-w-xl mx-auto bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-5 flex flex-col justify-between items-center text-center relative overflow-hidden transition-colors">
+  <!-- Top Bar: Hai nút đối xứng hai bên + Sub-mode Switch nằm giữa hài hòa không bị lẹm -->
+  <div class="w-full flex items-center justify-between shrink-0 mb-1 z-10">
     <!-- Floating Lesson Select Button -->
     <button
       type="button"
       onclick={() => (appState.filterModalOpen = true)}
-      class="pointer-events-auto bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-2xl h-10 sm:h-11 px-3 flex items-center justify-center gap-1.5 shadow-md transition-transform cursor-pointer"
+      class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-2xl h-10 px-3 flex items-center justify-center gap-1.5 shadow-sm transition-transform cursor-pointer"
       title="Bấm để chọn bài học"
     >
-      <PencilLine weight="bold" class="w-5 h-5 sm:w-6 sm:h-6" />
+      <PencilLine weight="bold" class="w-5 h-5" />
       <span class="text-xs font-black uppercase tracking-wider">Bài {appState.currentFillItem?.lesson || 1}</span>
     </button>
 
-    <!-- Center Toggle: Chọn từ / Thủ công -->
+    <!-- Center Mode Switch: Chọn từ / Thủ công -->
     {#if !isZhToVi && appState.currentFillItem}
       <button
         type="button"
         onclick={() => appState.toggleFillSubMode()}
-        class="pointer-events-auto bg-slate-100 hover:bg-slate-200 dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border border-slate-200/80 dark:border-[#37393B] rounded-2xl h-9 sm:h-10 px-2.5 sm:px-3 flex items-center justify-center gap-1.5 shadow-2xs active:scale-95 transition-all cursor-pointer text-xs font-bold"
+        class="bg-slate-100 hover:bg-slate-200 dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border border-slate-200/80 dark:border-[#37393B] rounded-2xl h-10 px-3 flex items-center justify-center gap-1.5 shadow-2xs active:scale-95 transition-all cursor-pointer text-xs font-bold"
         title="Chuyển chế độ: Chọn từ / Thủ công"
       >
         {#if appState.fillSubMode === 'tiles'}
-          <SquaresFour weight="bold" class="w-4 h-4 text-blue-600 dark:text-blue-400" />
+          <SquaresFour weight="bold" class="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
           <span>Chọn từ</span>
         {:else}
-          <Keyboard weight="bold" class="w-4 h-4 text-amber-500" />
+          <Keyboard weight="bold" class="w-4 h-4 text-amber-500 shrink-0" />
           <span>Thủ công</span>
         {/if}
       </button>
+    {:else}
+      <div></div>
     {/if}
 
-    <!-- Floating Speaker Button -->
+    <!-- Speaker Button -->
     <button
       type="button"
       onclick={() => appState.speakCurrent()}
-      class="pointer-events-auto bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-sm active:scale-95 transition-transform cursor-pointer"
+      class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl w-10 h-10 flex items-center justify-center shadow-sm active:scale-95 transition-transform cursor-pointer shrink-0"
       title="Phát âm tiếng Trung"
     >
-      <SpeakerHigh weight="bold" class="w-5 h-5 sm:w-6 sm:h-6" />
+      <SpeakerHigh weight="bold" class="w-5 h-5" />
     </button>
   </div>
 
   {#if appState.currentFillItem}
-    <div class="w-full flex flex-col items-center justify-center my-auto">
+    <div class="w-full flex-1 flex flex-col items-center justify-center my-auto py-1">
       <!-- Vocabulary Image -->
       {#if appState.currentFillItem.image}
-        <div class="relative mb-2 md:mb-4">
+        <div class="relative mb-2">
           <SmartImage
             src={appState.currentFillItem.image}
             alt={appState.currentFillItem.hanzi}
-            class="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-2xl border border-slate-200 dark:border-[#282A2C] shadow-xs bg-slate-50 dark:bg-[#282A2C]"
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl border border-slate-200 dark:border-[#282A2C] shadow-xs bg-slate-50 dark:bg-[#282A2C] object-cover"
           />
         </div>
       {/if}
@@ -116,17 +118,17 @@
       <!-- Prompt Question based on Direction -->
       {#if !isZhToVi}
         <!-- Mặc định: Hiển thị tiếng Việt ➔ Yêu cầu gõ hoặc ghép Pinyin -->
-        <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-0.5">Nghĩa tiếng Việt</span>
-        <div class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-[#E3E3E3] mb-1 max-w-md leading-tight">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-0.5">Nghĩa tiếng Việt</span>
+        <div class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-[#E3E3E3] mb-1 max-w-md leading-tight">
           {appState.currentFillItem.viet}
         </div>
-        <div class="text-3xl sm:text-4xl md:text-5xl font-black text-blue-600 dark:text-blue-400 font-sans tracking-tight mb-2">
+        <div class="text-3xl sm:text-4xl font-black text-blue-600 dark:text-blue-400 font-sans tracking-tight mb-2">
           {appState.currentFillItem.hanzi}
         </div>
 
-        <!-- Chế độ 'Chọn từ' (Tile Pick Duolingo): Hiển thị các ô Slot ký tự -->
+        <!-- Chế độ 'Chọn từ': Hiển thị các ô Slot ký tự -->
         {#if isTileMode && appState.fillWordChunks.length > 0}
-          <div class="w-full max-w-lg mt-1 px-1 flex flex-col items-center gap-2">
+          <div class="w-full max-w-md mt-1 px-1 flex flex-col items-center gap-2">
             <!-- Nếu từ dài có nhiều cụm (như gōnggòng qìchē), hiển thị tabs chuyển chunk -->
             {#if appState.fillWordChunks.length > 1}
               <div class="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-[#282A2C] rounded-xl border border-slate-200/80 dark:border-[#37393B]">
@@ -152,14 +154,16 @@
             {/if}
 
             <!-- Render Slots của tất cả các Chunks theo hàng ngang tự bọc dòng mượt mà -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 py-1">
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 py-1">
               {#each appState.fillWordChunks as chunk, cIdx}
-                <div class={`flex items-center gap-1 sm:gap-1.5 p-1.5 rounded-2xl border transition-all ${
+                <div class={`flex items-center gap-1 sm:gap-1.5 p-1 rounded-2xl border transition-all ${
                   cIdx === appState.currentChunkIndex
-                    ? 'border-blue-400/80 bg-blue-50/50 dark:bg-blue-950/20 dark:border-blue-500/50'
+                    ? 'border-blue-400/80 bg-blue-50/40 dark:bg-blue-950/20 dark:border-blue-500/40'
                     : 'border-transparent bg-slate-50/50 dark:bg-[#242628]/40'
                 }`}>
                   {#each chunk.slots as slot}
+                    {@const isCorrectSlot = appState.fillAnswered && slot.userChar === slot.char}
+                    {@const isWrongSlot = appState.fillAnswered && slot.userChar !== slot.char}
                     <button
                       type="button"
                       disabled={slot.isPreFilled || appState.fillAnswered}
@@ -167,11 +171,15 @@
                       class={`w-8 h-10 sm:w-10 sm:h-12 rounded-xl flex items-center justify-center font-black text-base sm:text-lg transition-all border-b-4 select-none ${
                         slot.isPreFilled
                           ? 'bg-slate-200 dark:bg-[#323537] text-slate-500 dark:text-slate-400 border-slate-300 dark:border-[#3c3f42] cursor-not-allowed'
-                          : slot.userChar
-                            ? 'bg-blue-500 text-white border-blue-700 shadow-xs cursor-pointer active:scale-95'
-                            : cIdx === appState.currentChunkIndex
-                              ? 'bg-white dark:bg-[#282A2C] border-dashed border-2 border-slate-300 dark:border-[#404346] text-transparent'
-                              : 'bg-white/60 dark:bg-[#282A2C]/60 border-dashed border-2 border-slate-200 dark:border-[#35373a] text-transparent'
+                          : isCorrectSlot
+                            ? 'bg-emerald-500 text-white border-emerald-700 shadow-xs'
+                            : isWrongSlot
+                              ? 'bg-rose-500 text-white border-rose-700 shadow-xs'
+                              : slot.userChar
+                                ? 'bg-blue-500 text-white border-blue-700 shadow-xs cursor-pointer active:scale-95'
+                                : cIdx === appState.currentChunkIndex
+                                  ? 'bg-white dark:bg-[#282A2C] border-dashed border-2 border-slate-300 dark:border-[#404346] text-transparent'
+                                  : 'bg-white/60 dark:bg-[#282A2C]/60 border-dashed border-2 border-slate-200 dark:border-[#35373a] text-transparent'
                       }`}
                       title={slot.isPreFilled ? 'Ký tự gợi ý sẵn' : slot.userChar ? 'Bấm để gỡ bỏ' : 'Ô trống'}
                     >
@@ -186,10 +194,10 @@
       {:else}
         <!-- Đảo ngược: Hiển thị Chữ Hán & Pinyin ➔ Yêu cầu gõ nghĩa tiếng Việt -->
         <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-0.5">Từ vựng tiếng Trung</span>
-        <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 font-sans mb-1">
+        <div class="text-4xl sm:text-5xl font-black text-blue-600 dark:text-blue-400 font-sans mb-1">
           {appState.currentFillItem.hanzi}
         </div>
-        <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-700 dark:text-[#C4C7C5]">
+        <div class="text-xl sm:text-2xl font-black text-slate-700 dark:text-[#C4C7C5]">
           {appState.currentFillItem.pinyin}
         </div>
       {/if}
@@ -232,9 +240,9 @@
 
 <!-- Fill Footer Controls -->
 {#if appState.currentFillItem}
-  <footer class="shrink-0 mt-2 space-y-1.5 sm:space-y-2">
-    <!-- Feedback Banner -->
-    {#if appState.fillFeedback}
+  <footer class="shrink-0 mt-2 w-full max-w-xl mx-auto space-y-1.5 sm:space-y-2">
+    <!-- Feedback Banner (Chỉ hiển thị khi ở chế độ Thủ công HOẶC khi bỏ qua/gợi ý, không hiển thị ở chế độ Chọn từ để tránh vướng víu) -->
+    {#if appState.fillFeedback && (!isTileMode || appState.fillFeedback.type === 'skip' || appState.fillFeedback.type === 'hint')}
       <div class={`py-2 px-3 rounded-2xl text-center shadow-xs flex items-center justify-center gap-2 border transition-all ${
         appState.fillFeedback.type === 'correct' ? 'bg-emerald-500 border-emerald-600 text-white' :
         appState.fillFeedback.type === 'wrong' ? 'bg-rose-500 border-rose-600 text-white' :
