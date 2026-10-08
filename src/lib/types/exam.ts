@@ -13,11 +13,11 @@ export interface QuestionItem {
 
 export interface ExamDetail {
   exam_code: string;
-  title: string;
+  title?: string;
   total_questions: number;
   audio_ogg?: string | null;
   audio_mp3?: string | null;
-  images_count: number;
+  images_count?: number;
   questions: QuestionItem[];
 }
 
