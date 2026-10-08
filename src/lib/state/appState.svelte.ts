@@ -360,18 +360,19 @@ export class AppState {
 
     this.syncFillInputFromChunks();
 
-    // Kiểm tra xem tất cả các slot trong chunk hiện tại đã điền xong chưa
-    const chunkFilled = chunk.slots.every(s => s.userChar !== null);
-    if (chunkFilled) {
-      // Nếu còn chunk tiếp theo, tự động chuyển sang chunk tiếp theo
-      if (this.currentChunkIndex < this.fillWordChunks.length - 1) {
-        this.currentChunkIndex++;
-      } else {
-        // Nếu đã điền hết tất cả các chunk, tự động kiểm tra đáp án
-        const allFilled = this.fillWordChunks.every(c => c.slots.every(s => s.userChar !== null));
-        if (allFilled) {
-          this.checkFillAnswer();
-        }
+    // 1. Kiểm tra xem toàn bộ tất cả các vế đã được điền hết chưa
+    const allFilled = this.fillWordChunks.every(c => c.slots.every(s => s.userChar !== null));
+    if (allFilled) {
+      this.checkFillAnswer();
+      return;
+    }
+
+    // 2. Nếu vế hiện tại đã đầy, tự động nhảy sang vế đầu tiên bất kỳ còn ô trống
+    const currentChunkFilled = chunk.slots.every(s => s.userChar !== null);
+    if (currentChunkFilled) {
+      const nextUnfilledIdx = this.fillWordChunks.findIndex(c => c.slots.some(s => s.userChar === null));
+      if (nextUnfilledIdx !== -1) {
+        this.currentChunkIndex = nextUnfilledIdx;
       }
     }
   }
