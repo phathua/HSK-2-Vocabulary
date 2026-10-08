@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="100%" height="100%" class="w-full h-auto">
+  <defs>
+    <linearGradient id="g-you" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
+    </linearGradient>
+    <linearGradient id="g-shi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7" />
+      <stop offset="100%" stop-color="#FDE68A" />
+    </linearGradient>
+    <filter id="shadow-subtle" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Left Card: Cấu trúc HỮU (Tồn tại khách quan) -->
+  <g transform="translate(10, 10)">
+    <rect width="195" height="160" rx="16" fill="url(#g-you)" stroke="#BFDBFE" stroke-width="1.5" filter="url(#shadow-subtle)"/>
+    
+    <!-- Header Badge -->
+    <rect x="12" y="12" width="70" height="24" rx="8" fill="#2563EB" />
+    <text x="47" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">有 (Có)</text>
+    
+    <!-- Subtitle: Tồn tại khách quan -->
+    <text x="88" y="28" fill="#1E40AF" font-size="10" font-weight="600" font-family="system-ui, sans-serif">Tồn tại khách quan</text>
+
+    <!-- Visual Diagram: Nơi chốn -> Có vật gì -->
+    <rect x="12" y="46" width="171" height="66" rx="10" fill="#FFFFFF" fill-opacity="0.9" stroke="#93C5FD" stroke-width="1"/>
+    
+    <!-- Location block -->
+    <rect x="20" y="56" width="46" height="46" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="43" y="78" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">桌子上</text>
+    <text x="43" y="93" fill="#64748B" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">trên bàn</text>
+
+    <!-- Arrow -->
+    <path d="M72 79 L84 79" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+    <path d="M81 75 L86 79 L81 83" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Exist box with badge -->
+    <rect x="92" y="54" width="83" height="50" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="133" y="73" fill="#1D4ED8" font-size="12" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">有手机</text>
+    <text x="133" y="88" fill="#3B82F6" font-size="9.5" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">có điện thoại</text>
+    <text x="133" y="99" fill="#60A5FA" font-size="8" text-anchor="middle" font-family="system-ui, sans-serif">(chưa rõ của ai)</text>
+
+    <!-- Formula Footer -->
+    <text x="97" y="132" fill="#1E3A8A" font-size="10" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Nơi chốn + 有 + Danh từ</text>
+    <text x="97" y="147" fill="#3B82F6" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">Ví dụ: 桌子上有一个手机</text>
+  </g>
+
+  <!-- Right Card: Cấu trúc THỊ (Phán đoán xác định) -->
+  <g transform="translate(215, 10)">
+    <rect width="195" height="160" rx="16" fill="url(#g-shi)" stroke="#FDE68A" stroke-width="1.5" filter="url(#shadow-subtle)"/>
+    
+    <!-- Header Badge -->
+    <rect x="12" y="12" width="70" height="24" rx="8" fill="#D97706" />
+    <text x="47" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">是 (Là)</text>
+    
+    <!-- Subtitle: Xác định danh tính -->
+    <text x="88" y="28" fill="#92400E" font-size="10" font-weight="600" font-family="system-ui, sans-serif">Xác định danh tính</text>
+
+    <!-- Visual Diagram: Nơi chốn -> Là vật cụ thể -->
+    <rect x="12" y="46" width="171" height="66" rx="10" fill="#FFFFFF" fill-opacity="0.9" stroke="#FCD34D" stroke-width="1"/>
+    
+    <!-- Location block -->
+    <rect x="20" y="56" width="46" height="46" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="43" y="78" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">门外</text>
+    <text x="43" y="93" fill="#64748B" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">ngoài cửa</text>
+
+    <!-- Arrow -->
+    <path d="M72 79 L84 79" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+    <path d="M81 75 L86 79 L81 83" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Identify box with badge -->
+    <rect x="92" y="54" width="83" height="50" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="133" y="73" fill="#B45309" font-size="11.5" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">是他的车</text>
+    <text x="133" y="88" fill="#D97706" font-size="9.5" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">là xe của anh ấy</text>
+    <text x="133" y="99" fill="#F59E0B" font-size="8" text-anchor="middle" font-family="system-ui, sans-serif">(đích danh sở hữu)</text>
+
+    <!-- Formula Footer -->
+    <text x="97" y="132" fill="#78350F" font-size="10" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Nơi chốn + 是 + Vật xác định</text>
+    <text x="97" y="147" fill="#B45309" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">Ví dụ: 门外是他的自行车</text>
+  </g>
+</svg>

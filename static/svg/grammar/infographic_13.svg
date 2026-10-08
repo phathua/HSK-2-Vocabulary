@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="100%">
+  <defs><linearGradient id="g13" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FEF2F2"/><stop offset="100%" stop-color="#FEE2E2"/></linearGradient></defs>
+  <g transform="translate(8, 10)">
+    <rect width="524" height="160" rx="16" fill="url(#g13)" stroke="#FECACA" stroke-width="1.5"/>
+    <rect x="16" y="12" width="145" height="24" rx="8" fill="#E11D48"/>
+    <text x="88" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Bổ ngữ trạng thái 得 (de)</text>
+    <text x="170" y="28" fill="#9F1239" font-size="11" font-weight="700" font-family="system-ui, sans-serif">Đánh giá mức độ, cách thức của động tác</text>
+    <rect x="16" y="46" width="492" height="66" rx="10" fill="#FFFFFF" stroke="#FDA4AF" stroke-width="1"/>
+    <rect x="26" y="56" width="90" height="46" rx="8" fill="#EFF6FF" stroke="#93C5FD"/>
+    <text x="71" y="77" fill="#1D4ED8" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">跑 (Chạy)</text>
+    <text x="71" y="91" fill="#64748B" font-size="8.5" text-anchor="middle" font-family="system-ui, sans-serif">Động từ</text>
+    <rect x="126" y="64" width="36" height="30" rx="6" fill="#E11D48"/>
+    <text x="144" y="84" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">得</text>
+    <rect x="172" y="54" width="130" height="50" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+    <text x="237" y="74" fill="#047857" font-size="13" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">很快 (Rất nhanh)</text>
+    <text x="237" y="90" fill="#059669" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">Khẳng định: 很 + Adj</text>
+    <rect x="312" y="54" width="186" height="50" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="405" y="74" fill="#B91C1C" font-size="13" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">跑得不快 (Chạy không nhanh)</text>
+    <text x="405" y="90" fill="#DC2626" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">Phủ định: 不 đặt trước Tính từ</text>
+    <text x="262" y="132" fill="#9F1239" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Quy tắc vàng: Nếu có tân ngữ, phải lặp lại động từ (Ví dụ: 他写汉字写得很好)</text>
+    <text x="262" y="148" fill="#E11D48" font-size="9.5" text-anchor="middle" font-family="system-ui, sans-serif">Hoặc đưa tân ngữ lên đầu: 他汉字写得很好</text>
+  </g>
+</svg>

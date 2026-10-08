@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="100%">
+  <defs><linearGradient id="g10" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FEF2F2"/><stop offset="100%" stop-color="#FEE2E2"/></linearGradient></defs>
+  <g transform="translate(8, 10)">
+    <rect width="524" height="160" rx="16" fill="url(#g10)" stroke="#FECACA" stroke-width="1.5"/>
+    <rect x="16" y="12" width="145" height="24" rx="8" fill="#DC2626"/>
+    <text x="88" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Câu cầu khiến cấm đoán</text>
+    <text x="170" y="28" fill="#991B1B" font-size="11" font-weight="700" font-family="system-ui, sans-serif">Đừng... nữa (Ngăn cản hành động)</text>
+    <rect x="16" y="46" width="492" height="66" rx="10" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="1"/>
+    <g transform="translate(26, 54)">
+      <rect width="220" height="50" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="110" y="23" fill="#B91C1C" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">别 + Động từ + (了)</text>
+      <text x="110" y="40" fill="#DC2626" font-size="9.5" text-anchor="middle" font-family="system-ui, sans-serif">别说话了！(Đừng nói nữa!)</text>
+    </g>
+    <g transform="translate(266, 54)">
+      <rect width="230" height="50" rx="8" fill="#FFFBEB" stroke="#F59E0B"/>
+      <text x="115" y="23" fill="#B45309" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">不要 + Động từ + (了)</text>
+      <text x="115" y="40" fill="#D97706" font-size="9.5" text-anchor="middle" font-family="system-ui, sans-serif">不要看了 (Đừng xem nữa)</text>
+    </g>
+    <text x="262" y="132" fill="#991B1B" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Ý nghĩa của chữ 了 ở cuối: Hành động ĐANG DIỄN RA thì hãy DỪNG LẠI</text>
+    <text x="262" y="148" fill="#DC2626" font-size="9.5" text-anchor="middle" font-family="system-ui, sans-serif">Ví dụ: 别哭了 = Đừng khóc nữa (hiện tại người đó đang khóc)</text>
+  </g>
+</svg>

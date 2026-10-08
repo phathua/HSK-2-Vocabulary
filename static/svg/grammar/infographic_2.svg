@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g2-a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FEF2F2"/><stop offset="100%" stop-color="#FEE2E2"/></linearGradient>
+    <linearGradient id="g2-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ECFDF5"/><stop offset="100%" stop-color="#D1FAE5"/></linearGradient>
+  </defs>
+  <!-- Case A: Động tác hoàn thành -->
+  <g transform="translate(8, 10)">
+    <rect width="256" height="160" rx="16" fill="url(#g2-a)" stroke="#FECACA" stroke-width="1.5"/>
+    <rect x="12" y="12" width="86" height="24" rx="8" fill="#DC2626"/>
+    <text x="55" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">1. Động tác xong</text>
+    <text x="108" y="28" fill="#991B1B" font-size="11" font-weight="700" font-family="system-ui, sans-serif">Động từ + 了</text>
+    <rect x="12" y="46" width="232" height="66" rx="10" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="1"/>
+    <text x="35" y="75" fill="#475569" font-size="13" font-family="system-ui, sans-serif">我买</text>
+    <rect x="75" y="58" width="32" height="25" rx="6" fill="#EF4444"/>
+    <text x="91" y="75" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">了</text>
+    <text x="115" y="75" fill="#475569" font-size="13" font-family="system-ui, sans-serif">一本书。</text>
+    <text x="128" y="98" fill="#DC2626" font-size="10" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">Đã hoàn thành việc mua sách</text>
+    <text x="128" y="132" fill="#991B1B" font-size="10.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">V + 了 + Tân ngữ</text>
+    <text x="128" y="148" fill="#EF4444" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">Biểu thị hành động đã xảy ra xong</text>
+  </g>
+  <!-- Case B: Biến đổi trạng thái -->
+  <g transform="translate(276, 10)">
+    <rect width="256" height="160" rx="16" fill="url(#g2-b)" stroke="#A7F3D0" stroke-width="1.5"/>
+    <rect x="12" y="12" width="92" height="24" rx="8" fill="#059669"/>
+    <text x="58" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">2. Đổi trạng thái</text>
+    <text x="114" y="28" fill="#065F46" font-size="11" font-weight="700" font-family="system-ui, sans-serif">Cuối câu ... 了</text>
+    <rect x="12" y="46" width="232" height="66" rx="10" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="1"/>
+    <text x="35" y="75" fill="#475569" font-size="13" font-family="system-ui, sans-serif">天气热</text>
+    <rect x="90" y="58" width="32" height="25" rx="6" fill="#10B981"/>
+    <text x="106" y="75" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">了</text>
+    <text x="130" y="75" fill="#475569" font-size="13" font-family="system-ui, sans-serif">。</text>
+    <text x="128" y="98" fill="#059669" font-size="10" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">Trời đã trở nên nóng (trước đó lạnh)</text>
+    <text x="128" y="132" fill="#065F46" font-size="10.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Tính từ / Tình huống + 了 (cuối câu)</text>
+    <text x="128" y="148" fill="#10B981" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">Biểu thị sự phát sinh tình huống mới</text>
+  </g>
+</svg>

@@ -6,10 +6,12 @@
 
   let {
     sentence,
-    pinyinMode = 'always' // 'always' | 'hover' | 'hidden'
+    pinyinMode = 'always', // 'always' | 'hover' | 'hidden'
+    imageUrl
   } = $props<{
     sentence: ExampleSentenceItem;
     pinyinMode?: 'always' | 'hover' | 'hidden';
+    imageUrl?: string | null;
   }>();
 
   let isHovered = $state(false);
@@ -22,7 +24,7 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
-  class="group/sentence flex items-start justify-between gap-3 p-2.5 sm:p-3 rounded-2xl bg-white dark:bg-[#1E1E1F] border border-slate-200/80 dark:border-[#2C2D2F] hover:border-blue-300 dark:hover:border-blue-700/60 transition-all cursor-pointer sm:cursor-default"
+  class="group/sentence flex items-start gap-3 p-3 rounded-2xl bg-white dark:bg-[#1E1E1F] border border-slate-200/80 dark:border-[#2C2D2F] hover:border-blue-300 dark:hover:border-blue-700/60 transition-all cursor-pointer sm:cursor-default"
   onmouseenter={() => (isHovered = true)}
   onmouseleave={() => (isHovered = false)}
   onclick={() => {
@@ -31,12 +33,24 @@
     }
   }}
 >
+  <!-- Thumbnail nếu có ảnh minh họa trực quan từ kho ảnh HSK -->
+  {#if imageUrl}
+    <div class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200/60 dark:border-[#333537] shadow-2xs">
+      <img
+        src={imageUrl}
+        alt={sentence.meaning}
+        loading="lazy"
+        class="w-full h-full object-cover group-hover/sentence:scale-105 transition-transform duration-300"
+      />
+    </div>
+  {/if}
+
   <div class="flex-1 min-w-0">
     <!-- Hanzi & Pinyin -->
     <div class="space-y-0.5">
       <!-- Pinyin display based on mode -->
       {#if pinyinMode === 'always' || (pinyinMode === 'hover' && isHovered)}
-        <div class="text-xs font-medium text-blue-600 dark:text-blue-400 font-mono tracking-wide select-text">
+        <div class="text-xs font-semibold text-blue-600 dark:text-blue-400 font-mono tracking-wide select-text">
           {sentence.pinyin}
         </div>
       {:else if pinyinMode === 'hover'}
@@ -58,14 +72,14 @@
 
     <!-- Exam reference badge if exists -->
     {#if sentence.examRef}
-      <div class="mt-2 inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[10px] font-semibold text-slate-600 dark:text-slate-300">
+      <div class="mt-2 inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800/80 text-[10px] font-semibold text-slate-600 dark:text-slate-300">
         <Tag weight="duotone" class="w-3 h-3 text-slate-500 group-hover/sentence:text-blue-500 transition-colors" />
         <span>Trích đề Hanban: {sentence.examRef}</span>
       </div>
     {/if}
   </div>
 
-  <!-- Audio playback button: Duotone by default, Filled on hover/focus -->
+  <!-- Audio playback button -->
   <button
     type="button"
     onclick={playAudio}
@@ -73,7 +87,6 @@
     title="Phát âm câu này"
     aria-label="Phát âm câu này"
   >
-    <!-- Default duotone, hover filled -->
     <span class="group-hover/btn:hidden">
       <SpeakerHigh weight="duotone" class="w-4.5 h-4.5" />
     </span>

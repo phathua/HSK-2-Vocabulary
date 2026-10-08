@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="100%">
+  <defs><linearGradient id="g14" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#EFF6FF"/><stop offset="100%" stop-color="#DBEAFE"/></linearGradient></defs>
+  <g transform="translate(8, 10)">
+    <rect width="524" height="160" rx="16" fill="url(#g14)" stroke="#BFDBFE" stroke-width="1.5"/>
+    <rect x="16" y="12" width="145" height="24" rx="8" fill="#2563EB"/>
+    <text x="88" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Câu kiêm ngữ (请 / 让 / 叫)</text>
+    <text x="170" y="28" fill="#1E40AF" font-size="11" font-weight="700" font-family="system-ui, sans-serif">Tân ngữ câu 1 làm Chủ ngữ câu 2</text>
+    <rect x="16" y="46" width="492" height="66" rx="10" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1"/>
+    <rect x="26" y="56" width="70" height="46" rx="8" fill="#F1F5F9"/>
+    <text x="61" y="77" fill="#334155" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">老师</text>
+    <text x="61" y="91" fill="#64748B" font-size="8.5" text-anchor="middle" font-family="system-ui, sans-serif">Chủ ngữ 1</text>
+    <rect x="106" y="64" width="66" height="30" rx="6" fill="#2563EB"/>
+    <text x="139" y="84" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">让 / 请 / 叫</text>
+    <!-- Bridge kiêm ngữ -->
+    <rect x="182" y="54" width="126" height="50" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+    <text x="245" y="74" fill="#B45309" font-size="13" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">我 (Tôi)</text>
+    <text x="245" y="90" fill="#D97706" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">[Tân ngữ 1 = Chủ ngữ 2]</text>
+    <rect x="318" y="56" width="180" height="46" rx="8" fill="#ECFDF5" stroke="#10B981"/>
+    <text x="408" y="77" fill="#047857" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">读课文 (đọc bài khóa)</text>
+    <text x="408" y="91" fill="#059669" font-size="8.5" text-anchor="middle" font-family="system-ui, sans-serif">Hành động 2</text>
+    <text x="262" y="132" fill="#1E40AF" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Sắc thái: 请 (kính cẩn mời / xin phép) • 让 (cho phép / bảo) • 叫 (sai khiến / gọi làm)</text>
+    <text x="262" y="148" fill="#2563EB" font-size="9.5" text-anchor="middle" font-family="system-ui, sans-serif">Ví dụ: 妈妈让我早点睡觉 (Mẹ bảo tôi đi ngủ sớm)</text>
+  </g>
+</svg>
