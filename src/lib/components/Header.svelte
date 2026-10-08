@@ -36,19 +36,14 @@
       </div>
 
       <div class="leading-tight min-w-0">
-        <div class="flex items-center gap-1.5">
-          <span class="font-black text-sm text-slate-900 dark:text-[#E3E3E3] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors whitespace-nowrap">
-            HSK {appState.currentLevel === 'HSK1' ? '1' : '2'}
-          </span>
-        </div>
-        <div class="text-[11px] font-bold text-slate-400 dark:text-[#8E918F] mt-0.5 whitespace-nowrap">
-          {appState.activeLessonsCount}/15 bài • {appState.filteredVocab.length} từ
-        </div>
+        <span class="font-black text-sm text-slate-900 dark:text-[#E3E3E3] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors whitespace-nowrap">
+          HSK {appState.currentLevel === 'HSK1' ? '1' : '2'}
+        </span>
       </div>
     </button>
   </div>
 
-  <!-- Right: Clean Actions (Chỉ icon đảo chiều bên trái và 1 lá cờ đích bên phải) -->
+  <!-- Right: Clean Actions -->
   <div class="flex items-center gap-1.5 shrink-0">
     <!-- Nút đảo chiều: ArrowsLeftRight bên trái + 1 lá cờ tròn SVG đích bên phải -->
     <button
@@ -73,17 +68,6 @@
           class="w-5 h-5 rounded-full object-cover shrink-0 drop-shadow-2xs"
         />
       {/if}
-    </button>
-
-    <!-- Reset Button (Học lại từ đầu) -->
-    <button
-      type="button"
-      onclick={() => appState.resetCurrentTab()}
-      class="w-9 h-9 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center justify-center text-slate-600 dark:text-[#C4C7C5] hover:text-pink-600 dark:hover:text-pink-400 transition-colors cursor-pointer active:scale-95"
-      title="Học lại từ đầu"
-      aria-label="Học lại từ đầu"
-    >
-      <ArrowClockwise weight="bold" class="w-4 h-4" />
     </button>
 
     <!-- Settings Button -->

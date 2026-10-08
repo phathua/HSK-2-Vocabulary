@@ -58,7 +58,7 @@
 
 <!-- Main Fill Word Card -->
 <main class="flex-1 min-h-0 w-full max-w-xl mx-auto bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-5 flex flex-col justify-between items-center text-center relative overflow-hidden transition-colors">
-  <!-- Top Bar: Hai nút đối xứng hai bên + Sub-mode Switch nằm giữa hài hòa không bị lẹm -->
+  <!-- Top Bar: Nút Bài bên trái, Nút đổi chế độ nổi bật bên phải -->
   <div class="w-full flex items-center justify-between shrink-0 mb-1 z-10">
     <!-- Floating Lesson Select Button -->
     <button
@@ -71,35 +71,29 @@
       <span class="text-xs font-black uppercase tracking-wider">Bài {appState.currentFillItem?.lesson || 1}</span>
     </button>
 
-    <!-- Center Mode Switch: Chọn từ / Thủ công -->
+    <!-- Right Mode Switch: Chọn từ / Thủ công nổi bật màu sắc -->
     {#if !isZhToVi && appState.currentFillItem}
       <button
         type="button"
         onclick={() => appState.toggleFillSubMode()}
-        class="bg-slate-100 hover:bg-slate-200 dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border border-slate-200/80 dark:border-[#37393B] rounded-2xl h-10 px-3 flex items-center justify-center gap-1.5 shadow-2xs active:scale-95 transition-all cursor-pointer text-xs font-bold"
+        class={`rounded-2xl h-10 px-3 flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all cursor-pointer text-xs font-black text-white ${
+          appState.fillSubMode === 'tiles'
+            ? 'bg-blue-600 hover:bg-blue-700 border border-blue-500'
+            : 'bg-emerald-600 hover:bg-emerald-700 border border-emerald-500'
+        }`}
         title="Chuyển chế độ: Chọn từ / Thủ công"
       >
         {#if appState.fillSubMode === 'tiles'}
-          <SquaresFour weight="bold" class="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
+          <SquaresFour weight="bold" class="w-4 h-4 text-white shrink-0" />
           <span>Chọn từ</span>
         {:else}
-          <Keyboard weight="bold" class="w-4 h-4 text-amber-500 shrink-0" />
+          <Keyboard weight="bold" class="w-4 h-4 text-white shrink-0" />
           <span>Thủ công</span>
         {/if}
       </button>
     {:else}
       <div></div>
     {/if}
-
-    <!-- Speaker Button -->
-    <button
-      type="button"
-      onclick={() => appState.speakCurrent()}
-      class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl w-10 h-10 flex items-center justify-center shadow-sm active:scale-95 transition-transform cursor-pointer shrink-0"
-      title="Phát âm tiếng Trung"
-    >
-      <SpeakerHigh weight="bold" class="w-5 h-5" />
-    </button>
   </div>
 
   {#if appState.currentFillItem}
@@ -122,11 +116,23 @@
         <div class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-[#E3E3E3] mb-1 max-w-md leading-tight">
           {appState.currentFillItem.viet}
         </div>
-        <div class="text-3xl sm:text-4xl font-black text-blue-600 dark:text-blue-400 font-sans tracking-tight mb-2">
-          {appState.currentFillItem.hanzi}
+
+        <!-- Chữ Hán kèm nút Loa TTS ngay cạnh bên phải -->
+        <div class="flex items-center justify-center gap-2.5 mb-2">
+          <div class="text-3xl sm:text-4xl font-black text-blue-600 dark:text-blue-400 font-sans tracking-tight">
+            {appState.currentFillItem.hanzi}
+          </div>
+          <button
+            type="button"
+            onclick={() => appState.speakCurrent()}
+            class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center shadow-xs active:scale-95 transition-transform cursor-pointer shrink-0"
+            title="Phát âm tiếng Trung"
+          >
+            <SpeakerHigh weight="bold" class="w-4 h-4 sm:w-5 sm:h-5" />
+          </button>
         </div>
 
-        <!-- Chế độ 'Chọn từ': Hiển thị các ô Slot ký tự -->
+        <!-- Chế độ 'Chọn từ': Hiển thị các ô Slot ký tự + Nút Xoá đặt ngay bên phải -->
         {#if isTileMode && appState.fillWordChunks.length > 0}
           <div class="w-full max-w-md mt-1 px-1 flex flex-col items-center gap-2">
             <!-- Nếu từ dài có nhiều cụm (như gōnggòng qìchē), hiển thị tabs chuyển chunk -->
@@ -153,49 +159,79 @@
               </div>
             {/if}
 
-            <!-- Render Slots của tất cả các Chunks theo hàng ngang tự bọc dòng mượt mà -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 py-1">
-              {#each appState.fillWordChunks as chunk, cIdx}
-                <div class={`flex items-center gap-1 sm:gap-1.5 p-1 rounded-2xl border transition-all ${
-                  cIdx === appState.currentChunkIndex
-                    ? 'border-blue-400/80 bg-blue-50/40 dark:bg-blue-950/20 dark:border-blue-500/40'
-                    : 'border-transparent bg-slate-50/50 dark:bg-[#242628]/40'
-                }`}>
-                  {#each chunk.slots as slot}
-                    {@const isCorrectSlot = appState.fillAnswered && slot.userChar === slot.char}
-                    {@const isWrongSlot = appState.fillAnswered && slot.userChar !== slot.char}
-                    <button
-                      type="button"
-                      disabled={slot.isPreFilled || appState.fillAnswered}
-                      onclick={() => appState.unselectSlot(cIdx, slot.id)}
-                      class={`w-8 h-10 sm:w-10 sm:h-12 rounded-xl flex items-center justify-center font-black text-base sm:text-lg transition-all border-b-4 select-none ${
-                        slot.isPreFilled
-                          ? 'bg-slate-200 dark:bg-[#323537] text-slate-500 dark:text-slate-400 border-slate-300 dark:border-[#3c3f42] cursor-not-allowed'
-                          : isCorrectSlot
-                            ? 'bg-emerald-500 text-white border-emerald-700 shadow-xs'
-                            : isWrongSlot
-                              ? 'bg-rose-500 text-white border-rose-700 shadow-xs'
-                              : slot.userChar
-                                ? 'bg-blue-500 text-white border-blue-700 shadow-xs cursor-pointer active:scale-95'
-                                : cIdx === appState.currentChunkIndex
-                                  ? 'bg-white dark:bg-[#282A2C] border-dashed border-2 border-slate-300 dark:border-[#404346] text-transparent'
-                                  : 'bg-white/60 dark:bg-[#282A2C]/60 border-dashed border-2 border-slate-200 dark:border-[#35373a] text-transparent'
-                      }`}
-                      title={slot.isPreFilled ? 'Ký tự gợi ý sẵn' : slot.userChar ? 'Bấm để gỡ bỏ' : 'Ô trống'}
-                    >
-                      {slot.userChar || '_'}
-                    </button>
-                  {/each}
-                </div>
-              {/each}
+            <!-- Render Slots của tất cả các Chunks theo hàng ngang kèm nút Xoá (Backspace) bên phải -->
+            <div class="flex items-center justify-center gap-1.5 sm:gap-2 py-1 max-w-full">
+              <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                {#each appState.fillWordChunks as chunk, cIdx}
+                  <div class={`flex items-center gap-1 sm:gap-1.5 p-1 rounded-2xl border transition-all ${
+                    cIdx === appState.currentChunkIndex
+                      ? 'border-blue-400/80 bg-blue-50/40 dark:bg-blue-950/20 dark:border-blue-500/40'
+                      : 'border-transparent bg-slate-50/50 dark:bg-[#242628]/40'
+                  }`}>
+                    {#each chunk.slots as slot}
+                      {@const isCorrectSlot = appState.fillAnswered && slot.userChar === slot.char}
+                      {@const isWrongSlot = appState.fillAnswered && slot.userChar !== slot.char}
+                      <button
+                        type="button"
+                        disabled={slot.isPreFilled || appState.fillAnswered}
+                        onclick={() => appState.unselectSlot(cIdx, slot.id)}
+                        class={`w-8 h-10 sm:w-10 sm:h-12 rounded-xl flex items-center justify-center font-black text-base sm:text-lg transition-all border-b-4 select-none ${
+                          slot.isPreFilled
+                            ? 'bg-slate-200 dark:bg-[#323537] text-slate-500 dark:text-slate-400 border-slate-300 dark:border-[#3c3f42] cursor-not-allowed'
+                            : isCorrectSlot
+                              ? 'bg-emerald-500 text-white border-emerald-700 shadow-xs'
+                              : isWrongSlot
+                                ? 'bg-rose-500 text-white border-rose-700 shadow-xs'
+                                : slot.userChar
+                                  ? 'bg-blue-500 text-white border-blue-700 shadow-xs cursor-pointer active:scale-95'
+                                  : cIdx === appState.currentChunkIndex
+                                    ? 'bg-white dark:bg-[#282A2C] border-dashed border-2 border-slate-300 dark:border-[#404346] text-transparent'
+                                    : 'bg-white/60 dark:bg-[#282A2C]/60 border-dashed border-2 border-slate-200 dark:border-[#35373a] text-transparent'
+                        }`}
+                        title={slot.isPreFilled ? 'Ký tự gợi ý sẵn' : slot.userChar ? 'Bấm để gỡ bỏ' : 'Ô trống'}
+                      >
+                        {slot.userChar || '_'}
+                      </button>
+                    {/each}
+                  </div>
+                {/each}
+              </div>
+
+              <!-- Nút Xoá (Backspace) đặt ngay cạnh bên phải các ô điền chữ -->
+              <button
+                type="button"
+                disabled={appState.fillAnswered}
+                onclick={() => appState.backspaceSlot(appState.currentChunkIndex)}
+                class="w-9 h-10 sm:w-10 sm:h-12 rounded-xl font-black text-rose-500 bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/50 border-b-4 border-rose-300 dark:border-rose-900/60 flex items-center justify-center transition-all active:border-b-0 active:translate-y-1 cursor-pointer shrink-0"
+                title="Xoá ký tự vừa nhập"
+              >
+                <Backspace weight="bold" class="w-5 h-5" />
+              </button>
             </div>
+
+            <!-- Nếu trả lời SAI: Hiển thị đáp án đúng màu đỏ ngay bên dưới ô điền chữ -->
+            {#if appState.fillAnswered && appState.fillFeedback?.type === 'wrong'}
+              <div class="text-xs font-black text-rose-500 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 px-3 py-1.5 rounded-xl animate-fade-in">
+                Đáp án đúng: <span class="underline underline-offset-2">{appState.currentFillItem.pinyin}</span>
+              </div>
+            {/if}
           </div>
         {/if}
       {:else}
-        <!-- Đảo ngược: Hiển thị Chữ Hán & Pinyin ➔ Yêu cầu gõ nghĩa tiếng Việt -->
+        <!-- Đảo ngược: Hiển thị Chữ Hán & Pinyin kèm loa TTS -->
         <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-0.5">Từ vựng tiếng Trung</span>
-        <div class="text-4xl sm:text-5xl font-black text-blue-600 dark:text-blue-400 font-sans mb-1">
-          {appState.currentFillItem.hanzi}
+        <div class="flex items-center justify-center gap-2 mb-1">
+          <div class="text-4xl sm:text-5xl font-black text-blue-600 dark:text-blue-400 font-sans">
+            {appState.currentFillItem.hanzi}
+          </div>
+          <button
+            type="button"
+            onclick={() => appState.speakCurrent()}
+            class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl w-9 h-9 flex items-center justify-center shadow-xs active:scale-95 transition-transform cursor-pointer shrink-0"
+            title="Phát âm tiếng Trung"
+          >
+            <SpeakerHigh weight="bold" class="w-5 h-5" />
+          </button>
         </div>
         <div class="text-xl sm:text-2xl font-black text-slate-700 dark:text-[#C4C7C5]">
           {appState.currentFillItem.pinyin}
@@ -286,17 +322,6 @@
               {tile.char}
             </button>
           {/each}
-
-          <!-- Backspace Button -->
-          <button
-            type="button"
-            disabled={appState.fillAnswered}
-            onclick={() => appState.backspaceSlot(appState.currentChunkIndex)}
-            class="min-w-9 h-10 sm:min-w-11 sm:h-12 px-2.5 rounded-xl font-black text-slate-700 dark:text-[#C4C7C5] bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 border-b-4 border-rose-300 dark:border-rose-900/60 flex items-center justify-center transition-all active:border-b-0 active:translate-y-1 cursor-pointer"
-            title="Xoá ký tự vừa nhập"
-          >
-            <Backspace weight="bold" class="w-5 h-5 text-rose-500" />
-          </button>
         </div>
       </div>
     {:else}
