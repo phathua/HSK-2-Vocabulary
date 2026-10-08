@@ -118,14 +118,13 @@
           </div>
         </div>
 
-        <button
-          type="button"
-          onclick={() => alert(`Chuẩn bị vào phòng thi: ${exam.title} (${exam.code})!`)}
-          class="px-5 py-3 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-xs md:text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm active:scale-95 transition-all cursor-pointer"
+        <a
+          href="/thi-thu/{exam.code}"
+          class="px-5 py-3 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-xs md:text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm active:scale-95 transition-all cursor-pointer no-underline"
         >
           <Play weight="bold" class="w-4 h-4" />
           <span>Vào phòng thi</span>
-        </button>
+        </a>
       </div>
     {/each}
   </div>
