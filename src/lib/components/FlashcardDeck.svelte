@@ -116,26 +116,31 @@
 
   let isSwipePending = $state(false);
 
-  // Pointer / Touch start
-  function handlePointerDown(e: MouseEvent | TouchEvent) {
+  // Pointer start (Hỗ trợ cả Mouse và Touch trên mọi nền tảng)
+  function handlePointerDown(e: PointerEvent) {
     if (isAnimating || flyingCard || !appState.currentFlashItem) return;
     registerUserAction();
-    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
-    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+
+    // Bắt dính pointer vào thẻ hiện tại để đảm bảo pointermove và pointerup luôn kích hoạt
+    const target = e.currentTarget as HTMLElement;
+    if (target && target.setPointerCapture) {
+      try {
+        target.setPointerCapture(e.pointerId);
+      } catch {}
+    }
+
     isDragging = true;
     hasDragged = false;
-    startX = clientX;
-    startY = clientY;
+    startX = e.clientX;
+    startY = e.clientY;
   }
 
-  function handlePointerMove(e: MouseEvent | TouchEvent) {
+  function handlePointerMove(e: PointerEvent) {
     if (!isDragging) return;
-    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
-    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
-    const dx = clientX - startX;
-    const dy = clientY - startY;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
 
-    // Ngưỡng phát hiện bắt đầu kéo thực sự: > 10px
+    // Ngưỡng phân biệt kéo thực sự: > 10px
     if (!hasDragged && (Math.abs(dx) > 10 || Math.abs(dy) > 10)) {
       hasDragged = true;
       registerUserAction();
@@ -147,9 +152,17 @@
     }
   }
 
-  function handlePointerUp() {
+  function handlePointerUp(e: PointerEvent) {
     if (!isDragging) return;
     isDragging = false;
+
+    const target = e.currentTarget as HTMLElement;
+    if (target && target.releasePointerCapture) {
+      try {
+        target.releasePointerCapture(e.pointerId);
+      } catch {}
+    }
+
     const threshold = 90;
 
     if (hasDragged && (offsetX > threshold || offsetX < -threshold)) {
@@ -166,7 +179,7 @@
         hasDragged = false;
       }, 250);
     } else {
-      // Chưa từng kéo (chỉ là tap/click bình thường) -> Lật card ngay lập tức!
+      // Thao tác Tap/Click tại chỗ -> LẬT THẺ NGAY LẬP TỨC
       toggleFlip();
     }
   }
@@ -257,13 +270,6 @@
     executeSwipe(direction);
   }
 </script>
-
-<svelte:window
-  onmousemove={(e) => isDragging && handlePointerMove(e)}
-  onmouseup={() => isDragging && handlePointerUp()}
-  ontouchmove={(e) => isDragging && handlePointerMove(e)}
-  ontouchend={() => isDragging && handlePointerUp()}
-/>
 
 <!-- Flashcard Container Deck -->
 <div class="flex-1 min-h-0 flex flex-col relative select-none">
@@ -365,8 +371,10 @@
         tabindex="0"
         aria-label="Thẻ từ vựng flashcard, chạm để lật, vuốt sang phải nếu thuộc, sang trái nếu chưa thuộc"
         onkeydown={handleCardKeydown}
-        onmousedown={(e) => handlePointerDown(e)}
-        ontouchstart={(e) => handlePointerDown(e)}
+        onpointerdown={handlePointerDown}
+        onpointermove={handlePointerMove}
+        onpointerup={handlePointerUp}
+        onpointercancel={handlePointerUp}
         class="w-full h-full relative cursor-grab active:cursor-grabbing touch-none select-none [transform-style:preserve-3d]"
         style={`
           transform: translate3d(${offsetX}px, ${offsetY}px, 0) rotate(${rotateDeg}deg);
