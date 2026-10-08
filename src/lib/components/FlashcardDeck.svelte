@@ -114,6 +114,8 @@
     isAnimating = false;
   }
 
+  let isSwipePending = $state(false);
+
   // Pointer / Touch start
   function handlePointerDown(e: MouseEvent | TouchEvent) {
     if (isAnimating || flyingCard || !appState.currentFlashItem) return;
@@ -128,13 +130,20 @@
 
   function handlePointerMove(e: MouseEvent | TouchEvent) {
     if (!isDragging) return;
-    registerUserAction();
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
     const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
-    offsetX = clientX - startX;
-    offsetY = clientY - startY;
-    if (Math.abs(offsetX) > 8 || Math.abs(offsetY) > 8) {
+    const dx = clientX - startX;
+    const dy = clientY - startY;
+
+    // Ngưỡng phát hiện bắt đầu kéo thực sự: > 10px
+    if (!hasDragged && (Math.abs(dx) > 10 || Math.abs(dy) > 10)) {
       hasDragged = true;
+      registerUserAction();
+    }
+
+    if (hasDragged) {
+      offsetX = dx;
+      offsetY = dy;
     }
   }
 
@@ -143,20 +152,31 @@
     isDragging = false;
     const threshold = 90;
 
-    if (offsetX > threshold) {
-      // Swipe Right -> THUỘC (Card bay hẳn ra khỏi màn hình)
-      executeSwipe('right');
-    } else if (offsetX < -threshold) {
-      // Swipe Left -> CHƯA THUỘC (Card bay hẳn ra khỏi màn hình)
-      executeSwipe('left');
-    } else {
-      // Snap back if threshold not met
+    if (hasDragged && (offsetX > threshold || offsetX < -threshold)) {
+      // Đủ ngưỡng swipe -> Thẻ bay ra ngoài
+      isSwipePending = true;
+      executeSwipe(offsetX > threshold ? 'right' : 'left');
+    } else if (hasDragged) {
+      // Đã kéo nhưng chưa đủ ngưỡng -> Snap back về giữa
       isAnimating = true;
       offsetX = 0;
       offsetY = 0;
       setTimeout(() => {
         isAnimating = false;
+        hasDragged = false;
       }, 250);
+    } else {
+      // Chưa từng kéo (chỉ là tap/click bình thường) -> Lật card ngay lập tức!
+      toggleFlip();
+    }
+  }
+
+  function toggleFlip() {
+    if (isLeavingDeck || isAnimating || flyingCard || isSwipePending) return;
+    registerUserAction();
+    isFlipped = !isFlipped;
+    if (isFlipped) {
+      appState.speakCurrent();
     }
   }
 
@@ -206,6 +226,8 @@
 
       flyingCard = null;
       isLeavingDeck = false;
+      isSwipePending = false;
+      hasDragged = false;
 
       // Sau 2 animation frames (khi DOM và style đã commit vị trí tĩnh của Card mới), trả lại transition
       requestAnimationFrame(() => {
@@ -217,20 +239,15 @@
     }, 350);
   }
 
-  // Click card to toggle 3D Flip
-  function handleCardClick() {
-    registerUserAction();
-    // Chặn hoàn toàn click ma sau khi đã vuốt kéo card
-    if (hasDragged || isLeavingDeck || isAnimating || flyingCard) {
-      hasDragged = false;
-      return;
-    }
-
-    if (Math.abs(offsetX) < 10 && Math.abs(offsetY) < 10) {
-      isFlipped = !isFlipped;
-      if (isFlipped) {
-        appState.speakCurrent();
-      }
+  // Bàn phím Space/Enter kích hoạt lật
+  function handleCardKeydown(e: KeyboardEvent) {
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      toggleFlip();
+    } else if (e.key === 'ArrowRight') {
+      triggerSwipe('right');
+    } else if (e.key === 'ArrowLeft') {
+      triggerSwipe('left');
     }
   }
 
@@ -347,19 +364,9 @@
         role="button"
         tabindex="0"
         aria-label="Thẻ từ vựng flashcard, chạm để lật, vuốt sang phải nếu thuộc, sang trái nếu chưa thuộc"
-        onkeydown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter') {
-            e.preventDefault();
-            handleCardClick();
-          } else if (e.key === 'ArrowRight') {
-            triggerSwipe('right');
-          } else if (e.key === 'ArrowLeft') {
-            triggerSwipe('left');
-          }
-        }}
+        onkeydown={handleCardKeydown}
         onmousedown={(e) => handlePointerDown(e)}
         ontouchstart={(e) => handlePointerDown(e)}
-        onclick={handleCardClick}
         class="w-full h-full relative cursor-grab active:cursor-grabbing touch-none select-none [transform-style:preserve-3d]"
         style={`
           transform: translate3d(${offsetX}px, ${offsetY}px, 0) rotate(${rotateDeg}deg);
