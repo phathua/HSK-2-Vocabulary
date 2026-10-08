@@ -3,7 +3,7 @@
   "title": "Đề Luyện Thi Chinese Tools (HSK 3.0 Mock 1)",
   "total_questions": 60,
   "audio_ogg": null,
-  "images_count": 0,
+  "images_count": 15,
   "questions": [
     {
       "exam_code": "MOCK-CHINESE-TOOLS",
@@ -11,10 +11,28 @@
       "part": "Part 1",
       "question_no": 1,
       "image": null,
-      "type": "Image Match",
-      "text": "Câu hỏi nghe số 1 (Chinese Tools HSK 3.0)",
+      "type": "Image Choice",
+      "text": "Nghe và chọn bức tranh phù hợp nhất (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A",
+          "image": "images/jouer-basket.webp"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B",
+          "image": "images/courir.webp"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C",
+          "image": "images/jouer-football.webp"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -24,10 +42,28 @@
       "part": "Part 1",
       "question_no": 2,
       "image": null,
-      "type": "Image Match",
-      "text": "Câu hỏi nghe số 2 (Chinese Tools HSK 3.0)",
+      "type": "Image Choice",
+      "text": "Nghe và chọn bức tranh phù hợp nhất (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A",
+          "image": "images/danser.webp"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B",
+          "image": "images/nager.webp"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C",
+          "image": "images/dormir.webp"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -37,10 +73,28 @@
       "part": "Part 1",
       "question_no": 3,
       "image": null,
-      "type": "Image Match",
-      "text": "Câu hỏi nghe số 3 (Chinese Tools HSK 3.0)",
+      "type": "Image Choice",
+      "text": "Nghe và chọn bức tranh phù hợp nhất (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A",
+          "image": "images/pantalon.webp"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B",
+          "image": "images/cartable.webp"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C",
+          "image": "images/montre.webp"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -50,10 +104,28 @@
       "part": "Part 1",
       "question_no": 4,
       "image": null,
-      "type": "Image Match",
-      "text": "Câu hỏi nghe số 4 (Chinese Tools HSK 3.0)",
+      "type": "Image Choice",
+      "text": "Nghe và chọn bức tranh phù hợp nhất (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A",
+          "image": "images/oeufs-trois-table.webp"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B",
+          "image": "images/viande-assiette.webp"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C",
+          "image": "images/poisson-assiette.webp"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -63,10 +135,28 @@
       "part": "Part 1",
       "question_no": 5,
       "image": null,
-      "type": "Image Match",
-      "text": "Câu hỏi nghe số 5 (Chinese Tools HSK 3.0)",
+      "type": "Image Choice",
+      "text": "Nghe và chọn bức tranh phù hợp nhất (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A",
+          "image": "images/bus.webp"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B",
+          "image": "images/metro.webp"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C",
+          "image": "images/avion.webp"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -77,9 +167,36 @@
       "question_no": 6,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 6 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "F",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [F].",
       "image_url": null,
       "board_image": null
     },
@@ -90,9 +207,36 @@
       "question_no": 7,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 7 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "D",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [D].",
       "image_url": null,
       "board_image": null
     },
@@ -103,9 +247,36 @@
       "question_no": 8,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 8 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -116,9 +287,36 @@
       "question_no": 9,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 9 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -129,9 +327,36 @@
       "question_no": 10,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 10 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -142,9 +367,36 @@
       "question_no": 11,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 11 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -155,9 +407,36 @@
       "question_no": 12,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 12 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "F",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [F].",
       "image_url": null,
       "board_image": null
     },
@@ -168,9 +447,36 @@
       "question_no": 13,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 13 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -181,9 +487,36 @@
       "question_no": 14,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 14 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "E",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [E].",
       "image_url": null,
       "board_image": null
     },
@@ -194,9 +527,36 @@
       "question_no": 15,
       "image": null,
       "type": "Image Match",
-      "text": "Câu hỏi nghe số 15 (Chinese Tools HSK 3.0)",
+      "text": "Nghe đoạn hội thoại và chọn bức tranh tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -207,9 +567,24 @@
       "question_no": 16,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 16 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -220,9 +595,24 @@
       "question_no": 17,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 17 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -233,9 +623,24 @@
       "question_no": 18,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 18 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -246,9 +651,24 @@
       "question_no": 19,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 19 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -259,9 +679,24 @@
       "question_no": 20,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 20 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -272,9 +707,24 @@
       "question_no": 21,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 21 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -285,9 +735,24 @@
       "question_no": 22,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 22 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -298,9 +763,24 @@
       "question_no": 23,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 23 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -311,9 +791,24 @@
       "question_no": 24,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 24 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -324,9 +819,24 @@
       "question_no": 25,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi nghe số 25 (Chinese Tools HSK 3.0)",
+      "text": "Nghe câu hỏi và chọn đáp án chính xác (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -337,9 +847,36 @@
       "question_no": 26,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 26",
+      "text": "Part 1 (26–30) Match each sentence with a picture from A to F. A B C D E F 26 我 的 笔 在 书包 里 。 A B C D E F 27 那 只 鸟 很 漂亮 。 A B C D E F 28 我 弟弟 很 喜欢 打 篮球 。 A B C D E F 29 我 每 天 早上 都 去 游泳 。 A B C D E F 30 我 太 累 了 ， 想 去 床 上 睡 一会儿 。 A B C D E F",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "D",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [D].",
       "image_url": null,
       "board_image": null
     },
@@ -350,9 +887,36 @@
       "question_no": 27,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 27",
+      "text": "Part 1 (26–30) Match each sentence with a picture from A to F. A B C D E F 26 我 的 笔 在 书包 里 。 A B C D E F 27 那 只 鸟 很 漂亮 。 A B C D E F 28 我 弟弟 很 喜欢 打 篮球 。 A B C D E F 29 我 每 天 早上 都 去 游泳 。 A B C D E F 30 我 太 累 了 ， 想 去 床 上 睡 一会儿 。 A B C D E F",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -363,9 +927,36 @@
       "question_no": 28,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 28",
+      "text": "Part 1 (26–30) Match each sentence with a picture from A to F. A B C D E F 26 我 的 笔 在 书包 里 。 A B C D E F 27 那 只 鸟 很 漂亮 。 A B C D E F 28 我 弟弟 很 喜欢 打 篮球 。 A B C D E F 29 我 每 天 早上 都 去 游泳 。 A B C D E F 30 我 太 累 了 ， 想 去 床 上 睡 一会儿 。 A B C D E F",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -376,9 +967,36 @@
       "question_no": 29,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 29",
+      "text": "Part 1 (26–30) Match each sentence with a picture from A to F. A B C D E F 26 我 的 笔 在 书包 里 。 A B C D E F 27 那 只 鸟 很 漂亮 。 A B C D E F 28 我 弟弟 很 喜欢 打 篮球 。 A B C D E F 29 我 每 天 早上 都 去 游泳 。 A B C D E F 30 我 太 累 了 ， 想 去 床 上 睡 一会儿 。 A B C D E F",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "E",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [E].",
       "image_url": null,
       "board_image": null
     },
@@ -389,9 +1007,36 @@
       "question_no": 30,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 30",
+      "text": "Part 1 (26–30) Match each sentence with a picture from A to F. A B C D E F 26 我 的 笔 在 书包 里 。 A B C D E F 27 那 只 鸟 很 漂亮 。 A B C D E F 28 我 弟弟 很 喜欢 打 篮球 。 A B C D E F 29 我 每 天 早上 都 去 游泳 。 A B C D E F 30 我 太 累 了 ， 想 去 床 上 睡 一会儿 。 A B C D E F",
+      "options": [
+        {
+          "value": "A",
+          "label": "Tranh A"
+        },
+        {
+          "value": "B",
+          "label": "Tranh B"
+        },
+        {
+          "value": "C",
+          "label": "Tranh C"
+        },
+        {
+          "value": "D",
+          "label": "Tranh D"
+        },
+        {
+          "value": "E",
+          "label": "Tranh E"
+        },
+        {
+          "value": "F",
+          "label": "Tranh F"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -402,9 +1047,36 @@
       "question_no": 31,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 31",
+      "text": "Chọn từ thích hợp từ A đến F để điền vào chỗ trống.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "D",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [D].",
       "image_url": null,
       "board_image": null
     },
@@ -415,9 +1087,36 @@
       "question_no": 32,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 32",
+      "text": "Chọn từ thích hợp từ A đến F để điền vào chỗ trống.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -428,9 +1127,36 @@
       "question_no": 33,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 33",
+      "text": "Chọn từ thích hợp từ A đến F để điền vào chỗ trống.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "E",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [E].",
       "image_url": null,
       "board_image": null
     },
@@ -441,9 +1167,36 @@
       "question_no": 34,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 34",
+      "text": "Chọn từ thích hợp từ A đến F để điền vào chỗ trống.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -454,9 +1207,36 @@
       "question_no": 35,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 35",
+      "text": "Chọn từ thích hợp từ A đến F để điền vào chỗ trống.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -466,10 +1246,37 @@
       "part": "Part 3",
       "question_no": 36,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 36",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "D",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [D].",
       "image_url": null,
       "board_image": null
     },
@@ -479,10 +1286,37 @@
       "part": "Part 3",
       "question_no": 37,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 37",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -492,10 +1326,37 @@
       "part": "Part 3",
       "question_no": 38,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 38",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "E",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [E].",
       "image_url": null,
       "board_image": null
     },
@@ -505,10 +1366,37 @@
       "part": "Part 3",
       "question_no": 39,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 39",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -518,10 +1406,37 @@
       "part": "Part 3",
       "question_no": 40,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 40",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -531,10 +1446,37 @@
       "part": "Part 3",
       "question_no": 41,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 41",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -544,10 +1486,37 @@
       "part": "Part 3",
       "question_no": 42,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 42",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "D",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [D].",
       "image_url": null,
       "board_image": null
     },
@@ -557,10 +1526,37 @@
       "part": "Part 3",
       "question_no": 43,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 43",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -570,10 +1566,37 @@
       "part": "Part 3",
       "question_no": 44,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 44",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "E",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [E].",
       "image_url": null,
       "board_image": null
     },
@@ -583,10 +1606,37 @@
       "part": "Part 3",
       "question_no": 45,
       "image": null,
-      "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 45",
+      "type": "Sentence Match",
+      "text": "Nối câu với câu trả lời tương ứng từ A đến F.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "F",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [F].",
       "image_url": null,
       "board_image": null
     },
@@ -597,9 +1647,24 @@
       "question_no": 46,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 46",
+      "text": "Đọc đoạn văn ngắn và chọn câu trả lời đúng (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -610,9 +1675,24 @@
       "question_no": 47,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 47",
+      "text": "Đọc đoạn văn ngắn và chọn câu trả lời đúng (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -623,9 +1703,24 @@
       "question_no": 48,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 48",
+      "text": "Đọc đoạn văn ngắn và chọn câu trả lời đúng (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -636,9 +1731,24 @@
       "question_no": 49,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 49",
+      "text": "Đọc đoạn văn ngắn và chọn câu trả lời đúng (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -649,9 +1759,24 @@
       "question_no": 50,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu hỏi đọc số 50",
+      "text": "Đọc đoạn văn ngắn và chọn câu trả lời đúng (A, B hoặc C).",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -662,9 +1787,36 @@
       "question_no": 51,
       "image": null,
       "type": "Character Match",
-      "text": "Câu hỏi viết số 51",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "E",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [E].",
       "image_url": null,
       "board_image": null
     },
@@ -675,9 +1827,36 @@
       "question_no": 52,
       "image": null,
       "type": "Character Match",
-      "text": "Câu hỏi viết số 52",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "B",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [B].",
       "image_url": null,
       "board_image": null
     },
@@ -688,9 +1867,36 @@
       "question_no": 53,
       "image": null,
       "type": "Character Match",
-      "text": "Câu hỏi viết số 53",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "A",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [A].",
       "image_url": null,
       "board_image": null
     },
@@ -701,9 +1907,36 @@
       "question_no": 54,
       "image": null,
       "type": "Character Match",
-      "text": "Câu hỏi viết số 54",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "D",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [D].",
       "image_url": null,
       "board_image": null
     },
@@ -714,9 +1947,36 @@
       "question_no": 55,
       "image": null,
       "type": "Character Match",
-      "text": "Câu hỏi viết số 55",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": [
+        {
+          "value": "A",
+          "label": "A"
+        },
+        {
+          "value": "B",
+          "label": "B"
+        },
+        {
+          "value": "C",
+          "label": "C"
+        },
+        {
+          "value": "D",
+          "label": "D"
+        },
+        {
+          "value": "E",
+          "label": "E"
+        },
+        {
+          "value": "F",
+          "label": "F"
+        }
+      ],
       "answer": "C",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [C].",
       "image_url": null,
       "board_image": null
     },
@@ -727,9 +1987,11 @@
       "question_no": 56,
       "image": null,
       "type": "Fill Character",
-      "text": "Câu hỏi viết số 56",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": null,
       "answer": "起床",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [起床].",
       "image_url": null,
       "board_image": null
     },
@@ -740,9 +2002,11 @@
       "question_no": 57,
       "image": null,
       "type": "Fill Character",
-      "text": "Câu hỏi viết số 57",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": null,
       "answer": "衣服",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [衣服].",
       "image_url": null,
       "board_image": null
     },
@@ -753,9 +2017,11 @@
       "question_no": 58,
       "image": null,
       "type": "Fill Character",
-      "text": "Câu hỏi viết số 58",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": null,
       "answer": "医院",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [医院].",
       "image_url": null,
       "board_image": null
     },
@@ -766,9 +2032,11 @@
       "question_no": 59,
       "image": null,
       "type": "Fill Character",
-      "text": "Câu hỏi viết số 59",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": null,
       "answer": "身体",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [身体].",
       "image_url": null,
       "board_image": null
     },
@@ -779,9 +2047,11 @@
       "question_no": 60,
       "image": null,
       "type": "Fill Character",
-      "text": "Câu hỏi viết số 60",
+      "text": "Chọn bộ thủ hoặc điền chữ Hán thích hợp.",
+      "options": null,
       "answer": "包子",
       "listening_script": null,
+      "explanation": "Đáp án đúng là [包子].",
       "image_url": null,
       "board_image": null
     }

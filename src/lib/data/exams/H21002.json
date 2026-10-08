@@ -16,7 +16,8 @@
       "answer": "√",
       "listening_script": "我每天早上都要去跑步半小时。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 1. [√]"
     },
     {
       "exam_code": "H21002",
@@ -29,7 +30,8 @@
       "answer": "×",
       "listening_script": "这个手机是我去年买的。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [×]"
     },
     {
       "exam_code": "H21002",
@@ -42,7 +44,8 @@
       "answer": "√",
       "listening_script": "今天买的西瓜又大又甜，妹妹吃了好多。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 3. [√]"
     },
     {
       "exam_code": "H21002",
@@ -55,7 +58,8 @@
       "answer": "×",
       "listening_script": "下星期我们要考试，不能去玩儿了。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [×]"
     },
     {
       "exam_code": "H21002",
@@ -65,10 +69,11 @@
       "image": null,
       "type": "True/False",
       "text": "Fúwùyuán sòng lái le yì bēi shuǐ.\n服务员送来了一杯水。",
-      "answer": "√",
+      "answer": "F",
       "listening_script": "您好，这是您要的热水。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [√]"
     },
     {
       "exam_code": "H21002",
@@ -81,7 +86,8 @@
       "answer": "×",
       "listening_script": "这道题很简单，我一分钟就做完了。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [×]"
     },
     {
       "exam_code": "H21002",
@@ -94,7 +100,8 @@
       "answer": "√",
       "listening_script": "从我家走五分钟就能到学校。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 7. [√]"
     },
     {
       "exam_code": "H21002",
@@ -104,10 +111,11 @@
       "image": null,
       "type": "True/False",
       "text": "Bàba zhèngzài kàn bàozhǐ.\n爸爸正在看报纸。",
-      "answer": "×",
+      "answer": "B",
       "listening_script": "爸爸在看电视里的足球比赛呢。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [×]"
     },
     {
       "exam_code": "H21002",
@@ -120,7 +128,8 @@
       "answer": "√",
       "listening_script": "这双白色的运动鞋真好看，我就买它了。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 9. [√]"
     },
     {
       "exam_code": "H21002",
@@ -133,7 +142,8 @@
       "answer": "×",
       "listening_script": "今晚的月亮又大又圆，真漂亮。",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [×]"
     },
     {
       "exam_code": "H21002",
@@ -144,9 +154,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 11",
       "answer": "A",
-      "listening_script": "请问洗手间在哪儿？ 就在前面左转第二间。",
+      "listening_script": "A",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh A. [A]"
     },
     {
       "exam_code": "H21002",
@@ -157,9 +168,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 12",
       "answer": "B",
-      "listening_script": "今天晚上你想吃什么？ 我们去吃北京烤鸭吧。",
+      "listening_script": "B",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [B]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -170,9 +182,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 13",
       "answer": "C",
-      "listening_script": "小张，会议什么时候开始？ 下午两点半，在三楼会议室。",
+      "listening_script": "C",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [C]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh C. [C]"
     },
     {
       "exam_code": "H21002",
@@ -183,9 +196,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 14",
       "answer": "D",
-      "listening_script": "你在看什么书呢？ 一本关于中国历史的书。",
+      "listening_script": "D",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [D]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh D. [D]"
     },
     {
       "exam_code": "H21002",
@@ -196,9 +210,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 15",
       "answer": "E",
-      "listening_script": "你什么时候去机场？ 大概十一点出发。",
+      "listening_script": "E",
       "image_url": null,
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [E]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh E. [E]"
     },
     {
       "exam_code": "H21002",
@@ -209,9 +224,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 16",
       "answer": "A",
-      "listening_script": "这件衣服多少钱？ 打折后八十块钱。",
+      "listening_script": "A",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [A]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh A. [A]"
     },
     {
       "exam_code": "H21002",
@@ -222,9 +238,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 17",
       "answer": "B",
-      "listening_script": "明天是星期天，不用早起。 太好了，我可以睡个懒觉了。",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -235,9 +252,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 18",
       "answer": "C",
-      "listening_script": "你喜欢打篮球还是踢足球？ 我更喜欢和朋友打篮球。",
+      "listening_script": "C",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh C. [C]"
     },
     {
       "exam_code": "H21002",
@@ -248,9 +266,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 19",
       "answer": "D",
-      "listening_script": "这只小狗多大了？ 才三个月大，非常淘气。",
+      "listening_script": "D",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [D]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh D. [D]"
     },
     {
       "exam_code": "H21002",
@@ -261,9 +280,10 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 20",
       "answer": "E",
-      "listening_script": "请帮我把这个西瓜切开。 好的，马上切。",
+      "listening_script": "E",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [E]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh E. [E]"
     },
     {
       "exam_code": "H21002",
@@ -274,9 +294,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 21",
       "answer": "A",
-      "listening_script": "今天天气真好，我们一起去公园散步吧？ 好啊，我穿上外套就来。 问：女的打算做",
+      "listening_script": "A",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [A]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án A. [A]"
     },
     {
       "exam_code": "H21002",
@@ -287,9 +308,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 22",
       "answer": "B",
-      "listening_script": "请问这本词典多少钱？ 原价六十，今天特价四十五块。 问：这本词典今天卖多少",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -300,9 +322,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 23",
       "answer": "B",
-      "listening_script": "王医生，我的病严重吗？ 没什么大事，吃两天药，多喝水就好了。 问：他们最可能",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -313,9 +336,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 24",
       "answer": "A",
-      "listening_script": "你看见我的钥匙了吗？ 是不是在门旁边的桌子上？ 问：钥匙可能在哪儿？",
+      "listening_script": "A",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [A]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án A. [A]"
     },
     {
       "exam_code": "H21002",
@@ -326,9 +350,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 25",
       "answer": "B",
-      "listening_script": "我们坐出租车去还是坐地铁？ 坐地铁吧，下班时间路上容易堵车。 问：他们决定怎",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -339,9 +364,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 26",
       "answer": "C",
-      "listening_script": "小李，这份文件你复印好了吗？ 已经复印好了，放在您的桌上了。 问：文件在哪",
+      "listening_script": "C",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án C. [C]"
     },
     {
       "exam_code": "H21002",
@@ -352,9 +378,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 27",
       "answer": "B",
-      "listening_script": "你今天看起来很高兴，有什么好事吗？ 我通过汉语二级考试了！ 问：男的为什么高",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -365,9 +392,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 28",
       "answer": "C",
-      "listening_script": "你什么时候回国？ 本来打算下周，但公司有事，推迟到下个月了。 问：女的什么时",
+      "listening_script": "C",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án C. [C]"
     },
     {
       "exam_code": "H21002",
@@ -378,9 +406,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 29",
       "answer": "A",
-      "listening_script": "服务员，我们要点菜。 好的先生，这是菜单，两位请看。 问：男的现在想做什么？",
+      "listening_script": "A",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A]"
     },
     {
       "exam_code": "H21002",
@@ -391,9 +420,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 30",
       "answer": "B",
-      "listening_script": "你怎么又买了一双鞋？ 这双鞋正在打折，便宜了一百多块呢。 问：女的为什么买这",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -404,9 +434,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 31",
       "answer": "B",
-      "listening_script": "明天是张老师的生日，我们送点儿什么好呢？ 女：送一束花，再买个蛋糕怎么样？",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -417,9 +448,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 32",
       "answer": "B",
-      "listening_script": "你在这个城市住了多长时间了？ 女：快三年了。 男：习惯这里的生活了吗？ 女：挺",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -430,9 +462,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 33",
       "answer": "C",
-      "listening_script": "喂，小张，你到哪儿了？ 女：我刚出地铁站，大概走五分钟就能到你家。 男：好，",
+      "listening_script": "C",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án C. [C]"
     },
     {
       "exam_code": "H21002",
@@ -443,9 +476,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 34",
       "answer": "B",
-      "listening_script": "你今天上午去哪儿了？我找了你半天。 女：我去图书馆借了两本书。 男：下午有空",
+      "listening_script": "B",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án B. [B]"
     },
     {
       "exam_code": "H21002",
@@ -456,9 +490,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 35",
       "answer": "C",
-      "listening_script": "服务员，我们要两碗牛肉面，一盘饺子。 女：好的，牛肉面要辣的还是不辣的？",
+      "listening_script": "C",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án C. [C]"
     },
     {
       "exam_code": "H21002",
@@ -469,9 +504,10 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 36",
       "answer": "A",
-      "listening_script": "A 37．B 38．C 39．D 40．E",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 36)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [A]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (A)."
     },
     {
       "exam_code": "H21002",
@@ -482,9 +518,10 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 37",
       "answer": "B",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 37)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (B)."
     },
     {
       "exam_code": "H21002",
@@ -495,9 +532,10 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 38",
       "answer": "C",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 38)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (C)."
     },
     {
       "exam_code": "H21002",
@@ -508,9 +546,10 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 39",
       "answer": "D",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 39)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [D]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (D)."
     },
     {
       "exam_code": "H21002",
@@ -521,9 +560,10 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 40",
       "answer": "E",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 40)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [E]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (E)."
     },
     {
       "exam_code": "H21002",
@@ -534,9 +574,10 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 41",
       "answer": "B",
-      "listening_script": "B 42．A 43．C 44．D 45．E",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 41)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (B)."
     },
     {
       "exam_code": "H21002",
@@ -547,9 +588,10 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 42",
       "answer": "A",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 42)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [A]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (A)."
     },
     {
       "exam_code": "H21002",
@@ -560,9 +602,10 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 43",
       "answer": "C",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 43)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (C)."
     },
     {
       "exam_code": "H21002",
@@ -573,9 +616,10 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 44",
       "answer": "D",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 44)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [D]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (D)."
     },
     {
       "exam_code": "H21002",
@@ -586,9 +630,10 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 45",
       "answer": "E",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 45)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [E]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (E)."
     },
     {
       "exam_code": "H21002",
@@ -599,9 +644,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 46",
       "answer": "×",
-      "listening_script": "× 47．√ 48．× 49．√ 50．×",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 46)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Sai (×): Thông tin đoạn văn không khớp hoặc khác với nhận định."
     },
     {
       "exam_code": "H21002",
@@ -612,9 +658,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 47",
       "answer": "√",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 47)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đúng (√): Đoạn văn cung cấp thông tin trùng khớp hoàn toàn với nhận định."
     },
     {
       "exam_code": "H21002",
@@ -625,9 +672,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 48",
       "answer": "×",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 48)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Sai (×): Thông tin đoạn văn không khớp hoặc khác với nhận định."
     },
     {
       "exam_code": "H21002",
@@ -638,9 +686,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 49",
       "answer": "√",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 49)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đúng (√): Đoạn văn cung cấp thông tin trùng khớp hoàn toàn với nhận định."
     },
     {
       "exam_code": "H21002",
@@ -651,9 +700,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 50",
       "answer": "×",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 50)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Sai (×): Thông tin đoạn văn không khớp hoặc khác với nhận định."
     },
     {
       "exam_code": "H21002",
@@ -664,9 +714,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 51",
       "answer": "B",
-      "listening_script": "B 52．C 53．A 54．E 55．D",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 51)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (B)."
     },
     {
       "exam_code": "H21002",
@@ -677,9 +728,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 52",
       "answer": "C",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 52)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (C)."
     },
     {
       "exam_code": "H21002",
@@ -690,9 +742,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 53",
       "answer": "A",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 53)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [A]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (A)."
     },
     {
       "exam_code": "H21002",
@@ -703,9 +756,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 54",
       "answer": "E",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 54)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [E]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (E)."
     },
     {
       "exam_code": "H21002",
@@ -716,9 +770,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 55",
       "answer": "D",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 55)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [D]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (D)."
     },
     {
       "exam_code": "H21002",
@@ -729,9 +784,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 56",
       "answer": "A",
-      "listening_script": "A 57．C 58．B 59．E 60．D",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 56)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [A]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (A)."
     },
     {
       "exam_code": "H21002",
@@ -742,9 +798,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 57",
       "answer": "C",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 57)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [C]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (C)."
     },
     {
       "exam_code": "H21002",
@@ -755,9 +812,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 58",
       "answer": "B",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 58)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [B]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (B)."
     },
     {
       "exam_code": "H21002",
@@ -768,9 +826,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 59",
       "answer": "E",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 59)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [E]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (E)."
     },
     {
       "exam_code": "H21002",
@@ -781,9 +840,10 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 60",
       "answer": "D",
-      "listening_script": "",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 60)",
       "board_image": null,
-      "image_url": null
+      "image_url": null,
+      "explanation": "Đáp án [D]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (D)."
     }
   ],
   "audio_mp3": "H21002_audio.mp3",

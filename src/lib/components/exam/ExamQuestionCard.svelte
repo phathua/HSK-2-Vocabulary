@@ -39,17 +39,33 @@
     label: string;
     value: string;
     icon?: 'check' | 'x';
+    image?: string | null;
   }
 
   const optionChoices = $derived.by((): ChoiceOption[] => {
-    // True/False
+    // 1. Nếu câu hỏi có cấu hình options riêng (từ JSON Mock Atlas hoặc Chinese Tools)
+    if (question.options && question.options.length > 0) {
+      return question.options.map((opt) => {
+        if (typeof opt === 'string') {
+          return { label: opt, value: opt };
+        }
+        return {
+          label: opt.label,
+          value: opt.value,
+          image: opt.image
+        };
+      });
+    }
+
+    // 2. True/False
     if (question.type.includes('True/False')) {
       return [
         { label: 'Đúng', value: '√', icon: 'check' },
         { label: 'Sai', value: '×', icon: 'x' }
       ];
     }
-    // Tranh A - F
+
+    // 3. Tranh A - F
     if (question.type.includes('Match') || question.part.includes('Part 2')) {
       return [
         { label: 'A', value: 'A' },
@@ -60,13 +76,18 @@
         { label: 'F', value: 'F' }
       ];
     }
-    // Mặc định A, B, C cho Part 3 & 4
+
+    // 4. Mặc định A, B, C cho Part 3 & 4
     return [
       { label: 'A', value: 'A' },
       { label: 'B', value: 'B' },
       { label: 'C', value: 'C' }
     ];
   });
+
+  const isTrueFalse = $derived(question.type.includes('True/False'));
+  const hasImageOptions = $derived(optionChoices.some((opt) => !!opt.image));
+  const isMultipleChoiceList = $derived(!isTrueFalse && (optionChoices.length > 0 && (optionChoices.some((opt) => opt.label.length > 3) || optionChoices.length <= 4)));
 
   // Chế độ Luyện tập: Bấm là hiện đáp án ngay lập tức (không cần nút check). Chế độ Thi: hiện khi nộp bài
   const shouldReveal = $derived(isExamSubmitted || (mode === 'practice' && !!selectedAnswer));
@@ -166,39 +187,160 @@
   {/if}
 
   <!-- Bảng chọn đáp án -->
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 my-3">
-    {#each optionChoices as opt}
-      {@const isSelected = selectedAnswer === opt.value}
-      {@const isAnswerTarget = shouldReveal && question.answer === opt.value}
-      {@const isWrongSelection = shouldReveal && isSelected && !isCorrect}
+  {#if isTrueFalse}
+    <!-- True / False: 2 nút ngang -->
+    <div class="grid grid-cols-2 gap-2.5 my-3">
+      {#each optionChoices as opt}
+        {@const isSelected = selectedAnswer === opt.value}
+        {@const isAnswerTarget = shouldReveal && question.answer === opt.value}
+        {@const isWrongSelection = shouldReveal && isSelected && !isCorrect}
 
-      <button
-        type="button"
-        onclick={() => onSelectAnswer(opt.value)}
-        class="py-2.5 px-3 rounded-2xl font-black text-xs md:text-sm border transition-all cursor-pointer flex items-center justify-center gap-1.5 {
-          isAnswerTarget
-            ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs'
-            : isWrongSelection
-            ? 'bg-rose-500 text-white border-rose-600 shadow-xs'
-            : isSelected
-            ? 'bg-orange-600 text-white border-orange-600 shadow-xs'
-            : 'bg-slate-50 dark:bg-neutral-800/60 hover:bg-slate-100 dark:hover:bg-neutral-700/60 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-neutral-700'
-        }"
-      >
-        {#if opt.icon === 'check'}
-          <Check weight="bold" class="w-4 h-4" />
-        {:else if opt.icon === 'x'}
-          <X weight="bold" class="w-4 h-4" />
-        {/if}
-        <span>{opt.label}</span>
-      </button>
-    {/each}
-  </div>
+        <button
+          type="button"
+          onclick={() => onSelectAnswer(opt.value)}
+          class="py-3 px-4 rounded-2xl font-black text-xs md:text-sm border transition-all cursor-pointer flex items-center justify-center gap-2 {
+            isAnswerTarget
+              ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs'
+              : isWrongSelection
+              ? 'bg-rose-500 text-white border-rose-600 shadow-xs'
+              : isSelected
+              ? 'bg-orange-600 text-white border-orange-600 shadow-xs'
+              : 'bg-slate-50 dark:bg-neutral-800/60 hover:bg-slate-100 dark:hover:bg-neutral-700/60 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-neutral-700'
+          }"
+        >
+          {#if opt.icon === 'check'}
+            <Check weight="bold" class="w-4 h-4 shrink-0" />
+          {:else if opt.icon === 'x'}
+            <X weight="bold" class="w-4 h-4 shrink-0" />
+          {/if}
+          <span>{opt.label}</span>
+        </button>
+      {/each}
+    </div>
+  {:else if hasImageOptions}
+    <!-- Lựa chọn có ảnh minh họa A, B, C (như Chinese Tools Part 1) -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-3">
+      {#each optionChoices as opt}
+        {@const isSelected = selectedAnswer === opt.value}
+        {@const isAnswerTarget = shouldReveal && question.answer === opt.value}
+        {@const isWrongSelection = shouldReveal && isSelected && !isCorrect}
+
+        <button
+          type="button"
+          onclick={() => onSelectAnswer(opt.value)}
+          class="p-3 rounded-2xl border transition-all cursor-pointer flex flex-col items-center gap-2 {
+            isAnswerTarget
+              ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-600 ring-2 ring-emerald-500/20 shadow-xs'
+              : isWrongSelection
+              ? 'bg-rose-50 dark:bg-rose-950/40 border-rose-600 ring-2 ring-rose-500/20 shadow-xs'
+              : isSelected
+              ? 'bg-orange-50 dark:bg-orange-950/40 border-orange-600 ring-2 ring-orange-500/20 shadow-xs'
+              : 'bg-slate-50 dark:bg-neutral-800/60 hover:bg-slate-100 dark:hover:bg-neutral-700/60 border-slate-200 dark:border-neutral-700'
+          }"
+        >
+          {#if opt.image}
+            <img
+              src={getExamImageUrl(question.exam_code, opt.image)}
+              alt={`Hình ${opt.value}`}
+              class="w-full h-36 object-contain rounded-xl bg-white dark:bg-neutral-900 border border-slate-100 dark:border-neutral-800"
+              loading="lazy"
+            />
+          {/if}
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-full font-black text-xs flex items-center justify-center shrink-0 {
+              isAnswerTarget
+                ? 'bg-emerald-600 text-white'
+                : isWrongSelection
+                ? 'bg-rose-600 text-white'
+                : isSelected
+                ? 'bg-orange-600 text-white'
+                : 'bg-slate-200 dark:bg-neutral-700 text-slate-700 dark:text-neutral-200'
+            }">
+              {opt.value}
+            </span>
+            <span class="text-xs font-bold text-slate-700 dark:text-slate-200">{opt.label}</span>
+          </div>
+        </button>
+      {/each}
+    </div>
+  {:else if isMultipleChoiceList}
+    <!-- Liệt kê từng dòng một: Chữ cái nằm trong nền tròn xám -->
+    <div class="flex flex-col gap-2.5 my-3">
+      {#each optionChoices as opt}
+        {@const isSelected = selectedAnswer === opt.value}
+        {@const isAnswerTarget = shouldReveal && question.answer === opt.value}
+        {@const isWrongSelection = shouldReveal && isSelected && !isCorrect}
+
+        <button
+          type="button"
+          onclick={() => onSelectAnswer(opt.value)}
+          class="w-full text-left p-3 rounded-2xl border transition-all cursor-pointer flex items-center gap-3 {
+            isAnswerTarget
+              ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200 shadow-2xs'
+              : isWrongSelection
+              ? 'bg-rose-50 dark:bg-rose-950/40 border-rose-500 text-rose-900 dark:text-rose-200 shadow-2xs'
+              : isSelected
+              ? 'bg-orange-50 dark:bg-orange-950/40 border-orange-500 text-orange-900 dark:text-orange-200 shadow-2xs'
+              : 'bg-slate-50 dark:bg-neutral-800/60 hover:bg-slate-100 dark:hover:bg-neutral-700/60 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-neutral-700'
+          }"
+        >
+          <!-- Ký tự A, B, C, D trong nền tròn xám chuẩn -->
+          <span class="w-7 h-7 rounded-full text-xs font-black flex items-center justify-center shrink-0 transition-colors {
+            isAnswerTarget
+              ? 'bg-emerald-600 text-white'
+              : isWrongSelection
+              ? 'bg-rose-600 text-white'
+              : isSelected
+              ? 'bg-orange-600 text-white'
+              : 'bg-slate-200 dark:bg-neutral-700 text-slate-700 dark:text-neutral-200'
+          }">
+            {opt.value}
+          </span>
+
+          <span class="font-medium text-xs md:text-sm leading-relaxed flex-1 select-text">
+            {opt.label !== opt.value ? opt.label : `Lựa chọn ${opt.value}`}
+          </span>
+        </button>
+      {/each}
+    </div>
+  {:else}
+    <!-- Dạng ma trận lưới ngắn (Part 2: A - F) -->
+    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 my-3">
+      {#each optionChoices as opt}
+        {@const isSelected = selectedAnswer === opt.value}
+        {@const isAnswerTarget = shouldReveal && question.answer === opt.value}
+        {@const isWrongSelection = shouldReveal && isSelected && !isCorrect}
+
+        <button
+          type="button"
+          onclick={() => onSelectAnswer(opt.value)}
+          class="py-2.5 px-3 rounded-2xl font-black text-xs md:text-sm border transition-all cursor-pointer flex items-center justify-center gap-1.5 {
+            isAnswerTarget
+              ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs'
+              : isWrongSelection
+              ? 'bg-rose-500 text-white border-rose-600 shadow-xs'
+              : isSelected
+              ? 'bg-orange-600 text-white border-orange-600 shadow-xs'
+              : 'bg-slate-50 dark:bg-neutral-800/60 hover:bg-slate-100 dark:hover:bg-neutral-700/60 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-neutral-700'
+          }"
+        >
+          <span class="w-6 h-6 rounded-full text-[11px] font-black flex items-center justify-center shrink-0 {
+            isSelected || isAnswerTarget || isWrongSelection
+              ? 'bg-white/20 text-white'
+              : 'bg-slate-200 dark:bg-neutral-700 text-slate-700 dark:text-neutral-200'
+          }">
+            {opt.value}
+          </span>
+          <span>{opt.label}</span>
+        </button>
+      {/each}
+    </div>
+  {/if}
 
   <!-- Kết quả & Giải thích / Transcript nghe -->
   {#if shouldReveal}
-    <div class="mt-4 p-3.5 rounded-2xl border text-xs leading-relaxed {isCorrect ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800/60 text-emerald-900 dark:text-emerald-200' : 'bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-800/60 text-rose-900 dark:text-rose-200'}">
-      <div class="flex items-center gap-2 font-black mb-1">
+    <div class="mt-4 p-4 rounded-2xl border text-xs leading-relaxed {isCorrect ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800/60 text-emerald-900 dark:text-emerald-200' : 'bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-800/60 text-rose-900 dark:text-rose-200'}">
+      <div class="flex items-center gap-2 font-black mb-1.5">
         {#if isCorrect}
           <Check weight="bold" class="w-4 h-4 text-emerald-600" />
           <span>
@@ -229,10 +371,23 @@
       </div>
 
       {#if question.listening_script}
-        <div class="mt-2 pt-2 border-t border-current/15 text-slate-700 dark:text-neutral-300">
-          <span class="font-bold">🎧 Lời thoại nghe (Transcript):</span>
-          <p class="mt-1 font-mono text-[11px] leading-relaxed select-text">
+        <div class="mt-2.5 pt-2.5 border-t border-current/15 text-slate-700 dark:text-neutral-300">
+          <span class="font-bold flex items-center gap-1.5 mb-1">
+            🎧 Lời thoại nghe (Transcript):
+          </span>
+          <p class="font-mono text-[11px] md:text-xs leading-relaxed select-text bg-white/60 dark:bg-black/20 p-2.5 rounded-xl border border-current/10">
             {question.listening_script}
+          </p>
+        </div>
+      {/if}
+
+      {#if question.explanation}
+        <div class="mt-2.5 pt-2.5 border-t border-current/15 text-slate-700 dark:text-neutral-300">
+          <span class="font-bold flex items-center gap-1.5 mb-1 text-slate-800 dark:text-neutral-200">
+            💡 Giải thích chi tiết:
+          </span>
+          <p class="text-[11px] md:text-xs leading-relaxed select-text bg-white/60 dark:bg-black/20 p-2.5 rounded-xl border border-current/10">
+            {question.explanation}
           </p>
         </div>
       {/if}

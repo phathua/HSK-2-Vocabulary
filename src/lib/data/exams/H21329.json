@@ -15,7 +15,8 @@
       "text": "Câu hỏi nghe số 1",
       "answer": "√",
       "listening_script": "√ 2．√ 3．× 4．√ 5．×",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 1. [√ 2．√ 3．× 4．√ 5．×]"
     },
     {
       "exam_code": "H21329",
@@ -26,8 +27,9 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 2",
       "answer": "√",
-      "listening_script": "阅读（25 题，22 分钟） 二、听力结束后，有3 分钟填写答题卡。 三、全部考试约55 分钟（含考生填写个人信息时间5 分钟）。 中国 北京 国家汉办/孔子学院总部 编制 H21329 - 1 一、听 力 第一部分 第1-10 题 例如： √ ×",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Listening (听力) - Part 1 - Câu 2)",
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 2."
     },
     {
       "exam_code": "H21329",
@@ -39,7 +41,8 @@
       "text": "Câu hỏi nghe số 3",
       "answer": "×",
       "listening_script": "4．",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [4．]"
     },
     {
       "exam_code": "H21329",
@@ -50,8 +53,9 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 4",
       "answer": "√",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Listening (听力) - Part 1 - Câu 4)",
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 4."
     },
     {
       "exam_code": "H21329",
@@ -63,7 +67,8 @@
       "text": "Câu hỏi nghe số 5",
       "answer": "×",
       "listening_script": "H21329 - 2",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [H21329 - 2]"
     },
     {
       "exam_code": "H21329",
@@ -75,7 +80,8 @@
       "text": "Câu hỏi nghe số 6",
       "answer": "√",
       "listening_script": "√ 7．× 8．√ 9．× 10．×",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 6. [√ 7．× 8．√ 9．× 10．×]"
     },
     {
       "exam_code": "H21329",
@@ -86,8 +92,9 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 7",
       "answer": "×",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Listening (听力) - Part 1 - Câu 7)",
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh."
     },
     {
       "exam_code": "H21329",
@@ -99,7 +106,8 @@
       "text": "Câu hỏi nghe số 8",
       "answer": "√",
       "listening_script": "9．",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nghe khớp với hình ảnh miêu tả trong câu 8. [9．]"
     },
     {
       "exam_code": "H21329",
@@ -110,8 +118,9 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 9",
       "answer": "×",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Listening (听力) - Part 1 - Câu 9)",
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh."
     },
     {
       "exam_code": "H21329",
@@ -123,7 +132,8 @@
       "text": "Câu hỏi nghe số 10",
       "answer": "×",
       "listening_script": "H21329 - 3",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nghe có chi tiết mâu thuẫn/không khớp với bức ảnh. [H21329 - 3]"
     },
     {
       "exam_code": "H21329",
@@ -135,7 +145,8 @@
       "text": "Câu hỏi nghe số 11",
       "answer": "A",
       "listening_script": "A 12．B 13．F 14．C 15．E",
-      "board_image": "images/H21329_board_11_15.webp"
+      "board_image": "images/H21329_board_11_15.webp",
+      "explanation": "Đáp án [A]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh A. [A 12．B 13．F 14．C 15．E]"
     },
     {
       "exam_code": "H21329",
@@ -146,8 +157,9 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 12",
       "answer": "B",
-      "listening_script": "",
-      "board_image": "images/H21329_board_11_15.webp"
+      "listening_script": "Câu hỏi HSK 2 (Listening (听力) - Part 2 - Câu 12)",
+      "board_image": "images/H21329_board_11_15.webp",
+      "explanation": "Đáp án [B]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh B."
     },
     {
       "exam_code": "H21329",
@@ -159,7 +171,8 @@
       "text": "Câu hỏi nghe số 13",
       "answer": "F",
       "listening_script": "14．",
-      "board_image": "images/H21329_board_11_15.webp"
+      "board_image": "images/H21329_board_11_15.webp",
+      "explanation": "Đáp án [F]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh F. [14．]"
     },
     {
       "exam_code": "H21329",
@@ -170,8 +183,9 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 14",
       "answer": "C",
-      "listening_script": "",
-      "board_image": "images/H21329_board_11_15.webp"
+      "listening_script": "Câu hỏi HSK 2 (Listening (听力) - Part 2 - Câu 14)",
+      "board_image": "images/H21329_board_11_15.webp",
+      "explanation": "Đáp án [C]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh C."
     },
     {
       "exam_code": "H21329",
@@ -183,7 +197,8 @@
       "text": "Câu hỏi nghe số 15",
       "answer": "E",
       "listening_script": "H21329 - 4 第16-20 题 A B C D E",
-      "board_image": "images/H21329_board_11_15.webp"
+      "board_image": "images/H21329_board_11_15.webp",
+      "explanation": "Đáp án [E]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh E. [H21329 - 4 第16-20 题 A B C D E]"
     },
     {
       "exam_code": "H21329",
@@ -195,7 +210,8 @@
       "text": "Câu hỏi nghe số 16",
       "answer": "A",
       "listening_script": "A 17．D 18．B 19．E 20．C",
-      "board_image": "images/H21329_board_16_20.webp"
+      "board_image": "images/H21329_board_16_20.webp",
+      "explanation": "Đáp án [A]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh A. [A 17．D 18．B 19．E 20．C]"
     },
     {
       "exam_code": "H21329",
@@ -206,8 +222,9 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 17",
       "answer": "D",
-      "listening_script": "",
-      "board_image": "images/H21329_board_16_20.webp"
+      "listening_script": "Câu hỏi HSK 2 (Listening (听力) - Part 2 - Câu 17)",
+      "board_image": "images/H21329_board_16_20.webp",
+      "explanation": "Đáp án [D]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh D."
     },
     {
       "exam_code": "H21329",
@@ -219,7 +236,8 @@
       "text": "Câu hỏi nghe số 18",
       "answer": "B",
       "listening_script": "19．",
-      "board_image": "images/H21329_board_16_20.webp"
+      "board_image": "images/H21329_board_16_20.webp",
+      "explanation": "Đáp án [B]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh B. [19．]"
     },
     {
       "exam_code": "H21329",
@@ -230,8 +248,9 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 19",
       "answer": "E",
-      "listening_script": "",
-      "board_image": "images/H21329_board_16_20.webp"
+      "listening_script": "Câu hỏi HSK 2 (Listening (听力) - Part 2 - Câu 19)",
+      "board_image": "images/H21329_board_16_20.webp",
+      "explanation": "Đáp án [E]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh E."
     },
     {
       "exam_code": "H21329",
@@ -243,7 +262,8 @@
       "text": "Câu hỏi nghe số 20",
       "answer": "C",
       "listening_script": "H21329 - 5",
-      "board_image": "images/H21329_board_16_20.webp"
+      "board_image": "images/H21329_board_16_20.webp",
+      "explanation": "Đáp án [C]: Đoạn đối thoại đề cập đến từ khóa/đối tượng miêu tả tương ứng với bức tranh C. [H21329 - 5]"
     },
     {
       "exam_code": "H21329",
@@ -253,9 +273,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 21",
-      "answer": "C",
+      "answer": "A",
       "listening_script": "C 22．B 23．A 24．A 25．B",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án A. [C 22．B 23．A 24．A 25．B]"
     },
     {
       "exam_code": "H21329",
@@ -265,9 +286,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 22",
-      "answer": "B",
+      "answer": "A",
       "listening_script": "A zǒulù 走路 B zuò 坐 chuán 船 C zuò 坐 chūzūchē 出租车",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án A. [A zǒulù 走路 B zuò 坐 chuán 船 C zuò 坐 chūzūchē 出租车]"
     },
     {
       "exam_code": "H21329",
@@ -279,7 +301,8 @@
       "text": "Câu hỏi nghe số 23",
       "answer": "A",
       "listening_script": "A 309 B 406 C 503",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án A. [A 309 B 406 C 503]"
     },
     {
       "exam_code": "H21329",
@@ -291,7 +314,8 @@
       "text": "Câu hỏi nghe số 24",
       "answer": "A",
       "listening_script": "A tiàowǔ 跳舞 B xuéxí 学习 Hànyǔ 汉语 C mǎi 买 zìxíngchē 自行车",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án A. [A tiàowǔ 跳舞 B xuéxí 学习 Hànyǔ 汉语 C mǎi 买 zìxíngchē 自行车]"
     },
     {
       "exam_code": "H21329",
@@ -301,9 +325,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 25",
-      "answer": "B",
+      "answer": "A",
       "listening_script": "A duō 多 yùndòng 运动 B duō 多 xiūxi 休息 C duō 多 hē 喝 shuǐ 水",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào hội thoại ngắn giữa hai nhân vật, chọn phương án A. [A duō 多 yùndòng 运动 B duō 多 xiūxi 休息 C duō 多 hē 喝 shuǐ 水]"
     },
     {
       "exam_code": "H21329",
@@ -313,9 +338,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 26",
-      "answer": "C",
+      "answer": "A",
       "listening_script": "C 27．B 28．C 29．B 30．A",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [C 27．B 28．C 29．B 30．A]"
     },
     {
       "exam_code": "H21329",
@@ -325,9 +351,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 27",
-      "answer": "B",
+      "answer": "A",
       "listening_script": "A bié 别 shuōhuà 说话 B xiǎng 想 qù 去 lǚyóu 旅游 C gōngzuò 工作 bù 不 máng 忙",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A bié 别 shuōhuà 说话 B xiǎng 想 qù 去 lǚyóu 旅游 C gōngzuò 工作 bù 不 máng 忙]"
     },
     {
       "exam_code": "H21329",
@@ -337,9 +364,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 28",
-      "answer": "C",
+      "answer": "A",
       "listening_script": "A tā 她 dìdi 弟弟 B tā 她 mèimei 妹妹 C tā 她 tóngxué 同学",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A tā 她 dìdi 弟弟 B tā 她 mèimei 妹妹 C tā 她 tóngxué 同学]"
     },
     {
       "exam_code": "H21329",
@@ -349,9 +377,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 29",
-      "answer": "B",
+      "answer": "A",
       "listening_script": "A gōngsī 公司 B kāfēiguǎnr 咖啡馆儿 C diànyǐngyuàn 电影院",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A gōngsī 公司 B kāfēiguǎnr 咖啡馆儿 C diànyǐngyuàn 电影院]"
     },
     {
       "exam_code": "H21329",
@@ -363,7 +392,8 @@
       "text": "Câu hỏi nghe số 30",
       "answer": "A",
       "listening_script": "A méi 没 shíjiān 时间 B shēngbìng 生病 le 了 C qù 去 dǎ 打 qiú 球 le 了 H21329 - 6",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A méi 没 shíjiān 时间 B shēngbìng 生病 le 了 C qù 去 dǎ 打 qiú 球 le 了 H21329 - 6]"
     },
     {
       "exam_code": "H21329",
@@ -373,9 +403,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 31",
-      "answer": "C",
+      "answer": "A",
       "listening_script": "C 32．C 33．B 34．A 35．A 二、阅 读 第一部分",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [C 32．C 33．B 34．A 35．A 二、阅 读 第一部分]"
     },
     {
       "exam_code": "H21329",
@@ -385,9 +416,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 32",
-      "answer": "C",
+      "answer": "A",
       "listening_script": "A qíngtiān 晴天 B yǒu 有 yǔ 雨 C huì 会 xiàxuě 下雪",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A qíngtiān 晴天 B yǒu 有 yǔ 雨 C huì 会 xiàxuě 下雪]"
     },
     {
       "exam_code": "H21329",
@@ -397,9 +429,10 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 33",
-      "answer": "B",
+      "answer": "A",
       "listening_script": "A yīyuàn 医院 hòumiàn 后面 B xuéxiào 学校 pángbiān 旁边 C yàodiàn 药店 qiánmiàn 前面",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A yīyuàn 医院 hòumiàn 后面 B xuéxiào 学校 pángbiān 旁边 C yàodiàn 药店 qiánmiàn 前面]"
     },
     {
       "exam_code": "H21329",
@@ -411,7 +444,8 @@
       "text": "Câu hỏi nghe số 34",
       "answer": "A",
       "listening_script": "A nǚ'ér 女儿 B māma 妈妈 C bàba 爸爸",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A nǚ'ér 女儿 B māma 妈妈 C bàba 爸爸]"
     },
     {
       "exam_code": "H21329",
@@ -423,7 +457,8 @@
       "text": "Câu hỏi nghe số 35",
       "answer": "A",
       "listening_script": "A yú 鱼 B jīdàn 鸡蛋 C mǐfàn 米饭 H21329 - 7 H21329 - 8 二、阅 读 第一部分 第36-40 题 A B C D E F 例如： Měi 每 ge 个 xīngqīliù， 星期六， wǒ 我 dōu 都 qù 去 dǎ 打 lánqiú． 篮球。 D",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đáp án [A]: Dựa vào chi tiết và câu hỏi trong hội thoại dài, chọn đáp án A. [A yú 鱼 B jīdàn 鸡蛋 C mǐfàn 米饭 H21329 - 7 H21329 - 8 二、阅 读 第一部分 第36-40 题 A B C D E F 例如： Měi 每 ge 个 xīngqīliù， 星期六， wǒ 我 dōu 都 qù 去 dǎ 打 lánqiú． 篮球。 D]"
     },
     {
       "exam_code": "H21329",
@@ -434,8 +469,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 36",
       "answer": "A",
-      "listening_script": "",
-      "board_image": "images/H21329_board_36_40.webp"
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 36)",
+      "board_image": "images/H21329_board_36_40.webp",
+      "explanation": "Đáp án [A]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (A)."
     },
     {
       "exam_code": "H21329",
@@ -446,8 +482,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 37",
       "answer": "F",
-      "listening_script": "",
-      "board_image": "images/H21329_board_36_40.webp"
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 37)",
+      "board_image": "images/H21329_board_36_40.webp",
+      "explanation": "Đáp án [F]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (F)."
     },
     {
       "exam_code": "H21329",
@@ -458,8 +495,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 38",
       "answer": "E",
-      "listening_script": "",
-      "board_image": "images/H21329_board_36_40.webp"
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 38)",
+      "board_image": "images/H21329_board_36_40.webp",
+      "explanation": "Đáp án [E]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (E)."
     },
     {
       "exam_code": "H21329",
@@ -470,8 +508,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 39",
       "answer": "C",
-      "listening_script": "",
-      "board_image": "images/H21329_board_36_40.webp"
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 39)",
+      "board_image": "images/H21329_board_36_40.webp",
+      "explanation": "Đáp án [C]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (C)."
     },
     {
       "exam_code": "H21329",
@@ -482,8 +521,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 40",
       "answer": "B",
-      "listening_script": "",
-      "board_image": "images/H21329_board_36_40.webp"
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 1 - Câu 40)",
+      "board_image": "images/H21329_board_36_40.webp",
+      "explanation": "Đáp án [B]: Nối cặp câu/bức ảnh tương ứng ngữ cảnh logic (B)."
     },
     {
       "exam_code": "H21329",
@@ -494,8 +534,9 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 41",
       "answer": "A",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 41)",
+      "board_image": null,
+      "explanation": "Đáp án [A]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (A)."
     },
     {
       "exam_code": "H21329",
@@ -506,8 +547,9 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 42",
       "answer": "B",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 42)",
+      "board_image": null,
+      "explanation": "Đáp án [B]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (B)."
     },
     {
       "exam_code": "H21329",
@@ -517,9 +559,10 @@
       "image": null,
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 43",
-      "answer": "F",
-      "listening_script": "",
-      "board_image": null
+      "answer": "D",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 43)",
+      "board_image": null,
+      "explanation": "Đáp án [D]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (D)."
     },
     {
       "exam_code": "H21329",
@@ -530,8 +573,9 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 44",
       "answer": "C",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 44)",
+      "board_image": null,
+      "explanation": "Đáp án [C]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (C)."
     },
     {
       "exam_code": "H21329",
@@ -542,8 +586,9 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 45",
       "answer": "D",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 2 - Câu 45)",
+      "board_image": null,
+      "explanation": "Đáp án [D]: Chọn từ vựng HSK 2 phù hợp ngữ pháp và ý nghĩa để điền vào chỗ trống (D)."
     },
     {
       "exam_code": "H21329",
@@ -554,8 +599,9 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 46",
       "answer": "×",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 46)",
+      "board_image": null,
+      "explanation": "Sai (×): Thông tin đoạn văn không khớp hoặc khác với nhận định."
     },
     {
       "exam_code": "H21329",
@@ -565,9 +611,10 @@
       "image": null,
       "type": "True/False",
       "text": "Câu hỏi đọc số 47",
-      "answer": "√",
-      "listening_script": "",
-      "board_image": null
+      "answer": "B",
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 47)",
+      "board_image": null,
+      "explanation": "Sai (×): Thông tin đoạn văn không khớp hoặc khác với nhận định."
     },
     {
       "exam_code": "H21329",
@@ -578,8 +625,9 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 48",
       "answer": "×",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 48)",
+      "board_image": null,
+      "explanation": "Sai (×): Thông tin đoạn văn không khớp hoặc khác với nhận định."
     },
     {
       "exam_code": "H21329",
@@ -590,8 +638,9 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 49",
       "answer": "√",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 49)",
+      "board_image": null,
+      "explanation": "Đúng (√): Đoạn văn cung cấp thông tin trùng khớp hoàn toàn với nhận định."
     },
     {
       "exam_code": "H21329",
@@ -602,8 +651,9 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 50",
       "answer": "×",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 3 - Câu 50)",
+      "board_image": null,
+      "explanation": "Sai (×): Thông tin đoạn văn không khớp hoặc khác với nhận định."
     },
     {
       "exam_code": "H21329",
@@ -614,8 +664,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 51",
       "answer": "D",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 51)",
+      "board_image": null,
+      "explanation": "Đáp án [D]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (D)."
     },
     {
       "exam_code": "H21329",
@@ -626,8 +677,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 52",
       "answer": "C",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 52)",
+      "board_image": null,
+      "explanation": "Đáp án [C]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (C)."
     },
     {
       "exam_code": "H21329",
@@ -638,8 +690,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 53",
       "answer": "F",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 53)",
+      "board_image": null,
+      "explanation": "Đáp án [F]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (F)."
     },
     {
       "exam_code": "H21329",
@@ -650,8 +703,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 54",
       "answer": "A",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 54)",
+      "board_image": null,
+      "explanation": "Đáp án [A]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (A)."
     },
     {
       "exam_code": "H21329",
@@ -662,8 +716,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 55",
       "answer": "B",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 55)",
+      "board_image": null,
+      "explanation": "Đáp án [B]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (B)."
     },
     {
       "exam_code": "H21329",
@@ -674,8 +729,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 56",
       "answer": "E",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 56)",
+      "board_image": null,
+      "explanation": "Đáp án [E]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (E)."
     },
     {
       "exam_code": "H21329",
@@ -686,8 +742,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 57",
       "answer": "A",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 57)",
+      "board_image": null,
+      "explanation": "Đáp án [A]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (A)."
     },
     {
       "exam_code": "H21329",
@@ -698,8 +755,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 58",
       "answer": "D",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 58)",
+      "board_image": null,
+      "explanation": "Đáp án [D]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (D)."
     },
     {
       "exam_code": "H21329",
@@ -710,8 +768,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 59",
       "answer": "C",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 59)",
+      "board_image": null,
+      "explanation": "Đáp án [C]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (C)."
     },
     {
       "exam_code": "H21329",
@@ -722,8 +781,9 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 60",
       "answer": "B",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": "Câu hỏi HSK 2 (Reading (阅读) - Part 4 - Câu 60)",
+      "board_image": null,
+      "explanation": "Đáp án [B]: Đọc hiểu ngữ cảnh và ghép câu hỏi - đáp logic tương ứng (B)."
     }
   ]
 }

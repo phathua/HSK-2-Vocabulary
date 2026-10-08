@@ -1,3 +1,9 @@
+export interface QuestionOption {
+  label: string;
+  value: string;
+  image?: string | null;
+}
+
 export interface QuestionItem {
   exam_code: string;
   section: string; // 'Listening (听力)' | 'Reading (阅读)'
@@ -7,9 +13,10 @@ export interface QuestionItem {
   image?: string | null;
   board_image?: string | null;
   answer?: string; // '√', '×', 'A', 'B', 'C', 'D', 'E', 'F'
-  listening_script?: string;
+  listening_script?: string | null;
+  explanation?: string | null;
   text?: string;
-  options?: string[];
+  options?: Array<string | QuestionOption>;
 }
 
 export interface ExamDetail {
