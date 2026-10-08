@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('HSK_THEME_MODE') || localStorage.getItem('HSK_THEME') || 'system';
+          var isDark = false;
+          if (mode === 'dark') {
+            isDark = true;
+          } else if (mode === 'light') {
+            isDark = false;
+          } else {
+            isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          }
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Ôn Tập HSK 2 - Luyện Từ Vựng Tiếng Trung</title>

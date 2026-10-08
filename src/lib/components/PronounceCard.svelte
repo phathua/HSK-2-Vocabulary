@@ -233,7 +233,7 @@
 </script>
 
 <!-- Main Pronounce Card -->
-<main class="flex-1 min-h-0 bg-white rounded-3xl border border-slate-200 shadow-sm p-3.5 sm:p-4 flex flex-col justify-center items-center text-center relative overflow-hidden">
+<main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-center items-center text-center relative overflow-hidden transition-colors">
   <!-- Floating Lesson Select Button -->
   <button
     type="button"
@@ -258,36 +258,36 @@
   </button>
 
   {#if appState.currentSpeechItem}
-    <div class="flex-1 w-full flex flex-col justify-center items-center py-1 sm:py-2 max-w-sm mx-auto">
+    <div class="flex-1 w-full flex flex-col justify-center items-center py-1 sm:py-2 max-w-md mx-auto my-auto">
       <!-- Vocabulary Illustration Image -->
       {#if appState.currentSpeechItem.image}
-        <div class="mb-2 flex items-center justify-center flex-shrink-0">
+        <div class="mb-2 md:mb-4 flex items-center justify-center flex-shrink-0">
           <SmartImage
             src={appState.currentSpeechItem.image}
             alt={appState.currentSpeechItem.hanzi}
-            class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl border border-slate-100 shadow-inner bg-slate-50"
+            class="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-2xl border border-slate-100 dark:border-[#282A2C] shadow-inner bg-slate-50 dark:bg-[#282A2C]"
           />
         </div>
       {/if}
 
       <!-- Prompt Question & Target Character -->
       <div class="space-y-1 mb-2">
-        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600">
+        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400">
           Hãy phát âm từ vựng bên dưới
         </span>
 
         {#if isZhToVi}
           <!-- Chế độ Trung -> Việt: Hiển thị chữ Hán to rõ (tuyệt đối KHÔNG hiển thị Pinyin trước) -->
-          <h2 class="text-4xl sm:text-5xl font-black text-slate-800 tracking-wide font-sans mt-1">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-slate-800 dark:text-[#E3E3E3] tracking-wide font-sans mt-1">
             {appState.currentSpeechItem.hanzi}
           </h2>
-          <p class="text-sm text-slate-400 font-medium">Nghĩa: {appState.currentSpeechItem.viet}</p>
+          <p class="text-sm md:text-base text-slate-400 dark:text-[#8E918F] font-medium">Nghĩa: {appState.currentSpeechItem.viet}</p>
         {:else}
           <!-- Chế độ Việt -> Trung: Hiển thị nghĩa tiếng Việt trước và chữ Hán -->
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-1">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-800 dark:text-[#E3E3E3] mt-1">
             {appState.currentSpeechItem.viet}
           </h2>
-          <p class="text-2xl font-bold text-slate-600 font-sans tracking-wide">
+          <p class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-600 dark:text-[#C4C7C5] font-sans tracking-wide">
             {appState.currentSpeechItem.hanzi}
           </p>
         {/if}
@@ -303,19 +303,19 @@
         {:else if livePinyin}
           <!-- Chữ phiên âm preview thoáng sạch, không khung viền xám, mờ khi đang nói và đậm khi dứt câu -->
           <p
-            class="text-2xl sm:text-3xl transition-all duration-200 tracking-wide {isRecording
-              ? 'text-slate-400 font-bold opacity-75'
-              : 'text-slate-900 font-black'}"
+            class="text-2xl sm:text-3xl md:text-4xl transition-all duration-200 tracking-wide {isRecording
+              ? 'text-slate-400 dark:text-[#8E918F] font-bold opacity-75'
+              : 'text-slate-900 dark:text-[#E3E3E3] font-black'}"
           >
             {livePinyin}
           </p>
         {:else if errorMessage}
-          <div class="flex items-center gap-1.5 text-xs font-semibold text-rose-600 bg-rose-50 px-3 py-1.5 rounded-xl border border-rose-100 max-w-xs">
+          <div class="flex items-center gap-1.5 text-xs font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/60 px-3 py-1.5 rounded-xl border border-rose-100 dark:border-rose-900/60 max-w-xs">
             <WarningCircle size={16} weight="bold" class="flex-shrink-0" />
             <span>{errorMessage}</span>
           </div>
         {:else}
-          <p class="text-xs text-slate-400">Bấm biểu tượng Mic và phát âm tiếng Trung</p>
+          <p class="text-xs text-slate-400 dark:text-[#8E918F]">Bấm biểu tượng Mic và phát âm tiếng Trung</p>
         {/if}
       </div>
 

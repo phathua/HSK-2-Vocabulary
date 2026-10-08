@@ -4,6 +4,7 @@
   import { updated } from '$app/state';
   import Toast from '#lib/components/ui/Toast.svelte';
   import UpdateModal from '#lib/components/UpdateModal.svelte';
+  import SidebarMenu from '#lib/components/SidebarMenu.svelte';
   import { appState } from '#lib/state/appState.svelte';
 
   let { children } = $props<{ children: any }>();
@@ -38,6 +39,8 @@
   });
 
   onMount(() => {
+    appState.ensureInitialized();
+
     // 1. Tự động kiểm tra ngay khi mở ứng dụng
     checkServerUpdates();
 
@@ -76,8 +79,14 @@
 </script>
 
 <Toast />
-<div class="h-screen max-h-[100dvh] w-full max-w-lg mx-auto flex flex-col justify-between p-3 sm:p-4 bg-slate-100 font-sans select-none overflow-hidden">
-  {@render children()}
+<div class="h-screen max-h-[100dvh] w-full max-w-lg md:max-w-4xl lg:max-w-7xl mx-auto flex gap-4 p-3 sm:p-4 md:py-5 bg-slate-100 dark:bg-[#131314] font-sans select-none overflow-hidden transition-colors">
+  <!-- Desktop Left Sidebar (Cố định ở desktop) -->
+  <SidebarMenu />
+
+  <!-- Main Content Area -->
+  <div class="flex-1 flex flex-col justify-between min-w-0 h-full overflow-hidden">
+    {@render children()}
+  </div>
 </div>
 
 <UpdateModal />

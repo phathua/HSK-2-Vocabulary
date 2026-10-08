@@ -297,11 +297,11 @@
             cardCount = 0;
             appState.initFlash();
           }}
-          class="w-8.5 h-8.5 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 rounded-xl flex items-center justify-center transition-colors cursor-pointer shadow-2xs"
+          class="w-9 h-9 bg-white dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] text-slate-700 dark:text-[#E3E3E3] border border-slate-200 dark:border-[#37393B] rounded-xl flex items-center justify-center transition-colors cursor-pointer shadow-2xs"
           title="Học lại từ đầu bộ thẻ"
           aria-label="Học lại từ đầu"
         >
-          <ArrowClockwise weight="bold" class="w-3.5 h-3.5 text-pink-600" />
+          <ArrowClockwise weight="bold" class="w-4 h-4 text-pink-600 dark:text-pink-400" />
         </button>
       </div>
 
@@ -314,7 +314,7 @@
             registerUserAction();
             appState.speakCurrent();
           }}
-          class="w-8.5 h-8.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center shadow-2xs active:scale-95 transition-all cursor-pointer"
+          class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center shadow-2xs active:scale-95 transition-all cursor-pointer"
           title="Phát âm tiếng Trung"
         >
           <SpeakerHigh weight="bold" class="w-4 h-4" />
@@ -328,7 +328,7 @@
       <!-- ================= UNDER CARD (THẺ ĐỨNG SAU TRỒI LÊN KHI VUỐT) ================= -->
       {#if nextCardItem}
         <div
-          class="absolute inset-0 bg-white rounded-3xl border border-slate-200 shadow-sm p-4 flex flex-col items-center justify-center text-center overflow-hidden pointer-events-none"
+          class="absolute inset-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden pointer-events-none transition-colors"
           style={`
             transform: translateY(${isLeavingDeck ? 0 : underTranslateY}px) scale(${isLeavingDeck ? 1 : underScale});
             opacity: ${isLeavingDeck ? 1 : underOpacity};
@@ -337,39 +337,33 @@
           `}
         >
           {#if nextCardItem.image}
-            <div class="relative mb-3">
+            <div class="relative mb-3 md:mb-5">
               <SmartImage
                 src={nextCardItem.image}
                 alt={nextCardItem.hanzi}
-                class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border-2 border-slate-100 shadow-2xs bg-slate-50"
+                class="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl border-2 border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C]"
               />
             </div>
           {/if}
 
           {#if !isZhToVi}
-            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Nghĩa tiếng Việt</span>
-            <div class="text-2xl sm:text-3xl font-black text-slate-900 mb-2 max-w-xs leading-snug">
+            <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">Nghĩa tiếng Việt</span>
+            <div class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-[#E3E3E3] mb-2 max-w-sm leading-snug">
               {nextCardItem.viet}
             </div>
           {:else}
-            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Từ vựng tiếng Trung</span>
-            <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-1">
+            <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">Từ vựng tiếng Trung</span>
+            <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-1">
               {nextCardItem.hanzi}
             </div>
-            <div class="text-xl sm:text-2xl font-black text-slate-600 mb-2">
+            <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-600 dark:text-[#C4C7C5] mb-2">
               {nextCardItem.pinyin}
             </div>
           {/if}
         </div>
-      {:else if appState.flashDeck.length > 0}
-        <!-- Decorative stack card khi ở cuối danh sách -->
-        <div
-          class="absolute inset-x-2 inset-y-1 bg-slate-100 rounded-3xl border border-slate-300 shadow-xs pointer-events-none transform translate-y-3 scale-95 opacity-80"
-          style="z-index: 5;"
-        ></div>
       {/if}
 
-      <!-- ================= MAIN ACTIVE TINDER CARD ================= -->
+      <!-- ================= MAIN ACTIVE CARD ================= -->
       <div
         role="button"
         tabindex="0"
@@ -398,17 +392,17 @@
         >
           <!-- ================= FRONT FACE ================= -->
           <div
-            class="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] bg-white rounded-3xl border border-slate-200 shadow-sm p-4 flex flex-col items-center justify-center text-center overflow-hidden"
+            class="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden transition-colors"
           >
             <!-- Tinder Stamps (Stamp Thuộc / Stamp Quên) -->
             <div
-              class="absolute top-5 left-5 border-3 border-emerald-500 text-emerald-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform -rotate-12 pointer-events-none bg-emerald-50/95 shadow-sm transition-opacity"
+              class="absolute top-5 left-5 border-3 border-emerald-500 text-emerald-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform -rotate-12 pointer-events-none bg-emerald-50/95 dark:bg-emerald-950/90 shadow-sm transition-opacity"
               style={`opacity: ${likeOpacity};`}
             >
               THUỘC
             </div>
             <div
-              class="absolute top-5 right-5 border-3 border-rose-500 text-rose-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform rotate-12 pointer-events-none bg-rose-50/95 shadow-sm transition-opacity"
+              class="absolute top-5 right-5 border-3 border-rose-500 text-rose-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform rotate-12 pointer-events-none bg-rose-50/95 dark:bg-rose-950/90 shadow-sm transition-opacity"
               style={`opacity: ${nopeOpacity};`}
             >
               QUÊN
@@ -416,27 +410,27 @@
 
             <!-- Card Image -->
             {#if appState.currentFlashItem.image}
-              <div class="relative mb-3 pointer-events-none">
+              <div class="relative mb-3 md:mb-5 pointer-events-none">
                 <SmartImage
                   src={appState.currentFlashItem.image}
                   alt={appState.currentFlashItem.hanzi}
-                  class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border-2 border-slate-100 shadow-2xs bg-slate-50"
+                  class="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl border-2 border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C]"
                 />
               </div>
             {/if}
 
             <!-- Mặt trước: Hiển thị Nghĩa tiếng Việt HOẶC Chữ Hán kèm Pinyin -->
             {#if !isZhToVi}
-              <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1 pointer-events-none">Nghĩa tiếng Việt</span>
-              <div class="text-2xl sm:text-3xl font-black text-slate-900 mb-2 max-w-xs leading-snug pointer-events-none">
+              <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 pointer-events-none">Nghĩa tiếng Việt</span>
+              <div class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-[#E3E3E3] mb-2 max-w-sm leading-snug pointer-events-none">
                 {appState.currentFlashItem.viet}
               </div>
             {:else}
-              <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1 pointer-events-none">Từ vựng tiếng Trung</span>
-              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-1 pointer-events-none">
+              <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 pointer-events-none">Từ vựng tiếng Trung</span>
+              <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-1 pointer-events-none">
                 {appState.currentFlashItem.hanzi}
               </div>
-              <div class="text-xl sm:text-2xl font-black text-slate-600 mb-2 pointer-events-none">
+              <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-600 dark:text-[#C4C7C5] mb-2 pointer-events-none">
                 {appState.currentFlashItem.pinyin}
               </div>
             {/if}
@@ -444,7 +438,7 @@
             <!-- Gợi ý ngắn gọn: chỉ hiện ở card đầu tiên, hoặc nhấp nháy mờ mờ sau 7s không thao tác -->
             {#if showHint}
               <div
-                class={`mt-3 flex items-center gap-1.5 px-3 py-1 bg-slate-50 text-slate-400 rounded-full text-[11px] font-semibold pointer-events-none transition-opacity duration-500 ${
+                class={`mt-3 flex items-center gap-1.5 px-3 py-1 bg-slate-50 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] rounded-full text-[11px] font-semibold pointer-events-none transition-opacity duration-500 ${
                   isIdlePulsing ? 'animate-pulse opacity-70' : 'opacity-100'
                 }`}
               >
@@ -456,17 +450,17 @@
 
           <!-- ================= BACK FACE (HIỂN THỊ ĐÁP ÁN ĐẦY ĐỦ PINYIN) ================= -->
           <div
-            class="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] bg-white rounded-3xl border-2 border-blue-200 shadow-sm p-4 flex flex-col items-center justify-center text-center overflow-hidden"
+            class="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] bg-white dark:bg-[#1B1B1B] rounded-3xl border-2 border-blue-200 dark:border-blue-900/60 shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden transition-colors"
           >
             <!-- Mirrored Stamps on Back Face -->
             <div
-              class="absolute top-5 right-5 border-3 border-emerald-500 text-emerald-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform rotate-12 pointer-events-none bg-emerald-50/95 shadow-sm transition-opacity"
+              class="absolute top-5 right-5 border-3 border-emerald-500 text-emerald-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform rotate-12 pointer-events-none bg-emerald-50/95 dark:bg-emerald-950/90 shadow-sm transition-opacity"
               style={`opacity: ${likeOpacity};`}
             >
               THUỘC
             </div>
             <div
-              class="absolute top-5 left-5 border-3 border-rose-500 text-rose-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform -rotate-12 pointer-events-none bg-rose-50/95 shadow-sm transition-opacity"
+              class="absolute top-5 left-5 border-3 border-rose-500 text-rose-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform -rotate-12 pointer-events-none bg-rose-50/95 dark:bg-rose-950/90 shadow-sm transition-opacity"
               style={`opacity: ${nopeOpacity};`}
             >
               QUÊN
@@ -474,25 +468,25 @@
 
             <!-- Mặt sau hiển thị đáp án Pinyin đầy đủ -->
             <div class="w-full flex flex-col items-center justify-center pointer-events-none">
-              <span class="text-[11px] font-bold uppercase tracking-widest text-blue-600 mb-1">Đáp án</span>
+              <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-1">Đáp án</span>
               
-              <div class="text-4xl sm:text-5xl font-black text-slate-900 mb-1">
+              <div class="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 dark:text-[#E3E3E3] mb-1">
                 {appState.currentFlashItem.hanzi}
               </div>
-              <div class="text-2xl font-black text-blue-600 mb-3">
+              <div class="text-2xl md:text-3xl font-black text-blue-600 dark:text-blue-400 mb-3">
                 {appState.currentFlashItem.pinyin}
               </div>
               
-              <div class="px-4 py-2 bg-slate-50 rounded-2xl border border-slate-200 max-w-xs">
-                <span class="text-xs font-bold text-slate-400 block mb-0.5">Tiếng Việt</span>
-                <span class="text-base sm:text-lg font-black text-emerald-600 leading-snug">
+              <div class="px-4 py-2 bg-slate-50 dark:bg-[#282A2C] rounded-2xl border border-slate-200 dark:border-[#37393B] max-w-sm">
+                <span class="text-xs font-bold text-slate-400 dark:text-[#8E918F] block mb-0.5">Tiếng Việt</span>
+                <span class="text-base sm:text-lg md:text-xl font-black text-emerald-600 dark:text-emerald-400 leading-snug">
                   {appState.currentFlashItem.viet}
                 </span>
               </div>
             </div>
 
             <!-- Gợi ý lật lại ngắn gọn -->
-            <div class="mt-4 flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-[11px] font-semibold pointer-events-none">
+            <div class="mt-4 flex items-center gap-1.5 px-3 py-1 bg-blue-50 dark:bg-[#282A2C] text-blue-600 dark:text-blue-400 rounded-full text-[11px] font-semibold pointer-events-none">
               <span>Chạm để lật lại • Vuốt để chọn</span>
             </div>
           </div>
@@ -556,31 +550,31 @@
     <!-- Bottom Controls: Micro Stats -->
     <footer class="shrink-0 mt-3">
       <!-- Micro Stats Footer -->
-      <div class="flex justify-between items-center px-3 py-1.5 bg-white rounded-xl border border-slate-200 text-[11px] font-bold text-slate-500">
+      <div class="flex justify-between items-center px-3 py-1.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-[11px] font-bold text-slate-500 dark:text-slate-400 transition-colors">
         <span class="flex items-center gap-1">
           <CheckCircle weight="duotone" class="w-3.5 h-3.5 text-emerald-500" />
-          Thuộc: <b class="text-slate-900">{appState.flashKnown}</b>
+          Thuộc: <b class="text-slate-900 dark:text-slate-100">{appState.flashKnown}</b>
         </span>
         <span class="flex items-center gap-1">
           <XCircle weight="duotone" class="w-3.5 h-3.5 text-rose-500" />
-          Chưa: <b class="text-slate-900">{appState.flashUnknown}</b>
+          Chưa: <b class="text-slate-900 dark:text-slate-100">{appState.flashUnknown}</b>
         </span>
         <span class="flex items-center gap-1">
           <FastForward weight="duotone" class="w-3.5 h-3.5 text-amber-500" />
-          Còn: <b class="text-slate-900">{appState.flashDeck.length}</b>
+          Còn: <b class="text-slate-900 dark:text-slate-100">{appState.flashDeck.length}</b>
         </span>
       </div>
     </footer>
   {:else}
     <!-- Completed Screen -->
-    <div class="flex-1 min-h-0 bg-white rounded-3xl border border-slate-200 shadow-sm p-4 flex flex-col items-center justify-center text-center my-auto">
-      <div class="w-16 h-16 rounded-3xl bg-amber-100 text-amber-600 flex items-center justify-center mb-3">
+    <div class="flex-1 min-h-0 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm p-4 flex flex-col items-center justify-center text-center my-auto transition-colors">
+      <div class="w-16 h-16 rounded-3xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
         <Trophy weight="duotone" class="w-10 h-10" />
       </div>
-      <h2 class="text-xl font-black text-slate-900 mb-1">
+      <h2 class="text-xl font-black text-slate-900 dark:text-slate-100 mb-1">
         Hoàn thành Flashcard!
       </h2>
-      <p class="text-sm font-bold text-slate-600 mb-4">
+      <p class="text-sm font-bold text-slate-600 dark:text-slate-400 mb-4">
         Đã thuộc {appState.flashKnown}/{appState.totalFlashCount} từ
       </p>
       <button
