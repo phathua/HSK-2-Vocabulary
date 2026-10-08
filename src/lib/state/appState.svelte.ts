@@ -18,6 +18,7 @@ export class AppState {
   direction = $state<QuizDirection>('vi_to_zh');
   filterModalOpen = $state(false);
   settingsModalOpen = $state(false);
+  updateModalOpen = $state(false);
 
   // Cài đặt
   autoPlay = $state(false);

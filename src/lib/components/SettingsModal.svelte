@@ -73,6 +73,20 @@
           ⌨ <b>Gõ Telex Pinyin tiện lợi:</b><br />
           Gõ <code class="bg-white px-1 py-0.5 rounded text-blue-700">ni3hao3</code> hoặc <code class="bg-white px-1 py-0.5 rounded text-blue-700">nihaoj</code> sẽ tự chuyển thành pinyin chuẩn!
         </div>
+
+        <!-- Check Update Button -->
+        <div class="pt-1">
+          <button
+            type="button"
+            onclick={() => {
+              appState.settingsModalOpen = false;
+              appState.updateModalOpen = true;
+            }}
+            class="w-full py-2.5 px-3 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+          >
+            <span>🚀 Kiểm tra bản cập nhật mới</span>
+          </button>
+        </div>
       </div>
 
       <button
