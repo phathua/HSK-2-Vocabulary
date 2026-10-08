@@ -10,6 +10,7 @@
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import { getExamData } from '#lib/utils/examLoader';
+  import { examHistoryState } from '#lib/state/examHistoryState.svelte';
   import type { ExamDetail, ExamMode } from '#lib/types/exam';
 
   const examId = $derived(page.params.examId);
@@ -83,10 +84,16 @@
       }
     }
 
+    const lScore = Math.round((lCorrect / 35) * 100);
+    const rScore = Math.round((rCorrect / 25) * 100);
+
     return {
       totalCorrect: lCorrect + rCorrect,
       listeningCorrect: lCorrect,
       readingCorrect: rCorrect,
+      listeningScore: lScore,
+      readingScore: rScore,
+      totalScore: lScore + rScore,
       correctMap
     };
   });
