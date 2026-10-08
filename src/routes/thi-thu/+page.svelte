@@ -7,6 +7,10 @@
   import Trophy from 'phosphor-svelte/lib/Trophy';
   import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
   import ImageSquare from 'phosphor-svelte/lib/ImageSquare';
+  import Eye from 'phosphor-svelte/lib/Eye';
+  import X from 'phosphor-svelte/lib/X';
+  import BookOpen from 'phosphor-svelte/lib/BookOpen';
+  import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import { mockExamsData, type MockExamItem } from '#lib/data/mockExamsList';
@@ -16,6 +20,7 @@
 
   let selectedFilter = $state('all');
   let enteringExam = $state<MockExamItem | null>(null);
+  let previewExam = $state<MockExamItem | null>(null);
 
   function handleStartExam(exam: MockExamItem) {
     if (enteringExam) return;
@@ -118,51 +123,70 @@
   <!-- Danh sách đề thi: Card ngang gọn gàng, chia 2 cột trên md, cực kỳ tinh tế -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 pb-6">
     {#each filteredExams as exam}
-      <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-xl p-3 shadow-2xs hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all flex flex-col justify-between group">
-        <div>
-          <!-- Top Row: Mã đề & Badges -->
-          <div class="flex items-center justify-between gap-2 mb-1.5">
-            <div class="flex items-center gap-1.5 min-w-0">
-              <span class="text-[10px] font-bold px-1.5 py-0.5 rounded {exam.badgeColor === 'emerald' ? 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-900/50' : exam.badgeColor === 'purple' ? 'bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-400 border border-purple-200/60 dark:border-purple-900/50' : 'bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 border border-orange-200/60 dark:border-orange-900/50'}">
-                {exam.tag}
-              </span>
-              <span class="text-[11px] font-mono font-semibold text-slate-400 dark:text-neutral-500">
-                {exam.code}
-              </span>
-            </div>
-
-            {#if exam.hasAudio}
-              <span class="text-[10px] font-semibold text-sky-600 dark:text-sky-400 flex items-center gap-1 shrink-0">
-                <SpeakerHigh class="w-3 h-3" />
-                <span>Audio</span>
-              </span>
+      <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-2xl p-3 shadow-2xs hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all flex flex-col justify-between group">
+        <div class="flex items-start gap-3">
+          <!-- Thumbnail bên trái card -->
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-slate-100 dark:bg-neutral-800/80 border border-slate-200/80 dark:border-neutral-700/60 overflow-hidden shrink-0 flex items-center justify-center relative group-hover:border-orange-400/50 transition-colors">
+            {#if exam.imagesCount > 0}
+              <img
+                src={`/exams-media/${exam.code}/images/${exam.code}_img_01.webp`}
+                alt={`Thumbnail ${exam.code}`}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror={(e: any) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div class="hidden absolute inset-0 flex items-center justify-center text-slate-400">
+                <Exam class="w-6 h-6" />
+              </div>
+            {:else}
+              <div class="flex flex-col items-center justify-center text-slate-400">
+                <Exam class="w-6 h-6 text-orange-500" />
+                <span class="text-[9px] font-mono mt-0.5">HSK 2</span>
+              </div>
             {/if}
           </div>
 
-          <!-- Title -->
-          <h2 class="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#E3E3E3] group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors line-clamp-1">
-            {exam.title}
-          </h2>
+          <!-- Thông tin đề thi bên phải Thumbnail -->
+          <div class="flex-1 min-w-0">
+            <!-- Top Row: Mã đề & Badges -->
+            <div class="flex items-center justify-between gap-1.5 mb-1">
+              <div class="flex items-center gap-1.5 min-w-0">
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded {exam.badgeColor === 'emerald' ? 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-900/50' : exam.badgeColor === 'purple' ? 'bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-400 border border-purple-200/60 dark:border-purple-900/50' : 'bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 border border-orange-200/60 dark:border-orange-900/50'}">
+                  {exam.tag}
+                </span>
+                <span class="text-[11px] font-mono font-semibold text-slate-400 dark:text-neutral-500 truncate">
+                  {exam.code}
+                </span>
+              </div>
 
-          <!-- Meta Info: Thời gian, số câu, ảnh -->
-          <div class="flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-[#8E918F] mt-1.5">
-            <span class="flex items-center gap-0.5">
-              <Clock class="w-3 h-3 text-orange-500" />
-              <span>{exam.duration}</span>
-            </span>
-            <span>•</span>
-            <span>{exam.questionsCount} câu</span>
-            {#if exam.imagesCount > 0}
-              <span>•</span>
+              {#if exam.hasAudio}
+                <span class="text-[10px] font-semibold text-sky-600 dark:text-sky-400 flex items-center gap-0.5 shrink-0">
+                  <SpeakerHigh class="w-3 h-3" />
+                  <span>Audio</span>
+                </span>
+              {/if}
+            </div>
+
+            <!-- Title -->
+            <h2 class="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#E3E3E3] group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors line-clamp-1">
+              {exam.title}
+            </h2>
+
+            <!-- Meta Info: Thời gian, số câu -->
+            <div class="flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-[#8E918F] mt-1">
               <span class="flex items-center gap-0.5">
-                <ImageSquare class="w-3 h-3 text-slate-400" />
-                <span>{exam.imagesCount} ảnh</span>
+                <Clock class="w-3 h-3 text-orange-500" />
+                <span>{exam.duration}</span>
               </span>
-            {/if}
+              <span>•</span>
+              <span>{exam.questionsCount} câu</span>
+            </div>
           </div>
         </div>
 
-        <!-- Footer Card: Điểm cao nhất & Nút Vào Thi Nhỏ Gọn -->
+        <!-- Footer Card: Điểm cao nhất & Các nút Thao tác (Xem trước + Làm đề) -->
         <div class="mt-2.5 pt-2 border-t border-slate-100 dark:border-[#282A2C] flex items-center justify-between gap-2">
           <div class="text-[11px]">
             {#if examHistoryState.getBestScore(exam.code) !== null}
@@ -176,19 +200,123 @@
             {/if}
           </div>
 
-          <button
-            type="button"
-            onclick={() => handleStartExam(exam)}
-            class="px-3 py-1 rounded-lg bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold text-[11px] flex items-center gap-1 transition-all cursor-pointer shadow-2xs shrink-0"
-          >
-            <Play weight="bold" class="w-3 h-3" />
-            <span>Làm đề</span>
-          </button>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <!-- Nút Xem trước tóm tắt đề -->
+            <button
+              type="button"
+              onclick={() => (previewExam = exam)}
+              class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-neutral-700 bg-slate-50 dark:bg-neutral-800 hover:bg-slate-100 dark:hover:bg-neutral-700 text-slate-600 dark:text-neutral-300 font-bold text-[11px] flex items-center gap-1 transition-all cursor-pointer shadow-2xs"
+              title="Xem tóm tắt cấu trúc đề thi"
+            >
+              <Eye weight="bold" class="w-3 h-3" />
+              <span>Xem trước</span>
+            </button>
+
+            <!-- Nút Bắt đầu làm bài thi -->
+            <button
+              type="button"
+              onclick={() => handleStartExam(exam)}
+              class="px-3 py-1 rounded-lg bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold text-[11px] flex items-center gap-1 transition-all cursor-pointer shadow-2xs shrink-0"
+            >
+              <Play weight="bold" class="w-3 h-3" />
+              <span>Làm đề</span>
+            </button>
+          </div>
         </div>
       </div>
     {/each}
   </div>
 </main>
+
+<!-- Modal Xem trước Tóm tắt Đề Thi Gọn Gàng -->
+{#if previewExam}
+  <div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fade-in select-none">
+    <div class="bg-white dark:bg-[#1E1E1E] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-5 sm:p-6 max-w-sm w-full shadow-2xl relative">
+      <!-- Nút Đóng -->
+      <button
+        type="button"
+        onclick={() => (previewExam = null)}
+        class="absolute top-4 right-4 w-7 h-7 rounded-xl bg-slate-100 dark:bg-neutral-800 text-slate-500 hover:text-slate-800 dark:text-neutral-400 dark:hover:text-neutral-200 flex items-center justify-center cursor-pointer transition-colors"
+        aria-label="Đóng"
+      >
+        <X weight="bold" class="w-4 h-4" />
+      </button>
+
+      <!-- Header Modal -->
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center shrink-0">
+          <BookOpen weight="duotone" class="w-5 h-5" />
+        </div>
+        <div class="min-w-0 pr-6">
+          <span class="text-[10px] font-bold text-orange-600 dark:text-orange-400 tracking-wider uppercase">
+            Tóm tắt đề thi • {previewExam.code}
+          </span>
+          <h3 class="text-sm font-black text-slate-900 dark:text-[#E3E3E3] truncate">
+            {previewExam.title}
+          </h3>
+        </div>
+      </div>
+
+      <!-- Cấu trúc đề thi chi tiết -->
+      <div class="space-y-2 bg-slate-50 dark:bg-[#252525] rounded-2xl p-3.5 mb-4 text-xs border border-slate-100 dark:border-neutral-800">
+        <div class="flex items-center justify-between py-1 border-b border-slate-200/60 dark:border-neutral-700/60">
+          <span class="text-slate-500 dark:text-neutral-400 flex items-center gap-1.5">
+            <Clock class="w-3.5 h-3.5 text-orange-500" />
+            Thời gian làm bài:
+          </span>
+          <span class="font-extrabold text-slate-800 dark:text-neutral-200">55 phút</span>
+        </div>
+
+        <div class="flex items-center justify-between py-1 border-b border-slate-200/60 dark:border-neutral-700/60">
+          <span class="text-slate-500 dark:text-neutral-400 flex items-center gap-1.5">
+            <SpeakerHigh class="w-3.5 h-3.5 text-sky-500" />
+            Phần Nghe (听力):
+          </span>
+          <span class="font-extrabold text-slate-800 dark:text-neutral-200">35 câu (4 phần)</span>
+        </div>
+
+        <div class="flex items-center justify-between py-1 border-b border-slate-200/60 dark:border-neutral-700/60">
+          <span class="text-slate-500 dark:text-neutral-400 flex items-center gap-1.5">
+            <BookOpen class="w-3.5 h-3.5 text-blue-500" />
+            Phần Đọc (阅读):
+          </span>
+          <span class="font-extrabold text-slate-800 dark:text-neutral-200">25 câu (4 phần)</span>
+        </div>
+
+        <div class="flex items-center justify-between py-1">
+          <span class="text-slate-500 dark:text-neutral-400 flex items-center gap-1.5">
+            <Trophy class="w-3.5 h-3.5 text-amber-500" />
+            Thang điểm chuẩn:
+          </span>
+          <span class="font-extrabold text-emerald-600 dark:text-emerald-400">200 điểm (≥ 120 Đạt)</span>
+        </div>
+      </div>
+
+      <!-- Footer Action -->
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          onclick={() => (previewExam = null)}
+          class="flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 text-xs font-bold text-slate-600 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-neutral-800 transition-colors cursor-pointer"
+        >
+          Đóng
+        </button>
+        <button
+          type="button"
+          onclick={() => {
+            const e = previewExam;
+            previewExam = null;
+            if (e) handleStartExam(e);
+          }}
+          class="flex-1 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-black flex items-center justify-center gap-1.5 shadow-sm transition-all cursor-pointer"
+        >
+          <Play weight="bold" class="w-3.5 h-3.5" />
+          <span>Vào thi ngay</span>
+        </button>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <!-- Loading Overlay: Chặn thao tác, thông báo chuẩn bị đề thi tức thì -->
 {#if enteringExam}

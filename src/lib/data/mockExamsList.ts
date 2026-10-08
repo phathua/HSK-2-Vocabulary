@@ -241,6 +241,22 @@ export const mockExamsData: MockExamItem[] = [
     "imagesCount": 30
   },
   {
+    "id": "H21335",
+    "code": "H21335",
+    "title": "Đề Thi Thật Hanban H21335",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Chính thức",
+    "badgeColor": "purple",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 30
+  },
+  {
     "id": "MOCK-CHINESE-TOOLS",
     "code": "MOCK-CHINESE-TOOLS",
     "title": "Đề Luyện Thi Chinese Tools",

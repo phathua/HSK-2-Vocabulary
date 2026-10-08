@@ -59,9 +59,9 @@
 
   <!-- Right: Clean Actions -->
   <div class="flex items-center gap-1.5 shrink-0">
-    <!-- Trong phòng thi: Nộp bài, Làm lại & Bộ đếm thời gian (chỉ hiện bộ đếm khi cuộn xuống) -->
-    {#if isExamRoom}
-      <div class="flex items-center gap-1.5 shrink-0">
+    <!-- Trong phòng thi: Nộp bài, Làm lại & Bộ đếm thời gian CHỈ HIỆN KHI CUỘN XUỐNG (isScrolled) -->
+    {#if isExamRoom && examRoomState.isScrolled}
+      <div class="flex items-center gap-1.5 shrink-0 animate-fade-in">
         <!-- Nút Làm lại bài -->
         <button
           type="button"
@@ -85,8 +85,8 @@
           <span>Nộp bài</span>
         </button>
 
-        <!-- Bộ đếm thời gian: CHỈ XUẤT HIỆN KHI CUỘN XUỐNG (isScrolled) -->
-        {#if examRoomState.isExamMode && examRoomState.isScrolled}
+        <!-- Bộ đếm thời gian: CHỈ XUẤT HIỆN Ở CHẾ ĐỘ THI -->
+        {#if examRoomState.isExamMode}
           {#if examRoomState.isPreviewPhase}
             <!-- Đếm ngược 60s xem trước đề (chưa trừ vào 55 phút) -->
             <button

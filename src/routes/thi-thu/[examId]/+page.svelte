@@ -231,15 +231,13 @@
       }}
     />
 
-    <!-- Trình Phát Audio Cho Đề Thi -->
+    <!-- Trình Phát Audio Cho Đề Thi: Sticky trực tiếp dưới Header -->
     {#if exam.audio_ogg}
-      <div class="mb-4">
-        <ExamAudioPlayer
-          audioSrc={exam.audio_ogg}
-          examCode={exam.exam_code}
-          isExamMode={mode === 'exam'}
-        />
-      </div>
+      <ExamAudioPlayer
+        audioSrc={exam.audio_ogg}
+        examCode={exam.exam_code}
+        isExamMode={mode === 'exam'}
+      />
     {/if}
 
     <!-- Bố Cục Phòng Thi (Split Layout: Cột Câu Hỏi + Palette 60 ô) -->
@@ -264,6 +262,7 @@
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
                 isExamSubmitted={isSubmitted}
+                showBoardImage={q.question_no === 11 || q.question_no === 16}
                 onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
                 onToggleFlag={() => handleToggleFlag(q.question_no)}
                 onCheckPractice={() => handleCheckPractice(q.question_no)}
@@ -290,6 +289,7 @@
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
                 isExamSubmitted={isSubmitted}
+                showBoardImage={q.question_no === 36}
                 onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
                 onToggleFlag={() => handleToggleFlag(q.question_no)}
                 onCheckPractice={() => handleCheckPractice(q.question_no)}

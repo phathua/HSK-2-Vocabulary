@@ -12,6 +12,7 @@
     mode: ExamMode;
     isCheckedInPractice?: boolean;
     isExamSubmitted?: boolean;
+    showBoardImage?: boolean;
     onSelectAnswer: (val: string) => void;
     onToggleFlag: () => void;
     onCheckPractice?: () => void;
@@ -24,6 +25,7 @@
     mode,
     isCheckedInPractice = false,
     isExamSubmitted = false,
+    showBoardImage = true,
     onSelectAnswer,
     onToggleFlag,
     onCheckPractice
@@ -93,8 +95,8 @@
     </div>
   </div>
 
-  <!-- Ảnh bảng tranh lựa chọn (cho Part 2 và Reading Part 1: bảng A, B, C, D, E, F) -->
-  {#if question.board_image}
+  <!-- Ảnh bảng tranh lựa chọn (cho Part 2 và Reading Part 1: bảng A, B, C, D, E, F - chỉ hiện ở câu đầu nhóm) -->
+  {#if question.board_image && showBoardImage}
     <div class="relative group my-3 max-w-xl rounded-2xl overflow-hidden border border-slate-200/90 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xs">
       <div class="px-3 py-1.5 bg-slate-100 dark:bg-neutral-800 text-[11px] font-bold text-slate-600 dark:text-neutral-300 flex items-center justify-between border-b border-slate-200 dark:border-neutral-700">
         <span>🖼️ Bảng tranh lựa chọn (A - F):</span>
