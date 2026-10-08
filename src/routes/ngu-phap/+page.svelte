@@ -17,30 +17,23 @@
   import TreeEvergreen from 'phosphor-svelte/lib/TreeEvergreen';
   import Sparkle from 'phosphor-svelte/lib/Sparkle';
   import CaretRight from 'phosphor-svelte/lib/CaretRight';
-  import Eye from 'phosphor-svelte/lib/Eye';
   import Check from 'phosphor-svelte/lib/Check';
 
   // State
   let searchQuery = $state('');
   let selectedLevel = $state<'all' | 'easy' | 'medium' | 'hard'>('all');
   let selectedOrigin = $state<'all' | 'inherited' | 'new' | 'advanced'>('all');
-  let pinyinMode = $state<'always' | 'hover' | 'hidden'>('always');
   let learnedMap = $state<Record<number, boolean>>({});
   let activeId = $state<number>(1);
 
   // LocalStorage keys
   const STORAGE_KEY_LEARNED = 'hsk2_grammar_learned_ids';
-  const STORAGE_KEY_PINYIN = 'hsk2_grammar_pinyin_mode';
 
   onMount(() => {
     try {
       const savedLearned = localStorage.getItem(STORAGE_KEY_LEARNED);
       if (savedLearned) {
         learnedMap = JSON.parse(savedLearned);
-      }
-      const savedPinyin = localStorage.getItem(STORAGE_KEY_PINYIN) as 'always' | 'hover' | 'hidden';
-      if (savedPinyin && ['always', 'hover', 'hidden'].includes(savedPinyin)) {
-        pinyinMode = savedPinyin;
       }
     } catch {}
   });
@@ -52,13 +45,6 @@
     };
     try {
       localStorage.setItem(STORAGE_KEY_LEARNED, JSON.stringify(learnedMap));
-    } catch {}
-  }
-
-  function setPinyinMode(mode: 'always' | 'hover' | 'hidden') {
-    pinyinMode = mode;
-    try {
-      localStorage.setItem(STORAGE_KEY_PINYIN, mode);
     } catch {}
   }
 
@@ -110,8 +96,8 @@
 
 <Header />
 
-<main class="flex-1 flex flex-col min-h-0 my-2 overflow-hidden space-y-2.5">
-  <!-- Top Bar: Tiêu đề + Tiến độ + Nút đổi Pinyin (Thu gọn tối đa diện tích) -->
+<main class="flex-1 flex flex-col min-h-0 pt-1 pb-0 overflow-hidden space-y-2">
+  <!-- Top Bar: Tiêu đề + Huy hiệu + Tiến độ đã học -->
   <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-xs flex items-center justify-between gap-3 shrink-0">
     <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
       <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 shadow-2xs">
@@ -119,63 +105,22 @@
       </div>
       <div class="min-w-0">
         <div class="flex items-center gap-2">
-          <h1 class="text-sm sm:text-base font-black text-slate-900 dark:text-slate-100 leading-tight truncate">
-            Trọng Điểm Ngữ Pháp
+          <h1 class="text-sm sm:text-base font-black text-slate-900 dark:text-slate-100 leading-snug">
+            Trọng Điểm Ngữ Pháp HSK 2
           </h1>
-          <span class="px-1.5 py-0.5 rounded-md bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-[10px] font-black shrink-0">
-            18 Điểm
+          <span class="px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-[10px] sm:text-xs font-black shrink-0">
+            {totalPoints} Điểm
           </span>
         </div>
-        <p class="text-[11px] text-slate-400 dark:text-[#8E918F] font-semibold truncate mt-0.5">
+        <p class="text-[11px] sm:text-xs text-slate-400 dark:text-[#8E918F] font-semibold mt-0.5">
           Đã học: <span class="font-mono text-blue-600 dark:text-blue-400 font-bold">{learnedCount}/{totalPoints} ({progressPercent}%)</span>
         </p>
       </div>
     </div>
-
-    <!-- Pinyin Switcher (Thu gọn siêu tinh giản) -->
-    <div class="flex items-center gap-0.5 p-1 rounded-xl bg-slate-50 dark:bg-[#242526] border border-slate-200 dark:border-[#323436] shrink-0">
-      <div class="hidden sm:flex items-center gap-1 px-1.5 text-[11px] font-bold text-slate-500 dark:text-[#8E918F]">
-        <Eye weight="duotone" class="w-3.5 h-3.5" />
-        <span>Pinyin:</span>
-      </div>
-      <button
-        type="button"
-        onclick={() => setPinyinMode('always')}
-        class={`px-2 py-0.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-          pinyinMode === 'always'
-            ? 'bg-blue-600 text-white shadow-2xs'
-            : 'text-slate-600 dark:text-[#C4C7C5] hover:bg-slate-200/60 dark:hover:bg-[#323436]'
-        }`}
-      >
-        Hiện
-      </button>
-      <button
-        type="button"
-        onclick={() => setPinyinMode('hover')}
-        class={`px-2 py-0.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-          pinyinMode === 'hover'
-            ? 'bg-blue-600 text-white shadow-2xs'
-            : 'text-slate-600 dark:text-[#C4C7C5] hover:bg-slate-200/60 dark:hover:bg-[#323436]'
-        }`}
-      >
-        Hover
-      </button>
-      <button
-        type="button"
-        onclick={() => setPinyinMode('hidden')}
-        class={`px-2 py-0.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-          pinyinMode === 'hidden'
-            ? 'bg-blue-600 text-white shadow-2xs'
-            : 'text-slate-600 dark:text-[#C4C7C5] hover:bg-slate-200/60 dark:hover:bg-[#323436]'
-        }`}
-      >
-        Ẩn
-      </button>
-    </div>
   </div>
 
   <!-- Thanh Tìm Kiếm & Bộ Lọc Tinh Gọn (Khắc phục triệt để lỗi dài chiếm chỗ trên Mobile) -->
-  <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-2xl p-2.5 sm:p-3 shadow-xs space-y-2 shrink-0">
+  <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-2xl p-2 sm:p-3 shadow-xs space-y-2 shrink-0">
     <!-- Dòng 1: Ô Tìm Kiếm -->
     <div class="relative w-full">
       <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-slate-400">
@@ -292,7 +237,7 @@
   <!-- Bố cục Responsive: Desktop 2 Cột (Trái danh mục, Phải chi tiết) / Mobile 1 Cột Danh mục -->
   <div class="flex-1 flex gap-3 min-h-0 overflow-hidden">
     <!-- Cột Trái (Desktop) hoặc Toàn Màn Hình (Mobile): Danh sách từng điểm ngữ pháp -->
-    <div class="w-full lg:w-[42%] flex flex-col min-h-0 overflow-y-auto no-scrollbar space-y-2 pr-0.5">
+    <div class="w-full lg:w-[42%] flex flex-col min-h-0 overflow-y-auto no-scrollbar space-y-2 p-2">
       {#if filteredPoints.length > 0}
         {#each filteredPoints as point (point.id)}
           {@const isSelected = activeId === point.id}
@@ -305,12 +250,12 @@
             onclick={() => handleSelectPoint(point)}
             class={`w-full text-left p-3 rounded-2xl border transition-all duration-150 cursor-pointer flex items-center justify-between gap-3 select-none active:scale-[0.98] ${
               isSelected
-                ? `${theme.bg} ${theme.border} ${theme.darkBg} ${theme.darkBorder} shadow-xs ring-2 ring-blue-500/30 dark:ring-blue-400/30`
+                ? `${theme.bg} ${theme.border} ${theme.darkBg} ${theme.darkBorder} shadow-sm ring-2 ring-inset ring-blue-500/35 dark:ring-blue-400/35`
                 : 'bg-white dark:bg-[#1B1B1B] border-slate-200 dark:border-[#282A2C] hover:border-slate-300 dark:hover:border-[#37393B]'
             }`}
           >
             <!-- Bên trái: Phosphor Icon độc đáo + Tiêu đề + Chữ Hán -->
-            <div class="flex items-center gap-3 min-w-0">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
               <!-- Icon khối riêng cho từng bài giống LessonFilterModal -->
               <div class={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border transition-transform ${
                 isSelected
@@ -321,9 +266,9 @@
               </div>
 
               <!-- Nội dung bài học -->
-              <div class="min-w-0">
+              <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-1.5">
-                  <span class={`font-black text-xs sm:text-sm truncate ${isSelected ? 'text-slate-900 dark:text-white' : 'text-slate-800 dark:text-[#E3E3E3]'}`}>
+                  <span class={`font-black text-xs sm:text-sm leading-snug line-clamp-2 ${isSelected ? 'text-slate-900 dark:text-white' : 'text-slate-800 dark:text-[#E3E3E3]'}`}>
                     {point.id}. {point.title}
                   </span>
                 </div>
@@ -363,7 +308,6 @@
         <GrammarDetailView
           point={activePoint}
           isLearned={Boolean(learnedMap[activePoint.id])}
-          {pinyinMode}
           onToggleLearned={toggleLearned}
         />
       {/if}

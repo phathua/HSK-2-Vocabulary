@@ -153,7 +153,7 @@
       </div>
       <div class="space-y-2">
         {#each point.examples as ex}
-          <ExampleSentence sentence={ex} {pinyinMode} />
+          <ExampleSentence sentence={ex} />
         {/each}
       </div>
     </div>

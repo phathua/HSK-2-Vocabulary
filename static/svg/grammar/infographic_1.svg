@@ -1,43 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 290" width="100%" height="100%">
   <defs>
-    <linearGradient id="g1-a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#EFF6FF"/><stop offset="100%" stop-color="#DBEAFE"/></linearGradient>
-    <linearGradient id="g1-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FEF3C7"/><stop offset="100%" stop-color="#FDE68A"/></linearGradient>
-    <filter id="s1" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.05"/></filter>
+    <linearGradient id="g-you" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="g-shi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="100%" stop-color="#FEF3C7"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06"/>
+    </filter>
   </defs>
-  <!-- Card A: 有 (Tồn tại khách quan) -->
-  <g transform="translate(8, 10)">
-    <rect width="256" height="160" rx="16" fill="url(#g1-a)" stroke="#BFDBFE" stroke-width="1.5" filter="url(#s1)"/>
-    <rect x="12" y="12" width="74" height="24" rx="8" fill="#2563EB"/>
-    <text x="49" y="28" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">有 (yǒu)</text>
-    <text x="96" y="28" fill="#1E40AF" font-size="11" font-weight="700" font-family="system-ui, sans-serif">Tồn tại khách quan</text>
-    <rect x="12" y="46" width="232" height="66" rx="10" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1"/>
-    <rect x="18" y="54" width="66" height="50" rx="8" fill="#F1F5F9"/>
-    <text x="51" y="76" fill="#334155" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">桌子上</text>
-    <text x="51" y="92" fill="#64748B" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">trên bàn</text>
-    <path d="M92 79 L108 79" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
-    <path d="M104 75 L109 79 L104 83" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="116" y="54" width="120" height="50" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
-    <text x="176" y="75" fill="#1D4ED8" font-size="13" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">有一个手机</text>
-    <text x="176" y="91" fill="#3B82F6" font-size="9.5" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">có một điện thoại</text>
-    <text x="128" y="132" fill="#1E3A8A" font-size="10.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Vị trí + 有 + Danh từ</text>
-    <text x="128" y="148" fill="#3B82F6" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">Nhấn mạnh sự hiện hữu</text>
+
+  <!-- KHỐI 1: Cấu trúc với 有 (Diễn tả sự hiện hữu khách quan) -->
+  <g transform="translate(10, 10)">
+    <rect width="360" height="126" rx="16" fill="url(#g-you)" stroke="#BFDBFE" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Tag tiêu đề -->
+    <rect x="12" y="10" width="82" height="24" rx="8" fill="#2563EB"/>
+    <text x="53" y="26" fill="#FFFFFF" font-size="12.5" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">有 (yǒu)</text>
+    <text x="104" y="27" fill="#1E40AF" font-size="12" font-weight="800" font-family="system-ui, sans-serif">Tồn tại sự vật khách quan</text>
+
+    <!-- Hàng diễn giải minh họa: Vị trí -> Có gì -->
+    <rect x="12" y="42" width="336" height="52" rx="12" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1"/>
+    
+    <!-- Box vị trí -->
+    <rect x="18" y="48" width="90" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="63" y="66" fill="#1E293B" font-size="14" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">桌子上</text>
+    <text x="63" y="81" fill="#64748B" font-size="10.5" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">trên bàn</text>
+
+    <!-- Mũi tên liên kết -->
+    <path d="M116 68 L138 68" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M133 63 L140 68 L133 73" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Box kết quả 有 -->
+    <rect x="148" y="48" width="194" height="40" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="245" y="66" fill="#1D4ED8" font-size="15" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">有一个手机</text>
+    <text x="245" y="81" fill="#2563EB" font-size="10.5" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">có một chiếc điện thoại</text>
+
+    <!-- Chú thích công thức có highlight -->
+    <text x="180" y="113" fill="#1E3A8A" font-size="11.5" font-weight="800" text-anchor="middle" font-family="system-ui, sans-serif">
+      Công thức: <tspan fill="#2563EB" font-weight="900">[Vị trí]</tspan> + <tspan fill="#D97706" font-weight="900">有</tspan> + <tspan fill="#059669" font-weight="900">[Danh từ]</tspan>
+    </text>
   </g>
-  <!-- Card B: 是 (Xác định danh tính) -->
-  <g transform="translate(276, 10)">
-    <rect width="256" height="160" rx="16" fill="url(#g1-b)" stroke="#FDE68A" stroke-width="1.5" filter="url(#s1)"/>
-    <rect x="12" y="12" width="74" height="24" rx="8" fill="#D97706"/>
-    <text x="49" y="28" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">是 (shì)</text>
-    <text x="96" y="28" fill="#92400E" font-size="11" font-weight="700" font-family="system-ui, sans-serif">Xác định đích danh</text>
-    <rect x="12" y="46" width="232" height="66" rx="10" fill="#FFFFFF" stroke="#FCD34D" stroke-width="1"/>
-    <rect x="18" y="54" width="66" height="50" rx="8" fill="#F1F5F9"/>
-    <text x="51" y="76" fill="#334155" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">门外</text>
-    <text x="51" y="92" fill="#64748B" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">ngoài cửa</text>
-    <path d="M92 79 L108 79" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
-    <path d="M104 75 L109 79 L104 83" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="116" y="54" width="120" height="50" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
-    <text x="176" y="75" fill="#B45309" font-size="12" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">是他的自行车</text>
-    <text x="176" y="91" fill="#D97706" font-size="9.5" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">là xe của anh ấy</text>
-    <text x="128" y="132" fill="#78350F" font-size="10.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">Vị trí + 是 + Vật cụ thể</text>
-    <text x="128" y="148" fill="#B45309" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif">Nhấn mạnh quyền sở hữu / danh tính</text>
+
+  <!-- KHỐI 2: Cấu trúc với 是 (Xác định đích danh / danh tính sự vật) -->
+  <g transform="translate(10, 150)">
+    <rect width="360" height="126" rx="16" fill="url(#g-shi)" stroke="#FDE68A" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Tag tiêu đề -->
+    <rect x="12" y="10" width="82" height="24" rx="8" fill="#D97706"/>
+    <text x="53" y="26" fill="#FFFFFF" font-size="12.5" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">是 (shì)</text>
+    <text x="104" y="27" fill="#92400E" font-size="12" font-weight="800" font-family="system-ui, sans-serif">Xác định đích danh sự vật</text>
+
+    <!-- Hàng diễn giải minh họa: Vị trí -> Là cái gì -->
+    <rect x="12" y="42" width="336" height="52" rx="12" fill="#FFFFFF" stroke="#FCD34D" stroke-width="1"/>
+    
+    <!-- Box vị trí -->
+    <rect x="18" y="48" width="90" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="63" y="66" fill="#1E293B" font-size="14" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">门外</text>
+    <text x="63" y="81" fill="#64748B" font-size="10.5" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">ngoài cửa</text>
+
+    <!-- Mũi tên liên kết -->
+    <path d="M116 68 L138 68" stroke="#D97706" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M133 63 L140 68 L133 73" fill="none" stroke="#D97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Box kết quả 是 -->
+    <rect x="148" y="48" width="194" height="40" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="245" y="66" fill="#B45309" font-size="14.5" font-weight="900" text-anchor="middle" font-family="system-ui, sans-serif">是他的自行车</text>
+    <text x="245" y="81" fill="#D97706" font-size="10.5" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">là xe đạp của anh ấy</text>
+
+    <!-- Chú thích công thức có highlight -->
+    <text x="180" y="113" fill="#78350F" font-size="11.5" font-weight="800" text-anchor="middle" font-family="system-ui, sans-serif">
+      Công thức: <tspan fill="#2563EB" font-weight="900">[Vị trí]</tspan> + <tspan fill="#D97706" font-weight="900">是</tspan> + <tspan fill="#059669" font-weight="900">[Vật đích danh]</tspan>
+    </text>
   </g>
 </svg>

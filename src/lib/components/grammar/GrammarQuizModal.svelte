@@ -48,17 +48,17 @@
       onclick={(e) => e.stopPropagation()}
     >
       <!-- Header with Close button (Bold Phosphor icon, no emoji) -->
-      <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-[#282A2C]">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+      <div class="flex items-start justify-between gap-3 pb-3 border-b border-slate-100 dark:border-[#282A2C]">
+        <div class="flex items-start gap-2.5 min-w-0 flex-1">
+          <div class="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
             <Question weight="duotone" class="w-4.5 h-4.5" />
           </div>
-          <div>
-            <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider block">
+          <div class="min-w-0 flex-1">
+            <span class="text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider block">
               Luyện tập nhanh
             </span>
-            <h3 class="text-sm sm:text-base font-black text-slate-900 dark:text-slate-100 truncate">
-              {point.title}
+            <h3 class="text-sm sm:text-base font-black text-slate-900 dark:text-slate-100 leading-snug line-clamp-2">
+              {point.id}. {point.title}
             </h3>
           </div>
         </div>
@@ -66,19 +66,19 @@
         <button
           type="button"
           onclick={handleClose}
-          class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors cursor-pointer active:scale-95"
+          class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors cursor-pointer active:scale-95 shrink-0"
           aria-label="Đóng bài tập"
         >
           <X weight="bold" class="w-4 h-4" />
         </button>
       </div>
 
-      <!-- Question Content -->
-      <div class="space-y-1.5 p-3 rounded-2xl bg-slate-50 dark:bg-[#242526] border border-slate-200/70 dark:border-[#323436]">
-        <div class="text-xs font-mono text-blue-600 dark:text-blue-400">
+      <!-- Question Content: Pinyin to rõ ràng -->
+      <div class="space-y-1.5 p-3.5 rounded-2xl bg-slate-50 dark:bg-[#242526] border border-slate-200/70 dark:border-[#323436]">
+        <div class="text-sm sm:text-base font-mono font-bold text-blue-600 dark:text-blue-400 tracking-wide">
           {point.quickQuiz.pinyin}
         </div>
-        <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100">
+        <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 leading-snug">
           {point.quickQuiz.question}
         </div>
       </div>
@@ -94,7 +94,7 @@
             type="button"
             onclick={() => handleSelect(idx)}
             disabled={isAnswered}
-            class={`w-full p-3 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer group ${
+            class={`w-full p-3 sm:p-3.5 rounded-2xl border text-left flex items-center justify-between gap-2.5 transition-all cursor-pointer group ${
               showCorrect
                 ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300 dark:border-emerald-700/80 text-emerald-900 dark:text-emerald-200'
                 : showWrong
@@ -104,13 +104,13 @@
                     : 'bg-white dark:bg-[#1E1E1F] border-slate-200 dark:border-[#2C2D2F] hover:bg-slate-50 dark:hover:bg-[#282A2C] text-slate-800 dark:text-slate-200'
             }`}
           >
-            <div class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-lg bg-slate-100 dark:bg-[#2A2B2D] text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center justify-center shrink-0">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
+              <span class="w-7 h-7 rounded-lg bg-slate-100 dark:bg-[#2A2B2D] text-slate-700 dark:text-slate-200 text-xs font-black flex items-center justify-center shrink-0">
                 {String.fromCharCode(65 + idx)}
               </span>
-              <div>
-                <span class="text-sm font-bold block">{opt.text}</span>
-                <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 block">{opt.pinyin}</span>
+              <div class="min-w-0 flex-1">
+                <span class="text-sm sm:text-base font-bold block text-slate-900 dark:text-slate-100">{opt.text}</span>
+                <span class="text-xs sm:text-sm font-mono font-semibold text-blue-600 dark:text-blue-400 block mt-0.5">{opt.pinyin}</span>
               </div>
             </div>
 

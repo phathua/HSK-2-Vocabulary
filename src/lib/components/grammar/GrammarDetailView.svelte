@@ -20,12 +20,10 @@
   let {
     point,
     isLearned = false,
-    pinyinMode = 'always',
     onToggleLearned
   } = $props<{
     point: GrammarPoint;
     isLearned?: boolean;
-    pinyinMode?: 'always' | 'hover' | 'hidden';
     onToggleLearned?: (id: number) => void;
   }>();
 
@@ -41,7 +39,7 @@
         };
       case 'medium':
         return {
-          text: 'Cấp 2 • Trung bình',
+          text: 'Cấp 2 • Vừa',
           classes: 'bg-amber-50 text-amber-700 border-amber-200/80 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800/60'
         };
       case 'hard':
@@ -71,16 +69,16 @@
 <div class="space-y-3 sm:space-y-4">
   <!-- Header: Tinh giản, thông tin gói gọn không vỡ khung -->
   <div class="bg-white dark:bg-[#1B1B1B] rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-[#282A2C] p-3.5 sm:p-5 shadow-xs space-y-3">
-    <!-- Top action & Badges bar -->
+    <!-- Top action & Badges bar: CÙNG 1 HÀNG NGANG DUY NHẤT CÂN ĐỐI -->
     <div class="flex items-center justify-between gap-2">
-      <div class="flex flex-wrap items-center gap-1.5 min-w-0">
+      <div class="flex items-center gap-1.5 min-w-0 flex-wrap sm:flex-nowrap">
         <!-- Level Badge -->
-        <span class={`inline-flex items-center px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border text-[11px] sm:text-xs font-bold shrink-0 ${levelBadge.classes}`}>
+        <span class={`inline-flex items-center px-2 py-1 rounded-xl border text-[11px] sm:text-xs font-bold whitespace-nowrap shrink-0 ${levelBadge.classes}`}>
           {levelBadge.text}
         </span>
 
         <!-- Origin Badge -->
-        <span class="inline-flex items-center gap-1 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border border-slate-200 dark:border-[#323436] bg-slate-50 dark:bg-[#242526] text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-300 shrink-0">
+        <span class="inline-flex items-center gap-1 px-2 py-1 rounded-xl border border-slate-200 dark:border-[#323436] bg-slate-50 dark:bg-[#242526] text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap shrink-0">
           {#if point.origin === 'inherited'}
             <TreeEvergreen weight="duotone" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
           {:else if point.origin === 'new'}
@@ -92,19 +90,19 @@
         </span>
       </div>
 
-      <!-- Đánh dấu đã học -->
+      <!-- Đã học: Tinh gọn trên cùng 1 hàng -->
       <button
         type="button"
         onclick={() => onToggleLearned?.(point.id)}
-        class={`inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all cursor-pointer active:scale-95 group focus:outline-hidden shrink-0 ${
+        class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold transition-all cursor-pointer active:scale-95 group focus:outline-hidden whitespace-nowrap shrink-0 ${
           isLearned
-            ? 'bg-emerald-600 text-white shadow-xs'
-            : 'bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5] hover:bg-emerald-50 dark:hover:bg-emerald-950/60 hover:text-emerald-700 dark:hover:text-emerald-300'
+            ? 'bg-emerald-600 text-white shadow-2xs'
+            : 'bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5] hover:bg-emerald-50 dark:hover:bg-emerald-950/60 hover:text-emerald-700 dark:hover:text-emerald-300 border border-slate-200/80 dark:border-transparent'
         }`}
-        title={isLearned ? 'Đã đánh dấu thuộc điểm ngữ pháp này' : 'Bấm để đánh dấu đã học'}
+        title={isLearned ? 'Đã thuộc điểm ngữ pháp này' : 'Bấm để đánh dấu đã học'}
       >
         <Check weight={isLearned ? 'bold' : 'duotone'} class="w-3.5 h-3.5 shrink-0" />
-        <span>{isLearned ? 'Đã học' : 'Đánh dấu đã học'}</span>
+        <span>{isLearned ? 'Đã học' : 'Chưa học'}</span>
       </button>
     </div>
 
@@ -140,14 +138,9 @@
 
   <!-- Phần 1: Sơ đồ Infographic Trực quan (Bespoke SVG Card) -->
   <div class="bg-white dark:bg-[#1B1B1B] rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-[#282A2C] p-3.5 sm:p-5 shadow-xs space-y-3">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#8E918F]">
-        <Compass weight="duotone" class="w-4 h-4 text-blue-600 dark:text-blue-400" />
-        <span>Sơ đồ cấu trúc trực quan</span>
-      </div>
-      <span class="text-[10px] font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40 px-2 py-0.5 rounded-full border border-blue-200/60 dark:border-blue-900/40">
-        Infographic HSK
-      </span>
+    <div class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#8E918F]">
+      <Compass weight="duotone" class="w-4 h-4 text-blue-600 dark:text-blue-400" />
+      <span>Sơ đồ cấu trúc trực quan</span>
     </div>
 
     <!-- SVG Infographic minh họa -->
@@ -180,7 +173,7 @@
 
     <div class="space-y-2.5">
       {#each point.examples as ex}
-        <ExampleSentence sentence={ex} {pinyinMode} imageUrl={getSentenceImage(ex.hanzi)} />
+        <ExampleSentence sentence={ex} imageUrl={getSentenceImage(ex.hanzi)} />
       {/each}
     </div>
   </div>
