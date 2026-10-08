@@ -22,14 +22,15 @@
   let duration = $state(0);
   let isSticky = $state(false);
 
+  import { getExamAudioUrl } from '#lib/utils/examAssets';
+
   // 60s preview countdown state
   let previewSeconds = $state(60);
   let isPreviewPhase = $state(true);
   let previewTimer: any = null;
 
   const resolvedSrc = $derived.by(() => {
-    if (!audioSrc) return '';
-    return `/exams-media/${examCode}/${audioSrc}`;
+    return getExamAudioUrl(examCode, audioSrc);
   });
 
   function startAudioPlayback() {

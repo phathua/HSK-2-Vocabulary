@@ -15,6 +15,7 @@
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import { mockExamsData, type MockExamItem } from '#lib/data/mockExamsList';
   import { examHistoryState } from '#lib/state/examHistoryState.svelte';
+  import { getExamImageUrl } from '#lib/utils/examAssets';
 
   import { goto, preloadData } from '$app/navigation';
 
@@ -129,7 +130,7 @@
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-slate-100 dark:bg-neutral-800/80 border border-slate-200/80 dark:border-neutral-700/60 overflow-hidden shrink-0 flex items-center justify-center relative group-hover:border-orange-400/50 transition-colors">
             {#if exam.imagesCount > 0}
               <img
-                src={`/exams-media/${exam.code}/images/${exam.code}_img_01.webp`}
+                src={getExamImageUrl(exam.code, `${exam.code}_img_01.webp`)}
                 alt={`Thumbnail ${exam.code}`}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 onerror={(e: any) => {

@@ -4,6 +4,7 @@
   import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';
   import MagnifyingGlassPlus from 'phosphor-svelte/lib/MagnifyingGlassPlus';
   import type { QuestionItem, ExamMode } from '#lib/types/exam';
+  import { getExamImageUrl } from '#lib/utils/examAssets';
 
   interface Props {
     question: QuestionItem;
@@ -109,7 +110,7 @@
         aria-label="Phóng to bảng tranh lựa chọn"
       >
         <img
-          src={`/exams-media/${question.exam_code}/${question.board_image}`}
+          src={getExamImageUrl(question.exam_code, question.board_image)}
           alt={`Bảng tranh câu hỏi ${question.question_no}`}
           class="w-full h-auto max-h-72 object-contain rounded-xl transition-transform"
           loading="lazy"
@@ -134,7 +135,7 @@
         aria-label="Phóng to ảnh câu hỏi"
       >
         <img
-          src={`/exams-media/${question.exam_code}/${question.image}`}
+          src={getExamImageUrl(question.exam_code, question.image)}
           alt={`Ảnh minh họa câu hỏi ${question.question_no}`}
           class="w-full h-auto max-h-56 object-contain rounded-2xl transition-transform"
           loading="lazy"
@@ -219,7 +220,7 @@
   >
     <div class="max-w-4xl max-h-[90vh] p-2 bg-white dark:bg-[#1B1B1B] rounded-3xl overflow-hidden shadow-2xl">
       <img
-        src={`/exams-media/${question.exam_code}/${question.board_image || question.image}`}
+        src={getExamImageUrl(question.exam_code, question.board_image || question.image)}
         alt="Phóng to ảnh"
         class="w-full h-auto max-h-[85vh] object-contain rounded-2xl"
       />
