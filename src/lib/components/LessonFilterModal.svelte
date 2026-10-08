@@ -2,36 +2,266 @@
   import { appState } from '#lib/state/appState.svelte';
   import BookBookmark from 'phosphor-svelte/lib/BookBookmark';
   import X from 'phosphor-svelte/lib/X';
+  import Check from 'phosphor-svelte/lib/Check';
+
+  // HSK 1 Icons (Phosphor)
+  import HandWaving from 'phosphor-svelte/lib/HandWaving';
+  import Heart from 'phosphor-svelte/lib/Heart';
+  import IdentificationCard from 'phosphor-svelte/lib/IdentificationCard';
+  import ChalkboardTeacher from 'phosphor-svelte/lib/ChalkboardTeacher';
+  import Cake from 'phosphor-svelte/lib/Cake';
+  import ChatCircleDots from 'phosphor-svelte/lib/ChatCircleDots';
+  import CalendarBlank from 'phosphor-svelte/lib/CalendarBlank';
+  import Coffee from 'phosphor-svelte/lib/Coffee';
+  import Briefcase from 'phosphor-svelte/lib/Briefcase';
+  import Armchair from 'phosphor-svelte/lib/Armchair';
+  import Clock from 'phosphor-svelte/lib/Clock';
+  import SunDim from 'phosphor-svelte/lib/SunDim';
+  import CookingPot from 'phosphor-svelte/lib/CookingPot';
+  import ShoppingBagOpen from 'phosphor-svelte/lib/ShoppingBagOpen';
+  import AirplaneTilt from 'phosphor-svelte/lib/AirplaneTilt';
+
+  // HSK 2 Icons (Phosphor)
+  import Airplane from 'phosphor-svelte/lib/Airplane';
+  import Alarm from 'phosphor-svelte/lib/Alarm';
+  import CoffeeCup from 'phosphor-svelte/lib/Coffee';
+  import UserPlus from 'phosphor-svelte/lib/UserPlus';
+  import CoatHanger from 'phosphor-svelte/lib/CoatHanger';
+  import ForkKnife from 'phosphor-svelte/lib/ForkKnife';
+  import Buildings from 'phosphor-svelte/lib/Buildings';
+  import LightbulbFilament from 'phosphor-svelte/lib/LightbulbFilament';
+  import Exam from 'phosphor-svelte/lib/Exam';
+  import DeviceMobileCamera from 'phosphor-svelte/lib/DeviceMobileCamera';
+  import Sparkle from 'phosphor-svelte/lib/Sparkle';
+  import TShirt from 'phosphor-svelte/lib/TShirt';
+  import DoorOpen from 'phosphor-svelte/lib/DoorOpen';
+  import FilmSlate from 'phosphor-svelte/lib/FilmSlate';
+  import Confetti from 'phosphor-svelte/lib/Confetti';
+
+  interface ThemeStyle {
+    bg: string;
+    border: string;
+    iconBg: string;
+    iconColor: string;
+    badgeBg: string;
+    badgeColor: string;
+  }
+
+  // Bảng màu nhẹ nhàng, thanh lịch, trang nhã lấy cảm hứng chính xác từ Image Palette
+  // (Butter, Moss, Palm, Guava, Sunset, Sangria, Seabreeze, Lagoon, Odyssey & Dopely Soft)
+  const LESSON_THEMES: Record<number, ThemeStyle> = {
+    // 1. Butter / Soft Vanilla (#F4D189)
+    1: {
+      bg: 'bg-[#FEF9EE]',
+      border: 'border-[#F6DFAD]',
+      iconBg: 'bg-[#F9E6BD]',
+      iconColor: 'text-[#9A7023]',
+      badgeBg: 'bg-[#F9E6BD]',
+      badgeColor: 'text-[#8A631E]'
+    },
+    // 2. Guava / Soft Peach Coral (#F2B6A3)
+    2: {
+      bg: 'bg-[#FDF4F1]',
+      border: 'border-[#F8D2C5]',
+      iconBg: 'bg-[#FCE0D7]',
+      iconColor: 'text-[#BA573F]',
+      badgeBg: 'bg-[#FCE0D7]',
+      badgeColor: 'text-[#A74C35]'
+    },
+    // 3. Seabreeze / Soft Sky Cream (#E5E9EB)
+    3: {
+      bg: 'bg-[#F2F6F8]',
+      border: 'border-[#D4E0E5]',
+      iconBg: 'bg-[#DEE9ED]',
+      iconColor: 'text-[#3E6575]',
+      badgeBg: 'bg-[#DEE9ED]',
+      badgeColor: 'text-[#365968]'
+    },
+    // 4. Lagoon / Muted Turquoise (#94BEBB)
+    4: {
+      bg: 'bg-[#EEF6F5]',
+      border: 'border-[#C2DEDC]',
+      iconBg: 'bg-[#D3E8E6]',
+      iconColor: 'text-[#2D6C68]',
+      badgeBg: 'bg-[#D3E8E6]',
+      badgeColor: 'text-[#275E5A]'
+    },
+    // 5. Sunset / Warm Amber Terracotta (#E89C73)
+    5: {
+      bg: 'bg-[#FDF5F0]',
+      border: 'border-[#F6D3C1]',
+      iconBg: 'bg-[#F8DECE]',
+      iconColor: 'text-[#AC5529]',
+      badgeBg: 'bg-[#F8DECE]',
+      badgeColor: 'text-[#984A22]'
+    },
+    // 6. Moss / Sage Herb (#C0B05B)
+    6: {
+      bg: 'bg-[#F8F7EE]',
+      border: 'border-[#E0D9AF]',
+      iconBg: 'bg-[#EAE5C5]',
+      iconColor: 'text-[#685D21]',
+      badgeBg: 'bg-[#EAE5C5]',
+      badgeColor: 'text-[#5C521C]'
+    },
+    // 7. Sangria / Soft Rose Clay (#E36559)
+    7: {
+      bg: 'bg-[#FCF2F1]',
+      border: 'border-[#F6CBC7]',
+      iconBg: 'bg-[#F9D8D5]',
+      iconColor: 'text-[#A93C32]',
+      badgeBg: 'bg-[#F9D8D5]',
+      badgeColor: 'text-[#96342B]'
+    },
+    // 8. Palm / Gentle Forest Green (#657652)
+    8: {
+      bg: 'bg-[#F3F6F1]',
+      border: 'border-[#CED8C3]',
+      iconBg: 'bg-[#DCE4D3]',
+      iconColor: 'text-[#445633]',
+      badgeBg: 'bg-[#DCE4D3]',
+      badgeColor: 'text-[#3A4A2B]'
+    },
+    // 9. Odyssey / Muted Slate Ocean (#23617E)
+    9: {
+      bg: 'bg-[#EEF4F7]',
+      border: 'border-[#BED3DF]',
+      iconBg: 'bg-[#CEE0EA]',
+      iconColor: 'text-[#1D5169]',
+      badgeBg: 'bg-[#CEE0EA]',
+      badgeColor: 'text-[#19455A]'
+    },
+    // 10. Lavender Mist / Soft Purple Lilac (#CCA8D8)
+    10: {
+      bg: 'bg-[#F8F3FA]',
+      border: 'border-[#E5D1ED]',
+      iconBg: 'bg-[#EDDCF3]',
+      iconColor: 'text-[#6D427D]',
+      badgeBg: 'bg-[#EDDCF3]',
+      badgeColor: 'text-[#613970]'
+    },
+    // 11. Soft Honey Mustard (#E6C568)
+    11: {
+      bg: 'bg-[#FDF9ED]',
+      border: 'border-[#F3E2B1]',
+      iconBg: 'bg-[#F7EAC4]',
+      iconColor: 'text-[#856616]',
+      badgeBg: 'bg-[#F7EAC4]',
+      badgeColor: 'text-[#745812]'
+    },
+    // 12. Soft Apricot Blush (#F5C2A5)
+    12: {
+      bg: 'bg-[#FCF5F0]',
+      border: 'border-[#F6D5C2]',
+      iconBg: 'bg-[#F9E0D0]',
+      iconColor: 'text-[#9C5834]',
+      badgeBg: 'bg-[#F9E0D0]',
+      badgeColor: 'text-[#8A4D2C]'
+    },
+    // 13. Mint Meadow (#A8D5C2)
+    13: {
+      bg: 'bg-[#F0F7F4]',
+      border: 'border-[#C8E5D8]',
+      iconBg: 'bg-[#D7ECE2]',
+      iconColor: 'text-[#2B6A50]',
+      badgeBg: 'bg-[#D7ECE2]',
+      badgeColor: 'text-[#245943]'
+    },
+    // 14. Dusty Rose (#DDA3B2)
+    14: {
+      bg: 'bg-[#FAF2F4]',
+      border: 'border-[#ECC7D1]',
+      iconBg: 'bg-[#F2D7DE]',
+      iconColor: 'text-[#823F52]',
+      badgeBg: 'bg-[#F2D7DE]',
+      badgeColor: 'text-[#713546]'
+    },
+    // 15. Pale Denim / Steel Blue (#9EB3C2)
+    15: {
+      bg: 'bg-[#F1F4F7]',
+      border: 'border-[#CFDCE4]',
+      iconBg: 'bg-[#DDE6EC]',
+      iconColor: 'text-[#385368]',
+      badgeBg: 'bg-[#DDE6EC]',
+      badgeColor: 'text-[#2E4557]'
+    }
+  };
+
+  const HSK1_ICONS: Record<number, any> = {
+    1: HandWaving,
+    2: Heart,
+    3: IdentificationCard,
+    4: ChalkboardTeacher,
+    5: Cake,
+    6: ChatCircleDots,
+    7: CalendarBlank,
+    8: Coffee,
+    9: Briefcase,
+    10: Armchair,
+    11: Clock,
+    12: SunDim,
+    13: CookingPot,
+    14: ShoppingBagOpen,
+    15: AirplaneTilt
+  };
+
+  const HSK2_ICONS: Record<number, any> = {
+    1: Airplane,
+    2: Alarm,
+    3: CoffeeCup,
+    4: UserPlus,
+    5: CoatHanger,
+    6: ForkKnife,
+    7: Buildings,
+    8: LightbulbFilament,
+    9: Exam,
+    10: DeviceMobileCamera,
+    11: Sparkle,
+    12: TShirt,
+    13: DoorOpen,
+    14: FilmSlate,
+    15: Confetti
+  };
 </script>
 
 {#if appState.filterModalOpen}
   <div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
-    <div class="w-full max-w-sm max-h-[85vh] flex flex-col bg-white rounded-3xl p-5 shadow-2xl border border-slate-200 overflow-hidden animate-[pop_0.15s_ease]">
+    <div class="w-full max-w-md max-h-[88vh] flex flex-col bg-white rounded-3xl p-4 sm:p-5 shadow-2xl border border-slate-200/90 overflow-hidden animate-[pop_0.15s_ease]">
       
       <!-- Modal Header -->
-      <div class="flex items-center justify-between mb-2 shrink-0">
-        <h3 class="font-extrabold text-base text-slate-900 flex items-center gap-2">
-          <BookBookmark weight="duotone" class="w-5 h-5 text-blue-600" />
-          <span>Chọn bài học</span>
-        </h3>
+      <div class="flex items-center justify-between mb-3 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center">
+            <BookBookmark weight="duotone" class="w-4.5 h-4.5 text-blue-600" />
+          </div>
+          <div>
+            <h3 class="font-black text-sm sm:text-base text-slate-800 leading-tight">
+              Chọn bài học
+            </h3>
+            <p class="text-[11px] text-slate-500 font-medium">
+              Đang chọn <b class="text-slate-900 font-extrabold">{appState.activeLessonsCount}/15</b> bài ({appState.filteredVocab.length} từ)
+            </p>
+          </div>
+        </div>
+
         <button
           type="button"
           onclick={() => (appState.filterModalOpen = false)}
-          class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-200 cursor-pointer"
+          class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:bg-slate-200 cursor-pointer transition-all active:scale-90"
         >
           <X weight="bold" class="w-4 h-4" />
         </button>
       </div>
 
-      <!-- 2 CHẾ ĐỘ: HSK 1 & HSK 2 Switcher -->
-      <div class="flex gap-2 p-1 bg-slate-100 rounded-2xl mb-3 shrink-0">
+      <!-- Level Switcher: HSK 1 & HSK 2 -->
+      <div class="grid grid-cols-2 gap-1.5 p-1 bg-slate-100 rounded-2xl mb-2.5 shrink-0">
         <button
           type="button"
           onclick={() => appState.setLevel('HSK1')}
-          class={`flex-1 py-2 px-3 rounded-xl font-black text-xs transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+          class={`py-1.5 px-3 rounded-xl font-black text-xs transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5 ${
             appState.currentLevel === 'HSK1'
-              ? 'bg-blue-600 text-white shadow-xs'
-              : 'text-slate-600 hover:text-slate-900'
+              ? 'bg-blue-600 text-white shadow-xs scale-[1.01]'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/50'
           }`}
         >
           <span>HSK 1 (150+ từ)</span>
@@ -39,88 +269,104 @@
         <button
           type="button"
           onclick={() => appState.setLevel('HSK2')}
-          class={`flex-1 py-2 px-3 rounded-xl font-black text-xs transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+          class={`py-1.5 px-3 rounded-xl font-black text-xs transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5 ${
             appState.currentLevel === 'HSK2'
-              ? 'bg-orange-500 text-white shadow-xs'
-              : 'text-slate-600 hover:text-slate-900'
+              ? 'bg-orange-500 text-white shadow-xs scale-[1.01]'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/50'
           }`}
         >
           <span>HSK 2 (168 từ)</span>
         </button>
       </div>
 
-      <p class="text-xs text-slate-500 mb-3 font-medium shrink-0">
-        {appState.currentLevel}: Đã chọn <b class="text-slate-800">{appState.filteredVocab.length}/{appState.allVocab.length} từ</b>.
-      </p>
-
       <!-- Quick Action Buttons -->
       <div class="flex gap-2 mb-3 shrink-0">
         <button
           type="button"
           onclick={() => appState.selectAllLessons()}
-          class="flex-1 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-800 cursor-pointer"
+          class="flex-1 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-700 cursor-pointer transition-all active:scale-95"
         >
           Chọn tất cả (15)
         </button>
         <button
           type="button"
           onclick={() => appState.deselectAllLessons()}
-          class="flex-1 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-800 cursor-pointer"
+          class="flex-1 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-700 cursor-pointer transition-all active:scale-95"
         >
           Chỉ bài 1
         </button>
       </div>
 
-      <!-- Scrollable list of 15 lessons according to active level -->
-      <div class="flex-1 min-h-0 overflow-y-auto no-scrollbar space-y-1.5 pr-0.5 mb-3">
-        {#each appState.allLessons as info (info.lesson)}
-          {@const isSelected = !!appState.selectedLessons[info.lesson]}
-          {@const count = appState.allVocab.filter((v: any) => v.lesson === info.lesson).length}
-          <button
-            type="button"
-            onclick={() => appState.toggleLesson(info.lesson)}
-            class={`w-full text-left p-2.5 rounded-2xl border transition-all flex items-center justify-between gap-2.5 cursor-pointer ${
-              isSelected
-                ? appState.currentLevel === 'HSK1'
-                  ? 'bg-blue-50/80 border-blue-400 text-slate-900 shadow-2xs'
-                  : 'bg-orange-50/80 border-orange-400 text-slate-900 shadow-2xs'
-                : 'bg-slate-50 border-slate-200 text-slate-500 hover:bg-slate-100'
-            }`}
-          >
-            <div class="flex items-center gap-2.5 min-w-0">
-              <div class={`w-8 h-8 rounded-xl font-black text-xs flex items-center justify-center shrink-0 ${
+      <!-- Scrollable 2-Column Grid Cards -->
+      <div class="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-0.5 mb-3">
+        <div class="grid grid-cols-2 gap-2">
+          {#each appState.allLessons as info (info.lesson)}
+            {@const isSelected = !!appState.selectedLessons[info.lesson]}
+            {@const count = appState.allVocab.filter((v: any) => v.lesson === info.lesson).length}
+            {@const theme = LESSON_THEMES[info.lesson] || LESSON_THEMES[1]}
+            {@const IconComponent = appState.currentLevel === 'HSK1' ? HSK1_ICONS[info.lesson] : HSK2_ICONS[info.lesson]}
+
+            <button
+              type="button"
+              onclick={() => appState.toggleLesson(info.lesson)}
+              class={`group relative text-left p-2.5 rounded-2xl border transition-all duration-150 cursor-pointer flex flex-col justify-between overflow-hidden select-none active:scale-[0.96] ${
                 isSelected
-                  ? appState.currentLevel === 'HSK1' ? 'bg-blue-600 text-white' : 'bg-orange-500 text-white'
-                  : 'bg-slate-200 text-slate-600'
-              }`}>
-                B{info.lesson}
+                  ? `${theme.bg} ${theme.border} shadow-2xs ring-1 ring-black/5`
+                  : 'bg-white border-slate-200/80 hover:border-slate-300 opacity-55 hover:opacity-85'
+              }`}
+            >
+              <!-- Top Row: Icon + Lesson Label + Count + Check Indicator -->
+              <div class="flex items-center justify-between gap-1.5 mb-1.5 w-full">
+                <div class="flex items-center gap-1.5 min-w-0">
+                  <div class={`w-7 h-7 rounded-xl flex items-center justify-center shrink-0 transition-transform group-active:scale-90 ${
+                    isSelected ? `${theme.iconBg} ${theme.iconColor}` : 'bg-slate-100 text-slate-400'
+                  }`}>
+                    {#if IconComponent}
+                      <IconComponent weight={isSelected ? "duotone" : "regular"} class="w-4 h-4" />
+                    {:else}
+                      <span class="font-black text-[10px]">B{info.lesson}</span>
+                    {/if}
+                  </div>
+                  <span class={`font-black text-xs ${isSelected ? 'text-slate-800' : 'text-slate-500'}`}>
+                    B{info.lesson}
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-1 shrink-0">
+                  <span class={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${
+                    isSelected ? `${theme.badgeBg} ${theme.badgeColor}` : 'bg-slate-100 text-slate-400'
+                  }`}>
+                    {count}
+                  </span>
+                  {#if isSelected}
+                    <div class="w-4 h-4 rounded-full bg-slate-800 text-white flex items-center justify-center animate-[pop_0.12s_ease]">
+                      <Check weight="bold" class="w-2.5 h-2.5" />
+                    </div>
+                  {/if}
+                </div>
               </div>
-              <div class="min-w-0">
-                <div class="font-extrabold text-xs text-slate-900 truncate">
+
+              <!-- Content: Titles -->
+              <div class="w-full">
+                <div class={`font-extrabold text-xs truncate leading-snug ${isSelected ? 'text-slate-800' : 'text-slate-500'}`} title={info.titleZh}>
                   {info.titleZh}
                 </div>
-                <div class="text-[11px] text-slate-500 truncate">
+                <div class={`text-[10px] truncate leading-tight mt-0.5 ${isSelected ? 'text-slate-600/80' : 'text-slate-400'}`} title={info.titleVi}>
                   {info.titleVi}
                 </div>
               </div>
-            </div>
-            <div class={`text-xs font-black px-2 py-0.5 rounded-full shrink-0 ${
-              isSelected
-                ? appState.currentLevel === 'HSK1' ? 'bg-blue-200 text-blue-900' : 'bg-orange-200 text-orange-900'
-                : 'bg-slate-200 text-slate-600'
-            }`}>
-              {count} từ
-            </div>
-          </button>
-        {/each}
+            </button>
+          {/each}
+        </div>
       </div>
 
+      <!-- Footer Action -->
       <button
         type="button"
         onclick={() => (appState.filterModalOpen = false)}
-        class="w-full py-2.5 rounded-xl bg-slate-900 text-white text-xs font-extrabold shrink-0 cursor-pointer"
+        class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-black shrink-0 cursor-pointer transition-all active:scale-[0.98] shadow-sm flex items-center justify-center gap-1.5"
       >
-        Xong ({appState.filteredVocab.length} từ)
+        <span>Xác nhận ({appState.filteredVocab.length} từ)</span>
       </button>
     </div>
   </div>

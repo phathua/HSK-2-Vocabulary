@@ -46,6 +46,7 @@
       recognition = null;
     }
     activeRecItemId = null;
+    isRecording = false;
   }
 
   function createRecognition(targetItemId: string) {
@@ -133,7 +134,6 @@
   });
 
   function handleNext() {
-    stopRecording();
     cleanupRecognition();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
@@ -145,7 +145,6 @@
   }
 
   function handleRetry() {
-    stopRecording();
     cleanupRecognition();
     liveHanzi = '';
     livePinyin = '';
@@ -203,7 +202,6 @@
   }
 
   function cancelSpoken() {
-    stopRecording();
     cleanupRecognition();
     liveHanzi = '';
     livePinyin = '';
