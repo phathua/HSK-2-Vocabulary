@@ -1,9 +1,21 @@
 <script lang="ts">
+  import { page } from '$app/state';
   import { appState } from '#lib/state/appState.svelte';
+  import { examRoomState } from '#lib/state/examRoomState.svelte';
   import SlidersHorizontal from 'phosphor-svelte/lib/SlidersHorizontal';
   import ArrowsLeftRight from 'phosphor-svelte/lib/ArrowsLeftRight';
-  import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
+  import Clock from 'phosphor-svelte/lib/Clock';
+  import HourglassMedium from 'phosphor-svelte/lib/HourglassMedium';
   import List from 'phosphor-svelte/lib/List';
+
+  const isHomePage = $derived(page.url.pathname === '/');
+  const isExamRoom = $derived(examRoomState.isActive);
+
+  function formatTime(secs: number): string {
+    const mins = Math.floor(secs / 60);
+    const s = secs % 60;
+    return `${mins.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
 </script>
 
 <header class="flex items-center justify-between shrink-0 bg-white dark:bg-[#1B1B1B] px-3 py-2 rounded-2xl shadow-xs border border-slate-200 dark:border-[#282A2C] transition-colors">
@@ -45,32 +57,57 @@
 
   <!-- Right: Clean Actions -->
   <div class="flex items-center gap-1.5 shrink-0">
-    <!-- Nút đảo chiều: ArrowsLeftRight bên trái + 1 lá cờ tròn SVG đích bên phải -->
-    <button
-      type="button"
-      onclick={() => appState.toggleDirection()}
-      class="h-9 px-2.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs active:scale-95"
-      title={appState.direction === 'vi_to_zh' ? 'Đang hỏi: Việt ➔ Trung. Bấm để đổi sang: Trung ➔ Việt' : 'Đang hỏi: Trung ➔ Việt. Bấm để đổi sang: Việt ➔ Trung'}
-    >
-      <ArrowsLeftRight weight="bold" class="w-4 h-4 text-blue-600 dark:text-blue-400" />
-      {#if appState.direction === 'vi_to_zh'}
-        <!-- Đích là Trung Quốc -->
-        <img
-          src="/svg/china-flag.svg"
-          alt="Cờ Trung Quốc"
-          class="w-5 h-5 rounded-full object-cover shrink-0 drop-shadow-2xs"
-        />
-      {:else}
-        <!-- Đích là Việt Nam -->
-        <img
-          src="/svg/vietnam-flag.svg"
-          alt="Cờ Việt Nam"
-          class="w-5 h-5 rounded-full object-cover shrink-0 drop-shadow-2xs"
-        />
+    <!-- Trong phòng thi: Thay thế bằng đồng hồ đếm ngược xem trước hoặc đồng hồ thi thật -->
+    {#if isExamRoom}
+      {#if examRoomState.isExamMode}
+        {#if examRoomState.isPreviewPhase}
+          <!-- Đếm ngược 60s xem trước đề -->
+          <button
+            type="button"
+            onclick={() => examRoomState.startAudio()}
+            class="h-9 px-2.5 rounded-xl border border-amber-300 dark:border-amber-900/60 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 flex items-center gap-1.5 font-mono font-black text-xs cursor-pointer shadow-2xs active:scale-95 transition-all"
+            title="Đang xem trước đề 60s. Bấm để phát audio ngay lập tức!"
+          >
+            <HourglassMedium weight="bold" class="w-4 h-4 text-amber-600 animate-spin" />
+            <span>{examRoomState.previewSeconds}s</span>
+          </button>
+        {:else}
+          <!-- Đồng hồ thời gian làm bài 55 phút -->
+          <div
+            class="h-9 px-2.5 rounded-xl border {examRoomState.timeRemainingSeconds < 300 ? 'border-red-300 dark:border-red-900/60 bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 animate-pulse' : 'border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] text-slate-700 dark:text-[#E3E3E3]'} flex items-center gap-1.5 font-mono font-black text-xs shadow-2xs"
+            title="Thời gian làm bài thi"
+          >
+            <Clock weight="duotone" class="w-4 h-4 {examRoomState.timeRemainingSeconds < 300 ? 'text-red-500' : 'text-orange-500'}" />
+            <span>{formatTime(examRoomState.timeRemainingSeconds)}</span>
+          </div>
+        {/if}
       {/if}
-    </button>
+    {:else if isHomePage}
+      <!-- Chỉ hiện nút đổi chiều ngôn ngữ ở Trang Chủ -->
+      <button
+        type="button"
+        onclick={() => appState.toggleDirection()}
+        class="h-9 px-2.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs active:scale-95"
+        title={appState.direction === 'vi_to_zh' ? 'Đang hỏi: Việt ➔ Trung. Bấm để đổi sang: Trung ➔ Việt' : 'Đang hỏi: Trung ➔ Việt. Bấm để đổi sang: Việt ➔ Trung'}
+      >
+        <ArrowsLeftRight weight="bold" class="w-4 h-4 text-blue-600 dark:text-blue-400" />
+        {#if appState.direction === 'vi_to_zh'}
+          <img
+            src="/svg/china-flag.svg"
+            alt="Cờ Trung Quốc"
+            class="w-5 h-5 rounded-full object-cover shrink-0 drop-shadow-2xs"
+          />
+        {:else}
+          <img
+            src="/svg/vietnam-flag.svg"
+            alt="Cờ Việt Nam"
+            class="w-5 h-5 rounded-full object-cover shrink-0 drop-shadow-2xs"
+          />
+        {/if}
+      </button>
+    {/if}
 
-    <!-- Settings Button -->
+    <!-- Settings Button (luôn giữ lại) -->
     <button
       type="button"
       onclick={() => (appState.settingsModalOpen = true)}

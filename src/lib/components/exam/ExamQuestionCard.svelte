@@ -92,13 +92,42 @@
     </div>
   </div>
 
-  <!-- Ảnh minh họa câu hỏi (nếu có) -->
-  {#if question.image}
+  <!-- Ảnh bảng tranh lựa chọn (cho Part 2 và Reading Part 1: bảng A, B, C, D, E, F) -->
+  {#if question.board_image}
+    <div class="relative group my-3 max-w-xl rounded-2xl overflow-hidden border border-slate-200/90 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xs">
+      <div class="px-3 py-1.5 bg-slate-100 dark:bg-neutral-800 text-[11px] font-bold text-slate-600 dark:text-neutral-300 flex items-center justify-between border-b border-slate-200 dark:border-neutral-700">
+        <span>🖼️ Bảng tranh lựa chọn (A - F):</span>
+        <span class="text-[10px] text-slate-400">Bấm để phóng to</span>
+      </div>
+      <button
+        type="button"
+        onclick={() => (isImageZoomed = true)}
+        class="w-full text-left cursor-pointer p-1.5 border-0 bg-transparent block"
+        aria-label="Phóng to bảng tranh lựa chọn"
+      >
+        <img
+          src={`/exams-media/${question.exam_code}/${question.board_image}`}
+          alt={`Bảng tranh câu hỏi ${question.question_no}`}
+          class="w-full h-auto max-h-72 object-contain rounded-xl transition-transform"
+          loading="lazy"
+        />
+      </button>
+      <button
+        type="button"
+        onclick={() => (isImageZoomed = true)}
+        class="absolute bottom-2.5 right-2.5 px-2 py-1 rounded-lg bg-black/60 text-white text-[10px] font-bold flex items-center gap-1 backdrop-blur-xs opacity-80 group-hover:opacity-100 transition-opacity cursor-pointer"
+      >
+        <MagnifyingGlassPlus class="w-3.5 h-3.5" />
+        <span>Phóng to</span>
+      </button>
+    </div>
+  {:else if question.image}
+    <!-- Ảnh minh họa câu hỏi đơn lẻ (Q1 - Q10) -->
     <div class="relative group my-3 max-w-sm rounded-2xl overflow-hidden border border-slate-100 dark:border-neutral-800 bg-slate-50 dark:bg-neutral-900/50">
       <button
         type="button"
         onclick={() => (isImageZoomed = true)}
-        class="w-full text-left cursor-pointer p-0 border-0 bg-transparent"
+        class="w-full text-left cursor-pointer p-0 border-0 bg-transparent block"
         aria-label="Phóng to ảnh câu hỏi"
       >
         <img
@@ -190,7 +219,7 @@
 </div>
 
 <!-- Modal xem ảnh phóng to -->
-{#if isImageZoomed && question.image}
+{#if isImageZoomed && (question.board_image || question.image)}
   <div
     class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-xs cursor-pointer"
     onclick={() => (isImageZoomed = false)}
@@ -198,9 +227,9 @@
     tabindex="0"
     onkeydown={(e) => e.key === 'Escape' && (isImageZoomed = false)}
   >
-    <div class="max-w-3xl max-h-[90vh] p-2 bg-white dark:bg-[#1B1B1B] rounded-3xl overflow-hidden shadow-2xl">
+    <div class="max-w-4xl max-h-[90vh] p-2 bg-white dark:bg-[#1B1B1B] rounded-3xl overflow-hidden shadow-2xl">
       <img
-        src={`/exams-media/${question.exam_code}/${question.image}`}
+        src={`/exams-media/${question.exam_code}/${question.board_image || question.image}`}
         alt="Phóng to ảnh"
         class="w-full h-auto max-h-[85vh] object-contain rounded-2xl"
       />

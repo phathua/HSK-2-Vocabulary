@@ -15,7 +15,8 @@
       "text": "Câu hỏi nghe số 1",
       "answer": "√",
       "listening_script": "√",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_01.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_01.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -27,7 +28,8 @@
       "text": "Câu hỏi nghe số 2",
       "answer": "×",
       "listening_script": "×",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_02.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_02.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -39,7 +41,8 @@
       "text": "Câu hỏi nghe số 3",
       "answer": "√",
       "listening_script": "√",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_03.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_03.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -51,7 +54,8 @@
       "text": "Câu hỏi nghe số 4",
       "answer": "×",
       "listening_script": "×",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_04.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_04.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -63,7 +67,8 @@
       "text": "Câu hỏi nghe số 5",
       "answer": "F",
       "listening_script": "√",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_05.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_05.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -75,7 +80,8 @@
       "text": "Câu hỏi nghe số 6",
       "answer": "×",
       "listening_script": "×",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_06.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_06.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -87,7 +93,8 @@
       "text": "Câu hỏi nghe số 7",
       "answer": "√",
       "listening_script": "√",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_07.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_07.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -99,7 +106,8 @@
       "text": "Câu hỏi nghe số 8",
       "answer": "B",
       "listening_script": "×",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_08.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_08.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -111,7 +119,8 @@
       "text": "Câu hỏi nghe số 9",
       "answer": "√",
       "listening_script": "√",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_09.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_09.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -123,67 +132,73 @@
       "text": "Câu hỏi nghe số 10",
       "answer": "×",
       "listening_script": "×",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_10.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_10.webp",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 11,
-      "image": "images/H21002_img_11.webp",
+      "image": null,
       "type": "Image Match",
       "text": "Câu hỏi nghe số 11",
       "answer": "A",
       "listening_script": "A",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_11.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_11.webp",
+      "board_image": "images/H21002_board_11_15.webp"
     },
     {
       "exam_code": "H21002",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 12,
-      "image": "images/H21002_img_12.webp",
+      "image": null,
       "type": "Image Match",
       "text": "Câu hỏi nghe số 12",
       "answer": "B",
       "listening_script": "B",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_12.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_12.webp",
+      "board_image": "images/H21002_board_11_15.webp"
     },
     {
       "exam_code": "H21002",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 13,
-      "image": "images/H21002_img_13.webp",
+      "image": null,
       "type": "Image Match",
       "text": "Câu hỏi nghe số 13",
       "answer": "C",
       "listening_script": "C",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_13.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_13.webp",
+      "board_image": "images/H21002_board_11_15.webp"
     },
     {
       "exam_code": "H21002",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 14,
-      "image": "images/H21002_img_14.webp",
+      "image": null,
       "type": "Image Match",
       "text": "Câu hỏi nghe số 14",
       "answer": "D",
       "listening_script": "D",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_14.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_14.webp",
+      "board_image": "images/H21002_board_11_15.webp"
     },
     {
       "exam_code": "H21002",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 15,
-      "image": "images/H21002_img_15.webp",
+      "image": null,
       "type": "Image Match",
       "text": "Câu hỏi nghe số 15",
       "answer": "E",
       "listening_script": "E",
-      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_15.webp"
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_15.webp",
+      "board_image": "images/H21002_board_11_15.webp"
     },
     {
       "exam_code": "H21002",
@@ -194,7 +209,8 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 16",
       "answer": "A",
-      "listening_script": "A"
+      "listening_script": "A",
+      "board_image": "images/H21002_board_16_20.webp"
     },
     {
       "exam_code": "H21002",
@@ -205,7 +221,8 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 17",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": "images/H21002_board_16_20.webp"
     },
     {
       "exam_code": "H21002",
@@ -216,7 +233,8 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 18",
       "answer": "C",
-      "listening_script": "C"
+      "listening_script": "C",
+      "board_image": "images/H21002_board_16_20.webp"
     },
     {
       "exam_code": "H21002",
@@ -227,7 +245,8 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 19",
       "answer": "D",
-      "listening_script": "D"
+      "listening_script": "D",
+      "board_image": "images/H21002_board_16_20.webp"
     },
     {
       "exam_code": "H21002",
@@ -238,7 +257,8 @@
       "type": "Image Match",
       "text": "Câu hỏi nghe số 20",
       "answer": "E",
-      "listening_script": "E"
+      "listening_script": "E",
+      "board_image": "images/H21002_board_16_20.webp"
     },
     {
       "exam_code": "H21002",
@@ -249,7 +269,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 21",
       "answer": "A",
-      "listening_script": "A"
+      "listening_script": "A",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -260,7 +281,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 22",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -271,7 +293,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 23",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -282,7 +305,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 24",
       "answer": "A",
-      "listening_script": "A"
+      "listening_script": "A",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -293,7 +317,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 25",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -304,7 +329,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 26",
       "answer": "C",
-      "listening_script": "C"
+      "listening_script": "C",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -315,7 +341,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 27",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -326,7 +353,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 28",
       "answer": "C",
-      "listening_script": "C"
+      "listening_script": "C",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -337,7 +365,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 29",
       "answer": "A",
-      "listening_script": "A"
+      "listening_script": "A",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -348,7 +377,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 30",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -359,7 +389,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 31",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -370,7 +401,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 32",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -381,7 +413,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 33",
       "answer": "C",
-      "listening_script": "C"
+      "listening_script": "C",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -392,7 +425,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 34",
       "answer": "B",
-      "listening_script": "B"
+      "listening_script": "B",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -403,7 +437,8 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 35",
       "answer": "C",
-      "listening_script": "C"
+      "listening_script": "C",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -414,7 +449,8 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 36",
       "answer": "A",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": "images/H21002_board_36_40.webp"
     },
     {
       "exam_code": "H21002",
@@ -425,7 +461,8 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 37",
       "answer": "B",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": "images/H21002_board_36_40.webp"
     },
     {
       "exam_code": "H21002",
@@ -436,7 +473,8 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 38",
       "answer": "C",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": "images/H21002_board_36_40.webp"
     },
     {
       "exam_code": "H21002",
@@ -447,7 +485,8 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 39",
       "answer": "D",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": "images/H21002_board_36_40.webp"
     },
     {
       "exam_code": "H21002",
@@ -458,7 +497,8 @@
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 40",
       "answer": "E",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": "images/H21002_board_36_40.webp"
     },
     {
       "exam_code": "H21002",
@@ -469,7 +509,8 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 41",
       "answer": "B",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -480,7 +521,8 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 42",
       "answer": "A",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -491,7 +533,8 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 43",
       "answer": "C",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -502,7 +545,8 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 44",
       "answer": "D",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -513,7 +557,8 @@
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 45",
       "answer": "E",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -524,7 +569,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 46",
       "answer": "×",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -535,7 +581,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 47",
       "answer": "√",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -546,7 +593,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 48",
       "answer": "×",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -557,7 +605,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 49",
       "answer": "√",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -568,7 +617,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 50",
       "answer": "×",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -579,7 +629,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 51",
       "answer": "B",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -590,7 +641,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 52",
       "answer": "C",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -601,7 +653,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 53",
       "answer": "A",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -612,7 +665,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 54",
       "answer": "E",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -623,7 +677,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 55",
       "answer": "D",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -634,7 +689,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 56",
       "answer": "A",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -645,7 +701,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 57",
       "answer": "C",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -656,7 +713,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 58",
       "answer": "B",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -667,7 +725,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 59",
       "answer": "E",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     },
     {
       "exam_code": "H21002",
@@ -678,7 +737,8 @@
       "type": "True/False",
       "text": "Câu hỏi đọc số 60",
       "answer": "D",
-      "listening_script": ""
+      "listening_script": "",
+      "board_image": null
     }
   ],
   "audio_mp3": "H21002_audio.mp3",

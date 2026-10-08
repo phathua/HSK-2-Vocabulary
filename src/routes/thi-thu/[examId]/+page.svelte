@@ -11,6 +11,10 @@
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import { getExamData } from '#lib/utils/examLoader';
   import { examHistoryState } from '#lib/state/examHistoryState.svelte';
+  import { examRoomState } from '#lib/state/examRoomState.svelte';
+  import { goto } from '$app/navigation';
+  import SignOut from 'phosphor-svelte/lib/SignOut';
+  import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
   import type { ExamDetail, ExamMode } from '#lib/types/exam';
 
   const examId = $derived(page.params.examId);
@@ -26,9 +30,18 @@
   let timeRemainingSeconds = $state(55 * 60); // 55 phút = 3300 giây
   let isSubmitted = $state(false);
   let showResultModal = $state(false);
+  let showExitModal = $state(false);
   let timerInterval: any = null;
 
+  $effect(() => {
+    examRoomState.timeRemainingSeconds = timeRemainingSeconds;
+  });
+
   onMount(() => {
+    examRoomState.isActive = true;
+    examRoomState.examCode = examId ?? '';
+    examRoomState.timeRemainingSeconds = timeRemainingSeconds;
+
     // Start timer for exam mode
     timerInterval = setInterval(() => {
       if (mode === 'exam' && !isSubmitted) {
@@ -40,8 +53,19 @@
       }
     }, 1000);
 
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (mode === 'exam' && !isSubmitted) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
     return () => {
       if (timerInterval) clearInterval(timerInterval);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      examRoomState.reset();
     };
   });
 
@@ -173,6 +197,13 @@
       totalCount={exam.total_questions}
       onModeChange={(newMode) => (mode = newMode)}
       onSubmit={handleSubmitExam}
+      onExitRequest={() => {
+        if (mode === 'exam' && !isSubmitted) {
+          showExitModal = true;
+        } else {
+          goto('/thi-thu');
+        }
+      }}
     />
 
     <!-- Trình Phát Audio Cho Đề Thi -->
@@ -270,6 +301,42 @@
     onRetry={handleRetry}
     onClose={() => (showResultModal = false)}
   />
+{/if}
+
+<!-- Modal Xác Nhận Rời Phòng Thi (Gọn gàng, ít chữ, chuẩn Anti-slop) -->
+{#if showExitModal}
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+    <div class="bg-white dark:bg-[#1E1E1E] border border-slate-200 dark:border-neutral-800 rounded-3xl p-5 sm:p-6 max-w-sm w-full shadow-2xl animate-in fade-in zoom-in-95 duration-150">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-2xl bg-rose-50 dark:bg-rose-950/40 text-rose-500 flex items-center justify-center shrink-0">
+          <WarningCircle weight="fill" class="w-6 h-6" />
+        </div>
+        <div>
+          <h3 class="text-base font-black text-slate-900 dark:text-slate-100">Rời phòng thi?</h3>
+          <p class="text-xs text-slate-500 dark:text-neutral-400">Kết quả bài làm hiện tại sẽ bị hủy.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-2 mt-5">
+        <button
+          type="button"
+          onclick={() => (showExitModal = false)}
+          class="py-2.5 px-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-black transition-colors cursor-pointer text-center"
+        >
+          Ở lại làm tiếp
+        </button>
+        <button
+          type="button"
+          onclick={() => {
+            showExitModal = false;
+            goto('/thi-thu');
+          }}
+          class="py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 text-slate-600 dark:text-neutral-300 text-xs font-bold transition-colors cursor-pointer text-center"
+        >
+          Rời phòng thi
+        </button>
+      </div>
+    </div>
+  </div>
 {/if}
 
 <LessonFilterModal />

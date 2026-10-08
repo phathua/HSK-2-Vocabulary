@@ -5,6 +5,7 @@ export interface QuestionItem {
   question_no: number;
   type: string; // 'True/False' | 'Image Match' | 'Multiple Choice'...
   image?: string | null;
+  board_image?: string | null;
   answer?: string; // '√', '×', 'A', 'B', 'C', 'D', 'E', 'F'
   listening_script?: string;
   text?: string;

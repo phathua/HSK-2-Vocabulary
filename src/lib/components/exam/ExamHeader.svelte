@@ -15,6 +15,7 @@
     totalCount: number;
     onModeChange: (newMode: ExamMode) => void;
     onSubmit: () => void;
+    onExitRequest?: () => void;
   }
 
   let {
@@ -25,7 +26,8 @@
     answeredCount,
     totalCount,
     onModeChange,
-    onSubmit
+    onSubmit,
+    onExitRequest
   }: Props = $props();
 
   function formatCountdown(secs: number): string {
@@ -39,13 +41,14 @@
 
 <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-4 md:p-5 shadow-xs mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
   <div class="flex items-center gap-3">
-    <a
-      href="/thi-thu"
-      class="w-10 h-10 rounded-2xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 text-slate-700 dark:text-slate-200 flex items-center justify-center shrink-0 transition-colors"
+    <button
+      type="button"
+      onclick={() => (onExitRequest ? onExitRequest() : window.history.back())}
+      class="w-10 h-10 rounded-2xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 text-slate-700 dark:text-slate-200 flex items-center justify-center shrink-0 transition-colors cursor-pointer"
       aria-label="Quay lại danh mục đề thi"
     >
       <ArrowLeft weight="bold" class="w-5 h-5" />
-    </a>
+    </button>
     <div>
       <div class="flex items-center gap-2">
         <span class="text-[11px] font-black px-2 py-0.5 rounded-md bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 font-mono">

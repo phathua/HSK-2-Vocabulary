@@ -12,7 +12,19 @@
   import { mockExamsData, type MockExamItem } from '#lib/data/mockExamsList';
   import { examHistoryState } from '#lib/state/examHistoryState.svelte';
 
+  import { goto, preloadData } from '$app/navigation';
+
   let selectedFilter = $state('all');
+  let enteringExam = $state<MockExamItem | null>(null);
+
+  function handleStartExam(exam: MockExamItem) {
+    if (enteringExam) return;
+    enteringExam = exam;
+    // Preload & navigate
+    setTimeout(() => {
+      goto(`/thi-thu/${exam.id}`);
+    }, 120);
+  }
 
   const filteredExams = $derived(
     selectedFilter === 'all'
@@ -164,18 +176,42 @@
             {/if}
           </div>
 
-          <a
-            href={`/thi-thu/${exam.id}`}
+          <button
+            type="button"
+            onclick={() => handleStartExam(exam)}
             class="px-3 py-1 rounded-lg bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold text-[11px] flex items-center gap-1 transition-all cursor-pointer shadow-2xs shrink-0"
           >
             <Play weight="bold" class="w-3 h-3" />
             <span>Làm đề</span>
-          </a>
+          </button>
         </div>
       </div>
     {/each}
   </div>
 </main>
+
+<!-- Loading Overlay: Chặn thao tác, thông báo chuẩn bị đề thi tức thì -->
+{#if enteringExam}
+  <div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fade-in select-none">
+    <div class="bg-white dark:bg-[#1E1E1E] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-6 max-w-xs w-full shadow-2xl flex flex-col items-center text-center">
+      <div class="w-12 h-12 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center mb-3.5">
+        <Exam weight="duotone" class="w-6 h-6 animate-pulse" />
+      </div>
+      <h3 class="text-sm font-black text-slate-900 dark:text-[#E3E3E3]">
+        Đang mở phòng thi...
+      </h3>
+      <p class="text-xs font-mono font-bold text-orange-600 dark:text-orange-400 mt-1">
+        Mã đề: {enteringExam.code}
+      </p>
+      <p class="text-[11px] text-slate-500 dark:text-[#8E918F] mt-1 leading-relaxed">
+        Đang nạp 60 câu hỏi & tệp âm thanh OGG...
+      </p>
+      <div class="w-full bg-slate-100 dark:bg-neutral-800 h-1.5 rounded-full overflow-hidden mt-4">
+        <div class="h-full bg-orange-600 rounded-full animate-indeterminate"></div>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <LessonFilterModal />
 <SettingsModal />
