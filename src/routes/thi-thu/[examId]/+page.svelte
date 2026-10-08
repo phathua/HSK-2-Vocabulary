@@ -14,9 +14,9 @@
   import type { ExamDetail, ExamMode } from '#lib/types/exam';
 
   const examId = $derived(page.params.examId);
+  const exam = $derived(examId ? getExamData(examId) : null);
+  const isLoading = $derived(!exam && !examId);
 
-  let exam = $state<ExamDetail | null>(null);
-  let isLoading = $state(true);
   let mode = $state<ExamMode>('exam');
 
   // Exam state
@@ -27,17 +27,6 @@
   let isSubmitted = $state(false);
   let showResultModal = $state(false);
   let timerInterval: any = null;
-
-  $effect(() => {
-    const currentId = page.params.examId;
-    if (currentId) {
-      exam = getExamData(currentId);
-      isLoading = false;
-    } else {
-      exam = null;
-      isLoading = false;
-    }
-  });
 
   onMount(() => {
     // Start timer for exam mode
