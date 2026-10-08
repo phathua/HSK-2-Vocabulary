@@ -6,7 +6,6 @@
   import Sparkle from 'phosphor-svelte/lib/Sparkle';
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
-
   import { mockExamsData, type MockExamItem } from '#lib/data/mockExamsList';
 
   let selectedFilter = $state('all');
@@ -119,8 +118,8 @@
         </div>
 
         <a
-          href="/thi-thu/{exam.code}"
-          class="px-5 py-3 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-xs md:text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm active:scale-95 transition-all cursor-pointer no-underline"
+          href={`/thi-thu/${exam.id}`}
+          class="px-5 py-3 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-xs md:text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm active:scale-95 transition-all cursor-pointer"
         >
           <Play weight="bold" class="w-4 h-4" />
           <span>Vào phòng thi</span>

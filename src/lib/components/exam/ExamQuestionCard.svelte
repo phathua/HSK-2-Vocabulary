@@ -95,17 +95,23 @@
   <!-- Ảnh minh họa câu hỏi (nếu có) -->
   {#if question.image}
     <div class="relative group my-3 max-w-sm rounded-2xl overflow-hidden border border-slate-100 dark:border-neutral-800 bg-slate-50 dark:bg-neutral-900/50">
-      <img
-        src={`/exams-media/${question.exam_code}/${question.image}`}
-        alt={`Ảnh minh họa câu hỏi ${question.question_no}`}
-        class="w-full h-auto max-h-56 object-contain rounded-2xl transition-transform cursor-pointer"
-        onclick={() => (isImageZoomed = true)}
-        loading="lazy"
-      />
       <button
         type="button"
         onclick={() => (isImageZoomed = true)}
-        class="absolute bottom-2 right-2 px-2 py-1 rounded-lg bg-black/60 text-white text-[10px] font-bold flex items-center gap-1 backdrop-blur-xs opacity-80 group-hover:opacity-100 transition-opacity"
+        class="w-full text-left cursor-pointer p-0 border-0 bg-transparent"
+        aria-label="Phóng to ảnh câu hỏi"
+      >
+        <img
+          src={`/exams-media/${question.exam_code}/${question.image}`}
+          alt={`Ảnh minh họa câu hỏi ${question.question_no}`}
+          class="w-full h-auto max-h-56 object-contain rounded-2xl transition-transform"
+          loading="lazy"
+        />
+      </button>
+      <button
+        type="button"
+        onclick={() => (isImageZoomed = true)}
+        class="absolute bottom-2 right-2 px-2 py-1 rounded-lg bg-black/60 text-white text-[10px] font-bold flex items-center gap-1 backdrop-blur-xs opacity-80 group-hover:opacity-100 transition-opacity cursor-pointer"
       >
         <MagnifyingGlassPlus class="w-3.5 h-3.5" />
         <span>Phóng to</span>
