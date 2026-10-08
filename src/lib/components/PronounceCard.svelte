@@ -13,6 +13,7 @@
   import Confetti from 'phosphor-svelte/lib/Confetti';
   import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
   import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
+  import SmartImage from './SmartImage.svelte';
 
   let isRecording = $state(false);
   let liveHanzi = $state('');
@@ -260,12 +261,11 @@
     <div class="flex-1 w-full flex flex-col justify-center items-center py-1 sm:py-2 max-w-sm mx-auto">
       <!-- Vocabulary Illustration Image -->
       {#if appState.currentSpeechItem.image}
-        <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border border-slate-100 shadow-inner mb-2 bg-slate-50 flex items-center justify-center flex-shrink-0">
-          <img
+        <div class="mb-2 flex items-center justify-center flex-shrink-0">
+          <SmartImage
             src={appState.currentSpeechItem.image}
             alt={appState.currentSpeechItem.hanzi}
-            class="w-full h-full object-cover"
-            loading="lazy"
+            class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl border border-slate-100 shadow-inner bg-slate-50"
           />
         </div>
       {/if}

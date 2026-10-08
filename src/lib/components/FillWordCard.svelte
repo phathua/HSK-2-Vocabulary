@@ -13,6 +13,7 @@
   import Confetti from 'phosphor-svelte/lib/Confetti';
   import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
   import PencilLine from 'phosphor-svelte/lib/PencilLine';
+  import SmartImage from './SmartImage.svelte';
 
   let inputEl: HTMLInputElement | null = $state(null);
 
@@ -78,13 +79,10 @@
       <!-- Vocabulary Image -->
       {#if appState.currentFillItem.image}
         <div class="relative mb-2">
-          <img
+          <SmartImage
             src={appState.currentFillItem.image}
             alt={appState.currentFillItem.hanzi}
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border border-slate-200 shadow-xs bg-slate-50"
-            onerror={(e) => {
-              (e.currentTarget as HTMLImageElement).src = 'https://placehold.co/200x200/3b82f6/ffffff?text=HSK';
-            }}
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl border border-slate-200 shadow-xs bg-slate-50"
           />
         </div>
       {/if}

@@ -9,6 +9,7 @@
   import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
   import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
   import PencilLine from 'phosphor-svelte/lib/PencilLine';
+  import SmartImage from './SmartImage.svelte';
 
   const isZhToVi = $derived(appState.direction === 'zh_to_vi');
 </script>
@@ -41,13 +42,10 @@
       <!-- Vocabulary Image -->
       {#if appState.currentQuizItem.image}
         <div class="relative mb-2">
-          <img
+          <SmartImage
             src={appState.currentQuizItem.image}
             alt="HSK Vocabulary"
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border border-slate-200 shadow-xs bg-slate-50"
-            onerror={(e) => {
-              (e.currentTarget as HTMLImageElement).src = 'https://placehold.co/200x200/3b82f6/ffffff?text=HSK';
-            }}
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl border border-slate-200 shadow-xs bg-slate-50"
           />
         </div>
       {/if}

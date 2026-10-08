@@ -10,6 +10,7 @@
   import ArrowsHorizontal from 'phosphor-svelte/lib/ArrowsHorizontal';
   import { untrack } from 'svelte';
   import type { VocabItem } from '#lib/data/hsk2Vocabulary';
+  import SmartImage from './SmartImage.svelte';
 
   const isZhToVi = $derived(appState.direction === 'zh_to_vi');
 
@@ -337,10 +338,10 @@
         >
           {#if nextCardItem.image}
             <div class="relative mb-3">
-              <img
+              <SmartImage
                 src={nextCardItem.image}
                 alt={nextCardItem.hanzi}
-                class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-slate-100 shadow-2xs bg-slate-50"
+                class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border-2 border-slate-100 shadow-2xs bg-slate-50"
               />
             </div>
           {/if}
@@ -352,8 +353,11 @@
             </div>
           {:else}
             <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Từ vựng tiếng Trung</span>
-            <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-2">
+            <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-1">
               {nextCardItem.hanzi}
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-slate-600 mb-2">
+              {nextCardItem.pinyin}
             </div>
           {/if}
         </div>
@@ -413,18 +417,15 @@
             <!-- Card Image -->
             {#if appState.currentFlashItem.image}
               <div class="relative mb-3 pointer-events-none">
-                <img
+                <SmartImage
                   src={appState.currentFlashItem.image}
                   alt={appState.currentFlashItem.hanzi}
-                  class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-slate-100 shadow-2xs bg-slate-50"
-                  onerror={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = 'https://placehold.co/200x200/3b82f6/ffffff?text=HSK';
-                  }}
+                  class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border-2 border-slate-100 shadow-2xs bg-slate-50"
                 />
               </div>
             {/if}
 
-            <!-- Mặt trước KHÔNG HIỂN THỊ PINYIN -->
+            <!-- Mặt trước: Hiển thị Nghĩa tiếng Việt HOẶC Chữ Hán kèm Pinyin -->
             {#if !isZhToVi}
               <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1 pointer-events-none">Nghĩa tiếng Việt</span>
               <div class="text-2xl sm:text-3xl font-black text-slate-900 mb-2 max-w-xs leading-snug pointer-events-none">
@@ -432,8 +433,11 @@
               </div>
             {:else}
               <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1 pointer-events-none">Từ vựng tiếng Trung</span>
-              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-2 pointer-events-none">
+              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-1 pointer-events-none">
                 {appState.currentFlashItem.hanzi}
+              </div>
+              <div class="text-xl sm:text-2xl font-black text-slate-600 mb-2 pointer-events-none">
+                {appState.currentFlashItem.pinyin}
               </div>
             {/if}
 
@@ -522,10 +526,10 @@
           {:else}
             {#if flyingCard.image}
               <div class="relative mb-3">
-                <img
+                <SmartImage
                   src={flyingCard.image}
                   alt={flyingCard.hanzi}
-                  class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-slate-100 shadow-2xs bg-slate-50"
+                  class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border-2 border-slate-100 shadow-2xs bg-slate-50"
                 />
               </div>
             {/if}
@@ -537,8 +541,11 @@
               </div>
             {:else}
               <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Từ vựng tiếng Trung</span>
-              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-2">
+              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-1">
                 {flyingCard.hanzi}
+              </div>
+              <div class="text-xl sm:text-2xl font-black text-slate-600 mb-2">
+                {flyingCard.pinyin}
               </div>
             {/if}
           {/if}
