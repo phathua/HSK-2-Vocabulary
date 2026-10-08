@@ -34,22 +34,22 @@
 
 <main class="flex-1 flex flex-col min-h-0 pt-3 pb-2 overflow-y-auto pr-1">
   <!-- Header Bar tinh gọn: Tiêu đề + Thống kê nhỏ gọn ngang hàng -->
-  <div class="flex items-center justify-between gap-3 pb-2.5 mb-2.5 border-b border-slate-200/80 dark:border-[#282A2C]">
-    <div class="flex items-center gap-2.5">
+  <div class="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 pb-2.5 mb-2.5 border-b border-slate-200/80 dark:border-[#282A2C]">
+    <div class="flex items-center gap-2.5 min-w-0">
       <div class="w-8 h-8 rounded-lg bg-orange-500/10 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
         <Exam weight="duotone" class="w-5 h-5" />
       </div>
-      <div>
-        <h1 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-[#E3E3E3] leading-tight">
+      <div class="min-w-0">
+        <h1 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-[#E3E3E3] leading-tight truncate">
           Đề Thi Thử HSK 2
         </h1>
-        <p class="text-[11px] text-slate-500 dark:text-[#8E918F] mt-0.5 leading-tight">
-          Chuẩn kỳ thi máy tính Hanban • 60 câu / 55 phút
+        <p class="text-[11px] text-slate-500 dark:text-[#8E918F] mt-0.5 leading-tight truncate">
+          60 câu / 55 phút • Chuẩn thi máy tính Hanban
         </p>
       </div>
     </div>
 
-    <div class="flex items-center gap-2 shrink-0">
+    <div class="flex items-center gap-2 shrink-0 ml-auto sm:ml-0">
       <a
         href="/thi-thu/lich-su"
         class="inline-flex items-center gap-1.5 text-[11px] font-bold text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/40 hover:bg-orange-100 px-2.5 py-1 rounded-lg border border-orange-200 dark:border-orange-900/50 transition-colors"
