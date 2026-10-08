@@ -117,29 +117,30 @@
           {appState.currentFillItem.viet}
         </div>
 
-        <!-- Chữ Hán kèm nút Loa TTS ngay cạnh bên phải -->
-        <div class="flex items-center justify-center gap-2 mb-1.5 sm:mb-2">
-          <div class="text-2xl sm:text-3xl md:text-4xl font-black text-blue-600 dark:text-blue-400 font-sans tracking-tight">
+        <!-- Chữ Hán căn giữa màn hình tuyệt đối, nút Loa TTS neo sang mép phải -->
+        <div class="relative w-full max-w-md flex items-center justify-center mb-1.5 sm:mb-2 px-10">
+          <div class="text-2xl sm:text-3xl md:text-4xl font-black text-blue-600 dark:text-blue-400 font-sans tracking-tight text-center">
             {appState.currentFillItem.hanzi}
           </div>
           <button
             type="button"
             onclick={() => appState.speakCurrent()}
-            class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center shadow-xs active:scale-95 transition-transform cursor-pointer shrink-0"
+            class="absolute right-0 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center shadow-xs active:scale-95 transition-transform cursor-pointer"
             title="Phát âm tiếng Trung"
           >
             <SpeakerHigh weight="bold" class="w-4 h-4" />
           </button>
         </div>
 
-        <!-- Chế độ 'Chọn từ': Hiển thị các ô Slot ký tự liền mạch cách nhau bởi khoảng trống -->
+        <!-- Chế độ 'Chọn từ': Các ô Slot căn giữa tuyệt đối, nút Xoá neo sang mép phải -->
         {#if isTileMode && appState.fillWordChunks.length > 0}
+          {@const isSkipped = appState.fillAnswered && appState.fillFeedback?.type === 'skip'}
+          {@const isWrong = appState.fillAnswered && appState.fillFeedback?.type === 'wrong'}
           <div class="w-full max-w-lg mt-0.5 px-1 flex flex-col items-center gap-1.5">
-            <!-- Render Slots của tất cả các Chunks liền nhau, phân cách bằng khoảng trắng, kèm nút Xoá bên phải -->
-            <div class="flex items-center justify-center gap-1.5 sm:gap-2 py-0.5 max-w-full">
+            <div class="relative w-full flex items-center justify-center py-0.5 px-10">
+              <!-- Hàng các vế/cụm ô điền từ luôn nằm chính giữa tâm màn hình -->
               <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 sm:gap-x-4">
                 {#each appState.fillWordChunks as chunk, cIdx}
-                  <!-- Cụm từ (Word Chunk): Bấm vào bất kỳ ô nào hoặc cụm để kích hoạt điền cho vế đó -->
                   <div
                     role="group"
                     aria-label={`Cụm từ ${cIdx + 1}`}
@@ -150,8 +151,8 @@
                     }`}
                   >
                     {#each chunk.slots as slot}
-                      {@const isCorrectSlot = appState.fillAnswered && slot.userChar === slot.char}
-                      {@const isWrongSlot = appState.fillAnswered && slot.userChar !== slot.char}
+                      {@const isCorrectSlot = appState.fillAnswered && !isSkipped && slot.userChar === slot.char}
+                      {@const isWrongSlot = appState.fillAnswered && !isSkipped && slot.userChar !== slot.char}
                       <button
                         type="button"
                         disabled={slot.isPreFilled || appState.fillAnswered}
@@ -162,15 +163,17 @@
                         class={`w-8 h-10 sm:w-9 sm:h-11 md:w-10 md:h-12 rounded-xl flex items-center justify-center font-black text-base sm:text-lg transition-all border-b-4 select-none ${
                           slot.isPreFilled
                             ? 'bg-slate-200 dark:bg-[#323537] text-slate-500 dark:text-slate-400 border-slate-300 dark:border-[#3c3f42] cursor-not-allowed'
-                            : isCorrectSlot
-                              ? 'bg-emerald-500 text-white border-emerald-700 shadow-xs'
-                              : isWrongSlot
-                                ? 'bg-rose-500 text-white border-rose-700 shadow-xs'
-                                : slot.userChar
-                                  ? 'bg-blue-500 text-white border-blue-700 shadow-xs cursor-pointer active:scale-95'
-                                  : cIdx === appState.currentChunkIndex
-                                    ? 'bg-white dark:bg-[#282A2C] border-dashed border-2 border-slate-300 dark:border-[#404346] text-transparent'
-                                    : 'bg-white/60 dark:bg-[#282A2C]/60 border-dashed border-2 border-slate-200 dark:border-[#35373a] text-transparent'
+                            : isSkipped
+                              ? 'bg-amber-400 text-slate-950 border-amber-600 shadow-xs'
+                              : isCorrectSlot
+                                ? 'bg-emerald-500 text-white border-emerald-700 shadow-xs'
+                                : isWrongSlot
+                                  ? 'bg-rose-500 text-white border-rose-700 shadow-xs'
+                                  : slot.userChar
+                                    ? 'bg-blue-500 text-white border-blue-700 shadow-xs cursor-pointer active:scale-95'
+                                    : cIdx === appState.currentChunkIndex
+                                      ? 'bg-white dark:bg-[#282A2C] border-dashed border-2 border-slate-300 dark:border-[#404346] text-transparent'
+                                      : 'bg-white/60 dark:bg-[#282A2C]/60 border-dashed border-2 border-slate-200 dark:border-[#35373a] text-transparent'
                         }`}
                         title={slot.isPreFilled ? 'Ký tự gợi ý sẵn' : slot.userChar ? 'Bấm để gỡ bỏ' : 'Bấm để điền vế này'}
                       >
@@ -181,12 +184,12 @@
                 {/each}
               </div>
 
-              <!-- Nút Xoá (Backspace) đặt ngay cạnh bên phải hàng ô điền chữ -->
+              <!-- Nút Xoá (Backspace) neo sát mép phải, không đẩy lệch tâm ô điền -->
               <button
                 type="button"
                 disabled={appState.fillAnswered}
                 onclick={() => appState.backspaceSlot(appState.currentChunkIndex)}
-                class="w-8 h-10 sm:w-9 sm:h-11 md:w-10 md:h-12 rounded-xl font-black text-rose-500 bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/50 border-b-4 border-rose-300 dark:border-rose-900/60 flex items-center justify-center transition-all active:border-b-0 active:translate-y-1 cursor-pointer shrink-0"
+                class="absolute right-0 w-8 h-10 sm:w-9 sm:h-11 md:w-10 md:h-12 rounded-xl font-black text-rose-500 bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/50 border-b-4 border-rose-300 dark:border-rose-900/60 flex items-center justify-center transition-all active:border-b-0 active:translate-y-1 cursor-pointer"
                 title="Xoá ký tự vừa nhập"
               >
                 <Backspace weight="bold" class="w-4 h-4 sm:w-5 sm:h-5" />
@@ -194,7 +197,7 @@
             </div>
 
             <!-- Nếu trả lời SAI: Hiển thị đáp án đúng màu đỏ ngay bên dưới ô điền chữ -->
-            {#if appState.fillAnswered && appState.fillFeedback?.type === 'wrong'}
+            {#if isWrong}
               <div class="text-xs font-black text-rose-500 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 px-3 py-1.5 rounded-xl animate-fade-in mt-0.5">
                 Đáp án đúng: <span class="underline underline-offset-2">{appState.currentFillItem.pinyin}</span>
               </div>
@@ -261,8 +264,8 @@
 <!-- Fill Footer Controls -->
 {#if appState.currentFillItem}
   <footer class="shrink-0 mt-2 w-full max-w-xl mx-auto space-y-1.5 sm:space-y-2">
-    <!-- Feedback Banner (Chỉ hiển thị khi ở chế độ Thủ công HOẶC khi bỏ qua/gợi ý, không hiển thị ở chế độ Chọn từ để tránh vướng víu) -->
-    {#if appState.fillFeedback && (!isTileMode || appState.fillFeedback.type === 'skip' || appState.fillFeedback.type === 'hint')}
+    <!-- Feedback Banner (Chỉ hiển thị khi ở chế độ Thủ công, chế độ Chọn từ không hiển thị thanh to này) -->
+    {#if appState.fillFeedback && !isTileMode}
       <div class={`py-2 px-3 rounded-2xl text-center shadow-xs flex items-center justify-center gap-2 border transition-all ${
         appState.fillFeedback.type === 'correct' ? 'bg-emerald-500 border-emerald-600 text-white' :
         appState.fillFeedback.type === 'wrong' ? 'bg-rose-500 border-rose-600 text-white' :
@@ -289,18 +292,22 @@
     <!-- NỘI DUNG NHẬP LIỆU: BẢNG CHỌN TỪ (TILE BANK) HOẶC BÀN PHÍM THỦ CÔNG -->
     {#if isTileMode && appState.fillWordChunks[appState.currentChunkIndex]}
       {@const curChunk = appState.fillWordChunks[appState.currentChunkIndex]}
+      {@const isWrong = appState.fillAnswered && appState.fillFeedback?.type === 'wrong'}
       <div class="bg-white dark:bg-[#1B1B1B] rounded-2xl border border-slate-200 dark:border-[#282A2C] p-2 sm:p-2.5 shadow-2xs space-y-2">
         <!-- Tile Grid -->
         <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
           {#each curChunk.tiles as tile}
+            {@const isCorrectTileAnswer = isWrong && !tile.isDistractor}
             <button
               type="button"
               disabled={tile.isUsed || appState.fillAnswered}
               onclick={() => appState.selectTile(appState.currentChunkIndex, tile.id)}
               class={`min-w-9 h-10 sm:min-w-11 sm:h-12 px-2.5 rounded-xl font-black text-base sm:text-lg flex items-center justify-center transition-all select-none border-b-4 cursor-pointer ${
-                tile.isUsed
-                  ? 'bg-slate-100 dark:bg-[#282A2C] border-slate-200 dark:border-[#353739] text-transparent opacity-20 pointer-events-none'
-                  : 'bg-slate-50 hover:bg-white dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border-slate-300 dark:border-[#3f4245] shadow-2xs active:border-b-0 active:translate-y-1'
+                isCorrectTileAnswer
+                  ? 'bg-emerald-500 text-white border-emerald-700 ring-2 ring-emerald-400 shadow-sm'
+                  : tile.isUsed
+                    ? 'bg-slate-100 dark:bg-[#282A2C] border-slate-200 dark:border-[#353739] text-transparent opacity-20 pointer-events-none'
+                    : 'bg-slate-50 hover:bg-white dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border-slate-300 dark:border-[#3f4245] shadow-2xs active:border-b-0 active:translate-y-1'
               }`}
             >
               {tile.char}

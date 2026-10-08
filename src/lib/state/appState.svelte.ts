@@ -3,6 +3,7 @@ import { HSK1_VOCABULARY, HSK1_LESSON_INFOS } from '#lib/data/hsk1Vocabulary';
 import { shuffleArray, speakChinese, checkPinyinAnswer } from '#lib/utils/speech';
 import { generateDistractors } from '#lib/utils/distractors';
 import { buildWordChunks, type WordChunk, type ChoiceTile, type TileSlot } from '#lib/utils/pinyinDistractor';
+import { toast } from 'svelte-sonner';
 
 export type HskLevel = 'HSK1' | 'HSK2';
 export type AppTab = 'fill' | 'quiz' | 'flash' | 'speech';
@@ -25,6 +26,7 @@ export class AppState {
   // Cài đặt
   autoPlay = $state(false);
   volume = $state(0.7);
+  themeMode = $state<'light' | 'dark' | 'system'>('system');
   theme = $state<'light' | 'dark'>('dark');
 
   // Bài học chọn lọc (Bài 1-15 cho từng cấp độ)
@@ -159,12 +161,17 @@ export class AppState {
       const vol = localStorage.getItem('HSK_VOLUME');
       this.volume = vol ? parseFloat(vol) : 0.7;
 
-      const savedTheme = localStorage.getItem('HSK_THEME') as 'light' | 'dark';
-      if (savedTheme === 'light' || savedTheme === 'dark') {
-        this.theme = savedTheme;
+      const savedThemeMode = localStorage.getItem('HSK_THEME_MODE') as 'light' | 'dark' | 'system';
+      if (savedThemeMode === 'light' || savedThemeMode === 'dark' || savedThemeMode === 'system') {
+        this.themeMode = savedThemeMode;
       } else {
-        this.theme = 'dark';
+        // Dự phòng key cũ HSK_THEME nếu có
+        const oldTheme = localStorage.getItem('HSK_THEME') as 'light' | 'dark';
+        this.themeMode = (oldTheme === 'light' || oldTheme === 'dark') ? oldTheme : 'system';
       }
+      this.initThemeListener();
+      this.updateEffectiveTheme();
+
       const savedFillSubMode = localStorage.getItem('HSK_FILL_SUBMODE') as 'tiles' | 'keyboard';
       if (savedFillSubMode === 'tiles' || savedFillSubMode === 'keyboard') {
         this.fillSubMode = savedFillSubMode;
@@ -177,6 +184,41 @@ export class AppState {
     }
   }
 
+  private mediaQueryListenerAttached = false;
+
+  private initThemeListener() {
+    if (typeof window === 'undefined' || this.mediaQueryListenerAttached) return;
+    try {
+      const media = window.matchMedia('(prefers-color-scheme: dark)');
+      media.addEventListener('change', (e) => {
+        if (this.themeMode === 'system') {
+          this.theme = e.matches ? 'dark' : 'light';
+          this.applyTheme();
+        }
+      });
+      this.mediaQueryListenerAttached = true;
+    } catch {}
+  }
+
+  private updateEffectiveTheme() {
+    if (this.themeMode === 'system') {
+      if (typeof window !== 'undefined' && window.matchMedia) {
+        this.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      } else {
+        this.theme = 'dark';
+      }
+    } else {
+      this.theme = this.themeMode;
+    }
+  }
+
+  setThemeMode(mode: 'light' | 'dark' | 'system') {
+    this.themeMode = mode;
+    this.updateEffectiveTheme();
+    this.applyTheme();
+    this.saveToLocalStorage();
+  }
+
   applyTheme() {
     if (typeof document === 'undefined') return;
     if (this.theme === 'dark') {
@@ -187,9 +229,9 @@ export class AppState {
   }
 
   toggleTheme() {
-    this.theme = this.theme === 'dark' ? 'light' : 'dark';
-    this.applyTheme();
-    this.saveToLocalStorage();
+    // Luân chuyển giữa light -> dark (override cụ thể)
+    const next = this.theme === 'dark' ? 'light' : 'dark';
+    this.setThemeMode(next);
   }
 
   ensureInitialized() {
@@ -220,6 +262,7 @@ export class AppState {
       localStorage.setItem('HSK_AUTOPLAY', this.autoPlay ? 'true' : 'false');
       localStorage.setItem('HSK_VOLUME', this.volume.toString());
       localStorage.setItem('HSK_SPEECH_AUTO_SUBMIT', this.speechAutoSubmit ? 'true' : 'false');
+      localStorage.setItem('HSK_THEME_MODE', this.themeMode);
       localStorage.setItem('HSK_THEME', this.theme);
     } catch {}
   }
@@ -479,16 +522,31 @@ export class AppState {
       type: 'skip'
     };
     this.fillAnswered = true;
+
+    // Tự động điền đầy đủ đáp án chuẩn vào các slot và đồng bộ
+    if (this.fillSubMode === 'tiles' && !isZhToVi && this.fillWordChunks.length > 0) {
+      this.fillWordChunks.forEach(chunk => {
+        chunk.slots.forEach(slot => {
+          slot.userChar = slot.char;
+        });
+      });
+      this.syncFillInputFromChunks();
+    } else {
+      this.fillInput = isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin;
+    }
+
     speakChinese(this.currentFillItem.hanzi, this.volume);
   }
 
   hintFill() {
     if (this.fillAnswered || !this.currentFillItem) return;
     const isZhToVi = this.direction === 'zh_to_vi';
-    this.fillFeedback = {
-      text: `Gợi ý: "${isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin}"`,
-      type: 'hint'
-    };
+    const ans = isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin;
+    
+    // Bắn thông báo Toast nhẹ nhàng ở trên cùng, không che ô chọn
+    toast.info(`💡 Gợi ý: "${ans}"`, {
+      duration: 3500
+    });
     this.fillHintShown = true;
   }
 
