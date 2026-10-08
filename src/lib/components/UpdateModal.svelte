@@ -8,6 +8,9 @@
   import Lightning from 'phosphor-svelte/lib/Lightning';
   import PaintBrushBroad from 'phosphor-svelte/lib/PaintBrushBroad';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
+  import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
+  import Books from 'phosphor-svelte/lib/Books';
+  import ShieldCheck from 'phosphor-svelte/lib/ShieldCheck';
   import { appState } from '#lib/state/appState.svelte';
 
   const CURRENT_APP_VERSION = '1.0.0';
@@ -22,81 +25,89 @@
   let fetchError = $state<string | null>(null);
   let clientVersion = $state<string>(CURRENT_APP_VERSION);
 
-  /**
-   * Phân tích commit message bằng Regex để trích xuất icon và nội dung gọn gàng, thân thiện
-   */
-  interface ParsedItem {
-    type: 'fix' | 'feat' | 'style' | 'perf' | 'general';
-    tag: string;
-    text: string;
+  interface ParsedBadge {
+    label: string;
     icon: any;
     colorClass: string;
-    badgeClass: string;
+    bgClass: string;
+    borderClass: string;
   }
 
-  function parseCommitMessage(title: string): ParsedItem {
-    const raw = title.trim();
+  /**
+   * Phân tích commit message thành các cụm nhãn cực ngắn gọn, súc tích
+   * Ví dụ: "Tính năng mới!", "Vá lỗi", "Tối ưu", "Cải thiện giao diện", "Âm thanh"
+   */
+  function parseCommitToBadge(title: string): ParsedBadge {
+    const raw = title.trim().toLowerCase();
 
-    // 1. Nhóm Sửa lỗi (Fix / bug / sửa)
-    if (/^(fix(\(.*?\))?:|sửa lỗi|khắc phục|sửa)/i.test(raw)) {
-      const clean = raw.replace(/^(fix(\(.*?\))?:|sửa lỗi:?|khắc phục:?|sửa:?)\s*/i, '');
+    // 1. Nhóm Sửa lỗi / Vá lỗi (fix / lỗi / bug / khắc phục)
+    if (/^(fix(\(.*?\))?:|sửa lỗi|khắc phục|sửa|vá lỗi)/i.test(raw) || raw.includes('lỗi') || raw.includes('bug')) {
       return {
-        type: 'fix',
-        tag: 'Sửa lỗi',
-        text: clean.charAt(0).toUpperCase() + clean.slice(1),
+        label: 'Vá lỗi',
         icon: Wrench,
-        colorClass: 'text-amber-600',
-        badgeClass: 'bg-amber-100 text-amber-700'
+        colorClass: 'text-amber-700',
+        bgClass: 'bg-amber-50',
+        borderClass: 'border-amber-200/80'
       };
     }
 
-    // 2. Nhóm Tính năng mới (Feat / tính năng / thêm / bổ sung)
+    // 2. Nhóm Tính năng mới (feat / thêm / bổ sung / tính năng)
     if (/^(feat(\(.*?\))?:|tính năng|thêm|bổ sung)/i.test(raw)) {
-      const clean = raw.replace(/^(feat(\(.*?\))?:|tính năng mới:?|tính năng:?|thêm:?|bổ sung:?)\s*/i, '');
+      if (raw.includes('phát âm') || raw.includes('giọng') || raw.includes('loa') || raw.includes('speech')) {
+        return {
+          label: 'Phát âm mới',
+          icon: SpeakerHigh,
+          colorClass: 'text-blue-700',
+          bgClass: 'bg-blue-50',
+          borderClass: 'border-blue-200/80'
+        };
+      }
+      if (raw.includes('bài học') || raw.includes('từ vựng') || raw.includes('hsk')) {
+        return {
+          label: 'Từ vựng mới',
+          icon: Books,
+          colorClass: 'text-indigo-700',
+          bgClass: 'bg-indigo-50',
+          borderClass: 'border-indigo-200/80'
+        };
+      }
       return {
-        type: 'feat',
-        tag: 'Tính năng',
-        text: clean.charAt(0).toUpperCase() + clean.slice(1),
+        label: 'Tính năng mới!',
         icon: Sparkle,
-        colorClass: 'text-blue-600',
-        badgeClass: 'bg-blue-100 text-blue-700'
+        colorClass: 'text-blue-700',
+        bgClass: 'bg-blue-50',
+        borderClass: 'border-blue-200/80'
       };
     }
 
-    // 3. Nhóm Giao diện (Style / UI / màu sắc / checkbox / modal)
-    if (/^(style(\(.*?\))?:|giao diện|tùy biến|thiết kế)/i.test(raw) || /giao diện|màu sắc/i.test(raw)) {
-      const clean = raw.replace(/^(style(\(.*?\))?:|giao diện:?|tùy biến:?|thiết kế:?)\s*/i, '');
+    // 3. Nhóm Giao diện / UI (style / giao diện / màu sắc / checkbox / splash / mascot)
+    if (/^(style(\(.*?\))?:|giao diện|tùy biến|thiết kế)/i.test(raw) || raw.includes('giao diện') || raw.includes('màu sắc') || raw.includes('ui') || raw.includes('splash')) {
       return {
-        type: 'style',
-        tag: 'Giao diện',
-        text: clean.charAt(0).toUpperCase() + clean.slice(1),
+        label: 'Giao diện mới',
         icon: PaintBrushBroad,
-        colorClass: 'text-teal-600',
-        badgeClass: 'bg-teal-100 text-teal-700'
+        colorClass: 'text-teal-700',
+        bgClass: 'bg-teal-50',
+        borderClass: 'border-teal-200/80'
       };
     }
 
-    // 4. Nhóm Tối ưu (Perf / Refactor / tối ưu / nâng cấp)
-    if (/^(perf(\(.*?\))?:|refactor(\(.*?\))?:|tối ưu|nâng cấp)/i.test(raw) || /tối ưu/i.test(raw)) {
-      const clean = raw.replace(/^(perf(\(.*?\))?:|refactor(\(.*?\))?:|tối ưu hóa:?|tối ưu:?)\s*/i, '');
+    // 4. Nhóm Tối ưu (perf / refactor / tối ưu / nâng cấp / mượt)
+    if (/^(perf(\(.*?\))?:|refactor(\(.*?\))?:|tối ưu|nâng cấp)/i.test(raw) || raw.includes('tối ưu') || raw.includes('nâng cấp')) {
       return {
-        type: 'perf',
-        tag: 'Tối ưu',
-        text: clean.charAt(0).toUpperCase() + clean.slice(1),
+        label: 'Tối ưu tốc độ',
         icon: Lightning,
-        colorClass: 'text-violet-600',
-        badgeClass: 'bg-violet-100 text-violet-700'
+        colorClass: 'text-violet-700',
+        bgClass: 'bg-violet-50',
+        borderClass: 'border-violet-200/80'
       };
     }
 
-    // Mặc định
     return {
-      type: 'general',
-      tag: 'Cập nhật',
-      text: raw,
+      label: 'Cải tiến mới',
       icon: CheckCircle,
-      colorClass: 'text-emerald-600',
-      badgeClass: 'bg-emerald-100 text-emerald-700'
+      colorClass: 'text-emerald-700',
+      bgClass: 'bg-emerald-50',
+      borderClass: 'border-emerald-200/80'
     };
   }
 
@@ -115,10 +126,34 @@
     return 1;
   }
 
-  const displayChangelog = $derived.by(() => {
+  // Khử trùng lặp các nhãn giống nhau để chia cột icon đẹp mắt và gọn gàng
+  const displayBadges = $derived.by(() => {
     const diff = getVersionDifference(clientVersion, newVersion);
     const count = diff > 0 ? diff : 3;
-    return changelog.slice(0, Math.min(count, 4));
+    const items = changelog.slice(0, Math.min(count, 6));
+
+    const seenLabels = new Set<string>();
+    const result: ParsedBadge[] = [];
+
+    for (const commit of items) {
+      const badge = parseCommitToBadge(commit.title);
+      if (!seenLabels.has(badge.label)) {
+        seenLabels.add(badge.label);
+        result.push(badge);
+      }
+    }
+
+    if (result.length === 0) {
+      result.push({
+        label: 'Tính năng mới!',
+        icon: Sparkle,
+        colorClass: 'text-blue-700',
+        bgClass: 'bg-blue-50',
+        borderClass: 'border-blue-200/80'
+      });
+    }
+
+    return result.slice(0, 4);
   });
 
   $effect(() => {
@@ -209,7 +244,7 @@
 
 {#if appState.updateModalOpen}
   <div
-    class="fixed inset-0 z-[250] flex items-center justify-center p-3 sm:p-4 bg-black/55 backdrop-blur-md transition-all duration-200"
+    class="fixed inset-0 z-[250] flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-md transition-all duration-200"
     transition:fade={{ duration: 150 }}
     role="presentation"
   >
@@ -221,9 +256,9 @@
       aria-label="Đóng"
     ></button>
 
-    <!-- Modal Box -->
+    <!-- Modal Box: Rộng rãi, sạch đẹp theo phong cách Duolingo / App Store -->
     <div
-      class="relative z-10 w-full max-w-sm overflow-hidden flex flex-col items-center text-center p-5 sm:p-6 bg-white rounded-3xl shadow-2xl border border-slate-200 animate-[pop_0.15s_ease]"
+      class="relative z-10 w-full max-w-sm overflow-hidden flex flex-col items-center text-center p-6 sm:p-7 bg-white rounded-[2rem] shadow-2xl border border-slate-200/90 animate-[pop_0.15s_ease]"
       transition:scale={{ duration: 250, start: 0.94, opacity: 0 }}
       role="dialog"
       aria-modal="true"
@@ -232,24 +267,25 @@
         <button
           type="button"
           onclick={handleDismiss}
-          class="absolute top-3.5 right-3.5 w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-200 cursor-pointer transition-colors"
+          class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-200 cursor-pointer transition-colors"
           aria-label="Đóng"
         >
-          <X weight="bold" class="w-3.5 h-3.5" />
+          <X weight="bold" class="w-4 h-4" />
         </button>
       {/if}
 
       <!-- Ambient Glow Blobs -->
-      <div class="pointer-events-none absolute -top-12 -left-12 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-12 -right-12 h-40 w-40 rounded-full bg-orange-500/10 blur-3xl"></div>
+      <div class="pointer-events-none absolute -top-16 -left-16 h-48 w-48 rounded-full bg-blue-500/15 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-16 -right-16 h-48 w-48 rounded-full bg-orange-500/15 blur-3xl"></div>
 
-      <!-- Vùng hình ảnh Mascot Gấu Trúc cưỡi Tên lửa & Tiến trình -->
-      <div class="relative z-10 w-36 h-36 flex items-center justify-center mb-1">
-        <div class="absolute inset-0 bg-blue-500/10 blur-2xl rounded-full scale-110"></div>
+      <!-- Vùng hình ảnh Mascot Gấu Trúc cưỡi Tên lửa TO & HOÀNH TRÁNG -->
+      <div class="relative z-10 w-48 h-48 sm:w-52 sm:h-52 flex items-center justify-center mb-1">
+        <!-- Ánh sáng hào quang mở rộng phía sau mascot -->
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/15 to-sky-400/15 blur-2xl rounded-full scale-110"></div>
 
         {#if isUpdating}
           <div class="absolute inset-0 flex items-center justify-center z-20" transition:fade={{ duration: 150 }}>
-            <svg class="w-32 h-32" viewBox="0 0 100 100">
+            <svg class="w-40 h-40" viewBox="0 0 100 100">
               <circle
                 cx="50" cy="50" r="45"
                 stroke="currentColor" stroke-width="3"
@@ -257,7 +293,7 @@
                 class="text-slate-100"
               />
               <circle
-                cx="50" cy="50" r="45"
+                cx="50" cy="50" r="4.5"
                 stroke="currentColor" stroke-width="4.5"
                 fill="none"
                 class="text-blue-600"
@@ -269,76 +305,63 @@
               />
             </svg>
             <div class="absolute flex flex-col items-center">
-              <span class="text-2xl font-black text-blue-600 drop-shadow-2xs">{progress}%</span>
-              <span class="text-[9px] font-black uppercase tracking-wider text-slate-400">Nâng cấp</span>
+              <span class="text-3xl font-black text-blue-600 drop-shadow-2xs">{progress}%</span>
+              <span class="text-[9px] font-black uppercase tracking-wider text-slate-400 mt-0.5">Nâng cấp</span>
             </div>
           </div>
         {/if}
 
-        <!-- Mascot Panda cưỡi Tên lửa -->
+        <!-- Mascot Gấu Trúc to rõ ràng, nổi bật với shadow sâu và animation hover/active -->
         <div
           class={`transition-all duration-700 ease-in-out relative z-10 flex items-center justify-center select-none ${
-            !isUpdating ? 'scale-100 hover:scale-105' : 'scale-50 translate-y-1 opacity-20'
-          } ${isLaunched ? 'translate-y-[-260px] opacity-0 scale-50' : ''}`}
+            !isUpdating ? 'scale-100 hover:scale-105 active:scale-95' : 'scale-50 translate-y-2 opacity-20'
+          } ${isLaunched ? 'translate-y-[-280px] opacity-0 scale-50' : ''}`}
         >
           <img
             src="/icons/rocket-panda.webp"
             alt="HSK Mascot Rocket"
-            class="w-32 h-32 object-contain drop-shadow-[0_12px_24px_rgba(37,99,235,0.22)] pointer-events-none"
+            class="w-44 h-44 sm:w-48 sm:h-48 object-contain drop-shadow-[0_16px_30px_rgba(37,99,235,0.25)] pointer-events-none"
             loading="eager"
           />
         </div>
 
         {#if isLaunched}
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 w-1.5 h-24 bg-gradient-to-b from-blue-500 to-transparent opacity-80 blur-xs" transition:fade></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 w-2 h-28 bg-gradient-to-b from-blue-500 to-transparent opacity-85 blur-xs" transition:fade></div>
         {/if}
       </div>
 
-      <!-- Tiêu đề & Version -->
-      <div class="relative z-10 flex flex-col items-center mb-3">
-        <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-600 text-[11px] font-black mb-1 border border-blue-200/60">
-          <Sparkle weight="fill" class="w-3 h-3" />
-          <span>Phiên bản v{newVersion}</span>
-        </div>
-        <h2 class="text-lg font-black text-slate-800 tracking-tight">
-          Sẵn sàng nâng cấp
+      <!-- Tiêu đề phiên bản gọn gàng -->
+      <div class="relative z-10 flex flex-col items-center mb-4">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-tight">
+          Đã có phiên bản mới
         </h2>
-        <p class="text-[11px] text-slate-500 leading-snug max-w-[260px] mt-0.5">
-          Khám phá những tối ưu và cải tiến từ vựng mới nhất.
+        <p class="text-xs text-slate-500 leading-relaxed max-w-[280px] mt-1">
+          Phiên bản <b>v{newVersion}</b> đã sẵn sàng với nhiều cải tiến thú vị dành cho bạn.
         </p>
       </div>
 
-      <!-- Danh sách Changelog ngắn gọn với Icon và Regex -->
+      <!-- Nội dung mới: Chia thành các cột icon đứng gần nhau, dưới có nhãn ngắn gọn -->
       {#if !isUpdating}
-        <div class="relative z-10 w-full mb-4 px-0.5">
+        <div class="relative z-10 w-full mb-6 px-1">
           {#if isLoading}
-            <div class="flex flex-col gap-1.5 rounded-2xl p-3.5 h-24 justify-center items-center text-slate-400 text-xs bg-slate-50/80 border border-slate-200/80">
-              <CircleNotch size={16} class="animate-spin text-blue-600 mb-0.5" />
-              <span class="text-[11px]">Đang kiểm tra thay đổi...</span>
+            <div class="flex items-center justify-center gap-2 py-3 text-slate-400 text-xs">
+              <CircleNotch size={16} class="animate-spin text-blue-600" />
+              <span>Đang kiểm tra...</span>
             </div>
           {:else if fetchError}
-            <div class="rounded-2xl p-3 text-center text-slate-400 text-xs bg-slate-50 border border-slate-200/80">
-              {fetchError}
-            </div>
-          {:else if displayChangelog.length > 0}
-            <div class="rounded-2xl p-2.5 max-h-36 overflow-y-auto no-scrollbar text-left flex flex-col gap-1.5 bg-slate-50 border border-slate-200/90">
-              <div class="text-[9px] font-black uppercase tracking-wider text-slate-400 px-1 flex items-center justify-between">
-                <span>Nội dung mới ({displayChangelog.length})</span>
-                <span class="lowercase text-[9px]">chính thức</span>
-              </div>
-
-              {#each displayChangelog as commit}
-                {@const item = parseCommitMessage(commit.title)}
-                {@const ItemIcon = item.icon}
-                <div class="flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200/60 shadow-2xs">
-                  <div class={`w-6 h-6 rounded-lg flex items-center justify-center shrink-0 ${item.badgeClass}`}>
-                    <ItemIcon weight="bold" class="w-3.5 h-3.5" />
+            <p class="text-xs text-slate-400 py-2">{fetchError}</p>
+          {:else if displayBadges.length > 0}
+            <!-- Lưới các cột icon đứng gần nhau, dưới mỗi icon là nhãn ngắn gọn -->
+            <div class="flex items-center justify-center gap-2.5 sm:gap-3 flex-wrap">
+              {#each displayBadges as badge}
+                {@const BadgeIcon = badge.icon}
+                <div class="flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-50 border border-slate-100 shadow-2xs min-w-[70px] sm:min-w-[76px] transition-transform hover:-translate-y-0.5">
+                  <div class={`w-10 h-10 rounded-xl flex items-center justify-center border shadow-xs ${badge.bgClass} ${badge.colorClass} ${badge.borderClass}`}>
+                    <BadgeIcon weight="duotone" class="w-5 h-5" />
                   </div>
-                  <div class="min-w-0 flex-1">
-                    <p class="text-xs text-slate-800 font-bold truncate leading-tight">
-                      {item.text}
-                    </p>
-                  </div>
+                  <span class="text-[11px] font-black text-slate-700 tracking-tight text-center leading-none">
+                    {badge.label}
+                  </span>
                 </div>
               {/each}
             </div>
@@ -346,21 +369,21 @@
         </div>
       {/if}
 
-      <!-- Nút hành động -->
+      <!-- Nút hành động to rõ ràng, phong cách Duolingo / Modern App -->
       {#if !isUpdating}
-        <div class="relative z-10 flex flex-col gap-1.5 w-full px-0.5">
+        <div class="relative z-10 flex flex-col gap-2 w-full px-1">
           <button
             type="button"
-            class="w-full py-2.5 rounded-xl text-xs font-black uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-600/25 flex items-center justify-center gap-1.5 transition-all active:scale-95 cursor-pointer"
+            class="w-full h-12 rounded-2xl text-xs sm:text-sm font-black uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] cursor-pointer"
             onclick={handleUpdate}
           >
-            <Rocket size={15} weight="bold" />
-            <span>Nâng cấp ngay</span>
+            <Rocket size={17} weight="bold" />
+            <span>Cập nhật ứng dụng</span>
           </button>
 
           <button
             type="button"
-            class="w-full py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+            class="w-full py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-slate-700 transition-colors cursor-pointer"
             onclick={handleDismiss}
           >
             Để sau
@@ -368,8 +391,8 @@
         </div>
       {:else}
         <div class="relative z-10 flex items-center gap-2 text-blue-600 font-extrabold text-xs animate-pulse py-2">
-          <CircleNotch size={14} class="animate-spin" />
-          <span>Đang làm mới dữ liệu & nạp tính năng...</span>
+          <CircleNotch size={15} class="animate-spin" />
+          <span>Đang làm mới dữ liệu & nạp phiên bản mới...</span>
         </div>
       {/if}
     </div>

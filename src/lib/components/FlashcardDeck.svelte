@@ -38,6 +38,8 @@
 
   // 3D Flip state (local flip card toggle)
   let isFlipped = $state(false);
+  let skipFlipTransition = $state(false);
+  let hasDragged = $state(false);
 
   // Card counter để nhận biết card đầu tiên
   let cardCount = $state(0);
@@ -46,14 +48,22 @@
   let idleTimer: any = null;
   let lastItemId = $state<string | null>(null);
 
-  // Khi chuyển card mới, reset lật & quản lý hint/idle timer
+  // Khi chuyển card mới, reset lật ngay lập tức không transition & quản lý hint/idle timer
   $effect(() => {
     const currentId = appState.currentFlashItem?.id ?? null;
     if (currentId && currentId !== lastItemId) {
       lastItemId = currentId;
       untrack(() => {
+        skipFlipTransition = true;
         isFlipped = false;
         cardCount++;
+
+        // Cho phép transition quay lại sau khi DOM commit trạng thái thẳng (0deg)
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            skipFlipTransition = false;
+          });
+        });
 
         // Card đầu tiên: hiện hướng dẫn
         if (cardCount === 1) {
