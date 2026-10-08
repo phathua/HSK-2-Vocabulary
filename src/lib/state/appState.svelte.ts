@@ -2,6 +2,7 @@ import { HSK2_VOCABULARY, LESSON_INFOS as HSK2_LESSON_INFOS, type VocabItem, typ
 import { HSK1_VOCABULARY, HSK1_LESSON_INFOS } from '#lib/data/hsk1Vocabulary';
 import { shuffleArray, speakChinese, checkPinyinAnswer } from '#lib/utils/speech';
 import { generateDistractors } from '#lib/utils/distractors';
+import { buildWordChunks, type WordChunk, type ChoiceTile, type TileSlot } from '#lib/utils/pinyinDistractor';
 
 export type HskLevel = 'HSK1' | 'HSK2';
 export type AppTab = 'fill' | 'quiz' | 'flash' | 'speech';
@@ -19,10 +20,12 @@ export class AppState {
   filterModalOpen = $state(false);
   settingsModalOpen = $state(false);
   updateModalOpen = $state(false);
+  sidebarOpen = $state(false);
 
   // Cài đặt
   autoPlay = $state(false);
   volume = $state(0.7);
+  theme = $state<'light' | 'dark'>('dark');
 
   // Bài học chọn lọc (Bài 1-15 cho từng cấp độ)
   selectedLessonsHsk1 = $state<Record<number, boolean>>({});
@@ -48,6 +51,9 @@ export class AppState {
   fillDeck = $state<VocabItem[]>([]);
   currentFillItem = $state<VocabItem | null>(null);
   fillInput = $state('');
+  fillSubMode = $state<'tiles' | 'keyboard'>('tiles'); // 'tiles' (Chọn từ) hoặc 'keyboard' (Thủ công)
+  fillWordChunks = $state<import('#lib/utils/pinyinDistractor').WordChunk[]>([]);
+  currentChunkIndex = $state(0);
   fillAnswered = $state(false);
   fillCorrect = $state(0);
   fillWrong = $state(0);
@@ -152,12 +158,42 @@ export class AppState {
       this.autoPlay = localStorage.getItem('HSK_AUTOPLAY') === 'true';
       const vol = localStorage.getItem('HSK_VOLUME');
       this.volume = vol ? parseFloat(vol) : 0.7;
+
+      const savedTheme = localStorage.getItem('HSK_THEME') as 'light' | 'dark';
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        this.theme = savedTheme;
+      } else {
+        this.theme = 'dark';
+      }
+      const savedFillSubMode = localStorage.getItem('HSK_FILL_SUBMODE') as 'tiles' | 'keyboard';
+      if (savedFillSubMode === 'tiles' || savedFillSubMode === 'keyboard') {
+        this.fillSubMode = savedFillSubMode;
+      }
+
+      this.applyTheme();
+      this.ensureInitialized();
     } catch (e) {
       console.warn('Could not read from localStorage', e);
     }
   }
 
+  applyTheme() {
+    if (typeof document === 'undefined') return;
+    if (this.theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+
+  toggleTheme() {
+    this.theme = this.theme === 'dark' ? 'light' : 'dark';
+    this.applyTheme();
+    this.saveToLocalStorage();
+  }
+
   ensureInitialized() {
+    this.applyTheme();
     if (this.fillDeck.length === 0 || !this.currentFillItem) {
       this.initFill(undefined, false);
     }
@@ -178,11 +214,13 @@ export class AppState {
       localStorage.setItem('HSK_CURRENT_LEVEL', this.currentLevel);
       localStorage.setItem('HSK_DIRECTION', this.direction);
       localStorage.setItem('HSK_ACTIVE_TAB', this.activeTab);
+      localStorage.setItem('HSK_FILL_SUBMODE', this.fillSubMode);
       localStorage.setItem('HSK1_SELECTED_LESSONS', JSON.stringify(this.selectedLessonsHsk1));
       localStorage.setItem('HSK2_SELECTED_LESSONS', JSON.stringify(this.selectedLessonsHsk2));
       localStorage.setItem('HSK_AUTOPLAY', this.autoPlay ? 'true' : 'false');
       localStorage.setItem('HSK_VOLUME', this.volume.toString());
       localStorage.setItem('HSK_SPEECH_AUTO_SUBMIT', this.speechAutoSubmit ? 'true' : 'false');
+      localStorage.setItem('HSK_THEME', this.theme);
     } catch {}
   }
 
@@ -230,6 +268,112 @@ export class AppState {
     if (text) speakChinese(text, this.volume);
   }
 
+  toggleFillSubMode() {
+    this.fillSubMode = this.fillSubMode === 'tiles' ? 'keyboard' : 'tiles';
+    this.saveToLocalStorage();
+  }
+
+  // Khởi tạo chunks cho từ hiện tại
+  setupFillChunks() {
+    if (!this.currentFillItem) {
+      this.fillWordChunks = [];
+      this.currentChunkIndex = 0;
+      return;
+    }
+    const isZhToVi = this.direction === 'zh_to_vi';
+    // Chế độ 'tiles' chỉ hoạt động khi điền Pinyin tiếng Trung (vi_to_zh)
+    // Nếu zh_to_vi, ta dùng text input hoặc nếu có pinyin thì chunks theo pinyin
+    this.fillWordChunks = buildWordChunks(this.currentFillItem.pinyin);
+    this.currentChunkIndex = 0;
+    this.syncFillInputFromChunks();
+  }
+
+  // Đồng bộ giá trị fillInput từ các slot đã điền
+  syncFillInputFromChunks() {
+    if (this.fillWordChunks.length === 0) return;
+    const wordParts = this.fillWordChunks.map(chunk => {
+      return chunk.slots.map(s => s.userChar || '').join('');
+    });
+    this.fillInput = wordParts.join(' ');
+  }
+
+  // Người dùng chọn 1 Tile
+  selectTile(chunkIdx: number, tileId: string) {
+    if (this.fillAnswered) return;
+    const chunk = this.fillWordChunks[chunkIdx];
+    if (!chunk) return;
+
+    const tile = chunk.tiles.find(t => t.id === tileId);
+    if (!tile || tile.isUsed) return;
+
+    // Tìm ô slot đầu tiên còn trống chưa được điền
+    const emptySlot = chunk.slots.find(s => !s.userChar);
+    if (!emptySlot) return;
+
+    // Gán ký tự vào slot
+    emptySlot.userChar = tile.char;
+    emptySlot.tileId = tile.id;
+    tile.isUsed = true;
+
+    this.syncFillInputFromChunks();
+
+    // Kiểm tra xem tất cả các slot trong chunk hiện tại đã điền xong chưa
+    const chunkFilled = chunk.slots.every(s => s.userChar !== null);
+    if (chunkFilled) {
+      // Nếu còn chunk tiếp theo, tự động chuyển sang chunk tiếp theo
+      if (this.currentChunkIndex < this.fillWordChunks.length - 1) {
+        this.currentChunkIndex++;
+      } else {
+        // Nếu đã điền hết tất cả các chunk, tự động kiểm tra đáp án
+        const allFilled = this.fillWordChunks.every(c => c.slots.every(s => s.userChar !== null));
+        if (allFilled) {
+          this.checkFillAnswer();
+        }
+      }
+    }
+  }
+
+  // Người dùng bấm vào Slot để gỡ ký tự ra (Undo)
+  unselectSlot(chunkIdx: number, slotId: string) {
+    if (this.fillAnswered) return;
+    const chunk = this.fillWordChunks[chunkIdx];
+    if (!chunk) return;
+
+    const slot = chunk.slots.find(s => s.id === slotId);
+    if (!slot || slot.isPreFilled || !slot.tileId) return;
+
+    // Trả lại trạng thái cho tile
+    const tile = chunk.tiles.find(t => t.id === slot.tileId);
+    if (tile) {
+      tile.isUsed = false;
+    }
+
+    slot.userChar = null;
+    slot.tileId = null;
+
+    this.syncFillInputFromChunks();
+  }
+
+  // Xoá ký tự vừa nhập gần nhất trong chunk hiện tại (Backspace)
+  backspaceSlot(chunkIdx: number) {
+    if (this.fillAnswered) return;
+    const chunk = this.fillWordChunks[chunkIdx];
+    if (!chunk) return;
+
+    // Tìm slot được điền cuối cùng (không phải prefilled)
+    const filledSlots = chunk.slots.filter(s => !s.isPreFilled && s.userChar !== null);
+    if (filledSlots.length === 0) {
+      // Nếu chunk này trống mà đang ở chunk > 0, lùi về chunk trước
+      if (this.currentChunkIndex > 0) {
+        this.currentChunkIndex--;
+      }
+      return;
+    }
+
+    const lastSlot = filledSlots[filledSlots.length - 1];
+    this.unselectSlot(chunkIdx, lastSlot.id);
+  }
+
   // ==================== 1. CHẾ ĐỘ ĐIỀN TỪ (FILL WORD) ====================
   initFill(sourceList?: VocabItem[], reviewMode = false) {
     const list = sourceList && sourceList.length > 0 ? sourceList : this.filteredVocab;
@@ -249,6 +393,8 @@ export class AppState {
     if (!reviewMode) this.wrongFillWords = [];
     this.isFillReviewMode = reviewMode;
     this.animKey++;
+
+    this.setupFillChunks();
 
     // Tự động phát âm chỉ khi ở chế độ vi_to_zh hoặc khi người dùng bật autoplay
     if (curr && this.autoPlay) {
@@ -271,9 +417,11 @@ export class AppState {
     if (remaining.length > 0) {
       const nextItem = remaining[remaining.length - 1];
       this.currentFillItem = nextItem;
+      this.setupFillChunks();
       if (this.autoPlay) speakChinese(nextItem.hanzi, this.volume);
     } else {
       this.currentFillItem = null;
+      this.fillWordChunks = [];
     }
   }
 
