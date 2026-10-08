@@ -151,11 +151,11 @@
     </div>
 
     <!-- SVG Infographic minh họa -->
-    <div class="rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#141415] border border-slate-200/70 dark:border-[#282A2C] p-1.5 sm:p-2">
+    <div class="rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#18191A] border border-slate-200/80 dark:border-[#333537] p-2 sm:p-3 flex items-center justify-center">
       <img
         src={`/svg/grammar/infographic_${point.id}.svg`}
         alt={`Sơ đồ cấu trúc ${point.title}`}
-        class="w-full h-auto object-contain max-h-56 sm:max-h-64"
+        class="w-full h-auto object-contain max-h-64 sm:max-h-72 select-none"
         loading="lazy"
       />
     </div>
