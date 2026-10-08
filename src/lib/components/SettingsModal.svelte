@@ -79,6 +79,9 @@
           <button
             type="button"
             onclick={() => {
+              if (typeof window !== 'undefined') {
+                sessionStorage.removeItem('dismissUpdate');
+              }
               appState.settingsModalOpen = false;
               appState.updateModalOpen = true;
             }}
