@@ -9,7 +9,7 @@
   import GrammarDetailView from '#lib/components/grammar/GrammarDetailView.svelte';
 
   // Phosphor Icons
-  import CaretLeft from 'phosphor-svelte/lib/CaretLeft';
+  import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
   import Eye from 'phosphor-svelte/lib/Eye';
 
   const slug = $derived(page.params.slug);
@@ -68,7 +68,7 @@
       onclick={() => goto('/ngu-phap')}
       class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] text-slate-700 dark:text-slate-200 text-xs font-bold transition-all cursor-pointer active:scale-95"
     >
-      <CaretLeft weight="bold" class="w-4 h-4" />
+      <ArrowLeft weight="bold" class="w-4 h-4" />
       <span>Danh mục ngữ pháp</span>
     </button>
 

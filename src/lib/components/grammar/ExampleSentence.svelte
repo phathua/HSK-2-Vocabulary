@@ -19,11 +19,17 @@
   }
 </script>
 
+<!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
-  class="group/sentence flex items-start justify-between gap-3 p-3 rounded-2xl bg-white dark:bg-[#1E1E1F] border border-slate-200/80 dark:border-[#2C2D2F] hover:border-blue-300 dark:hover:border-blue-700/60 transition-all"
+  class="group/sentence flex items-start justify-between gap-3 p-2.5 sm:p-3 rounded-2xl bg-white dark:bg-[#1E1E1F] border border-slate-200/80 dark:border-[#2C2D2F] hover:border-blue-300 dark:hover:border-blue-700/60 transition-all cursor-pointer sm:cursor-default"
   onmouseenter={() => (isHovered = true)}
   onmouseleave={() => (isHovered = false)}
+  onclick={() => {
+    if (pinyinMode === 'hover') {
+      isHovered = !isHovered;
+    }
+  }}
 >
   <div class="flex-1 min-w-0">
     <!-- Hanzi & Pinyin -->
@@ -34,8 +40,8 @@
           {sentence.pinyin}
         </div>
       {:else if pinyinMode === 'hover'}
-        <div class="text-[11px] font-medium text-slate-400 dark:text-slate-600 italic select-none">
-          Rê chuột để hiện Pinyin
+        <div class="text-[10px] sm:text-[11px] font-medium text-slate-400 dark:text-slate-500 italic select-none">
+          Chạm hoặc rê chuột để xem Pinyin
         </div>
       {/if}
 
