@@ -7,6 +7,7 @@
     answers: Record<number, string>;
     flagged: Record<number, boolean>;
     isExamSubmitted?: boolean;
+    mode?: 'exam' | 'practice';
     correctMap?: Record<number, boolean>;
     onScrollTo: (qNo: number) => void;
   }
@@ -16,6 +17,7 @@
     answers,
     flagged,
     isExamSubmitted = false,
+    mode = 'exam',
     correctMap = {},
     onScrollTo
   }: Props = $props();
@@ -54,8 +56,9 @@
     {#each numbers as qNo}
       {@const isAnswered = !!answers[qNo]}
       {@const isFlag = !!flagged[qNo]}
-      {@const isCorrect = isExamSubmitted && correctMap[qNo] === true}
-      {@const isWrong = isExamSubmitted && correctMap[qNo] === false}
+      {@const shouldShowResult = isExamSubmitted || (mode === 'practice' && isAnswered)}
+      {@const isCorrect = shouldShowResult && correctMap[qNo] === true}
+      {@const isWrong = shouldShowResult && correctMap[qNo] === false}
 
       <button
         type="button"

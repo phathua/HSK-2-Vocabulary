@@ -35,12 +35,18 @@
   let isImageZoomed = $state(false);
 
   // Suy đoán các lựa chọn trả lời tùy theo phần thi
-  const optionChoices = $derived.by(() => {
+  interface ChoiceOption {
+    label: string;
+    value: string;
+    icon?: 'check' | 'x';
+  }
+
+  const optionChoices = $derived.by((): ChoiceOption[] => {
     // True/False
     if (question.type.includes('True/False')) {
       return [
-        { label: 'Đúng (√)', value: '√' },
-        { label: 'Sai (×)', value: '×' }
+        { label: 'Đúng', value: '√', icon: 'check' },
+        { label: 'Sai', value: '×', icon: 'x' }
       ];
     }
     // Tranh A - F
@@ -179,6 +185,11 @@
             : 'bg-slate-50 dark:bg-neutral-800/60 hover:bg-slate-100 dark:hover:bg-neutral-700/60 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-neutral-700'
         }"
       >
+        {#if opt.icon === 'check'}
+          <Check weight="bold" class="w-4 h-4" />
+        {:else if opt.icon === 'x'}
+          <X weight="bold" class="w-4 h-4" />
+        {/if}
         <span>{opt.label}</span>
       </button>
     {/each}
@@ -190,10 +201,30 @@
       <div class="flex items-center gap-2 font-black mb-1">
         {#if isCorrect}
           <Check weight="bold" class="w-4 h-4 text-emerald-600" />
-          <span>Chính xác! Đáp án đúng: {question.answer}</span>
+          <span>
+            Chính xác! Đáp án đúng:
+            {#if question.answer === '√'}
+              Đúng
+            {:else if question.answer === '×'}
+              Sai
+            {:else}
+              {question.answer}
+            {/if}
+          </span>
         {:else}
           <X weight="bold" class="w-4 h-4 text-rose-600" />
-          <span>Chưa đúng! Đáp án đúng là: <strong>{question.answer}</strong></span>
+          <span>
+            Chưa đúng! Đáp án đúng là:
+            <strong>
+              {#if question.answer === '√'}
+                Đúng
+              {:else if question.answer === '×'}
+                Sai
+              {:else}
+                {question.answer}
+              {/if}
+            </strong>
+          </span>
         {/if}
       </div>
 

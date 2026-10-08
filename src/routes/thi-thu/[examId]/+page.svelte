@@ -306,6 +306,7 @@
           totalQuestions={exam.total_questions}
           {answers}
           {flagged}
+          {mode}
           isExamSubmitted={isSubmitted}
           correctMap={scoreResults.correctMap}
           onScrollTo={handleScrollTo}
@@ -349,6 +350,7 @@
           totalQuestions={exam.total_questions}
           {answers}
           {flagged}
+          {mode}
           isExamSubmitted={isSubmitted}
           correctMap={scoreResults.correctMap}
           onScrollTo={(qNo) => {

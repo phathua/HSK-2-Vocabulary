@@ -14,7 +14,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 1",
       "answer": "×",
-      "listening_script": "×",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_01.webp",
       "board_image": null
     },
@@ -27,7 +27,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 2",
       "answer": "√",
-      "listening_script": "√",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_02.webp",
       "board_image": null
     },
@@ -40,7 +40,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 3",
       "answer": "√",
-      "listening_script": "√",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_03.webp",
       "board_image": null
     },
@@ -53,7 +53,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 4",
       "answer": "×",
-      "listening_script": "×",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_04.webp",
       "board_image": null
     },
@@ -66,7 +66,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 5",
       "answer": "×",
-      "listening_script": "×",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_05.webp",
       "board_image": null
     },
@@ -79,7 +79,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 6",
       "answer": "√",
-      "listening_script": "√",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_06.webp",
       "board_image": null
     },
@@ -92,7 +92,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 7",
       "answer": "√",
-      "listening_script": "√",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_07.webp",
       "board_image": null
     },
@@ -105,7 +105,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 8",
       "answer": "√",
-      "listening_script": "√",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_08.webp",
       "board_image": null
     },
@@ -118,7 +118,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 9",
       "answer": "×",
-      "listening_script": "×",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_09.webp",
       "board_image": null
     },
@@ -131,7 +131,7 @@
       "type": "True/False",
       "text": "Câu hỏi nghe số 10",
       "answer": "×",
-      "listening_script": "×",
+      "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_10.webp",
       "board_image": null
     },
@@ -299,7 +299,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 23",
-      "answer": "A",
+      "answer": "B",
       "listening_script": "B",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_23.webp",
       "board_image": null
@@ -325,7 +325,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 25",
-      "answer": "A",
+      "answer": "C",
       "listening_script": "C",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_25.webp",
       "board_image": null
@@ -338,7 +338,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 26",
-      "answer": "A",
+      "answer": "C",
       "listening_script": "C",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_26.webp",
       "board_image": null
@@ -364,7 +364,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 28",
-      "answer": "A",
+      "answer": "B",
       "listening_script": "B",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_28.webp",
       "board_image": null
@@ -377,7 +377,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 29",
-      "answer": "A",
+      "answer": "C",
       "listening_script": "C",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_29.webp",
       "board_image": null
@@ -390,7 +390,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 30",
-      "answer": "A",
+      "answer": "B",
       "listening_script": "B",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_30.webp",
       "board_image": null
@@ -415,7 +415,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 32",
-      "answer": "A",
+      "answer": "B",
       "listening_script": "B",
       "board_image": null
     },
@@ -427,7 +427,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 33",
-      "answer": "A",
+      "answer": "C",
       "listening_script": "C",
       "board_image": null
     },
@@ -439,7 +439,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 34",
-      "answer": "A",
+      "answer": "B",
       "listening_script": "B",
       "board_image": null
     },
@@ -451,7 +451,7 @@
       "image": null,
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 35",
-      "answer": "A",
+      "answer": "C",
       "listening_script": "C 二、阅读 第一部分",
       "board_image": null
     },
@@ -475,7 +475,7 @@
       "image": null,
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 37",
-      "answer": "D",
+      "answer": "E",
       "listening_script": "",
       "board_image": "images/H2-YJ_board_36_40.webp"
     },
@@ -499,7 +499,7 @@
       "image": null,
       "type": "Sentence Match",
       "text": "Câu hỏi đọc số 39",
-      "answer": "F",
+      "answer": "B",
       "listening_script": "",
       "board_image": "images/H2-YJ_board_36_40.webp"
     },
@@ -535,7 +535,7 @@
       "image": null,
       "type": "Fill Blank",
       "text": "Câu hỏi đọc số 42",
-      "answer": "D",
+      "answer": "A",
       "listening_script": "",
       "board_image": null
     },
@@ -583,7 +583,7 @@
       "image": null,
       "type": "True/False",
       "text": "Câu hỏi đọc số 46",
-      "answer": "D",
+      "answer": "√",
       "listening_script": "",
       "board_image": null
     },
@@ -619,7 +619,7 @@
       "image": null,
       "type": "True/False",
       "text": "Câu hỏi đọc số 49",
-      "answer": "D",
+      "answer": "√",
       "listening_script": "",
       "board_image": null
     },
