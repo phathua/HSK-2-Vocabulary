@@ -38,6 +38,7 @@ export interface GrammarPoint {
   levelLabel: string;
   origin: 'inherited' | 'new' | 'advanced';
   originLabel: string;
+  slug: string;
   title: string;
   grammarKey: string;
   grammarKeyPinyin: string;
@@ -61,6 +62,7 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 1: Dễ',
     origin: 'inherited',
     originLabel: 'Kế thừa HSK 1',
+    slug: 'cau-truc-phan-doan-hien-huu-shi-you',
     title: 'Cấu trúc phán đoán & Hiện hữu với 是 / 有',
     grammarKey: '是 / 有',
     grammarKeyPinyin: 'shì / yǒu',
@@ -115,6 +117,7 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 1: Dễ',
     origin: 'inherited',
     originLabel: 'Kế thừa HSK 1',
+    slug: 'tro-tu-dong-thai-bien-doi-trang-thai-le',
     title: 'Trợ từ động thái & Biến đổi trạng thái 了',
     grammarKey: '了',
     grammarKeyPinyin: 'le',
@@ -170,6 +173,7 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 1: Dễ',
     origin: 'inherited',
     originLabel: 'Kế thừa HSK 1',
+    slug: 'tro-tu-ket-cau-de-cum-danh-tu-luoc-bo',
     title: 'Trợ từ kết cấu 的 & Cụm danh từ lược bỏ',
     grammarKey: '的',
     grammarKeyPinyin: 'de',
@@ -224,6 +228,7 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 1: Dễ',
     origin: 'inherited',
     originLabel: 'Kế thừa HSK 1',
+    slug: 'hoi-so-luong-muc-do-voi-duo',
     title: 'Hỏi số lượng / Mức độ với 多 (duō)',
     grammarKey: '多 + Tính từ',
     grammarKeyPinyin: 'duō + xíng róng cí',
@@ -278,6 +283,7 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 1: Dễ',
     origin: 'inherited',
     originLabel: 'Kế thừa HSK 1',
+    slug: 'hanh-dong-dang-dien-ra-zhengzai-ne',
     title: 'Diễn tả hành động đang diễn ra 正在 / 在... 呢',
     grammarKey: '正在 / 在... 呢',
     grammarKeyPinyin: 'zhèng zài / zài... ne',
@@ -335,6 +341,7 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 2: Trung bình',
     origin: 'inherited',
     originLabel: 'Trọng tâm HSK 2',
+    slug: 'cau-truc-nhan-manh-shi-de',
     title: 'Cấu trúc nhấn mạnh 是……的 (shì...de)',
     grammarKey: '是……的',
     grammarKeyPinyin: 'shì...de',
@@ -391,11 +398,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 2: Trung bình',
     origin: 'new',
     originLabel: 'Mới ở HSK 2',
+    slug: 'pho-tu-nhan-manh-nhat-quan-jiu',
     title: 'Phó từ nhấn mạnh & Nhất quán 就 (jiù)',
     grammarKey: '就',
     grammarKeyPinyin: 'jiù',
     textbookRef: {
-      hsk1: 'Chưa học trong cấu trúc ngữ pháp',
       hsk2: 'Bài 4 (Trang 48)'
     },
     legoFormula: [
@@ -445,11 +452,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 2: Trung bình',
     origin: 'new',
     originLabel: 'Mới ở HSK 2',
+    slug: 'pho-tu-lap-lai-tuong-lai-zai',
     title: 'Phó từ lặp lại trong tương lai 再 (zài)',
     grammarKey: '再',
     grammarKeyPinyin: 'zài',
     textbookRef: {
-      hsk1: 'Chỉ học từ cố định 再见 (zàijiàn)',
       hsk2: 'Bài 7 (Trang 78)'
     },
     legoFormula: [
@@ -499,11 +506,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 2: Trung bình',
     origin: 'new',
     originLabel: 'Mới ở HSK 2',
+    slug: 'trang-thai-sap-xay-ra-kuaiyao-jiuyao-le',
     title: 'Trạng thái sắp xảy ra 快要 / 就要 / 快... 了',
     grammarKey: '快要 / 就要... 了',
     grammarKeyPinyin: 'kuài yào / jiù yào... le',
     textbookRef: {
-      hsk1: 'Chưa học cấu trúc này',
       hsk2: 'Bài 12 (Trang 118)'
     },
     legoFormula: [
@@ -554,6 +561,7 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 2: Trung bình',
     origin: 'new',
     originLabel: 'Mới ở HSK 2',
+    slug: 'cau-cau-khien-cam-doan-bie-buyao-le',
     title: 'Câu cầu khiến cấm đoán 别 / 不要... 了',
     grammarKey: '别 / 不要... 了',
     grammarKeyPinyin: 'bié / bú yào... le',
@@ -609,11 +617,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 2: Trung bình',
     origin: 'new',
     originLabel: 'Mới ở HSK 2',
+    slug: 'gioi-tu-chi-khoang-cach-li',
     title: 'Giới từ chỉ khoảng cách 离 (lí)',
     grammarKey: '离',
     grammarKeyPinyin: 'lí',
     textbookRef: {
-      hsk1: 'Chưa học giới từ này',
       hsk2: 'Bài 7 (Trang 78)'
     },
     legoFormula: [
@@ -664,11 +672,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 2: Trung bình',
     origin: 'new',
     originLabel: 'Mới ở HSK 2',
+    slug: 'tro-tu-dong-thai-trai-nghiem-guo',
     title: 'Trợ từ động thái trải nghiệm 过 (guo)',
     grammarKey: '过',
     grammarKeyPinyin: 'guo',
     textbookRef: {
-      hsk1: 'Chưa học',
       hsk2: 'Bài 13 (Trang 122)'
     },
     legoFormula: [
@@ -721,11 +729,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 3: Khó',
     origin: 'advanced',
     originLabel: 'Nâng cao HSK 2',
+    slug: 'bo-ngu-chi-trang-thai-de',
     title: 'Bổ ngữ chỉ trạng thái 得 (de)',
     grammarKey: 'V + 得 + Adj',
     grammarKeyPinyin: 'dòng cí + de + xíng róng cí',
     textbookRef: {
-      hsk1: 'Chưa học bổ ngữ',
       hsk2: 'Bài 11 (Trang 106)'
     },
     legoFormula: [
@@ -776,6 +784,7 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 3: Khó',
     origin: 'advanced',
     originLabel: 'Nâng cao HSK 2',
+    slug: 'cau-kiem-ngu-voi-qing-rang-jiao',
     title: 'Câu kiêm ngữ với 请, 让, 叫',
     grammarKey: '请 / 让 / 叫',
     grammarKeyPinyin: 'qǐng / ràng / jiào',
@@ -831,11 +840,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 3: Khó',
     origin: 'advanced',
     originLabel: 'Nâng cao HSK 2',
+    slug: 'cau-so-sanh-voi-bi',
     title: 'Câu so sánh với 比 (bǐ)',
     grammarKey: 'A 比 B + Adj',
     grammarKeyPinyin: 'A bǐ B + xíng róng cí',
     textbookRef: {
-      hsk1: 'Chưa học',
       hsk2: 'Bài 10 (Trang 98), Bài 11 (Trang 107)'
     },
     legoFormula: [
@@ -886,11 +895,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 3: Khó',
     origin: 'advanced',
     originLabel: 'Nâng cao HSK 2',
+    slug: 'tro-tu-dong-thai-duy-tri-trang-thai-zhe',
     title: 'Trợ từ động thái duy trì trạng thái 着 (zhe)',
     grammarKey: 'V + 着',
     grammarKeyPinyin: 'dòng cí + zhe',
     textbookRef: {
-      hsk1: 'Chưa học',
       hsk2: 'Bài 14 (Trang 130)'
     },
     legoFormula: [
@@ -941,11 +950,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 3: Khó',
     origin: 'advanced',
     originLabel: 'Nâng cao HSK 2',
+    slug: 'cap-lien-tu-noi-yinwei-suoyi-suiran-danshi',
     title: 'Cặp liên từ nối: 因为...所以... & 虽然...但是...',
     grammarKey: '因为...所以... / 虽然...但是...',
     grammarKeyPinyin: 'yīnwèi...suǒyǐ... / suīrán...dànshì...',
     textbookRef: {
-      hsk1: 'Chưa học liên từ phức',
       hsk2: 'Bài 5 (Trang 58 - 因为...所以...), Bài 13 (Trang 122 - 虽然...但是...)'
     },
     legoFormula: [
@@ -996,11 +1005,11 @@ export const HSK2_GRAMMAR_POINTS: GrammarPoint[] = [
     levelLabel: 'Cấp độ 3: Khó',
     origin: 'advanced',
     originLabel: 'Nâng cao HSK 2',
+    slug: 'gioi-tu-dui-doi-voi-tac-dong-den',
     title: 'Giới từ 对 (duì) (Đối với / Tác động đến)',
     grammarKey: '对',
     grammarKeyPinyin: 'duì',
     textbookRef: {
-      hsk1: 'Chưa học với tư cách giới từ',
       hsk2: 'Bài 9 (Trang 90)'
     },
     legoFormula: [

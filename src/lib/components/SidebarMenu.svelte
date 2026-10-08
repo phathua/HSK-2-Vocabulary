@@ -1,7 +1,8 @@
 <script lang="ts">
   import { appState } from '#lib/state/appState.svelte';
   import { page } from '$app/state';
-  import X from 'phosphor-svelte/lib/X';
+  import { fly, fade } from 'svelte/transition';
+  import { cubicOut } from 'svelte/easing';
   import BookOpenText from 'phosphor-svelte/lib/BookOpenText';
   import GraduationCap from 'phosphor-svelte/lib/GraduationCap';
   import Exam from 'phosphor-svelte/lib/Exam';
@@ -174,43 +175,34 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="lg:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs transition-opacity duration-300"
+    transition:fade={{ duration: 200 }}
+    class="lg:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs"
     onclick={closeMobileSidebar}
   ></div>
 
-  <!-- Slide-out Drawer Panel -->
+  <!-- Slide-out Drawer Panel (Animation trượt từ bên trái qua phải) -->
   <div
-    class="lg:hidden fixed top-0 left-0 bottom-0 z-50 w-full max-w-xs sm:max-w-sm bg-white dark:bg-[#1B1B1B] shadow-2xl border-r border-slate-200 dark:border-[#282A2C] flex flex-col justify-between transition-transform duration-300 ease-out select-none"
+    transition:fly={{ x: -320, duration: 250, easing: cubicOut }}
+    class="lg:hidden fixed top-0 left-0 bottom-0 z-50 w-full max-w-xs sm:max-w-sm bg-white dark:bg-[#1B1B1B] shadow-2xl border-r border-slate-200 dark:border-[#282A2C] flex flex-col justify-between select-none"
     role="dialog"
     aria-modal="true"
     aria-label="Menu điều hướng chính"
   >
-    <!-- Drawer Header -->
-    <div class="p-5 border-b border-slate-100 dark:border-[#282A2C] flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img
-          src="/icons/icon-192.png"
-          alt="Mascot HSK 2"
-          class="w-12 h-12 rounded-2xl object-cover shadow-xs border border-blue-100 dark:border-blue-900/50"
-        />
-        <div>
-          <h2 class="text-base font-black text-slate-900 dark:text-[#E3E3E3] leading-tight">
-            Ôn Tập HSK
-          </h2>
-          <p class="text-xs font-semibold text-slate-400 dark:text-[#8E918F] mt-0.5">
-            Cấp độ: {appState.currentLevel} • Chuỗi học tập
-          </p>
-        </div>
+    <!-- Drawer Header (Không có nút X, bấm ra ngoài để đóng) -->
+    <div class="p-5 border-b border-slate-100 dark:border-[#282A2C] flex items-center gap-3">
+      <img
+        src="/icons/icon-192.png"
+        alt="Mascot HSK 2"
+        class="w-12 h-12 rounded-2xl object-cover shadow-xs border border-blue-100 dark:border-blue-900/50 shrink-0"
+      />
+      <div class="min-w-0">
+        <h2 class="text-base font-black text-slate-900 dark:text-[#E3E3E3] leading-tight">
+          Ôn Tập HSK
+        </h2>
+        <p class="text-xs font-semibold text-slate-400 dark:text-[#8E918F] mt-0.5">
+          Cấp độ: {appState.currentLevel} • Chuỗi học tập
+        </p>
       </div>
-
-      <button
-        type="button"
-        onclick={closeMobileSidebar}
-        class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] flex items-center justify-center text-slate-600 dark:text-[#C4C7C5] transition-colors cursor-pointer active:scale-95"
-        aria-label="Đóng menu"
-      >
-        <X weight="bold" class="w-5 h-5" />
-      </button>
     </div>
 
     <!-- Navigation List (To rõ ràng, dễ nhìn, mỗi nút một màu riêng biệt) -->

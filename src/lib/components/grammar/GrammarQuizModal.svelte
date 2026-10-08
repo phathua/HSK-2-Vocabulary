@@ -55,7 +55,7 @@
           </div>
           <div>
             <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider block">
-              Quick Check • Luyện nhanh
+              Luyện tập nhanh
             </span>
             <h3 class="text-sm sm:text-base font-black text-slate-900 dark:text-slate-100 truncate">
               {point.title}
