@@ -3,6 +3,7 @@
   import { onMount } from 'svelte';
   import Header from '#lib/components/Header.svelte';
   import ExamHeader from '#lib/components/exam/ExamHeader.svelte';
+  import ExamBottomBar from '#lib/components/exam/ExamBottomBar.svelte';
   import ExamAudioPlayer from '#lib/components/exam/ExamAudioPlayer.svelte';
   import ExamQuestionCard from '#lib/components/exam/ExamQuestionCard.svelte';
   import ExamPalette from '#lib/components/exam/ExamPalette.svelte';
@@ -15,6 +16,7 @@
   import { goto } from '$app/navigation';
   import SignOut from 'phosphor-svelte/lib/SignOut';
   import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
+  import X from 'phosphor-svelte/lib/X';
   import type { ExamDetail, ExamMode } from '#lib/types/exam';
 
   const examId = $derived(page.params.examId);
@@ -31,6 +33,7 @@
   let isSubmitted = $state(false);
   let showResultModal = $state(false);
   let showExitModal = $state(false);
+  let showPaletteModal = $state(false);
   let isScrolled = $state(false);
   let mainScrollEl: HTMLElement | null = null;
   let timerInterval: any = null;
@@ -187,7 +190,7 @@
 
 <Header />
 
-<main bind:this={mainScrollEl} class="flex-1 flex flex-col min-h-0 my-3 overflow-y-auto pr-1">
+<main bind:this={mainScrollEl} class="flex-1 flex flex-col min-h-0 my-3 overflow-y-auto pr-1 pb-16">
   {#if isLoading}
     <div class="flex-1 flex items-center justify-center p-12">
       <div class="flex flex-col items-center gap-3">
@@ -220,8 +223,6 @@
       answeredCount={totalAnswered}
       totalCount={exam.total_questions}
       onModeChange={(newMode) => (mode = newMode)}
-      onSubmit={handleSubmitExam}
-      onRetry={handleRetry}
       onExitRequest={() => {
         if (mode === 'exam' && !isSubmitted) {
           showExitModal = true;
@@ -311,8 +312,54 @@
         />
       </div>
     </div>
+
+    <!-- Sticky Bottom Bar -->
+    <ExamBottomBar
+      {mode}
+      {timeRemainingSeconds}
+      answeredCount={totalAnswered}
+      totalCount={exam.total_questions}
+      onSubmit={handleSubmitExam}
+      onRetry={handleRetry}
+      onTogglePaletteModal={() => (showPaletteModal = true)}
+    />
   {/if}
 </main>
+
+<!-- Modal Bảng Câu Hỏi Trên Thiết Bị Di Động (Mobile Palette Drawer) -->
+{#if showPaletteModal && exam}
+  <div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-xs">
+    <div class="bg-white dark:bg-[#1E1E1E] border border-slate-200 dark:border-neutral-800 rounded-t-3xl sm:rounded-3xl p-5 max-w-md w-full shadow-2xl animate-in slide-in-from-bottom sm:zoom-in-95 duration-150 max-h-[80vh] flex flex-col">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-neutral-800 mb-3">
+        <h3 class="text-sm font-black text-slate-900 dark:text-slate-100">
+          Bảng 60 Câu Hỏi ({totalAnswered}/{exam.total_questions})
+        </h3>
+        <button
+          type="button"
+          onclick={() => (showPaletteModal = false)}
+          class="w-8 h-8 rounded-full bg-slate-100 dark:bg-neutral-800 flex items-center justify-center text-slate-600 dark:text-neutral-300 hover:bg-slate-200 cursor-pointer"
+          aria-label="Đóng bảng câu hỏi"
+        >
+          <X weight="bold" class="w-4 h-4" />
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto">
+        <ExamPalette
+          totalQuestions={exam.total_questions}
+          {answers}
+          {flagged}
+          isExamSubmitted={isSubmitted}
+          correctMap={scoreResults.correctMap}
+          onScrollTo={(qNo) => {
+            showPaletteModal = false;
+            handleScrollTo(qNo);
+          }}
+        />
+      </div>
+    </div>
+  </div>
+{/if}
 
 <!-- Modal Kết quả Chấm Điểm -->
 {#if showResultModal && exam}

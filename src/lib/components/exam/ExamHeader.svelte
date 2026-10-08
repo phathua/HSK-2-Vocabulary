@@ -1,10 +1,8 @@
 <script lang="ts">
   import Clock from 'phosphor-svelte/lib/Clock';
-  import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
   import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
   import Lightning from 'phosphor-svelte/lib/Lightning';
   import Exam from 'phosphor-svelte/lib/Exam';
-  import ArrowCounterClockwise from 'phosphor-svelte/lib/ArrowCounterClockwise';
   import type { ExamMode } from '#lib/types/exam';
 
   interface Props {
@@ -15,8 +13,6 @@
     answeredCount: number;
     totalCount: number;
     onModeChange: (newMode: ExamMode) => void;
-    onSubmit: () => void;
-    onRetry?: () => void;
     onExitRequest?: () => void;
   }
 
@@ -28,8 +24,6 @@
     answeredCount,
     totalCount,
     onModeChange,
-    onSubmit,
-    onRetry,
     onExitRequest
   }: Props = $props();
 
@@ -39,43 +33,43 @@
     return `${mins.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   }
 
-  const isLowTime = $derived(mode === 'exam' && timeRemainingSeconds < 300); // Dưới 5 phút
+  const isLowTime = $derived(mode === 'exam' && timeRemainingSeconds < 300);
 </script>
 
-<div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-4 md:p-5 shadow-xs mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
-  <div class="flex items-center gap-3">
+<div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-3.5 sm:p-4 md:p-5 shadow-xs mb-3 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
+  <div class="flex items-center gap-3 min-w-0">
     <button
       type="button"
       onclick={() => (onExitRequest ? onExitRequest() : window.history.back())}
-      class="w-10 h-10 rounded-2xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 text-slate-700 dark:text-slate-200 flex items-center justify-center shrink-0 transition-colors cursor-pointer"
+      class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 text-slate-700 dark:text-slate-200 flex items-center justify-center shrink-0 transition-colors cursor-pointer"
       aria-label="Quay lại danh mục đề thi"
     >
-      <ArrowLeft weight="bold" class="w-5 h-5" />
+      <ArrowLeft weight="bold" class="w-4 h-4 sm:w-5 sm:h-5" />
     </button>
-    <div>
+    <div class="min-w-0">
       <div class="flex items-center gap-2">
-        <span class="text-[11px] font-black px-2 py-0.5 rounded-md bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 font-mono">
+        <span class="text-[11px] font-black px-2 py-0.5 rounded-md bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 font-mono shrink-0">
           {examCode}
         </span>
-        <h1 class="text-sm md:text-base font-black text-slate-900 dark:text-slate-100 truncate max-w-[280px] sm:max-w-md">
+        <h1 class="text-sm md:text-base font-black text-slate-900 dark:text-slate-100 truncate">
           {title}
         </h1>
       </div>
-      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-2">
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 flex items-center gap-2">
         <span>Tiến độ: <strong class="text-orange-600 dark:text-orange-400">{answeredCount}</strong>/{totalCount} câu</span>
         <span>•</span>
-        <span>Thang điểm: 200 điểm</span>
+        <span>200 điểm</span>
       </div>
     </div>
   </div>
 
-  <div class="flex items-center gap-2.5 sm:gap-4 flex-wrap justify-between md:justify-end">
+  <div class="flex items-center gap-2.5 shrink-0 self-end md:self-center">
     <!-- Switch Chế độ: Thi Thật / Luyện tập Quiz -->
     <div class="flex items-center bg-slate-100 dark:bg-neutral-800 p-1 rounded-2xl text-xs font-bold">
       <button
         type="button"
         onclick={() => onModeChange('exam')}
-        class="px-3 py-1.5 rounded-xl cursor-pointer transition-all flex items-center gap-1.5 {mode === 'exam' ? 'bg-white dark:bg-neutral-700 text-orange-600 dark:text-orange-400 shadow-xs' : 'text-slate-600 dark:text-slate-400'}"
+        class="px-2.5 sm:px-3 py-1.5 rounded-xl cursor-pointer transition-all flex items-center gap-1.5 {mode === 'exam' ? 'bg-white dark:bg-neutral-700 text-orange-600 dark:text-orange-400 shadow-xs' : 'text-slate-600 dark:text-slate-400'}"
       >
         <Exam weight="bold" class="w-3.5 h-3.5" />
         <span>Thi Thật</span>
@@ -83,44 +77,19 @@
       <button
         type="button"
         onclick={() => onModeChange('practice')}
-        class="px-3 py-1.5 rounded-xl cursor-pointer transition-all flex items-center gap-1.5 {mode === 'practice' ? 'bg-white dark:bg-neutral-700 text-orange-600 dark:text-orange-400 shadow-xs' : 'text-slate-600 dark:text-slate-400'}"
+        class="px-2.5 sm:px-3 py-1.5 rounded-xl cursor-pointer transition-all flex items-center gap-1.5 {mode === 'practice' ? 'bg-white dark:bg-neutral-700 text-orange-600 dark:text-orange-400 shadow-xs' : 'text-slate-600 dark:text-slate-400'}"
       >
         <Lightning weight="bold" class="w-3.5 h-3.5 text-amber-500" />
-        <span>Luyện Tập Quiz</span>
+        <span>Luyện Tập</span>
       </button>
     </div>
 
-    <!-- Đồng hồ đếm ngược -->
+    <!-- Đồng hồ đếm ngược trên Header (chỉ ở chế độ thi) -->
     {#if mode === 'exam'}
-      <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-2xl border {isLowTime ? 'bg-red-50 dark:bg-red-950/50 border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 animate-pulse' : 'bg-slate-50 dark:bg-neutral-800/80 border-slate-200 dark:border-neutral-700 text-slate-700 dark:text-slate-300'} font-mono font-black text-sm">
+      <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-2xl border {isLowTime ? 'bg-red-50 dark:bg-red-950/50 border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 animate-pulse' : 'bg-slate-50 dark:bg-neutral-800/80 border-slate-200 dark:border-neutral-700 text-slate-700 dark:text-slate-300'} font-mono font-black text-xs sm:text-sm">
         <Clock weight="duotone" class="w-4 h-4 {isLowTime ? 'text-red-600' : 'text-orange-500'}" />
         <span>{formatCountdown(timeRemainingSeconds)}</span>
       </div>
     {/if}
-
-    <!-- Các hành động: Nộp bài & Làm lại -->
-    <div class="flex items-center gap-2 shrink-0">
-      {#if onRetry}
-        <button
-          type="button"
-          onclick={onRetry}
-          class="px-3 py-2 rounded-2xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 active:scale-95 text-slate-700 dark:text-slate-200 font-bold text-xs md:text-sm flex items-center gap-1.5 cursor-pointer transition-all shrink-0"
-          title="Làm lại bài từ đầu"
-        >
-          <ArrowCounterClockwise weight="bold" class="w-4 h-4" />
-          <span>Làm lại</span>
-        </button>
-      {/if}
-
-      <!-- Nút Nộp Bài -->
-      <button
-        type="button"
-        onclick={onSubmit}
-        class="px-4 py-2 rounded-2xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-xs md:text-sm flex items-center gap-2 shadow-xs cursor-pointer transition-all shrink-0"
-      >
-        <CheckCircle weight="bold" class="w-4 h-4" />
-        <span>Nộp bài</span>
-      </button>
-    </div>
   </div>
 </div>
