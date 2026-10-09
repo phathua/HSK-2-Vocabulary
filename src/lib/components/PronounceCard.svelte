@@ -60,18 +60,10 @@
     if (utteranceWatchdogTimer) { clearTimeout(utteranceWatchdogTimer); utteranceWatchdogTimer = null; }
   }
 
-  function setAudioSessionType(type: 'play-and-record' | 'playback') {
-    if (typeof navigator !== 'undefined' && 'audioSession' in navigator) {
-      try {
-        (navigator as any).audioSession.type = type;
-      } catch {}
-    }
-  }
-
   // Kiểm tra xem trình duyệt có đang phát âm thanh TTS không (Ngăn WebKit Bug 321436)
   function canStartRecording(): boolean {
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+      if (window.speechSynthesis.speaking) {
         toast.info('Đang phát âm mẫu', {
           description: 'Vui lòng đợi âm thanh mẫu kết thúc rồi bấm Micro lại nhé!',
           duration: 3500
@@ -85,14 +77,12 @@
   // Hủy phiên ghi âm sạch sẽ: Dùng cờ expectedEnd mà KHÔNG gán null cho listener (chuẩn ios27-stt-lab)
   function abortRecognition() {
     clearAllTimers();
-    setAudioSessionType('playback');
 
     if (recognition) {
       expectedEnd = true;
       try {
         recognition.abort();
       } catch {}
-      recognition = null;
     }
 
     recognitionStarted = false;
@@ -169,7 +159,11 @@
       const trimmed = transcript.trim();
       if (trimmed) {
         liveHanzi = trimmed;
-        livePinyin = pinyin(trimmed, { toneType: 'symbol' });
+        try {
+          livePinyin = pinyin(trimmed, { toneType: 'symbol' });
+        } catch {
+          livePinyin = trimmed;
+        }
       }
 
       // Tự động nộp bài khi nhận kết quả final chứa chữ Hán (chuẩn theo lab acceptText)
@@ -223,18 +217,17 @@
     };
 
     r.onend = () => {
-      if (r !== recognition) return;
       recognitionStarted = false;
       recognitionStarting = false;
+      recState = 'idle';
 
-      // BÍ QUYẾT 2 TỪ LAB: Nếu là expectedEnd, chỉ dọn dẹp cờ mà KHÔNG làm đứt mạch IPC
+      if (r !== recognition) return;
+
+      // Nếu là expectedEnd, chỉ dọn dẹp cờ mà KHÔNG làm đứt mạch IPC
       if (expectedEnd) {
         expectedEnd = false;
-        recState = 'idle';
         return;
       }
-
-      recState = 'idle';
     };
 
     return r;
@@ -249,8 +242,6 @@
     liveHanzi = '';
     livePinyin = '';
     errorMessage = '';
-
-    setAudioSessionType('play-and-record');
 
     const mySession = ++session;
     const targetItemId = appState.currentSpeechItem.id;
@@ -280,7 +271,6 @@
     } catch (err: any) {
       console.warn('SpeechRecognition start failed:', err);
       clearAllTimers();
-      setAudioSessionType('playback');
       recognitionStarting = false;
       recState = 'idle';
       errorMessage = 'Không thể bật micro lúc này. Vui lòng bấm thử lại.';
@@ -289,7 +279,6 @@
 
   function stopRecording() {
     if (recognition && (recognitionStarted || recognitionStarting)) {
-      expectedEnd = true;
       recState = 'stopping';
       try {
         recognition.stop();
