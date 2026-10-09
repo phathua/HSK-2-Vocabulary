@@ -32,15 +32,26 @@
   let showOutline = $state(true);
   let isAnimating = false;
   let activeChar = '';
+  let loopTimeout: any = null;
 
   function stopLoop() {
     isLooping = false;
     isAnimating = false;
+    if (loopTimeout) {
+      clearTimeout(loopTimeout);
+      loopTimeout = null;
+    }
     if (writerInstance) {
       try {
+        writerInstance.pauseAnimation();
         writerInstance.cancelAnimation();
-        writerInstance.showOutline();
+        // Xóa hoàn toàn nét vẽ đỏ animation, chỉ giữ lại khuôn chữ xám mờ nếu showOutline đang bật
         writerInstance.hideCharacter();
+        if (showOutline) {
+          writerInstance.showOutline();
+        } else {
+          writerInstance.hideOutline();
+        }
       } catch {}
     }
   }
@@ -48,6 +59,11 @@
   function startLoop() {
     isLooping = true;
     hasUserDrawn = false;
+    isAnimating = false;
+    if (loopTimeout) {
+      clearTimeout(loopTimeout);
+      loopTimeout = null;
+    }
     playCycle();
   }
 
@@ -56,14 +72,18 @@
 
     isAnimating = true;
     try {
-      writerInstance.showOutline();
+      if (showOutline) {
+        writerInstance.showOutline();
+      } else {
+        writerInstance.hideOutline();
+      }
       writerInstance.hideCharacter();
       writerInstance.animateCharacter({
         onComplete: () => {
           isAnimating = false;
           if (!isLooping || hasUserDrawn) return;
           // Sau khi viết xong trọn vẹn toàn bộ các nét, dừng nghỉ 1.5s rồi mới lặp lại
-          setTimeout(() => {
+          loopTimeout = setTimeout(() => {
             if (isLooping && !hasUserDrawn) {
               playCycle();
             }
@@ -81,9 +101,14 @@
 
     activeChar = char;
     isAnimating = false;
+    if (loopTimeout) {
+      clearTimeout(loopTimeout);
+      loopTimeout = null;
+    }
 
     if (writerInstance) {
       try {
+        writerInstance.pauseAnimation();
         writerInstance.cancelAnimation();
       } catch {}
       writerInstance = null;
@@ -98,7 +123,7 @@
         showOutline: showOutline,
         strokeAnimationSpeed: 1.0, // Tốc độ viết tự nhiên vừa phải
         delayBetweenStrokes: 200,   // Dừng 200ms giữa từng nét chuẩn bút thuận
-        strokeColor: '#e11d48',    // Màu đỏ hồng nổi bật
+        strokeColor: '#e11d48',    // Màu đỏ hồng nổi bật khi animation viết mẫu
         outlineColor: '#94a3b8',   // Màu xám mờ làm khuôn chữ
         drawingColor: '#e11d48',
         showCharacter: false
@@ -106,7 +131,7 @@
 
       // Bắt đầu chu kỳ animation nếu chưa vẽ tay
       if (!hasUserDrawn && isLooping) {
-        setTimeout(() => {
+        loopTimeout = setTimeout(() => {
           playCycle();
         }, 300);
       }
@@ -130,11 +155,10 @@
   }
 
   function startDrawing(e: MouseEvent | TouchEvent) {
-    // Ngay khi người dùng đặt nét vẽ vào: DỪNG ANIMATION, giữ lại khuôn xám mờ để người học tự vẽ
-    if (!hasUserDrawn || isLooping) {
-      hasUserDrawn = true;
-      stopLoop();
-    }
+    // Ngay khi người dùng đặt nét vẽ vào: DỪNG HẲN ANIMATION ngay lập tức, chuyển về khuôn xám mờ tĩnh
+    hasUserDrawn = true;
+    stopLoop();
+
     isDrawing = true;
     draw(e);
   }
