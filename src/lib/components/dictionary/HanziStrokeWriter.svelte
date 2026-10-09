@@ -30,18 +30,15 @@
   let hasUserDrawn = $state(false);
   let isLooping = $state(true);
   let showOutline = $state(true);
-  let loopTimeout: any = null;
+  let isAnimating = false;
+  let activeChar = '';
 
   function stopLoop() {
     isLooping = false;
-    if (loopTimeout) {
-      clearTimeout(loopTimeout);
-      loopTimeout = null;
-    }
+    isAnimating = false;
     if (writerInstance) {
       try {
         writerInstance.cancelAnimation();
-        // Giữ lại nét mờ xám mờ để người dùng tập vẽ
         writerInstance.showOutline();
         writerInstance.hideCharacter();
       } catch {}
@@ -51,36 +48,40 @@
   function startLoop() {
     isLooping = true;
     hasUserDrawn = false;
-    runAnimationCycle();
+    playCycle();
   }
 
-  function runAnimationCycle() {
-    if (!writerInstance || !isLooping || hasUserDrawn) return;
+  function playCycle() {
+    if (!writerInstance || !isLooping || hasUserDrawn || isAnimating) return;
+
+    isAnimating = true;
     try {
       writerInstance.showOutline();
+      writerInstance.hideCharacter();
       writerInstance.animateCharacter({
         onComplete: () => {
+          isAnimating = false;
           if (!isLooping || hasUserDrawn) return;
-          // Nghỉ 1.2s rồi tự động lặp lại liên tục
-          loopTimeout = setTimeout(() => {
-            if (!isLooping || hasUserDrawn) return;
-            try {
-              writerInstance.hideCharacter();
-              runAnimationCycle();
-            } catch {}
-          }, 1200);
+          // Sau khi viết xong trọn vẹn toàn bộ các nét, dừng nghỉ 1.5s rồi mới lặp lại
+          setTimeout(() => {
+            if (isLooping && !hasUserDrawn) {
+              playCycle();
+            }
+          }, 1500);
         }
       });
-    } catch {}
+    } catch {
+      isAnimating = false;
+    }
   }
 
   function initHanziWriter(char: string) {
     if (!writerContainer || typeof window === 'undefined') return;
+    if (activeChar === char && writerInstance) return;
 
-    if (loopTimeout) {
-      clearTimeout(loopTimeout);
-      loopTimeout = null;
-    }
+    activeChar = char;
+    isAnimating = false;
+
     if (writerInstance) {
       try {
         writerInstance.cancelAnimation();
@@ -89,30 +90,25 @@
     }
     writerContainer.innerHTML = '';
 
-    // Khởi tạo HanziWriter với màu sắc chuẩn mực
     try {
       writerInstance = HanziWriter.create(writerContainer, char, {
-        width: 300,
-        height: 300,
+        width: 310,
+        height: 310,
         padding: 20,
         showOutline: showOutline,
-        strokeAnimationSpeed: 1.2,
-        delayBetweenStrokes: 150,
-        strokeColor: '#e11d48', // Màu đỏ hồng khi animation viết mẫu
-        outlineColor: '#94a3b8', // Màu xám mờ làm khuôn vẽ
+        strokeAnimationSpeed: 1.0, // Tốc độ viết tự nhiên vừa phải
+        delayBetweenStrokes: 200,   // Dừng 200ms giữa từng nét chuẩn bút thuận
+        strokeColor: '#e11d48',    // Màu đỏ hồng nổi bật
+        outlineColor: '#94a3b8',   // Màu xám mờ làm khuôn chữ
         drawingColor: '#e11d48',
-        showCharacter: false,
-        onLoadCharDataError: () => {
-          // Fallback nếu mất mạng
-        }
+        showCharacter: false
       });
 
-      // Nếu người dùng chưa vẽ, tự động chạy loop liên tục
+      // Bắt đầu chu kỳ animation nếu chưa vẽ tay
       if (!hasUserDrawn && isLooping) {
-        // Cho một khoảng nhỏ để DOM ổn định
         setTimeout(() => {
-          runAnimationCycle();
-        }, 100);
+          playCycle();
+        }, 300);
       }
     } catch (e) {
       console.error('HanziWriter init error:', e);
@@ -199,11 +195,12 @@
 
   // Khởi tạo và phản ứng khi đổi chữ
   $effect(() => {
-    if (currentChar && writerContainer) {
+    const char = currentChar;
+    if (char && writerContainer && char !== activeChar) {
       clearUserCanvas();
       hasUserDrawn = false;
       isLooping = true;
-      initHanziWriter(currentChar);
+      initHanziWriter(char);
     }
   });
 
@@ -212,12 +209,7 @@
       initHanziWriter(currentChar);
     }
     return () => {
-      if (loopTimeout) clearTimeout(loopTimeout);
-      if (writerInstance) {
-        try {
-          writerInstance.cancelAnimation();
-        } catch {}
-      }
+      stopLoop();
     };
   });
 </script>
