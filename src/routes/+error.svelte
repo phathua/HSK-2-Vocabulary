@@ -51,13 +51,13 @@
   });
 </script>
 
-<div class="h-screen w-full max-w-md mx-auto flex flex-col items-center justify-center p-5 text-center bg-slate-50 font-sans select-none overflow-hidden">
-  <!-- Card hiển thị lỗi tròn trịa, hiện đại phong cách Duolingo -->
-  <div class="w-full bg-white rounded-[2rem] p-6 sm:p-7 shadow-xl border border-slate-200/90 flex flex-col items-center animate-[pop_0.15s_ease]">
+<div class="h-full w-full max-w-md mx-auto flex flex-col items-center justify-center p-4 text-center select-none overflow-hidden">
+  <!-- Card hiển thị lỗi đồng bộ với theme hệ thống -->
+  <div class="w-full bg-white dark:bg-[#1B1B1B] rounded-[2rem] p-6 sm:p-7 shadow-xl dark:shadow-2xl dark:shadow-black/40 border border-slate-200 dark:border-[#282A2C] flex flex-col items-center animate-[pop_0.15s_ease] transition-colors">
     
     <!-- Linh vật Gấu Trúc minh họa hành động lỗi to rõ ràng -->
     <div class="relative w-44 h-44 flex items-center justify-center mb-2">
-      <div class="absolute inset-0 bg-blue-500/10 blur-2xl rounded-full scale-110"></div>
+      <div class="absolute inset-0 bg-blue-500/10 dark:bg-blue-500/20 blur-2xl rounded-full scale-110"></div>
       
       <img
         src={errorConfig.image}
@@ -66,21 +66,21 @@
       />
 
       <!-- Badge mã lỗi nhỏ xinh bên góc -->
-      <span class="absolute bottom-1 right-2 px-2.5 py-0.5 rounded-full bg-slate-900 text-white font-mono font-black text-[11px] tracking-wide border-2 border-white shadow-xs">
+      <span class="absolute bottom-1 right-2 px-2.5 py-0.5 rounded-full bg-slate-900 dark:bg-[#282A2C] text-white dark:text-[#E3E3E3] font-mono font-black text-[11px] tracking-wide border-2 border-white dark:border-[#1B1B1B] shadow-xs">
         {errorConfig.code}
       </span>
     </div>
 
     <!-- Tiêu đề & Thông điệp -->
-    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black mb-2 border {errorConfig.badgeBg}">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black mb-2 border {errorConfig.badgeBg} dark:bg-[#282A2C] dark:border-[#37393B] dark:text-[#E3E3E3]">
       <span>Mã lỗi {errorConfig.code}</span>
     </div>
 
-    <h1 class="text-xl font-black text-slate-900 mb-1.5 tracking-tight leading-snug">
+    <h1 class="text-xl font-black text-slate-900 dark:text-[#E3E3E3] mb-1.5 tracking-tight leading-snug">
       {errorConfig.title}
     </h1>
 
-    <p class="text-xs font-semibold text-slate-500 mb-5 leading-relaxed max-w-[280px]">
+    <p class="text-xs font-semibold text-slate-500 dark:text-[#8E918F] mb-5 leading-relaxed max-w-[280px]">
       {page.error?.message || errorConfig.desc}
     </p>
 
@@ -88,8 +88,8 @@
     <div class="flex flex-col gap-2 w-full">
       <button
         type="button"
-        onclick={() => window.location.href = '/'}
-        class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-black text-xs uppercase tracking-wider rounded-2xl shadow-md shadow-blue-600/25 flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98] transition-all"
+        onclick={() => window.location.reload()}
+        class="w-full py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-black text-xs uppercase tracking-wider rounded-2xl shadow-md shadow-blue-600/25 flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98] transition-all"
       >
         <ArrowClockwise weight="bold" class="w-4 h-4" />
         <span>{errorConfig.actionText}</span>
@@ -97,7 +97,7 @@
 
       <a
         href="/"
-        class="w-full py-2.5 text-slate-400 hover:text-slate-800 text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-1.5"
+        class="w-full py-2.5 text-slate-400 hover:text-slate-800 dark:text-[#8E918F] dark:hover:text-[#E3E3E3] text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-1.5"
       >
         <House weight="bold" class="w-3.5 h-3.5" />
         <span>Về trang chủ</span>

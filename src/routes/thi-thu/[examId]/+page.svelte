@@ -97,11 +97,11 @@
   });
 
   const listeningQuestions = $derived(
-    exam?.questions.filter((q) => q.section.includes('Listening') || q.section.includes('听力')) ?? []
+    exam?.questions.filter((q) => (q.section || '').includes('Listening') || (q.section || '').includes('听力') || q.question_no <= 35) ?? []
   );
 
   const readingQuestions = $derived(
-    exam?.questions.filter((q) => q.section.includes('Reading') || q.section.includes('阅读')) ?? []
+    exam?.questions.filter((q) => (q.section || '').includes('Reading') || (q.section || '').includes('阅读') || q.question_no > 35) ?? []
   );
 
   const totalAnswered = $derived(Object.keys(answers).length);

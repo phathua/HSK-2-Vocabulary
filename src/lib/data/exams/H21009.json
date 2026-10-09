@@ -9,163 +9,185 @@
   "total_questions": 60,
   "questions": [
     {
-      "id": 1,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 1",
+      "question_no": 1,
+      "type": "True/False",
+      "text": "Câu hỏi số 1",
+      "answer": "√",
       "listening_script": "你好，认识你很高兴。",
       "listening_pinyin": "nǐ hǎo ， rèn shí nǐ hěn gāo xìng 。",
-      "answer": "√",
       "explanation": "Đúng (√): Lời thoại [他正在做第1题的听力练习。 (tā zhèngzài zuò 第 1 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_01.webp"
+      "image": "images/q_01.webp"
     },
     {
-      "id": 2,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 2",
+      "question_no": 2,
+      "type": "True/False",
+      "text": "Câu hỏi số 2",
+      "answer": "×",
       "listening_script": "他们正在打篮球。",
       "listening_pinyin": "tā men zhèng zài dǎ lán qiú 。",
-      "answer": "×",
       "explanation": "Sai (×): Lời thoại [这是第2题的听力对话/句子。 (zhè shì 第 2 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_02.webp"
+      "image": "images/q_02.webp"
     },
     {
-      "id": 3,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 3",
+      "question_no": 3,
+      "type": "True/False",
+      "text": "Câu hỏi số 3",
+      "answer": "√",
       "listening_script": "西瓜怎么卖？",
       "listening_pinyin": "xī guā zěn me mài ？",
-      "answer": "√",
       "explanation": "Đúng (√): Lời thoại [他正在做第3题的听力练习。 (tā zhèngzài zuò 第 3 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_03.webp"
+      "image": "images/q_03.webp"
     },
     {
-      "id": 4,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 4",
+      "question_no": 4,
+      "type": "True/False",
+      "text": "Câu hỏi số 4",
+      "answer": "×",
       "listening_script": "她还没起床呢。",
       "listening_pinyin": "tā hái méi qǐ chuáng ne 。",
-      "answer": "×",
       "explanation": "Sai (×): Lời thoại [这是第4题的听力对话/句子。 (zhè shì 第 4 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_04.webp"
+      "image": "images/q_04.webp"
     },
     {
-      "id": 5,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 5",
+      "question_no": 5,
+      "type": "True/False",
+      "text": "Câu hỏi số 5",
+      "answer": "√",
       "listening_script": "我有两个女儿，她们都八岁了。",
       "listening_pinyin": "wǒ yǒu liǎng gè nǚ ér ， tā men dōu bā suì le 。",
-      "answer": "√",
       "explanation": "Đúng (√): Lời thoại [他正在做第5题的听力练习。 (tā zhèngzài zuò 第 5 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_05.webp"
+      "image": "images/q_05.webp"
     },
     {
-      "id": 6,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 6",
+      "question_no": 6,
+      "type": "True/False",
+      "text": "Câu hỏi số 6",
+      "answer": "×",
       "listening_script": "请给我一杯咖啡，谢谢。",
       "listening_pinyin": "qǐng gěi wǒ yī bēi kā fēi ， xiè xiè 。",
-      "answer": "×",
       "explanation": "Sai (×): Lời thoại [这是第6题的听力对话/句子。 (zhè shì 第 6 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_06.webp"
+      "image": "images/q_06.webp"
     },
     {
-      "id": 7,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 7",
+      "question_no": 7,
+      "type": "True/False",
+      "text": "Câu hỏi số 7",
+      "answer": "√",
       "listening_script": "太累了，让我休息一下吧。",
       "listening_pinyin": "tài lèi le ， ràng wǒ xiū xī yī xià ba 。",
-      "answer": "√",
       "explanation": "Đúng (√): Lời thoại [他正在做第7题的听力练习。 (tā zhèngzài zuò 第 7 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_07.webp"
+      "image": "images/q_07.webp"
     },
     {
-      "id": 8,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 8",
+      "question_no": 8,
+      "type": "True/False",
+      "text": "Câu hỏi số 8",
+      "answer": "×",
       "listening_script": "我喜欢唱歌。",
       "listening_pinyin": "wǒ xǐ huān chàng gē 。",
-      "answer": "×",
       "explanation": "Sai (×): Lời thoại [这是第8题的听力对话/句子。 (zhè shì 第 8 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_08.webp"
+      "image": "images/q_08.webp"
     },
     {
-      "id": 9,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 9",
+      "question_no": 9,
+      "type": "True/False",
+      "text": "Câu hỏi số 9",
+      "answer": "√",
       "listening_script": "我穿这件怎么样？",
       "listening_pinyin": "wǒ chuān zhè jiàn zěn me yàng ？",
-      "answer": "√",
       "explanation": "Đúng (√): Lời thoại [他正在做第9题的听力练习。 (tā zhèngzài zuò 第 9 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_09.webp"
+      "image": "images/q_09.webp"
     },
     {
-      "id": 10,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 1",
-      "type": "true_false",
-      "prompt": "Câu 10",
+      "question_no": 10,
+      "type": "True/False",
+      "text": "Câu hỏi số 10",
+      "answer": "×",
       "listening_script": "他今天走着去学校。",
       "listening_pinyin": "tā jīn tiān zǒu zhe qù xué xiào 。",
-      "answer": "×",
       "explanation": "Sai (×): Lời thoại [这是第10题的听力对话/句子。 (zhè shì 第 1 0 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
       "options": [
         "√",
         "×"
       ],
-      "image": "/exams-media/H21009/images/q_10.webp"
+      "image": "images/q_10.webp"
     },
     {
-      "id": 11,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 11",
+      "question_no": 11,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 11",
+      "answer": "E",
       "listening_script": "女：别说话，儿子在睡觉呢。",
       "listening_pinyin": "nǚ ： bié shuō huà ， ér zi zài shuì jiào ne 。",
-      "answer": "E",
       "explanation": "Đáp án [E]: Lời thoại hội thoại [男：请问第11题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 1 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình E.",
       "options": [
         "A",
@@ -174,13 +196,15 @@
       ]
     },
     {
-      "id": 12,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 12",
+      "question_no": 12,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 12",
+      "answer": "F",
       "listening_script": "男：王小姐，你的电脑没问题了吧？",
       "listening_pinyin": "nán ： wáng xiǎo jiě ， nǐ de diàn nǎo méi wèn tí le ba ？",
-      "answer": "F",
       "explanation": "Đáp án [F]: Lời thoại hội thoại [男：请问第12题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 2 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình F.",
       "options": [
         "A",
@@ -189,13 +213,15 @@
       ]
     },
     {
-      "id": 13,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 13",
+      "question_no": 13,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 13",
+      "answer": "A",
       "listening_script": "女：你和你的同学坐那儿可以吗？",
       "listening_pinyin": "nǚ ： nǐ hé nǐ de tóng xué zuò nà ér kě yǐ ma ？",
-      "answer": "A",
       "explanation": "Đáp án [A]: Lời thoại hội thoại [男：请问第13题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 3 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình A.",
       "options": [
         "A",
@@ -204,13 +230,15 @@
       ]
     },
     {
-      "id": 14,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 14",
+      "question_no": 14,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 14",
+      "answer": "B",
       "listening_script": "男：它跑得真快，这是你的狗吗？",
       "listening_pinyin": "nán ： tā pǎo dé zhēn kuài ， zhè shì nǐ de gǒu ma ？",
-      "answer": "B",
       "explanation": "Đáp án [B]: Lời thoại hội thoại [男：请问第14题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 4 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình B.",
       "options": [
         "A",
@@ -219,13 +247,15 @@
       ]
     },
     {
-      "id": 15,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 15",
+      "question_no": 15,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 15",
+      "answer": "C",
       "listening_script": "女：公共汽车来了，再见。",
       "listening_pinyin": "nǚ ： gōng gòng qì chē lái le ， zài jiàn 。",
-      "answer": "C",
       "explanation": "Đáp án [C]: Lời thoại hội thoại [男：请问第15题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 5 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình C.",
       "options": [
         "A",
@@ -234,13 +264,15 @@
       ]
     },
     {
-      "id": 16,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 16",
+      "question_no": 16,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 16",
+      "answer": "D",
       "listening_script": "男：你看见了吗？",
       "listening_pinyin": "nán ： nǐ kàn jiàn le ma ？",
-      "answer": "D",
       "explanation": "Đáp án [D]: Lời thoại hội thoại [男：请问第16题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 6 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình D.",
       "options": [
         "A",
@@ -249,13 +281,15 @@
       ]
     },
     {
-      "id": 17,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 17",
+      "question_no": 17,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 17",
+      "answer": "E",
       "listening_script": "女：你喝红茶吗？",
       "listening_pinyin": "nǚ ： nǐ hē hóng chá ma ？",
-      "answer": "E",
       "explanation": "Đáp án [E]: Lời thoại hội thoại [男：请问第17题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 7 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình E.",
       "options": [
         "A",
@@ -264,13 +298,15 @@
       ]
     },
     {
-      "id": 18,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 18",
+      "question_no": 18,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 18",
+      "answer": "F",
       "listening_script": "男：喂，你下来吧，我到了。",
       "listening_pinyin": "nán ： wèi ， nǐ xià lái ba ， wǒ dào le 。",
-      "answer": "F",
       "explanation": "Đáp án [F]: Lời thoại hội thoại [男：请问第18题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 8 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình F.",
       "options": [
         "A",
@@ -279,13 +315,15 @@
       ]
     },
     {
-      "id": 19,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 19",
+      "question_no": 19,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 19",
+      "answer": "A",
       "listening_script": "女：我们中午吃什么？",
       "listening_pinyin": "nǚ ： wǒ men zhōng wǔ chī shén me ？",
-      "answer": "A",
       "explanation": "Đáp án [A]: Lời thoại hội thoại [男：请问第19题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 9 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình A.",
       "options": [
         "A",
@@ -294,13 +332,15 @@
       ]
     },
     {
-      "id": 20,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 2",
-      "type": "single_choice",
-      "prompt": "Câu 20",
+      "question_no": 20,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 20",
+      "answer": "B",
       "listening_script": "男：你现在在学汉语？",
       "listening_pinyin": "nán ： nǐ xiàn zài zài xué hàn yǔ ？",
-      "answer": "B",
       "explanation": "Đáp án [B]: Lời thoại hội thoại [男：请问第20题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 2 0 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình B.",
       "options": [
         "A",
@@ -309,13 +349,15 @@
       ]
     },
     {
-      "id": 21,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 21",
+      "question_no": 21,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 21",
+      "answer": "C",
       "listening_script": "女：去商店了？买什么东西了？",
       "listening_pinyin": "nǚ ： qù shāng diàn le ？ mǎi shén me dōng xī le ？",
-      "answer": "C",
       "explanation": "Đáp án [C]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -324,13 +366,15 @@
       ]
     },
     {
-      "id": 22,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 22",
+      "question_no": 22,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 22",
+      "answer": "A",
       "listening_script": "男：张小姐还没来？",
       "listening_pinyin": "nán ： zhāng xiǎo jiě hái méi lái ？",
-      "answer": "A",
       "explanation": "Đáp án [A]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -339,13 +383,15 @@
       ]
     },
     {
-      "id": 23,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 23",
+      "question_no": 23,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 23",
+      "answer": "B",
       "listening_script": "女：这个问题谁会回答？",
       "listening_pinyin": "nǚ ： zhè ge wèn tí shuí huì huí dá ？",
-      "answer": "B",
       "explanation": "Đáp án [B]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -354,13 +400,15 @@
       ]
     },
     {
-      "id": 24,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 24",
+      "question_no": 24,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 24",
+      "answer": "C",
       "listening_script": "男：我们去吃点儿东西吧。",
       "listening_pinyin": "nán ： wǒ men qù chī diǎn ér dōng xī ba 。",
-      "answer": "C",
       "explanation": "Đáp án [C]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -369,13 +417,15 @@
       ]
     },
     {
-      "id": 25,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 25",
+      "question_no": 25,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 25",
+      "answer": "A",
       "listening_script": "女：要下雨了，快点儿回家吧。",
       "listening_pinyin": "nǚ ： yào xià yǔ le ， kuài diǎn ér huí jiā ba 。",
-      "answer": "A",
       "explanation": "Đáp án [A]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -384,13 +434,15 @@
       ]
     },
     {
-      "id": 26,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 26",
+      "question_no": 26,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 26",
+      "answer": "B",
       "listening_script": "男：你今天晚上吃药了没有？",
       "listening_pinyin": "nán ： nǐ jīn tiān wǎn shàng chī yào le méi yǒu ？",
-      "answer": "B",
       "explanation": "Đáp án [B]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -399,13 +451,15 @@
       ]
     },
     {
-      "id": 27,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 27",
+      "question_no": 27,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 27",
+      "answer": "C",
       "listening_script": "女：你妹妹快考试了吧？",
       "listening_pinyin": "nǚ ： nǐ mèi mèi kuài kǎo shì le ba ？",
-      "answer": "C",
       "explanation": "Đáp án [C]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -414,13 +468,15 @@
       ]
     },
     {
-      "id": 28,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 28",
+      "question_no": 28,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 28",
+      "answer": "A",
       "listening_script": "男：你好，这块儿手表多少钱？",
       "listening_pinyin": "nán ： nǐ hǎo ， zhè kuài ér shǒu biǎo duō shǎo qián ？",
-      "answer": "A",
       "explanation": "Đáp án [A]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -429,13 +485,15 @@
       ]
     },
     {
-      "id": 29,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 29",
+      "question_no": 29,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 29",
+      "answer": "B",
       "listening_script": "女：我明天上午去公司找你，你有时间吗？",
       "listening_pinyin": "nǚ ： wǒ míng tiān shàng wǔ qù gōng sī zhǎo nǐ ， nǐ yǒu shí jiān ma ？",
-      "answer": "B",
       "explanation": "Đáp án [B]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -444,13 +502,15 @@
       ]
     },
     {
-      "id": 30,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 3",
-      "type": "single_choice",
-      "prompt": "Câu 30",
+      "question_no": 30,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 30",
+      "answer": "C",
       "listening_script": "男：你准备什么时候去中国旅游？",
       "listening_pinyin": "nán ： nǐ zhǔn bèi shén me shí hòu qù zhōng guó lǚ yóu ？",
-      "answer": "C",
       "explanation": "Đáp án [C]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -459,13 +519,15 @@
       ]
     },
     {
-      "id": 31,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 4",
-      "type": "single_choice",
-      "prompt": "Câu 31",
+      "question_no": 31,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 31",
+      "answer": "A",
       "listening_script": "A",
       "listening_pinyin": "A",
-      "answer": "A",
       "explanation": "Đáp án [A]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -474,13 +536,15 @@
       ]
     },
     {
-      "id": 32,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 4",
-      "type": "single_choice",
-      "prompt": "Câu 32",
+      "question_no": 32,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 32",
+      "answer": "B",
       "listening_script": "女：下午你没什么事情吧？",
       "listening_pinyin": "nǚ ： xià wǔ nǐ méi shén me shì qíng ba ？",
-      "answer": "B",
       "explanation": "Đáp án [B]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -489,13 +553,15 @@
       ]
     },
     {
-      "id": 33,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 4",
-      "type": "single_choice",
-      "prompt": "Câu 33",
+      "question_no": 33,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 33",
+      "answer": "C",
       "listening_script": "男：你好，请问白先生在吗？",
       "listening_pinyin": "nán ： nǐ hǎo ， qǐng wèn bái xiān shēng zài ma ？",
-      "answer": "C",
       "explanation": "Đáp án [C]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -504,13 +570,15 @@
       ]
     },
     {
-      "id": 34,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 4",
-      "type": "single_choice",
-      "prompt": "Câu 34",
+      "question_no": 34,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 34",
+      "answer": "A",
       "listening_script": "女：你好，羊肉多少钱一斤？",
       "listening_pinyin": "nǚ ： nǐ hǎo ， yáng ròu duō shǎo qián yī jīn ？",
-      "answer": "A",
       "explanation": "Đáp án [A]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -519,13 +587,15 @@
       ]
     },
     {
-      "id": 35,
+      "exam_code": "H21009",
+      "section": "Listening (听力)",
       "part": "Part 4",
-      "type": "single_choice",
-      "prompt": "Câu 35",
+      "question_no": 35,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 35",
+      "answer": "B",
       "listening_script": "男：你明天怎么去机场？",
       "listening_pinyin": "nán ： nǐ míng tiān zěn me qù jī chǎng ？",
-      "answer": "B",
       "explanation": "Đáp án [B]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
       "options": [
         "A",
@@ -534,13 +604,15 @@
       ]
     },
     {
-      "id": 36,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 1",
-      "type": "match",
-      "prompt": "Câu 36",
+      "question_no": 36,
+      "type": "Match",
+      "text": "Câu hỏi số 36",
+      "answer": "F",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "F",
       "explanation": "Đáp án [F]: Câu đọc hiểu [你看，女孩子也喜欢踢足球。 (Nǐ kàn, nǚháizi yě xǐhuan tī zúqiú.)] tương ứng với hình ảnh F.",
       "options": [
         "A",
@@ -552,13 +624,15 @@
       ]
     },
     {
-      "id": 37,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 1",
-      "type": "match",
-      "prompt": "Câu 37",
+      "question_no": 37,
+      "type": "Match",
+      "text": "Câu hỏi số 37",
+      "answer": "A",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "A",
       "explanation": "Đáp án [A]: Câu đọc hiểu [咖啡来了，要不要喝一杯？ (Kāfēi lái le, yào bu yào hē yì bēi?)] tương ứng với hình ảnh A.",
       "options": [
         "A",
@@ -570,13 +644,15 @@
       ]
     },
     {
-      "id": 38,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 1",
-      "type": "match",
-      "prompt": "Câu 38",
+      "question_no": 38,
+      "type": "Match",
+      "text": "Câu hỏi số 38",
+      "answer": "B",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "B",
       "explanation": "Đáp án [B]: Câu đọc hiểu [太好了，我找到这本书了。 (Tài hǎo le, wǒ zhǎodào zhè běn shū le.)] tương ứng với hình ảnh B.",
       "options": [
         "A",
@@ -588,13 +664,15 @@
       ]
     },
     {
-      "id": 39,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 1",
-      "type": "match",
-      "prompt": "Câu 39",
+      "question_no": 39,
+      "type": "Match",
+      "text": "Câu hỏi số 39",
+      "answer": "C",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "C",
       "explanation": "Đáp án [C]: Câu đọc hiểu [这是他给妻子买的衣服。 (Zhè shì tā gěi qīzi mǎi de yīfu.)] tương ứng với hình ảnh C.",
       "options": [
         "A",
@@ -606,13 +684,15 @@
       ]
     },
     {
-      "id": 40,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 1",
-      "type": "match",
-      "prompt": "Câu 40",
+      "question_no": 40,
+      "type": "Match",
+      "text": "Câu hỏi số 40",
+      "answer": "D",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "D",
       "explanation": "Đáp án [D]: Câu đọc hiểu [他们四个人每天都一起吃饭。 (Tāmen sì gè rén měi tiān dōu yìqǐ chīfàn.)] tương ứng với hình ảnh D.",
       "options": [
         "A",
@@ -624,13 +704,15 @@
       ]
     },
     {
-      "id": 41,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 2",
-      "type": "fill_in_the_blank",
-      "prompt": "Câu 41",
+      "question_no": 41,
+      "type": "Match",
+      "text": "Câu hỏi số 41",
+      "answer": "E",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "E",
       "explanation": "Đáp án [E]: Từ cần điền [休息 (xiūxi)] vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
       "options": [
         "A",
@@ -642,13 +724,15 @@
       ]
     },
     {
-      "id": 42,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 2",
-      "type": "fill_in_the_blank",
-      "prompt": "Câu 42",
+      "question_no": 42,
+      "type": "Match",
+      "text": "Câu hỏi số 42",
+      "answer": "F",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "F",
       "explanation": "Đáp án [F]: Từ cần điền [准备 (zhǔnbèi)] vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
       "options": [
         "A",
@@ -660,13 +744,15 @@
       ]
     },
     {
-      "id": 43,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 2",
-      "type": "fill_in_the_blank",
-      "prompt": "Câu 43",
+      "question_no": 43,
+      "type": "Match",
+      "text": "Câu hỏi số 43",
+      "answer": "A",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "A",
       "explanation": "Đáp án [A]: Từ cần điền [简单 (jiǎndān)] vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
       "options": [
         "A",
@@ -678,13 +764,15 @@
       ]
     },
     {
-      "id": 44,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 2",
-      "type": "fill_in_the_blank",
-      "prompt": "Câu 44",
+      "question_no": 44,
+      "type": "Match",
+      "text": "Câu hỏi số 44",
+      "answer": "B",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "B",
       "explanation": "Đáp án [B]: Từ cần điền [运动 (yùndòng)] vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
       "options": [
         "A",
@@ -696,13 +784,15 @@
       ]
     },
     {
-      "id": 45,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 2",
-      "type": "fill_in_the_blank",
-      "prompt": "Câu 45",
+      "question_no": 45,
+      "type": "Match",
+      "text": "Câu hỏi số 45",
+      "answer": "C",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "C",
       "explanation": "Đáp án [C]: Từ cần điền [便宜 (piányi)] vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
       "options": [
         "A",
@@ -714,13 +804,15 @@
       ]
     },
     {
-      "id": 46,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 3",
-      "type": "true_false",
-      "prompt": "Câu 46",
+      "question_no": 46,
+      "type": "True/False",
+      "text": "Câu hỏi số 46",
+      "answer": "×",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "×",
       "explanation": "Sai (×): Căn cứ câu văn [长时间看电脑，对眼睛不好。 (Cháng shíjiān kàn diànnǎo, duì yǎnjing bù hǎo.)] nội dung nhận định không chính xác.",
       "options": [
         "√",
@@ -728,13 +820,15 @@
       ]
     },
     {
-      "id": 47,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 3",
-      "type": "true_false",
-      "prompt": "Câu 47",
+      "question_no": 47,
+      "type": "True/False",
+      "text": "Câu hỏi số 47",
+      "answer": "√",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "√",
       "explanation": "Đúng (√): Căn cứ câu văn [你生病了，要多喝水，多休息。 (Nǐ shēngbìng le, yào duō hē shuǐ, duō xiūxi.)] nội dung nhận định là hoàn toàn chính xác.",
       "options": [
         "√",
@@ -742,13 +836,15 @@
       ]
     },
     {
-      "id": 48,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 3",
-      "type": "true_false",
-      "prompt": "Câu 48",
+      "question_no": 48,
+      "type": "True/False",
+      "text": "Câu hỏi số 48",
+      "answer": "×",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "×",
       "explanation": "Sai (×): Căn cứ câu văn [这鱼十块钱一斤，很新鲜。 (Zhè yú shí kuài qián yì jīn, hěn xīnxiān.)] nội dung nhận định không chính xác.",
       "options": [
         "√",
@@ -756,13 +852,15 @@
       ]
     },
     {
-      "id": 49,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 3",
-      "type": "true_false",
-      "prompt": "Câu 49",
+      "question_no": 49,
+      "type": "True/False",
+      "text": "Câu hỏi số 49",
+      "answer": "√",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "√",
       "explanation": "Đúng (√): Căn cứ câu văn [今天太晚了，我们明天再去吧。 (Jīntiān tài wǎn le, wǒmen míngtiān zài qù ba.)] nội dung nhận định là hoàn toàn chính xác.",
       "options": [
         "√",
@@ -770,13 +868,15 @@
       ]
     },
     {
-      "id": 50,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 3",
-      "type": "true_false",
-      "prompt": "Câu 50",
+      "question_no": 50,
+      "type": "True/False",
+      "text": "Câu hỏi số 50",
+      "answer": "×",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "×",
       "explanation": "Sai (×): Căn cứ câu văn [身体好还要多运动。 (Shēntǐ hǎo hái yào duō yùndòng.)] nội dung nhận định không chính xác.",
       "options": [
         "√",
@@ -784,13 +884,15 @@
       ]
     },
     {
-      "id": 51,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 51",
+      "question_no": 51,
+      "type": "Match",
+      "text": "Câu hỏi số 51",
+      "answer": "C",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "C",
       "explanation": "Đáp án [C]: Căn cứ vào đoạn văn đọc hiểu [外面下雪了，很冷。 (Wàimiàn xià xuě le, hěn lěng.)] để chọn đáp án C.",
       "options": [
         "A",
@@ -802,13 +904,15 @@
       ]
     },
     {
-      "id": 52,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 52",
+      "question_no": 52,
+      "type": "Match",
+      "text": "Câu hỏi số 52",
+      "answer": "A",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "A",
       "explanation": "Đáp án [A]: Căn cứ vào đoạn văn đọc hiểu [他学汉语快两年了，说得很好。 (Tā xué Hànyǔ kuài liǎng nián le, shuō de hěn hǎo.)] để chọn đáp án A.",
       "options": [
         "A",
@@ -820,13 +924,15 @@
       ]
     },
     {
-      "id": 53,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 53",
+      "question_no": 53,
+      "type": "Match",
+      "text": "Câu hỏi số 53",
+      "answer": "B",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "B",
       "explanation": "Đáp án [B]: Căn cứ vào đoạn văn đọc hiểu [我们学校有两千多个学生。 (Wǒmen xuéxiào yǒu liǎng qiān duō gè xuésheng.)] để chọn đáp án B.",
       "options": [
         "A",
@@ -838,13 +944,15 @@
       ]
     },
     {
-      "id": 54,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 54",
+      "question_no": 54,
+      "type": "Match",
+      "text": "Câu hỏi số 54",
+      "answer": "C",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "C",
       "explanation": "Đáp án [C]: Căn cứ vào đoạn văn đọc hiểu [请问十四号到北京的车票还有吗？ (Qǐngwèn shí-sì hào dào Běijīng de chēpiào hái yǒu ma?)] để chọn đáp án C.",
       "options": [
         "A",
@@ -856,13 +964,15 @@
       ]
     },
     {
-      "id": 55,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 55",
+      "question_no": 55,
+      "type": "Match",
+      "text": "Câu hỏi số 55",
+      "answer": "A",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "A",
       "explanation": "Đáp án [A]: Căn cứ vào đoạn văn đọc hiểu [少吃肉，多吃菜，对身体好。 (Shǎo chī ròu, duō chī cài, duì shēntǐ hǎo.)] để chọn đáp án A.",
       "options": [
         "A",
@@ -874,13 +984,15 @@
       ]
     },
     {
-      "id": 56,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 56",
+      "question_no": 56,
+      "type": "Match",
+      "text": "Câu hỏi số 56",
+      "answer": "B",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "B",
       "explanation": "Đáp án [B]: Căn cứ vào đoạn văn đọc hiểu [今天是儿子的生日。 (Jīntiān shì érzi de shēngrì.)] để chọn đáp án B.",
       "options": [
         "A",
@@ -892,13 +1004,15 @@
       ]
     },
     {
-      "id": 57,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 57",
+      "question_no": 57,
+      "type": "Match",
+      "text": "Câu hỏi số 57",
+      "answer": "C",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "C",
       "explanation": "Đáp án [C]: Căn cứ vào đoạn văn đọc hiểu [从我家到学校坐公共汽车二十分钟。 (Cóng wǒ jiā dào xuéxiào zuò gōnggòng qìchē èrshí fēnzhōng.)] để chọn đáp án C.",
       "options": [
         "A",
@@ -910,13 +1024,15 @@
       ]
     },
     {
-      "id": 58,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 58",
+      "question_no": 58,
+      "type": "Match",
+      "text": "Câu hỏi số 58",
+      "answer": "A",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "A",
       "explanation": "Đáp án [A]: Căn cứ vào đoạn văn đọc hiểu [医生说吃两天药就会好。 (Yīshēng shuō chī liǎng tiān yào jiù huì hǎo.)] để chọn đáp án A.",
       "options": [
         "A",
@@ -928,13 +1044,15 @@
       ]
     },
     {
-      "id": 59,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 59",
+      "question_no": 59,
+      "type": "Match",
+      "text": "Câu hỏi số 59",
+      "answer": "B",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "B",
       "explanation": "Đáp án [B]: Căn cứ vào đoạn văn đọc hiểu [我想买几斤苹果带回家。 (Wǒ xiǎng mǎi jǐ jīn píngguǒ dài huí jiā.)] để chọn đáp án B.",
       "options": [
         "A",
@@ -946,13 +1064,15 @@
       ]
     },
     {
-      "id": 60,
+      "exam_code": "H21009",
+      "section": "Reading (阅读)",
       "part": "Part 4",
-      "type": "match",
-      "prompt": "Câu 60",
+      "question_no": 60,
+      "type": "Match",
+      "text": "Câu hỏi số 60",
+      "answer": "C",
       "listening_script": "",
       "listening_pinyin": "",
-      "answer": "C",
       "explanation": "Đáp án [C]: Căn cứ vào đoạn văn đọc hiểu [明天下午我们一起去图书馆吧。 (Míngtiān xiàwǔ wǒmen yìqǐ qù túshūguǎn ba.)] để chọn đáp án C.",
       "options": [
         "A",
@@ -963,5 +1083,9 @@
         "F"
       ]
     }
-  ]
+  ],
+  "exam_code": "H21009",
+  "audio_mp3": "H21009_audio.mp3",
+  "audio_ogg": null,
+  "images_count": 22
 }
