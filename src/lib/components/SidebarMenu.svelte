@@ -9,8 +9,23 @@
   import Target from 'phosphor-svelte/lib/Target';
   import Trophy from 'phosphor-svelte/lib/Trophy';
   import CaretRight from 'phosphor-svelte/lib/CaretRight';
+  import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
 
   const menuItems = [
+    {
+      title: 'Tra từ điển',
+      subtitle: 'Tra cứu Hán tự, Pinyin, nét viết',
+      href: '/tu-vung',
+      icon: MagnifyingGlass,
+      badge: 'Tra cứu',
+      colorClasses: {
+        bg: 'bg-rose-500/10 dark:bg-rose-500/20',
+        text: 'text-rose-600 dark:text-rose-400',
+        border: 'border-rose-200 dark:border-rose-800/60',
+        activeBg: 'bg-rose-50 dark:bg-[#282A2C]',
+        badgeBg: 'bg-rose-100 text-rose-700 dark:bg-rose-900/60 dark:text-rose-300'
+      }
+    },
     {
       title: 'Từ vựng',
       subtitle: 'Luyện 4 kỹ năng & thẻ nhớ',
@@ -110,6 +125,18 @@
     </div>
   </div>
 
+  <!-- Quick Search Bar Widget -->
+  <div class="px-3.5 pt-3 pb-1">
+    <a
+      href="/tu-vung"
+      class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-slate-100/80 dark:bg-[#282A2C]/60 hover:bg-slate-200/70 dark:hover:bg-[#282A2C] border border-slate-200/60 dark:border-[#37393B] text-slate-500 dark:text-[#8E918F] transition-all group shadow-2xs"
+    >
+      <MagnifyingGlass weight="bold" class="w-4 h-4 text-slate-400 group-hover:text-rose-500 transition-colors" />
+      <span class="text-xs font-semibold flex-1 truncate">Tra từ điển HSK...</span>
+      <kbd class="hidden xl:inline-block px-1.5 py-0.5 text-[10px] font-mono bg-white dark:bg-[#1E1F20] text-slate-400 dark:text-[#8E918F] rounded-md border border-slate-200 dark:border-[#37393B]">/tu-vung</kbd>
+    </a>
+  </div>
+
   <!-- Desktop Nav List -->
   <div class="p-3.5 space-y-2 overflow-y-auto flex-1">
     <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] px-2 mb-1">
@@ -203,6 +230,19 @@
           Cấp độ: {appState.currentLevel} • Chuỗi học tập
         </p>
       </div>
+    </div>
+
+    <!-- Mobile Quick Search -->
+    <div class="px-4 pt-3 pb-1">
+      <a
+        href="/tu-vung"
+        onclick={closeMobileSidebar}
+        class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-slate-100/80 dark:bg-[#282A2C]/60 hover:bg-slate-200/70 dark:hover:bg-[#282A2C] border border-slate-200/60 dark:border-[#37393B] text-slate-500 dark:text-[#8E918F] transition-all"
+      >
+        <MagnifyingGlass weight="bold" class="w-4 h-4 text-rose-500 shrink-0" />
+        <span class="text-xs font-semibold flex-1">Tra cứu từ điển HSK...</span>
+        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-300">Tra từ</span>
+      </a>
     </div>
 
     <!-- Navigation List (To rõ ràng, dễ nhìn, mỗi nút một màu riêng biệt) -->
