@@ -107,13 +107,22 @@
         subtitles = data;
       } else {
         // Fallback: extract from questions
-        let dummySubtitles: SubtitleItem[] = [];
+        let dummySubtitles: SubtitleItem[] = [
+          {
+            id: 0,
+            startTime: 0,
+            endTime: 28.5,
+            text: "🎵 Đang phát nhạc dạo đầu & Giới thiệu quy chế bài thi...",
+            pinyin: ""
+          }
+        ];
         listeningQuestions.forEach((q, i) => {
            dummySubtitles.push({
              id: i + 1,
-             startTime: i * 5, // dummy
-             endTime: (i + 1) * 5, // dummy
-             text: q.listening_script || q.text || `Câu ${q.question_no}`
+             startTime: 28.5 + i * 5, // shift by 28.5s intro
+             endTime: 28.5 + (i + 1) * 5, // dummy
+             text: q.listening_script || q.text || `Câu ${q.question_no}`,
+             pinyin: q.listening_pinyin || ''
            });
         });
         subtitles = dummySubtitles;
@@ -423,9 +432,16 @@
                    onclick={() => seekTo(sub.startTime)}
                    class="w-full text-left p-4 rounded-2xl transition-all duration-300 cursor-pointer block {i === activeSubtitleIndex ? 'bg-orange-100 dark:bg-orange-900/40 border border-orange-200 dark:border-orange-800 shadow-sm scale-[1.02]' : 'bg-transparent hover:bg-slate-50 dark:hover:bg-neutral-800/50 opacity-60 hover:opacity-100'}"
                  >
-                   <span class="text-lg md:text-xl font-medium font-serif leading-relaxed transition-colors duration-300 {i === activeSubtitleIndex ? 'text-orange-700 dark:text-orange-300 font-bold' : 'text-slate-700 dark:text-neutral-300'}">
-                     {@html sub.text.replace(/\n/g, '<br/>')}
-                   </span>
+                   <div class="flex flex-col gap-1 w-full">
+                     <span class="text-lg md:text-xl font-medium font-serif leading-relaxed transition-colors duration-300 {i === activeSubtitleIndex ? 'text-orange-700 dark:text-orange-300 font-bold' : 'text-slate-700 dark:text-neutral-300'}">
+                       {@html sub.text.replace(/\n/g, '<br/>')}
+                     </span>
+                     {#if sub.pinyin}
+                       <span class="text-sm md:text-base font-mono transition-colors duration-300 {i === activeSubtitleIndex ? 'text-amber-600 dark:text-amber-400 font-semibold' : 'text-slate-500 dark:text-neutral-500'}">
+                         {sub.pinyin}
+                       </span>
+                     {/if}
+                   </div>
                  </button>
                {/each}
             {/if}

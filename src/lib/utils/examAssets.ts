@@ -27,9 +27,9 @@ export function getExamImageUrl(examCode: string, imageSrc?: string | null): str
     return imageSrc;
   }
   const cleanPath = imageSrc.replace(/^\/+/, '');
-  // If the path already includes 'images/', don't duplicate
+  // Prefer serving from local static bundle (/exams/...) for instantaneous offline & dev rendering
   if (cleanPath.startsWith('images/')) {
-    return `${R2_PUBLIC_BASE_URL}/${examCode}/${cleanPath}`;
+    return `/exams/${examCode}/${cleanPath}`;
   }
-  return `${R2_PUBLIC_BASE_URL}/${examCode}/images/${cleanPath}`;
+  return `/exams/${examCode}/images/${cleanPath}`;
 }

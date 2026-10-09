@@ -1,8 +1,12 @@
+import { pinyin } from 'pinyin-pro';
+
 export interface SubtitleItem {
   id: number;
   startTime: number;
   endTime: number;
   text: string;
+  pinyin?: string;
+  isIntro?: boolean;
 }
 
 export function parseSrt(srtContent: string): SubtitleItem[] {
@@ -30,11 +34,19 @@ export function parseSrt(srtContent: string): SubtitleItem[] {
         const endMs = parseInt(timeMatch[8], 10);
         const endTime = endHour * 3600 + endMin * 60 + endSec + endMs / 1000;
 
+        let py = '';
+        try {
+          py = pinyin(text);
+        } catch {
+          py = '';
+        }
+
         subtitles.push({
           id,
           startTime,
           endTime,
-          text
+          text,
+          pinyin: py
         });
       }
     }
@@ -44,6 +56,16 @@ export function parseSrt(srtContent: string): SubtitleItem[] {
 }
 
 export async function fetchSrt(examCode: string, baseUrl: string): Promise<SubtitleItem[]> {
+  // Try local static bundle first (/exams/<CODE>/<CODE>.srt)
+  try {
+    const localRes = await fetch(`/exams/${examCode}/${examCode}.srt`);
+    if (localRes.ok) {
+      const text = await localRes.text();
+      return parseSrt(text);
+    }
+  } catch {}
+
+  // Fallback to CDN URL
   try {
     const response = await fetch(`${baseUrl}/${examCode}/${examCode}.srt`);
     if (!response.ok) {
