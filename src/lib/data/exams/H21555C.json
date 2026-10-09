@@ -18,7 +18,7 @@
       "answer": "√",
       "listening_script": "你说什么？我听不到。",
       "listening_pinyin": "nǐ shuō shén me ？ wǒ tīng bú dào 。",
-      "explanation": "Đúng (√): Lời thoại [他正在做第1题的听力练习。 (tā zhèngzài zuò 第 1 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '你说什么？我听不到。' (Bạn đã nói gì? Tôi không thể nghe thấy nó.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "options": [
         "√",
         "×"
@@ -35,7 +35,7 @@
       "answer": "×",
       "listening_script": "跑第一的是五号。",
       "listening_pinyin": "pǎo dì yī de shì wǔ hào 。",
-      "explanation": "Sai (×): Lời thoại [这是第2题的听力对话/句子。 (zhè shì 第 2 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '跑第一的是五号。' (Người về nhất là số 5.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "options": [
         "√",
         "×"
@@ -52,7 +52,7 @@
       "answer": "√",
       "listening_script": "她还在睡觉。",
       "listening_pinyin": "tā hái zài shuì jiào 。",
-      "explanation": "Đúng (√): Lời thoại [他正在做第3题的听力练习。 (tā zhèngzài zuò 第 3 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '她还在睡觉。' (Cô ấy vẫn đang ngủ.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "options": [
         "√",
         "×"
@@ -69,7 +69,7 @@
       "answer": "×",
       "listening_script": "你看，小狗在玩儿什么呢？",
       "listening_pinyin": "nǐ kàn ， xiǎo gǒu zài wán ér shén me ne ？",
-      "explanation": "Sai (×): Lời thoại [这是第4题的听力对话/句子。 (zhè shì 第 4 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '你看，小狗在玩儿什么呢？' (Nhìn xem, con chó con đang chơi với cái gì?). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "options": [
         "√",
         "×"
@@ -120,7 +120,7 @@
       "answer": "√",
       "listening_script": "什么事让你这么高兴？快告诉我。",
       "listening_pinyin": "shén me shì ràng nǐ zhè me gāo xìng ？ kuài gào sù wǒ 。",
-      "explanation": "Đúng (√): Lời thoại [他正在做第7题的听力练习。 (tā zhèngzài zuò 第 7 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '什么事让你这么高兴？快告诉我。' (Điều gì khiến bạn hạnh phúc đến thế? Nói cho tôi nhanh đi.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "options": [
         "√",
         "×"
@@ -137,7 +137,7 @@
       "answer": "×",
       "listening_script": "她买了五个鸡蛋。",
       "listening_pinyin": "tā mǎi le wǔ gè jī dàn 。",
-      "explanation": "Sai (×): Lời thoại [这是第8题的听力对话/句子。 (zhè shì 第 8 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '她买了五个鸡蛋。' (Cô ấy đã mua năm quả trứng.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "options": [
         "√",
         "×"
@@ -154,7 +154,7 @@
       "answer": "√",
       "listening_script": "别说话，电影要开始了。",
       "listening_pinyin": "bié shuō huà ， diàn yǐng yào kāi shǐ le 。",
-      "explanation": "Đúng (√): Lời thoại [他正在做第9题的听力练习。 (tā zhèngzài zuò 第 9 题 de tīng 力 练 习.)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '别说话，电影要开始了。' (Đừng nói nữa, phim sắp bắt đầu rồi.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "options": [
         "√",
         "×"
@@ -171,7 +171,7 @@
       "answer": "×",
       "listening_script": "学跳舞要慢慢来。",
       "listening_pinyin": "xué tiào wǔ yào màn màn lái 。",
-      "explanation": "Sai (×): Lời thoại [这是第10题的听力对话/句子。 (zhè shì 第 1 0 题 de tīng 力 对 话 / 句 子.)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '学跳舞要慢慢来。' (Học cách nhảy chậm.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "options": [
         "√",
         "×"

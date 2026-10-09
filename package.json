@@ -31,6 +31,7 @@
     "wrangler": "^4.148.0"
   },
   "dependencies": {
+    "google-translate-api-x": "^10.7.3",
     "svelte-sonner": "^1.2.1"
   }
 }

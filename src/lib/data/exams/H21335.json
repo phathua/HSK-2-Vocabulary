@@ -15,7 +15,8 @@
       "text": "Câu hỏi nghe số 1",
       "answer": "√",
       "listening_script": "别说话，电影要开始了。",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nói '别说话，电影要开始了。' (Đừng nói nữa, phim sắp bắt đầu rồi.). Hình ảnh thể hiện đúng sự vật, hành động này."
     },
     {
       "exam_code": "H21335",
@@ -27,7 +28,8 @@
       "text": "Câu hỏi nghe số 2",
       "answer": "×",
       "listening_script": "下个月爸爸生日，我想送他块儿手表。",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nói '下个月爸爸生日，我想送他块儿手表。' (Tháng sau là sinh nhật của bố tôi và tôi muốn tặng ông một chiếc đồng hồ.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả."
     },
     {
       "exam_code": "H21335",
@@ -39,7 +41,8 @@
       "text": "Câu hỏi nghe số 3",
       "answer": "×",
       "listening_script": "外面冷，多穿件衣服。",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nói '外面冷，多穿件衣服。' (Bên ngoài trời lạnh lắm, nên mặc thêm quần áo vào nhé.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả."
     },
     {
       "exam_code": "H21335",
@@ -51,7 +54,8 @@
       "text": "Câu hỏi nghe số 4",
       "answer": "√",
       "listening_script": "我看看你买了什么。",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nói '我看看你买了什么。' (Hãy để tôi xem những gì bạn đã mua.). Hình ảnh thể hiện đúng sự vật, hành động này."
     },
     {
       "exam_code": "H21335",
@@ -63,7 +67,8 @@
       "text": "Câu hỏi nghe số 5",
       "answer": "×",
       "listening_script": "这个字怎么读？",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nói '这个字怎么读？' (Làm thế nào để phát âm từ này?). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả."
     },
     {
       "exam_code": "H21335",
@@ -75,7 +80,8 @@
       "text": "Câu hỏi nghe số 6",
       "answer": "√",
       "listening_script": "西瓜是我最爱吃的水果。",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nói '西瓜是我最爱吃的水果。' (Dưa hấu là loại trái cây yêu thích của tôi.). Hình ảnh thể hiện đúng sự vật, hành động này."
     },
     {
       "exam_code": "H21335",
@@ -87,7 +93,8 @@
       "text": "Câu hỏi nghe số 7",
       "answer": "√",
       "listening_script": "对不起，那本书卖完了。",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nói '对不起，那本书卖完了。' (Rất tiếc, cuốn sách đó đã bán hết.). Hình ảnh thể hiện đúng sự vật, hành động này."
     },
     {
       "exam_code": "H21335",
@@ -99,7 +106,8 @@
       "text": "Câu hỏi nghe số 8",
       "answer": "√",
       "listening_script": "你好，我姓张，你可以叫我小张。",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Đúng (√): Lời thoại nói '你好，我姓张，你可以叫我小张。' (Xin chào, tôi họ Zhang, bạn có thể gọi tôi là Xiao Zhang.). Hình ảnh thể hiện đúng sự vật, hành động này."
     },
     {
       "exam_code": "H21335",
@@ -111,7 +119,8 @@
       "text": "Câu hỏi nghe số 9",
       "answer": "×",
       "listening_script": "我要红茶，你呢？",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nói '我要红茶，你呢？' (Tôi muốn uống trà đen, còn bạn thì sao?). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả."
     },
     {
       "exam_code": "H21335",
@@ -123,7 +132,8 @@
       "text": "Câu hỏi nghe số 10",
       "answer": "×",
       "listening_script": "他们在一起时很快乐。",
-      "board_image": null
+      "board_image": null,
+      "explanation": "Sai (×): Lời thoại nói '他们在一起时很快乐。' (Họ hạnh phúc bên nhau.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả."
     },
     {
       "exam_code": "H21335",
@@ -422,8 +432,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 35",
       "answer": "A",
-      "listening_script": "男：你什么时候买的车？ 女：上个月。 男：那你现在开车上班？ 女：对，因为我现在住得远，开车能快点儿。 问：女的为什么开车去上班？ 听力考试现在结束。 - 4 -",
-      "board_image": null
+      "listening_script": "男：你什么时候买的车？ 女：上个月。 男：那你现在开车上班？ 女：对，因为我现在住得远，开车能快点儿。 问：女的为什么开车去上班？",
+      "board_image": null,
+      "listening_pinyin": "nán ： nǐ shén me shí hòu mǎi de chē ？   nǚ ： shàng gè yuè 。   nán ： nà nǐ xiàn zài kāi chē shàng bān ？   nǚ ： duì ， yīn wèi wǒ xiàn zài zhù dé yuǎn ， kāi chē néng kuài diǎn ér 。   wèn ： nǚ de wèi shén me kāi chē qù shàng bān ？",
+      "explanation": "Đáp án [A]: Dựa vào bài nghe [男：你什么时候买的车？ 女：上个月。 男：那你现在开车上班？ 女：对，因为我现在住得远，开车能快点儿。 问：女的为什么开车去上班？ (nán ： nǐ shén me shí hòu mǎi de chē ？   nǚ ： shàng gè yuè 。   nán ： nà nǐ xiàn zài kāi chē shàng bān ？   nǚ ： duì ， yīn wèi wǒ xiàn zài zhù dé yuǎn ， kāi chē néng kuài diǎn ér 。   wèn ： nǚ de wèi shén me kāi chē qù shàng bān ？)] để chọn đáp án chính xác."
     },
     {
       "exam_code": "H21335",

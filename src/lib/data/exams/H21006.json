@@ -16,7 +16,7 @@
       "answer": "×",
       "listening_script": "× 2．√ 3．√ 4．× 5．×",
       "board_image": null,
-      "explanation": "Sai (×): Lời thoại [× 2．√ 3．√ 4．× 5．× (× 2．√ 3．√ 4．× 5．×)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '× 2．√ 3．√ 4．× 5．×' (× 2．√ 3．√ 4．× 5．×). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "× 2．√ 3．√ 4．× 5．×"
     },
     {
@@ -30,7 +30,7 @@
       "answer": "√",
       "listening_script": "阅读题，分钟二、听力结束后，有分钟填写答题卡。三、全部考试约分钟含考生填写个人信息时间分钟。中国北京国家汉办孔子学院总部编制一、听力第一部分第题例如：",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [阅读题，分钟二、听力结束后，有分钟填写答题卡。三、全部考试约分钟含考生填写个人信息时间分钟。中国北京国家汉办孔子学院总部编制一、听力第一部分第题例如： (H)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '阅读题，分钟二、听力结束后，有分钟填写答题卡。三、全部考试约分钟含考生填写个人信息时间分钟。中国北京国家汉办孔子学院总部编制一、听力第一部分第题例如：' (Đọc câu hỏi, phút thứ hai. Sau khi nghe, bạn có một phút để điền vào phiếu trả lời. 3. Số phút dự kiến ​​cho tất cả các kỳ thi bao gồm số phút thí sinh điền thông tin cá nhân của mình. Do Trụ sở Viện Khổng Tử Hanban tại Bắc Kinh, Trung Quốc biên soạn 1. Câu hỏi Phần 1 Phần Nghe: Ví dụ:). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "H"
     },
     {
@@ -44,7 +44,7 @@
       "answer": "√",
       "listening_script": "4．",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [4． (4．)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '4．' (4．). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "4．"
     },
     {
@@ -72,7 +72,7 @@
       "answer": "×",
       "listening_script": "H21006 - 2",
       "board_image": null,
-      "explanation": "Sai (×): Lời thoại [H21006 - 2 (H21006 - 2)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói 'H21006 - 2' (H21006-2). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "H21006 - 2"
     },
     {
@@ -86,7 +86,7 @@
       "answer": "×",
       "listening_script": "× 7．× 8．√ 9．√ 10．√",
       "board_image": null,
-      "explanation": "Sai (×): Lời thoại [× 7．× 8．√ 9．√ 10．√ (× 7．× 8．√ 9．√ 10．√)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '× 7．× 8．√ 9．√ 10．√' (× 7．× 8．√ 9．√ 10．√). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "× 7．× 8．√ 9．√ 10．√"
     },
     {
@@ -114,7 +114,7 @@
       "answer": "√",
       "listening_script": "9．",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [9． (9．)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '9．' (9．). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "9．"
     },
     {
@@ -142,7 +142,7 @@
       "answer": "√",
       "listening_script": "H21006 - 3",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [H21006 - 3 (H21006 - 3)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói 'H21006 - 3' (H21006-3). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "H21006 - 3"
     },
     {
@@ -490,10 +490,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 35",
       "answer": "A",
-      "listening_script": "A méi 没 yìsi 意思 B kàn 看 shū 书 tài 太 shǎo 少 C bié 别 kàn 看 tài 太 kuài 快 H21006 - 7 二、阅 读 第一部分 第36-40 题 A B C D E F 例如： Měi 每 ge 个 xīngqīliù， 星期六， wǒ 我 dōu 都 qù 去 dǎ 打 lánqiú． 篮球。 D",
+      "listening_script": "A méi 没 yìsi 意思 B kàn 看 shū 书 tài 太 shǎo 少 C bié 别 kàn 看 tài 太 kuài 快  - 7 二、阅 读 第一部分 第36-40 题 A B C D E F 例如： Měi 每 ge 个 xīngqīliù， 星期六， wǒ 我 dōu 都 qù 去 dǎ 打 lánqiú． 篮球。 D",
       "board_image": null,
-      "explanation": "Đáp án [A]: Dựa vào bài nghe [没意思看书太少别看太快二、阅读第一部分第题例如：每个星期六，我都去打篮球。 (A méi yìsi B kàn shū tài shǎo C bié kàn tài kuài H A B C D E F Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú. D)] để chọn đáp án chính xác.",
-      "listening_pinyin": "A méi yìsi B kàn shū tài shǎo C bié kàn tài kuài H A B C D E F Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú. D"
+      "explanation": "Đáp án [A]: Dựa vào bài nghe [A méi 没 yìsi 意思 B kàn 看 shū 书 tài 太 shǎo 少 C bié 别 kàn 看 tài 太 kuài 快  - 7 二、阅 读 第一部分 第36-40 题 A B C D E F 例如： Měi 每 ge 个 xīngqīliù， 星期六， wǒ 我 dōu 都 qù 去 dǎ 打 lánqiú． 篮球。 D (A   m é i   méi   y ì s i   yì sī   B   k à n   kàn   s h ū   shū   t à i   tài   s h ǎ o   shǎo   C   b i é   bié   k à n   kàn   t à i   tài   k u à i   kuài     -   7   èr 、 yuè   dú   dì yī bù fen   dì 3 6 - 4 0   tí   A   B   C   D   E   F   lì rú ：   M ě i   měi   g e   gè   x ī n g q ī l i ù ，   xīng qī liù ，   w ǒ   wǒ   d ō u   dōu   q ù   qù   d ǎ   dǎ   l á n q i ú ．   lán qiú 。   D)] để chọn đáp án chính xác.",
+      "listening_pinyin": "A   m é i   méi   y ì s i   yì sī   B   k à n   kàn   s h ū   shū   t à i   tài   s h ǎ o   shǎo   C   b i é   bié   k à n   kàn   t à i   tài   k u à i   kuài     -   7   èr 、 yuè   dú   dì yī bù fen   dì 3 6 - 4 0   tí   A   B   C   D   E   F   lì rú ：   M ě i   měi   g e   gè   x ī n g q ī l i ù ，   xīng qī liù ，   w ǒ   wǒ   d ō u   dōu   q ù   qù   d ǎ   dǎ   l á n q i ú ．   lán qiú 。   D"
     },
     {
       "exam_code": "H21006",
@@ -646,7 +646,7 @@
       "answer": "×",
       "listening_script": "长时间看电脑，对眼睛不好。",
       "board_image": null,
-      "explanation": "Sai (×): Căn cứ câu văn [长时间看电脑，对眼睛不好。 (Cháng shíjiān kàn diànnǎo, duì yǎnjing bù hǎo.)] nội dung nhận định không chính xác.",
+      "explanation": "Sai (×): Câu văn viết '长时间看电脑，对眼睛不好。' (Nhìn vào máy tính trong thời gian dài có hại cho mắt.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "Cháng shíjiān kàn diànnǎo, duì yǎnjing bù hǎo."
     },
     {
@@ -660,7 +660,7 @@
       "answer": "√",
       "listening_script": "你生病了，要多喝水，多休息。",
       "board_image": null,
-      "explanation": "Đúng (√): Căn cứ câu văn [你生病了，要多喝水，多休息。 (Nǐ shēngbìng le, yào duō hē shuǐ, duō xiūxi.)] nội dung nhận định là hoàn toàn chính xác.",
+      "explanation": "Đúng (√): Câu văn viết '你生病了，要多喝水，多休息。' (Nếu bạn bị bệnh, hãy uống nhiều nước hơn và nghỉ ngơi nhiều hơn.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "Nǐ shēngbìng le, yào duō hē shuǐ, duō xiūxi."
     },
     {
@@ -674,7 +674,7 @@
       "answer": "×",
       "listening_script": "这鱼十块钱一斤，很新鲜。",
       "board_image": null,
-      "explanation": "Sai (×): Căn cứ câu văn [这鱼十块钱一斤，很新鲜。 (Zhè yú shí kuài qián yì jīn, hěn xīnxiān.)] nội dung nhận định không chính xác.",
+      "explanation": "Sai (×): Câu văn viết '这鱼十块钱一斤，很新鲜。' (Con cá này có giá mười nhân dân tệ một cân và rất tươi.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "Zhè yú shí kuài qián yì jīn, hěn xīnxiān."
     },
     {
@@ -688,7 +688,7 @@
       "answer": "×",
       "listening_script": "今天太晚了，我们明天再去吧。",
       "board_image": null,
-      "explanation": "Sai (×): Căn cứ câu văn [今天太晚了，我们明天再去吧。 (Jīntiān tài wǎn le, wǒmen míngtiān zài qù ba.)] nội dung nhận định không chính xác.",
+      "explanation": "Sai (×): Câu văn viết '今天太晚了，我们明天再去吧。' (Hôm nay muộn quá, ngày mai hãy đi.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "Jīntiān tài wǎn le, wǒmen míngtiān zài qù ba."
     },
     {
@@ -702,7 +702,7 @@
       "answer": "D",
       "listening_script": "身体好还要多运动。",
       "board_image": null,
-      "explanation": "Sai (×): Căn cứ câu văn [身体好还要多运动。 (Shēntǐ hǎo hái yào duō yùndòng.)] nội dung nhận định không chính xác.",
+      "explanation": "Sai (×): Câu văn viết '身体好还要多运动。' (Nếu bạn có sức khỏe tốt thì nên tập thể dục nhiều hơn.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "Shēntǐ hǎo hái yào duō yùndòng."
     },
     {

@@ -26,7 +26,8 @@
   let duration = $state(0);
   let isSticky = $state(false);
 
-  import { getExamAudioUrl } from '#lib/utils/examAssets';
+  import { getExamAudioUrl, R2_PUBLIC_BASE_URL } from '#lib/utils/examAssets';
+  import { fetchSrt, type SubtitleItem } from '#lib/utils/srtParser';
 
   // 60s preview countdown state
   let previewSeconds = $state(60);
@@ -35,9 +36,24 @@
 
   // Transcript Modal state
   let showTranscriptModal = $state(false);
-  let activeTranscriptPart = $state('all'); // 'all' | 'Part 1' | 'Part 2' | 'Part 3' | 'Part 4'
+  let activeTranscriptPart = $state('karaoke'); // 'karaoke' | 'all' | 'Part 1' | 'Part 2' | 'Part 3' | 'Part 4'
+
+  let subtitles = $state<SubtitleItem[]>([]);
+  let activeSubtitleIndex = $derived.by(() => {
+    if (!subtitles.length) return -1;
+    let idx = -1;
+    for (let i = 0; i < subtitles.length; i++) {
+      if (currentTime >= subtitles[i].startTime) {
+        idx = i;
+      } else {
+        break;
+      }
+    }
+    return idx;
+  });
 
   const filteredTranscripts = $derived.by(() => {
+    if (activeTranscriptPart === 'karaoke') return [];
     if (activeTranscriptPart === 'all') {
       return listeningQuestions;
     }
@@ -72,9 +88,37 @@
 
   let isScrolled = $state(false);
   let mainScrollContainer: HTMLElement | null = null;
+  let scrollContainer: HTMLElement | null = $state(null);
+
+  $effect(() => {
+    if (showTranscriptModal && activeTranscriptPart === 'karaoke' && activeSubtitleIndex !== -1 && scrollContainer) {
+      const activeEl = scrollContainer.querySelector(`#subtitle-${activeSubtitleIndex}`) as HTMLElement;
+      if (activeEl) {
+         activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
 
   onMount(() => {
     examRoomState.startAudioFn = startAudioPlayback;
+
+    fetchSrt(examCode, R2_PUBLIC_BASE_URL).then(data => {
+      if (data.length > 0) {
+        subtitles = data;
+      } else {
+        // Fallback: extract from questions
+        let dummySubtitles: SubtitleItem[] = [];
+        listeningQuestions.forEach((q, i) => {
+           dummySubtitles.push({
+             id: i + 1,
+             startTime: i * 5, // dummy
+             endTime: (i + 1) * 5, // dummy
+             text: q.listening_script || q.text || `Câu ${q.question_no}`
+           });
+        });
+        subtitles = dummySubtitles;
+      }
+    });
 
     if (isExamMode) {
       isPreviewPhase = true;
@@ -118,6 +162,18 @@
     if (previewTimer) clearInterval(previewTimer);
     examRoomState.startAudioFn = null;
   });
+
+  function seekTo(time: number) {
+    if (audioElement) {
+      audioElement.currentTime = time;
+      currentTime = time;
+      if (!isPlaying) {
+         audioElement.play().catch(console.error);
+         isPlaying = true;
+         examRoomState.isPlaying = true;
+      }
+    }
+  }
 
   function togglePlay() {
     if (!audioElement) return;
@@ -332,6 +388,7 @@
       <!-- Filter Tabs theo Part (Phần 1 - 4) -->
       <div class="flex items-center gap-1.5 p-3 sm:px-6 bg-slate-50 dark:bg-[#202020] border-b border-slate-200 dark:border-neutral-800 overflow-x-auto shrink-0">
         {#each [
+          { id: 'karaoke', label: 'Lời chạy trực tiếp (Karaoke)' },
           { id: 'all', label: 'Tất cả (35 câu)' },
           { id: 'Part 1', label: 'Phần 1 (1-10)' },
           { id: 'Part 2', label: 'Phần 2 (11-20)' },
@@ -353,49 +410,72 @@
       </div>
 
       <!-- Nội dung danh sách lời thoại -->
-      <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-3.5 divide-y divide-slate-100 dark:divide-neutral-800">
-        {#if filteredTranscripts.length === 0}
-          <div class="text-center py-8 text-xs text-slate-500">
-            Không tìm thấy bản chép lời cho phần này.
+      <div class="flex-1 overflow-y-auto p-4 sm:p-6" bind:this={scrollContainer}>
+        {#if activeTranscriptPart === 'karaoke'}
+          <div class="space-y-4 max-w-xl mx-auto py-8">
+            {#if subtitles.length === 0}
+               <div class="text-center py-8 text-xs text-slate-500">Đang tải lời chạy trực tiếp...</div>
+            {:else}
+               {#each subtitles as sub, i}
+                 <button
+                   type="button"
+                   id="subtitle-{i}"
+                   onclick={() => seekTo(sub.startTime)}
+                   class="w-full text-left p-4 rounded-2xl transition-all duration-300 cursor-pointer block {i === activeSubtitleIndex ? 'bg-orange-100 dark:bg-orange-900/40 border border-orange-200 dark:border-orange-800 shadow-sm scale-[1.02]' : 'bg-transparent hover:bg-slate-50 dark:hover:bg-neutral-800/50 opacity-60 hover:opacity-100'}"
+                 >
+                   <span class="text-lg md:text-xl font-medium font-serif leading-relaxed transition-colors duration-300 {i === activeSubtitleIndex ? 'text-orange-700 dark:text-orange-300 font-bold' : 'text-slate-700 dark:text-neutral-300'}">
+                     {@html sub.text.replace(/\n/g, '<br/>')}
+                   </span>
+                 </button>
+               {/each}
+            {/if}
           </div>
         {:else}
-          {#each filteredTranscripts as q}
-            <div class="pt-3.5 first:pt-0">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="px-2 py-0.5 rounded-lg bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 font-mono font-bold text-xs">
-                  Câu {q.question_no}
-                </span>
-                <span class="text-[11px] font-medium text-slate-400">
-                  {q.part} • Đáp án chuẩn: <strong class="text-emerald-600 dark:text-emerald-400 font-bold">{q.answer}</strong>
-                </span>
+          <div class="space-y-3.5 divide-y divide-slate-100 dark:divide-neutral-800">
+            {#if filteredTranscripts.length === 0}
+              <div class="text-center py-8 text-xs text-slate-500">
+                Không tìm thấy bản chép lời cho phần này.
               </div>
+            {:else}
+              {#each filteredTranscripts as q}
+                <div class="pt-3.5 first:pt-0">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="px-2 py-0.5 rounded-lg bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 font-mono font-bold text-xs">
+                      Câu {q.question_no}
+                    </span>
+                    <span class="text-[11px] font-medium text-slate-400">
+                      {q.part} • Đáp án chuẩn: <strong class="text-emerald-600 dark:text-emerald-400 font-bold">{q.answer}</strong>
+                    </span>
+                  </div>
 
-              <!-- Lời thoại tiếng Hán -->
-              <div class="p-3 rounded-2xl bg-slate-50 dark:bg-neutral-900/60 border border-slate-200/80 dark:border-neutral-800 space-y-2">
-                <div>
-                  <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">
-                    Hán tự
-                  </div>
-                  <div class="text-sm md:text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed select-text font-serif">
-                    {q.listening_script || q.text || 'Đang cập nhật lời thoại...'}
-                  </div>
-                  {#if q.listening_pinyin}
-                    <div class="text-xs md:text-sm font-medium text-amber-600 dark:text-amber-400/90 font-mono mt-0.5 select-text">
-                      {q.listening_pinyin}
+                  <!-- Lời thoại tiếng Hán -->
+                  <div class="p-3 rounded-2xl bg-slate-50 dark:bg-neutral-900/60 border border-slate-200/80 dark:border-neutral-800 space-y-2">
+                    <div>
+                      <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">
+                        Hán tự
+                      </div>
+                      <div class="text-sm md:text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed select-text font-serif">
+                        {q.listening_script || q.text || 'Đang cập nhật lời thoại...'}
+                      </div>
+                      {#if q.listening_pinyin}
+                        <div class="text-xs md:text-sm font-medium text-amber-600 dark:text-amber-400/90 font-mono mt-0.5 select-text">
+                          {q.listening_pinyin}
+                        </div>
+                      {/if}
                     </div>
-                  {/if}
-                </div>
 
-                <!-- Giải thích / Nghĩa tiếng Việt nếu có -->
-                {#if q.explanation}
-                  <div class="pt-2 border-t border-slate-200/60 dark:border-neutral-800 text-[11px] md:text-xs text-slate-600 dark:text-neutral-300 select-text leading-relaxed">
-                    <span class="font-bold text-amber-600 dark:text-amber-400">💡 Giải nghĩa:</span>
-                    {q.explanation}
+                    <!-- Giải thích / Nghĩa tiếng Việt nếu có -->
+                    {#if q.explanation}
+                      <div class="pt-2 border-t border-slate-200/60 dark:border-neutral-800 text-[11px] md:text-xs text-slate-600 dark:text-neutral-300 select-text leading-relaxed">
+                        <span class="font-bold text-amber-600 dark:text-amber-400">💡 Giải nghĩa:</span>
+                        {q.explanation}
+                      </div>
+                    {/if}
                   </div>
-                {/if}
-              </div>
-            </div>
-          {/each}
+                </div>
+              {/each}
+            {/if}
+          </div>
         {/if}
       </div>
 

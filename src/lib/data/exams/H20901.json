@@ -16,7 +16,7 @@
       "answer": "×",
       "listening_script": "我买了一个新电视。",
       "board_image": null,
-      "explanation": "Sai (×): Lời thoại [我买了一个新电视。 (wǒ mǎi le yī gè xīn 电 视 。)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '我买了一个新电视。' (Tôi đã mua một chiếc tivi mới). Nhưng trong hình ảnh là một chiếc máy tính xách tay (laptop), không phải tivi.",
       "listening_pinyin": "wǒ mǎi le yī gè xīn 电 视 。"
     },
     {
@@ -30,7 +30,7 @@
       "answer": "√",
       "listening_script": "对不起，我错了。",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [对不起，我错了。 (对 bù 起 ， wǒ 错 le 。)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '对不起，我错了。' (Xin lỗi, tôi đã sai.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "对 bù 起 ， wǒ 错 le 。"
     },
     {
@@ -44,7 +44,7 @@
       "answer": "×",
       "listening_script": "再见，欢迎您下次再来。",
       "board_image": null,
-      "explanation": "Sai (×): Lời thoại [再见，欢迎您下次再来。 (zài 见 ， huān yíng 您 下 cì zài lái 。)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '再见，欢迎您下次再来。' (Tạm biệt và chào đón bạn lần sau.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "zài 见 ， huān yíng 您 下 cì zài lái 。"
     },
     {
@@ -58,7 +58,7 @@
       "answer": "×",
       "listening_script": "这是他给妻子买的。",
       "board_image": null,
-      "explanation": "Sai (×): Lời thoại [这是他给妻子买的。 (zhè shì tā gěi qī zǐ mǎi de 。)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '这是他给妻子买的。' (Anh ấy đã mua cái này cho vợ mình.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "zhè shì tā gěi qī zǐ mǎi de 。"
     },
     {
@@ -72,7 +72,7 @@
       "answer": "√",
       "listening_script": "女儿让我回家的时候买些鸡蛋。",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [女儿让我回家的时候买些鸡蛋。 (nǚ ér ràng wǒ huí jiā de 时 候 mǎi xiē jī dàn 。)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '女儿让我回家的时候买些鸡蛋。' (Con gái tôi bảo tôi mua vài quả trứng khi tôi về đến nhà.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "nǚ ér ràng wǒ huí jiā de 时 候 mǎi xiē jī dàn 。"
     },
     {
@@ -86,7 +86,7 @@
       "answer": "√",
       "listening_script": "他回来的时候，我正在洗衣服呢。",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [他回来的时候，我正在洗衣服呢。 (tā huí lái de 时 候 ， wǒ zhèng zài xǐ 衣 服 ne 。)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '他回来的时候，我正在洗衣服呢。' (Khi anh ấy quay lại, tôi đang giặt đồ.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "tā huí lái de 时 候 ， wǒ zhèng zài xǐ 衣 服 ne 。"
     },
     {
@@ -100,7 +100,7 @@
       "answer": "×",
       "listening_script": "服务员，请给我来一杯咖啡。",
       "board_image": null,
-      "explanation": "Sai (×): Lời thoại [服务员，请给我来一杯咖啡。 (服 务 yuán ， 请 gěi wǒ lái yī 杯 kā fēi 。)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '服务员，请给我来一杯咖啡。' (Người phục vụ, vui lòng mang cho tôi một tách cà phê.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "服 务 yuán ， 请 gěi wǒ lái yī 杯 kā fēi 。"
     },
     {
@@ -114,7 +114,7 @@
       "answer": "√",
       "listening_script": "爸爸，你别走。",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [爸爸，你别走。 (bà bà ， nǐ 别 zǒu 。)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '爸爸，你别走。' (Bố đừng đi.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "bà bà ， nǐ 别 zǒu 。"
     },
     {
@@ -128,7 +128,7 @@
       "answer": "×",
       "listening_script": "王小姐的猫是黑色的。",
       "board_image": null,
-      "explanation": "Sai (×): Lời thoại [王小姐的猫是黑色的。 (王 xiǎo jiě de māo shì hēi 色 de 。)] không trùng khớp với nội dung bức ảnh.",
+      "explanation": "Sai (×): Lời thoại nói '王小姐的猫是黑色的。' (Con mèo của cô Vương có màu đen.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "王 xiǎo jiě de māo shì hēi 色 de 。"
     },
     {
@@ -142,7 +142,7 @@
       "answer": "√",
       "listening_script": "今天要做的事情真多。",
       "board_image": null,
-      "explanation": "Đúng (√): Lời thoại [今天要做的事情真多。 (jīn tiān yào zuò de shì qíng zhēn duō 。)] miêu tả đúng hành động/ngữ cảnh khớp với hình ảnh.",
+      "explanation": "Đúng (√): Lời thoại nói '今天要做的事情真多。' (Có rất nhiều việc phải làm ngày hôm nay.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "jīn tiān yào zuò de shì qíng zhēn duō 。"
     },
     {
@@ -490,10 +490,10 @@
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 35",
       "answer": "A",
-      "listening_script": "男：请问，十四号到北京的车票还有吗？ 女：对不起，十四号的已经卖完了。 男：那十五号早上的还有吗？ 女：有，您要几张？ 男：两张。 问：男的买了哪天的票？ 听力考试现在结束。 - 16 - - 17 - H20901",
+      "listening_script": "男：请问，十四号到北京的车票还有吗？ 女：对不起，十四号的已经卖完了。 男：那十五号早上的还有吗？ 女：有，您要几张？ 男：两张。 问：男的买了哪天的票？",
       "board_image": null,
-      "explanation": "Đáp án [A]: Dựa vào bài nghe [男：请问，十四号到北京的车票还有吗？女：对不起，十四号的已经卖完了。男：那十五号早上的还有吗？女：有，您要几张？男：两张。问：男的买了哪天的票？听力考试现在结束。 (H)] để chọn đáp án chính xác.",
-      "listening_pinyin": "H"
+      "explanation": "Đáp án [A]: Dựa vào bài nghe [男：请问，十四号到北京的车票还有吗？ 女：对不起，十四号的已经卖完了。 男：那十五号早上的还有吗？ 女：有，您要几张？ 男：两张。 问：男的买了哪天的票？ (nán ： qǐng wèn ， shí sì hào dào běi jīng de chē piào hái yǒu ma ？   nǚ ： duì bù qǐ ， shí sì hào de yǐ jīng mài wán le 。   nán ： nà shí wǔ hào zǎo shàng de hái yǒu ma ？   nǚ ： yǒu ， nín yào jǐ zhāng ？   nán ： liǎng zhāng 。   wèn ： nán de mǎi le nǎ tiān de piào ？)] để chọn đáp án chính xác.",
+      "listening_pinyin": "nán ： qǐng wèn ， shí sì hào dào běi jīng de chē piào hái yǒu ma ？   nǚ ： duì bù qǐ ， shí sì hào de yǐ jīng mài wán le 。   nán ： nà shí wǔ hào zǎo shàng de hái yǒu ma ？   nǚ ： yǒu ， nín yào jǐ zhāng ？   nán ： liǎng zhāng 。   wèn ： nán de mǎi le nǎ tiān de piào ？"
     },
     {
       "exam_code": "H20901",
@@ -646,7 +646,7 @@
       "answer": "√",
       "listening_script": "长时间看电脑，对眼睛不好。",
       "board_image": null,
-      "explanation": "Đúng (√): Căn cứ câu văn [长时间看电脑，对眼睛不好。 (Cháng shíjiān kàn diànnǎo, duì yǎnjing bù hǎo.)] nội dung nhận định là hoàn toàn chính xác.",
+      "explanation": "Đúng (√): Câu văn viết '长时间看电脑，对眼睛不好。' (Nhìn vào máy tính trong thời gian dài có hại cho mắt.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "Cháng shíjiān kàn diànnǎo, duì yǎnjing bù hǎo."
     },
     {
@@ -660,7 +660,7 @@
       "answer": "×",
       "listening_script": "你生病了，要多喝水，多休息。",
       "board_image": null,
-      "explanation": "Sai (×): Căn cứ câu văn [你生病了，要多喝水，多休息。 (Nǐ shēngbìng le, yào duō hē shuǐ, duō xiūxi.)] nội dung nhận định không chính xác.",
+      "explanation": "Sai (×): Câu văn viết '你生病了，要多喝水，多休息。' (Nếu bạn bị bệnh, hãy uống nhiều nước hơn và nghỉ ngơi nhiều hơn.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "Nǐ shēngbìng le, yào duō hē shuǐ, duō xiūxi."
     },
     {
@@ -674,7 +674,7 @@
       "answer": "×",
       "listening_script": "这鱼十块钱一斤，很新鲜。",
       "board_image": null,
-      "explanation": "Sai (×): Căn cứ câu văn [这鱼十块钱一斤，很新鲜。 (Zhè yú shí kuài qián yì jīn, hěn xīnxiān.)] nội dung nhận định không chính xác.",
+      "explanation": "Sai (×): Câu văn viết '这鱼十块钱一斤，很新鲜。' (Con cá này có giá mười nhân dân tệ một cân và rất tươi.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "Zhè yú shí kuài qián yì jīn, hěn xīnxiān."
     },
     {
@@ -688,7 +688,7 @@
       "answer": "√",
       "listening_script": "今天太晚了，我们明天再去吧。",
       "board_image": null,
-      "explanation": "Đúng (√): Căn cứ câu văn [今天太晚了，我们明天再去吧。 (Jīntiān tài wǎn le, wǒmen míngtiān zài qù ba.)] nội dung nhận định là hoàn toàn chính xác.",
+      "explanation": "Đúng (√): Câu văn viết '今天太晚了，我们明天再去吧。' (Hôm nay muộn quá, ngày mai hãy đi.). Hình ảnh thể hiện đúng sự vật, hành động này.",
       "listening_pinyin": "Jīntiān tài wǎn le, wǒmen míngtiān zài qù ba."
     },
     {
@@ -702,7 +702,7 @@
       "answer": "×",
       "listening_script": "身体好还要多运动。",
       "board_image": null,
-      "explanation": "Sai (×): Căn cứ câu văn [身体好还要多运动。 (Shēntǐ hǎo hái yào duō yùndòng.)] nội dung nhận định không chính xác.",
+      "explanation": "Sai (×): Câu văn viết '身体好还要多运动。' (Nếu bạn có sức khỏe tốt thì nên tập thể dục nhiều hơn.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
       "listening_pinyin": "Shēntǐ hǎo hái yào duō yùndòng."
     },
     {
