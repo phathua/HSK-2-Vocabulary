@@ -40,12 +40,12 @@
 </script>
 
 <Toast />
-<div class="h-screen max-h-[100dvh] w-full max-w-lg md:max-w-4xl lg:max-w-7xl mx-auto flex gap-4 p-3 sm:p-4 md:py-5 bg-slate-100 dark:bg-[#131314] font-sans select-none overflow-hidden transition-colors">
+<div class="h-screen max-h-[100dvh] w-full max-w-lg md:max-w-4xl lg:max-w-7xl mx-auto flex gap-4 p-2.5 sm:p-4 md:py-5 bg-slate-100 dark:bg-[#131314] font-sans select-none overflow-hidden transition-colors">
   <!-- Desktop Left Sidebar (Cố định ở desktop) -->
   <SidebarMenu />
 
   <!-- Main Content Area -->
-  <div class="flex-1 flex flex-col justify-between min-w-0 h-full overflow-hidden">
+  <div class="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
     {@render children()}
   </div>
 </div>

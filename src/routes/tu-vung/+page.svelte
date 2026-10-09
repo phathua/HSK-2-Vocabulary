@@ -3,6 +3,9 @@
   import { goto } from '$app/navigation';
   import { DICTIONARY_WORDS, DICTIONARY_BY_HANZI, type DictWord } from '#lib/data/dictionaryData';
   import { appState } from '#lib/state/appState.svelte';
+  import Header from '#lib/components/Header.svelte';
+  import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
+  import SettingsModal from '#lib/components/SettingsModal.svelte';
   import HanziStrokeWriter from '#lib/components/dictionary/HanziStrokeWriter.svelte';
 
   // Phosphor Icons
@@ -161,7 +164,9 @@
   <title>Từ Điển HSK 1 & HSK 2 - Tra Cứu Từ Vựng Thông Minh</title>
 </svelte:head>
 
-<div class="max-w-7xl mx-auto space-y-6 pb-16">
+<Header />
+
+<main class="flex-1 flex flex-col min-h-0 overflow-y-auto no-scrollbar space-y-4 pt-1.5 pb-6">
   <!-- ================= 1. THANH TÌM KIẾM TRÊN CÙNG (SEARCH BAR & VOICE INPUT) ================= -->
   <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-4 md:p-6 border border-slate-200 dark:border-[#37393B] shadow-xs">
     <div class="relative flex items-center">
@@ -536,4 +541,7 @@
       {/if}
     </div>
   </div>
-</div>
+</main>
+
+<LessonFilterModal />
+<SettingsModal />

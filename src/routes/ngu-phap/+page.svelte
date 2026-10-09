@@ -96,7 +96,7 @@
 
 <Header />
 
-<main class="flex-1 flex flex-col min-h-0 pt-1 pb-0 overflow-hidden space-y-2">
+<main class="flex-1 flex flex-col min-h-0 overflow-hidden space-y-2.5 pb-1">
   <!-- Top Bar: Tiêu đề + Huy hiệu + Tiến độ đã học -->
   <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-xs flex items-center justify-between gap-3 shrink-0">
     <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
