@@ -19,11 +19,48 @@
   import Books from 'phosphor-svelte/lib/Books';
   import ChatCircleDots from 'phosphor-svelte/lib/ChatCircleDots';
   import ImageSquare from 'phosphor-svelte/lib/ImageSquare';
+  import ArrowUp from 'phosphor-svelte/lib/ArrowUp';
 
-  // State tìm kiếm
+  // State tìm kiếm & scroll behavior
   let searchQuery = $state('');
   let activeTab = $state<'all' | 'vocab' | 'sentences' | 'characters'>('all');
   let isListening = $state(false);
+
+  // Cuộn thông minh: Ẩn khi cuộn xuống, hiện sticky khi cuộn lên & Scroll to Top
+  let mainScrollEl = $state<HTMLElement | null>(null);
+  let lastScrollTop = 0;
+  let isSearchVisible = $state(true);
+  let isSticky = $state(false);
+  let showScrollTop = $state(false);
+
+  function handleScroll(e: Event) {
+    const target = e.currentTarget as HTMLElement;
+    const currentScroll = target.scrollTop;
+
+    showScrollTop = currentScroll > 250;
+
+    // Khi ở trên cùng ( < 50px)
+    if (currentScroll < 50) {
+      isSearchVisible = true;
+      isSticky = false;
+    } else {
+      isSticky = true;
+      if (currentScroll > lastScrollTop && currentScroll > 120) {
+        // Đang cuộn xuống -> ẩn search bar
+        isSearchVisible = false;
+      } else if (currentScroll < lastScrollTop) {
+        // Đang cuộn lên -> lộ search bar ra và sticky
+        isSearchVisible = true;
+      }
+    }
+    lastScrollTop = currentScroll;
+  }
+
+  function scrollToTop() {
+    if (mainScrollEl) {
+      mainScrollEl.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
 
   // Sync từ query URL (?q=...)
   $effect(() => {
@@ -166,61 +203,75 @@
 
 <Header />
 
-<main class="flex-1 flex flex-col min-h-0 overflow-y-auto no-scrollbar space-y-4 pt-1.5 pb-6">
-  <!-- ================= 1. THANH TÌM KIẾM TRÊN CÙNG (SEARCH BAR & VOICE INPUT) ================= -->
-  <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-4 md:p-6 border border-slate-200 dark:border-[#37393B] shadow-xs">
-    <div class="relative flex items-center">
-      <div class="absolute left-4.5 text-slate-400 dark:text-[#8E918F] pointer-events-none">
-        <MagnifyingGlass weight="bold" class="w-6 h-6 text-rose-500" />
-      </div>
+<main
+  bind:this={mainScrollEl}
+  onscroll={handleScroll}
+  class="flex-1 flex flex-col min-h-0 overflow-y-auto no-scrollbar space-y-4 pt-1.5 pb-8 relative"
+>
+  <!-- ================= 1. THANH TÌM KIẾM TRÊN CÙNG (STICKY KHI CUỘN LÊN, ẨN KHI CUỘN XUỐNG) ================= -->
+  <div
+    class={`z-30 transition-all duration-300 ease-in-out ${
+      isSticky
+        ? 'sticky top-0 -mx-1 px-1 pt-1 pb-2 backdrop-blur-md bg-slate-100/80 dark:bg-[#131314]/80'
+        : 'relative'
+    } ${
+      !isSearchVisible && isSticky ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
+    }`}
+  >
+    <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-3.5 md:p-5 border border-slate-200 dark:border-[#37393B] shadow-xs">
+      <div class="relative flex items-center">
+        <div class="absolute left-4.5 text-slate-400 dark:text-[#8E918F] pointer-events-none">
+          <MagnifyingGlass weight="bold" class="w-5 h-5 md:w-6 md:h-6 text-rose-500" />
+        </div>
 
-      <input
-        type="text"
-        bind:value={searchQuery}
-        placeholder="Tra từ bằng Chữ Hán, Pinyin, Hán Việt hoặc Tiếng Việt (VD: 苹果, duibuqi, quả táo)..."
-        class="w-full pl-14 pr-28 py-3.5 md:py-4 rounded-2xl bg-slate-50 dark:bg-[#282A2C] border border-slate-200 dark:border-[#37393B] text-slate-800 dark:text-[#E3E3E3] font-medium placeholder-slate-400 dark:placeholder-[#8E918F] focus:outline-hidden focus:ring-2 focus:ring-rose-500/30 focus:border-rose-500 transition-all text-sm md:text-base shadow-inner"
-      />
+        <input
+          type="text"
+          bind:value={searchQuery}
+          placeholder="Tra từ bằng Chữ Hán, Pinyin, Hán Việt hoặc Tiếng Việt (VD: 苹果, duibuqi, quả táo)..."
+          class="w-full pl-13 pr-28 py-3 md:py-3.5 rounded-2xl bg-slate-50 dark:bg-[#282A2C] border border-slate-200 dark:border-[#37393B] text-slate-800 dark:text-[#E3E3E3] font-medium placeholder-slate-400 dark:placeholder-[#8E918F] focus:outline-hidden focus:ring-2 focus:ring-rose-500/30 focus:border-rose-500 transition-all text-xs md:text-sm shadow-inner"
+        />
 
-      <div class="absolute right-3.5 flex items-center gap-1.5">
-        {#if searchQuery}
+        <div class="absolute right-3 flex items-center gap-1.5">
+          {#if searchQuery}
+            <button
+              onclick={clearSearch}
+              aria-label="Xóa từ khóa"
+              class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-[#37393B] transition-colors"
+            >
+              <X weight="bold" class="w-4 h-4" />
+            </button>
+          {/if}
+
           <button
-            onclick={clearSearch}
-            aria-label="Xóa từ khóa"
-            class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-[#37393B] transition-colors"
+            onclick={toggleVoiceInput}
+            aria-label="Nhập bằng giọng nói"
+            class={`p-2 rounded-xl border transition-all ${
+              isListening
+                ? 'bg-rose-500 text-white animate-pulse border-rose-600'
+                : 'bg-white dark:bg-[#1E1F20] hover:bg-slate-100 dark:hover:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5] border-slate-200 dark:border-[#37393B]'
+            }`}
+            title="Nói tiếng Trung để tra từ"
           >
-            <X weight="bold" class="w-4 h-4" />
+            <Microphone weight={isListening ? 'fill' : 'bold'} class="w-4 h-4" />
           </button>
-        {/if}
-
-        <button
-          onclick={toggleVoiceInput}
-          aria-label="Nhập bằng giọng nói"
-          class={`p-2.5 rounded-xl border transition-all ${
-            isListening
-              ? 'bg-rose-500 text-white animate-pulse border-rose-600'
-              : 'bg-white dark:bg-[#1E1F20] hover:bg-slate-100 dark:hover:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5] border-slate-200 dark:border-[#37393B]'
-          }`}
-          title="Nói tiếng Trung để tra từ"
-        >
-          <Microphone weight={isListening ? 'fill' : 'bold'} class="w-4 h-4" />
-        </button>
+        </div>
       </div>
-    </div>
 
-    <!-- Thanh chip gợi ý nhanh các từ HSK phổ biến -->
-    <div class="flex items-center gap-2 mt-3 overflow-x-auto no-scrollbar pt-1 text-xs">
-      <span class="text-slate-400 dark:text-[#8E918F] font-semibold shrink-0">Gợi ý:</span>
-      {#each ['对不起', '苹果', '北京', '谢谢', '高兴', '喜欢', '茶', '学习', '朋友'] as sug}
-        <button
-          onclick={() => {
-            searchQuery = sug;
-            goto(`/tu-vung?q=${encodeURIComponent(sug)}`);
-          }}
-          class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-[#282A2C] hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-600 dark:text-[#C4C7C5] hover:text-rose-600 dark:hover:text-rose-300 font-medium transition-colors shrink-0"
-        >
-          {sug}
-        </button>
-      {/each}
+      <!-- Thanh chip gợi ý nhanh các từ HSK phổ biến -->
+      <div class="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar pt-1 text-xs">
+        <span class="text-slate-400 dark:text-[#8E918F] font-semibold shrink-0 text-[11px]">Gợi ý:</span>
+        {#each ['对不起', '苹果', '北京', '谢谢', '高兴', '喜欢', '茶', '学习', '朋友'] as sug}
+          <button
+            onclick={() => {
+              searchQuery = sug;
+              goto(`/tu-vung?q=${encodeURIComponent(sug)}`);
+            }}
+            class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-[#282A2C] hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-600 dark:text-[#C4C7C5] hover:text-rose-600 dark:hover:text-rose-300 font-medium transition-colors shrink-0 text-[11px]"
+          >
+            {sug}
+          </button>
+        {/each}
+      </div>
     </div>
   </div>
 
@@ -505,26 +556,25 @@
     <!-- CỘT PHẢI (HÌNH ẢNH PEXELS & KHUNG TẬP VIẾT NÉT CHỮ) -->
     <div class="lg:col-span-4 space-y-6">
       {#if currentWord}
-        <!-- 6. KHỐI ẢNH MINH HỌA PEXELS -->
-        <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-5 border border-slate-200 dark:border-[#37393B] shadow-xs space-y-3">
+        <!-- 6. KHỐI ẢNH MINH HỌA -->
+        <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-4 sm:p-5 border border-slate-200 dark:border-[#37393B] shadow-xs space-y-3">
           <div class="flex items-center justify-between">
             <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] flex items-center gap-1.5">
               <ImageSquare weight="duotone" class="w-4 h-4 text-rose-500" />
               Hình ảnh minh họa
             </h3>
-            <span class="text-[10px] font-bold text-slate-400">Pexels Visual</span>
           </div>
 
-          <div class="w-full aspect-video rounded-2xl overflow-hidden bg-slate-100 dark:bg-[#282A2C] relative border border-slate-100 dark:border-[#37393B]">
+          <div class="w-full rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#18191A] relative border border-slate-100 dark:border-[#37393B] flex items-center justify-center min-h-[180px] max-h-[300px]">
             {#if currentWord.image}
               <img
                 src={currentWord.image}
                 alt={currentWord.viet}
                 loading="lazy"
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                class="w-full h-auto max-h-[280px] object-contain rounded-xl transition-transform duration-300"
               />
             {:else}
-              <div class="w-full h-full flex flex-col items-center justify-center text-slate-400">
+              <div class="w-full py-12 flex flex-col items-center justify-center text-slate-400">
                 <ImageSquare class="w-10 h-10 mb-1" />
                 <span class="text-xs font-medium">Chưa có ảnh</span>
               </div>
@@ -541,6 +591,18 @@
       {/if}
     </div>
   </div>
+
+  <!-- Nút tròn Scroll To Top nổi bên phải khi cuộn xuống -->
+  {#if showScrollTop}
+    <button
+      onclick={scrollToTop}
+      aria-label="Cuộn lên đầu trang"
+      class="fixed bottom-6 right-5 z-40 w-11 h-11 rounded-full bg-rose-500 hover:bg-rose-600 text-white shadow-lg flex items-center justify-center transition-all duration-200 active:scale-90 hover:scale-105 border border-white/20 animate-fade-in"
+      title="Cuộn lên đầu trang"
+    >
+      <ArrowUp weight="bold" class="w-5 h-5" />
+    </button>
+  {/if}
 </main>
 
 <LessonFilterModal />
