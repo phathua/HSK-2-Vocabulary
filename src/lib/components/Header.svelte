@@ -7,9 +7,30 @@
   import Clock from 'phosphor-svelte/lib/Clock';
   import HourglassMedium from 'phosphor-svelte/lib/HourglassMedium';
   import List from 'phosphor-svelte/lib/List';
+  import GraduationCap from 'phosphor-svelte/lib/GraduationCap';
 
   const isHomePage = $derived(page.url.pathname === '/');
+  const isGrammarPage = $derived(page.url.pathname.startsWith('/ngu-phap'));
   const isExamRoom = $derived(examRoomState.isActive);
+
+  let grammarLearnedCount = $state(0);
+  const totalGrammarCount = 18;
+
+  $effect(() => {
+    if (isGrammarPage && typeof window !== 'undefined') {
+      try {
+        const saved = localStorage.getItem('hsk2_grammar_learned_ids');
+        if (saved) {
+          const map = JSON.parse(saved);
+          grammarLearnedCount = Object.values(map).filter(Boolean).length;
+        } else {
+          grammarLearnedCount = 0;
+        }
+      } catch {
+        grammarLearnedCount = 0;
+      }
+    }
+  });
 
   function formatTime(secs: number): string {
     const mins = Math.floor(secs / 60);
@@ -53,6 +74,14 @@
         </span>
       </div>
     </button>
+
+    <!-- Badge Ngữ Pháp: Chỉ hiện khi ở trang Ngữ pháp -->
+    {#if isGrammarPage}
+      <div class="flex items-center gap-1.5 px-2 py-1 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/60 dark:border-blue-900/50 text-blue-700 dark:text-blue-300 text-[11px] sm:text-xs font-black shadow-2xs">
+        <GraduationCap weight="duotone" class="w-3.5 h-3.5 text-blue-500 shrink-0" />
+        <span class="whitespace-nowrap">Đã học {grammarLearnedCount}/{totalGrammarCount}</span>
+      </div>
+    {/if}
   </div>
 
   <!-- Right: Clean Actions -->

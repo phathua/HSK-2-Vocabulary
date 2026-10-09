@@ -225,10 +225,10 @@
   </div>
 
   <!-- ================= 2. NAVIGATION TABS CHUYỂN ĐỔI GÓC TIẾP CẬN ================= -->
-  <div class="flex items-center gap-2 border-b border-slate-200 dark:border-[#282A2C] pb-3 overflow-x-auto no-scrollbar">
+  <div class="flex items-center gap-2 border-b border-slate-200 dark:border-[#282A2C] pb-2.5 pt-1 overflow-x-auto no-scrollbar shrink-0">
     <button
       onclick={() => (activeTab = 'all')}
-      class={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 ${
+      class={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap shrink-0 ${
         activeTab === 'all'
           ? 'bg-rose-500 text-white shadow-xs'
           : 'bg-white dark:bg-[#1E1F20] text-slate-600 dark:text-[#C4C7C5] border border-slate-200 dark:border-[#37393B]'
@@ -238,7 +238,7 @@
     </button>
     <button
       onclick={() => (activeTab = 'vocab')}
-      class={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 ${
+      class={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap shrink-0 ${
         activeTab === 'vocab'
           ? 'bg-rose-500 text-white shadow-xs'
           : 'bg-white dark:bg-[#1E1F20] text-slate-600 dark:text-[#C4C7C5] border border-slate-200 dark:border-[#37393B]'
@@ -248,7 +248,7 @@
     </button>
     <button
       onclick={() => (activeTab = 'sentences')}
-      class={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 ${
+      class={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap shrink-0 ${
         activeTab === 'sentences'
           ? 'bg-rose-500 text-white shadow-xs'
           : 'bg-white dark:bg-[#1E1F20] text-slate-600 dark:text-[#C4C7C5] border border-slate-200 dark:border-[#37393B]'
@@ -258,7 +258,7 @@
     </button>
     <button
       onclick={() => (activeTab = 'characters')}
-      class={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 ${
+      class={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap shrink-0 ${
         activeTab === 'characters'
           ? 'bg-rose-500 text-white shadow-xs'
           : 'bg-white dark:bg-[#1E1F20] text-slate-600 dark:text-[#C4C7C5] border border-slate-200 dark:border-[#37393B]'

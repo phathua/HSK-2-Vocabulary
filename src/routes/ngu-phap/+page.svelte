@@ -96,30 +96,8 @@
 
 <Header />
 
-<main class="flex-1 flex flex-col min-h-0 overflow-hidden space-y-2.5 pb-1">
-  <!-- Top Bar: Tiêu đề + Huy hiệu + Tiến độ đã học -->
-  <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-xs flex items-center justify-between gap-3 shrink-0">
-    <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
-      <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 shadow-2xs">
-        <GraduationCap weight="duotone" class="w-5 h-5 sm:w-6 sm:h-6" />
-      </div>
-      <div class="min-w-0">
-        <div class="flex items-center gap-2">
-          <h1 class="text-sm sm:text-base font-black text-slate-900 dark:text-slate-100 leading-snug">
-            Trọng Điểm Ngữ Pháp HSK 2
-          </h1>
-          <span class="px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-[10px] sm:text-xs font-black shrink-0">
-            {totalPoints} Điểm
-          </span>
-        </div>
-        <p class="text-[11px] sm:text-xs text-slate-400 dark:text-[#8E918F] font-semibold mt-0.5">
-          Đã học: <span class="font-mono text-blue-600 dark:text-blue-400 font-bold">{learnedCount}/{totalPoints} ({progressPercent}%)</span>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Thanh Tìm Kiếm & Bộ Lọc Tinh Gọn (Khắc phục triệt để lỗi dài chiếm chỗ trên Mobile) -->
+<main class="flex-1 flex flex-col min-h-0 overflow-hidden space-y-2.5 pt-1.5 pb-1">
+  <!-- Thanh Tìm Kiếm & Bộ Lọc Tinh Gọn -->
   <div class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-2xl p-2 sm:p-3 shadow-xs space-y-2 shrink-0">
     <!-- Dòng 1: Ô Tìm Kiếm -->
     <div class="relative w-full">
