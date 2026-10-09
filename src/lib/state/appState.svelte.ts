@@ -738,17 +738,23 @@ export class AppState {
   checkSpeechAnswer(spokenPinyin: string, spokenHanzi: string) {
     if (this.speechAnswered || !this.currentSpeechItem) return;
 
-    this.speechAnswered = true;
-    this.speechDoneCount++;
-
     const targetHanzi = this.currentSpeechItem.hanzi.trim();
     const targetPinyin = this.currentSpeechItem.pinyin.trim();
 
-    // So khớp hoặc theo Hanzi nhận diện, hoặc so khớp Pinyin
-    const isHanziMatch = spokenHanzi.includes(targetHanzi) || targetHanzi.includes(spokenHanzi);
-    const isPinyinMatch = checkPinyinAnswer(spokenPinyin, targetPinyin);
+    const trimmedHanzi = (spokenHanzi || '').trim();
+    const trimmedPinyin = (spokenPinyin || '').trim();
+
+    // Bắt buộc phải có chữ Hán trong kết quả nhận diện, tránh chuỗi rỗng "" hoặc tiếng Anh (như "thank you")
+    const hasChinese = /[\u4e00-\u9fa5]/.test(trimmedHanzi);
+
+    // Chỉ so khớp Hanzi nếu có chữ Hán thực sự và chuỗi không rỗng
+    const isHanziMatch = hasChinese && (trimmedHanzi.includes(targetHanzi) || targetHanzi === trimmedHanzi);
+    const isPinyinMatch = hasChinese && checkPinyinAnswer(trimmedPinyin, targetPinyin);
 
     const isCorrect = isHanziMatch || isPinyinMatch;
+
+    this.speechAnswered = true;
+    this.speechDoneCount++;
 
     if (isCorrect) {
       this.speechCorrect++;

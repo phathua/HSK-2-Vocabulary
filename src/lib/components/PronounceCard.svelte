@@ -23,6 +23,7 @@
   let livePinyin = $state('');
   let speechSupported = $state(true);
   let errorMessage = $state('');
+  let isBrave = $state(false);
 
   // Quản lý định danh phiên độc lập & cờ lỗi
   let activeRecognition: any = null;
@@ -218,15 +219,30 @@
         activeRecognition = null;
         setAudioSessionType('playback');
 
-        // Chỉ tự động nộp bài nếu không gặp sự cố lỗi và có dữ liệu phát âm
+        // Chỉ tự động nộp bài nếu không gặp sự cố lỗi, có dữ liệu phát âm VÀ có chứa chữ Hán
+        const hasChinese = /[\u4e00-\u9fa5]/.test(liveHanzi);
         if (
           !sessionHadError &&
           appState.speechAutoSubmit &&
           livePinyin &&
+          hasChinese &&
           !appState.speechAnswered &&
           appState.currentSpeechItem?.id === targetItemId
         ) {
           submitAnswer();
+        } else if (
+          !sessionHadError &&
+          appState.speechAutoSubmit &&
+          liveHanzi &&
+          !hasChinese &&
+          !appState.speechAnswered &&
+          appState.currentSpeechItem?.id === targetItemId
+        ) {
+          errorMessage = `Phát hiện tiếng Anh ("${liveHanzi}"). Hãy phát âm lại bằng tiếng Trung!`;
+          toast.error('Chưa phát hiện tiếng Trung', {
+            description: `Trình duyệt nghe thấy: "${liveHanzi}". Vui lòng phát âm rõ tiếng Trung!`,
+            duration: 6000
+          });
         }
 
         recState = 'cooldown';
@@ -246,8 +262,30 @@
 
         if (event.error === 'not-allowed') {
           errorMessage = 'Chưa cấp quyền Micro. Vui lòng cho phép Micro trong cài đặt.';
+          toast.error('Chưa cấp quyền Micro', {
+            description: 'Vui lòng cho phép quyền truy cập Micro trên trình duyệt để luyện phát âm.',
+            duration: 6000
+          });
+        } else if (event.error === 'network') {
+          if (isBrave) {
+            errorMessage = 'Brave chặn dịch vụ nhận diện giọng nói Google.';
+            toast.error('Brave không hỗ trợ nhận diện giọng nói', {
+              description: 'Trình duyệt Brave chặn dịch vụ nhận diện của Google vì lý do bảo mật. Vui lòng chuyển sang Google Chrome hoặc Microsoft Edge để học phát âm nhé!',
+              duration: 8000
+            });
+          } else {
+            errorMessage = 'Lỗi kết nối mạng (Web Speech).';
+            toast.error('Lỗi kết nối mạng (Web Speech)', {
+              description: 'Mất kết nối tới máy chủ nhận dạng. Hãy kiểm tra lại kết nối Internet hoặc VPN của bạn.',
+              duration: 6000
+            });
+          }
         } else if (event.error !== 'no-speech' && event.error !== 'aborted') {
           errorMessage = `Lỗi nhận dạng: ${event.error}`;
+          toast.error('Sự cố thu âm', {
+            description: `Mã lỗi: ${event.error}. Vui lòng thử lại.`,
+            duration: 5000
+          });
         }
       };
 
@@ -297,6 +335,16 @@
   function submitAnswer() {
     stopRecording();
     if (!livePinyin && !liveHanzi) return;
+
+    const hasChinese = /[\u4e00-\u9fa5]/.test(liveHanzi);
+    if (!hasChinese && liveHanzi) {
+      errorMessage = `Phát hiện tiếng Anh ("${liveHanzi}"). Hãy phát âm lại bằng tiếng Trung!`;
+      toast.error('Chưa phát hiện tiếng Trung', {
+        description: `Trình duyệt nghe thấy: "${liveHanzi}". Vui lòng phát âm rõ tiếng Trung!`,
+        duration: 6000
+      });
+      return;
+    }
 
     const targetHanzi = appState.currentSpeechItem?.hanzi || '';
     const targetPinyin = appState.currentSpeechItem?.pinyin || '';
@@ -353,6 +401,16 @@
 
     if (typeof document !== 'undefined') {
       document.addEventListener('visibilitychange', handleVisibilityChange);
+    }
+
+    if (typeof navigator !== 'undefined' && (navigator as any).brave) {
+      if (typeof (navigator as any).brave.isBrave === 'function') {
+        (navigator as any).brave.isBrave().then((res: boolean) => {
+          isBrave = !!res;
+        }).catch(() => {});
+      } else {
+        isBrave = true;
+      }
     }
   });
 
