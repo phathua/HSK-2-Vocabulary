@@ -3,7 +3,7 @@
 </script>
 
 <Toaster
-  position="top-center"
+  position="top-right"
   richColors
   closeButton
   toastOptions={{
