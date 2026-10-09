@@ -15,8 +15,8 @@
   import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
   import SmartImage from './SmartImage.svelte';
 
-  // 1. Máy trạng thái Finite State Machine (FSM)
-  type RecState = 'idle' | 'starting' | 'listening' | 'stopping' | 'cooldown' | 'unsupported';
+  // 1. Máy trạng thái Finite State Machine (FSM) lấy cảm hứng từ ios27-stt-lab
+  type RecState = 'idle' | 'starting' | 'listening' | 'stopping' | 'unsupported';
 
   let recState = $state<RecState>('idle');
   let liveHanzi = $state('');
@@ -25,29 +25,29 @@
   let errorMessage = $state('');
   let isBrave = $state(false);
 
-  // Quản lý định danh phiên độc lập & cờ lỗi
-  let activeRecognition: any = null;
+  // Quản lý lifecycle WebKit chuẩn xác từ phòng thí nghiệm ios27-stt-lab
+  let recognition: any = null;
+  let recognitionStarted = false;
+  let recognitionStarting = false;
+  let expectedEnd = false;
   let activeRecItemId: string | null = null;
-  let currentSessionId = 0;
-  let sessionHadError = false;
+  let session = 0;
 
-  // Timers
+  // Timers bảo vệ
   let startWatchdogTimer: any = null;
   let utteranceWatchdogTimer: any = null;
-  let stoppingWatchdogTimer: any = null;
-  let cooldownTimer: any = null;
 
   // Trạng thái dẫn xuất
   const isRecording = $derived(recState === 'listening' || recState === 'starting');
-  const isBusy = $derived(recState === 'starting' || recState === 'stopping' || recState === 'cooldown');
+  const isBusy = $derived(recState === 'starting' || recState === 'stopping');
   const isZhToVi = $derived(appState.direction === 'zh_to_vi');
 
   // Lắng nghe thay đổi từ vựng hiện tại: tự động giải phóng sạch sẽ phiên ghi âm cũ và reset preview
   $effect(() => {
     const currentId = appState.currentSpeechItem?.id;
     if (currentId) {
-      if (activeRecognition) {
-        safeTeardown(true, true);
+      if (recognition) {
+        abortRecognition();
       }
       liveHanzi = '';
       livePinyin = '';
@@ -58,8 +58,6 @@
   function clearAllTimers() {
     if (startWatchdogTimer) { clearTimeout(startWatchdogTimer); startWatchdogTimer = null; }
     if (utteranceWatchdogTimer) { clearTimeout(utteranceWatchdogTimer); utteranceWatchdogTimer = null; }
-    if (stoppingWatchdogTimer) { clearTimeout(stoppingWatchdogTimer); stoppingWatchdogTimer = null; }
-    if (cooldownTimer) { clearTimeout(cooldownTimer); cooldownTimer = null; }
   }
 
   function setAudioSessionType(type: 'play-and-record' | 'playback') {
@@ -84,71 +82,39 @@
     return true;
   }
 
-  // Dừng an toàn không gán null listeners trước abort() và đệm cooldown hồi phục cho iOS CoreAudio
-  function safeTeardown(immediateAbort = false, needCooldown = true) {
+  // Hủy phiên ghi âm sạch sẽ: Dùng cờ expectedEnd mà KHÔNG gán null cho listener (chuẩn ios27-stt-lab)
+  function abortRecognition() {
     clearAllTimers();
     setAudioSessionType('playback');
 
-    if (activeRecognition) {
-      const rec = activeRecognition;
-      activeRecognition = null;
+    if (recognition) {
+      expectedEnd = true;
       try {
-        if (immediateAbort) {
-          rec.abort();
-        } else {
-          rec.stop();
-        }
+        recognition.abort();
       } catch {}
+      recognition = null;
     }
 
-    if (needCooldown) {
-      recState = 'cooldown';
-      cooldownTimer = setTimeout(() => {
-        recState = 'idle';
-      }, 700);
-    } else {
-      recState = 'idle';
-    }
+    recognitionStarted = false;
+    recognitionStarting = false;
+    recState = 'idle';
   }
 
-  function armStoppingWatchdog(sessionId: number) {
-    if (stoppingWatchdogTimer) clearTimeout(stoppingWatchdogTimer);
-    stoppingWatchdogTimer = setTimeout(() => {
-      if (sessionId !== currentSessionId) return;
-      if (recState === 'stopping') {
-        console.warn('[Speech] Stopping watchdog fired: forcing audio pipeline recovery');
-        safeTeardown(true, true);
-      }
-    }, 2500);
-  }
-
-  function armUtteranceWatchdog(sessionId: number) {
+  function armUtteranceWatchdog(mySession: number) {
     if (utteranceWatchdogTimer) clearTimeout(utteranceWatchdogTimer);
     utteranceWatchdogTimer = setTimeout(() => {
-      if (sessionId !== currentSessionId) return;
+      if (session !== mySession) return;
       if (recState === 'listening') {
         console.warn('[Speech] Utterance watchdog fired: silence detected');
-        safeTeardown(true, true);
+        abortRecognition();
         if (!livePinyin && !liveHanzi) {
           errorMessage = 'Không nghe thấy âm thanh. Hãy thử nói to hơn.';
         }
       }
-    }, 8000);
+    }, 9000);
   }
 
-  function startRecording() {
-    if (!speechSupported || appState.speechAnswered || !appState.currentSpeechItem) return;
-    if (isBusy || recState === 'listening') return;
-    if (!canStartRecording()) return;
-
-    liveHanzi = '';
-    livePinyin = '';
-    errorMessage = '';
-    sessionHadError = false;
-
-    // 1. Chuyển đổi AVAudioSession sang PlayAndRecord trên iOS Safari 16.4+
-    setAudioSessionType('play-and-record');
-
+  function newRecognition(mySession: number, targetItemId: string) {
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
@@ -156,178 +122,179 @@
       speechSupported = false;
       recState = 'unsupported';
       errorMessage = 'Trình duyệt không hỗ trợ Web Speech API (Hãy dùng Chrome hoặc Safari trên iOS 14.5+)';
-      return;
+      return null;
     }
 
+    const r = new SpeechRecognition();
+    r.lang = 'zh-CN';
+    // BÍ QUYẾT 1 TỪ LAB: continuous = true để WebKit không tự ý ngắt kết nối micro đột ngột
+    r.continuous = true;
+    r.interimResults = true;
+    r.maxAlternatives = 1;
+
+    recognition = r;
+    recognitionStarted = false;
+    recognitionStarting = false;
+    expectedEnd = false;
+
+    r.onstart = () => {
+      if (r !== recognition || session !== mySession) return;
+      recognitionStarted = true;
+      recognitionStarting = false;
+      recState = 'listening';
+      errorMessage = '';
+
+      if (startWatchdogTimer) {
+        clearTimeout(startWatchdogTimer);
+        startWatchdogTimer = null;
+      }
+
+      armUtteranceWatchdog(mySession);
+    };
+
+    r.onresult = (event: any) => {
+      if (r !== recognition || session !== mySession) return;
+      armUtteranceWatchdog(mySession);
+
+      let transcript = '';
+      let hasFinal = false;
+
+      for (let i = event.resultIndex; i < event.results.length; ++i) {
+        const item = event.results[i];
+        const text = item[0]?.transcript?.trim() || '';
+        transcript += text;
+        if (item.isFinal) hasFinal = true;
+      }
+
+      const trimmed = transcript.trim();
+      if (trimmed) {
+        liveHanzi = trimmed;
+        livePinyin = pinyin(trimmed, { toneType: 'symbol' });
+      }
+
+      // Tự động nộp bài khi nhận kết quả final chứa chữ Hán (chuẩn theo lab acceptText)
+      const hasChinese = /[\u4e00-\u9fa5]/.test(liveHanzi);
+      if (
+        appState.speechAutoSubmit &&
+        !appState.speechAnswered &&
+        hasFinal &&
+        hasChinese &&
+        appState.currentSpeechItem?.id === targetItemId
+      ) {
+        submitAnswer();
+      }
+    };
+
+    r.onspeechend = () => {
+      if (r !== recognition || session !== mySession) return;
+    };
+
+    r.onerror = (event: any) => {
+      if (r !== recognition || session !== mySession) return;
+      console.warn('[Speech] onerror:', event.error);
+
+      if (event.error === 'not-allowed') {
+        errorMessage = 'Chưa cấp quyền Micro. Vui lòng cho phép Micro trong cài đặt.';
+        toast.error('Chưa cấp quyền Micro', {
+          description: 'Vui lòng cho phép quyền truy cập Micro trên trình duyệt để luyện phát âm.',
+          duration: 6000
+        });
+      } else if (event.error === 'network') {
+        if (isBrave) {
+          errorMessage = 'Brave chặn dịch vụ nhận diện giọng nói Google.';
+          toast.error('Brave không hỗ trợ nhận diện giọng nói', {
+            description: 'Trình duyệt Brave chặn dịch vụ nhận diện của Google vì lý do bảo mật. Vui lòng chuyển sang Google Chrome hoặc Microsoft Edge để học phát âm nhé!',
+            duration: 8000
+          });
+        } else {
+          errorMessage = 'Lỗi kết nối mạng (Web Speech).';
+          toast.error('Lỗi kết nối mạng (Web Speech)', {
+            description: 'Mất kết nối tới máy chủ nhận dạng. Hãy kiểm tra lại kết nối Internet hoặc VPN của bạn.',
+            duration: 6000
+          });
+        }
+      } else if (event.error !== 'no-speech' && event.error !== 'aborted') {
+        errorMessage = `Lỗi nhận dạng: ${event.error}`;
+        toast.error('Sự cố thu âm', {
+          description: `Mã lỗi: ${event.error}. Vui lòng thử lại.`,
+          duration: 5000
+        });
+      }
+    };
+
+    r.onend = () => {
+      if (r !== recognition) return;
+      recognitionStarted = false;
+      recognitionStarting = false;
+
+      // BÍ QUYẾT 2 TỪ LAB: Nếu là expectedEnd, chỉ dọn dẹp cờ mà KHÔNG làm đứt mạch IPC
+      if (expectedEnd) {
+        expectedEnd = false;
+        recState = 'idle';
+        return;
+      }
+
+      recState = 'idle';
+    };
+
+    return r;
+  }
+
+  function startRecording() {
+    if (!speechSupported || appState.speechAnswered || !appState.currentSpeechItem) return;
+    // BÍ QUYẾT 3 TỪ LAB: Cờ khóa recognitionStarting chống double-click đè phiên
+    if (recognitionStarted || recognitionStarting || isBusy) return;
+    if (!canStartRecording()) return;
+
+    liveHanzi = '';
+    livePinyin = '';
+    errorMessage = '';
+
+    setAudioSessionType('play-and-record');
+
+    const mySession = ++session;
     const targetItemId = appState.currentSpeechItem.id;
-    const sessionId = ++currentSessionId;
+    activeRecItemId = targetItemId;
+
+    // BÍ QUYẾT 4 TỪ LAB: Tạo instance mới hoàn toàn cho mỗi lượt
+    const r = newRecognition(mySession, targetItemId);
+    if (!r) return;
+
+    clearAllTimers();
+    recState = 'starting';
+    recognitionStarting = true;
+
+    // Start Watchdog bảo vệ 10s phòng khi iOS popup xin quyền Micro
+    startWatchdogTimer = setTimeout(() => {
+      if (session !== mySession) return;
+      if (recognitionStarting) {
+        console.warn('[Speech] Start watchdog fired');
+        abortRecognition();
+        errorMessage = 'Không thể kích hoạt micro. Vui lòng cấp quyền micro và thử lại.';
+      }
+    }, 10000);
 
     try {
-      // 3. Deferred Recreation: Khởi tạo instance mới hoàn toàn cho mỗi phiên
-      const rec = new SpeechRecognition();
-      rec.lang = 'zh-CN';
-      rec.continuous = false;
-      rec.interimResults = true;
-      rec.maxAlternatives = 1;
-
-      clearAllTimers();
-
-      // 4. Start Watchdog (10.0s): Đủ dài để người dùng xác nhận hộp thoại xin quyền Micro trên iOS
-      startWatchdogTimer = setTimeout(() => {
-        if (sessionId !== currentSessionId) return;
-        if (recState === 'starting') {
-          console.warn('[Speech] Start watchdog fired: permission timeout or microphone unresponsive');
-          safeTeardown(true, true);
-          errorMessage = 'Không thể kích hoạt micro. Vui lòng cấp quyền micro và thử lại.';
-        }
-      }, 10000);
-
-      rec.onstart = () => {
-        if (sessionId !== currentSessionId) return;
-        if (startWatchdogTimer) {
-          clearTimeout(startWatchdogTimer);
-          startWatchdogTimer = null;
-        }
-        recState = 'listening';
-        errorMessage = '';
-
-        // 5. Utterance Watchdog (8.0s ban đầu)
-        armUtteranceWatchdog(sessionId);
-      };
-
-      rec.onresult = (event: any) => {
-        if (sessionId !== currentSessionId) return;
-
-        // Reset Utterance Watchdog mỗi khi nhận dữ liệu giọng nói (người dùng đang nói không bị ngắt quãng)
-        armUtteranceWatchdog(sessionId);
-
-        let transcript = '';
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          transcript += event.results[i][0].transcript;
-        }
-
-        const trimmed = transcript.trim();
-        liveHanzi = trimmed;
-        if (trimmed) {
-          livePinyin = pinyin(trimmed, { toneType: 'symbol' });
-        }
-      };
-
-      rec.onspeechend = () => {
-        if (sessionId !== currentSessionId) return;
-        recState = 'stopping';
-        armStoppingWatchdog(sessionId);
-      };
-
-      rec.onend = () => {
-        // Luôn tháo gỡ listeners trên instance đã kết thúc
-        rec.onstart = null;
-        rec.onresult = null;
-        rec.onspeechend = null;
-        rec.onerror = null;
-        rec.onend = null;
-
-        // Bỏ qua nếu là sự kiện trễ của phiên cũ bị hủy
-        if (sessionId !== currentSessionId) return;
-
-        clearAllTimers();
-        activeRecognition = null;
-        setAudioSessionType('playback');
-
-        // Chỉ tự động nộp bài nếu không gặp sự cố lỗi, có dữ liệu phát âm VÀ có chứa chữ Hán
-        const hasChinese = /[\u4e00-\u9fa5]/.test(liveHanzi);
-        if (
-          !sessionHadError &&
-          appState.speechAutoSubmit &&
-          livePinyin &&
-          hasChinese &&
-          !appState.speechAnswered &&
-          appState.currentSpeechItem?.id === targetItemId
-        ) {
-          submitAnswer();
-        } else if (
-          !sessionHadError &&
-          appState.speechAutoSubmit &&
-          liveHanzi &&
-          !hasChinese &&
-          !appState.speechAnswered &&
-          appState.currentSpeechItem?.id === targetItemId
-        ) {
-          errorMessage = `Phát hiện tiếng Anh ("${liveHanzi}"). Hãy phát âm lại bằng tiếng Trung!`;
-          toast.error('Chưa phát hiện tiếng Trung', {
-            description: `Trình duyệt nghe thấy: "${liveHanzi}". Vui lòng phát âm rõ tiếng Trung!`,
-            duration: 6000
-          });
-        }
-
-        recState = 'cooldown';
-
-        // 6. Hardware Cooldown 300ms cho iOS AVAudioSession hoàn tất deactivation
-        cooldownTimer = setTimeout(() => {
-          if (sessionId !== currentSessionId) return;
-          if (recState === 'cooldown') {
-            recState = 'idle';
-          }
-        }, 300);
-      };
-
-      rec.onerror = (event: any) => {
-        if (sessionId !== currentSessionId) return;
-        sessionHadError = true;
-
-        if (event.error === 'not-allowed') {
-          errorMessage = 'Chưa cấp quyền Micro. Vui lòng cho phép Micro trong cài đặt.';
-          toast.error('Chưa cấp quyền Micro', {
-            description: 'Vui lòng cho phép quyền truy cập Micro trên trình duyệt để luyện phát âm.',
-            duration: 6000
-          });
-        } else if (event.error === 'network') {
-          if (isBrave) {
-            errorMessage = 'Brave chặn dịch vụ nhận diện giọng nói Google.';
-            toast.error('Brave không hỗ trợ nhận diện giọng nói', {
-              description: 'Trình duyệt Brave chặn dịch vụ nhận diện của Google vì lý do bảo mật. Vui lòng chuyển sang Google Chrome hoặc Microsoft Edge để học phát âm nhé!',
-              duration: 8000
-            });
-          } else {
-            errorMessage = 'Lỗi kết nối mạng (Web Speech).';
-            toast.error('Lỗi kết nối mạng (Web Speech)', {
-              description: 'Mất kết nối tới máy chủ nhận dạng. Hãy kiểm tra lại kết nối Internet hoặc VPN của bạn.',
-              duration: 6000
-            });
-          }
-        } else if (event.error !== 'no-speech' && event.error !== 'aborted') {
-          errorMessage = `Lỗi nhận dạng: ${event.error}`;
-          toast.error('Sự cố thu âm', {
-            description: `Mã lỗi: ${event.error}. Vui lòng thử lại.`,
-            duration: 5000
-          });
-        }
-      };
-
-      activeRecognition = rec;
-      recState = 'starting';
-      activeRecItemId = targetItemId;
-
-      // 7. GỌI ĐỒNG BỘ TRONG EVENT CLICK USER GESTURE (Bảo toàn 100% User Activation Token trên iOS Safari)
-      rec.start();
+      // Gọi đồng bộ ngay trong microtask của click event (bảo toàn User Gesture Token)
+      r.start();
     } catch (err: any) {
       console.warn('SpeechRecognition start failed:', err);
       clearAllTimers();
       setAudioSessionType('playback');
+      recognitionStarting = false;
       recState = 'idle';
-      activeRecognition = null;
       errorMessage = 'Không thể bật micro lúc này. Vui lòng bấm thử lại.';
     }
   }
 
   function stopRecording() {
-    if (activeRecognition && (recState === 'listening' || recState === 'starting')) {
+    if (recognition && (recognitionStarted || recognitionStarting)) {
+      expectedEnd = true;
       recState = 'stopping';
-      armStoppingWatchdog(currentSessionId);
       try {
-        activeRecognition.stop();
+        recognition.stop();
       } catch {
-        safeTeardown(true, true);
+        try { recognition.abort(); } catch {}
       }
     }
   }
@@ -342,7 +309,7 @@
   }
 
   function cancelSpoken() {
-    safeTeardown(true, true);
+    abortRecognition();
     liveHanzi = '';
     livePinyin = '';
   }
@@ -351,6 +318,7 @@
     stopRecording();
     if (!livePinyin && !liveHanzi) return;
 
+    // Chống lọt tiếng Anh (như "thank you") trên Microsoft Edge
     const hasChinese = /[\u4e00-\u9fa5]/.test(liveHanzi);
     if (!hasChinese && liveHanzi) {
       errorMessage = `Phát hiện tiếng Anh ("${liveHanzi}"). Hãy phát âm lại bằng tiếng Trung!`;
@@ -379,7 +347,7 @@
   }
 
   function handleRetry() {
-    safeTeardown(true, true);
+    abortRecognition();
     liveHanzi = '';
     livePinyin = '';
     errorMessage = '';
@@ -388,7 +356,7 @@
   }
 
   function handleNext() {
-    safeTeardown(true, true);
+    abortRecognition();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -398,9 +366,15 @@
     appState.nextSpeechItem();
   }
 
+  function handleSpeakSample() {
+    // Ngắt phiên thu âm nếu người dùng chuyển sang nghe phát âm mẫu
+    abortRecognition();
+    appState.speakCurrent();
+  }
+
   function handleVisibilityChange() {
     if (document.hidden && (isRecording || isBusy)) {
-      safeTeardown(true, true);
+      abortRecognition();
     }
   }
 
@@ -434,7 +408,7 @@
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     }
     clearAllTimers();
-    safeTeardown(true, true);
+    abortRecognition();
   });
 </script>
 
@@ -453,11 +427,11 @@
     </span>
   </button>
 
-  <!-- Floating Audio Speaker Button: Khóa tương tác khi đang ghi âm để tránh xung đột AudioSession -->
+  <!-- Floating Audio Speaker Button: Bấm nghe mẫu dọn dẹp micro sạch sẽ -->
   <button
     type="button"
     disabled={isRecording || isBusy}
-    onclick={() => appState.speakCurrent()}
+    onclick={handleSpeakSample}
     class="absolute top-3.5 right-3.5 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-2xl w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-sm transition-transform cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
     title="Nghe mẫu phát âm"
   >
