@@ -70,8 +70,22 @@
     }
   }
 
-  // Dừng an toàn không gán null listeners trước abort() và khôi phục audio routing về loa ngoài
-  function safeTeardown(immediateAbort = false, resetFsmToIdle = false) {
+  // Kiểm tra xem trình duyệt có đang phát âm thanh TTS không (Ngăn WebKit Bug 321436)
+  function canStartRecording(): boolean {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+        toast.info('Đang phát âm mẫu', {
+          description: 'Vui lòng đợi âm thanh mẫu kết thúc rồi bấm Micro lại nhé!',
+          duration: 3500
+        });
+        return false;
+      }
+    }
+    return true;
+  }
+
+  // Dừng an toàn không gán null listeners trước abort() và đệm cooldown hồi phục cho iOS CoreAudio
+  function safeTeardown(immediateAbort = false, needCooldown = true) {
     clearAllTimers();
     setAudioSessionType('playback');
 
@@ -87,7 +101,12 @@
       } catch {}
     }
 
-    if (resetFsmToIdle) {
+    if (needCooldown) {
+      recState = 'cooldown';
+      cooldownTimer = setTimeout(() => {
+        recState = 'idle';
+      }, 700);
+    } else {
       recState = 'idle';
     }
   }
@@ -120,18 +139,14 @@
   function startRecording() {
     if (!speechSupported || appState.speechAnswered || !appState.currentSpeechItem) return;
     if (isBusy || recState === 'listening') return;
+    if (!canStartRecording()) return;
 
     liveHanzi = '';
     livePinyin = '';
     errorMessage = '';
     sessionHadError = false;
 
-    // 1. Hủy TTS đang đọc nếu có
-    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
-
-    // 2. Chuyển đổi AVAudioSession sang PlayAndRecord trên iOS Safari 16.4+
+    // 1. Chuyển đổi AVAudioSession sang PlayAndRecord trên iOS Safari 16.4+
     setAudioSessionType('play-and-record');
 
     const SpeechRecognition =
