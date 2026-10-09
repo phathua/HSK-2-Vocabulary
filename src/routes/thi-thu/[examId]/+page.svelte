@@ -238,6 +238,7 @@
         audioSrc={exam.audio_ogg}
         examCode={exam.exam_code}
         isExamMode={mode === 'exam'}
+        listeningQuestions={listeningQuestions}
       />
     {/if}
 

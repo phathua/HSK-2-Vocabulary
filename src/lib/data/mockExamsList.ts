@@ -17,38 +17,6 @@ export interface MockExamItem {
 
 export const mockExamsData: MockExamItem[] = [
   {
-    "id": "H2-YJ",
-    "code": "H2-YJ",
-    "title": "Đề Mẫu HSK 2 Hanban (样卷)",
-    "duration": "55 phút",
-    "questionsCount": 60,
-    "listeningCount": 35,
-    "readingCount": 25,
-    "level": "HSK 2",
-    "tag": "Đề mẫu chuẩn",
-    "badgeColor": "blue",
-    "hasAudio": true,
-    "hasExamPdf": true,
-    "hasAnswerPdf": false,
-    "imagesCount": 30
-  },
-  {
-    "id": "H20000",
-    "code": "H20000",
-    "title": "Đề Mẫu Chuẩn Quốc Gia H20000",
-    "duration": "55 phút",
-    "questionsCount": 60,
-    "listeningCount": 35,
-    "readingCount": 25,
-    "level": "HSK 2",
-    "tag": "Đề mẫu Hanban",
-    "badgeColor": "blue",
-    "hasAudio": true,
-    "hasExamPdf": true,
-    "hasAnswerPdf": true,
-    "imagesCount": 57
-  },
-  {
     "id": "H20901",
     "code": "H20901",
     "title": "Đề Thi Thật Hanban H20901",
@@ -62,7 +30,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": true,
-    "imagesCount": 39
+    "imagesCount": 13
   },
   {
     "id": "H20902",
@@ -78,7 +46,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": true,
-    "imagesCount": 85
+    "imagesCount": 13
   },
   {
     "id": "H21002",
@@ -110,7 +78,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": false,
-    "imagesCount": 47
+    "imagesCount": 13
   },
   {
     "id": "H21004",
@@ -126,7 +94,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": false,
-    "imagesCount": 44
+    "imagesCount": 13
   },
   {
     "id": "H21005",
@@ -142,7 +110,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": false,
-    "imagesCount": 43
+    "imagesCount": 13
   },
   {
     "id": "H21006",
@@ -158,7 +126,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": false,
-    "imagesCount": 44
+    "imagesCount": 13
   },
   {
     "id": "H21329",
@@ -174,7 +142,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": true,
-    "imagesCount": 29
+    "imagesCount": 13
   },
   {
     "id": "H21330",
@@ -190,7 +158,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": true,
-    "imagesCount": 29
+    "imagesCount": 13
   },
   {
     "id": "H21331",
@@ -206,7 +174,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": true,
-    "imagesCount": 30
+    "imagesCount": 13
   },
   {
     "id": "H21332",
@@ -222,7 +190,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": true,
-    "imagesCount": 30
+    "imagesCount": 13
   },
   {
     "id": "H21334",
@@ -238,7 +206,7 @@ export const mockExamsData: MockExamItem[] = [
     "hasAudio": true,
     "hasExamPdf": true,
     "hasAnswerPdf": true,
-    "imagesCount": 30
+    "imagesCount": 13
   },
   {
     "id": "H21335",
@@ -253,39 +221,327 @@ export const mockExamsData: MockExamItem[] = [
     "badgeColor": "purple",
     "hasAudio": true,
     "hasExamPdf": true,
+    "hasAnswerPdf": false,
+    "imagesCount": 13
+  },
+  {
+    "id": "H21007",
+    "code": "H21007",
+    "title": "Đề Thi Thật Hanban H21007",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
     "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21008",
+    "code": "H21008",
+    "title": "Đề Thi Thật Hanban H21008",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21009",
+    "code": "H21009",
+    "title": "Đề Thi Thật Hanban H21009",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21112",
+    "code": "H21112",
+    "title": "Đề Thi Thật Hanban H21112",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21113",
+    "code": "H21113",
+    "title": "Đề Thi Thật Hanban H21113",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21115",
+    "code": "H21115",
+    "title": "Đề Thi Thật Hanban H21115",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21116",
+    "code": "H21116",
+    "title": "Đề Thi Thật Hanban H21116",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21117",
+    "code": "H21117",
+    "title": "Đề Thi Thật Hanban H21117",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21118",
+    "code": "H21118",
+    "title": "Đề Thi Thật Hanban H21118",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21119",
+    "code": "H21119",
+    "title": "Đề Thi Thật Hanban H21119",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21220",
+    "code": "H21220",
+    "title": "Đề Thi Thật Hanban H21220",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21221",
+    "code": "H21221",
+    "title": "Đề Thi Thật Hanban H21221",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21222",
+    "code": "H21222",
+    "title": "Đề Thi Thật Hanban H21222",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21223",
+    "code": "H21223",
+    "title": "Đề Thi Thật Hanban H21223",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21333",
+    "code": "H21333",
+    "title": "Đề Thi Thật Hanban H21333",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21555B",
+    "code": "H21555B",
+    "title": "Đề Thi Thật Hanban H21555B",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21555C",
+    "code": "H21555C",
+    "title": "Đề Thi Thật Hanban H21555C",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H21555D",
+    "code": "H21555D",
+    "title": "Đề Thi Thật Hanban H21555D",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề thi thật",
+    "badgeColor": "emerald",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 22
+  },
+  {
+    "id": "H20000",
+    "code": "H20000",
+    "title": "Đề Mẫu Chuẩn Quốc Gia H20000",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề mẫu chuẩn",
+    "badgeColor": "blue",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": true,
+    "imagesCount": 57
+  },
+  {
+    "id": "H2-YJ",
+    "code": "H2-YJ",
+    "title": "Đề Mẫu HSK 2 Hanban (样卷)",
+    "duration": "55 phút",
+    "questionsCount": 60,
+    "listeningCount": 35,
+    "readingCount": 25,
+    "level": "HSK 2",
+    "tag": "Đề mẫu chuẩn",
+    "badgeColor": "blue",
+    "hasAudio": true,
+    "hasExamPdf": true,
+    "hasAnswerPdf": false,
     "imagesCount": 30
-  },
-  {
-    "id": "MOCK-CHINESE-TOOLS",
-    "code": "MOCK-CHINESE-TOOLS",
-    "title": "Đề Luyện Thi Chinese Tools",
-    "duration": "55 phút",
-    "questionsCount": 60,
-    "listeningCount": 35,
-    "readingCount": 25,
-    "level": "HSK 2",
-    "tag": "Online Mock",
-    "badgeColor": "amber",
-    "hasAudio": false,
-    "hasExamPdf": true,
-    "hasAnswerPdf": false,
-    "imagesCount": 25
-  },
-  {
-    "id": "MOCK-HSK-ATLAS",
-    "code": "MOCK-HSK-ATLAS",
-    "title": "Đề Luyện Thi HSK Atlas",
-    "duration": "55 phút",
-    "questionsCount": 60,
-    "listeningCount": 35,
-    "readingCount": 25,
-    "level": "HSK 2",
-    "tag": "Online Mock",
-    "badgeColor": "amber",
-    "hasAudio": false,
-    "hasExamPdf": true,
-    "hasAnswerPdf": false,
-    "imagesCount": 0
   }
 ];

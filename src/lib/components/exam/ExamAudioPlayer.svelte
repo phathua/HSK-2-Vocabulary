@@ -5,15 +5,19 @@
   import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
   import HourglassMedium from 'phosphor-svelte/lib/HourglassMedium';
   import LockSimple from 'phosphor-svelte/lib/LockSimple';
+  import FileText from 'phosphor-svelte/lib/FileText';
+  import X from 'phosphor-svelte/lib/X';
   import { examRoomState } from '#lib/state/examRoomState.svelte';
+  import type { QuestionItem } from '#lib/types/exam';
 
   interface Props {
     audioSrc?: string | null;
     examCode: string;
     isExamMode?: boolean; // In official exam mode: 60s preview -> auto-play non-stoppable
+    listeningQuestions?: QuestionItem[];
   }
 
-  let { audioSrc = null, examCode, isExamMode = false }: Props = $props();
+  let { audioSrc = null, examCode, isExamMode = false, listeningQuestions = [] }: Props = $props();
 
   let audioElement: HTMLAudioElement | undefined = $state();
   let cardElement: HTMLElement | undefined = $state();
@@ -28,6 +32,17 @@
   let previewSeconds = $state(60);
   let isPreviewPhase = $state(true);
   let previewTimer: any = null;
+
+  // Transcript Modal state
+  let showTranscriptModal = $state(false);
+  let activeTranscriptPart = $state('all'); // 'all' | 'Part 1' | 'Part 2' | 'Part 3' | 'Part 4'
+
+  const filteredTranscripts = $derived.by(() => {
+    if (activeTranscriptPart === 'all') {
+      return listeningQuestions;
+    }
+    return listeningQuestions.filter((q) => q.part === activeTranscriptPart);
+  });
 
   const resolvedSrc = $derived.by(() => {
     return getExamAudioUrl(examCode, audioSrc);
@@ -215,8 +230,21 @@
         </div>
       {/if}
 
-      <!-- Trạng thái bên phải -->
+      <!-- Trạng thái bên phải & Nút Bản chép lời -->
       <div class="flex items-center gap-1.5 shrink-0">
+        {#if listeningQuestions.length > 0}
+          <button
+            type="button"
+            onclick={() => (showTranscriptModal = true)}
+            class="flex items-center gap-1 px-2.5 py-1 sm:py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-slate-700 dark:text-neutral-200 font-bold text-xs cursor-pointer transition-colors border border-slate-200 dark:border-neutral-700"
+            title="Xem toàn bộ kịch bản bài nghe (Transcript)"
+          >
+            <FileText class="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
+            <span class="hidden sm:inline">Bản chép lời</span>
+            <span class="sm:hidden">Lời</span>
+          </button>
+        {/if}
+
         {#if isExamMode}
           {#if isPreviewPhase}
             <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 font-mono font-bold text-xs">
@@ -259,5 +287,131 @@
       onended={handleEnded}
       preload="auto"
     ></audio>
+  </div>
+{/if}
+
+<!-- Modal Bản Chép Lời (Listening Transcript Modal) -->
+{#if showTranscriptModal}
+  <div
+    class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-150"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="transcript-modal-title"
+    tabindex="-1"
+    onkeydown={(e) => e.key === 'Escape' && (showTranscriptModal = false)}
+  >
+    <div
+      class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-3xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden"
+    >
+      <!-- Header Modal -->
+      <div class="p-4 sm:px-6 border-b border-slate-200 dark:border-neutral-800 flex items-center justify-between gap-3 shrink-0">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-9 h-9 rounded-2xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
+            <FileText class="w-5 h-5" />
+          </div>
+          <div>
+            <h3 id="transcript-modal-title" class="text-sm sm:text-base font-black text-slate-900 dark:text-slate-100">
+              Bản chép lời bài nghe (Transcript)
+            </h3>
+            <p class="text-[11px] text-slate-500 dark:text-neutral-400 font-medium">
+              Đề thi: {examCode} • Toàn bộ 35 câu nghe
+            </p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          onclick={() => (showTranscriptModal = false)}
+          class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-slate-600 dark:text-neutral-300 flex items-center justify-center shrink-0 cursor-pointer transition-colors"
+          aria-label="Đóng bản chép lời"
+        >
+          <X weight="bold" class="w-4 h-4" />
+        </button>
+      </div>
+
+      <!-- Filter Tabs theo Part (Phần 1 - 4) -->
+      <div class="flex items-center gap-1.5 p-3 sm:px-6 bg-slate-50 dark:bg-[#202020] border-b border-slate-200 dark:border-neutral-800 overflow-x-auto shrink-0">
+        {#each [
+          { id: 'all', label: 'Tất cả (35 câu)' },
+          { id: 'Part 1', label: 'Phần 1 (1-10)' },
+          { id: 'Part 2', label: 'Phần 2 (11-20)' },
+          { id: 'Part 3', label: 'Phần 3 (21-30)' },
+          { id: 'Part 4', label: 'Phần 4 (31-35)' }
+        ] as tab}
+          <button
+            type="button"
+            onclick={() => (activeTranscriptPart = tab.id)}
+            class="px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-all cursor-pointer {
+              activeTranscriptPart === tab.id
+                ? 'bg-orange-600 text-white shadow-xs'
+                : 'bg-white dark:bg-neutral-800 text-slate-600 dark:text-neutral-300 hover:bg-slate-100 dark:hover:bg-neutral-700 border border-slate-200 dark:border-neutral-700'
+            }"
+          >
+            {tab.label}
+          </button>
+        {/each}
+      </div>
+
+      <!-- Nội dung danh sách lời thoại -->
+      <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-3.5 divide-y divide-slate-100 dark:divide-neutral-800">
+        {#if filteredTranscripts.length === 0}
+          <div class="text-center py-8 text-xs text-slate-500">
+            Không tìm thấy bản chép lời cho phần này.
+          </div>
+        {:else}
+          {#each filteredTranscripts as q}
+            <div class="pt-3.5 first:pt-0">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-lg bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 font-mono font-bold text-xs">
+                  Câu {q.question_no}
+                </span>
+                <span class="text-[11px] font-medium text-slate-400">
+                  {q.part} • Đáp án chuẩn: <strong class="text-emerald-600 dark:text-emerald-400 font-bold">{q.answer}</strong>
+                </span>
+              </div>
+
+              <!-- Lời thoại tiếng Hán -->
+              <div class="p-3 rounded-2xl bg-slate-50 dark:bg-neutral-900/60 border border-slate-200/80 dark:border-neutral-800 space-y-2">
+                <div>
+                  <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">
+                    Hán tự
+                  </div>
+                  <div class="text-sm md:text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed select-text font-serif">
+                    {q.listening_script || q.text || 'Đang cập nhật lời thoại...'}
+                  </div>
+                  {#if q.listening_pinyin}
+                    <div class="text-xs md:text-sm font-medium text-amber-600 dark:text-amber-400/90 font-mono mt-0.5 select-text">
+                      {q.listening_pinyin}
+                    </div>
+                  {/if}
+                </div>
+
+                <!-- Giải thích / Nghĩa tiếng Việt nếu có -->
+                {#if q.explanation}
+                  <div class="pt-2 border-t border-slate-200/60 dark:border-neutral-800 text-[11px] md:text-xs text-slate-600 dark:text-neutral-300 select-text leading-relaxed">
+                    <span class="font-bold text-amber-600 dark:text-amber-400">💡 Giải nghĩa:</span>
+                    {q.explanation}
+                  </div>
+                {/if}
+              </div>
+            </div>
+          {/each}
+        {/if}
+      </div>
+
+      <!-- Footer Modal -->
+      <div class="p-3 sm:px-6 bg-slate-50 dark:bg-[#1E1E1E] border-t border-slate-200 dark:border-neutral-800 flex items-center justify-between shrink-0">
+        <span class="text-[11px] text-slate-500 font-medium">
+          Nhấn phím <kbd class="px-1.5 py-0.5 bg-slate-200 dark:bg-neutral-700 rounded text-[10px]">Esc</kbd> để đóng nhanh
+        </span>
+        <button
+          type="button"
+          onclick={() => (showTranscriptModal = false)}
+          class="px-4 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs cursor-pointer shadow-xs"
+        >
+          Đóng
+        </button>
+      </div>
+    </div>
   </div>
 {/if}
