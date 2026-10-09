@@ -34,64 +34,57 @@
   let activeChar = '';
   let loopTimeout: any = null;
 
+  // Quản lý dừng và bắt đầu animation
   function stopLoop() {
     isLooping = false;
-    isAnimating = false;
     if (loopTimeout) {
       clearTimeout(loopTimeout);
       loopTimeout = null;
     }
     if (writerInstance) {
       try {
-        writerInstance.pauseAnimation();
-        writerInstance.cancelAnimation();
-        // Xóa hoàn toàn nét vẽ đỏ animation, chỉ giữ lại khuôn chữ xám mờ nếu showOutline đang bật
-        writerInstance.hideCharacter();
-        if (showOutline) {
-          writerInstance.showOutline();
-        } else {
-          writerInstance.hideOutline();
+        // Hủy toàn bộ animation đang chạy trên RenderState
+        if (writerInstance._renderState) {
+          writerInstance._renderState.cancelAll();
         }
-      } catch {}
+        writerInstance.pauseAnimation();
+        // Xóa hoàn toàn nét vẽ đỏ đang dở dang (duration = 0)
+        writerInstance.hideCharacter({ duration: 0 });
+        // Đảm bảo giữ nguyên khuôn chữ xám nếu showOutline đang bật
+        if (showOutline) {
+          writerInstance.showOutline({ duration: 0 });
+        } else {
+          writerInstance.hideOutline({ duration: 0 });
+        }
+      } catch (e) {
+        console.error('Error stopping loop:', e);
+      }
     }
   }
 
   function startLoop() {
     isLooping = true;
     hasUserDrawn = false;
-    isAnimating = false;
     if (loopTimeout) {
       clearTimeout(loopTimeout);
       loopTimeout = null;
     }
-    playCycle();
-  }
+    if (!writerInstance) return;
 
-  function playCycle() {
-    if (!writerInstance || !isLooping || hasUserDrawn || isAnimating) return;
-
-    isAnimating = true;
     try {
-      if (showOutline) {
-        writerInstance.showOutline();
-      } else {
-        writerInstance.hideOutline();
+      if (writerInstance._renderState) {
+        writerInstance._renderState.cancelAll();
       }
-      writerInstance.hideCharacter();
-      writerInstance.animateCharacter({
-        onComplete: () => {
-          isAnimating = false;
-          if (!isLooping || hasUserDrawn) return;
-          // Sau khi viết xong trọn vẹn toàn bộ các nét, dừng nghỉ 1.5s rồi mới lặp lại
-          loopTimeout = setTimeout(() => {
-            if (isLooping && !hasUserDrawn) {
-              playCycle();
-            }
-          }, 1500);
-        }
-      });
-    } catch {
-      isAnimating = false;
+      writerInstance.hideCharacter({ duration: 0 });
+      if (showOutline) {
+        writerInstance.showOutline({ duration: 0 });
+      } else {
+        writerInstance.hideOutline({ duration: 0 });
+      }
+      // Dùng loopCharacterAnimation chính thức của HanziWriter
+      writerInstance.loopCharacterAnimation();
+    } catch (e) {
+      console.error('Error starting loop:', e);
     }
   }
 
@@ -100,7 +93,6 @@
     if (activeChar === char && writerInstance) return;
 
     activeChar = char;
-    isAnimating = false;
     if (loopTimeout) {
       clearTimeout(loopTimeout);
       loopTimeout = null;
@@ -108,8 +100,10 @@
 
     if (writerInstance) {
       try {
+        if (writerInstance._renderState) {
+          writerInstance._renderState.cancelAll();
+        }
         writerInstance.pauseAnimation();
-        writerInstance.cancelAnimation();
       } catch {}
       writerInstance = null;
     }
@@ -121,19 +115,18 @@
         height: 310,
         padding: 20,
         showOutline: showOutline,
-        strokeAnimationSpeed: 1.0, // Tốc độ viết tự nhiên vừa phải
-        delayBetweenStrokes: 200,   // Dừng 200ms giữa từng nét chuẩn bút thuận
-        strokeColor: '#e11d48',    // Màu đỏ hồng nổi bật khi animation viết mẫu
-        outlineColor: '#94a3b8',   // Màu xám mờ làm khuôn chữ
+        strokeAnimationSpeed: 1.0,  // Tốc độ viết tự nhiên vừa phải
+        delayBetweenStrokes: 200,    // Dừng 200ms giữa từng nét chuẩn bút thuận
+        delayBetweenLoops: 1500,     // Dừng 1.5s sau khi viết xong trọn vẹn trước khi lặp lại
+        strokeColor: '#e11d48',     // Màu đỏ hồng nổi bật khi animation viết mẫu
+        outlineColor: '#94a3b8',    // Màu xám mờ làm khuôn chữ
         drawingColor: '#e11d48',
         showCharacter: false
       });
 
       // Bắt đầu chu kỳ animation nếu chưa vẽ tay
       if (!hasUserDrawn && isLooping) {
-        loopTimeout = setTimeout(() => {
-          playCycle();
-        }, 300);
+        writerInstance.loopCharacterAnimation();
       }
     } catch (e) {
       console.error('HanziWriter init error:', e);
@@ -155,9 +148,11 @@
   }
 
   function startDrawing(e: MouseEvent | TouchEvent) {
-    // Ngay khi người dùng đặt nét vẽ vào: DỪNG HẲN ANIMATION ngay lập tức, chuyển về khuôn xám mờ tĩnh
-    hasUserDrawn = true;
-    stopLoop();
+    // Ngay khi người dùng chạm bút / chuột vẽ vào: DỪNG VÀ XÓA SẠCH NÉT ĐỎ NGAY LẬP TỨC
+    if (!hasUserDrawn) {
+      hasUserDrawn = true;
+      stopLoop();
+    }
 
     isDrawing = true;
     draw(e);
@@ -210,14 +205,14 @@
     showOutline = !showOutline;
     if (writerInstance) {
       if (showOutline) {
-        writerInstance.showOutline();
+        writerInstance.showOutline({ duration: 150 });
       } else {
-        writerInstance.hideOutline();
+        writerInstance.hideOutline({ duration: 150 });
       }
     }
   }
 
-  // Khởi tạo và phản ứng khi đổi chữ
+  // Khởi tạo và phản ứng DUY NHẤT khi đổi ký tự (currentChar)
   $effect(() => {
     const char = currentChar;
     if (char && writerContainer && char !== activeChar) {
