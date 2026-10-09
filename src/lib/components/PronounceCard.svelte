@@ -15,65 +15,176 @@
   import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
   import SmartImage from './SmartImage.svelte';
 
-  let isRecording = $state(false);
+  // 1. Máy trạng thái Finite State Machine (FSM)
+  type RecState = 'idle' | 'starting' | 'listening' | 'stopping' | 'cooldown' | 'unsupported';
+
+  let recState = $state<RecState>('idle');
   let liveHanzi = $state('');
   let livePinyin = $state('');
   let speechSupported = $state(true);
   let errorMessage = $state('');
 
-  let recognition: any = null;
+  // Quản lý định danh phiên độc lập & cờ lỗi
+  let activeRecognition: any = null;
   let activeRecItemId: string | null = null;
+  let currentSessionId = 0;
+  let sessionHadError = false;
 
-  // Lắng nghe thay đổi từ vựng hiện tại: tự động reset sạch sẽ preview và thông báo lỗi
+  // Timers
+  let startWatchdogTimer: any = null;
+  let utteranceWatchdogTimer: any = null;
+  let stoppingWatchdogTimer: any = null;
+  let cooldownTimer: any = null;
+
+  // Trạng thái dẫn xuất
+  const isRecording = $derived(recState === 'listening' || recState === 'starting');
+  const isBusy = $derived(recState === 'starting' || recState === 'stopping' || recState === 'cooldown');
+  const isZhToVi = $derived(appState.direction === 'zh_to_vi');
+
+  // Lắng nghe thay đổi từ vựng hiện tại: tự động giải phóng sạch sẽ phiên ghi âm cũ và reset preview
   $effect(() => {
     const currentId = appState.currentSpeechItem?.id;
     if (currentId) {
+      if (activeRecognition) {
+        safeTeardown(true, true);
+      }
       liveHanzi = '';
       livePinyin = '';
       errorMessage = '';
     }
   });
 
-  function cleanupRecognition() {
-    if (recognition) {
-      try {
-        recognition.onstart = null;
-        recognition.onresult = null;
-        recognition.onspeechend = null;
-        recognition.onend = null;
-        recognition.onerror = null;
-        recognition.abort();
-      } catch {}
-      recognition = null;
-    }
-    activeRecItemId = null;
-    isRecording = false;
+  function clearAllTimers() {
+    if (startWatchdogTimer) { clearTimeout(startWatchdogTimer); startWatchdogTimer = null; }
+    if (utteranceWatchdogTimer) { clearTimeout(utteranceWatchdogTimer); utteranceWatchdogTimer = null; }
+    if (stoppingWatchdogTimer) { clearTimeout(stoppingWatchdogTimer); stoppingWatchdogTimer = null; }
+    if (cooldownTimer) { clearTimeout(cooldownTimer); cooldownTimer = null; }
   }
 
-  function createRecognition(targetItemId: string) {
-    cleanupRecognition();
+  function setAudioSessionType(type: 'play-and-record' | 'playback') {
+    if (typeof navigator !== 'undefined' && 'audioSession' in navigator) {
+      try {
+        (navigator as any).audioSession.type = type;
+      } catch {}
+    }
+  }
+
+  // Dừng an toàn không gán null listeners trước abort() và khôi phục audio routing về loa ngoài
+  function safeTeardown(immediateAbort = false, resetFsmToIdle = false) {
+    clearAllTimers();
+    setAudioSessionType('playback');
+
+    if (activeRecognition) {
+      const rec = activeRecognition;
+      activeRecognition = null;
+      try {
+        if (immediateAbort) {
+          rec.abort();
+        } else {
+          rec.stop();
+        }
+      } catch {}
+    }
+
+    if (resetFsmToIdle) {
+      recState = 'idle';
+    }
+  }
+
+  function armStoppingWatchdog(sessionId: number) {
+    if (stoppingWatchdogTimer) clearTimeout(stoppingWatchdogTimer);
+    stoppingWatchdogTimer = setTimeout(() => {
+      if (sessionId !== currentSessionId) return;
+      if (recState === 'stopping') {
+        console.warn('[Speech] Stopping watchdog fired: forcing audio pipeline recovery');
+        safeTeardown(true, true);
+      }
+    }, 2500);
+  }
+
+  function armUtteranceWatchdog(sessionId: number) {
+    if (utteranceWatchdogTimer) clearTimeout(utteranceWatchdogTimer);
+    utteranceWatchdogTimer = setTimeout(() => {
+      if (sessionId !== currentSessionId) return;
+      if (recState === 'listening') {
+        console.warn('[Speech] Utterance watchdog fired: silence detected');
+        safeTeardown(true, true);
+        if (!livePinyin && !liveHanzi) {
+          errorMessage = 'Không nghe thấy âm thanh. Hãy thử nói to hơn.';
+        }
+      }
+    }, 8000);
+  }
+
+  function startRecording() {
+    if (!speechSupported || appState.speechAnswered || !appState.currentSpeechItem) return;
+    if (isBusy || recState === 'listening') return;
+
+    liveHanzi = '';
+    livePinyin = '';
+    errorMessage = '';
+    sessionHadError = false;
+
+    // 1. Hủy TTS đang đọc nếu có
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+
+    // 2. Chuyển đổi AVAudioSession sang PlayAndRecord trên iOS Safari 16.4+
+    setAudioSessionType('play-and-record');
+
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
       speechSupported = false;
+      recState = 'unsupported';
       errorMessage = 'Trình duyệt không hỗ trợ Web Speech API (Hãy dùng Chrome hoặc Safari trên iOS 14.5+)';
-      return null;
+      return;
     }
 
+    const targetItemId = appState.currentSpeechItem.id;
+    const sessionId = ++currentSessionId;
+
     try {
+      // 3. Deferred Recreation: Khởi tạo instance mới hoàn toàn cho mỗi phiên
       const rec = new SpeechRecognition();
       rec.lang = 'zh-CN';
       rec.continuous = false;
       rec.interimResults = true;
       rec.maxAlternatives = 1;
 
+      clearAllTimers();
+
+      // 4. Start Watchdog (10.0s): Đủ dài để người dùng xác nhận hộp thoại xin quyền Micro trên iOS
+      startWatchdogTimer = setTimeout(() => {
+        if (sessionId !== currentSessionId) return;
+        if (recState === 'starting') {
+          console.warn('[Speech] Start watchdog fired: permission timeout or microphone unresponsive');
+          safeTeardown(true, true);
+          errorMessage = 'Không thể kích hoạt micro. Vui lòng cấp quyền micro và thử lại.';
+        }
+      }, 10000);
+
       rec.onstart = () => {
-        isRecording = true;
+        if (sessionId !== currentSessionId) return;
+        if (startWatchdogTimer) {
+          clearTimeout(startWatchdogTimer);
+          startWatchdogTimer = null;
+        }
+        recState = 'listening';
         errorMessage = '';
+
+        // 5. Utterance Watchdog (8.0s ban đầu)
+        armUtteranceWatchdog(sessionId);
       };
 
       rec.onresult = (event: any) => {
+        if (sessionId !== currentSessionId) return;
+
+        // Reset Utterance Watchdog mỗi khi nhận dữ liệu giọng nói (người dùng đang nói không bị ngắt quãng)
+        armUtteranceWatchdog(sessionId);
+
         let transcript = '';
         for (let i = event.resultIndex; i < event.results.length; ++i) {
           transcript += event.results[i][0].transcript;
@@ -87,13 +198,29 @@
       };
 
       rec.onspeechend = () => {
-        // Người dùng dừng nói
+        if (sessionId !== currentSessionId) return;
+        recState = 'stopping';
+        armStoppingWatchdog(sessionId);
       };
 
       rec.onend = () => {
-        isRecording = false;
-        // Tự động nộp bài nếu bật cấu hình và người dùng đang ở đúng câu đó
+        // Luôn tháo gỡ listeners trên instance đã kết thúc
+        rec.onstart = null;
+        rec.onresult = null;
+        rec.onspeechend = null;
+        rec.onerror = null;
+        rec.onend = null;
+
+        // Bỏ qua nếu là sự kiện trễ của phiên cũ bị hủy
+        if (sessionId !== currentSessionId) return;
+
+        clearAllTimers();
+        activeRecognition = null;
+        setAudioSessionType('playback');
+
+        // Chỉ tự động nộp bài nếu không gặp sự cố lỗi và có dữ liệu phát âm
         if (
+          !sessionHadError &&
           appState.speechAutoSubmit &&
           livePinyin &&
           !appState.speechAnswered &&
@@ -101,10 +228,22 @@
         ) {
           submitAnswer();
         }
+
+        recState = 'cooldown';
+
+        // 6. Hardware Cooldown 300ms cho iOS AVAudioSession hoàn tất deactivation
+        cooldownTimer = setTimeout(() => {
+          if (sessionId !== currentSessionId) return;
+          if (recState === 'cooldown') {
+            recState = 'idle';
+          }
+        }, 300);
       };
 
       rec.onerror = (event: any) => {
-        isRecording = false;
+        if (sessionId !== currentSessionId) return;
+        sessionHadError = true;
+
         if (event.error === 'not-allowed') {
           errorMessage = 'Chưa cấp quyền Micro. Vui lòng cho phép Micro trong cài đặt.';
         } else if (event.error !== 'no-speech' && event.error !== 'aborted') {
@@ -112,89 +251,36 @@
         }
       };
 
+      activeRecognition = rec;
+      recState = 'starting';
       activeRecItemId = targetItemId;
-      return rec;
+
+      // 7. GỌI ĐỒNG BỘ TRONG EVENT CLICK USER GESTURE (Bảo toàn 100% User Activation Token trên iOS Safari)
+      rec.start();
     } catch (err: any) {
-      speechSupported = false;
-      errorMessage = 'Không thể khởi tạo bộ nhận dạng giọng nói.';
-      return null;
-    }
-  }
-
-  onMount(() => {
-    const SpeechRecognition =
-      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      speechSupported = false;
-      errorMessage = 'Trình duyệt không hỗ trợ Web Speech API (Hãy dùng Chrome hoặc Safari trên iOS 14.5+)';
-    }
-  });
-
-  onDestroy(() => {
-    cleanupRecognition();
-  });
-
-  function handleNext() {
-    cleanupRecognition();
-    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
-    liveHanzi = '';
-    livePinyin = '';
-    errorMessage = '';
-    appState.nextSpeechItem();
-  }
-
-  function handleRetry() {
-    cleanupRecognition();
-    liveHanzi = '';
-    livePinyin = '';
-    errorMessage = '';
-    appState.speechAnswered = false;
-    appState.speechFeedback = null;
-  }
-
-  function startRecording() {
-    if (!speechSupported || appState.speechAnswered || !appState.currentSpeechItem) return;
-
-    liveHanzi = '';
-    livePinyin = '';
-    errorMessage = '';
-
-    // Hủy âm thanh TTS đang đọc nếu có
-    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
-
-    const currentId = appState.currentSpeechItem.id;
-    recognition = createRecognition(currentId);
-    if (!recognition) return;
-
-    // GỌI ĐỒNG BỘ TRONG EVENT CLICK ĐỂ BẢO TOÀN USER GESTURE TRÊN WEBKIT / IOS
-    try {
-      recognition.start();
-    } catch (e: any) {
-      console.warn('SpeechRecognition start failed:', e);
-      try {
-        recognition.stop();
-        setTimeout(() => {
-          try {
-            recognition?.start();
-          } catch {}
-        }, 100);
-      } catch {}
+      console.warn('SpeechRecognition start failed:', err);
+      clearAllTimers();
+      setAudioSessionType('playback');
+      recState = 'idle';
+      activeRecognition = null;
+      errorMessage = 'Không thể bật micro lúc này. Vui lòng bấm thử lại.';
     }
   }
 
   function stopRecording() {
-    if (recognition && isRecording) {
+    if (activeRecognition && (recState === 'listening' || recState === 'starting')) {
+      recState = 'stopping';
+      armStoppingWatchdog(currentSessionId);
       try {
-        recognition.stop();
-      } catch {}
+        activeRecognition.stop();
+      } catch {
+        safeTeardown(true, true);
+      }
     }
   }
 
   function toggleRecord() {
+    if (isBusy) return;
     if (isRecording) {
       stopRecording();
     } else {
@@ -203,7 +289,7 @@
   }
 
   function cancelSpoken() {
-    cleanupRecognition();
+    safeTeardown(true, true);
     liveHanzi = '';
     livePinyin = '';
   }
@@ -215,9 +301,9 @@
     const targetHanzi = appState.currentSpeechItem?.hanzi || '';
     const targetPinyin = appState.currentSpeechItem?.pinyin || '';
 
+    // Tuân thủ 100% Contract: checkSpeechAnswer trả về void, cập nhật speechFeedback
     appState.checkSpeechAnswer(livePinyin, liveHanzi);
 
-    // Thông báo Toast Sonner nổi bật, không làm chật chội màn hình
     if (appState.speechFeedback?.type === 'correct') {
       toast.success('Phát âm chuẩn xác! 🎉', {
         description: `${targetHanzi} • ${targetPinyin}`
@@ -229,7 +315,54 @@
     }
   }
 
-  const isZhToVi = $derived(appState.direction === 'zh_to_vi');
+  function handleRetry() {
+    safeTeardown(true, true);
+    liveHanzi = '';
+    livePinyin = '';
+    errorMessage = '';
+    appState.speechAnswered = false;
+    appState.speechFeedback = null;
+  }
+
+  function handleNext() {
+    safeTeardown(true, true);
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    liveHanzi = '';
+    livePinyin = '';
+    errorMessage = '';
+    appState.nextSpeechItem();
+  }
+
+  function handleVisibilityChange() {
+    if (document.hidden && (isRecording || isBusy)) {
+      safeTeardown(true, true);
+    }
+  }
+
+  onMount(() => {
+    const SpeechRecognition =
+      typeof window !== 'undefined' &&
+      ((window as any).SpeechRecognition || (window as any).webkitSpeechRecognition);
+    speechSupported = !!SpeechRecognition;
+    if (!speechSupported) {
+      recState = 'unsupported';
+      errorMessage = 'Trình duyệt không hỗ trợ Web Speech API (Hãy dùng Chrome hoặc Safari trên iOS 14.5+)';
+    }
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+    }
+  });
+
+  onDestroy(() => {
+    if (typeof document !== 'undefined') {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    }
+    clearAllTimers();
+    safeTeardown(true, true);
+  });
 </script>
 
 <!-- Main Pronounce Card -->
@@ -247,11 +380,12 @@
     </span>
   </button>
 
-  <!-- Floating Audio Speaker Button: Đồng nhất tuyệt đối shape rounded-2xl và màu bg-emerald-500 -->
+  <!-- Floating Audio Speaker Button: Khóa tương tác khi đang ghi âm để tránh xung đột AudioSession -->
   <button
     type="button"
+    disabled={isRecording || isBusy}
     onclick={() => appState.speakCurrent()}
-    class="absolute top-3.5 right-3.5 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-2xl w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-sm transition-transform cursor-pointer"
+    class="absolute top-3.5 right-3.5 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-2xl w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-sm transition-transform cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
     title="Nghe mẫu phát âm"
   >
     <SpeakerHigh weight="bold" class="w-5 h-5 sm:w-6 sm:h-6" />
@@ -293,7 +427,7 @@
         {/if}
       </div>
 
-      <!-- Live Pinyin Speech Recognition Preview Area: Bỏ khung card xám và bỏ label nhận dạng -->
+      <!-- Live Pinyin Speech Recognition Preview Area -->
       <div class="min-h-[44px] flex flex-col items-center justify-center my-1.5 px-2">
         {#if isRecording && !livePinyin}
           <div class="flex items-center gap-2 text-rose-500 text-sm font-semibold animate-pulse">
@@ -301,7 +435,6 @@
             Đang lắng nghe giọng bạn... Hãy nói to rõ ràng!
           </div>
         {:else if livePinyin}
-          <!-- Chữ phiên âm preview thoáng sạch, không khung viền xám, mờ khi đang nói và đậm khi dứt câu -->
           <p
             class="text-2xl sm:text-3xl md:text-4xl transition-all duration-200 tracking-wide {isRecording
               ? 'text-slate-400 dark:text-[#8E918F] font-bold opacity-75'
@@ -339,8 +472,9 @@
           <div class="flex items-center justify-center gap-4 sm:gap-6">
             <button
               type="button"
+              disabled={isBusy}
               onclick={handleRetry}
-              class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-700 flex items-center justify-center shadow-sm cursor-pointer"
+              class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-700 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center shadow-sm cursor-pointer"
               title="Thử lại"
             >
               <ArrowClockwise size={22} weight="bold" />
@@ -348,8 +482,9 @@
 
             <button
               type="button"
+              disabled={isBusy}
               onclick={() => { handleRetry(); startRecording(); }}
-              class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all bg-gradient-to-tr from-blue-600 to-indigo-600 text-white cursor-pointer"
+              class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all bg-gradient-to-tr from-blue-600 to-indigo-600 text-white disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
               title="Bấm để phát âm lại"
             >
               <Microphone size={34} weight="duotone" />
@@ -357,8 +492,9 @@
 
             <button
               type="button"
+              disabled={isBusy}
               onclick={handleNext}
-              class="w-12 h-12 rounded-full bg-slate-800 hover:bg-slate-900 active:scale-95 text-white flex items-center justify-center shadow-md cursor-pointer"
+              class="w-12 h-12 rounded-full bg-slate-800 hover:bg-slate-900 active:scale-95 text-white disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center shadow-md cursor-pointer"
               title="Bỏ qua sang từ tiếp theo"
             >
               <ArrowRight size={22} weight="bold" />
@@ -371,7 +507,7 @@
             <button
               type="button"
               onclick={cancelSpoken}
-              disabled={!livePinyin && !isRecording}
+              disabled={(!livePinyin && !isRecording) || isBusy}
               class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-500 disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-sm transition-all cursor-pointer"
               title="Hủy bỏ / Thử lại"
             >
@@ -382,7 +518,8 @@
             <button
               type="button"
               onclick={toggleRecord}
-              class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all duration-200 cursor-pointer {isRecording
+              disabled={isBusy}
+              class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all duration-200 cursor-pointer disabled:opacity-75 disabled:pointer-events-none {isRecording
                 ? 'bg-rose-600 text-white shadow-rose-300 ring-4 ring-rose-200 animate-pulse'
                 : 'bg-gradient-to-tr from-blue-600 to-indigo-600 text-white shadow-blue-200 hover:from-blue-700 hover:to-indigo-700'}"
               title={isRecording ? 'Dừng ghi âm' : 'Bấm để ghi âm phát âm'}
@@ -398,7 +535,7 @@
             <button
               type="button"
               onclick={submitAnswer}
-              disabled={!livePinyin}
+              disabled={!livePinyin || isBusy}
               class="w-12 h-12 rounded-full border-2 border-emerald-500 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-300 disabled:pointer-events-none flex items-center justify-center shadow-sm transition-all cursor-pointer"
               title="Gửi xác nhận đáp án"
             >
