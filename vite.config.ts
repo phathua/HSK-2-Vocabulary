@@ -7,10 +7,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     sveltekit({
-      adapter: adapter(),
-      version: {
-        pollInterval: 30000
-      }
+      adapter: adapter()
     })
   ],
   server: { port: 3000, host: '0.0.0.0' }
