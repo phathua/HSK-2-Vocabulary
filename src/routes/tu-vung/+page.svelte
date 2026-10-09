@@ -212,7 +212,7 @@
   <div
     class={`z-30 transition-all duration-300 ease-in-out ${
       isSticky
-        ? 'sticky top-0 -mx-1 px-1 pt-1 pb-2 backdrop-blur-md bg-slate-100/80 dark:bg-[#131314]/80'
+        ? 'sticky top-0 -mx-1 px-1 pt-1 pb-2 bg-slate-100 dark:bg-[#131314] shadow-xs'
         : 'relative'
     } ${
       !isSearchVisible && isSticky ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'

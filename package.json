@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "google-translate-api-x": "^10.7.3",
+    "hanzi-writer": "^3.7.3",
     "svelte-sonner": "^1.2.1"
   }
 }

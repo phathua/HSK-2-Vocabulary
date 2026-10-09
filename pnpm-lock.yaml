@@ -11,6 +11,9 @@ importers:
       google-translate-api-x:
         specifier: ^10.7.3
         version: 10.7.3
+      hanzi-writer:
+        specifier: ^3.7.3
+        version: 3.7.3
       svelte-sonner:
         specifier: ^1.2.1
         version: 1.2.1(svelte@5.57.2)
@@ -995,6 +998,9 @@ packages:
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+
+  hanzi-writer@3.7.3:
+    resolution: {integrity: sha512-fdOFrb1cXWL/pV/oplJkcdziCvjJzhhf+qoIBm5IpVGxPBZEu4eLB6ZG5RJDbKXyNbNlyx8oIpa3XrcUBcSXpg==}
 
   is-reference@3.0.3:
     resolution: {integrity: sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==}
@@ -2052,6 +2058,8 @@ snapshots:
   google-translate-api-x@10.7.3: {}
 
   graceful-fs@4.2.11: {}
+
+  hanzi-writer@3.7.3: {}
 
   is-reference@3.0.3:
     dependencies:
