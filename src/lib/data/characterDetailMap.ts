@@ -4511,6 +4511,32 @@ export const CHARACTER_DETAIL_MAP: Record<string, HanziCharacterDetail> = {
     "liuShu": "chỉ sự & hội ý",
     "strokeSymbols": "丶 フ 丶 丨 一 フ 一 一 丨 丶 丶 丶",
     "etymology": "black; dark; evil, sinister"
+  },
+  "歉": {
+    "char": "歉",
+    "pinyin": "qiàn",
+    "radical": "欠",
+    "radicalNameVi": "KHIẾM",
+    "strokeCount": 14,
+    "structureIcon": "⿰",
+    "structureName": "Tả hữu",
+    "components": "兼 + 欠",
+    "liuShu": "hình thanh",
+    "strokeSymbols": "丶 ノ 一 一 𠃍 一 一 丨 丨 ノ ㇇ ㇏",
+    "etymology": "deficient, lacking; to apologize, to regret, to be sorry"
+  },
+  "感": {
+    "char": "感",
+    "pinyin": "gǎn",
+    "radical": "心",
+    "radicalNameVi": "TÂM",
+    "strokeCount": 13,
+    "structureIcon": "𝄄",
+    "structureName": "Thượng hạ",
+    "components": "咸 + 心",
+    "liuShu": "hội ý & hình thanh",
+    "strokeSymbols": "一 ノ 一 丨 𠃍 一 ノ 丶 丶 ㇃ 丶 丶",
+    "etymology": "to affect, to move, to touch; to perceive, to sense"
   }
 };
 

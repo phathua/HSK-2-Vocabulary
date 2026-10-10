@@ -23,6 +23,11 @@
   import ListBullets from 'phosphor-svelte/lib/ListBullets';
   import BookOpen from 'phosphor-svelte/lib/BookOpen';
   import PencilLine from 'phosphor-svelte/lib/PencilLine';
+  import ArrowsLeftRight from 'phosphor-svelte/lib/ArrowsLeftRight';
+  import Scales from 'phosphor-svelte/lib/Scales';
+  import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
+  import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
+  import { getCharacterDetail } from '#lib/data/characterDetailMap';
 
   // State tìm kiếm & scroll behavior
   let searchQuery = $state('');
@@ -421,17 +426,63 @@
               </div>
             </div>
 
-            <!-- Giải nghĩa chi tiết -->
-            <div class="space-y-4">
-              <div>
-                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] mb-1.5 flex items-center gap-1.5">
-                  <Sparkle weight="duotone" class="w-4 h-4 text-rose-500" />
-                  Nghĩa tiếng Việt
-                </h3>
-                <p class="text-xl md:text-2xl font-bold text-slate-800 dark:text-[#E3E3E3]">
-                  {currentWord.viet}
-                </p>
-              </div>
+            <!-- Giải nghĩa chi tiết & Đa tầng nghĩa -->
+            <div class="space-y-5">
+              {#if currentWord.subDefinitions && currentWord.subDefinitions.length > 0}
+                <div class="space-y-4">
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] flex items-center gap-1.5">
+                    <Sparkle weight="duotone" class="w-4 h-4 text-rose-500" />
+                    Các nét nghĩa chi tiết
+                  </h3>
+                  <div class="space-y-3">
+                    {#each currentWord.subDefinitions as sub}
+                      <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#282A2C]/60 border border-slate-100 dark:border-[#37393B] space-y-2">
+                        <div class="flex items-start gap-2.5">
+                          <span class="w-5 h-5 rounded-full bg-rose-500 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                            {sub.order}
+                          </span>
+                          <div class="space-y-1">
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white">
+                              {sub.definition}
+                            </h4>
+                            {#if sub.explanation}
+                              <p class="text-xs text-slate-500 dark:text-[#8E918F] leading-relaxed">
+                                {sub.explanation}
+                              </p>
+                            {/if}
+                          </div>
+                        </div>
+
+                        {#if sub.example}
+                          <div class="mt-2 pl-7 border-l-2 border-rose-200 dark:border-rose-900/60 py-0.5 space-y-0.5">
+                            <p class="text-sm font-bold text-slate-800 dark:text-[#E3E3E3]">
+                              {sub.example.zh}
+                            </p>
+                            {#if sub.example.pinyin}
+                              <p class="text-xs text-rose-600 dark:text-rose-400">
+                                {sub.example.pinyin}
+                              </p>
+                            {/if}
+                            <p class="text-xs text-slate-600 dark:text-[#C4C7C5]">
+                              {sub.example.vi}
+                            </p>
+                          </div>
+                        {/if}
+                      </div>
+                    {/each}
+                  </div>
+                </div>
+              {:else}
+                <div>
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] mb-1.5 flex items-center gap-1.5">
+                    <Sparkle weight="duotone" class="w-4 h-4 text-rose-500" />
+                    Nghĩa tiếng Việt
+                  </h3>
+                  <p class="text-xl md:text-2xl font-bold text-slate-800 dark:text-[#E3E3E3]">
+                    {currentWord.viet}
+                  </p>
+                </div>
+              {/if}
 
               {#if currentWord.enMeaning}
                 <div>
@@ -440,6 +491,113 @@
                   </h4>
                   <p class="text-sm font-semibold text-slate-600 dark:text-[#C4C7C5]">
                     {currentWord.enMeaning}
+                  </p>
+                </div>
+              {/if}
+
+              <!-- KHỐI TỪ CẬN NGHĨA / ĐỒNG NGHĨA & TỪ TRÁI NGHĨA THEO CHUẨN HANZII -->
+              {#if (currentWord.synonyms && currentWord.synonyms.length > 0) || (currentWord.antonyms && currentWord.antonyms.length > 0)}
+                <div class="pt-4 border-t border-slate-100 dark:border-[#282A2C] grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- Từ cận nghĩa / đồng nghĩa -->
+                  {#if currentWord.synonyms && currentWord.synonyms.length > 0}
+                    <div class="p-3.5 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40 space-y-2">
+                      <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
+                        <CheckCircle weight="fill" class="w-4 h-4 text-emerald-500" />
+                        Từ cận nghĩa / Đồng nghĩa
+                      </h4>
+                      <div class="space-y-1.5">
+                        {#each currentWord.synonyms as syn}
+                          {#if typeof syn === 'string'}
+                            <button
+                              onclick={() => { searchQuery = syn; }}
+                              class="w-full text-left p-2 rounded-xl bg-white dark:bg-[#1E1F20] hover:bg-emerald-50 dark:hover:bg-emerald-950/40 border border-emerald-200/50 dark:border-emerald-800/40 transition-colors flex items-center justify-between"
+                            >
+                              <span class="font-bold text-sm text-slate-800 dark:text-white">{syn}</span>
+                            </button>
+                          {:else}
+                            <button
+                              onclick={() => { searchQuery = syn.hanzi; }}
+                              class="w-full text-left p-2.5 rounded-xl bg-white dark:bg-[#1E1F20] hover:bg-emerald-50 dark:hover:bg-emerald-950/40 border border-emerald-200/50 dark:border-emerald-800/40 transition-colors space-y-0.5"
+                            >
+                              <div class="flex items-center justify-between">
+                                <span class="font-bold text-sm text-slate-900 dark:text-white">{syn.hanzi}</span>
+                                {#if syn.pinyin}
+                                  <span class="text-xs text-rose-600 dark:text-rose-400 font-semibold">[{syn.pinyin}]</span>
+                                {/if}
+                              </div>
+                              <div class="flex items-center justify-between text-xs text-slate-500 dark:text-[#8E918F]">
+                                {#if syn.hanViet}
+                                  <span class="font-bold uppercase text-[10px] bg-slate-100 dark:bg-[#282A2C] px-1.5 py-0.2 rounded">{syn.hanViet}</span>
+                                {/if}
+                                {#if syn.viet}
+                                  <span class="truncate ml-1">{syn.viet}</span>
+                                {/if}
+                              </div>
+                            </button>
+                          {/if}
+                        {/each}
+                      </div>
+                    </div>
+                  {/if}
+
+                  <!-- Từ trái nghĩa -->
+                  {#if currentWord.antonyms && currentWord.antonyms.length > 0}
+                    <div class="p-3.5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/40 space-y-2">
+                      <h4 class="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 flex items-center gap-1.5">
+                        <ArrowsLeftRight weight="bold" class="w-4 h-4 text-amber-500" />
+                        Từ trái nghĩa
+                      </h4>
+                      <div class="space-y-1.5">
+                        {#each currentWord.antonyms as ant}
+                          {#if typeof ant === 'string'}
+                            <button
+                              onclick={() => { searchQuery = ant; }}
+                              class="w-full text-left p-2 rounded-xl bg-white dark:bg-[#1E1F20] hover:bg-amber-50 dark:hover:bg-amber-950/40 border border-amber-200/50 dark:border-amber-800/40 transition-colors flex items-center justify-between"
+                            >
+                              <span class="font-bold text-sm text-slate-800 dark:text-white">{ant}</span>
+                            </button>
+                          {:else}
+                            <button
+                              onclick={() => { searchQuery = ant.hanzi; }}
+                              class="w-full text-left p-2.5 rounded-xl bg-white dark:bg-[#1E1F20] hover:bg-amber-50 dark:hover:bg-amber-950/40 border border-amber-200/50 dark:border-amber-800/40 transition-colors space-y-0.5"
+                            >
+                              <div class="flex items-center justify-between">
+                                <span class="font-bold text-sm text-slate-900 dark:text-white">{ant.hanzi}</span>
+                                {#if ant.pinyin}
+                                  <span class="text-xs text-rose-600 dark:text-rose-400 font-semibold">[{ant.pinyin}]</span>
+                                {/if}
+                              </div>
+                              <div class="flex items-center justify-between text-xs text-slate-500 dark:text-[#8E918F]">
+                                {#if ant.hanViet}
+                                  <span class="font-bold uppercase text-[10px] bg-slate-100 dark:bg-[#282A2C] px-1.5 py-0.2 rounded">{ant.hanViet}</span>
+                                {/if}
+                                {#if ant.viet}
+                                  <span class="truncate ml-1">{ant.viet}</span>
+                                {/if}
+                              </div>
+                            </button>
+                          {/if}
+                        {/each}
+                      </div>
+                    </div>
+                  {/if}
+                </div>
+              {/if}
+
+              <!-- KHỐI PHÂN BIỆT TỪ (E.G. 对不起 VS 道歉) CHUẨN HANZII -->
+              {#if currentWord.confusableWords}
+                <div class="p-4 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-200/60 dark:border-indigo-900/50 space-y-2">
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-indigo-700 dark:text-indigo-400 flex items-center gap-2">
+                    <Scales weight="duotone" class="w-4 h-4 text-indigo-500" />
+                    <span>Phân biệt từ: </span>
+                    <span class="px-2 py-0.5 rounded-md bg-indigo-100 dark:bg-indigo-900/60 text-indigo-800 dark:text-indigo-200 font-black">
+                      {typeof currentWord.confusableWords === 'string' ? currentWord.confusableWords : currentWord.confusableWords.pair}
+                    </span>
+                  </h4>
+                  <p class="text-xs md:text-sm text-slate-700 dark:text-[#C4C7C5] leading-relaxed">
+                    {typeof currentWord.confusableWords === 'string'
+                      ? `So sánh cách dùng cụ thể trong ngữ cảnh: ${currentWord.confusableWords}.`
+                      : currentWord.confusableWords.explanation}
                   </p>
                 </div>
               {/if}
@@ -455,9 +613,12 @@
                       </h4>
                       <div class="flex flex-wrap gap-1.5">
                         {#each currentWord.compounds as cp}
-                          <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200/40 dark:border-blue-900/40">
+                          <button
+                            onclick={() => { searchQuery = cp; }}
+                            class="px-2.5 py-1 rounded-lg text-xs font-bold bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 text-blue-700 dark:text-blue-300 border border-blue-200/40 dark:border-blue-900/40 transition-colors"
+                          >
                             {cp}
-                          </span>
+                          </button>
                         {/each}
                       </div>
                     </div>
@@ -480,6 +641,77 @@
                   {/if}
                 </div>
               {/if}
+            </div>
+          </div>
+        {/if}
+
+        <!-- KHI CHỌN TAB 'characters', HIỂN THỊ BẢNG BÓC TÁCH TỪNG CHỮ HÁN TẠI CỘT 1 (KHÔNG BỊ TRỐNG TRƠN) -->
+        {#if activeTab === 'characters'}
+          <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-[#37393B] shadow-xs space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#282A2C] pb-4">
+              <div class="space-y-1">
+                <h3 class="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
+                  <PencilLine weight="bold" class="w-5 h-5 text-rose-500" />
+                  Bóc tách chi tiết từng chữ Hán ({currentWord.hanzi})
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-[#8E918F]">
+                  Phân tích cấu tạo, Lục thư, Bộ thủ và nét bút của từng ký tự tạo nên từ vựng này
+                </p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+              {#each Array.from(currentWord.hanzi) as char}
+                {@const detail = getCharacterDetail(char)}
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#282A2C] border border-slate-200 dark:border-[#37393B] space-y-3">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <span class="text-3xl font-black text-slate-900 dark:text-white">
+                        {char}
+                      </span>
+                      <div>
+                        <span class="font-bold text-rose-600 dark:text-rose-400 text-sm">
+                          [{detail.pinyin}]
+                        </span>
+                        <div class="text-[11px] font-bold text-slate-500 dark:text-[#8E918F] uppercase">
+                          Bộ {detail.radical} ({detail.radicalNameVi})
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="text-right">
+                      <span class="px-2 py-0.5 rounded-lg bg-white dark:bg-[#1E1F20] border border-slate-200 dark:border-[#37393B] text-xs font-bold text-slate-700 dark:text-[#C4C7C5]">
+                        {detail.strokeCount} nét
+                      </span>
+                      <div class="text-[10px] text-slate-400 dark:text-[#8E918F] mt-1 font-semibold">
+                        {detail.structureName} ({detail.structureIcon})
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs pt-2 border-t border-slate-200/60 dark:border-[#37393B]">
+                    <div>
+                      <span class="text-slate-400 dark:text-[#8E918F] block text-[10px]">Lục thư:</span>
+                      <span class="font-bold text-slate-700 dark:text-[#E3E3E3] capitalize">{detail.liuShu}</span>
+                    </div>
+                    <div>
+                      <span class="text-slate-400 dark:text-[#8E918F] block text-[10px]">Thành phần:</span>
+                      <span class="font-bold text-slate-700 dark:text-[#E3E3E3]">{detail.components || char}</span>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                      <span class="text-slate-400 dark:text-[#8E918F] block text-[10px]">Trật tự nét:</span>
+                      <span class="font-bold text-rose-600 dark:text-rose-400 tracking-wider font-mono text-[11px] truncate block">{detail.strokeSymbols}</span>
+                    </div>
+                  </div>
+
+                  {#if detail.etymology}
+                    <div class="text-xs bg-white dark:bg-[#1E1F20] p-2.5 rounded-xl border border-slate-200/50 dark:border-[#37393B] text-slate-600 dark:text-[#C4C7C5]">
+                      <span class="font-bold text-slate-700 dark:text-white mr-1">Ý nghĩa cấu thành:</span>
+                      {detail.etymology}
+                    </div>
+                  {/if}
+                </div>
+              {/each}
             </div>
           </div>
         {/if}

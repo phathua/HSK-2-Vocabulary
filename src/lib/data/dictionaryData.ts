@@ -6,6 +6,29 @@ export interface DictSentence {
   tag?: string;
 }
 
+export interface DictRelatedWord {
+  hanzi: string;
+  pinyin?: string;
+  hanViet?: string;
+  viet?: string;
+}
+
+export interface DictConfusable {
+  pair: string;
+  explanation: string;
+}
+
+export interface DictSubDefinition {
+  order: number;
+  definition: string;
+  explanation?: string;
+  example?: {
+    zh: string;
+    pinyin?: string;
+    vi: string;
+  };
+}
+
 export interface DictWord {
   id: string;
   hanzi: string;
@@ -23,8 +46,10 @@ export interface DictWord {
   image: string;
   collocations: string[];
   compounds: string[];
-  synonyms: string[];
-  antonyms: string[];
+  synonyms: Array<DictRelatedWord | string>;
+  antonyms: Array<DictRelatedWord | string>;
+  confusableWords?: DictConfusable | string;
+  subDefinitions?: DictSubDefinition[];
   sentences: DictSentence[];
 }
 
@@ -35,7 +60,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "你",
     "pinyin": "nǐ",
     "pinyinClean": "n",
-    "hanViet": "",
+    "hanViet": "NỄ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -50,16 +75,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "你好！",
-            "pinyin": "Nǐ hǎo!",
-            "vi": "Chào bạn!",
-            "tag": "Chào hỏi"
+        "zh": "你好！",
+        "pinyin": "Nǐ hǎo!",
+        "vi": "Chào bạn!",
+        "tag": "Chào hỏi"
       },
       {
-            "zh": "很高兴认识你。",
-            "pinyin": "Hěn gāoxìng rènshi nǐ.",
-            "vi": "Rất vui được quen biết bạn.",
-            "tag": "Làm quen"
+        "zh": "很高兴认识你。",
+        "pinyin": "Hěn gāoxìng rènshi nǐ.",
+        "vi": "Rất vui được quen biết bạn.",
+        "tag": "Làm quen"
       }
     ]
   },
@@ -69,7 +94,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "好",
     "pinyin": "hǎo",
     "pinyinClean": "ho",
-    "hanViet": "",
+    "hanViet": "HẢO",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -84,16 +109,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "你好吗？我很好。",
-            "pinyin": "Nǐ hǎo ma? Wǒ hěn hǎo.",
-            "vi": "Bạn khỏe không? Tôi rất khỏe.",
-            "tag": "Hỏi thăm"
+        "zh": "你好吗？我很好。",
+        "pinyin": "Nǐ hǎo ma? Wǒ hěn hǎo.",
+        "vi": "Bạn khỏe không? Tôi rất khỏe.",
+        "tag": "Hỏi thăm"
       },
       {
-            "zh": "这个电影很好看。",
-            "pinyin": "Zhège diànyǐng hěn hǎokàn.",
-            "vi": "Bộ phim này rất hay.",
-            "tag": "Đánh giá"
+        "zh": "这个电影很好看。",
+        "pinyin": "Zhège diànyǐng hěn hǎokàn.",
+        "vi": "Bộ phim này rất hay.",
+        "tag": "Đánh giá"
       }
     ]
   },
@@ -103,7 +128,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "您",
     "pinyin": "nín",
     "pinyinClean": "nn",
-    "hanViet": "",
+    "hanViet": "NÂM",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -118,16 +143,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "老师，您好！",
-            "pinyin": "Lǎoshī, nín hǎo!",
-            "vi": "Thầy/Cô, chào thầy/cô ạ!",
-            "tag": "Kính ngữ"
+        "zh": "老师，您好！",
+        "pinyin": "Lǎoshī, nín hǎo!",
+        "vi": "Thầy/Cô, chào thầy/cô ạ!",
+        "tag": "Kính ngữ"
       },
       {
-            "zh": "您请坐。",
-            "pinyin": "Nín qǐng zuò.",
-            "vi": "Mời ngài ngồi.",
-            "tag": "Lịch sự"
+        "zh": "您请坐。",
+        "pinyin": "Nín qǐng zuò.",
+        "vi": "Mời ngài ngồi.",
+        "tag": "Lịch sự"
       }
     ]
   },
@@ -137,7 +162,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "你们",
     "pinyin": "nǐmen",
     "pinyinClean": "nmen",
-    "hanViet": "",
+    "hanViet": "NỄ MÔN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -152,16 +177,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "你们都是学生吗？",
-            "pinyin": "Nǐmen dōu shì xuésheng ma?",
-            "vi": "Các bạn đều là học sinh phải không?",
-            "tag": "Hỏi thông tin"
+        "zh": "你们都是学生吗？",
+        "pinyin": "Nǐmen dōu shì xuésheng ma?",
+        "vi": "Các bạn đều là học sinh phải không?",
+        "tag": "Hỏi thông tin"
       },
       {
-            "zh": "欢迎你们来到北京！",
-            "pinyin": "Huānyíng nǐmen lái dào Běijīng!",
-            "vi": "Chào mừng các bạn đến Bắc Kinh!",
-            "tag": "Chào đón"
+        "zh": "欢迎你们来到北京！",
+        "pinyin": "Huānyíng nǐmen lái dào Běijīng!",
+        "vi": "Chào mừng các bạn đến Bắc Kinh!",
+        "tag": "Chào đón"
       }
     ]
   },
@@ -171,7 +196,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "对不起",
     "pinyin": "duìbuqǐ",
     "pinyinClean": "dubuq",
-    "hanViet": "",
+    "hanViet": "ĐỐI BẤT KHỞI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -182,20 +207,72 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/771324/pexels-photo-771324.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": [
+    "synonyms": [
       {
-            "zh": "对不起，我来晚了。",
-            "pinyin": "Duìbuqǐ, wǒ lái wǎn le.",
-            "vi": "Xin lỗi, tôi đến muộn rồi.",
-            "tag": "Xin lỗi"
+        "hanzi": "道歉",
+        "pinyin": "dàoqiàn",
+        "hanViet": "ĐẠO KHIẾM",
+        "viet": "xin lỗi, tạ lỗi"
       },
       {
-            "zh": "对不起，我不知道。",
-            "pinyin": "Duìbuqǐ, wǒ bù zhīdào.",
-            "vi": "Xin lỗi, tôi không biết.",
-            "tag": "Giao tiếp"
+        "hanzi": "对不住",
+        "pinyin": "duìbuzhù",
+        "hanViet": "ĐỐI BẤT TRÚ",
+        "viet": "có lỗi với, có lỗi"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "感谢",
+        "pinyin": "gǎnxiè",
+        "hanViet": "CẢM TẠ",
+        "viet": "cảm tạ, biết ơn"
+      },
+      {
+        "hanzi": "对得起",
+        "pinyin": "duìdeqǐ",
+        "hanViet": "ĐỐI ĐẮC KHỞI",
+        "viet": "xứng đáng, không phụ lòng"
+      }
+    ],
+    "sentences": [
+      {
+        "zh": "对不起，我来晚了。",
+        "pinyin": "Duìbuqǐ, wǒ lái wǎn le.",
+        "vi": "Xin lỗi, tôi đến muộn rồi.",
+        "tag": "Xin lỗi"
+      },
+      {
+        "zh": "对不起，我不知道。",
+        "pinyin": "Duìbuqǐ, wǒ bù zhīdào.",
+        "vi": "Xin lỗi, tôi không biết.",
+        "tag": "Giao tiếp"
+      }
+    ],
+    "confusableWords": {
+      "pair": "对不起 vs 道歉",
+      "explanation": "‘对不起’ là kết cấu bổ ngữ khả năng, dùng như khẩu ngữ trực tiếp nói lời xin lỗi với người khác (có thể đi kèm tân ngữ hoặc đứng độc lập). ‘道歉’ là kết cấu động tân (động từ ly hợp), chỉ hành động tạ lỗi, thường dùng trong câu trần thuật (như 向某人道歉 - xin lỗi ai đó) chứ không dùng để gọi trực tiếp người đối diện."
+    },
+    "subDefinitions": [
+      {
+        "order": 1,
+        "definition": "Xin lỗi",
+        "explanation": "Dùng để biểu thị sự áy náy, nhận lỗi hoặc lịch sự khi làm phiền người khác.",
+        "example": {
+          "zh": "对不起，让您久等了。",
+          "pinyin": "Duìbuqǐ, ràng nín jiǔ děng le.",
+          "vi": "Xin lỗi, phiền ông/bà phải đợi lâu."
+        }
+      },
+      {
+        "order": 2,
+        "definition": "Có lỗi với, có lỗi",
+        "explanation": "Biểu thị hành vi sai trái làm tổn thương hoặc phụ lòng ai đó.",
+        "example": {
+          "zh": "我对不起我的父母。",
+          "pinyin": "Wǒ duìbuqǐ wǒ de fùmǔ.",
+          "vi": "Tôi có lỗi với bố mẹ mình."
+        }
       }
     ]
   },
@@ -205,7 +282,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "没关系",
     "pinyin": "méi guānxi",
     "pinyinClean": "mi gunxi",
-    "hanViet": "",
+    "hanViet": "MỘT QUAN HỆ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -220,16 +297,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "A: 对不起！B: 没关系。",
-            "pinyin": "A: Duìbuqǐ! B: Méi guānxi.",
-            "vi": "A: Xin lỗi! B: Không sao đâu.",
-            "tag": "Hồi đáp"
+        "zh": "A: 对不起！B: 没关系。",
+        "pinyin": "A: Duìbuqǐ! B: Méi guānxi.",
+        "vi": "A: Xin lỗi! B: Không sao đâu.",
+        "tag": "Hồi đáp"
       },
       {
-            "zh": "没关系，下次注意就好。",
-            "pinyin": "Méi guānxi, xià cì zhùyì jiù hǎo.",
-            "vi": "Không có gì, lần sau chú ý là được.",
-            "tag": "An ủi"
+        "zh": "没关系，下次注意就好。",
+        "pinyin": "Méi guānxi, xià cì zhùyì jiù hǎo.",
+        "vi": "Không có gì, lần sau chú ý là được.",
+        "tag": "An ủi"
       }
     ]
   },
@@ -239,7 +316,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "谢谢",
     "pinyin": "xièxie",
     "pinyinClean": "xixie",
-    "hanViet": "",
+    "hanViet": "TẠ TẠ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -250,20 +327,50 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/6287933/pexels-photo-6287933.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
+    "synonyms": [
+      {
+        "hanzi": "感谢",
+        "pinyin": "gǎnxiè",
+        "hanViet": "CẢM TẠ",
+        "viet": "cảm kích, cảm tạ"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "批评",
+        "pinyin": "pīpíng",
+        "hanViet": "PHÊ BÌNH",
+        "viet": "phê bình, trách mắng"
+      }
+    ],
     "sentences": [
       {
-            "zh": "太谢谢你了！",
-            "pinyin": "Tài xièxie nǐ le!",
-            "vi": "Cảm ơn bạn nhiều lắm!",
-            "tag": "Cảm ơn"
+        "zh": "太谢谢你了！",
+        "pinyin": "Tài xièxie nǐ le!",
+        "vi": "Cảm ơn bạn nhiều lắm!",
+        "tag": "Cảm ơn"
       },
       {
-            "zh": "谢谢你的帮助。",
-            "pinyin": "Xièxie nǐ de bāngzhù.",
-            "vi": "Cảm ơn sự giúp đỡ của bạn.",
-            "tag": "Biết ơn"
+        "zh": "谢谢你的帮助。",
+        "pinyin": "Xièxie nǐ de bāngzhù.",
+        "vi": "Cảm ơn sự giúp đỡ của bạn.",
+        "tag": "Biết ơn"
+      }
+    ],
+    "confusableWords": {
+      "pair": "谢谢 vs 感谢",
+      "explanation": "‘谢谢’ mang tính khẩu ngữ, giao tiếp thường ngày tự nhiên và gần gũi. ‘感谢’ mang tính văn viết, trang trọng và mức độ cảm kích sâu sắc hơn."
+    },
+    "subDefinitions": [
+      {
+        "order": 1,
+        "definition": "Cảm ơn",
+        "explanation": "Dùng để tỏ lòng biết ơn khi nhận được sự giúp đỡ, quà tặng hoặc lời khen ngợi.",
+        "example": {
+          "zh": "太谢谢你了！",
+          "pinyin": "Tài xièxie nǐ le!",
+          "vi": "Vô cùng cảm ơn bạn!"
+        }
       }
     ]
   },
@@ -310,7 +417,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Hôm nay thời tiết không tốt.",
         "tag": "Thời tiết"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "不 vs 没",
+      "explanation": "So sánh cách dùng và phân biệt giữa các từ dễ nhầm lẫn trong ngữ cảnh HSK: 不 vs 没."
+    }
   },
   {
     "id": "hsk1-2-3",
@@ -318,7 +429,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "不客氣",
     "pinyin": "bú kèqi",
     "pinyinClean": "bu keqi",
-    "hanViet": "Bất khách khí",
+    "hanViet": "BẤT KHÁCH KHÍ",
     "radical": "一",
     "strokeCount": 13,
     "hskLevel": 1,
@@ -334,7 +445,12 @@ export const DICTIONARY_WORDS: DictWord[] = [
       "别客气"
     ],
     "synonyms": [
-      "不用谢"
+      {
+        "hanzi": "不用谢",
+        "pinyin": "bú yòng xiè",
+        "hanViet": "BẤT DỤNG TẠ",
+        "viet": "không cần cảm ơn"
+      }
     ],
     "antonyms": [],
     "sentences": [
@@ -350,7 +466,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Giữa bạn bè với nhau không cần phải khách khí.",
         "tag": "Giao tiếp"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "不客气 vs 不用谢",
+      "explanation": "Cả hai đều đáp lại lời cảm ơn. ‘不客气’ thể hiện sự lịch thiệp, tôn trọng người nghe. ‘不用谢’ mang tính giản dị, thân mật giữa bạn bè."
+    }
   },
   {
     "id": "hsk1-2-4",
@@ -358,7 +478,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "再见",
     "pinyin": "zàijiàn",
     "pinyinClean": "zijin",
-    "hanViet": "",
+    "hanViet": "TÁI KIẾN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -373,16 +493,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "明天见，再见！",
-            "pinyin": "Míngtiān jiàn, zàijiàn!",
-            "vi": "Ngày mai gặp nhé, tạm biệt!",
-            "tag": "Tạm biệt"
+        "zh": "明天见，再见！",
+        "pinyin": "Míngtiān jiàn, zàijiàn!",
+        "vi": "Ngày mai gặp nhé, tạm biệt!",
+        "tag": "Tạm biệt"
       },
       {
-            "zh": "老师再见！",
-            "pinyin": "Lǎoshī zàijiàn!",
-            "vi": "Tạm biệt thầy/cô ạ!",
-            "tag": "Tạm biệt"
+        "zh": "老师再见！",
+        "pinyin": "Lǎoshī zàijiàn!",
+        "vi": "Tạm biệt thầy/cô ạ!",
+        "tag": "Tạm biệt"
       }
     ]
   },
@@ -392,7 +512,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "叫",
     "pinyin": "jiào",
     "pinyinClean": "jio",
-    "hanViet": "",
+    "hanViet": "KHIẾU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -407,16 +527,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "你叫什么名字？",
-            "pinyin": "Nǐ jiào shénme míngzi?",
-            "vi": "Bạn tên là gì?",
-            "tag": "Hỏi tên"
+        "zh": "你叫什么名字？",
+        "pinyin": "Nǐ jiào shénme míngzi?",
+        "vi": "Bạn tên là gì?",
+        "tag": "Hỏi tên"
       },
       {
-            "zh": "我叫李明。",
-            "pinyin": "Wǒ jiào Lǐ Míng.",
-            "vi": "Tôi tên là Lý Minh.",
-            "tag": "Giới thiệu"
+        "zh": "我叫李明。",
+        "pinyin": "Wǒ jiào Lǐ Míng.",
+        "vi": "Tôi tên là Lý Minh.",
+        "tag": "Giới thiệu"
       }
     ]
   },
@@ -426,7 +546,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "什么",
     "pinyin": "shénme",
     "pinyinClean": "shnme",
-    "hanViet": "",
+    "hanViet": "THẬM YÊU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -441,16 +561,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "这是什么东西？",
-            "pinyin": "Zhè shì shénme dōngxi?",
-            "vi": "Đây là đồ vật gì vậy?",
-            "tag": "Hỏi đồ vật"
+        "zh": "这是什么东西？",
+        "pinyin": "Zhè shì shénme dōngxi?",
+        "vi": "Đây là đồ vật gì vậy?",
+        "tag": "Hỏi đồ vật"
       },
       {
-            "zh": "你想吃什么？",
-            "pinyin": "Nǐ xiǎng chī shénme?",
-            "vi": "Bạn muốn ăn món gì?",
-            "tag": "Hỏi ý kiến"
+        "zh": "你想吃什么？",
+        "pinyin": "Nǐ xiǎng chī shénme?",
+        "vi": "Bạn muốn ăn món gì?",
+        "tag": "Hỏi ý kiến"
       }
     ]
   },
@@ -460,7 +580,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "名字",
     "pinyin": "míngzi",
     "pinyinClean": "mngzi",
-    "hanViet": "",
+    "hanViet": "DANH TỰ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -475,16 +595,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "请问您的大名？",
-            "pinyin": "Qǐngwèn nín de dàmíng?",
-            "vi": "Xin hỏi quý danh của ngài?",
-            "tag": "Kính ngữ"
+        "zh": "请问您的大名？",
+        "pinyin": "Qǐngwèn nín de dàmíng?",
+        "vi": "Xin hỏi quý danh của ngài?",
+        "tag": "Kính ngữ"
       },
       {
-            "zh": "我的名字叫大卫。",
-            "pinyin": "Wǒ de míngzi jiào Dàwèi.",
-            "vi": "Tên của tôi là David.",
-            "tag": "Giới thiệu"
+        "zh": "我的名字叫大卫。",
+        "pinyin": "Wǒ de míngzi jiào Dàwèi.",
+        "vi": "Tên của tôi là David.",
+        "tag": "Giới thiệu"
       }
     ]
   },
@@ -494,7 +614,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "我",
     "pinyin": "wǒ",
     "pinyinClean": "w",
-    "hanViet": "",
+    "hanViet": "NGÃ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -509,16 +629,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "我是越南人。",
-            "pinyin": "Wǒ shì Yuènán rén.",
-            "vi": "Tôi là người Việt Nam.",
-            "tag": "Quốc tịch"
+        "zh": "我是越南人。",
+        "pinyin": "Wǒ shì Yuènán rén.",
+        "vi": "Tôi là người Việt Nam.",
+        "tag": "Quốc tịch"
       },
       {
-            "zh": "我想学汉语。",
-            "pinyin": "Wǒ xiǎng xué Hànyǔ.",
-            "vi": "Tôi muốn học tiếng Trung.",
-            "tag": "Mong muốn"
+        "zh": "我想学汉语。",
+        "pinyin": "Wǒ xiǎng xué Hànyǔ.",
+        "vi": "Tôi muốn học tiếng Trung.",
+        "tag": "Mong muốn"
       }
     ]
   },
@@ -528,7 +648,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "是",
     "pinyin": "shì",
     "pinyinClean": "sh",
-    "hanViet": "",
+    "hanViet": "THỊ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -543,16 +663,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "她是我的汉语老师。",
-            "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī.",
-            "vi": "Cô ấy là giáo viên tiếng Trung của tôi.",
-            "tag": "Quan hệ"
+        "zh": "她是我的汉语老师。",
+        "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī.",
+        "vi": "Cô ấy là giáo viên tiếng Trung của tôi.",
+        "tag": "Quan hệ"
       },
       {
-            "zh": "今天不是星期天。",
-            "pinyin": "Jīntiān bú shì xīngqītiān.",
-            "vi": "Hôm nay không phải chủ nhật.",
-            "tag": "Thời gian"
+        "zh": "今天不是星期天。",
+        "pinyin": "Jīntiān bú shì xīngqītiān.",
+        "vi": "Hôm nay không phải chủ nhật.",
+        "tag": "Thời gian"
       }
     ]
   },
@@ -562,7 +682,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "老师",
     "pinyin": "lǎoshī",
     "pinyinClean": "losh",
-    "hanViet": "",
+    "hanViet": "LÃO SƯ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -577,16 +697,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "王老师教我们汉语。",
-            "pinyin": "Wáng lǎoshī jiāo wǒmen Hànyǔ.",
-            "vi": "Thầy Vương dạy chúng tôi tiếng Trung.",
-            "tag": "Học tập"
+        "zh": "王老师教我们汉语。",
+        "pinyin": "Wáng lǎoshī jiāo wǒmen Hànyǔ.",
+        "vi": "Thầy Vương dạy chúng tôi tiếng Trung.",
+        "tag": "Học tập"
       },
       {
-            "zh": "老师辛苦了！",
-            "pinyin": "Lǎoshī xīnkǔ le!",
-            "vi": "Thầy/cô vất vả rồi ạ!",
-            "tag": "Tri ân"
+        "zh": "老师辛苦了！",
+        "pinyin": "Lǎoshī xīnkǔ le!",
+        "vi": "Thầy/cô vất vả rồi ạ!",
+        "tag": "Tri ân"
       }
     ]
   },
@@ -596,7 +716,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "吗",
     "pinyin": "ma",
     "pinyinClean": "ma",
-    "hanViet": "",
+    "hanViet": "MA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -617,7 +737,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "学生",
     "pinyin": "xuésheng",
     "pinyinClean": "xusheng",
-    "hanViet": "",
+    "hanViet": "HỌC SINH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -632,16 +752,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "他们都是大学学生。",
-            "pinyin": "Tāmen dōu shì dàxué xuésheng.",
-            "vi": "Họ đều là sinh viên đại học.",
-            "tag": "Thân phận"
+        "zh": "他们都是大学学生。",
+        "pinyin": "Tāmen dōu shì dàxué xuésheng.",
+        "vi": "Họ đều là sinh viên đại học.",
+        "tag": "Thân phận"
       },
       {
-            "zh": "学校里有很多新学生。",
-            "pinyin": "Xuéxiào lǐ yǒu hěn duō xīn xuésheng.",
-            "vi": "Trong trường có rất nhiều học sinh mới.",
-            "tag": "Trường học"
+        "zh": "学校里有很多新学生。",
+        "pinyin": "Xuéxiào lǐ yǒu hěn duō xīn xuésheng.",
+        "vi": "Trong trường có rất nhiều học sinh mới.",
+        "tag": "Trường học"
       }
     ]
   },
@@ -651,7 +771,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "人",
     "pinyin": "rén",
     "pinyinClean": "rn",
-    "hanViet": "",
+    "hanViet": "NHÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -666,16 +786,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "北京的人很多。",
-            "pinyin": "Běijīng de rén hěn duō.",
-            "vi": "Người ở Bắc Kinh rất đông.",
-            "tag": "Miêu tả"
+        "zh": "北京的人很多。",
+        "pinyin": "Běijīng de rén hěn duō.",
+        "vi": "Người ở Bắc Kinh rất đông.",
+        "tag": "Miêu tả"
       },
       {
-            "zh": "他是哪国人？",
-            "pinyin": "Tā shì nǎ guó rén?",
-            "vi": "Anh ấy là người nước nào?",
-            "tag": "Hỏi han"
+        "zh": "他是哪国人？",
+        "pinyin": "Tā shì nǎ guó rén?",
+        "vi": "Anh ấy là người nước nào?",
+        "tag": "Hỏi han"
       }
     ]
   },
@@ -685,7 +805,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "她",
     "pinyin": "tā",
     "pinyinClean": "t",
-    "hanViet": "",
+    "hanViet": "THA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -700,16 +820,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "她今天很高兴。",
-            "pinyin": "Tā jīntiān hěn gāoxìng.",
-            "vi": "Hôm nay cô ấy rất vui vẻ.",
-            "tag": "Tâm trạng"
+        "zh": "她今天很高兴。",
+        "pinyin": "Tā jīntiān hěn gāoxìng.",
+        "vi": "Hôm nay cô ấy rất vui vẻ.",
+        "tag": "Tâm trạng"
       },
       {
-            "zh": "她是我姐姐。",
-            "pinyin": "Tā shì wǒ jiějie.",
-            "vi": "Cô ấy là chị gái của tôi.",
-            "tag": "Gia đình"
+        "zh": "她是我姐姐。",
+        "pinyin": "Tā shì wǒ jiějie.",
+        "vi": "Cô ấy là chị gái của tôi.",
+        "tag": "Gia đình"
       }
     ]
   },
@@ -719,7 +839,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "谁",
     "pinyin": "shéi",
     "pinyinClean": "shi",
-    "hanViet": "",
+    "hanViet": "THUỲ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -781,7 +901,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "汉语",
     "pinyin": "Hànyǔ",
     "pinyinClean": "hny",
-    "hanViet": "",
+    "hanViet": "HÁN NGỮ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -802,7 +922,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "哪",
     "pinyin": "nǎ",
     "pinyinClean": "n",
-    "hanViet": "",
+    "hanViet": "NẢ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -823,7 +943,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "国",
     "pinyin": "guó",
     "pinyinClean": "gu",
-    "hanViet": "",
+    "hanViet": "QUỐC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -844,7 +964,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "呢",
     "pinyin": "ne",
     "pinyinClean": "ne",
-    "hanViet": "",
+    "hanViet": "NI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -865,7 +985,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "他",
     "pinyin": "tā",
     "pinyinClean": "t",
-    "hanViet": "",
+    "hanViet": "THA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -880,16 +1000,16 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "antonyms": [],
     "sentences": [
       {
-            "zh": "他每天都在公司工作。",
-            "pinyin": "Tā měitiān dōu zài gōngsī gōngzuò.",
-            "vi": "Anh ấy mỗi ngày đều làm việc ở công ty.",
-            "tag": "Công việc"
+        "zh": "他每天都在公司工作。",
+        "pinyin": "Tā měitiān dōu zài gōngsī gōngzuò.",
+        "vi": "Anh ấy mỗi ngày đều làm việc ở công ty.",
+        "tag": "Công việc"
       },
       {
-            "zh": "他是我的好朋友。",
-            "pinyin": "Tā shì wǒ de hǎo péngyou.",
-            "vi": "Anh ấy là bạn thân của tôi.",
-            "tag": "Bạn bè"
+        "zh": "他是我的好朋友。",
+        "pinyin": "Tā shì wǒ de hǎo péngyou.",
+        "vi": "Anh ấy là bạn thân của tôi.",
+        "tag": "Bạn bè"
       }
     ]
   },
@@ -899,7 +1019,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "同学",
     "pinyin": "tóngxué",
     "pinyinClean": "tngxu",
-    "hanViet": "",
+    "hanViet": "ĐỒNG HỌC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -920,7 +1040,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "朋友",
     "pinyin": "péngyou",
     "pinyinClean": "pngyou",
-    "hanViet": "",
+    "hanViet": "BẰNG HỮU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -941,7 +1061,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "家",
     "pinyin": "jiā",
     "pinyinClean": "ji",
-    "hanViet": "",
+    "hanViet": "GIA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -962,7 +1082,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "有",
     "pinyin": "yǒu",
     "pinyinClean": "yu",
-    "hanViet": "",
+    "hanViet": "HỮU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -983,7 +1103,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "口",
     "pinyin": "kǒu",
     "pinyinClean": "ku",
-    "hanViet": "",
+    "hanViet": "KHẨU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1004,7 +1124,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "女儿",
     "pinyin": "nǚ'ér",
     "pinyinClean": "nr",
-    "hanViet": "",
+    "hanViet": "NỮ NHÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1025,7 +1145,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "几",
     "pinyin": "jǐ",
     "pinyinClean": "j",
-    "hanViet": "",
+    "hanViet": "CƠ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1046,7 +1166,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "岁",
     "pinyin": "suì",
     "pinyinClean": "su",
-    "hanViet": "",
+    "hanViet": "TUẾ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1067,7 +1187,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "了",
     "pinyin": "le",
     "pinyinClean": "le",
-    "hanViet": "",
+    "hanViet": "LIỄU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1088,7 +1208,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "今年",
     "pinyin": "jīnnián",
     "pinyinClean": "jnnin",
-    "hanViet": "",
+    "hanViet": "KIM NIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1109,7 +1229,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "多",
     "pinyin": "duō",
     "pinyinClean": "du",
-    "hanViet": "",
+    "hanViet": "ĐA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1121,8 +1241,19 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "collocations": [],
     "compounds": [],
     "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "antonyms": [
+      {
+        "hanzi": "少",
+        "pinyin": "shǎo",
+        "hanViet": "THIỂU",
+        "viet": "ít"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "多 vs 少",
+      "explanation": "Cặp từ chỉ số lượng nhiều vs ít."
+    }
   },
   {
     "id": "hsk1-5-10",
@@ -1130,7 +1261,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "大",
     "pinyin": "dà",
     "pinyinClean": "da",
-    "hanViet": "Đại",
+    "hanViet": "ĐẠI",
     "radical": "大",
     "strokeCount": 3,
     "hskLevel": 1,
@@ -1149,10 +1280,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
       "大人"
     ],
     "synonyms": [
-      "巨"
+      {
+        "hanzi": "巨大",
+        "pinyin": "jùdà",
+        "hanViet": "CỰ ĐẠI",
+        "viet": "to lớn, khổng lồ"
+      }
     ],
     "antonyms": [
-      "小"
+      {
+        "hanzi": "小",
+        "pinyin": "xiǎo",
+        "hanViet": "TIỂU",
+        "viet": "nhỏ bé"
+      }
     ],
     "sentences": [
       {
@@ -1167,7 +1308,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Trường học cực kỳ to.",
         "tag": "Trường học"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "大 vs 小",
+      "explanation": "Cặp tính từ đối lập chỉ kích thước, diện tích hoặc tuổi tác."
+    }
   },
   {
     "id": "hsk1-6-1",
@@ -1175,7 +1320,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "会",
     "pinyin": "huì",
     "pinyinClean": "hu",
-    "hanViet": "",
+    "hanViet": "HỘI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1188,7 +1333,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [],
+    "confusableWords": {
+      "pair": "会 vs 能 vs 可以",
+      "explanation": "‘会’ biểu thị năng lực có được qua học tập, rèn luyện (biết bơi, biết tiếng Trung) hoặc sự việc sắp xảy ra. ‘能’ biểu thị năng lực tự nhiên, hoàn cảnh cho phép. ‘可以’ biểu thị sự cho phép hoặc mức độ tạm được."
+    }
   },
   {
     "id": "hsk1-6-2",
@@ -1196,7 +1345,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "说",
     "pinyin": "shuō",
     "pinyinClean": "shu",
-    "hanViet": "",
+    "hanViet": "THUYẾT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1217,7 +1366,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "妈妈",
     "pinyin": "māma",
     "pinyinClean": "mma",
-    "hanViet": "",
+    "hanViet": "MÁ MÁ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1279,7 +1428,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "很",
     "pinyin": "hěn",
     "pinyinClean": "hn",
-    "hanViet": "",
+    "hanViet": "NGẬN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1300,7 +1449,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "好吃",
     "pinyin": "hǎochī",
     "pinyinClean": "hoch",
-    "hanViet": "",
+    "hanViet": "HẢO CẬT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1321,7 +1470,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "做",
     "pinyin": "zuò",
     "pinyinClean": "zu",
-    "hanViet": "",
+    "hanViet": "TỐ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1342,7 +1491,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "写",
     "pinyin": "xiě",
     "pinyinClean": "xi",
-    "hanViet": "",
+    "hanViet": "TẢ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1363,7 +1512,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "汉字",
     "pinyin": "Hànzì",
     "pinyinClean": "hnz",
-    "hanViet": "",
+    "hanViet": "HÁN TỰ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1384,7 +1533,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "字",
     "pinyin": "zì",
     "pinyinClean": "z",
-    "hanViet": "",
+    "hanViet": "TỰ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1405,7 +1554,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "怎么",
     "pinyin": "zěnme",
     "pinyinClean": "znme",
-    "hanViet": "",
+    "hanViet": "CHẨM YÊU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1426,7 +1575,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "读",
     "pinyin": "dú",
     "pinyinClean": "d",
-    "hanViet": "",
+    "hanViet": "ĐẬU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1447,7 +1596,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "请",
     "pinyin": "qǐng",
     "pinyinClean": "qng",
-    "hanViet": "",
+    "hanViet": "THỈNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1468,7 +1617,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "问",
     "pinyin": "wèn",
     "pinyinClean": "wn",
-    "hanViet": "",
+    "hanViet": "VẤN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1489,7 +1638,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "今天",
     "pinyin": "jīntiān",
     "pinyinClean": "jntin",
-    "hanViet": "",
+    "hanViet": "KIM THIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1510,7 +1659,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "号",
     "pinyin": "hào",
     "pinyinClean": "ho",
-    "hanViet": "",
+    "hanViet": "GÀO",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1531,7 +1680,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "月",
     "pinyin": "yuè",
     "pinyinClean": "yu",
-    "hanViet": "",
+    "hanViet": "NGUYỆT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1552,7 +1701,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "星期",
     "pinyin": "xīngqī",
     "pinyinClean": "xngq",
-    "hanViet": "",
+    "hanViet": "TINH KỲ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1573,7 +1722,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "昨天",
     "pinyin": "zuótiān",
     "pinyinClean": "zutin",
-    "hanViet": "",
+    "hanViet": "TẠC THIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1594,7 +1743,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "明天",
     "pinyin": "míngtiān",
     "pinyinClean": "mngtin",
-    "hanViet": "",
+    "hanViet": "MINH THIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1615,7 +1764,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "去",
     "pinyin": "qù",
     "pinyinClean": "q",
-    "hanViet": "",
+    "hanViet": "KHỨ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1627,8 +1776,19 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "collocations": [],
     "compounds": [],
     "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "antonyms": [
+      {
+        "hanzi": "来",
+        "pinyin": "lái",
+        "hanViet": "LAI",
+        "viet": "đến"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "去 vs 来",
+      "explanation": "‘去’ là đi ra xa vị trí người nói, ‘来’ là đến gần vị trí người nói."
+    }
   },
   {
     "id": "hsk1-7-10",
@@ -1636,7 +1796,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "学校",
     "pinyin": "xuéxiào",
     "pinyinClean": "xuxio",
-    "hanViet": "",
+    "hanViet": "HỌC HIỆU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1657,7 +1817,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "看",
     "pinyin": "kàn",
     "pinyinClean": "kn",
-    "hanViet": "",
+    "hanViet": "KHÁN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1678,7 +1838,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "书",
     "pinyin": "shū",
     "pinyinClean": "sh",
-    "hanViet": "",
+    "hanViet": "THƯ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1699,7 +1859,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "想",
     "pinyin": "xiǎng",
     "pinyinClean": "xing",
-    "hanViet": "",
+    "hanViet": "TƯỞNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1710,9 +1870,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/36922121/pexels-photo-36922121.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
+    "synonyms": [
+      {
+        "hanzi": "要",
+        "pinyin": "yào",
+        "hanViet": "YẾU",
+        "viet": "muốn, cần"
+      }
+    ],
     "antonyms": [],
-    "sentences": []
+    "sentences": [],
+    "confusableWords": {
+      "pair": "想 vs 要",
+      "explanation": "‘想’ diễn tả ý muốn trong suy nghĩ (nguyện vọng, mong ước), mang tính nhẹ nhàng. ‘要’ mang tính quyết tâm cao hơn hoặc đòi hỏi thực hiện ngay."
+    }
   },
   {
     "id": "hsk1-8-2",
@@ -1720,7 +1891,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "喝",
     "pinyin": "hē",
     "pinyinClean": "h",
-    "hanViet": "",
+    "hanViet": "HÚP",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1823,7 +1994,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "米饭",
     "pinyin": "mǐfàn",
     "pinyinClean": "mfn",
-    "hanViet": "",
+    "hanViet": "MỄ PHẠN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1844,7 +2015,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "下午",
     "pinyin": "xiàwǔ",
     "pinyinClean": "xiw",
-    "hanViet": "",
+    "hanViet": "HẠ NGỌ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1865,7 +2036,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "商店",
     "pinyin": "shāngdiàn",
     "pinyinClean": "shngdin",
-    "hanViet": "",
+    "hanViet": "THƯƠNG ĐIẾM",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1886,7 +2057,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "买",
     "pinyin": "mǎi",
     "pinyinClean": "mi",
-    "hanViet": "",
+    "hanViet": "MÃI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1897,9 +2068,27 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/8743972/pexels-photo-8743972.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "synonyms": [
+      {
+        "hanzi": "购买",
+        "pinyin": "gòumǎi",
+        "hanViet": "CÂU MÃI",
+        "viet": "mua sắm"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "卖",
+        "pinyin": "mài",
+        "hanViet": "MẠI",
+        "viet": "bán"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "买 (mǎi) vs 卖 (mài)",
+      "explanation": "‘买’ là mua (thanh 3), ‘卖’ là bán (thanh 4). Dễ nhầm lẫn về thanh điệu và mặt chữ."
+    }
   },
   {
     "id": "hsk1-8-9",
@@ -1907,7 +2096,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "个",
     "pinyin": "gè",
     "pinyinClean": "g",
-    "hanViet": "",
+    "hanViet": "CÁ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1968,7 +2157,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "这",
     "pinyin": "zhè",
     "pinyinClean": "zh",
-    "hanViet": "",
+    "hanViet": "GIÁ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -1989,7 +2178,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "多少",
     "pinyin": "duōshao",
     "pinyinClean": "dushao",
-    "hanViet": "",
+    "hanViet": "ĐA THIỂU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2010,7 +2199,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "钱",
     "pinyin": "qián",
     "pinyinClean": "qin",
-    "hanViet": "",
+    "hanViet": "TIỀN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2031,7 +2220,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "块",
     "pinyin": "kuài",
     "pinyinClean": "kui",
-    "hanViet": "",
+    "hanViet": "KHỐI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2052,7 +2241,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "那",
     "pinyin": "nà",
     "pinyinClean": "n",
-    "hanViet": "",
+    "hanViet": "NA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2073,7 +2262,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "小",
     "pinyin": "xiǎo",
     "pinyinClean": "xio",
-    "hanViet": "",
+    "hanViet": "TIỂU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2084,9 +2273,27 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/15373305/pexels-photo-15373305.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "synonyms": [
+      {
+        "hanzi": "细小",
+        "pinyin": "xìxiǎo",
+        "hanViet": "TẾ TIỂU",
+        "viet": "nhỏ nhặt, bé nhỏ"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "大",
+        "pinyin": "dà",
+        "hanViet": "ĐẠI",
+        "viet": "to lớn"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "小 vs 大",
+      "explanation": "Cặp tính từ đối lập chỉ mức độ quy mô hoặc tuổi tác."
+    }
   },
   {
     "id": "hsk1-9-2",
@@ -2094,7 +2301,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "猫",
     "pinyin": "māo",
     "pinyinClean": "mo",
-    "hanViet": "",
+    "hanViet": "MIÊU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2115,7 +2322,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "在",
     "pinyin": "zài",
     "pinyinClean": "zi",
-    "hanViet": "",
+    "hanViet": "TẠI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2136,7 +2343,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "哪儿",
     "pinyin": "nǎr",
     "pinyinClean": "nr",
-    "hanViet": "",
+    "hanViet": "NẢ NHÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2157,7 +2364,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "狗",
     "pinyin": "gǒu",
     "pinyinClean": "gu",
-    "hanViet": "",
+    "hanViet": "CẨU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2178,7 +2385,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "椅子",
     "pinyin": "yǐzi",
     "pinyinClean": "yzi",
-    "hanViet": "",
+    "hanViet": "Ỷ TỬ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2199,7 +2406,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "下面",
     "pinyin": "xiàmiàn",
     "pinyinClean": "ximin",
-    "hanViet": "",
+    "hanViet": "HẠ DIỆN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2220,7 +2427,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "工作",
     "pinyin": "gōngzuò",
     "pinyinClean": "gngzu",
-    "hanViet": "",
+    "hanViet": "CÔNG TÁC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2241,7 +2448,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "儿子",
     "pinyin": "érzi",
     "pinyinClean": "rzi",
-    "hanViet": "",
+    "hanViet": "NHÂN TỬ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2262,7 +2469,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "医院",
     "pinyin": "yīyuàn",
     "pinyinClean": "yyun",
-    "hanViet": "",
+    "hanViet": "Y VIỆN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2283,7 +2490,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "医生",
     "pinyin": "yīshēng",
     "pinyinClean": "yshng",
-    "hanViet": "",
+    "hanViet": "Y SINH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2340,7 +2547,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Bố đi làm rồi.",
         "tag": "Sinh hoạt"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "爸爸 vs 父亲",
+      "explanation": "So sánh cách dùng và phân biệt giữa các từ dễ nhầm lẫn trong ngữ cảnh HSK: 爸爸 vs 父亲."
+    }
   },
   {
     "id": "hsk1-10-1",
@@ -2348,7 +2559,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "桌子",
     "pinyin": "zhuōzi",
     "pinyinClean": "zhuzi",
-    "hanViet": "",
+    "hanViet": "TRÁC TỬ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2369,7 +2580,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "上",
     "pinyin": "shàng",
     "pinyinClean": "shng",
-    "hanViet": "",
+    "hanViet": "THƯỚNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2430,7 +2641,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "和",
     "pinyin": "hé",
     "pinyinClean": "h",
-    "hanViet": "",
+    "hanViet": "HOÀ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2485,7 +2696,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Xin hãy mua 1 cuốn từ điển.",
         "tag": "Mua sắm"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "本 vs 册",
+      "explanation": "So sánh cách dùng và phân biệt giữa các từ dễ nhầm lẫn trong ngữ cảnh HSK: 本 vs 册."
+    }
   },
   {
     "id": "hsk1-10-6",
@@ -2493,7 +2708,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "里",
     "pinyin": "lǐ",
     "pinyinClean": "l",
-    "hanViet": "",
+    "hanViet": "LÝ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2514,7 +2729,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "前面",
     "pinyin": "qiánmiàn",
     "pinyinClean": "qinmin",
-    "hanViet": "",
+    "hanViet": "TIỀN DIỆN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2535,7 +2750,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "后面",
     "pinyin": "hòumiàn",
     "pinyinClean": "humin",
-    "hanViet": "",
+    "hanViet": "HẬU DIỆN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2556,7 +2771,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "这儿",
     "pinyin": "zhèr",
     "pinyinClean": "zhr",
-    "hanViet": "",
+    "hanViet": "GIÁ NHÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2577,7 +2792,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "没有",
     "pinyin": "méiyǒu",
     "pinyinClean": "miyu",
-    "hanViet": "",
+    "hanViet": "MỘT HỮU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2598,7 +2813,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "能",
     "pinyin": "néng",
     "pinyinClean": "nng",
-    "hanViet": "",
+    "hanViet": "NĂNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2619,7 +2834,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "坐",
     "pinyin": "zuò",
     "pinyinClean": "zu",
-    "hanViet": "",
+    "hanViet": "TOẠ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2640,7 +2855,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "现在",
     "pinyin": "xiànzài",
     "pinyinClean": "xinzi",
-    "hanViet": "",
+    "hanViet": "HIỆN TẠI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2694,7 +2909,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Ăn một chút đồ ăn.",
         "tag": "Ăn uống"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "点 vs 小时",
+      "explanation": "So sánh cách dùng và phân biệt giữa các từ dễ nhầm lẫn trong ngữ cảnh HSK: 点 vs 小时."
+    }
   },
   {
     "id": "hsk1-11-3",
@@ -2702,7 +2921,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "分",
     "pinyin": "fēn",
     "pinyinClean": "fn",
-    "hanViet": "",
+    "hanViet": "PHÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2723,7 +2942,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "中午",
     "pinyin": "zhōngwǔ",
     "pinyinClean": "zhngw",
-    "hanViet": "",
+    "hanViet": "TRUNG NGỌ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2744,7 +2963,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "吃饭",
     "pinyin": "chī fàn",
     "pinyinClean": "ch fn",
-    "hanViet": "",
+    "hanViet": "CẬT PHẠN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2765,7 +2984,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "时候",
     "pinyin": "shíhou",
     "pinyinClean": "shhou",
-    "hanViet": "",
+    "hanViet": "THỜI HẬU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2786,7 +3005,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "回",
     "pinyin": "huí",
     "pinyinClean": "hu",
-    "hanViet": "",
+    "hanViet": "HỒI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2807,7 +3026,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "我们",
     "pinyin": "wǒmen",
     "pinyinClean": "wmen",
-    "hanViet": "",
+    "hanViet": "NGÃ MÔN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2868,7 +3087,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "住",
     "pinyin": "zhù",
     "pinyinClean": "zh",
-    "hanViet": "",
+    "hanViet": "TRÚ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2889,7 +3108,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "前",
     "pinyin": "qián",
     "pinyinClean": "qin",
-    "hanViet": "",
+    "hanViet": "TIỀN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2910,7 +3129,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "天气",
     "pinyin": "tiānqì",
     "pinyinClean": "tinq",
-    "hanViet": "",
+    "hanViet": "THIÊN KHÍ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2931,7 +3150,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "怎么样",
     "pinyin": "zěnmeyàng",
     "pinyinClean": "znmeyng",
-    "hanViet": "",
+    "hanViet": "CHẨM YÊU DẠNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2952,7 +3171,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "太",
     "pinyin": "tài",
     "pinyinClean": "ti",
-    "hanViet": "",
+    "hanViet": "THÁI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2973,7 +3192,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "热",
     "pinyin": "rè",
     "pinyinClean": "r",
-    "hanViet": "",
+    "hanViet": "NHIỆT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -2984,9 +3203,27 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/28944485/pexels-photo-28944485.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "synonyms": [
+      {
+        "hanzi": "炎热",
+        "pinyin": "yánrè",
+        "hanViet": "VIÊM NHIỆT",
+        "viet": "nóng nực"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "冷",
+        "pinyin": "lěng",
+        "hanViet": "LÃNH",
+        "viet": "lạnh"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "热 vs 冷",
+      "explanation": "Chỉ cảm giác nhiệt độ nóng vs lạnh."
+    }
   },
   {
     "id": "hsk1-12-5",
@@ -2994,7 +3231,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "冷",
     "pinyin": "lěng",
     "pinyinClean": "lng",
-    "hanViet": "",
+    "hanViet": "LÃNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3005,9 +3242,27 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/29860604/pexels-photo-29860604.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "synonyms": [
+      {
+        "hanzi": "寒冷",
+        "pinyin": "hánlěng",
+        "hanViet": "HÀN LÃNH",
+        "viet": "lạnh buốt"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "热",
+        "pinyin": "rè",
+        "hanViet": "NHIỆT",
+        "viet": "nóng"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "冷 vs 热",
+      "explanation": "Chỉ nhiệt độ thời tiết lạnh vs nóng."
+    }
   },
   {
     "id": "hsk1-12-6",
@@ -3015,7 +3270,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "下雨",
     "pinyin": "xià yǔ",
     "pinyinClean": "xi y",
-    "hanViet": "",
+    "hanViet": "HẠ VŨ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3036,7 +3291,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "身体",
     "pinyin": "shēntǐ",
     "pinyinClean": "shnt",
-    "hanViet": "",
+    "hanViet": "THÂN THỂ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3057,7 +3312,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "愛",
     "pinyin": "ài",
     "pinyinClean": "ai",
-    "hanViet": "Ái",
+    "hanViet": "ÁI",
     "radical": "爪",
     "strokeCount": 10,
     "hskLevel": 1,
@@ -3076,10 +3331,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
       "爱好"
     ],
     "synonyms": [
-      "喜欢"
+      {
+        "hanzi": "喜欢",
+        "pinyin": "xǐhuan",
+        "hanViet": "HỶ HOAN",
+        "viet": "thích, yêu thích"
+      }
     ],
     "antonyms": [
-      "恨"
+      {
+        "hanzi": "恨",
+        "pinyin": "hèn",
+        "hanViet": "HẬN",
+        "viet": "ghét, oán hận"
+      }
     ],
     "sentences": [
       {
@@ -3094,7 +3359,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Anh ấy rất thích đọc sách.",
         "tag": "Sở thích & Thói quen"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "爱 vs 喜欢",
+      "explanation": "‘喜欢’ chỉ mức độ cảm tình vừa phải, có thể dùng cho sự vật, hoạt động, người. ‘爱’ có mức độ tình cảm sâu sắc, mãnh liệt hơn nhiều."
+    }
   },
   {
     "id": "hsk1-12-9",
@@ -3102,7 +3371,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "些",
     "pinyin": "xiē",
     "pinyinClean": "xi",
-    "hanViet": "",
+    "hanViet": "TA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3123,7 +3392,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "水果",
     "pinyin": "shuǐguǒ",
     "pinyinClean": "shugu",
-    "hanViet": "",
+    "hanViet": "THUỶ QUẢ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3144,7 +3413,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "水",
     "pinyin": "shuǐ",
     "pinyinClean": "shu",
-    "hanViet": "",
+    "hanViet": "THUỶ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3165,7 +3434,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "喂",
     "pinyin": "wèi",
     "pinyinClean": "wi",
-    "hanViet": "",
+    "hanViet": "UY",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3186,7 +3455,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "也",
     "pinyin": "yě",
     "pinyinClean": "y",
-    "hanViet": "",
+    "hanViet": "DÃ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3207,7 +3476,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "学习",
     "pinyin": "xuéxí",
     "pinyinClean": "xux",
-    "hanViet": "",
+    "hanViet": "HỌC TẬP",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3228,7 +3497,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "上午",
     "pinyin": "shàngwǔ",
     "pinyinClean": "shngw",
-    "hanViet": "",
+    "hanViet": "THƯỚNG NGỌ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3249,7 +3518,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "睡觉",
     "pinyin": "shuì jiào",
     "pinyinClean": "shu jio",
-    "hanViet": "",
+    "hanViet": "THUỴ GIÁO",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3310,7 +3579,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "喜欢",
     "pinyin": "xǐhuan",
     "pinyinClean": "xhuan",
-    "hanViet": "",
+    "hanViet": "HỶ HOAN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3331,7 +3600,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "给",
     "pinyin": "gěi",
     "pinyinClean": "gi",
-    "hanViet": "",
+    "hanViet": "CẤP",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3472,7 +3741,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "一点儿",
     "pinyin": "yìdiǎnr",
     "pinyinClean": "ydinr",
-    "hanViet": "",
+    "hanViet": "NHẤT ĐIỂM NHÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3493,7 +3762,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "苹果",
     "pinyin": "píngguǒ",
     "pinyinClean": "pnggu",
-    "hanViet": "",
+    "hanViet": "BÌNH QUẢ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3514,7 +3783,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "看见",
     "pinyin": "kànjiàn",
     "pinyinClean": "knjin",
-    "hanViet": "",
+    "hanViet": "KHÁN KIẾN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3535,7 +3804,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "先生",
     "pinyin": "xiānsheng",
     "pinyinClean": "xinsheng",
-    "hanViet": "",
+    "hanViet": "TIÊN SINH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3556,7 +3825,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "开",
     "pinyin": "kāi",
     "pinyinClean": "ki",
-    "hanViet": "",
+    "hanViet": "KHAI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3568,8 +3837,19 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "collocations": [],
     "compounds": [],
     "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "antonyms": [
+      {
+        "hanzi": "关",
+        "pinyin": "guān",
+        "hanViet": "QUAN",
+        "viet": "đóng, tắt"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "开 vs 关",
+      "explanation": "Mở cửa, bật đèn/thiết bị (开) đối lập với đóng cửa, tắt thiết bị (关)."
+    }
   },
   {
     "id": "hsk1-14-7",
@@ -3577,7 +3857,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "车",
     "pinyin": "chē",
     "pinyinClean": "ch",
-    "hanViet": "",
+    "hanViet": "XA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3598,7 +3878,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "回来",
     "pinyin": "huílái",
     "pinyinClean": "huli",
-    "hanViet": "",
+    "hanViet": "HỒI LAI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3619,7 +3899,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "分钟",
     "pinyin": "fēnzhōng",
     "pinyinClean": "fnzhng",
-    "hanViet": "",
+    "hanViet": "PHÂN CHUNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3640,7 +3920,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "后",
     "pinyin": "hòu",
     "pinyinClean": "hu",
-    "hanViet": "",
+    "hanViet": "HẬU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3661,7 +3941,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "衣服",
     "pinyin": "yīfu",
     "pinyinClean": "yfu",
-    "hanViet": "",
+    "hanViet": "Y PHỤC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3682,7 +3962,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "漂亮",
     "pinyin": "piàoliang",
     "pinyinClean": "pioliang",
-    "hanViet": "",
+    "hanViet": "PHIÊU LƯỢNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3703,7 +3983,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "听",
     "pinyin": "tīng",
     "pinyinClean": "tng",
-    "hanViet": "",
+    "hanViet": "DẪN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3724,7 +4004,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "少",
     "pinyin": "shǎo",
     "pinyinClean": "sho",
-    "hanViet": "",
+    "hanViet": "THIỂU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3736,8 +4016,19 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "collocations": [],
     "compounds": [],
     "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "antonyms": [
+      {
+        "hanzi": "多",
+        "pinyin": "duō",
+        "hanViet": "ĐA",
+        "viet": "nhiều"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "少 vs 多",
+      "explanation": "Cặp từ chỉ số lượng ít vs nhiều."
+    }
   },
   {
     "id": "hsk1-14-15",
@@ -3745,7 +4036,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "这些",
     "pinyin": "zhèxiē",
     "pinyinClean": "zhxi",
-    "hanViet": "",
+    "hanViet": "GIÁ TA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3766,7 +4057,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "都",
     "pinyin": "dōu",
     "pinyinClean": "du",
-    "hanViet": "",
+    "hanViet": "ĐÔ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3787,7 +4078,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "张",
     "pinyin": "Zhāng",
     "pinyinClean": "zhng",
-    "hanViet": "",
+    "hanViet": "TRƯƠNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3808,7 +4099,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "认识",
     "pinyin": "rènshi",
     "pinyinClean": "rnshi",
-    "hanViet": "",
+    "hanViet": "NHẬN THỨC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3819,9 +4110,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/8832726/pexels-photo-8832726.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
+    "synonyms": [
+      {
+        "hanzi": "了解",
+        "pinyin": "liǎojiě",
+        "hanViet": "LIỄU GIẢI",
+        "viet": "hiểu rõ, tìm hiểu"
+      }
+    ],
     "antonyms": [],
-    "sentences": []
+    "sentences": [],
+    "confusableWords": {
+      "pair": "认识 vs 知道",
+      "explanation": "‘认识’ dùng khi quen biết một người (mặt, tên) hoặc nhận thức được sự việc. ‘知道’ chỉ đơn thuần biết một tin tức, thông tin hoặc sự thật."
+    }
   },
   {
     "id": "hsk1-15-2",
@@ -3829,7 +4131,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "年",
     "pinyin": "nián",
     "pinyinClean": "nin",
-    "hanViet": "",
+    "hanViet": "NIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3850,7 +4152,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "大学",
     "pinyin": "dàxué",
     "pinyinClean": "dxu",
-    "hanViet": "",
+    "hanViet": "ĐẠI HỌC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3871,7 +4173,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "饭店",
     "pinyin": "fàndiàn",
     "pinyinClean": "fndin",
-    "hanViet": "",
+    "hanViet": "PHẠN ĐIẾM",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3934,7 +4236,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "一起",
     "pinyin": "yìqǐ",
     "pinyinClean": "yq",
-    "hanViet": "",
+    "hanViet": "NHẤT KHỞI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3955,7 +4257,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "高兴",
     "pinyin": "gāoxìng",
     "pinyinClean": "goxng",
-    "hanViet": "",
+    "hanViet": "CAO HƯNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3976,7 +4278,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "飞机",
     "pinyin": "fēijī",
     "pinyinClean": "fij",
-    "hanViet": "",
+    "hanViet": "PHI CƠ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 1,
@@ -3997,7 +4299,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "旅游",
     "pinyin": "lǚyóu",
     "pinyinClean": "lyu",
-    "hanViet": "",
+    "hanViet": "LỮ DU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4018,7 +4320,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "觉得",
     "pinyin": "juéde",
     "pinyinClean": "jude",
-    "hanViet": "",
+    "hanViet": "GIÁO ĐẮC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4039,7 +4341,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "最",
     "pinyin": "zuì",
     "pinyinClean": "zu",
-    "hanViet": "",
+    "hanViet": "TỐI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4060,7 +4362,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "为什么",
     "pinyin": "wèi shénme",
     "pinyinClean": "wi shnme",
-    "hanViet": "",
+    "hanViet": "VI THẬM YÊU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4081,7 +4383,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "运动",
     "pinyin": "yùndòng",
     "pinyinClean": "yndng",
-    "hanViet": "",
+    "hanViet": "VẬN ĐỘNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4102,7 +4404,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "踢足球",
     "pinyin": "tī zúqiú",
     "pinyinClean": "t zqi",
-    "hanViet": "",
+    "hanViet": "THÍCH TÚ CẦU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4123,7 +4425,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "要",
     "pinyin": "yào",
     "pinyinClean": "yo",
-    "hanViet": "",
+    "hanViet": "YÊU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4144,7 +4446,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "新",
     "pinyin": "xīn",
     "pinyinClean": "xn",
-    "hanViet": "",
+    "hanViet": "TÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4155,9 +4457,27 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/19507870/pexels-photo-19507870.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "synonyms": [
+      {
+        "hanzi": "崭新",
+        "pinyin": "zhǎnxīn",
+        "hanViet": "TIẢM TÂN",
+        "viet": "mới toanh"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "旧",
+        "pinyin": "jiù",
+        "hanViet": "CỰU",
+        "viet": "cũ"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "新 vs 旧",
+      "explanation": "Chỉ tình trạng mới mẻ vs cũ kỹ."
+    }
   },
   {
     "id": "1-11",
@@ -4165,7 +4485,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "它",
     "pinyin": "tā",
     "pinyinClean": "t",
-    "hanViet": "",
+    "hanViet": "THA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4186,7 +4506,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "眼睛",
     "pinyin": "yǎnjing",
     "pinyinClean": "ynjing",
-    "hanViet": "",
+    "hanViet": "NHÃN TÌNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4207,7 +4527,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "生病",
     "pinyin": "shēng bìng",
     "pinyinClean": "shng bng",
-    "hanViet": "",
+    "hanViet": "SINH BỆNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4228,7 +4548,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "每",
     "pinyin": "měi",
     "pinyinClean": "mi",
-    "hanViet": "",
+    "hanViet": "MỖI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4249,7 +4569,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "早上",
     "pinyin": "zǎoshang",
     "pinyinClean": "zoshang",
-    "hanViet": "",
+    "hanViet": "TẢO THƯỚNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4270,7 +4590,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "跑步",
     "pinyin": "pǎo bù",
     "pinyinClean": "po b",
-    "hanViet": "",
+    "hanViet": "BÀO BỘ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4291,7 +4611,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "起床",
     "pinyin": "qǐ chuáng",
     "pinyinClean": "q chung",
-    "hanViet": "",
+    "hanViet": "KHỞI SÀNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4312,7 +4632,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "药",
     "pinyin": "yào",
     "pinyinClean": "yo",
-    "hanViet": "",
+    "hanViet": "DƯỢC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4333,7 +4653,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "出院",
     "pinyin": "chū yuàn",
     "pinyinClean": "ch yun",
-    "hanViet": "",
+    "hanViet": "XUẤT VIỆN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4354,7 +4674,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "高",
     "pinyin": "gāo",
     "pinyinClean": "go",
-    "hanViet": "",
+    "hanViet": "CAO",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4366,8 +4686,19 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "collocations": [],
     "compounds": [],
     "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "antonyms": [
+      {
+        "hanzi": "矮",
+        "pinyin": "ǎi",
+        "hanViet": "ẢI",
+        "viet": "thấp, lùn"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "高 vs 矮",
+      "explanation": "Chỉ chiều cao cơ thể người hoặc vật (cao vs thấp/lùn)."
+    }
   },
   {
     "id": "2-10",
@@ -4375,7 +4706,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "米",
     "pinyin": "mǐ",
     "pinyinClean": "m",
-    "hanViet": "",
+    "hanViet": "MỄ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4396,7 +4727,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "知道",
     "pinyin": "zhīdào",
     "pinyinClean": "zhdo",
-    "hanViet": "",
+    "hanViet": "TRI ĐẠO",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4407,9 +4738,27 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/34776659/pexels-photo-34776659.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "synonyms": [
+      {
+        "hanzi": "明白",
+        "pinyin": "míngbai",
+        "hanViet": "MINH BẠCH",
+        "viet": "hiểu, rõ"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "不懂",
+        "pinyin": "bù dǒng",
+        "hanViet": "BẤT ĐỔNG",
+        "viet": "không hiểu"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "知道 vs 认识",
+      "explanation": "‘知道’ chỉ thông tin, sự việc cụ thể. ‘认识’ chỉ quen biết con người hoặc nhận biết chữ, địa điểm."
+    }
   },
   {
     "id": "2-12",
@@ -4417,7 +4766,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "休息",
     "pinyin": "xiūxi",
     "pinyinClean": "xixi",
-    "hanViet": "",
+    "hanViet": "HƯU TỨC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4438,7 +4787,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "忙",
     "pinyin": "máng",
     "pinyinClean": "mng",
-    "hanViet": "",
+    "hanViet": "MANG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4459,7 +4808,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "时间",
     "pinyin": "shíjiān",
     "pinyinClean": "shjin",
-    "hanViet": "",
+    "hanViet": "THỜI GIAN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4480,7 +4829,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "手表",
     "pinyin": "shǒubiǎo",
     "pinyinClean": "shubio",
-    "hanViet": "",
+    "hanViet": "THỦ BIỂU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4501,7 +4850,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "千",
     "pinyin": "qiān",
     "pinyinClean": "qin",
-    "hanViet": "",
+    "hanViet": "THIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4561,7 +4910,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "送",
     "pinyin": "sòng",
     "pinyinClean": "sng",
-    "hanViet": "",
+    "hanViet": "TỐNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4582,7 +4931,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "一下",
     "pinyin": "yíxià",
     "pinyinClean": "yxi",
-    "hanViet": "",
+    "hanViet": "NHẤT HẠ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4603,7 +4952,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "牛奶",
     "pinyin": "niúnǎi",
     "pinyinClean": "nini",
-    "hanViet": "",
+    "hanViet": "NGƯU NÃI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4624,7 +4973,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "房间",
     "pinyin": "fángjiān",
     "pinyinClean": "fngjin",
-    "hanViet": "",
+    "hanViet": "PHÒNG GIAN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4645,7 +4994,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "丈夫",
     "pinyin": "zhàngfu",
     "pinyinClean": "zhngfu",
-    "hanViet": "",
+    "hanViet": "TRƯỢNG PHU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4666,7 +5015,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "旁边",
     "pinyin": "pángbiān",
     "pinyinClean": "pngbin",
-    "hanViet": "",
+    "hanViet": "BÀNG BIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4687,7 +5036,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "真",
     "pinyin": "zhēn",
     "pinyinClean": "zhn",
-    "hanViet": "",
+    "hanViet": "CHÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4708,7 +5057,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "粉色",
     "pinyin": "fěnsè",
     "pinyinClean": "fns",
-    "hanViet": "",
+    "hanViet": "PHẤN SẮC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4729,7 +5078,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "颜色",
     "pinyin": "yánsè",
     "pinyinClean": "yns",
-    "hanViet": "",
+    "hanViet": "NHAN SẮC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4750,7 +5099,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "左边",
     "pinyin": "zuǒbian",
     "pinyinClean": "zubian",
-    "hanViet": "",
+    "hanViet": "TẢ BIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4771,7 +5120,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "红色",
     "pinyin": "hóngsè",
     "pinyinClean": "hngs",
-    "hanViet": "",
+    "hanViet": "HỒNG SẮC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4792,7 +5141,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "生日",
     "pinyin": "shēngrì",
     "pinyinClean": "shngr",
-    "hanViet": "",
+    "hanViet": "SINH NHẬT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4813,7 +5162,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "快乐",
     "pinyin": "kuàilè",
     "pinyinClean": "kuil",
-    "hanViet": "",
+    "hanViet": "KHOÁI LẠC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4834,7 +5183,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "接",
     "pinyin": "jiē",
     "pinyinClean": "ji",
-    "hanViet": "",
+    "hanViet": "TIẾP",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4855,7 +5204,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "晚上",
     "pinyin": "wǎnshang",
     "pinyinClean": "wnshang",
-    "hanViet": "",
+    "hanViet": "VÃN THƯỚNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4876,7 +5225,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "非常",
     "pinyin": "fēicháng",
     "pinyinClean": "fichng",
-    "hanViet": "",
+    "hanViet": "PHI THƯỜNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4897,7 +5246,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "开始",
     "pinyin": "kāishǐ",
     "pinyinClean": "kish",
-    "hanViet": "",
+    "hanViet": "KHAI THUỶ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4918,7 +5267,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "已经",
     "pinyin": "yǐjīng",
     "pinyinClean": "yjng",
-    "hanViet": "",
+    "hanViet": "DĨ KINH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4939,7 +5288,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "長",
     "pinyin": "cháng",
     "pinyinClean": "chang",
-    "hanViet": "Trường",
+    "hanViet": "TRƯỜNG",
     "radical": "长",
     "strokeCount": 8,
     "hskLevel": 2,
@@ -4960,7 +5309,12 @@ export const DICTIONARY_WORDS: DictWord[] = [
       "久"
     ],
     "antonyms": [
-      "短"
+      {
+        "hanzi": "短",
+        "pinyin": "duǎn",
+        "hanViet": "ĐOẢN",
+        "viet": "ngắn"
+      }
     ],
     "sentences": [
       {
@@ -4975,7 +5329,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Tóc cô ấy rất dài.",
         "tag": "Ngoại hình"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "长 (cháng: dài) vs 长 (zhǎng: lớn)",
+      "explanation": "Từ đa âm đa nghĩa: cháng chỉ chiều dài không gian/thời gian, zhǎng chỉ sinh trưởng, lớn lên, đảm nhiệm vị trí trưởng."
+    }
   },
   {
     "id": "4-11",
@@ -4983,7 +5341,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "两",
     "pinyin": "liǎng",
     "pinyinClean": "ling",
-    "hanViet": "",
+    "hanViet": "LƯỠNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -4996,7 +5354,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [],
+    "confusableWords": {
+      "pair": "两 vs 二",
+      "explanation": "‘两’ luôn đi kèm lượng từ khi biểu thị số lượng (vd: 两个, 两次, 两本书). Không dùng ‘两’ cho số thứ tự."
+    }
   },
   {
     "id": "4-12",
@@ -5004,7 +5366,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "帮",
     "pinyin": "bāng",
     "pinyinClean": "bng",
-    "hanViet": "",
+    "hanViet": "BANG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5025,7 +5387,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "介绍",
     "pinyin": "jièshào",
     "pinyinClean": "jisho",
-    "hanViet": "",
+    "hanViet": "GIỚI THIỆU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5046,7 +5408,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "外面",
     "pinyin": "wàimiàn",
     "pinyinClean": "wimin",
-    "hanViet": "",
+    "hanViet": "NGOẠI DIỆN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5067,7 +5429,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "准备",
     "pinyin": "zhǔnbèi",
     "pinyinClean": "zhnbi",
-    "hanViet": "",
+    "hanViet": "CHUẨN BỊ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5088,7 +5450,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "就",
     "pinyin": "jiù",
     "pinyinClean": "ji",
-    "hanViet": "",
+    "hanViet": "TỰU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5109,7 +5471,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "鱼",
     "pinyin": "yú",
     "pinyinClean": "y",
-    "hanViet": "",
+    "hanViet": "NGƯ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5130,7 +5492,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "件",
     "pinyin": "jiàn",
     "pinyinClean": "jin",
-    "hanViet": "",
+    "hanViet": "KIỆN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5151,7 +5513,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "还",
     "pinyin": "hái",
     "pinyinClean": "hi",
-    "hanViet": "",
+    "hanViet": "HOÀN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5172,7 +5534,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "可以",
     "pinyin": "kěyǐ",
     "pinyinClean": "ky",
-    "hanViet": "",
+    "hanViet": "KHẢ DĨ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5193,7 +5555,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "不错",
     "pinyin": "búcuò",
     "pinyinClean": "bcu",
-    "hanViet": "",
+    "hanViet": "BẤT THÁC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5214,7 +5576,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "考试",
     "pinyin": "kǎoshì",
     "pinyinClean": "kosh",
-    "hanViet": "",
+    "hanViet": "KHẢO THÍ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5235,7 +5597,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "咖啡",
     "pinyin": "kāfēi",
     "pinyinClean": "kfi",
-    "hanViet": "",
+    "hanViet": "CA PHÊ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5256,7 +5618,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "对",
     "pinyin": "duì",
     "pinyinClean": "du",
-    "hanViet": "",
+    "hanViet": "ĐỐI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5277,7 +5639,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "以后",
     "pinyin": "yǐhòu",
     "pinyinClean": "yhu",
-    "hanViet": "",
+    "hanViet": "DĨ HẬU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5298,7 +5660,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "门",
     "pinyin": "mén",
     "pinyinClean": "mn",
-    "hanViet": "",
+    "hanViet": "MÔN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5319,7 +5681,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "外",
     "pinyin": "wài",
     "pinyinClean": "wi",
-    "hanViet": "",
+    "hanViet": "NGOẠI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5340,7 +5702,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "自行车",
     "pinyin": "zìxíngchē",
     "pinyinClean": "zxngch",
-    "hanViet": "",
+    "hanViet": "TỰ HÀNG XA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5361,7 +5723,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "羊肉",
     "pinyin": "yángròu",
     "pinyinClean": "yngru",
-    "hanViet": "",
+    "hanViet": "DƯƠNG NHỤC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5382,7 +5744,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "面条",
     "pinyin": "miàntiáo",
     "pinyinClean": "mintio",
-    "hanViet": "",
+    "hanViet": "DIỆN ĐIỀU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5403,7 +5765,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "打篮球",
     "pinyin": "dǎ lánqiú",
     "pinyinClean": "d lnqi",
-    "hanViet": "",
+    "hanViet": "TÁ LAM CẦU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5424,7 +5786,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "因为",
     "pinyin": "yīnwèi",
     "pinyinClean": "ynwi",
-    "hanViet": "",
+    "hanViet": "NHÂN VI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5445,7 +5807,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "所以",
     "pinyin": "suǒyǐ",
     "pinyinClean": "suy",
-    "hanViet": "",
+    "hanViet": "SỞ DĨ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5466,7 +5828,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "游泳",
     "pinyin": "yóu yǒng",
     "pinyinClean": "yu yng",
-    "hanViet": "",
+    "hanViet": "DU VỊNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5487,7 +5849,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "经常",
     "pinyin": "jīngcháng",
     "pinyinClean": "jngchng",
-    "hanViet": "",
+    "hanViet": "KINH THƯỜNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5508,7 +5870,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "公斤",
     "pinyin": "gōngjīn",
     "pinyinClean": "gngjn",
-    "hanViet": "",
+    "hanViet": "CÔNG CÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5529,7 +5891,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "姐姐",
     "pinyin": "jiějie",
     "pinyinClean": "jijie",
-    "hanViet": "",
+    "hanViet": "TỶ TỶ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5550,7 +5912,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "教室",
     "pinyin": "jiàoshì",
     "pinyinClean": "jiosh",
-    "hanViet": "",
+    "hanViet": "GIÁO THẤT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5571,7 +5933,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "机场",
     "pinyin": "jīchǎng",
     "pinyinClean": "jchng",
-    "hanViet": "",
+    "hanViet": "CƠ TRÀNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5592,7 +5954,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "路",
     "pinyin": "lù",
     "pinyinClean": "l",
-    "hanViet": "",
+    "hanViet": "LỘ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5613,7 +5975,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "离",
     "pinyin": "lí",
     "pinyinClean": "l",
-    "hanViet": "",
+    "hanViet": "LY",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5634,7 +5996,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "公司",
     "pinyin": "gōngsī",
     "pinyinClean": "gngs",
-    "hanViet": "",
+    "hanViet": "CÔNG TI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5655,7 +6017,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "远",
     "pinyin": "yuǎn",
     "pinyinClean": "yun",
-    "hanViet": "",
+    "hanViet": "VIỄN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5676,7 +6038,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "公共汽车",
     "pinyin": "gōnggòng qìchē",
     "pinyinClean": "gnggng qch",
-    "hanViet": "",
+    "hanViet": "CÔNG CỘNG KHÍ XA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5697,7 +6059,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "小时",
     "pinyin": "xiǎoshí",
     "pinyinClean": "xiosh",
-    "hanViet": "",
+    "hanViet": "TIỂU THỜI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5718,7 +6080,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "慢",
     "pinyin": "màn",
     "pinyinClean": "mn",
-    "hanViet": "",
+    "hanViet": "MẠN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5729,9 +6091,27 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/31983798/pexels-photo-31983798.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "synonyms": [
+      {
+        "hanzi": "缓慢",
+        "pinyin": "huǎnmàn",
+        "hanViet": "HOÃN MẠN",
+        "viet": "chậm chạp"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "快",
+        "pinyin": "kuài",
+        "hanViet": "KHOÁI",
+        "viet": "nhanh"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "慢 vs 快",
+      "explanation": "Chỉ tốc độ chậm vs nhanh."
+    }
   },
   {
     "id": "7-10",
@@ -5739,7 +6119,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "快",
     "pinyin": "kuài",
     "pinyinClean": "kui",
-    "hanViet": "",
+    "hanViet": "KHOÁI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5750,9 +6130,27 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "image": "https://images.pexels.com/photos/19661440/pexels-photo-19661440.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
-    "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "synonyms": [
+      {
+        "hanzi": "飞快",
+        "pinyin": "fēikuài",
+        "hanViet": "PHI KHOÁI",
+        "viet": "nhanh như bay"
+      }
+    ],
+    "antonyms": [
+      {
+        "hanzi": "慢",
+        "pinyin": "màn",
+        "hanViet": "MẠN",
+        "viet": "chậm"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "快 vs 慢",
+      "explanation": "Chỉ tốc độ di chuyển hoặc tiến độ thời gian."
+    }
   },
   {
     "id": "7-11",
@@ -5760,7 +6158,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "过",
     "pinyin": "guò",
     "pinyinClean": "gu",
-    "hanViet": "",
+    "hanViet": "QUÁ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5781,7 +6179,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "走",
     "pinyin": "zǒu",
     "pinyinClean": "zu",
-    "hanViet": "",
+    "hanViet": "TẨU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5802,7 +6200,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "到",
     "pinyin": "dào",
     "pinyinClean": "do",
-    "hanViet": "",
+    "hanViet": "ĐÁO",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5823,7 +6221,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "再",
     "pinyin": "zài",
     "pinyinClean": "zi",
-    "hanViet": "",
+    "hanViet": "TÁI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5844,7 +6242,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "让",
     "pinyin": "ràng",
     "pinyinClean": "rng",
-    "hanViet": "",
+    "hanViet": "NHƯỢNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5865,7 +6263,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "告诉",
     "pinyin": "gàosu",
     "pinyinClean": "gosu",
-    "hanViet": "",
+    "hanViet": "CÁO TỐ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5886,7 +6284,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "等",
     "pinyin": "děng",
     "pinyinClean": "dng",
-    "hanViet": "",
+    "hanViet": "ĐẲNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5907,7 +6305,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "找",
     "pinyin": "zhǎo",
     "pinyinClean": "zho",
-    "hanViet": "",
+    "hanViet": "TRẢO",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5928,7 +6326,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "事情",
     "pinyin": "shìqing",
     "pinyinClean": "shqing",
-    "hanViet": "",
+    "hanViet": "SỰ TÌNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5949,7 +6347,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "服务员",
     "pinyin": "fúwùyuán",
     "pinyinClean": "fwyun",
-    "hanViet": "",
+    "hanViet": "PHỤC VỤ VIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -5970,7 +6368,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "白",
     "pinyin": "bái",
     "pinyinClean": "bai",
-    "hanViet": "Bạch",
+    "hanViet": "BẠCH",
     "radical": "白",
     "strokeCount": 5,
     "hskLevel": 2,
@@ -5989,7 +6387,12 @@ export const DICTIONARY_WORDS: DictWord[] = [
     ],
     "synonyms": [],
     "antonyms": [
-      "黑"
+      {
+        "hanzi": "黑",
+        "pinyin": "hēi",
+        "hanViet": "HẮC",
+        "viet": "đen"
+      }
     ],
     "sentences": [
       {
@@ -6004,7 +6407,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Bông hoa màu trắng.",
         "tag": "Mô tả"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "白 vs 黑",
+      "explanation": "Chỉ màu trắng vs màu đen."
+    }
   },
   {
     "id": "8-9",
@@ -6012,7 +6419,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "黑",
     "pinyin": "hēi",
     "pinyinClean": "hi",
-    "hanViet": "",
+    "hanViet": "HẮC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6024,8 +6431,19 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "collocations": [],
     "compounds": [],
     "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "antonyms": [
+      {
+        "hanzi": "白",
+        "pinyin": "bái",
+        "hanViet": "BẠCH",
+        "viet": "trắng"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "黑 vs 白",
+      "explanation": "Chỉ màu đen vs màu trắng."
+    }
   },
   {
     "id": "8-10",
@@ -6033,7 +6451,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "贵",
     "pinyin": "guì",
     "pinyinClean": "gu",
-    "hanViet": "",
+    "hanViet": "QUÝ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6054,7 +6472,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "错",
     "pinyin": "cuò",
     "pinyinClean": "cu",
-    "hanViet": "",
+    "hanViet": "THÁC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6075,7 +6493,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "从",
     "pinyin": "cóng",
     "pinyinClean": "cng",
-    "hanViet": "",
+    "hanViet": "TÒNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6096,7 +6514,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "跳舞",
     "pinyin": "tiào wǔ",
     "pinyinClean": "tio w",
-    "hanViet": "",
+    "hanViet": "KHIÊU VŨ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6117,7 +6535,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "第一",
     "pinyin": "dì-yī",
     "pinyinClean": "dy",
-    "hanViet": "",
+    "hanViet": "ĐỆ NHẤT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6138,7 +6556,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "希望",
     "pinyin": "xīwàng",
     "pinyinClean": "xwng",
-    "hanViet": "",
+    "hanViet": "HY VỌNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6159,7 +6577,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "问题",
     "pinyin": "wèntí",
     "pinyinClean": "wnt",
-    "hanViet": "",
+    "hanViet": "VẤN ĐỀ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6180,7 +6598,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "欢迎",
     "pinyin": "huānyíng",
     "pinyinClean": "hunyng",
-    "hanViet": "",
+    "hanViet": "HOAN NGHÊNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6201,7 +6619,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "上班",
     "pinyin": "shàng bān",
     "pinyinClean": "shng bn",
-    "hanViet": "",
+    "hanViet": "THƯỚNG BAN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6222,7 +6640,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "懂",
     "pinyin": "dǒng",
     "pinyinClean": "dng",
-    "hanViet": "",
+    "hanViet": "ĐỔNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6243,7 +6661,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "完",
     "pinyin": "wán",
     "pinyinClean": "wn",
-    "hanViet": "",
+    "hanViet": "HOÀN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6264,7 +6682,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "题",
     "pinyin": "tí",
     "pinyinClean": "t",
-    "hanViet": "",
+    "hanViet": "ĐỀ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6285,7 +6703,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "课",
     "pinyin": "kè",
     "pinyinClean": "k",
-    "hanViet": "",
+    "hanViet": "KHOÁ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6339,7 +6757,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Tôi có thể giúp gì cho bạn?",
         "tag": "Mời mọc"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "帮助 vs 帮忙",
+      "explanation": "So sánh cách dùng và phân biệt giữa các từ dễ nhầm lẫn trong ngữ cảnh HSK: 帮助 vs 帮忙."
+    }
   },
   {
     "id": "10-3",
@@ -6381,7 +6803,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Đừng quên mang ô.",
         "tag": "Cảnh báo"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "别 vs 不要",
+      "explanation": "So sánh cách dùng và phân biệt giữa các từ dễ nhầm lẫn trong ngữ cảnh HSK: 别 vs 不要."
+    }
   },
   {
     "id": "10-4",
@@ -6389,7 +6815,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "哥哥",
     "pinyin": "gēge",
     "pinyinClean": "gge",
-    "hanViet": "",
+    "hanViet": "CA CA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6410,7 +6836,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "鸡蛋",
     "pinyin": "jīdàn",
     "pinyinClean": "jdn",
-    "hanViet": "",
+    "hanViet": "KÊ ĐẢN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6431,7 +6857,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "西瓜",
     "pinyin": "xīguā",
     "pinyinClean": "xgu",
-    "hanViet": "",
+    "hanViet": "TÂY QUA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6452,7 +6878,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "正在",
     "pinyin": "zhèngzài",
     "pinyinClean": "zhngzi",
-    "hanViet": "",
+    "hanViet": "CHINH TẠI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6473,7 +6899,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "手机",
     "pinyin": "shǒujī",
     "pinyinClean": "shuj",
-    "hanViet": "",
+    "hanViet": "THỦ CƠ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6494,7 +6920,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "洗",
     "pinyin": "xǐ",
     "pinyinClean": "x",
-    "hanViet": "",
+    "hanViet": "TẨY",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6554,7 +6980,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "男",
     "pinyin": "nán",
     "pinyinClean": "nn",
-    "hanViet": "",
+    "hanViet": "NAM",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6575,7 +7001,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "女",
     "pinyin": "nǚ",
     "pinyinClean": "n",
-    "hanViet": "",
+    "hanViet": "NỮ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6596,7 +7022,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "孩子",
     "pinyin": "háizi",
     "pinyinClean": "hizi",
-    "hanViet": "",
+    "hanViet": "HÀI TỬ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6617,7 +7043,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "右边",
     "pinyin": "yòubian",
     "pinyinClean": "yubian",
-    "hanViet": "",
+    "hanViet": "HỮU BIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6672,7 +7098,11 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "vi": "Hôm nay nóng hơn hôm qua.",
         "tag": "Thời tiết"
       }
-    ]
+    ],
+    "confusableWords": {
+      "pair": "比 vs 比较",
+      "explanation": "So sánh cách dùng và phân biệt giữa các từ dễ nhầm lẫn trong ngữ cảnh HSK: 比 vs 比较."
+    }
   },
   {
     "id": "11-7",
@@ -6680,7 +7110,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "便宜",
     "pinyin": "piányi",
     "pinyinClean": "pinyi",
-    "hanViet": "",
+    "hanViet": "TIỆN NGHI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6701,7 +7131,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "说话",
     "pinyin": "shuō huà",
     "pinyinClean": "shu hu",
-    "hanViet": "",
+    "hanViet": "THUYẾT THOẠI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6722,7 +7152,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "可能",
     "pinyin": "kěnéng",
     "pinyinClean": "knng",
-    "hanViet": "",
+    "hanViet": "KHẢ NĂNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6743,7 +7173,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "去年",
     "pinyin": "qùnián",
     "pinyinClean": "qnin",
-    "hanViet": "",
+    "hanViet": "KHỨ NIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6764,7 +7194,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "姓",
     "pinyin": "xìng",
     "pinyinClean": "xng",
-    "hanViet": "",
+    "hanViet": "TÍNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6785,7 +7215,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "得",
     "pinyin": "de",
     "pinyinClean": "de",
-    "hanViet": "",
+    "hanViet": "ĐẮC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6806,7 +7236,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "妻子",
     "pinyin": "qīzi",
     "pinyinClean": "qzi",
-    "hanViet": "",
+    "hanViet": "THÊ TỬ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6827,7 +7257,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "雪",
     "pinyin": "xuě",
     "pinyinClean": "xu",
-    "hanViet": "",
+    "hanViet": "TUYẾT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6848,7 +7278,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "零",
     "pinyin": "líng",
     "pinyinClean": "lng",
-    "hanViet": "",
+    "hanViet": "LINH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6869,7 +7299,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "度",
     "pinyin": "dù",
     "pinyinClean": "d",
-    "hanViet": "",
+    "hanViet": "ĐỘ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6890,7 +7320,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "穿",
     "pinyin": "chuān",
     "pinyinClean": "chun",
-    "hanViet": "",
+    "hanViet": "XUYÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6911,7 +7341,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "进",
     "pinyin": "jìn",
     "pinyinClean": "jn",
-    "hanViet": "",
+    "hanViet": "TIẾN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6923,8 +7353,19 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "collocations": [],
     "compounds": [],
     "synonyms": [],
-    "antonyms": [],
-    "sentences": []
+    "antonyms": [
+      {
+        "hanzi": "出",
+        "pinyin": "chū",
+        "hanViet": "XUẤT",
+        "viet": "ra"
+      }
+    ],
+    "sentences": [],
+    "confusableWords": {
+      "pair": "进 vs 出",
+      "explanation": "Động từ xu hướng chỉ đi vào vs đi ra."
+    }
   },
   {
     "id": "12-8",
@@ -6932,7 +7373,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "弟弟",
     "pinyin": "dìdi",
     "pinyinClean": "ddi",
-    "hanViet": "",
+    "hanViet": "ĐỆ ĐỆ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6953,7 +7394,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "近",
     "pinyin": "jìn",
     "pinyinClean": "jn",
-    "hanViet": "",
+    "hanViet": "CẬN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6974,7 +7415,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "着",
     "pinyin": "zhe",
     "pinyinClean": "zhe",
-    "hanViet": "",
+    "hanViet": "TRƯỚC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -6995,7 +7436,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "手",
     "pinyin": "shǒu",
     "pinyinClean": "shu",
-    "hanViet": "",
+    "hanViet": "THỦ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7016,7 +7457,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "拿",
     "pinyin": "ná",
     "pinyinClean": "n",
-    "hanViet": "",
+    "hanViet": "NÃ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7037,7 +7478,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "铅笔",
     "pinyin": "qiānbǐ",
     "pinyinClean": "qinb",
-    "hanViet": "",
+    "hanViet": "DUYÊN BÚT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7058,7 +7499,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "班",
     "pinyin": "bān",
     "pinyinClean": "bn",
-    "hanViet": "",
+    "hanViet": "BAN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7079,7 +7520,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "笑",
     "pinyin": "xiào",
     "pinyinClean": "xio",
-    "hanViet": "",
+    "hanViet": "TIẾU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7100,7 +7541,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "宾馆",
     "pinyin": "bīnguǎn",
     "pinyinClean": "bngun",
-    "hanViet": "",
+    "hanViet": "TÂN QUÁN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7121,7 +7562,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "一直",
     "pinyin": "yìzhí",
     "pinyinClean": "yzh",
-    "hanViet": "",
+    "hanViet": "NHẤT TRỰC",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7142,7 +7583,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "往",
     "pinyin": "wǎng",
     "pinyinClean": "wng",
-    "hanViet": "",
+    "hanViet": "VÃNG",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7163,7 +7604,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "路口",
     "pinyin": "lùkǒu",
     "pinyinClean": "lku",
-    "hanViet": "",
+    "hanViet": "LỘ KHẨU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7184,7 +7625,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "意思",
     "pinyin": "yìsi",
     "pinyinClean": "ysi",
-    "hanViet": "",
+    "hanViet": "Ý TƯ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7205,7 +7646,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "但是",
     "pinyin": "dànshì",
     "pinyinClean": "dnsh",
-    "hanViet": "",
+    "hanViet": "ĐÃN THỊ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7226,7 +7667,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "虽然",
     "pinyin": "suīrán",
     "pinyinClean": "surn",
-    "hanViet": "",
+    "hanViet": "TUY NHIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7247,7 +7688,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "次",
     "pinyin": "cì",
     "pinyinClean": "c",
-    "hanViet": "",
+    "hanViet": "THỨ",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7268,7 +7709,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "玩儿",
     "pinyin": "wánr",
     "pinyinClean": "wnr",
-    "hanViet": "",
+    "hanViet": "NGOẠN NHÂN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7289,7 +7730,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "晴",
     "pinyin": "qíng",
     "pinyinClean": "qng",
-    "hanViet": "",
+    "hanViet": "TÌNH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7350,7 +7791,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "日",
     "pinyin": "rì",
     "pinyinClean": "r",
-    "hanViet": "",
+    "hanViet": "NHẬT",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7371,7 +7812,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "新年",
     "pinyin": "xīnnián",
     "pinyinClean": "xnnin",
-    "hanViet": "",
+    "hanViet": "TÂN NIÊN",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7392,7 +7833,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "票",
     "pinyin": "piào",
     "pinyinClean": "pio",
-    "hanViet": "",
+    "hanViet": "PHIẾU",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7413,7 +7854,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "火车站",
     "pinyin": "huǒchēzhàn",
     "pinyinClean": "huchzhn",
-    "hanViet": "",
+    "hanViet": "HOẢ XA TRẠM",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7434,7 +7875,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "大家",
     "pinyin": "dàjiā",
     "pinyinClean": "dji",
-    "hanViet": "",
+    "hanViet": "ĐẠI GIA",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7455,7 +7896,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "更",
     "pinyin": "gèng",
     "pinyinClean": "gng",
-    "hanViet": "",
+    "hanViet": "CANH",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7476,7 +7917,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "妹妹",
     "pinyin": "mèimei",
     "pinyinClean": "mimei",
-    "hanViet": "",
+    "hanViet": "MUỘI MUỘI",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7497,7 +7938,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "traditional": "阴",
     "pinyin": "yīn",
     "pinyinClean": "yn",
-    "hanViet": "",
+    "hanViet": "ÂM",
     "radical": "",
     "strokeCount": 0,
     "hskLevel": 2,
@@ -7514,12 +7955,6 @@ export const DICTIONARY_WORDS: DictWord[] = [
   }
 ];
 
-// Map O(1) phục vụ truy xuất tức thì theo chữ Hán
-export const DICTIONARY_BY_HANZI = new Map<string, DictWord>(
+export const DICTIONARY_BY_HANZI: Record<string, DictWord> = Object.fromEntries(
   DICTIONARY_WORDS.map((w) => [w.hanzi, w])
-);
-
-// Map O(1) phục vụ truy xuất theo id
-export const DICTIONARY_BY_ID = new Map<string, DictWord>(
-  DICTIONARY_WORDS.map((w) => [w.id, w])
 );
