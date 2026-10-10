@@ -33,21 +33,32 @@ export class AppState {
   selectedLessonsHsk1 = $state<Record<number, boolean>>({});
   selectedLessonsHsk2 = $state<Record<number, boolean>>({});
 
-  // Dữ liệu kích hoạt
-  allVocab = $derived(this.currentLevel === 'HSK1' ? HSK1_VOCABULARY : HSK2_VOCABULARY);
-  allLessons = $derived<LessonInfo[]>(this.currentLevel === 'HSK1' ? HSK1_LESSON_INFOS : HSK2_LESSON_INFOS);
+  // Cấp độ đang xem trong Modal Lọc bài học
+  modalViewingLevel = $state<HskLevel>('HSK2');
 
-  selectedLessons = $derived(
-    this.currentLevel === 'HSK1' ? this.selectedLessonsHsk1 : this.selectedLessonsHsk2
-  );
+  // Kho toàn bộ từ vựng gộp chung HSK1 & HSK2
+  allVocab = $derived<VocabItem[]>([...HSK1_VOCABULARY, ...HSK2_VOCABULARY]);
 
-  filteredVocab = $derived(
-    this.allVocab.filter((item: VocabItem) => this.selectedLessons[item.lesson])
-  );
+  // Bộ từ vựng đã chọn lọc (hỗ trợ học trộn cả HSK 1 và HSK 2)
+  filteredVocab = $derived<VocabItem[]>([
+    ...HSK1_VOCABULARY.filter((item: VocabItem) => this.selectedLessonsHsk1[item.lesson]),
+    ...HSK2_VOCABULARY.filter((item: VocabItem) => this.selectedLessonsHsk2[item.lesson])
+  ]);
 
-  activeLessonsCount = $derived(
-    Object.values(this.selectedLessons).filter(Boolean).length
-  );
+  // Tổng số bài đang chọn trên cả 2 cấp độ
+  activeLessonsCountHsk1 = $derived(Object.values(this.selectedLessonsHsk1).filter(Boolean).length);
+  activeLessonsCountHsk2 = $derived(Object.values(this.selectedLessonsHsk2).filter(Boolean).length);
+  activeLessonsCount = $derived(this.activeLessonsCountHsk1 + this.activeLessonsCountHsk2);
+
+  // Nhãn hiển thị cấp độ hiện tại (HSK 1, HSK 2 hoặc Trộn HSK 1+2)
+  currentLevelDisplay = $derived.by(() => {
+    if (this.activeLessonsCountHsk1 > 0 && this.activeLessonsCountHsk2 > 0) {
+      return 'HSK 1+2';
+    }
+    if (this.activeLessonsCountHsk1 > 0) return 'HSK 1';
+    if (this.activeLessonsCountHsk2 > 0) return 'HSK 2';
+    return 'HSK 1+2';
+  });
 
   // 1. Chế độ Điền từ (Fill Word)
   fillDeck = $state<VocabItem[]>([]);
@@ -273,18 +284,10 @@ export class AppState {
     this.saveToLocalStorage();
   }
 
-  // Đổi cấp độ HSK1 / HSK2
+  // Đổi tab xem cấp độ trong Modal Lọc bài học
   setLevel(level: HskLevel) {
-    if (this.currentLevel === level) return;
+    this.modalViewingLevel = level;
     this.currentLevel = level;
-    const targetLessons = level === 'HSK1' ? this.selectedLessonsHsk1 : this.selectedLessonsHsk2;
-    const vocab = (level === 'HSK1' ? HSK1_VOCABULARY : HSK2_VOCABULARY).filter(
-      (item: VocabItem) => targetLessons[item.lesson]
-    );
-    this.initFill(vocab, false);
-    this.initQuiz(vocab);
-    this.initFlash();
-    this.initSpeech(vocab);
     this.saveToLocalStorage();
   }
 
@@ -777,56 +780,66 @@ export class AppState {
     this.saveToLocalStorage();
   }
 
-  // Lesson Selectors
-  toggleLesson(num: number) {
-    const activeLessons = this.currentLevel === 'HSK1' ? this.selectedLessonsHsk1 : this.selectedLessonsHsk2;
+  // Lesson Selectors: Hỗ trợ từng cấp độ riêng biệt hoặc theo tab đang xem
+  toggleLesson(num: number, level: HskLevel = this.modalViewingLevel) {
+    const activeLessons = level === 'HSK1' ? this.selectedLessonsHsk1 : this.selectedLessonsHsk2;
     activeLessons[num] = !activeLessons[num];
 
-    const newVocab = this.allVocab.filter((item: VocabItem) => activeLessons[item.lesson]);
-    this.initFill(newVocab, false);
-    this.initQuiz(newVocab);
+    this.initFill(this.filteredVocab, false);
+    this.initQuiz(this.filteredVocab);
     this.initFlash();
-    this.initSpeech(newVocab);
+    this.initSpeech(this.filteredVocab);
     this.saveToLocalStorage();
   }
 
-  selectAllLessons() {
+  // Chọn tất cả cho cấp độ đang xem
+  selectAllLessons(level: HskLevel = this.modalViewingLevel) {
     const all: Record<number, boolean> = {};
     for (let i = 1; i <= 15; i++) all[i] = true;
-    if (this.currentLevel === 'HSK1') this.selectedLessonsHsk1 = all;
+    if (level === 'HSK1') this.selectedLessonsHsk1 = all;
     else this.selectedLessonsHsk2 = all;
 
-    this.initFill(this.allVocab, false);
-    this.initQuiz(this.allVocab);
+    this.initFill(this.filteredVocab, false);
+    this.initQuiz(this.filteredVocab);
     this.initFlash();
-    this.initSpeech(this.allVocab);
+    this.initSpeech(this.filteredVocab);
     this.saveToLocalStorage();
   }
 
-  clearAllLessons() {
+  // Bỏ chọn tất cả cho cấp độ đang xem
+  clearAllLessons(level: HskLevel = this.modalViewingLevel) {
     const empty: Record<number, boolean> = {};
     for (let i = 1; i <= 15; i++) empty[i] = false;
-    if (this.currentLevel === 'HSK1') this.selectedLessonsHsk1 = empty;
+    if (level === 'HSK1') this.selectedLessonsHsk1 = empty;
     else this.selectedLessonsHsk2 = empty;
 
-    this.initFill([], false);
-    this.initQuiz([]);
+    this.initFill(this.filteredVocab, false);
+    this.initQuiz(this.filteredVocab);
     this.initFlash();
-    this.initSpeech([]);
+    this.initSpeech(this.filteredVocab);
     this.saveToLocalStorage();
   }
 
-  deselectAllLessons() {
+  // Chọn hoặc bỏ chọn toggleAll cho cấp độ đang xem
+  toggleAllLessons(level: HskLevel = this.modalViewingLevel) {
+    const activeCount = level === 'HSK1' ? this.activeLessonsCountHsk1 : this.activeLessonsCountHsk2;
+    if (activeCount === 15) {
+      this.clearAllLessons(level);
+    } else {
+      this.selectAllLessons(level);
+    }
+  }
+
+  deselectAllLessons(level: HskLevel = this.modalViewingLevel) {
     const single: Record<number, boolean> = {};
     for (let i = 1; i <= 15; i++) single[i] = (i === 1);
-    if (this.currentLevel === 'HSK1') this.selectedLessonsHsk1 = single;
+    if (level === 'HSK1') this.selectedLessonsHsk1 = single;
     else this.selectedLessonsHsk2 = single;
 
-    const singleList = this.allVocab.filter((i: VocabItem) => i.lesson === 1);
-    this.initFill(singleList, false);
-    this.initQuiz(singleList);
+    this.initFill(this.filteredVocab, false);
+    this.initQuiz(this.filteredVocab);
     this.initFlash();
-    this.initSpeech(singleList);
+    this.initSpeech(this.filteredVocab);
     this.saveToLocalStorage();
   }
 }

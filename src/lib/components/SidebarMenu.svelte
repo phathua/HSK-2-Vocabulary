@@ -176,7 +176,7 @@
         <span class="text-slate-400 dark:text-[#8E918F] font-semibold">{appState.filteredVocab.length} / {appState.allVocab.length} từ</span>
       </div>
       <span class="text-xs font-black px-2 py-1 rounded-xl bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
-        {appState.currentLevel}
+        {appState.currentLevelDisplay}
       </span>
     </div>
   </div>

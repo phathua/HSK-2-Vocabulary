@@ -1,5 +1,7 @@
 <script lang="ts">
   import { appState } from '#lib/state/appState.svelte';
+  import { HSK1_LESSON_INFOS, HSK1_VOCABULARY } from '#lib/data/hsk1Vocabulary';
+  import { LESSON_INFOS as HSK2_LESSON_INFOS, HSK2_VOCABULARY } from '#lib/data/hsk2Vocabulary';
   import BookBookmark from 'phosphor-svelte/lib/BookBookmark';
   import X from 'phosphor-svelte/lib/X';
   import Check from 'phosphor-svelte/lib/Check';
@@ -317,6 +319,14 @@
     14: FilmSlate,
     15: Confetti
   };
+
+  // Dữ liệu bài học theo tab cấp độ đang xem trong modal
+  const viewingLevel = $derived(appState.modalViewingLevel);
+  const activeLessons = $derived(viewingLevel === 'HSK1' ? HSK1_LESSON_INFOS : HSK2_LESSON_INFOS);
+  const activeVocab = $derived(viewingLevel === 'HSK1' ? HSK1_VOCABULARY : HSK2_VOCABULARY);
+  const activeSelected = $derived(viewingLevel === 'HSK1' ? appState.selectedLessonsHsk1 : appState.selectedLessonsHsk2);
+  const activeCount = $derived(viewingLevel === 'HSK1' ? appState.activeLessonsCountHsk1 : appState.activeLessonsCountHsk2);
+  const isAllCurrentSelected = $derived(activeCount === 15);
 </script>
 
 {#if appState.filterModalOpen}
@@ -334,7 +344,7 @@
               Chọn bài học
             </h3>
             <p class="text-[11px] text-slate-500 dark:text-neutral-400 font-medium">
-              Đang chọn <b class="text-slate-900 dark:text-white font-extrabold">{appState.activeLessonsCount}/15</b> bài ({appState.filteredVocab.length} từ)
+              Đang chọn <b class="text-slate-900 dark:text-white font-extrabold">{appState.activeLessonsCount}/30</b> bài ({appState.filteredVocab.length} từ trộn HSK 1 & 2)
             </p>
           </div>
         </div>
@@ -348,62 +358,62 @@
         </button>
       </div>
 
-      <!-- Level Switcher: HSK 1 & HSK 2 -->
+      <!-- Level Switcher: HSK 1 & HSK 2 (Chuyển tab để chọn bài, vẫn giữ trộn 2 bên) -->
       <div class="grid grid-cols-2 gap-1.5 p-1 bg-slate-100 dark:bg-[#282A2C] rounded-2xl mb-2.5 shrink-0">
         <button
           type="button"
           onclick={() => appState.setLevel('HSK1')}
           class={`py-1.5 px-3 rounded-xl font-black text-xs transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5 ${
-            appState.currentLevel === 'HSK1'
+            viewingLevel === 'HSK1'
               ? 'bg-blue-600 text-white shadow-xs scale-[1.01]'
               : 'text-slate-600 dark:text-neutral-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-[#37393B]'
           }`}
         >
-          <span>HSK 1 (150+ từ)</span>
+          <span>HSK 1 ({appState.activeLessonsCountHsk1}/15 bài)</span>
         </button>
         <button
           type="button"
           onclick={() => appState.setLevel('HSK2')}
           class={`py-1.5 px-3 rounded-xl font-black text-xs transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5 ${
-            appState.currentLevel === 'HSK2'
+            viewingLevel === 'HSK2'
               ? 'bg-orange-500 text-white shadow-xs scale-[1.01]'
               : 'text-slate-600 dark:text-neutral-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-[#37393B]'
           }`}
         >
-          <span>HSK 2 (168 từ)</span>
+          <span>HSK 2 ({appState.activeLessonsCountHsk2}/15 bài)</span>
         </button>
       </div>
 
-      <!-- Quick Action Buttons: Chọn tất cả / Bỏ chọn hết -->
+      <!-- Quick Action Buttons: Nút "Chọn tất cả" tự động đổi thành "Bỏ chọn tất cả" và ngược lại -->
       <div class="flex gap-2 mb-3 shrink-0">
         <button
           type="button"
-          onclick={() => appState.selectAllLessons()}
+          onclick={() => appState.toggleAllLessons(viewingLevel)}
           class="flex-1 py-1.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C]/60 hover:bg-slate-100 dark:hover:bg-[#282A2C] text-xs font-bold text-slate-700 dark:text-neutral-200 cursor-pointer transition-all active:scale-95"
         >
-          Chọn tất cả (15)
+          {isAllCurrentSelected ? `Bỏ chọn tất cả ${viewingLevel}` : `Chọn tất cả ${viewingLevel} (15)`}
         </button>
         <button
           type="button"
-          onclick={() => appState.clearAllLessons()}
+          onclick={() => appState.clearAllLessons(viewingLevel)}
           class="flex-1 py-1.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C]/60 hover:bg-slate-100 dark:hover:bg-[#282A2C] text-xs font-bold text-slate-700 dark:text-neutral-200 cursor-pointer transition-all active:scale-95"
         >
-          Bỏ chọn hết
+          Bỏ chọn {viewingLevel}
         </button>
       </div>
 
       <!-- Scrollable 2-Column Grid Cards -->
       <div class="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-0.5 mb-3">
         <div class="grid grid-cols-2 gap-2">
-          {#each appState.allLessons as info (info.lesson)}
-            {@const isSelected = !!appState.selectedLessons[info.lesson]}
-            {@const count = appState.allVocab.filter((v: any) => v.lesson === info.lesson).length}
+          {#each activeLessons as info (info.lesson)}
+            {@const isSelected = !!activeSelected[info.lesson]}
+            {@const count = activeVocab.filter((v: any) => v.lesson === info.lesson).length}
             {@const theme = LESSON_THEMES[info.lesson] || LESSON_THEMES[1]}
-            {@const IconComponent = appState.currentLevel === 'HSK1' ? HSK1_ICONS[info.lesson] : HSK2_ICONS[info.lesson]}
+            {@const IconComponent = viewingLevel === 'HSK1' ? HSK1_ICONS[info.lesson] : HSK2_ICONS[info.lesson]}
 
             <button
               type="button"
-              onclick={() => appState.toggleLesson(info.lesson)}
+              onclick={() => appState.toggleLesson(info.lesson, viewingLevel)}
               class={`group relative text-left p-2.5 rounded-2xl border transition-all duration-150 cursor-pointer flex flex-col justify-between overflow-hidden select-none active:scale-[0.96] ${
                 isSelected
                   ? `${theme.bg} ${theme.border} ${theme.darkBg} ${theme.darkBorder} shadow-2xs ring-1 ring-black/5 dark:ring-white/10`

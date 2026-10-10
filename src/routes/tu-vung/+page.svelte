@@ -88,29 +88,81 @@
     }
   });
 
-  // Tìm kiếm từ vựng linh hoạt
+  // Bảng chuẩn hóa không dấu tiếng Việt & Pinyin
+  function removeVietnameseTones(str: string): string {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/Đ/g, 'D')
+      .toLowerCase()
+      .trim();
+  }
+
+  function stripPinyinTones(str: string): string {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[üǖǘǚǜ]/g, 'u')
+      .replace(/v/g, 'u')
+      .toLowerCase()
+      .replace(/[-_\s]+/g, ' ')
+      .trim();
+  }
+
+  // Quản lý hiển thị dropdown gợi ý khi focus vào ô tìm kiếm
+  let isSearchFocused = $state(false);
+
+  // Tìm kiếm từ vựng linh hoạt tối ưu không dấu tiếng Việt, pinyin không dấu, chữ Hán
   let searchResults = $derived.by(() => {
-    const q = searchQuery.trim().toLowerCase();
-    if (!q) return DICTIONARY_WORDS.slice(0, 30);
+    const rawQ = searchQuery.trim();
+    if (!rawQ) return DICTIONARY_WORDS.slice(0, 30);
+
+    const q = rawQ.toLowerCase();
+    const qNoViet = removeVietnameseTones(rawQ);
+    const qNoPinyin = stripPinyinTones(rawQ);
 
     return DICTIONARY_WORDS.filter((item) => {
+      // 1. Chữ Hán giản thể & phồn thể
       if (item.hanzi.includes(q)) return true;
       if (item.traditional && item.traditional.includes(q)) return true;
+
+      // 2. Pinyin có dấu và Pinyin sạch
       if (item.pinyin.toLowerCase().includes(q)) return true;
       if (item.pinyinClean && item.pinyinClean.toLowerCase().includes(q)) return true;
+
+      // 3. Pinyin không dấu
+      if (stripPinyinTones(item.pinyin).includes(qNoPinyin)) return true;
+      if (item.pinyinClean && stripPinyinTones(item.pinyinClean).includes(qNoPinyin)) return true;
+
+      // 4. Tiếng Việt (có dấu & không dấu)
       if (item.viet.toLowerCase().includes(q)) return true;
+      if (removeVietnameseTones(item.viet).includes(qNoViet)) return true;
+
+      // 5. Hán Việt (có dấu & không dấu)
       if (item.hanViet && item.hanViet.toLowerCase().includes(q)) return true;
+      if (item.hanViet && removeVietnameseTones(item.hanViet).includes(qNoViet)) return true;
+
       return false;
     });
+  });
+
+  // Top 8 gợi ý nhanh xuất hiện ngay dưới thanh tìm kiếm khi người dùng gõ
+  let searchSuggestions = $derived.by(() => {
+    const rawQ = searchQuery.trim();
+    if (!rawQ) return [];
+    return searchResults.slice(0, 8);
   });
 
   // Từ vựng chính đang được chọn hiển thị
   let currentWord = $derived.by(() => {
     if (searchResults.length === 0) return null;
+    const rawQ = searchQuery.trim().toLowerCase();
     const exact = searchResults.find(
       (w) =>
-        w.hanzi === searchQuery.trim() ||
-        w.pinyinClean.toLowerCase() === searchQuery.trim().toLowerCase()
+        w.hanzi.toLowerCase() === rawQ ||
+        w.pinyinClean.toLowerCase() === rawQ ||
+        stripPinyinTones(w.pinyinClean) === stripPinyinTones(rawQ)
     );
     return exact || searchResults[0];
   });
@@ -245,9 +297,49 @@
             <input
               type="text"
               bind:value={searchQuery}
+              onfocus={() => (isSearchFocused = true)}
+              onblur={() => setTimeout(() => (isSearchFocused = false), 200)}
               placeholder="Tra từ bằng Chữ Hán, Pinyin, Hán Việt hoặc Tiếng Việt (VD: 苹果, duibuqi, quả táo)..."
               class="w-full pl-13 pr-28 py-3 md:py-3.5 rounded-2xl bg-slate-50 dark:bg-[#282A2C] border border-slate-200 dark:border-[#37393B] text-slate-800 dark:text-[#E3E3E3] font-medium placeholder-slate-400 dark:placeholder-[#8E918F] focus:outline-hidden focus:ring-2 focus:ring-rose-500/30 focus:border-rose-500 transition-all text-xs md:text-sm shadow-inner"
             />
+
+            <!-- Bảng đề xuất gợi ý kết quả tìm kiếm ngay dưới thanh search khi người dùng gõ -->
+            {#if isSearchFocused && searchQuery.trim() && searchSuggestions.length > 0}
+              <div
+                class="absolute left-0 right-0 top-full mt-2 bg-white dark:bg-[#1E1F20] rounded-2xl border border-slate-200 dark:border-[#37393B] shadow-xl overflow-hidden z-50 divide-y divide-slate-100 dark:divide-[#282A2C] max-h-72 overflow-y-auto"
+              >
+                {#each searchSuggestions as sug}
+                  <button
+                    type="button"
+                    onmousedown={() => selectWord(sug)}
+                    class="w-full px-4 py-2.5 flex items-center justify-between text-left hover:bg-rose-50/70 dark:hover:bg-[#282A2C] transition-colors cursor-pointer group"
+                  >
+                    <div class="flex items-center gap-3 min-w-0">
+                      <span class="text-base font-black text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                        {sug.hanzi}
+                      </span>
+                      <span class="text-xs font-bold text-rose-600 dark:text-rose-400">
+                        {sug.pinyin}
+                      </span>
+                      <span class="text-xs text-slate-500 dark:text-[#8E918F] truncate max-w-[200px] sm:max-w-xs">
+                        {sug.viet}
+                      </span>
+                    </div>
+
+                    <div class="flex items-center gap-2 shrink-0">
+                      {#if sug.hanViet}
+                        <span class="text-[10px] font-semibold text-slate-400 dark:text-neutral-500 hidden sm:inline">
+                          [{sug.hanViet}]
+                        </span>
+                      {/if}
+                      <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5]">
+                        HSK {sug.hskLevel}
+                      </span>
+                    </div>
+                  </button>
+                {/each}
+              </div>
+            {/if}
 
             <div class="absolute right-3 flex items-center gap-1.5">
               {#if searchQuery}

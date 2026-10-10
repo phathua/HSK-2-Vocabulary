@@ -182,8 +182,8 @@
   </div>
 {/if}
 
-<!-- Main Fill Word Card: Tối ưu 2 cột trên Desktop (lg:grid lg:grid-cols-12), 1 cột trên Mobile/Tablet -->
-<main class="flex-1 min-h-0 w-full max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 sm:p-5 lg:p-6 flex flex-col justify-between text-center relative overflow-hidden transition-colors">
+<!-- Main Fill Word Card: Đồng nhất padding và max-width với các tab khác -->
+<main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-between text-center relative overflow-hidden transition-colors">
   <!-- Top Bar: Nút Bài bên trái, Nút đổi chế độ bên phải -->
   <div class="w-full flex items-center justify-between shrink-0 mb-2 z-10">
     <!-- Floating Lesson Select Button -->
@@ -378,8 +378,8 @@
 
           </div>
         {:else}
-          <!-- Chế độ Thủ công trên Desktop: Ô nhập liệu và Tone Keyboard ngay trong Cột 2 -->
-          <div class="w-full flex flex-col items-center gap-3">
+          <!-- Chế độ Thủ công trên Desktop: Ô nhập liệu và Tone Keyboard ngay trong Cột 2 (Ẩn trên mobile/tablet vì mobile đã có ở footer) -->
+          <div class="w-full hidden lg:flex flex-col items-center gap-3">
             <span class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F]">
               Nhập câu trả lời
             </span>
@@ -455,7 +455,7 @@
 
 <!-- Fill Footer Controls: Trên Mobile/Tablet hiện bảng nhập liệu, trên Desktop ẩn (lg:hidden) phần bảng phím vì đã tích hợp vào Cột 2 -->
 {#if appState.currentFillItem}
-  <footer class="shrink-0 mt-2 w-full max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto space-y-2">
+  <footer class="shrink-0 mt-2 w-full space-y-2">
     <!-- Feedback Banner (khi gõ thủ công) -->
     {#if appState.fillFeedback && !isTileMode}
       <div class={`py-2 px-3 rounded-2xl text-center shadow-xs flex items-center justify-center gap-2 border transition-all ${
