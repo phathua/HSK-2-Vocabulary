@@ -4,7 +4,7 @@
   import ExampleSentence from './ExampleSentence.svelte';
   import MistakeComparison from './MistakeComparison.svelte';
   import GrammarQuizModal from './GrammarQuizModal.svelte';
-  import pexelsMap from '#lib/data/pexelsImageMap.json';
+  import { PEXELS_IMAGE_MAP as pexelsMap } from '#lib/data/pexelsImageMap';
 
   // Phosphor Icons
   import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';

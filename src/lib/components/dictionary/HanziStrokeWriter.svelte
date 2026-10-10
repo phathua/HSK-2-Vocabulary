@@ -4,7 +4,7 @@
   import ArrowsClockwise from 'phosphor-svelte/lib/ArrowsClockwise';
   import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
   import PencilLine from 'phosphor-svelte/lib/PencilLine';
-  import { getCharacterDetail, type HanziCharacterDetail } from '$lib/data/characterDetailMap';
+  import { getCharacterDetail, type HanziCharacterDetail } from '#lib/data/characterDetailMap';
 
   interface Props {
     hanzi: string;

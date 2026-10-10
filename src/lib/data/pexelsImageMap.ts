@@ -1,4 +1,4 @@
-{
+export const PEXELS_IMAGE_MAP: Record<string, string> = {
   "你": "https://images.pexels.com/photos/36968973/pexels-photo-36968973.jpeg?auto=compress&cs=tinysrgb&h=350",
   "好": "https://images.pexels.com/photos/8831809/pexels-photo-8831809.jpeg?auto=compress&cs=tinysrgb&h=350",
   "您": "https://images.pexels.com/photos/27663571/pexels-photo-27663571.jpeg?auto=compress&cs=tinysrgb&h=350",
@@ -334,4 +334,4 @@
   "票": "https://images.pexels.com/photos/29755921/pexels-photo-29755921.jpeg?auto=compress&cs=tinysrgb&h=350",
   "更": "https://images.pexels.com/photos/29411109/pexels-photo-29411109.jpeg?auto=compress&cs=tinysrgb&h=350",
   "阴": "https://images.pexels.com/photos/12008659/pexels-photo-12008659.jpeg?auto=compress&cs=tinysrgb&h=350"
-}
+};
