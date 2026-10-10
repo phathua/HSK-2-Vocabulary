@@ -20,7 +20,7 @@ export const HSK1_LESSON_INFOS: LessonInfo[] = [
 
 export const HSK1_VOCABULARY: VocabItem[] = [
   // ==================== BÀI 1 (6 từ) ====================
-  { id: "hsk1-1-1", pinyin: "nǐ", viet: "bạn, anh/chị", hanzi: "你", lesson: 1, image: "https://images.pexels.com/photos/36968973/pexels-photo-36968973.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-1-1", pinyin: "nǐ", viet: "bạn, anh/chị", hanzi: "你", lesson: 1, image: "https://images.pexels.com/photos/905947/pexels-photo-905947.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-1-2", pinyin: "hǎo", viet: "tốt, khỏe, hay", hanzi: "好", lesson: 1, image: "https://images.pexels.com/photos/8831809/pexels-photo-8831809.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-1-3", pinyin: "nín", viet: "ngài, ông/bà (kính trọng)", hanzi: "您", lesson: 1, image: "https://images.pexels.com/photos/27663571/pexels-photo-27663571.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-1-4", pinyin: "nǐmen", viet: "các bạn", hanzi: "你们", lesson: 1, image: "https://images.pexels.com/photos/36930033/pexels-photo-36930033.jpeg?auto=compress&cs=tinysrgb&h=350" },

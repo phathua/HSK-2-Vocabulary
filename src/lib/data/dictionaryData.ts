@@ -43,12 +43,25 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "partOfSpeech": "",
     "viet": "bạn, anh/chị",
     "enMeaning": "",
-    "image": "https://images.pexels.com/photos/36968973/pexels-photo-36968973.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/905947/pexels-photo-905947.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [],
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "你好！",
+            "pinyin": "Nǐ hǎo!",
+            "vi": "Chào bạn!",
+            "tag": "Chào hỏi"
+      },
+      {
+            "zh": "很高兴认识你。",
+            "pinyin": "Hěn gāoxìng rènshi nǐ.",
+            "vi": "Rất vui được quen biết bạn.",
+            "tag": "Làm quen"
+      }
+    ]
   },
   {
     "id": "hsk1-1-2",
@@ -69,7 +82,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "你好吗？我很好。",
+            "pinyin": "Nǐ hǎo ma? Wǒ hěn hǎo.",
+            "vi": "Bạn khỏe không? Tôi rất khỏe.",
+            "tag": "Hỏi thăm"
+      },
+      {
+            "zh": "这个电影很好看。",
+            "pinyin": "Zhège diànyǐng hěn hǎokàn.",
+            "vi": "Bộ phim này rất hay.",
+            "tag": "Đánh giá"
+      }
+    ]
   },
   {
     "id": "hsk1-1-3",
@@ -90,7 +116,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "老师，您好！",
+            "pinyin": "Lǎoshī, nín hǎo!",
+            "vi": "Thầy/Cô, chào thầy/cô ạ!",
+            "tag": "Kính ngữ"
+      },
+      {
+            "zh": "您请坐。",
+            "pinyin": "Nín qǐng zuò.",
+            "vi": "Mời ngài ngồi.",
+            "tag": "Lịch sự"
+      }
+    ]
   },
   {
     "id": "hsk1-1-4",
@@ -111,7 +150,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "你们都是学生吗？",
+            "pinyin": "Nǐmen dōu shì xuésheng ma?",
+            "vi": "Các bạn đều là học sinh phải không?",
+            "tag": "Hỏi thông tin"
+      },
+      {
+            "zh": "欢迎你们来到北京！",
+            "pinyin": "Huānyíng nǐmen lái dào Běijīng!",
+            "vi": "Chào mừng các bạn đến Bắc Kinh!",
+            "tag": "Chào đón"
+      }
+    ]
   },
   {
     "id": "hsk1-1-5",
@@ -132,7 +184,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "对不起，我来晚了。",
+            "pinyin": "Duìbuqǐ, wǒ lái wǎn le.",
+            "vi": "Xin lỗi, tôi đến muộn rồi.",
+            "tag": "Xin lỗi"
+      },
+      {
+            "zh": "对不起，我不知道。",
+            "pinyin": "Duìbuqǐ, wǒ bù zhīdào.",
+            "vi": "Xin lỗi, tôi không biết.",
+            "tag": "Giao tiếp"
+      }
+    ]
   },
   {
     "id": "hsk1-1-6",
@@ -153,7 +218,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "A: 对不起！B: 没关系。",
+            "pinyin": "A: Duìbuqǐ! B: Méi guānxi.",
+            "vi": "A: Xin lỗi! B: Không sao đâu.",
+            "tag": "Hồi đáp"
+      },
+      {
+            "zh": "没关系，下次注意就好。",
+            "pinyin": "Méi guānxi, xià cì zhùyì jiù hǎo.",
+            "vi": "Không có gì, lần sau chú ý là được.",
+            "tag": "An ủi"
+      }
+    ]
   },
   {
     "id": "hsk1-2-1",
@@ -174,7 +252,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "太谢谢你了！",
+            "pinyin": "Tài xièxie nǐ le!",
+            "vi": "Cảm ơn bạn nhiều lắm!",
+            "tag": "Cảm ơn"
+      },
+      {
+            "zh": "谢谢你的帮助。",
+            "pinyin": "Xièxie nǐ de bāngzhù.",
+            "vi": "Cảm ơn sự giúp đỡ của bạn.",
+            "tag": "Biết ơn"
+      }
+    ]
   },
   {
     "id": "hsk1-2-2",
@@ -280,7 +371,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "明天见，再见！",
+            "pinyin": "Míngtiān jiàn, zàijiàn!",
+            "vi": "Ngày mai gặp nhé, tạm biệt!",
+            "tag": "Tạm biệt"
+      },
+      {
+            "zh": "老师再见！",
+            "pinyin": "Lǎoshī zàijiàn!",
+            "vi": "Tạm biệt thầy/cô ạ!",
+            "tag": "Tạm biệt"
+      }
+    ]
   },
   {
     "id": "hsk1-3-1",
@@ -301,7 +405,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "你叫什么名字？",
+            "pinyin": "Nǐ jiào shénme míngzi?",
+            "vi": "Bạn tên là gì?",
+            "tag": "Hỏi tên"
+      },
+      {
+            "zh": "我叫李明。",
+            "pinyin": "Wǒ jiào Lǐ Míng.",
+            "vi": "Tôi tên là Lý Minh.",
+            "tag": "Giới thiệu"
+      }
+    ]
   },
   {
     "id": "hsk1-3-2",
@@ -322,7 +439,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "这是什么东西？",
+            "pinyin": "Zhè shì shénme dōngxi?",
+            "vi": "Đây là đồ vật gì vậy?",
+            "tag": "Hỏi đồ vật"
+      },
+      {
+            "zh": "你想吃什么？",
+            "pinyin": "Nǐ xiǎng chī shénme?",
+            "vi": "Bạn muốn ăn món gì?",
+            "tag": "Hỏi ý kiến"
+      }
+    ]
   },
   {
     "id": "hsk1-3-3",
@@ -343,7 +473,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "请问您的大名？",
+            "pinyin": "Qǐngwèn nín de dàmíng?",
+            "vi": "Xin hỏi quý danh của ngài?",
+            "tag": "Kính ngữ"
+      },
+      {
+            "zh": "我的名字叫大卫。",
+            "pinyin": "Wǒ de míngzi jiào Dàwèi.",
+            "vi": "Tên của tôi là David.",
+            "tag": "Giới thiệu"
+      }
+    ]
   },
   {
     "id": "hsk1-3-4",
@@ -364,7 +507,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "我是越南人。",
+            "pinyin": "Wǒ shì Yuènán rén.",
+            "vi": "Tôi là người Việt Nam.",
+            "tag": "Quốc tịch"
+      },
+      {
+            "zh": "我想学汉语。",
+            "pinyin": "Wǒ xiǎng xué Hànyǔ.",
+            "vi": "Tôi muốn học tiếng Trung.",
+            "tag": "Mong muốn"
+      }
+    ]
   },
   {
     "id": "hsk1-3-5",
@@ -385,7 +541,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "她是我的汉语老师。",
+            "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī.",
+            "vi": "Cô ấy là giáo viên tiếng Trung của tôi.",
+            "tag": "Quan hệ"
+      },
+      {
+            "zh": "今天不是星期天。",
+            "pinyin": "Jīntiān bú shì xīngqītiān.",
+            "vi": "Hôm nay không phải chủ nhật.",
+            "tag": "Thời gian"
+      }
+    ]
   },
   {
     "id": "hsk1-3-6",
@@ -406,7 +575,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "王老师教我们汉语。",
+            "pinyin": "Wáng lǎoshī jiāo wǒmen Hànyǔ.",
+            "vi": "Thầy Vương dạy chúng tôi tiếng Trung.",
+            "tag": "Học tập"
+      },
+      {
+            "zh": "老师辛苦了！",
+            "pinyin": "Lǎoshī xīnkǔ le!",
+            "vi": "Thầy/cô vất vả rồi ạ!",
+            "tag": "Tri ân"
+      }
+    ]
   },
   {
     "id": "hsk1-3-7",
@@ -448,7 +630,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "他们都是大学学生。",
+            "pinyin": "Tāmen dōu shì dàxué xuésheng.",
+            "vi": "Họ đều là sinh viên đại học.",
+            "tag": "Thân phận"
+      },
+      {
+            "zh": "学校里有很多新学生。",
+            "pinyin": "Xuéxiào lǐ yǒu hěn duō xīn xuésheng.",
+            "vi": "Trong trường có rất nhiều học sinh mới.",
+            "tag": "Trường học"
+      }
+    ]
   },
   {
     "id": "hsk1-3-9",
@@ -469,7 +664,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "北京的人很多。",
+            "pinyin": "Běijīng de rén hěn duō.",
+            "vi": "Người ở Bắc Kinh rất đông.",
+            "tag": "Miêu tả"
+      },
+      {
+            "zh": "他是哪国人？",
+            "pinyin": "Tā shì nǎ guó rén?",
+            "vi": "Anh ấy là người nước nào?",
+            "tag": "Hỏi han"
+      }
+    ]
   },
   {
     "id": "hsk1-4-1",
@@ -490,7 +698,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "她今天很高兴。",
+            "pinyin": "Tā jīntiān hěn gāoxìng.",
+            "vi": "Hôm nay cô ấy rất vui vẻ.",
+            "tag": "Tâm trạng"
+      },
+      {
+            "zh": "她是我姐姐。",
+            "pinyin": "Tā shì wǒ jiějie.",
+            "vi": "Cô ấy là chị gái của tôi.",
+            "tag": "Gia đình"
+      }
+    ]
   },
   {
     "id": "hsk1-4-2",
@@ -657,7 +878,20 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "compounds": [],
     "synonyms": [],
     "antonyms": [],
-    "sentences": []
+    "sentences": [
+      {
+            "zh": "他每天都在公司工作。",
+            "pinyin": "Tā měitiān dōu zài gōngsī gōngzuò.",
+            "vi": "Anh ấy mỗi ngày đều làm việc ở công ty.",
+            "tag": "Công việc"
+      },
+      {
+            "zh": "他是我的好朋友。",
+            "pinyin": "Tā shì wǒ de hǎo péngyou.",
+            "vi": "Anh ấy là bạn thân của tôi.",
+            "tag": "Bạn bè"
+      }
+    ]
   },
   {
     "id": "hsk1-4-9",

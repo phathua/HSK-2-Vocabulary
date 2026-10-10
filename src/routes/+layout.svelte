@@ -40,7 +40,7 @@
 </script>
 
 <Toast />
-<div class="h-screen max-h-[100dvh] w-full max-w-lg md:max-w-4xl lg:max-w-7xl mx-auto flex gap-4 p-2.5 sm:p-4 md:py-5 bg-slate-100 dark:bg-[#131314] font-sans select-none overflow-hidden transition-colors">
+<div class="h-screen max-h-[100dvh] w-full max-w-lg md:max-w-4xl lg:max-w-[1440px] xl:max-w-[1600px] mx-auto flex gap-4 p-2.5 sm:p-4 md:py-4 lg:px-6 bg-slate-100 dark:bg-[#131314] font-sans select-none overflow-hidden transition-colors">
   <!-- Desktop Left Sidebar (Cố định ở desktop) -->
   <SidebarMenu />
 

@@ -1,5 +1,5 @@
 export const PEXELS_IMAGE_MAP: Record<string, string> = {
-  "你": "https://images.pexels.com/photos/36968973/pexels-photo-36968973.jpeg?auto=compress&cs=tinysrgb&h=350",
+  "你": "https://images.pexels.com/photos/905947/pexels-photo-905947.jpeg?auto=compress&cs=tinysrgb&h=350",
   "好": "https://images.pexels.com/photos/8831809/pexels-photo-8831809.jpeg?auto=compress&cs=tinysrgb&h=350",
   "您": "https://images.pexels.com/photos/27663571/pexels-photo-27663571.jpeg?auto=compress&cs=tinysrgb&h=350",
   "你们": "https://images.pexels.com/photos/36930033/pexels-photo-36930033.jpeg?auto=compress&cs=tinysrgb&h=350",
