@@ -63,12 +63,16 @@
   // Kiểm tra xem trình duyệt có đang phát âm thanh TTS không (Ngăn WebKit Bug 321436)
   function canStartRecording(): boolean {
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      if (window.speechSynthesis.speaking) {
+      if (window.speechSynthesis.speaking && window.speechSynthesis.pending) {
         toast.info('Đang phát âm mẫu', {
           description: 'Vui lòng đợi âm thanh mẫu kết thúc rồi bấm Micro lại nhé!',
           duration: 3500
         });
         return false;
+      }
+      // Nếu speaking bị kẹt mồ côi (không có pending), giải phóng an toàn
+      if (window.speechSynthesis.speaking && !window.speechSynthesis.pending) {
+        try { window.speechSynthesis.cancel(); } catch {}
       }
     }
     return true;
@@ -217,17 +221,14 @@
     };
 
     r.onend = () => {
+      // Bỏ qua callback thuộc phiên cũ (ngăn onend trễ ghi đè trạng thái phiên mới)
+      if (r !== recognition || session !== mySession) return;
+
       recognitionStarted = false;
       recognitionStarting = false;
-      recState = 'idle';
-
-      if (r !== recognition) return;
-
-      // Nếu là expectedEnd, chỉ dọn dẹp cờ mà KHÔNG làm đứt mạch IPC
-      if (expectedEnd) {
-        expectedEnd = false;
-        return;
-      }
+      expectedEnd = false;
+      if (recState !== 'unsupported') recState = 'idle';
+      clearAllTimers();
     };
 
     return r;
@@ -280,11 +281,20 @@
   function stopRecording() {
     if (recognition && (recognitionStarted || recognitionStarting)) {
       recState = 'stopping';
+      const r = recognition;
       try {
-        recognition.stop();
-      } catch {
-        try { recognition.abort(); } catch {}
-      }
+        r.abort();
+      } catch {}
+
+      // Watchdog phòng hờ WebKit continuous mode không bắn onend
+      setTimeout(() => {
+        if (r === recognition && recState === 'stopping') {
+          recognitionStarted = false;
+          recognitionStarting = false;
+          expectedEnd = false;
+          recState = 'idle';
+        }
+      }, 800);
     }
   }
 
@@ -519,7 +529,7 @@
             <button
               type="button"
               disabled={isBusy}
-              onclick={() => { handleRetry(); startRecording(); }}
+              onclick={() => { handleRetry(); setTimeout(startRecording, 300); }}
               class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all bg-gradient-to-tr from-blue-600 to-indigo-600 text-white disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
               title="Bấm để phát âm lại"
             >
