@@ -13,20 +13,6 @@
 
   const menuItems = [
     {
-      title: 'Tra từ điển',
-      subtitle: 'Tra cứu Hán tự, Pinyin, nét viết',
-      href: '/tu-vung',
-      icon: MagnifyingGlass,
-      badge: 'Tra cứu',
-      colorClasses: {
-        bg: 'bg-rose-500/10 dark:bg-rose-500/20',
-        text: 'text-rose-600 dark:text-rose-400',
-        border: 'border-rose-200 dark:border-rose-800/60',
-        activeBg: 'bg-rose-50 dark:bg-[#282A2C]',
-        badgeBg: 'bg-rose-100 text-rose-700 dark:bg-rose-900/60 dark:text-rose-300'
-      }
-    },
-    {
       title: 'Từ vựng',
       subtitle: 'Luyện 4 kỹ năng & thẻ nhớ',
       href: '/',

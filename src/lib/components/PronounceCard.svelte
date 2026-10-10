@@ -457,19 +457,15 @@
         </span>
 
         {#if isZhToVi}
-          <!-- Chế độ Trung -> Việt: Hiển thị chữ Hán to rõ (tuyệt đối KHÔNG hiển thị Pinyin trước) -->
-          <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-slate-800 dark:text-[#E3E3E3] tracking-wide font-sans mt-1">
+          <!-- Chế độ Trung -> Việt: Chỉ hiển thị chữ Hán to rõ (tuyệt đối KHÔNG hiển thị nghĩa tiếng Việt hay Pinyin trước khi phát âm) -->
+          <h2 class="text-5xl sm:text-6xl md:text-7xl font-black text-blue-600 dark:text-blue-400 tracking-wide font-sans mt-2 mb-1">
             {appState.currentSpeechItem.hanzi}
           </h2>
-          <p class="text-sm md:text-base text-slate-400 dark:text-[#8E918F] font-medium">Nghĩa: {appState.currentSpeechItem.viet}</p>
         {:else}
-          <!-- Chế độ Việt -> Trung: Hiển thị nghĩa tiếng Việt trước và chữ Hán -->
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-800 dark:text-[#E3E3E3] mt-1">
+          <!-- Chế độ Việt -> Trung: Chỉ hiển thị nghĩa tiếng Việt to rõ (tuyệt đối KHÔNG hiển thị chữ Hán hay Pinyin trước khi phát âm) -->
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-800 dark:text-[#E3E3E3] mt-2 mb-1">
             {appState.currentSpeechItem.viet}
           </h2>
-          <p class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-600 dark:text-[#C4C7C5] font-sans tracking-wide">
-            {appState.currentSpeechItem.hanzi}
-          </p>
         {/if}
       </div>
 

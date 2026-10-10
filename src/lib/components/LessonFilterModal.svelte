@@ -374,7 +374,7 @@
         </button>
       </div>
 
-      <!-- Quick Action Buttons -->
+      <!-- Quick Action Buttons: Chọn tất cả / Bỏ chọn hết -->
       <div class="flex gap-2 mb-3 shrink-0">
         <button
           type="button"
@@ -385,10 +385,10 @@
         </button>
         <button
           type="button"
-          onclick={() => appState.deselectAllLessons()}
+          onclick={() => appState.clearAllLessons()}
           class="flex-1 py-1.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C]/60 hover:bg-slate-100 dark:hover:bg-[#282A2C] text-xs font-bold text-slate-700 dark:text-neutral-200 cursor-pointer transition-all active:scale-95"
         >
-          Chỉ bài 1
+          Bỏ chọn hết
         </button>
       </div>
 
@@ -455,13 +455,20 @@
         </div>
       </div>
 
-      <!-- Footer Action -->
+      <!-- Footer Action: Nền trắng chữ đen nổi bật, vô hiệu hóa khi không chọn bài nào (activeLessonsCount === 0) -->
       <button
         type="button"
+        disabled={appState.activeLessonsCount === 0}
         onclick={() => (appState.filterModalOpen = false)}
-        class="w-full py-2.5 rounded-xl bg-slate-900 dark:bg-[#282A2C] hover:bg-slate-800 dark:hover:bg-[#37393B] text-white text-xs font-black shrink-0 cursor-pointer transition-all active:scale-[0.98] shadow-sm flex items-center justify-center gap-1.5 border border-transparent dark:border-[#37393B]"
+        class={`w-full py-3 rounded-2xl text-xs font-black shrink-0 transition-all shadow-md flex items-center justify-center gap-1.5 border select-none ${
+          appState.activeLessonsCount === 0
+            ? 'bg-slate-200 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] border-slate-300/60 dark:border-[#37393B] cursor-not-allowed opacity-60'
+            : 'bg-white hover:bg-slate-50 active:scale-[0.98] text-slate-950 font-black border-slate-300 shadow-md cursor-pointer'
+        }`}
       >
-        <span>Xác nhận ({appState.filteredVocab.length} từ)</span>
+        <span>
+          {appState.activeLessonsCount === 0 ? 'Vui lòng chọn ít nhất 1 bài' : `Xác nhận (${appState.filteredVocab.length} từ)`}
+        </span>
       </button>
     </div>
   </div>

@@ -780,7 +780,6 @@ export class AppState {
   // Lesson Selectors
   toggleLesson(num: number) {
     const activeLessons = this.currentLevel === 'HSK1' ? this.selectedLessonsHsk1 : this.selectedLessonsHsk2;
-    if (activeLessons[num] && this.activeLessonsCount <= 1) return;
     activeLessons[num] = !activeLessons[num];
 
     const newVocab = this.allVocab.filter((item: VocabItem) => activeLessons[item.lesson]);
@@ -801,6 +800,19 @@ export class AppState {
     this.initQuiz(this.allVocab);
     this.initFlash();
     this.initSpeech(this.allVocab);
+    this.saveToLocalStorage();
+  }
+
+  clearAllLessons() {
+    const empty: Record<number, boolean> = {};
+    for (let i = 1; i <= 15; i++) empty[i] = false;
+    if (this.currentLevel === 'HSK1') this.selectedLessonsHsk1 = empty;
+    else this.selectedLessonsHsk2 = empty;
+
+    this.initFill([], false);
+    this.initQuiz([]);
+    this.initFlash();
+    this.initSpeech([]);
     this.saveToLocalStorage();
   }
 

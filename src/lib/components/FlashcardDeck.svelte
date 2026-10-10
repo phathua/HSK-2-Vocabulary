@@ -341,23 +341,22 @@
               <SmartImage
                 src={nextCardItem.image}
                 alt={nextCardItem.hanzi}
-                class="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl border-2 border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C]"
+                class="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-2xl border-2 border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C]"
               />
             </div>
           {/if}
 
           {#if !isZhToVi}
+            <!-- Chiều Việt -> Trung: Mặt trước chỉ hiện Nghĩa tiếng Việt -->
             <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">Nghĩa tiếng Việt</span>
             <div class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-[#E3E3E3] mb-2 max-w-sm leading-snug">
               {nextCardItem.viet}
             </div>
           {:else}
-            <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">Từ vựng tiếng Trung</span>
-            <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-1">
+            <!-- Chiều Trung -> Việt: Mặt trước chỉ hiện Chữ Hán (tuyệt đối không lộ Pinyin và tiếng Việt) -->
+            <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">Chữ Hán</span>
+            <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-2">
               {nextCardItem.hanzi}
-            </div>
-            <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-600 dark:text-[#C4C7C5] mb-2">
-              {nextCardItem.pinyin}
             </div>
           {/if}
         </div>
@@ -390,7 +389,7 @@
             transition: ${skipFlipTransition || isAppearing ? 'none' : 'transform 0.5s ease-out'};
           `}
         >
-          <!-- ================= FRONT FACE ================= -->
+          <!-- ================= FRONT FACE (CÂU HỎI - KHÔNG LỘ ĐÁP ÁN) ================= -->
           <div
             class="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden transition-colors"
           >
@@ -414,24 +413,23 @@
                 <SmartImage
                   src={appState.currentFlashItem.image}
                   alt={appState.currentFlashItem.hanzi}
-                  class="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl border-2 border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C]"
+                  class="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-2xl border-2 border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C]"
                 />
               </div>
             {/if}
 
-            <!-- Mặt trước: Hiển thị Nghĩa tiếng Việt HOẶC Chữ Hán kèm Pinyin -->
+            <!-- Mặt trước: Không lộ đáp án -->
             {#if !isZhToVi}
+              <!-- Chế độ Việt -> Trung: Hiện nghĩa tiếng Việt, bấm lật mới hiện chữ Hán & Pinyin -->
               <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 pointer-events-none">Nghĩa tiếng Việt</span>
               <div class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-[#E3E3E3] mb-2 max-w-sm leading-snug pointer-events-none">
                 {appState.currentFlashItem.viet}
               </div>
             {:else}
-              <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 pointer-events-none">Từ vựng tiếng Trung</span>
-              <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-1 pointer-events-none">
+              <!-- Chế độ Trung -> Việt: Hiện chữ Hán to rõ, bấm lật mới hiện Pinyin & Nghĩa tiếng Việt -->
+              <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 pointer-events-none">Chữ Hán</span>
+              <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-2 pointer-events-none">
                 {appState.currentFlashItem.hanzi}
-              </div>
-              <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-600 dark:text-[#C4C7C5] mb-2 pointer-events-none">
-                {appState.currentFlashItem.pinyin}
               </div>
             {/if}
 
@@ -448,7 +446,7 @@
             {/if}
           </div>
 
-          <!-- ================= BACK FACE (HIỂN THỊ ĐÁP ÁN ĐẦY ĐỦ PINYIN) ================= -->
+          <!-- ================= BACK FACE (HIỂN THỊ ĐÁP ÁN ĐẦY ĐỦ KHI LẬT) ================= -->
           <div
             class="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] bg-white dark:bg-[#1B1B1B] rounded-3xl border-2 border-blue-200 dark:border-blue-900/60 shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden transition-colors"
           >
@@ -466,7 +464,7 @@
               QUÊN
             </div>
 
-            <!-- Mặt sau hiển thị đáp án Pinyin đầy đủ -->
+            <!-- Mặt sau hiển thị đáp án đầy đủ -->
             <div class="w-full flex flex-col items-center justify-center pointer-events-none">
               <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-1">Đáp án</span>
               
@@ -523,7 +521,7 @@
                 <SmartImage
                   src={flyingCard.image}
                   alt={flyingCard.hanzi}
-                  class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border-2 border-slate-100 shadow-2xs bg-slate-50"
+                  class="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl border-2 border-slate-100 shadow-2xs bg-slate-50"
                 />
               </div>
             {/if}
@@ -534,12 +532,9 @@
                 {flyingCard.viet}
               </div>
             {:else}
-              <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Từ vựng tiếng Trung</span>
-              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-1">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Chữ Hán</span>
+              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-2">
                 {flyingCard.hanzi}
-              </div>
-              <div class="text-xl sm:text-2xl font-black text-slate-600 mb-2">
-                {flyingCard.pinyin}
               </div>
             {/if}
           {/if}
@@ -547,21 +542,21 @@
       {/if}
     </div>
 
-    <!-- Bottom Controls: Micro Stats -->
-    <footer class="shrink-0 mt-3">
+    <!-- Bottom Controls: Micro Stats (Đồng nhất độ cao và màu nền với FillWordCard và MultipleChoiceQuizCard) -->
+    <footer class="shrink-0 mt-2">
       <!-- Micro Stats Footer -->
-      <div class="flex justify-between items-center px-3 py-1.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-[11px] font-bold text-slate-500 dark:text-slate-400 transition-colors">
+      <div class="flex justify-between items-center px-3 py-1 bg-white dark:bg-[#1B1B1B] rounded-xl border border-slate-200 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] transition-colors">
         <span class="flex items-center gap-1">
           <CheckCircle weight="duotone" class="w-3.5 h-3.5 text-emerald-500" />
-          Thuộc: <b class="text-slate-900 dark:text-slate-100">{appState.flashKnown}</b>
+          Thuộc: <b class="text-slate-900 dark:text-[#E3E3E3]">{appState.flashKnown}</b>
         </span>
         <span class="flex items-center gap-1">
           <XCircle weight="duotone" class="w-3.5 h-3.5 text-rose-500" />
-          Chưa: <b class="text-slate-900 dark:text-slate-100">{appState.flashUnknown}</b>
+          Chưa: <b class="text-slate-900 dark:text-[#E3E3E3]">{appState.flashUnknown}</b>
         </span>
         <span class="flex items-center gap-1">
           <FastForward weight="duotone" class="w-3.5 h-3.5 text-amber-500" />
-          Còn: <b class="text-slate-900 dark:text-slate-100">{appState.flashDeck.length}</b>
+          Còn: <b class="text-slate-900 dark:text-[#E3E3E3]">{appState.flashDeck.length}</b>
         </span>
       </div>
     </footer>

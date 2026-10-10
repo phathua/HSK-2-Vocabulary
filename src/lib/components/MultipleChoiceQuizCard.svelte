@@ -39,13 +39,13 @@
 
   {#if appState.currentQuizItem}
     <div class="w-full flex flex-col items-center justify-center my-auto">
-      <!-- Vocabulary Image -->
-      {#if appState.currentQuizItem.image}
-        <div class="relative mb-2 md:mb-4">
+      <!-- Vocabulary Image: Chỉ hiển thị khi hỏi nghĩa tiếng Việt -> Chọn tiếng Trung (!isZhToVi). Ẩn hoàn toàn khi hỏi tiếng Trung để tránh lộ đáp án -->
+      {#if !isZhToVi && appState.currentQuizItem.image}
+        <div class="relative mb-3 md:mb-5">
           <SmartImage
             src={appState.currentQuizItem.image}
             alt="HSK Vocabulary"
-            class="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-2xl border border-slate-200 dark:border-[#282A2C] shadow-xs bg-slate-50 dark:bg-[#282A2C]"
+            class="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-2xl border-2 border-slate-100 dark:border-[#282A2C] shadow-xs bg-slate-50 dark:bg-[#282A2C]"
           />
         </div>
       {/if}
@@ -53,17 +53,17 @@
       <!-- Question Prompt Area -->
       {#if !isZhToVi}
         <!-- Mặc định: Hiển thị tiếng Việt ➔ Chọn Chữ Hán/Pinyin -->
-        <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-0.5">Chọn từ tiếng Trung đúng:</span>
+        <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">Chọn từ tiếng Trung đúng:</span>
         <div class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-[#E3E3E3] mb-2 max-w-md leading-tight">
           {appState.currentQuizItem.viet}
         </div>
       {:else}
-        <!-- Đảo ngược: Hiển thị Chữ Hán & Pinyin ➔ Chọn nghĩa tiếng Việt -->
-        <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-0.5">Chọn nghĩa tiếng Việt đúng:</span>
-        <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 font-sans mb-1">
+        <!-- Đảo ngược: Hiển thị Chữ Hán & Pinyin ➔ Chọn nghĩa tiếng Việt (Không kèm hình, chữ Hán siêu to nổi bật) -->
+        <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-2">Chọn nghĩa tiếng Việt đúng:</span>
+        <div class="text-5xl sm:text-6xl md:text-7xl font-black text-blue-600 dark:text-blue-400 font-sans mb-2 tracking-tight">
           {appState.currentQuizItem.hanzi}
         </div>
-        <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-700 dark:text-[#C4C7C5] mb-2">
+        <div class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-700 dark:text-[#C4C7C5] mb-2">
           {appState.currentQuizItem.pinyin}
         </div>
       {/if}
