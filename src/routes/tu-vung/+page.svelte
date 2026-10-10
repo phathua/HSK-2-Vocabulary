@@ -212,65 +212,69 @@
   <div
     class={`z-30 transition-all duration-300 ease-in-out ${
       isSticky
-        ? 'sticky top-0 -mx-1 px-1 pt-1 pb-2 bg-slate-100 dark:bg-[#131314] shadow-xs'
+        ? 'sticky top-0 pt-0 pb-1.5'
         : 'relative'
     } ${
       !isSearchVisible && isSticky ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
     }`}
   >
-    <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-3.5 md:p-5 border border-slate-200 dark:border-[#37393B] shadow-xs">
-      <div class="relative flex items-center">
-        <div class="absolute left-4.5 text-slate-400 dark:text-[#8E918F] pointer-events-none">
-          <MagnifyingGlass weight="bold" class="w-5 h-5 md:w-6 md:h-6 text-rose-500" />
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-8">
+        <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-3.5 md:p-5 border border-slate-200 dark:border-[#37393B] shadow-xs">
+          <div class="relative flex items-center">
+            <div class="absolute left-4.5 text-slate-400 dark:text-[#8E918F] pointer-events-none">
+              <MagnifyingGlass weight="bold" class="w-5 h-5 md:w-6 md:h-6 text-rose-500" />
+            </div>
+
+            <input
+              type="text"
+              bind:value={searchQuery}
+              placeholder="Tra từ bằng Chữ Hán, Pinyin, Hán Việt hoặc Tiếng Việt (VD: 苹果, duibuqi, quả táo)..."
+              class="w-full pl-13 pr-28 py-3 md:py-3.5 rounded-2xl bg-slate-50 dark:bg-[#282A2C] border border-slate-200 dark:border-[#37393B] text-slate-800 dark:text-[#E3E3E3] font-medium placeholder-slate-400 dark:placeholder-[#8E918F] focus:outline-hidden focus:ring-2 focus:ring-rose-500/30 focus:border-rose-500 transition-all text-xs md:text-sm shadow-inner"
+            />
+
+            <div class="absolute right-3 flex items-center gap-1.5">
+              {#if searchQuery}
+                <button
+                  onclick={clearSearch}
+                  aria-label="Xóa từ khóa"
+                  class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-[#37393B] transition-colors"
+                >
+                  <X weight="bold" class="w-4 h-4" />
+                </button>
+              {/if}
+
+              <button
+                onclick={toggleVoiceInput}
+                aria-label="Nhập bằng giọng nói"
+                class={`p-2 rounded-xl border transition-all ${
+                  isListening
+                    ? 'bg-rose-500 text-white animate-pulse border-rose-600'
+                    : 'bg-white dark:bg-[#1E1F20] hover:bg-slate-100 dark:hover:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5] border-slate-200 dark:border-[#37393B]'
+                }`}
+                title="Nói tiếng Trung để tra từ"
+              >
+                <Microphone weight={isListening ? 'fill' : 'bold'} class="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Thanh chip gợi ý nhanh các từ HSK phổ biến -->
+          <div class="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar pt-1 text-xs">
+            <span class="text-slate-400 dark:text-[#8E918F] font-semibold shrink-0 text-[11px]">Gợi ý:</span>
+            {#each ['对不起', '苹果', '北京', '谢谢', '高兴', '喜欢', '茶', '学习', '朋友'] as sug}
+              <button
+                onclick={() => {
+                  searchQuery = sug;
+                  goto(`/tu-vung?q=${encodeURIComponent(sug)}`);
+                }}
+                class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-[#282A2C] hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-600 dark:text-[#C4C7C5] hover:text-rose-600 dark:hover:text-rose-300 font-medium transition-colors shrink-0 text-[11px]"
+              >
+                {sug}
+              </button>
+            {/each}
+          </div>
         </div>
-
-        <input
-          type="text"
-          bind:value={searchQuery}
-          placeholder="Tra từ bằng Chữ Hán, Pinyin, Hán Việt hoặc Tiếng Việt (VD: 苹果, duibuqi, quả táo)..."
-          class="w-full pl-13 pr-28 py-3 md:py-3.5 rounded-2xl bg-slate-50 dark:bg-[#282A2C] border border-slate-200 dark:border-[#37393B] text-slate-800 dark:text-[#E3E3E3] font-medium placeholder-slate-400 dark:placeholder-[#8E918F] focus:outline-hidden focus:ring-2 focus:ring-rose-500/30 focus:border-rose-500 transition-all text-xs md:text-sm shadow-inner"
-        />
-
-        <div class="absolute right-3 flex items-center gap-1.5">
-          {#if searchQuery}
-            <button
-              onclick={clearSearch}
-              aria-label="Xóa từ khóa"
-              class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-[#37393B] transition-colors"
-            >
-              <X weight="bold" class="w-4 h-4" />
-            </button>
-          {/if}
-
-          <button
-            onclick={toggleVoiceInput}
-            aria-label="Nhập bằng giọng nói"
-            class={`p-2 rounded-xl border transition-all ${
-              isListening
-                ? 'bg-rose-500 text-white animate-pulse border-rose-600'
-                : 'bg-white dark:bg-[#1E1F20] hover:bg-slate-100 dark:hover:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5] border-slate-200 dark:border-[#37393B]'
-            }`}
-            title="Nói tiếng Trung để tra từ"
-          >
-            <Microphone weight={isListening ? 'fill' : 'bold'} class="w-4 h-4" />
-          </button>
-        </div>
-      </div>
-
-      <!-- Thanh chip gợi ý nhanh các từ HSK phổ biến -->
-      <div class="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar pt-1 text-xs">
-        <span class="text-slate-400 dark:text-[#8E918F] font-semibold shrink-0 text-[11px]">Gợi ý:</span>
-        {#each ['对不起', '苹果', '北京', '谢谢', '高兴', '喜欢', '茶', '学习', '朋友'] as sug}
-          <button
-            onclick={() => {
-              searchQuery = sug;
-              goto(`/tu-vung?q=${encodeURIComponent(sug)}`);
-            }}
-            class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-[#282A2C] hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-600 dark:text-[#C4C7C5] hover:text-rose-600 dark:hover:text-rose-300 font-medium transition-colors shrink-0 text-[11px]"
-          >
-            {sug}
-          </button>
-        {/each}
       </div>
     </div>
   </div>
