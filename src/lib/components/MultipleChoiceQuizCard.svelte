@@ -10,12 +10,22 @@
   import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
   import PencilLine from 'phosphor-svelte/lib/PencilLine';
   import SmartImage from './SmartImage.svelte';
+  import AnswerFeedbackDrawer from './AnswerFeedbackDrawer.svelte';
 
   const isZhToVi = $derived(appState.direction === 'zh_to_vi');
+  const isQuizCorrect = $derived(
+    appState.quizAnswered && appState.quizSelectedId === appState.currentQuizItem?.id
+  );
+  const isQuizWrong = $derived(
+    appState.quizAnswered &&
+      appState.quizSelectedId !== null &&
+      appState.quizSelectedId !== appState.currentQuizItem?.id
+  );
 </script>
 
 <!-- Main Multiple Choice Quiz Card -->
-<main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-center items-center text-center relative overflow-hidden transition-colors">
+<div class="relative flex-1 min-h-0 flex flex-col w-full h-full">
+  <main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-center items-center text-center relative overflow-hidden transition-colors">
   <!-- Floating Lesson Select Button (Icon cây bút nổi bật to bằng nút TTS bên phải, mở modal bài học) -->
   <button
     type="button"
@@ -130,22 +140,18 @@
           {/each}
         </div>
 
-        <!-- Nút Câu tiếp theo trên Desktop Cột 2 -->
-        <div class="h-11 w-full">
-          <button
-            type="button"
-            onclick={() => appState.quizAnswered && appState.nextQuizItem()}
-            disabled={!appState.quizAnswered}
-            class={`w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none ${
-              appState.quizAnswered
-                ? 'bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-md cursor-pointer animate-[pop_0.15s_ease]'
-                : 'bg-slate-200 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] border border-slate-300/60 dark:border-[#37393B] cursor-not-allowed opacity-80'
-            }`}
-          >
-            <span>Câu tiếp theo</span>
-            <ArrowRight weight="bold" class="w-4 h-4" />
-          </button>
-        </div>
+        <!-- Nút hướng dẫn trên Desktop Cột 2 -->
+        {#if !appState.quizAnswered}
+          <div class="h-11 w-full">
+            <button
+              type="button"
+              disabled
+              class="w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-slate-200 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] border border-slate-300/60 dark:border-[#37393B] cursor-not-allowed opacity-80"
+            >
+              <span>Chọn 1 đáp án để kiểm tra</span>
+            </button>
+          </div>
+        {/if}
       </div>
 
     </div>
@@ -237,22 +243,18 @@
         {/each}
       </div>
 
-      <!-- Nút Câu tiếp theo (Mobile/Tablet) -->
-      <div class="h-11 sm:h-12 w-full">
-        <button
-          type="button"
-          onclick={() => appState.quizAnswered && appState.nextQuizItem()}
-          disabled={!appState.quizAnswered}
-          class={`w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none ${
-            appState.quizAnswered
-              ? 'bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-md cursor-pointer animate-[pop_0.15s_ease]'
-              : 'bg-slate-200 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] border border-slate-300/60 dark:border-[#37393B] cursor-not-allowed opacity-80'
-          }`}
-        >
-          <span>Câu tiếp theo</span>
-          <ArrowRight weight="bold" class="w-4 h-4" />
-        </button>
-      </div>
+      <!-- Nút Câu tiếp theo chỉ hiện nếu chưa có Drawer -->
+      {#if !appState.quizAnswered}
+        <div class="h-11 sm:h-12 w-full">
+          <button
+            type="button"
+            disabled
+            class="w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-slate-200 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] border border-slate-300/60 dark:border-[#37393B] cursor-not-allowed opacity-80"
+          >
+            <span>Chọn 1 đáp án</span>
+          </button>
+        </div>
+      {/if}
     </div>
 
     <!-- Micro Stats Footer -->
@@ -272,3 +274,17 @@
     </div>
   </footer>
 {/if}
+
+  {#if appState.currentQuizItem}
+    <AnswerFeedbackDrawer
+      isAnswered={appState.quizAnswered}
+      isCorrect={isQuizCorrect}
+      isWrong={isQuizWrong}
+      correctAnswerText={isZhToVi
+        ? appState.currentQuizItem.viet
+        : `${appState.currentQuizItem.hanzi} (${appState.currentQuizItem.pinyin})`}
+      extraInfoText={!isZhToVi ? appState.currentQuizItem.viet : ''}
+      onNext={() => appState.nextQuizItem()}
+    />
+  {/if}
+</div>

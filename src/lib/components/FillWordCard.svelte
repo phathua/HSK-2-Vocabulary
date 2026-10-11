@@ -16,6 +16,7 @@
   import SquaresFour from 'phosphor-svelte/lib/SquaresFour';
   import Backspace from 'phosphor-svelte/lib/Backspace';
   import SmartImage from './SmartImage.svelte';
+  import FillFeedbackDrawer from './FillFeedbackDrawer.svelte';
   import { flip } from 'svelte/animate';
 
   let inputEl: HTMLInputElement | null = $state(null);
@@ -186,7 +187,8 @@
 {/if}
 
 <!-- Main Fill Word Card: Đồng nhất padding và max-width với các tab khác -->
-<main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-between text-center relative overflow-hidden transition-colors">
+<div class="relative flex-1 min-h-0 flex flex-col w-full h-full">
+  <main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-between text-center relative overflow-hidden transition-colors">
   <!-- Top Bar: Nút Bài bên trái, Nút đổi chế độ bên phải -->
   <div class="w-full flex items-center justify-between shrink-0 mb-2 z-10">
     <!-- Floating Lesson Select Button -->
@@ -512,73 +514,64 @@
       </div>
     {/if}
 
-    <!-- BẢNG CHỌN KÝ TỰ (TILE BANK) CHO MOBILE / TABLET (< lg): Ẩn trên desktop (lg:hidden) vì desktop đã có ở Cột 2 -->
-    {#if isTileMode && appState.fillWordChunks[appState.currentChunkIndex]}
-      {@const curChunk = appState.fillWordChunks[appState.currentChunkIndex]}
-      {@const hasWrongSlots = appState.fillWordChunks.some(c => c.slots.some(s => s.userChar !== s.char))}
-      {@const isWrong = appState.fillAnswered && (appState.fillFeedback?.type === 'wrong' || hasWrongSlots)}
-      {@const wrongSlots = isWrong ? curChunk.slots.filter(s => s.userChar !== s.char) : []}
-      {@const neededCorrectChars = isWrong ? wrongSlots.map(s => s.char) : []}
-      <div class="lg:hidden bg-white dark:bg-[#1B1B1B] rounded-2xl border border-slate-200 dark:border-[#282A2C] p-2.5 shadow-2xs space-y-2">
-        <!-- Tile Grid -->
-        <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
-          {#each curChunk.tiles as tile}
-            <!-- Khi sai: CHỈ MÀU XANH KÝ TỰ ĐÚNG THỰC TẾ mà người dùng đã điền sai hoặc thiếu -->
-            {@const isCorrectHighlight = isWrong && !tile.isDistractor && neededCorrectChars.includes(tile.char)}
-            <button
-              id={tile.id}
-              type="button"
-              disabled={tile.isUsed || appState.fillAnswered}
-              onclick={(e) => handleTileClick(tile.id, e)}
-              class={`min-w-9 h-10 sm:min-w-11 sm:h-12 px-2.5 rounded-xl font-black text-base sm:text-lg flex items-center justify-center transition-all select-none border-b-4 ${
-                isCorrectHighlight
-                  ? 'bg-emerald-500 text-white border-emerald-700 ring-2 ring-emerald-400 shadow-sm cursor-default animate-pulse'
-                  : tile.isUsed
+    <!-- BẢNG CHỌN KÝ TỰ (TILE BANK) HOẶC INPUT CHO MOBILE / TABLET: Chỉ hiện khi chưa trả lời -->
+    {#if !appState.fillAnswered}
+      {#if isTileMode && appState.fillWordChunks[appState.currentChunkIndex]}
+        {@const curChunk = appState.fillWordChunks[appState.currentChunkIndex]}
+        <div class="lg:hidden bg-white dark:bg-[#1B1B1B] rounded-2xl border border-slate-200 dark:border-[#282A2C] p-2.5 shadow-2xs space-y-2">
+          <!-- Tile Grid -->
+          <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+            {#each curChunk.tiles as tile}
+              <button
+                id={tile.id}
+                type="button"
+                disabled={tile.isUsed}
+                onclick={(e) => handleTileClick(tile.id, e)}
+                class={`min-w-9 h-10 sm:min-w-11 sm:h-12 px-2.5 rounded-xl font-black text-base sm:text-lg flex items-center justify-center transition-all select-none border-b-4 ${
+                  tile.isUsed
                     ? 'bg-slate-100/70 dark:bg-[#242628]/70 border-slate-200 dark:border-[#353739] text-slate-400/40 dark:text-[#8E918F]/30 pointer-events-none cursor-default'
                     : 'bg-slate-50 hover:bg-white dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border-slate-300 dark:border-[#3f4245] shadow-2xs active:border-b-0 active:translate-y-1 cursor-pointer'
-              }`}
-            >
-              {tile.char}
-            </button>
-          {/each}
+                }`}
+              >
+                {tile.char}
+              </button>
+            {/each}
+          </div>
         </div>
-      </div>
-    {:else}
-      <!-- Input Row Thủ Công CHO MOBILE / TABLET (< lg): Ẩn trên desktop (lg:hidden) vì desktop đã có ở Cột 2 -->
-      <div class="lg:hidden flex items-stretch gap-1.5 sm:gap-2">
-        <input
-          bind:this={inputEl}
-          type="text"
-          value={appState.fillInput}
-          oninput={handleInputChange}
-          onkeydown={handleKeyDown}
-          disabled={appState.fillAnswered}
-          placeholder={!isZhToVi ? "Gõ Pinyin (vd: ni3hao3)..." : "Gõ nghĩa tiếng Việt..."}
-          class="min-w-0 flex-1 h-11 sm:h-12 bg-white dark:bg-[#282A2C] border-2 border-slate-200 dark:border-[#37393B] focus:border-blue-500 dark:focus:border-blue-400 rounded-2xl px-3 sm:px-4 text-sm sm:text-base font-bold text-slate-900 dark:text-[#E3E3E3] outline-none shadow-2xs transition-colors"
-          autocomplete="off"
-          spellcheck="false"
-        />
-        <button
-          type="button"
-          onclick={() => appState.checkFillAnswer()}
-          class="h-11 sm:h-12 px-3 sm:px-4 bg-amber-400 hover:bg-amber-500 active:scale-95 text-slate-900 font-black text-xs sm:text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1 transition-all shrink-0 cursor-pointer"
-        >
-          <Check weight="bold" class="w-4 h-4" />
-          <span>{appState.fillAnswered ? "Tiếp" : "Kiểm tra"}</span>
-        </button>
-      </div>
+      {:else}
+        <!-- Input Row Thủ Công CHO MOBILE / TABLET (< lg): Ẩn trên desktop (lg:hidden) vì desktop đã có ở Cột 2 -->
+        <div class="lg:hidden flex items-stretch gap-1.5 sm:gap-2">
+          <input
+            bind:this={inputEl}
+            type="text"
+            value={appState.fillInput}
+            oninput={handleInputChange}
+            onkeydown={handleKeyDown}
+            placeholder={!isZhToVi ? "Gõ Pinyin (vd: ni3hao3)..." : "Gõ nghĩa tiếng Việt..."}
+            class="min-w-0 flex-1 h-11 sm:h-12 bg-white dark:bg-[#282A2C] border-2 border-slate-200 dark:border-[#37393B] focus:border-blue-500 dark:focus:border-blue-400 rounded-2xl px-3 sm:px-4 text-sm sm:text-base font-bold text-slate-900 dark:text-[#E3E3E3] outline-none shadow-2xs transition-colors"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button
+            type="button"
+            onclick={() => appState.checkFillAnswer()}
+            class="h-11 sm:h-12 px-3 sm:px-4 bg-amber-400 hover:bg-amber-500 active:scale-95 text-slate-900 font-black text-xs sm:text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1 transition-all shrink-0 cursor-pointer"
+          >
+            <Check weight="bold" class="w-4 h-4" />
+            <span>Kiểm tra</span>
+          </button>
+        </div>
 
-      <!-- Tone Keyboard (khi gõ thủ công trên mobile/tablet) -->
-      {#if !isZhToVi}
-        <div class="lg:hidden">
-          <ToneKeyboard onInsertChar={handleInsertChar} disabled={appState.fillAnswered} />
-        </div>
+        <!-- Tone Keyboard (khi gõ thủ công trên mobile/tablet) -->
+        {#if !isZhToVi}
+          <div class="lg:hidden">
+            <ToneKeyboard onInsertChar={handleInsertChar} />
+          </div>
+        {/if}
       {/if}
-    {/if}
 
-    <!-- Action Buttons: Giữ chung cho cả Desktop & Mobile -->
-    <div class="flex gap-2 items-center">
-      {#if !appState.fillAnswered}
+      <!-- Action Buttons: Chỉ hiện khi chưa trả lời -->
+      <div class="flex gap-2 items-center">
         <button
           type="button"
           onclick={() => appState.skipFill()}
@@ -597,7 +590,6 @@
           <span>Đáp án</span>
         </button>
 
-        <!-- Nút Xoá ký tự (Backspace): Đặt bên phải nút Đáp án, tự ẩn khi đã có đáp án -->
         {#if isTileMode}
           <button
             type="button"
@@ -608,17 +600,8 @@
             <Backspace weight="bold" class="w-5 h-5" />
           </button>
         {/if}
-      {:else}
-        <button
-          type="button"
-          onclick={() => appState.nextFillItem()}
-          class="w-full h-11 sm:h-12 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-black text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
-        >
-          <span>Tiếp tục từ sau</span>
-          <ArrowRight weight="bold" class="w-4 h-4" />
-        </button>
-      {/if}
-    </div>
+      </div>
+    {/if}
 
     <!-- Micro Stats Footer -->
     <div class="flex justify-between items-center px-3 py-1 bg-white dark:bg-[#1B1B1B] rounded-xl border border-slate-200 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] transition-colors">
@@ -637,3 +620,6 @@
     </div>
   </footer>
 {/if}
+
+  <FillFeedbackDrawer />
+</div>
