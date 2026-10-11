@@ -152,6 +152,19 @@
         <span>Phóng to</span>
       </button>
     </div>
+  {:else if question.board_image && !showBoardImage}
+    <!-- Nút xem nhanh bảng tranh cho các câu hỏi 12-15, 17-20 trong nhóm -->
+    <div class="my-2 flex items-center gap-2">
+      <button
+        type="button"
+        onclick={() => (isImageZoomed = true)}
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800 text-xs font-bold hover:bg-orange-100 dark:hover:bg-orange-900/50 transition-colors cursor-pointer shadow-2xs"
+        title="Xem bảng tranh A - F của phần thi này"
+      >
+        <MagnifyingGlassPlus class="w-3.5 h-3.5" />
+        <span>🖼️ Xem bảng tranh A – F</span>
+      </button>
+    </div>
   {:else if question.image}
     <!-- Ảnh minh họa câu hỏi đơn lẻ (Q1 - Q10) -->
     <div class="relative group my-3 max-w-sm rounded-2xl overflow-hidden border border-slate-100 dark:border-neutral-800 bg-slate-50 dark:bg-neutral-900/50">

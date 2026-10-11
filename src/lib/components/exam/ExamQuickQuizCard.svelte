@@ -114,6 +114,11 @@
 
   function handleKeydown(e: KeyboardEvent) {
     if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+    if (e.key === 'Escape' && isImageZoomed) {
+      isImageZoomed = false;
+      return;
+    }
+    if (isImageZoomed) return;
     if (e.key === 'ArrowRight' || e.key === 'Enter') {
       if (isLastQuestion) onSubmitExam();
       else onNextQuestion();
@@ -163,33 +168,71 @@
       <!-- CỘT 1 (Desktop col-span-5): Tranh minh họa, Đề bài, Hán tự to rõ, Giải thích tức thì -->
       <div class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-1 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6 max-h-full overflow-y-auto scrollbar-none">
 
-        <!-- Ảnh câu hỏi nếu có -->
+        <!-- Ảnh câu hỏi đơn lẻ nếu có (Q1 - Q10) -->
         {#if question.image}
           <div class="relative mb-2 max-h-[30vh] sm:max-h-[36vh] flex items-center justify-center">
-            <SmartImage
-              src={getExamImageUrl(question.exam_code, question.image)}
-              alt={`Hình câu ${question.question_no}`}
-              class="max-h-[25vh] sm:max-h-[32vh] max-w-full rounded-2xl object-contain border border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C]"
-            />
             <button
               type="button"
               onclick={() => (isImageZoomed = true)}
-              class="absolute top-2 right-2 p-1.5 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-xs transition-colors cursor-pointer"
+              class="cursor-pointer bg-transparent border-0 p-0 block group"
+              title="Bấm để phóng to ảnh"
+              aria-label="Phóng to ảnh"
+            >
+              <img
+                src={getExamImageUrl(question.exam_code, question.image)}
+                alt={`Hình câu ${question.question_no}`}
+                class="max-h-[25vh] sm:max-h-[32vh] w-auto max-w-full rounded-2xl object-contain border border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C] transition-transform group-hover:scale-[1.01]"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              onclick={() => (isImageZoomed = true)}
+              class="absolute top-2 right-2 px-2 py-1 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-xs transition-colors cursor-pointer text-[10px] font-bold flex items-center gap-1 shadow-sm"
               title="Phóng to ảnh"
             >
               <MagnifyingGlassPlus weight="bold" class="w-3.5 h-3.5" />
+              <span class="hidden sm:inline">Phóng to</span>
             </button>
           </div>
         {/if}
 
-        <!-- Bảng tranh đối chiếu A - F nếu có -->
+        <!-- Bảng tranh đối chiếu A - F nếu có (Q11 - Q20, Match Part 1/2) -->
         {#if question.board_image}
-          <div class="relative mb-2 max-h-[22vh] flex items-center justify-center">
-            <SmartImage
-              src={getExamImageUrl(question.exam_code, question.board_image)}
-              alt="Bảng tranh đối chiếu"
-              class="max-h-[18vh] max-w-full rounded-xl object-contain border border-slate-100 dark:border-[#282A2C]"
-            />
+          <div class="relative mb-2 max-w-sm sm:max-w-md w-full flex flex-col items-center justify-center">
+            <div class="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-[#282A2C] shadow-2xs bg-white dark:bg-[#1E1E1E]">
+              <button
+                type="button"
+                onclick={() => (isImageZoomed = true)}
+                class="w-full flex items-center justify-center p-1.5 cursor-pointer bg-transparent border-0 group"
+                title="Bấm để phóng to bảng tranh A - F"
+                aria-label="Phóng to bảng tranh đối chiếu"
+              >
+                <img
+                  src={getExamImageUrl(question.exam_code, question.board_image)}
+                  alt="Bảng tranh đối chiếu A - F"
+                  class="max-h-[28vh] sm:max-h-[36vh] w-auto max-w-full rounded-xl object-contain mx-auto transition-transform group-hover:scale-[1.01]"
+                  loading="lazy"
+                />
+              </button>
+              <button
+                type="button"
+                onclick={() => (isImageZoomed = true)}
+                class="absolute top-2 right-2 px-2 py-1 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-xs transition-colors cursor-pointer text-[10px] font-bold flex items-center gap-1 shadow-sm"
+                title="Phóng to bảng tranh"
+              >
+                <MagnifyingGlassPlus weight="bold" class="w-3.5 h-3.5" />
+                <span class="hidden sm:inline">Phóng to</span>
+              </button>
+            </div>
+            <button
+              type="button"
+              onclick={() => (isImageZoomed = true)}
+              class="text-[11px] font-bold text-orange-600 dark:text-orange-400 hover:underline mt-1 flex items-center gap-1 cursor-pointer bg-transparent border-0 active:scale-95 transition-transform"
+            >
+              <MagnifyingGlassPlus weight="bold" class="w-3.5 h-3.5" />
+              <span>Bấm vào ảnh để phóng to xem rõ tranh A – F</span>
+            </button>
           </div>
         {/if}
 
@@ -416,30 +459,79 @@
   </footer>
 </div>
 
-<!-- Modal Phóng to ảnh -->
-{#if isImageZoomed && question.image}
-  <div class="fixed inset-0 z-50 flex items-center justify-center p-4">
+<!-- Modal Phóng to ảnh (Hỗ trợ cả question.board_image và question.image) -->
+{#if isImageZoomed && (question.board_image || question.image)}
+  {@const activeZoomSrc = getExamImageUrl(question.exam_code, question.board_image || question.image)}
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 animate-in fade-in duration-150">
     <button
       type="button"
-      class="fixed inset-0 bg-black/80 backdrop-blur-xs cursor-default w-full h-full border-none"
+      class="fixed inset-0 bg-black/85 backdrop-blur-sm cursor-default w-full h-full border-none"
       onclick={() => (isImageZoomed = false)}
       aria-label="Đóng phóng to ảnh"
     ></button>
     <div
-      class="relative z-10 max-w-3xl w-full max-h-[85vh] bg-white dark:bg-neutral-900 rounded-3xl p-4 overflow-hidden shadow-2xl flex flex-col items-center justify-center"
+      class="relative z-10 max-w-4xl w-full max-h-[94vh] bg-white dark:bg-[#1E1E1E] rounded-3xl p-3 sm:p-4 overflow-hidden shadow-2xl flex flex-col items-center justify-between border border-slate-200 dark:border-[#333]"
     >
-      <SmartImage
-        src={getExamImageUrl(question.exam_code, question.image)}
-        alt={`Ảnh phóng to câu ${question.question_no}`}
-        class="max-w-full max-h-[75vh] object-contain rounded-2xl"
-      />
-      <button
-        type="button"
-        onclick={() => (isImageZoomed = false)}
-        class="mt-3 px-5 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs cursor-pointer shadow-xs"
-      >
-        Đóng
-      </button>
+      <!-- Modal Header -->
+      <div class="w-full flex items-center justify-between pb-2 mb-1 border-b border-slate-100 dark:border-[#282A2C] shrink-0">
+        <span class="text-xs sm:text-sm font-bold text-slate-800 dark:text-neutral-200 flex items-center gap-1.5">
+          {question.board_image ? '🖼️ Bảng tranh đối chiếu (A – F)' : `📷 Ảnh câu ${question.question_no}`}
+        </span>
+        <button
+          type="button"
+          onclick={() => (isImageZoomed = false)}
+          class="p-1 rounded-xl hover:bg-slate-100 dark:hover:bg-[#282A2C] text-slate-500 hover:text-slate-800 dark:text-neutral-400 dark:hover:text-white transition-colors cursor-pointer"
+          title="Đóng (ESC)"
+        >
+          <X weight="bold" class="w-5 h-5" />
+        </button>
+      </div>
+
+      <!-- Zoom Image Container -->
+      <div class="flex-1 w-full flex items-center justify-center overflow-auto min-h-0 py-1">
+        <img
+          src={activeZoomSrc}
+          alt="Ảnh phóng to chi tiết"
+          class="max-w-full max-h-[68vh] sm:max-h-[75vh] object-contain rounded-xl select-none shadow-xs"
+        />
+      </div>
+
+      <!-- Quick Answer Bar ngay trong modal: học viên vừa soi tranh A - F vừa bấm chọn đáp án luôn -->
+      {#if !isAnswered && optionChoices.length > 0}
+        <div class="w-full pt-2 mt-1 border-t border-slate-100 dark:border-[#282A2C] shrink-0 flex flex-col items-center gap-1.5">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-neutral-400">
+            Chọn nhanh đáp án Câu {question.question_no}:
+          </span>
+          <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 w-full">
+            {#each optionChoices as opt}
+              <button
+                type="button"
+                onclick={() => {
+                  onSelectAnswer(opt.value);
+                  isImageZoomed = false;
+                }}
+                class="px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-xl font-black text-xs sm:text-sm bg-slate-100 dark:bg-[#282A2C] hover:bg-orange-500 hover:text-white text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-[#37393B] active:scale-95 transition-all cursor-pointer shadow-xs"
+              >
+                {opt.value}
+              </button>
+            {/each}
+          </div>
+        </div>
+      {:else}
+        <!-- Modal Footer with Close button -->
+        <div class="w-full pt-2 mt-1 border-t border-slate-100 dark:border-[#282A2C] flex items-center justify-between shrink-0">
+          <span class="text-[11px] text-slate-400 dark:text-neutral-400">
+            Chạm ra ngoài hoặc bấm Đóng
+          </span>
+          <button
+            type="button"
+            onclick={() => (isImageZoomed = false)}
+            class="px-5 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold text-xs cursor-pointer shadow-xs transition-transform"
+          >
+            Đóng
+          </button>
+        </div>
+      {/if}
     </div>
   </div>
 {/if}

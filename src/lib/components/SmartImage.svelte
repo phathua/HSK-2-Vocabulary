@@ -4,14 +4,17 @@
     fallbackSrc?: string;
     alt?: string;
     class?: string;
+    objectFit?: 'cover' | 'contain';
   }
 
-  let { src = '', fallbackSrc = '', alt = 'Hình minh họa', class: className = '' }: Props = $props();
+  let { src = '', fallbackSrc = '', alt = 'Hình minh họa', class: className = '', objectFit = 'cover' }: Props = $props();
 
   let isLoaded = $state(false);
   let hasFailedAll = $state(false);
   let activeSrc = $state('');
   let triedFallback = $state(false);
+
+  const fitMode = $derived(className.includes('object-contain') || objectFit === 'contain' ? 'object-contain' : 'object-cover');
 
   // Khi URL ảnh chính thay đổi, reset state an toàn
   $effect(() => {
@@ -64,7 +67,7 @@
       {alt}
       onload={handleLoad}
       onerror={handleError}
-      class={`w-full h-full object-cover transition-opacity duration-200 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      class={`w-full h-full ${fitMode} transition-opacity duration-200 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       loading="lazy"
     />
   {/if}
