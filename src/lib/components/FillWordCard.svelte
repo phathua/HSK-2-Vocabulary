@@ -117,6 +117,10 @@
   // Animation bay từ Slot hàng trên ngược về Tile hàng dưới
   function handleSlotClick(cIdx: number, slotId: string, event: MouseEvent) {
     if (appState.fillAnswered) return;
+
+    // Luôn luôn chuyển nhóm từ tiêu điểm sang cIdx khi người dùng bấm vào bất kỳ ô nào của nhóm đó
+    appState.currentChunkIndex = cIdx;
+
     const curChunk = appState.fillWordChunks[cIdx];
     if (!curChunk) return;
     const slot = curChunk.slots.find(s => s.id === slotId);
@@ -159,7 +163,6 @@
       }, 260);
     }
 
-    appState.currentChunkIndex = cIdx;
     appState.unselectSlot(cIdx, slotId);
   }
 </script>
@@ -302,13 +305,25 @@
             <div class="w-full flex items-center justify-center overflow-x-auto no-scrollbar gap-x-2.5 sm:gap-x-4 py-2 px-1">
               {#each appState.fillWordChunks as chunk, cIdx}
                 <div
-                  role="group"
+                  role="button"
+                  tabindex="0"
                   aria-label={`Cụm từ ${cIdx + 1}`}
-                  class={`flex items-center shrink-0 gap-1 sm:gap-1.5 p-1 rounded-2xl border transition-all ${
+                  onclick={() => {
+                    if (!appState.fillAnswered) {
+                      appState.currentChunkIndex = cIdx;
+                    }
+                  }}
+                  onkeydown={(e) => {
+                    if ((e.key === 'Enter' || e.key === ' ') && !appState.fillAnswered) {
+                      appState.currentChunkIndex = cIdx;
+                    }
+                  }}
+                  class={`flex items-center shrink-0 gap-1 sm:gap-1.5 p-1 rounded-2xl border transition-all cursor-pointer select-none ${
                     cIdx === appState.currentChunkIndex
                       ? 'border-blue-500/80 bg-blue-50/50 dark:bg-blue-950/25 dark:border-blue-500/60 ring-2 ring-blue-500/20'
-                      : 'border-slate-200/60 dark:border-[#2f3133] bg-slate-50/40 dark:bg-[#242628]/40 hover:border-slate-300 dark:hover:border-[#3c3f42]'
+                      : 'border-slate-200/60 dark:border-[#2f3133] bg-slate-50/40 dark:bg-[#242628]/40 hover:border-slate-300 dark:hover:border-[#3c3f42] opacity-80 hover:opacity-100'
                   }`}
+                  title={cIdx === appState.currentChunkIndex ? 'Cụm từ đang điền' : 'Bấm để chuyển sang cụm từ này'}
                 >
                   {#each chunk.slots as slot}
                     {@const isCorrectSlot = appState.fillAnswered && !isSkipped && slot.userChar === slot.char}
@@ -316,11 +331,14 @@
                     <button
                       id={slot.id}
                       type="button"
-                      disabled={slot.isPreFilled || appState.fillAnswered}
-                      onclick={(e) => handleSlotClick(cIdx, slot.id, e)}
+                      disabled={appState.fillAnswered}
+                      onclick={(e) => {
+                        e.stopPropagation();
+                        handleSlotClick(cIdx, slot.id, e);
+                      }}
                       class={`w-9 h-11 sm:w-10 sm:h-12 md:w-11 md:h-13 rounded-xl flex items-center justify-center font-black text-base sm:text-lg transition-all border-b-4 select-none shrink-0 ${
                         slot.isPreFilled
-                          ? 'bg-slate-200 dark:bg-[#323537] text-slate-500 dark:text-slate-400 border-slate-300 dark:border-[#3c3f42] cursor-not-allowed'
+                          ? 'bg-slate-200 dark:bg-[#323537] text-slate-500 dark:text-slate-400 border-slate-300 dark:border-[#3c3f42] cursor-pointer'
                           : isSkipped
                             ? 'bg-amber-400 text-slate-950 border-amber-600 shadow-xs'
                             : isCorrectSlot
@@ -330,10 +348,10 @@
                                 : slot.userChar
                                   ? 'bg-blue-500 text-white border-blue-700 shadow-xs cursor-pointer active:scale-95'
                                   : cIdx === appState.currentChunkIndex
-                                    ? 'bg-white dark:bg-[#282A2C] border-dashed border-2 border-slate-300 dark:border-[#404346] text-transparent'
-                                    : 'bg-white/60 dark:bg-[#282A2C]/60 border-dashed border-2 border-slate-200 dark:border-[#35373a] text-transparent'
+                                    ? 'bg-white dark:bg-[#282A2C] border-dashed border-2 border-slate-300 dark:border-[#404346] text-transparent cursor-pointer'
+                                    : 'bg-white/60 dark:bg-[#282A2C]/60 border-dashed border-2 border-slate-200 dark:border-[#35373a] text-transparent cursor-pointer'
                       }`}
-                      title={slot.isPreFilled ? 'Ký tự gợi ý sẵn' : slot.userChar ? 'Bấm để gỡ bỏ' : 'Bấm để điền vế này'}
+                      title={slot.isPreFilled ? 'Ký tự gợi ý sẵn (Bấm để chọn cụm từ này)' : slot.userChar ? 'Bấm để gỡ bỏ' : 'Bấm để điền vế này'}
                     >
                       {slot.userChar || '_'}
                     </button>
