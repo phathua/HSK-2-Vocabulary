@@ -400,7 +400,7 @@
         class="mt-2.5 pt-2.5 border-t border-slate-200/80 dark:border-neutral-800/80 flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-1 duration-200"
       >
         <!-- Hàng hiển thị Karaoke Word-by-Word hoặc Thông báo Nhạc dạo -->
-        {#if activeSubtitle.isIntro || activeSubtitle.text.includes('🎵')}
+        {#if activeSubtitle.text.includes('🎵')}
           <div class="flex items-center justify-center gap-2 py-2 text-slate-500 dark:text-neutral-400 font-medium text-xs sm:text-sm">
             <span class="text-base animate-bounce">🎵</span>
             <span>Đang phát nhạc dạo đầu bài thi HSK 2...</span>
