@@ -379,7 +379,7 @@
             title="Đang xem trước 60s. Bấm để phát audio ngay!"
             aria-label="Phát audio ngay"
           >
-            <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} ml-0.5`} />
+            <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} translate-x-[1.5px]`} />
           </button>
         {:else if isExamMode && !isPreviewPhase}
           <div
@@ -398,7 +398,7 @@
             {#if isPlaying}
               <Pause weight="fill" class={isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} />
             {:else}
-              <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} ml-0.5`} />
+              <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} translate-x-[1.5px]`} />
             {/if}
           </button>
         {/if}
