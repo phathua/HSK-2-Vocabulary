@@ -434,14 +434,6 @@
             </div>
           {/if}
         </div>
-
-        <!-- Dòng giải nghĩa tiếng Việt đi kèm -->
-        {#if activeSubtitle.viet}
-          <div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-neutral-400 font-medium px-1 bg-slate-50/70 dark:bg-neutral-800/40 rounded-lg py-1 border border-slate-200/50 dark:border-neutral-800">
-            <span class="font-bold text-orange-600 dark:text-orange-400 shrink-0">Dịch nghĩa:</span>
-            <span class="truncate">{activeSubtitle.viet}</span>
-          </div>
-        {/if}
       </div>
     {/if}
 

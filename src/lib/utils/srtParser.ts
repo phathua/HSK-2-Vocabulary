@@ -75,13 +75,13 @@ export async function fetchSrt(examCode: string, baseUrl: string): Promise<Subti
     }
   }
 
-  // Prepend standardized intro rules subtitles if the file does not have early intro lines (0:00 - ~02:00)
+  // Prepend standardized intro rules subtitles ONLY if the file does not have early intro lines (< 100s)
   if (loadedSubtitles.length > 0) {
     const firstSub = loadedSubtitles[0];
-    if (firstSub.startTime > 30) {
-      // Intro missing: prepend standardized intro rules (0:00 - ~02:00)
+    if (firstSub.startTime > 100) {
+      // Intro completely missing: prepend standardized intro rules (0:00 - ~02:00)
       return [...EXAM_INTRO_RULES_SUBTITLES, ...loadedSubtitles];
-    } else if (firstSub.startTime <= 5 && firstSub.text.includes('Nhạc dạo đầu')) {
+    } else if (firstSub.startTime <= 5 && firstSub.text.includes('Nhạc dạo đầu') && firstSub.endTime > 60) {
       // If there's only a single placeholder intro block that ends around 68s, replace it with rich intro rules
       const remainingSubs = loadedSubtitles.slice(1);
       return [...EXAM_INTRO_RULES_SUBTITLES, ...remainingSubs];
