@@ -164,13 +164,13 @@
     </div>
 
     <!-- Container Nội Dung: 2 Cột trên Desktop (lg:grid lg:grid-cols-12), 1 Cột trên Mobile -->
-    <div class="w-full flex-1 flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center justify-center my-auto py-1 min-h-0">
+    <div class="w-full flex-1 flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center justify-center my-auto pt-7 sm:pt-9 lg:pt-0 py-1 min-h-0">
       <!-- CỘT 1 (Desktop col-span-5): Tranh minh họa, Đề bài, Hán tự to rõ, Giải thích tức thì -->
       <div class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-1 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6 max-h-full overflow-y-auto scrollbar-none">
 
         <!-- Ảnh câu hỏi đơn lẻ nếu có (Q1 - Q10) -->
         {#if question.image}
-          <div class="relative mb-2 max-h-[30vh] sm:max-h-[36vh] flex items-center justify-center">
+          <div class="relative mb-1.5 sm:mb-2 max-h-[25vh] sm:max-h-[32vh] flex items-center justify-center">
             <button
               type="button"
               onclick={() => (isImageZoomed = true)}
@@ -181,7 +181,7 @@
               <img
                 src={getExamImageUrl(question.exam_code, question.image)}
                 alt={`Hình câu ${question.question_no}`}
-                class="max-h-[25vh] sm:max-h-[32vh] w-auto max-w-full rounded-2xl object-contain border border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C] transition-transform group-hover:scale-[1.01]"
+                class="max-h-[22vh] sm:max-h-[30vh] w-auto max-w-full rounded-2xl object-contain border border-slate-100 dark:border-[#282A2C] shadow-2xs bg-slate-50 dark:bg-[#282A2C] transition-transform group-hover:scale-[1.01]"
                 loading="lazy"
               />
             </button>
@@ -199,49 +199,46 @@
 
         <!-- Bảng tranh đối chiếu A - F nếu có (Q11 - Q20, Match Part 1/2) -->
         {#if question.board_image}
-          <div class="relative mb-2 max-w-sm sm:max-w-md w-full flex flex-col items-center justify-center">
+          <div class="relative mb-1 sm:mb-1.5 max-w-sm sm:max-w-md w-full flex flex-col items-center justify-center">
             <div class="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-[#282A2C] shadow-2xs bg-white dark:bg-[#1E1E1E]">
               <button
                 type="button"
                 onclick={() => (isImageZoomed = true)}
-                class="w-full flex items-center justify-center p-1.5 cursor-pointer bg-transparent border-0 group"
+                class="w-full flex items-center justify-center p-1 sm:p-1.5 cursor-pointer bg-transparent border-0 group"
                 title="Bấm để phóng to bảng tranh A - F"
                 aria-label="Phóng to bảng tranh đối chiếu"
               >
                 <img
                   src={getExamImageUrl(question.exam_code, question.board_image)}
                   alt="Bảng tranh đối chiếu A - F"
-                  class="max-h-[28vh] sm:max-h-[36vh] w-auto max-w-full rounded-xl object-contain mx-auto transition-transform group-hover:scale-[1.01]"
+                  class="max-h-[19vh] xs:max-h-[22vh] sm:max-h-[28vh] md:max-h-[34vh] w-auto max-w-full rounded-xl object-contain mx-auto transition-transform group-hover:scale-[1.01]"
                   loading="lazy"
                 />
               </button>
+              <!-- Nút Phóng to nổi góc trên -->
               <button
                 type="button"
                 onclick={() => (isImageZoomed = true)}
-                class="absolute top-2 right-2 px-2 py-1 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-xs transition-colors cursor-pointer text-[10px] font-bold flex items-center gap-1 shadow-sm"
+                class="absolute top-1.5 right-1.5 px-2 py-0.5 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-xs transition-colors cursor-pointer text-[10px] font-bold flex items-center gap-1 shadow-sm"
                 title="Phóng to bảng tranh"
               >
                 <MagnifyingGlassPlus weight="bold" class="w-3.5 h-3.5" />
                 <span class="hidden sm:inline">Phóng to</span>
               </button>
+              <!-- Badge gợi ý chạm phóng to góc dưới (không tốn thêm chiều cao) -->
+              <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-black/55 text-white text-[9px] font-bold backdrop-blur-xs pointer-events-none whitespace-nowrap shadow-xs">
+                🔍 Chạm để phóng to A – F
+              </div>
             </div>
-            <button
-              type="button"
-              onclick={() => (isImageZoomed = true)}
-              class="text-[11px] font-bold text-orange-600 dark:text-orange-400 hover:underline mt-1 flex items-center gap-1 cursor-pointer bg-transparent border-0 active:scale-95 transition-transform"
-            >
-              <MagnifyingGlassPlus weight="bold" class="w-3.5 h-3.5" />
-              <span>Bấm vào ảnh để phóng to xem rõ tranh A – F</span>
-            </button>
           </div>
         {/if}
 
         <!-- Tiêu đề câu hỏi / Prompt Text -->
-        <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">
+        <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-0.5 sm:mb-1">
           {#if isTrueFalse}
             Chọn Đúng hoặc Sai:
           {:else if question.part.includes('Part 2') || question.type.includes('Match')}
-            Chọn tranh A - F phù hợp:
+            Chọn tranh A – F phù hợp:
           {:else}
             Chọn đáp án chính xác:
           {/if}
