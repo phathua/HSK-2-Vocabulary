@@ -371,9 +371,9 @@
           </div>
         {/if}
 
-        <!-- Hộp Lời thoại & Giải thích tức thì khi đã trả lời -->
+        <!-- Hộp Lời thoại & Giải thích tức thì khi đã trả lời (Chỉ hiển thị trên Mobile/Tablet) -->
         {#if isAnswered}
-          <div class="w-full max-w-sm mt-2 p-2.5 rounded-2xl border text-left transition-all animate-in fade-in duration-150 {
+          <div class="lg:hidden w-full max-w-sm mt-2 p-2.5 rounded-2xl border text-left transition-all animate-in fade-in duration-150 {
             isCorrect
               ? 'bg-emerald-50/90 dark:bg-emerald-950/40 border-emerald-300 dark:border-emerald-800 text-emerald-950 dark:text-emerald-100'
               : 'bg-rose-50/90 dark:bg-rose-950/40 border-rose-300 dark:border-rose-800 text-rose-950 dark:text-rose-100'
@@ -405,6 +405,37 @@
 
       <!-- CỘT 2 (Desktop col-span-7): 4 Đáp án trắc nghiệm & Nút tiếp theo trên Desktop (lg:flex) -->
       <div class="w-full lg:col-span-7 hidden lg:flex flex-col items-center justify-center py-2 lg:pl-4 space-y-3">
+        <!-- Hộp Lời thoại & Giải thích tức thì trên Desktop (nằm ngay phía trên các nút đáp án) -->
+        {#if isAnswered}
+          <div class="w-full p-3 rounded-2xl border text-left transition-all animate-in fade-in duration-150 {
+            isCorrect
+              ? 'bg-emerald-50/90 dark:bg-emerald-950/40 border-emerald-300 dark:border-emerald-800 text-emerald-950 dark:text-emerald-100'
+              : 'bg-rose-50/90 dark:bg-rose-950/40 border-rose-300 dark:border-rose-800 text-rose-950 dark:text-rose-100'
+          }">
+            <div class="flex items-center gap-1.5 font-bold text-xs sm:text-sm">
+              {#if isCorrect}
+                <CheckCircle weight="fill" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                <span>Chính xác! Đáp án: <strong class="font-mono">{question.answer}</strong></span>
+              {:else}
+                <XCircle weight="fill" class="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
+                <span>Chưa đúng! Đáp án đúng: <strong class="font-mono text-emerald-600 dark:text-emerald-400">{question.answer}</strong></span>
+              {/if}
+            </div>
+
+            {#if question.listening_script}
+              <div class="text-xs sm:text-sm font-semibold font-serif mt-1.5 pt-1.5 border-t border-slate-200/50 dark:border-neutral-800 leading-snug">
+                {question.listening_script}
+              </div>
+            {/if}
+
+            {#if question.explanation}
+              <div class="text-xs sm:text-sm mt-1.5 text-slate-600 dark:text-neutral-300 leading-snug">
+                <span class="font-bold text-amber-600 dark:text-amber-400">💡</span> {question.explanation}
+              </div>
+            {/if}
+          </div>
+        {/if}
+
         <!-- Option Grid Desktop -->
         <div class="w-full grid {isTrueFalse ? 'grid-cols-2' : optionChoices.length > 4 ? 'grid-cols-3' : 'grid-cols-2'} gap-2.5">
           {#each optionChoices as opt, idx (opt.value)}
