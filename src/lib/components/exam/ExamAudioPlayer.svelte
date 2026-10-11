@@ -58,7 +58,9 @@
 
   const activeSubtitle = $derived.by(() => {
     if (activeSubtitleIndex < 0 || activeSubtitleIndex >= subtitles.length) return null;
-    return subtitles[activeSubtitleIndex];
+    const sub = subtitles[activeSubtitleIndex];
+    if (currentTime > sub.endTime + 1.0) return null;
+    return sub;
   });
 
   const currentWords = $derived.by(() => {
@@ -396,8 +398,8 @@
       >
         <!-- Hàng hiển thị Karaoke Word-by-Word -->
         <div class="flex flex-wrap items-end gap-x-1.5 gap-y-2 justify-center sm:justify-start px-1 py-1">
-          {#if activeSubtitle.words && activeSubtitle.words.length > 0}
-            {#each activeSubtitle.words as w}
+          {#if currentWords.length > 0}
+            {#each currentWords as w}
               {@const isWordActive = currentTime >= w.start && currentTime <= w.end}
               <div
                 class="inline-flex flex-col items-center justify-end transition-all duration-150 rounded-lg px-1.5 py-0.5 {isWordActive ? 'bg-orange-100 dark:bg-orange-950/80 ring-2 ring-orange-500/40 scale-105 shadow-xs' : 'bg-transparent'}"
