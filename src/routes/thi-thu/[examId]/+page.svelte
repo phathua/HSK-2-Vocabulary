@@ -18,6 +18,11 @@
   import SignOut from 'phosphor-svelte/lib/SignOut';
   import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
   import X from 'phosphor-svelte/lib/X';
+  import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
+  import Exam from 'phosphor-svelte/lib/Exam';
+  import Lightning from 'phosphor-svelte/lib/Lightning';
+  import ListNumbers from 'phosphor-svelte/lib/ListNumbers';
+  import Clock from 'phosphor-svelte/lib/Clock';
   import type { ExamDetail, ExamMode } from '#lib/types/exam';
 
   const examId = $derived(page.params.examId);
@@ -197,7 +202,10 @@
 
 <Header />
 
-<main bind:this={mainScrollEl} class="flex-1 flex flex-col min-h-0 my-2 overflow-y-auto pr-1 pb-3">
+<main
+  bind:this={mainScrollEl}
+  class="flex-1 flex flex-col min-h-0 {mode === 'practice' ? 'overflow-hidden my-1' : 'overflow-y-auto my-2 pr-1 pb-3'}"
+>
   {#if isLoading}
     <div class="flex-1 flex items-center justify-center p-12">
       <div class="flex flex-col items-center gap-3">
@@ -220,7 +228,119 @@
         Quay lại danh mục
       </a>
     </div>
+  {:else if mode === 'practice'}
+    {@const currentQ = exam.questions[currentQuestionIndex]}
+    {#if currentQ}
+      <!-- 1. Thanh Điều Hướng Siêu Gọn (~38px) Cho Chế Độ Thi Nhanh -->
+      <div class="shrink-0 flex items-center justify-between gap-2 mb-2 px-0.5">
+        <!-- Nút Quay Lại + Badge Mã Đề -->
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            onclick={() => goto('/thi-thu')}
+            class="h-9 px-3 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-[#282A2C] transition-colors shadow-2xs flex items-center gap-1.5 cursor-pointer active:scale-95"
+            title="Quay lại danh mục đề thi"
+          >
+            <ArrowLeft weight="bold" class="w-3.5 h-3.5" />
+            <span class="hidden sm:inline">Quay lại</span>
+          </button>
+
+          <span class="h-9 px-2.5 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 font-mono font-black text-xs border border-orange-200 dark:border-orange-900/50 flex items-center">
+            {exam.exam_code}
+          </span>
+        </div>
+
+        <!-- Switch Pill: Thi Thử Chuẩn vs Thi Nhanh -->
+        <div class="inline-flex items-center p-1 bg-slate-200/70 dark:bg-[#282A2C] rounded-2xl border border-slate-200/80 dark:border-[#37393B]">
+          <button
+            type="button"
+            onclick={() => (mode = 'exam')}
+            class="px-2.5 sm:px-3 py-1 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-neutral-200 active:scale-95"
+          >
+            <Exam weight="bold" class="w-3.5 h-3.5" />
+            <span class="hidden sm:inline">Thi Thử</span>
+          </button>
+          <button
+            type="button"
+            onclick={() => (mode = 'practice')}
+            class="px-2.5 sm:px-3 py-1 rounded-xl text-xs font-black transition-all cursor-pointer flex items-center gap-1.5 bg-white dark:bg-[#1B1B1B] text-orange-600 dark:text-orange-400 shadow-xs"
+          >
+            <Lightning weight="fill" class="w-3.5 h-3.5 text-orange-500" />
+            <span>Thi Nhanh</span>
+          </button>
+        </div>
+
+        <!-- Phải: Nút mở danh sách câu hỏi trên Mobile (< lg) + Đồng hồ đếm ngược -->
+        <div class="flex items-center gap-1.5">
+          <!-- Nút mở Drawer Bảng 60 câu trên Mobile -->
+          <button
+            type="button"
+            onclick={() => (showPaletteModal = true)}
+            class="lg:hidden h-9 px-2.5 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-[#282A2C] transition-colors shadow-2xs flex items-center gap-1 cursor-pointer active:scale-95"
+            title="Xem bảng 60 câu hỏi"
+          >
+            <ListNumbers weight="bold" class="w-4 h-4 text-orange-500" />
+            <span class="font-mono">{totalAnswered}/{exam.total_questions}</span>
+          </button>
+
+          <!-- Đồng hồ thời gian thi còn lại -->
+          <div
+            class="h-9 px-2.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-white dark:bg-[#1B1B1B] text-slate-700 dark:text-[#E3E3E3] flex items-center gap-1.5 font-mono font-black text-xs shadow-2xs"
+            title="Thời gian làm bài thi"
+          >
+            <Clock weight="duotone" class="w-4 h-4 text-orange-500" />
+            <span>{Math.floor(timeRemainingSeconds / 60)}:{String(timeRemainingSeconds % 60).padStart(2, '0')}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Thẻ Trắc Nghiệm Single View (100% Khớp Không Cuộn Trang) -->
+      <div class="flex-1 min-h-0 flex flex-col lg:grid lg:grid-cols-12 lg:gap-5 items-stretch overflow-hidden">
+        <!-- Cột Thẻ Câu Hỏi Hiện Tại (8/12 cột Desktop, 12/12 Mobile) -->
+        <div class="lg:col-span-8 h-full flex flex-col min-h-0 overflow-hidden">
+          <ExamQuickQuizCard
+            question={currentQ}
+            questionIndex={currentQuestionIndex}
+            totalQuestions={exam.total_questions}
+            selectedAnswer={answers[currentQ.question_no]}
+            isFlagged={flagged[currentQ.question_no]}
+            {timeRemainingSeconds}
+            totalCorrect={scoreResults.totalCorrect}
+            totalWrong={totalAnswered - scoreResults.totalCorrect}
+            onSelectAnswer={(val) => handleSelectAnswer(currentQ.question_no, val)}
+            onToggleFlag={() => handleToggleFlag(currentQ.question_no)}
+            onNextQuestion={() => {
+              if (currentQuestionIndex < exam.total_questions - 1) {
+                currentQuestionIndex += 1;
+              }
+            }}
+            onPrevQuestion={() => {
+              if (currentQuestionIndex > 0) {
+                currentQuestionIndex -= 1;
+              }
+            }}
+            onOpenPalette={() => (showPaletteModal = true)}
+            onSubmitExam={handleSubmitExam}
+          />
+        </div>
+
+        <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) -->
+        <div class="lg:col-span-4 hidden lg:block h-full min-h-0 overflow-y-auto">
+          <ExamPalette
+            totalQuestions={exam.total_questions}
+            {answers}
+            {flagged}
+            {mode}
+            isExamSubmitted={isSubmitted}
+            correctMap={scoreResults.correctMap}
+            currentQuestionNo={currentQ.question_no}
+            onScrollTo={handleScrollTo}
+          />
+        </div>
+      </div>
+    {/if}
   {:else}
+    <!-- CHẾ ĐỘ THI THỬ CHUẨN (EXAM MODE) -->
     <!-- Top Header Điều Khiển Phòng Thi -->
     <ExamHeader
       title={exam.title ?? 'Đề Thi HSK 2'}
@@ -250,129 +370,84 @@
       />
     {/if}
 
-    {#if mode === 'practice'}
-      {@const currentQ = exam.questions[currentQuestionIndex]}
-      {#if currentQ}
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-          <!-- Cột Thẻ Câu Hỏi Hiện Tại (8/12 cột trên Desktop) -->
-          <div class="lg:col-span-8">
-            <ExamQuickQuizCard
-              question={currentQ}
-              questionIndex={currentQuestionIndex}
-              totalQuestions={exam.total_questions}
-              selectedAnswer={answers[currentQ.question_no]}
-              isFlagged={flagged[currentQ.question_no]}
-              onSelectAnswer={(val) => handleSelectAnswer(currentQ.question_no, val)}
-              onToggleFlag={() => handleToggleFlag(currentQ.question_no)}
-              onNextQuestion={() => {
-                if (currentQuestionIndex < exam.total_questions - 1) {
-                  currentQuestionIndex += 1;
-                }
-              }}
-              onPrevQuestion={() => {
-                if (currentQuestionIndex > 0) {
-                  currentQuestionIndex -= 1;
-                }
-              }}
-              onSubmitExam={handleSubmitExam}
-            />
-          </div>
-
-          <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) -->
-          <div class="lg:col-span-4 hidden lg:block">
-            <ExamPalette
-              totalQuestions={exam.total_questions}
-              {answers}
-              {flagged}
-              {mode}
-              isExamSubmitted={isSubmitted}
-              correctMap={scoreResults.correctMap}
-              currentQuestionNo={currentQ.question_no}
-              onScrollTo={handleScrollTo}
-            />
-          </div>
-        </div>
-      {/if}
-    {:else}
-      <!-- Bố Cục Phòng Thi (Split Layout: Cột Câu Hỏi + Palette 60 ô) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-        <!-- Cột Nội Dung Câu Hỏi (8/12 cột trên màn hình lớn) -->
-        <div class="lg:col-span-8 space-y-6">
-          <!-- Phần 1: Nghe -->
-          {#if listeningQuestions.length > 0}
-            <div class="space-y-3">
-              <div class="flex items-center gap-2 px-1">
-                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
-                <h2 class="text-sm md:text-base font-black text-slate-900 dark:text-slate-100 uppercase tracking-wider">
-                  Phần 1: Nghe Hiểu (听力) — 35 câu
-                </h2>
-              </div>
-
-              {#each listeningQuestions as q (q.question_no)}
-                <ExamQuestionCard
-                  question={q}
-                  selectedAnswer={answers[q.question_no]}
-                  isFlagged={flagged[q.question_no]}
-                  {mode}
-                  isCheckedInPractice={checkedPractice[q.question_no]}
-                  isExamSubmitted={isSubmitted}
-                  showBoardImage={q.question_no === 11 || q.question_no === 16}
-                  onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
-                  onToggleFlag={() => handleToggleFlag(q.question_no)}
-                  onCheckPractice={() => handleCheckPractice(q.question_no)}
-                />
-              {/each}
+    <!-- Bố Cục Phòng Thi (Split Layout: Cột Câu Hỏi + Palette 60 ô) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start mt-2">
+      <!-- Cột Nội Dung Câu Hỏi (8/12 cột trên màn hình lớn) -->
+      <div class="lg:col-span-8 space-y-6">
+        <!-- Phần 1: Nghe -->
+        {#if listeningQuestions.length > 0}
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 px-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+              <h2 class="text-sm md:text-base font-black text-slate-900 dark:text-slate-100 uppercase tracking-wider">
+                Phần 1: Nghe Hiểu (听力) — 35 câu
+              </h2>
             </div>
-          {/if}
 
-          <!-- Phần 2: Đọc -->
-          {#if readingQuestions.length > 0}
-            <div class="space-y-3 pt-4">
-              <div class="flex items-center gap-2 px-1">
-                <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
-                <h2 class="text-sm md:text-base font-black text-slate-900 dark:text-slate-100 uppercase tracking-wider">
-                  Phần 2: Đọc Hiểu (阅读) — 25 câu
-                </h2>
-              </div>
+            {#each listeningQuestions as q (q.question_no)}
+              <ExamQuestionCard
+                question={q}
+                selectedAnswer={answers[q.question_no]}
+                isFlagged={flagged[q.question_no]}
+                {mode}
+                isCheckedInPractice={checkedPractice[q.question_no]}
+                isExamSubmitted={isSubmitted}
+                showBoardImage={q.question_no === 11 || q.question_no === 16}
+                onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
+                onToggleFlag={() => handleToggleFlag(q.question_no)}
+                onCheckPractice={() => handleCheckPractice(q.question_no)}
+              />
+            {/each}
+          </div>
+        {/if}
 
-              {#each readingQuestions as q (q.question_no)}
-                <ExamQuestionCard
-                  question={q}
-                  selectedAnswer={answers[q.question_no]}
-                  isFlagged={flagged[q.question_no]}
-                  {mode}
-                  isCheckedInPractice={checkedPractice[q.question_no]}
-                  isExamSubmitted={isSubmitted}
-                  showBoardImage={q.question_no === 36}
-                  onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
-                  onToggleFlag={() => handleToggleFlag(q.question_no)}
-                  onCheckPractice={() => handleCheckPractice(q.question_no)}
-                />
-              {/each}
+        <!-- Phần 2: Đọc -->
+        {#if readingQuestions.length > 0}
+          <div class="space-y-3 pt-4">
+            <div class="flex items-center gap-2 px-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+              <h2 class="text-sm md:text-base font-black text-slate-900 dark:text-slate-100 uppercase tracking-wider">
+                Phần 2: Đọc Hiểu (阅读) — 25 câu
+              </h2>
             </div>
-          {/if}
-        </div>
 
-        <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) -->
-        <div class="lg:col-span-4 hidden lg:block">
-          <ExamPalette
-            totalQuestions={exam.total_questions}
-            {answers}
-            {flagged}
-            {mode}
-            isExamSubmitted={isSubmitted}
-            correctMap={scoreResults.correctMap}
-            currentQuestionNo={currentQuestionIndex + 1}
-            onScrollTo={handleScrollTo}
-          />
-        </div>
+            {#each readingQuestions as q (q.question_no)}
+              <ExamQuestionCard
+                question={q}
+                selectedAnswer={answers[q.question_no]}
+                isFlagged={flagged[q.question_no]}
+                {mode}
+                isCheckedInPractice={checkedPractice[q.question_no]}
+                isExamSubmitted={isSubmitted}
+                showBoardImage={q.question_no === 36}
+                onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
+                onToggleFlag={() => handleToggleFlag(q.question_no)}
+                onCheckPractice={() => handleCheckPractice(q.question_no)}
+              />
+            {/each}
+          </div>
+        {/if}
       </div>
-    {/if}
+
+      <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) -->
+      <div class="lg:col-span-4 hidden lg:block">
+        <ExamPalette
+          totalQuestions={exam.total_questions}
+          {answers}
+          {flagged}
+          {mode}
+          isExamSubmitted={isSubmitted}
+          correctMap={scoreResults.correctMap}
+          currentQuestionNo={currentQuestionIndex + 1}
+          onScrollTo={handleScrollTo}
+        />
+      </div>
+    </div>
   {/if}
 </main>
 
-{#if exam}
-  <!-- Sticky Bottom Bar nằm dưới chân cột nội dung, không đè lên SidebarMenu bên trái -->
+{#if exam && mode === 'exam'}
+  <!-- Sticky Bottom Bar CHỈ HIỂN THỊ Ở CHẾ ĐỘ THI THỬ CHUẨN (Exam Mode) -->
   <ExamBottomBar
     {mode}
     {timeRemainingSeconds}
