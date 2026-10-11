@@ -16,6 +16,8 @@ coverage/
 # Temporary agent scripts & artifacts
 .agents/
 static/exams-media/
+*.ogg
+*.mp3
 
 # Logs & OS artifacts
 *.log
