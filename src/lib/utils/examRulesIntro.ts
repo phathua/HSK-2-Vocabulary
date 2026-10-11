@@ -23,6 +23,7 @@ export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
     endTime: 30.5,
     text: "🎵 Nhạc dạo đầu bài thi HSK 2...",
     pinyin: "",
+    viet: "Nhạc dạo đầu bài thi HSK 2...",
     isIntro: true,
     words: []
   },
@@ -32,6 +33,7 @@ export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
     endTime: 47.5,
     text: "大家好！欢迎参加 HSK（二级）考试。",
     pinyin: "Dàjiā hǎo! Huānyíng cānjiā HSK (èr jí) kǎoshì.",
+    viet: "Chào mọi người! Chào mừng các bạn tham gia kỳ thi HSK (Cấp độ 2).",
     isIntro: true,
     words: [
       { word: "大家好", pinyin: "dàjiā hǎo", start: 31.4, end: 34.0 },
@@ -50,6 +52,7 @@ export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
     endTime: 55.5,
     text: "HSK（二级）听力考试分四部分，共35题。",
     pinyin: "HSK (èr jí) tīnglì kǎoshì fēn sì bùfen, gòng 35 tí.",
+    viet: "Phần thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
     isIntro: true,
     words: [
       { word: "HSK", pinyin: "H-S-K", start: 48.4, end: 49.5 },
@@ -70,6 +73,7 @@ export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
     endTime: 70.0,
     text: "第一部分，一共10个题，每题听两次。",
     pinyin: "Dì-yī bùfen, yígòng 10 gè tí, měi tí tīng liǎng cì.",
+    viet: "Phần 1 gồm 10 câu, mỗi câu nghe hai lần.",
     isIntro: true,
     words: [
       { word: "第一部分", pinyin: "dì-yī bùfen", start: 62.5, end: 65.0 },
@@ -89,6 +93,7 @@ export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
     endTime: 80.0,
     text: "例如：我们家有三个人。",
     pinyin: "Lìrú: Wǒmen jiā yǒu sān gè rén.",
+    viet: "Ví dụ: Nhà chúng tôi có ba người.",
     isIntro: true,
     words: [
       { word: "例如", pinyin: "lìrú", start: 70.5, end: 72.0 },
@@ -107,6 +112,7 @@ export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
     endTime: 103.0,
     text: "我每天坐公共汽车去上班。",
     pinyin: "Wǒ měi tiān zuò gōnggòng qìchē qù shàngbān.",
+    viet: "Tôi đi làm bằng xe buýt mỗi ngày.",
     isIntro: true,
     words: [
       { word: "我", pinyin: "wǒ", start: 80.5, end: 81.5 },
@@ -124,6 +130,7 @@ export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
     endTime: 111.0,
     text: "现在开始第1题。",
     pinyin: "Xiànzài kāishǐ dì 1 tí.",
+    viet: "Bây giờ bắt đầu câu số 1.",
     isIntro: true,
     words: [
       { word: "现在", pinyin: "xiànzài", start: 103.8, end: 105.5 },

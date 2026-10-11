@@ -1,0 +1,6789 @@
+[
+  {
+    "id": 1,
+    "startTime": 0,
+    "endTime": 28.5,
+    "text": "🎵 Nhạc dạo đầu bài thi HSK 2...",
+    "pinyin": "",
+    "viet": "Nhạc dạo đầu bài thi HSK 2...",
+    "isIntro": true,
+    "words": []
+  },
+  {
+    "id": 2,
+    "startTime": 28.5,
+    "endTime": 47,
+    "text": "大家好！欢迎参加 HSK（二级）考试。",
+    "pinyin": "Dàjiā hǎo! Huānyíng cānjiā HSK (èr jí) kǎoshì.",
+    "viet": "Chào mọi người! Chào mừng các bạn tham gia kỳ thi HSK (Cấp độ 2).",
+    "isIntro": true,
+    "words": [
+      {
+        "word": "大家好",
+        "pinyin": "dàjiā hǎo",
+        "start": 29,
+        "end": 32.5
+      },
+      {
+        "word": "！",
+        "pinyin": "",
+        "start": 32.5,
+        "end": 33
+      },
+      {
+        "word": "欢迎",
+        "pinyin": "huānyíng",
+        "start": 33,
+        "end": 35
+      },
+      {
+        "word": "参加",
+        "pinyin": "cānjiā",
+        "start": 35,
+        "end": 37
+      },
+      {
+        "word": "HSK",
+        "pinyin": "H-S-K",
+        "start": 37,
+        "end": 39
+      },
+      {
+        "word": "二级",
+        "pinyin": "èr jí",
+        "start": 39,
+        "end": 41.5
+      },
+      {
+        "word": "考试",
+        "pinyin": "kǎoshì",
+        "start": 41.5,
+        "end": 46
+      },
+      {
+        "word": "。",
+        "pinyin": "",
+        "start": 46,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "startTime": 47,
+    "endTime": 55.5,
+    "text": "HSK（二级）听力考试分四部分，共35题。",
+    "pinyin": "HSK (èr jí) tīnglì kǎoshì fēn sì bùfen, gòng 35 tí.",
+    "viet": "Phần thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "isIntro": true,
+    "words": [
+      {
+        "word": "HSK",
+        "pinyin": "H-S-K",
+        "start": 47.5,
+        "end": 48.5
+      },
+      {
+        "word": "二级",
+        "pinyin": "èr jí",
+        "start": 48.5,
+        "end": 50
+      },
+      {
+        "word": "听力",
+        "pinyin": "tīnglì",
+        "start": 50,
+        "end": 51.5
+      },
+      {
+        "word": "考试",
+        "pinyin": "kǎoshì",
+        "start": 51.5,
+        "end": 52.5
+      },
+      {
+        "word": "分",
+        "pinyin": "fēn",
+        "start": 52.5,
+        "end": 53
+      },
+      {
+        "word": "四部分",
+        "pinyin": "sì bùfen",
+        "start": 53,
+        "end": 54
+      },
+      {
+        "word": "，",
+        "pinyin": "",
+        "start": 54,
+        "end": 54.3
+      },
+      {
+        "word": "共",
+        "pinyin": "gòng",
+        "start": 54.3,
+        "end": 54.7
+      },
+      {
+        "word": "35题",
+        "pinyin": "sānshíwǔ tí",
+        "start": 54.7,
+        "end": 55.5
+      }
+    ]
+  },
+  {
+    "text": "跑第一的是五号。",
+    "startTime": 55.228,
+    "endTime": 57.728,
+    "pinyin": "pǎo dì yī de shì wǔ hào 。",
+    "viet": "Người về nhất là số 5.",
+    "words": [
+      {
+        "word": "跑",
+        "pinyin": "pǎo",
+        "start": 55.228,
+        "end": 55.541
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 55.541,
+        "end": 55.853
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 55.853,
+        "end": 56.166
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 56.166,
+        "end": 56.478
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 56.478,
+        "end": 56.791
+      },
+      {
+        "word": "五",
+        "pinyin": "wǔ",
+        "start": 56.791,
+        "end": 57.103
+      },
+      {
+        "word": "号",
+        "pinyin": "hào",
+        "start": 57.103,
+        "end": 57.416
+      },
+      {
+        "word": "。",
+        "pinyin": "。",
+        "start": 57.416,
+        "end": 57.728
+      }
+    ],
+    "id": 4
+  },
+  {
+    "text": "跑第一的是五号。",
+    "startTime": 59.75,
+    "endTime": 62.25,
+    "pinyin": "pǎo dì yī de shì wǔ hào 。",
+    "viet": "Người về nhất là số 5.",
+    "words": [
+      {
+        "word": "跑",
+        "pinyin": "pǎo",
+        "start": 59.75,
+        "end": 60.063
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 60.063,
+        "end": 60.375
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 60.375,
+        "end": 60.688
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 60.688,
+        "end": 61
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 61,
+        "end": 61.313
+      },
+      {
+        "word": "五",
+        "pinyin": "wǔ",
+        "start": 61.313,
+        "end": 61.625
+      },
+      {
+        "word": "号",
+        "pinyin": "hào",
+        "start": 61.625,
+        "end": 61.938
+      },
+      {
+        "word": "。",
+        "pinyin": "。",
+        "start": 61.938,
+        "end": 62.25
+      }
+    ],
+    "id": 5
+  },
+  {
+    "text": "第 4 题",
+    "startTime": 65.87,
+    "endTime": 68.37,
+    "pinyin": "dì   4   tí",
+    "viet": "Câu số 4",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 65.87,
+        "end": 66.37
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 66.37,
+        "end": 66.87
+      },
+      {
+        "word": "4",
+        "pinyin": "4",
+        "start": 66.87,
+        "end": 67.37
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 67.37,
+        "end": 67.87
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 67.87,
+        "end": 68.37
+      }
+    ],
+    "id": 6
+  },
+  {
+    "text": "她还在睡觉。",
+    "startTime": 68.03,
+    "endTime": 70.53,
+    "pinyin": "tā hái zài shuì jiào 。",
+    "viet": "Cô ấy vẫn đang ngủ.",
+    "words": [
+      {
+        "word": "她",
+        "pinyin": "tā",
+        "start": 68.03,
+        "end": 68.447
+      },
+      {
+        "word": "还",
+        "pinyin": "hái",
+        "start": 68.447,
+        "end": 68.863
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 68.863,
+        "end": 69.28
+      },
+      {
+        "word": "睡",
+        "pinyin": "shuì",
+        "start": 69.28,
+        "end": 69.697
+      },
+      {
+        "word": "觉",
+        "pinyin": "jué",
+        "start": 69.697,
+        "end": 70.113
+      },
+      {
+        "word": "。",
+        "pinyin": "。",
+        "start": 70.113,
+        "end": 70.53
+      }
+    ],
+    "id": 7
+  },
+  {
+    "text": "她还在睡觉。",
+    "startTime": 72.209,
+    "endTime": 74.709,
+    "pinyin": "tā hái zài shuì jiào 。",
+    "viet": "Cô ấy vẫn đang ngủ.",
+    "words": [
+      {
+        "word": "她",
+        "pinyin": "tā",
+        "start": 72.209,
+        "end": 72.626
+      },
+      {
+        "word": "还",
+        "pinyin": "hái",
+        "start": 72.626,
+        "end": 73.042
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 73.042,
+        "end": 73.459
+      },
+      {
+        "word": "睡",
+        "pinyin": "shuì",
+        "start": 73.459,
+        "end": 73.876
+      },
+      {
+        "word": "觉",
+        "pinyin": "jué",
+        "start": 73.876,
+        "end": 74.292
+      },
+      {
+        "word": "。",
+        "pinyin": "。",
+        "start": 74.292,
+        "end": 74.709
+      }
+    ],
+    "id": 8
+  },
+  {
+    "text": "第 4 题",
+    "startTime": 78.15,
+    "endTime": 80.65,
+    "pinyin": "dì   4   tí",
+    "viet": "Câu số 4",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 78.15,
+        "end": 78.65
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 78.65,
+        "end": 79.15
+      },
+      {
+        "word": "4",
+        "pinyin": "4",
+        "start": 79.15,
+        "end": 79.65
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 79.65,
+        "end": 80.15
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 80.15,
+        "end": 80.65
+      }
+    ],
+    "id": 9
+  },
+  {
+    "text": "你看，小狗在玩儿什么呢？",
+    "startTime": 80.25,
+    "endTime": 82.75,
+    "pinyin": "nǐ kàn ， xiǎo gǒu zài wán ér shén me ne ？",
+    "viet": "Nhìn xem, con chó con đang chơi với cái gì?",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 80.25,
+        "end": 80.458
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 80.458,
+        "end": 80.667
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 80.667,
+        "end": 80.875
+      },
+      {
+        "word": "小",
+        "pinyin": "xiǎo",
+        "start": 80.875,
+        "end": 81.083
+      },
+      {
+        "word": "狗",
+        "pinyin": "gǒu",
+        "start": 81.083,
+        "end": 81.292
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 81.292,
+        "end": 81.5
+      },
+      {
+        "word": "玩",
+        "pinyin": "wán",
+        "start": 81.5,
+        "end": 81.708
+      },
+      {
+        "word": "儿",
+        "pinyin": "ér",
+        "start": 81.708,
+        "end": 81.917
+      },
+      {
+        "word": "什",
+        "pinyin": "shén",
+        "start": 81.917,
+        "end": 82.125
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 82.125,
+        "end": 82.333
+      },
+      {
+        "word": "呢",
+        "pinyin": "ne",
+        "start": 82.333,
+        "end": 82.542
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 82.542,
+        "end": 82.75
+      }
+    ],
+    "id": 10
+  },
+  {
+    "text": "你看，小狗在玩儿什么呢？",
+    "startTime": 85.53,
+    "endTime": 88.03,
+    "pinyin": "nǐ kàn ， xiǎo gǒu zài wán ér shén me ne ？",
+    "viet": "Nhìn xem, con chó con đang chơi với cái gì?",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 85.53,
+        "end": 85.738
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 85.738,
+        "end": 85.947
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 85.947,
+        "end": 86.155
+      },
+      {
+        "word": "小",
+        "pinyin": "xiǎo",
+        "start": 86.155,
+        "end": 86.363
+      },
+      {
+        "word": "狗",
+        "pinyin": "gǒu",
+        "start": 86.363,
+        "end": 86.572
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 86.572,
+        "end": 86.78
+      },
+      {
+        "word": "玩",
+        "pinyin": "wán",
+        "start": 86.78,
+        "end": 86.988
+      },
+      {
+        "word": "儿",
+        "pinyin": "ér",
+        "start": 86.988,
+        "end": 87.197
+      },
+      {
+        "word": "什",
+        "pinyin": "shén",
+        "start": 87.197,
+        "end": 87.405
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 87.405,
+        "end": 87.613
+      },
+      {
+        "word": "呢",
+        "pinyin": "ne",
+        "start": 87.613,
+        "end": 87.822
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 87.822,
+        "end": 88.03
+      }
+    ],
+    "id": 11
+  },
+  {
+    "text": "第题题",
+    "startTime": 92.45,
+    "endTime": 94.95,
+    "pinyin": "dì tí tí",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 92.45,
+        "end": 93.28333333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 93.28333333333333,
+        "end": 94.11666666666667
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 94.11666666666667,
+        "end": 94.95
+      }
+    ],
+    "id": 12
+  },
+  {
+    "text": "第 10 题",
+    "startTime": 94.709,
+    "endTime": 97.209,
+    "pinyin": "dì   1 0   tí",
+    "viet": "Câu số 10",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 94.709,
+        "end": 95.12566666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 95.12566666666667,
+        "end": 95.54233333333333
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 95.54233333333333,
+        "end": 95.959
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 95.959,
+        "end": 96.37566666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 96.37566666666667,
+        "end": 96.79233333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 96.79233333333333,
+        "end": 97.209
+      }
+    ],
+    "id": 13
+  },
+  {
+    "text": "男十题题",
+    "startTime": 98.93,
+    "endTime": 101.43,
+    "pinyin": "nán shí tí tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 98.93,
+        "end": 99.555
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 99.555,
+        "end": 100.18
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 100.18,
+        "end": 100.805
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 100.805,
+        "end": 101.43
+      }
+    ],
+    "id": 14
+  },
+  {
+    "text": "第 7 题",
+    "startTime": 104.73,
+    "endTime": 107.23,
+    "pinyin": "dì   7   tí",
+    "viet": "Câu số 7",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 104.73,
+        "end": 105.23
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 105.23,
+        "end": 105.73
+      },
+      {
+        "word": "7",
+        "pinyin": "7",
+        "start": 105.73,
+        "end": 106.23
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 106.23,
+        "end": 106.73
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 106.73,
+        "end": 107.23
+      }
+    ],
+    "id": 15
+  },
+  {
+    "text": "题十十题",
+    "startTime": 107.09,
+    "endTime": 109.59,
+    "pinyin": "tí shí shí tí",
+    "words": [
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 107.09,
+        "end": 107.715
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 107.715,
+        "end": 108.34
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 108.34,
+        "end": 108.965
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 108.965,
+        "end": 109.59
+      }
+    ],
+    "id": 16
+  },
+  {
+    "text": "第第题题",
+    "startTime": 111.29,
+    "endTime": 113.79,
+    "pinyin": "dì dì tí tí",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 111.29,
+        "end": 111.915
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 111.915,
+        "end": 112.54
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 112.54,
+        "end": 113.165
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 113.165,
+        "end": 113.79
+      }
+    ],
+    "id": 17
+  },
+  {
+    "text": "第 10 题",
+    "startTime": 117.108,
+    "endTime": 119.608,
+    "pinyin": "dì   1 0   tí",
+    "viet": "Câu số 10",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 117.108,
+        "end": 117.52466666666668
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 117.52466666666668,
+        "end": 117.94133333333333
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 117.94133333333333,
+        "end": 118.358
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 118.358,
+        "end": 118.77466666666668
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 118.77466666666668,
+        "end": 119.19133333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 119.19133333333333,
+        "end": 119.608
+      }
+    ],
+    "id": 18
+  },
+  {
+    "text": "题你是你你这么多题第告诉题",
+    "startTime": 119.349,
+    "endTime": 122.129,
+    "pinyin": "tí nǐ shì nǐ nǐ zhè me duō tí dì gào sù tí",
+    "words": [
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 119.349,
+        "end": 119.56284615384615
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 119.56284615384615,
+        "end": 119.77669230769231
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 119.77669230769231,
+        "end": 119.99053846153846
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 119.99053846153846,
+        "end": 120.20438461538463
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 120.20438461538463,
+        "end": 120.41823076923077
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 120.41823076923077,
+        "end": 120.63207692307692
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 120.63207692307692,
+        "end": 120.84592307692309
+      },
+      {
+        "word": "多",
+        "pinyin": "duō",
+        "start": 120.84592307692309,
+        "end": 121.05976923076923
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 121.05976923076923,
+        "end": 121.27361538461538
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 121.27361538461538,
+        "end": 121.48746153846155
+      },
+      {
+        "word": "告",
+        "pinyin": "gào",
+        "start": 121.48746153846155,
+        "end": 121.7013076923077
+      },
+      {
+        "word": "诉",
+        "pinyin": "sù",
+        "start": 121.7013076923077,
+        "end": 121.91515384615386
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 121.91515384615386,
+        "end": 122.129
+      }
+    ],
+    "id": 19
+  },
+  {
+    "text": "第 10 题",
+    "startTime": 125.349,
+    "endTime": 128.49,
+    "pinyin": "dì   1 0   tí",
+    "viet": "Câu số 10",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 125.349,
+        "end": 125.8725
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 125.8725,
+        "end": 126.396
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 126.396,
+        "end": 126.9195
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 126.9195,
+        "end": 127.44300000000001
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 127.44300000000001,
+        "end": 127.96650000000001
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 127.96650000000001,
+        "end": 128.49
+      }
+    ],
+    "id": 20
+  },
+  {
+    "text": "题小题",
+    "startTime": 133.229,
+    "endTime": 135.729,
+    "pinyin": "tí xiǎo tí",
+    "words": [
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 133.229,
+        "end": 134.06233333333336
+      },
+      {
+        "word": "小",
+        "pinyin": "xiǎo",
+        "start": 134.06233333333336,
+        "end": 134.89566666666667
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 134.89566666666667,
+        "end": 135.729
+      }
+    ],
+    "id": 21
+  },
+  {
+    "text": "你你了五个题题",
+    "startTime": 135.408,
+    "endTime": 137.908,
+    "pinyin": "nǐ nǐ le wǔ gè tí tí",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 135.408,
+        "end": 135.76514285714285
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 135.76514285714285,
+        "end": 136.1222857142857
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 136.1222857142857,
+        "end": 136.47942857142857
+      },
+      {
+        "word": "五",
+        "pinyin": "wǔ",
+        "start": 136.47942857142857,
+        "end": 136.8365714285714
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 136.8365714285714,
+        "end": 137.19371428571426
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 137.19371428571426,
+        "end": 137.55085714285713
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 137.55085714285713,
+        "end": 137.908
+      }
+    ],
+    "id": 22
+  },
+  {
+    "text": "她买了五个鸡蛋。",
+    "startTime": 139.77,
+    "endTime": 142.27,
+    "pinyin": "tā mǎi le wǔ gè jī dàn 。",
+    "viet": "Cô ấy đã mua năm quả trứng.",
+    "words": [
+      {
+        "word": "她",
+        "pinyin": "tā",
+        "start": 139.77,
+        "end": 140.083
+      },
+      {
+        "word": "买",
+        "pinyin": "mǎi",
+        "start": 140.083,
+        "end": 140.395
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 140.395,
+        "end": 140.708
+      },
+      {
+        "word": "五",
+        "pinyin": "wǔ",
+        "start": 140.708,
+        "end": 141.02
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 141.02,
+        "end": 141.333
+      },
+      {
+        "word": "鸡",
+        "pinyin": "jī",
+        "start": 141.333,
+        "end": 141.645
+      },
+      {
+        "word": "蛋",
+        "pinyin": "dàn",
+        "start": 141.645,
+        "end": 141.958
+      },
+      {
+        "word": "。",
+        "pinyin": "。",
+        "start": 141.958,
+        "end": 142.27
+      }
+    ],
+    "id": 23
+  },
+  {
+    "text": "第第题",
+    "startTime": 145.908,
+    "endTime": 148.408,
+    "pinyin": "dì dì tí",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 145.908,
+        "end": 146.74133333333333
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 146.74133333333333,
+        "end": 147.57466666666664
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 147.57466666666664,
+        "end": 148.408
+      }
+    ],
+    "id": 24
+  },
+  {
+    "text": "题你你你你要看题你",
+    "startTime": 148.15,
+    "endTime": 150.65,
+    "pinyin": "tí nǐ nǐ nǐ nǐ yào kàn tí nǐ",
+    "words": [
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 148.15,
+        "end": 148.42777777777778
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 148.42777777777778,
+        "end": 148.70555555555555
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 148.70555555555555,
+        "end": 148.98333333333335
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 148.98333333333335,
+        "end": 149.26111111111112
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 149.26111111111112,
+        "end": 149.5388888888889
+      },
+      {
+        "word": "要",
+        "pinyin": "yào",
+        "start": 149.5388888888889,
+        "end": 149.81666666666666
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 149.81666666666666,
+        "end": 150.09444444444446
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 150.09444444444446,
+        "end": 150.37222222222223
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 150.37222222222223,
+        "end": 150.65
+      }
+    ],
+    "id": 25
+  },
+  {
+    "text": "男我十第你要题题男",
+    "startTime": 153.33,
+    "endTime": 155.83,
+    "pinyin": "nán wǒ shí dì nǐ yào tí tí nán",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 153.33,
+        "end": 153.60777777777778
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 153.60777777777778,
+        "end": 153.88555555555556
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 153.88555555555556,
+        "end": 154.16333333333336
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 154.16333333333336,
+        "end": 154.44111111111113
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 154.44111111111113,
+        "end": 154.7188888888889
+      },
+      {
+        "word": "要",
+        "pinyin": "yào",
+        "start": 154.7188888888889,
+        "end": 154.99666666666667
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 154.99666666666667,
+        "end": 155.27444444444447
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 155.27444444444447,
+        "end": 155.55222222222224
+      },
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 155.55222222222224,
+        "end": 155.83
+      }
+    ],
+    "id": 26
+  },
+  {
+    "text": "第 10 题",
+    "startTime": 160.348,
+    "endTime": 162.848,
+    "pinyin": "dì   1 0   tí",
+    "viet": "Câu số 10",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 160.348,
+        "end": 160.76466666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 160.76466666666667,
+        "end": 161.18133333333336
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 161.18133333333336,
+        "end": 161.598
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 161.598,
+        "end": 162.01466666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 162.01466666666667,
+        "end": 162.43133333333336
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 162.43133333333336,
+        "end": 162.848
+      }
+    ],
+    "id": 27
+  },
+  {
+    "text": "第 10 题",
+    "startTime": 162.71,
+    "endTime": 165.21,
+    "pinyin": "dì   1 0   tí",
+    "viet": "Câu số 10",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 162.71,
+        "end": 163.12666666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 163.12666666666667,
+        "end": 163.54333333333335
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 163.54333333333335,
+        "end": 163.96
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 163.96,
+        "end": 164.37666666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 164.37666666666667,
+        "end": 164.79333333333335
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 164.79333333333335,
+        "end": 165.21
+      }
+    ],
+    "id": 28
+  },
+  {
+    "text": "第 5 题",
+    "startTime": 167.27,
+    "endTime": 169.77,
+    "pinyin": "dì   5   tí",
+    "viet": "Câu số 5",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 167.27,
+        "end": 167.77
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 167.77,
+        "end": 168.27
+      },
+      {
+        "word": "5",
+        "pinyin": "5",
+        "start": 168.27,
+        "end": 168.77
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 168.77,
+        "end": 169.27
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 169.27,
+        "end": 169.77
+      }
+    ],
+    "id": 29
+  },
+  {
+    "text": "第 16 题",
+    "startTime": 173.61,
+    "endTime": 177.848,
+    "pinyin": "dì   1 6   tí",
+    "viet": "Câu số 16",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 173.61,
+        "end": 174.31633333333335
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 174.31633333333335,
+        "end": 175.02266666666668
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 175.02266666666668,
+        "end": 175.729
+      },
+      {
+        "word": "6",
+        "pinyin": "6",
+        "start": 175.729,
+        "end": 176.43533333333335
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 176.43533333333335,
+        "end": 177.14166666666668
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 177.14166666666668,
+        "end": 177.848
+      }
+    ],
+    "id": 30
+  },
+  {
+    "text": "男你开始第十一到十五题",
+    "startTime": 178.688,
+    "endTime": 181.188,
+    "pinyin": "nán nǐ kāi shǐ dì shí yī dào shí wǔ tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 178.688,
+        "end": 178.9152727272727
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 178.9152727272727,
+        "end": 179.14254545454546
+      },
+      {
+        "word": "开",
+        "pinyin": "kāi",
+        "start": 179.14254545454546,
+        "end": 179.36981818181818
+      },
+      {
+        "word": "始",
+        "pinyin": "shǐ",
+        "start": 179.36981818181818,
+        "end": 179.5970909090909
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 179.5970909090909,
+        "end": 179.8243636363636
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 179.8243636363636,
+        "end": 180.05163636363636
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 180.05163636363636,
+        "end": 180.27890909090908
+      },
+      {
+        "word": "到",
+        "pinyin": "dào",
+        "start": 180.27890909090908,
+        "end": 180.5061818181818
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 180.5061818181818,
+        "end": 180.73345454545452
+      },
+      {
+        "word": "五",
+        "pinyin": "wǔ",
+        "start": 180.73345454545452,
+        "end": 180.96072727272727
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 180.96072727272727,
+        "end": 181.188
+      }
+    ],
+    "id": 31
+  },
+  {
+    "text": "男十十题",
+    "startTime": 184.389,
+    "endTime": 186.889,
+    "pinyin": "nán shí shí tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 184.389,
+        "end": 185.014
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 185.014,
+        "end": 185.639
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 185.639,
+        "end": 186.264
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 186.264,
+        "end": 186.889
+      }
+    ],
+    "id": 32
+  },
+  {
+    "text": "女：是不是不下雨了？",
+    "startTime": 186.688,
+    "endTime": 189.188,
+    "pinyin": "nǚ ： shì bú shì bù xià yǔ le ？",
+    "viet": "Nán: qǐng Wèn 第 1 1 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 186.688,
+        "end": 186.938
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 186.938,
+        "end": 187.188
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 187.188,
+        "end": 187.438
+      },
+      {
+        "word": "不",
+        "pinyin": "bù",
+        "start": 187.438,
+        "end": 187.688
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 187.688,
+        "end": 187.938
+      },
+      {
+        "word": "不",
+        "pinyin": "bù",
+        "start": 187.938,
+        "end": 188.188
+      },
+      {
+        "word": "下",
+        "pinyin": "xià",
+        "start": 188.188,
+        "end": 188.438
+      },
+      {
+        "word": "雨",
+        "pinyin": "yǔ",
+        "start": 188.438,
+        "end": 188.688
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 188.688,
+        "end": 188.938
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 188.938,
+        "end": 189.188
+      }
+    ],
+    "id": 33
+  },
+  {
+    "text": "女：是不是不下雨了？",
+    "startTime": 191.949,
+    "endTime": 194.449,
+    "pinyin": "nǚ ： shì bú shì bù xià yǔ le ？",
+    "viet": "Nán: qǐng Wèn 第 1 1 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 191.949,
+        "end": 192.199
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 192.199,
+        "end": 192.449
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 192.449,
+        "end": 192.699
+      },
+      {
+        "word": "不",
+        "pinyin": "bù",
+        "start": 192.699,
+        "end": 192.949
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 192.949,
+        "end": 193.199
+      },
+      {
+        "word": "不",
+        "pinyin": "bù",
+        "start": 193.199,
+        "end": 193.449
+      },
+      {
+        "word": "下",
+        "pinyin": "xià",
+        "start": 193.449,
+        "end": 193.699
+      },
+      {
+        "word": "雨",
+        "pinyin": "yǔ",
+        "start": 193.699,
+        "end": 193.949
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 193.949,
+        "end": 194.199
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 194.199,
+        "end": 194.449
+      }
+    ],
+    "id": 34
+  },
+  {
+    "text": "第十十题",
+    "startTime": 198.908,
+    "endTime": 201.408,
+    "pinyin": "dì shí shí tí",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 198.908,
+        "end": 199.533
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 199.533,
+        "end": 200.158
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 200.158,
+        "end": 200.783
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 200.783,
+        "end": 201.408
+      }
+    ],
+    "id": 35
+  },
+  {
+    "text": "男你会写汉书书第这个题题",
+    "startTime": 201.128,
+    "endTime": 204.49,
+    "pinyin": "nán nǐ huì xiě hàn shū shū dì zhè ge tí tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 201.128,
+        "end": 201.40816666666666
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 201.40816666666666,
+        "end": 201.68833333333333
+      },
+      {
+        "word": "会",
+        "pinyin": "huì",
+        "start": 201.68833333333333,
+        "end": 201.9685
+      },
+      {
+        "word": "写",
+        "pinyin": "xiě",
+        "start": 201.9685,
+        "end": 202.24866666666665
+      },
+      {
+        "word": "汉",
+        "pinyin": "hàn",
+        "start": 202.24866666666665,
+        "end": 202.52883333333332
+      },
+      {
+        "word": "书",
+        "pinyin": "shū",
+        "start": 202.52883333333332,
+        "end": 202.809
+      },
+      {
+        "word": "书",
+        "pinyin": "shū",
+        "start": 202.809,
+        "end": 203.08916666666667
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 203.08916666666667,
+        "end": 203.36933333333334
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 203.36933333333334,
+        "end": 203.6495
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 203.6495,
+        "end": 203.92966666666666
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 203.92966666666666,
+        "end": 204.20983333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 204.20983333333334,
+        "end": 204.49
+      }
+    ],
+    "id": 36
+  },
+  {
+    "text": "男：你会写“帮助”的“助”这个字吗？",
+    "startTime": 207.628,
+    "endTime": 210.669,
+    "pinyin": "nán ： nǐ huì xiě “ bāng zhù ” de “ zhù ” zhè ge zì ma ？",
+    "viet": "Nán: qǐng Wèn 第 1 2 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 207.628,
+        "end": 207.797
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 207.797,
+        "end": 207.966
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 207.966,
+        "end": 208.135
+      },
+      {
+        "word": "会",
+        "pinyin": "huì",
+        "start": 208.135,
+        "end": 208.304
+      },
+      {
+        "word": "写",
+        "pinyin": "xiě",
+        "start": 208.304,
+        "end": 208.473
+      },
+      {
+        "word": "“",
+        "pinyin": "“",
+        "start": 208.473,
+        "end": 208.642
+      },
+      {
+        "word": "帮",
+        "pinyin": "bāng",
+        "start": 208.642,
+        "end": 208.811
+      },
+      {
+        "word": "助",
+        "pinyin": "zhù",
+        "start": 208.811,
+        "end": 208.98
+      },
+      {
+        "word": "”",
+        "pinyin": "”",
+        "start": 208.98,
+        "end": 209.149
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 209.149,
+        "end": 209.317
+      },
+      {
+        "word": "“",
+        "pinyin": "“",
+        "start": 209.317,
+        "end": 209.486
+      },
+      {
+        "word": "助",
+        "pinyin": "zhù",
+        "start": 209.486,
+        "end": 209.655
+      },
+      {
+        "word": "”",
+        "pinyin": "”",
+        "start": 209.655,
+        "end": 209.824
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 209.824,
+        "end": 209.993
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 209.993,
+        "end": 210.162
+      },
+      {
+        "word": "字",
+        "pinyin": "zì",
+        "start": 210.162,
+        "end": 210.331
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 210.331,
+        "end": 210.5
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 210.5,
+        "end": 210.669
+      }
+    ],
+    "id": 37
+  },
+  {
+    "text": "第十十题",
+    "startTime": 215.53,
+    "endTime": 218.03,
+    "pinyin": "dì shí shí tí",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 215.53,
+        "end": 216.155
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 216.155,
+        "end": 216.78
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 216.78,
+        "end": 217.405
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 217.405,
+        "end": 218.03
+      }
+    ],
+    "id": 38
+  },
+  {
+    "text": "女：你怎么了？一个人坐着想什么呢？",
+    "startTime": 217.87,
+    "endTime": 221.59,
+    "pinyin": "nǚ ： nǐ zěn me le ？ yí gè rén zuò zhuó xiǎng shén me ne ？",
+    "viet": "Nán: qǐng Wèn 第 1 3 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 217.87,
+        "end": 218.089
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 218.089,
+        "end": 218.308
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 218.308,
+        "end": 218.526
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 218.526,
+        "end": 218.745
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 218.745,
+        "end": 218.964
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 218.964,
+        "end": 219.183
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 219.183,
+        "end": 219.402
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 219.402,
+        "end": 219.621
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 219.621,
+        "end": 219.839
+      },
+      {
+        "word": "人",
+        "pinyin": "rén",
+        "start": 219.839,
+        "end": 220.058
+      },
+      {
+        "word": "坐",
+        "pinyin": "zuò",
+        "start": 220.058,
+        "end": 220.277
+      },
+      {
+        "word": "着",
+        "pinyin": "zhe",
+        "start": 220.277,
+        "end": 220.496
+      },
+      {
+        "word": "想",
+        "pinyin": "xiǎng",
+        "start": 220.496,
+        "end": 220.715
+      },
+      {
+        "word": "什",
+        "pinyin": "shén",
+        "start": 220.715,
+        "end": 220.934
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 220.934,
+        "end": 221.152
+      },
+      {
+        "word": "呢",
+        "pinyin": "ne",
+        "start": 221.152,
+        "end": 221.371
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 221.371,
+        "end": 221.59
+      }
+    ],
+    "id": 39
+  },
+  {
+    "text": "第 10 题",
+    "startTime": 224.688,
+    "endTime": 228.49,
+    "pinyin": "dì   1 0   tí",
+    "viet": "Câu số 10",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 224.688,
+        "end": 225.32166666666666
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 225.32166666666666,
+        "end": 225.95533333333333
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 225.95533333333333,
+        "end": 226.589
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 226.589,
+        "end": 227.22266666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 227.22266666666667,
+        "end": 227.85633333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 227.85633333333334,
+        "end": 228.49
+      }
+    ],
+    "id": 40
+  },
+  {
+    "text": "第 14 题",
+    "startTime": 233.33,
+    "endTime": 235.83,
+    "pinyin": "dì   1 4   tí",
+    "viet": "Câu số 14",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 233.33,
+        "end": 233.74666666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 233.74666666666667,
+        "end": 234.16333333333336
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 234.16333333333336,
+        "end": 234.58
+      },
+      {
+        "word": "4",
+        "pinyin": "4",
+        "start": 234.58,
+        "end": 234.99666666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 234.99666666666667,
+        "end": 235.41333333333336
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 235.41333333333336,
+        "end": 235.83
+      }
+    ],
+    "id": 41
+  },
+  {
+    "text": "男你来看题第十十题题",
+    "startTime": 235.61,
+    "endTime": 238.71,
+    "pinyin": "nán nǐ lái kàn tí dì shí shí tí tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 235.61,
+        "end": 235.92000000000002
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 235.92000000000002,
+        "end": 236.23000000000002
+      },
+      {
+        "word": "来",
+        "pinyin": "lái",
+        "start": 236.23000000000002,
+        "end": 236.54000000000002
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 236.54000000000002,
+        "end": 236.85000000000002
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 236.85000000000002,
+        "end": 237.16000000000003
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 237.16000000000003,
+        "end": 237.47
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 237.47,
+        "end": 237.78
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 237.78,
+        "end": 238.09
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 238.09,
+        "end": 238.4
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 238.4,
+        "end": 238.71
+      }
+    ],
+    "id": 42
+  },
+  {
+    "text": "男你怎看题第十十题题",
+    "startTime": 241.81,
+    "endTime": 244.628,
+    "pinyin": "nán nǐ zěn kàn tí dì shí shí tí tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 241.81,
+        "end": 242.0918
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 242.0918,
+        "end": 242.3736
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 242.3736,
+        "end": 242.6554
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 242.6554,
+        "end": 242.9372
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 242.9372,
+        "end": 243.219
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 243.219,
+        "end": 243.5008
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 243.5008,
+        "end": 243.7826
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 243.7826,
+        "end": 244.06439999999998
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 244.06439999999998,
+        "end": 244.34619999999998
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 244.34619999999998,
+        "end": 244.628
+      }
+    ],
+    "id": 43
+  },
+  {
+    "text": "第十十题",
+    "startTime": 249.37,
+    "endTime": 251.87,
+    "pinyin": "dì shí shí tí",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 249.37,
+        "end": 249.995
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 249.995,
+        "end": 250.62
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 250.62,
+        "end": 251.245
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 251.245,
+        "end": 251.87
+      }
+    ],
+    "id": 44
+  },
+  {
+    "text": "男",
+    "startTime": 251.77,
+    "endTime": 254.27,
+    "pinyin": "nán",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 251.77,
+        "end": 254.27
+      }
+    ],
+    "id": 45
+  },
+  {
+    "text": "女：你怎么买了这么多菜？",
+    "startTime": 253.21,
+    "endTime": 255.71,
+    "pinyin": "nǚ ： nǐ zěn me mǎi le zhè me duō cài ？",
+    "viet": "Nán: qǐng Wèn 第 1 5 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 253.21,
+        "end": 253.418
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 253.418,
+        "end": 253.627
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 253.627,
+        "end": 253.835
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 253.835,
+        "end": 254.043
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 254.043,
+        "end": 254.252
+      },
+      {
+        "word": "买",
+        "pinyin": "mǎi",
+        "start": 254.252,
+        "end": 254.46
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 254.46,
+        "end": 254.668
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 254.668,
+        "end": 254.877
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 254.877,
+        "end": 255.085
+      },
+      {
+        "word": "多",
+        "pinyin": "duō",
+        "start": 255.085,
+        "end": 255.293
+      },
+      {
+        "word": "菜",
+        "pinyin": "cài",
+        "start": 255.293,
+        "end": 255.502
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 255.502,
+        "end": 255.71
+      }
+    ],
+    "id": 46
+  },
+  {
+    "text": "女：你怎么买了这么多菜？",
+    "startTime": 257.769,
+    "endTime": 260.269,
+    "pinyin": "nǚ ： nǐ zěn me mǎi le zhè me duō cài ？",
+    "viet": "Nán: qǐng Wèn 第 1 5 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 257.769,
+        "end": 257.977
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 257.977,
+        "end": 258.186
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 258.186,
+        "end": 258.394
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 258.394,
+        "end": 258.602
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 258.602,
+        "end": 258.811
+      },
+      {
+        "word": "买",
+        "pinyin": "mǎi",
+        "start": 258.811,
+        "end": 259.019
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 259.019,
+        "end": 259.227
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 259.227,
+        "end": 259.436
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 259.436,
+        "end": 259.644
+      },
+      {
+        "word": "多",
+        "pinyin": "duō",
+        "start": 259.644,
+        "end": 259.852
+      },
+      {
+        "word": "菜",
+        "pinyin": "cài",
+        "start": 259.852,
+        "end": 260.061
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 260.061,
+        "end": 260.269
+      }
+    ],
+    "id": 47
+  },
+  {
+    "text": "男你听题第十六到二十题",
+    "startTime": 264.93,
+    "endTime": 267.43,
+    "pinyin": "nán nǐ tīng tí dì shí liù dào èr shí tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 264.93,
+        "end": 265.15727272727275
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 265.15727272727275,
+        "end": 265.38454545454545
+      },
+      {
+        "word": "听",
+        "pinyin": "tīng",
+        "start": 265.38454545454545,
+        "end": 265.6118181818182
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 265.6118181818182,
+        "end": 265.83909090909094
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 265.83909090909094,
+        "end": 266.06636363636363
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 266.06636363636363,
+        "end": 266.2936363636364
+      },
+      {
+        "word": "六",
+        "pinyin": "liù",
+        "start": 266.2936363636364,
+        "end": 266.5209090909091
+      },
+      {
+        "word": "到",
+        "pinyin": "dào",
+        "start": 266.5209090909091,
+        "end": 266.7481818181818
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 266.7481818181818,
+        "end": 266.97545454545457
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 266.97545454545457,
+        "end": 267.20272727272726
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 267.20272727272726,
+        "end": 267.43
+      }
+    ],
+    "id": 48
+  },
+  {
+    "text": "第十十题",
+    "startTime": 270.25,
+    "endTime": 272.75,
+    "pinyin": "dì shí shí tí",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 270.25,
+        "end": 270.875
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 270.875,
+        "end": 271.5
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 271.5,
+        "end": 272.125
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 272.125,
+        "end": 272.75
+      }
+    ],
+    "id": 49
+  },
+  {
+    "text": "男",
+    "startTime": 272.47,
+    "endTime": 274.97,
+    "pinyin": "nán",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 272.47,
+        "end": 274.97
+      }
+    ],
+    "id": 50
+  },
+  {
+    "text": "你怎是你的书题是你题",
+    "startTime": 273.509,
+    "endTime": 276.009,
+    "pinyin": "nǐ zěn shì nǐ de shū tí shì nǐ tí",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 273.509,
+        "end": 273.759
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 273.759,
+        "end": 274.009
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 274.009,
+        "end": 274.259
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 274.259,
+        "end": 274.509
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 274.509,
+        "end": 274.759
+      },
+      {
+        "word": "书",
+        "pinyin": "shū",
+        "start": 274.759,
+        "end": 275.009
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 275.009,
+        "end": 275.259
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 275.259,
+        "end": 275.509
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 275.509,
+        "end": 275.759
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 275.759,
+        "end": 276.009
+      }
+    ],
+    "id": 51
+  },
+  {
+    "text": "你你怎是你十题题怎题题",
+    "startTime": 278.769,
+    "endTime": 281.75,
+    "pinyin": "nǐ nǐ zěn shì nǐ shí tí tí zěn tí tí",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 278.769,
+        "end": 279.04
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 279.04,
+        "end": 279.311
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 279.311,
+        "end": 279.582
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 279.582,
+        "end": 279.853
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 279.853,
+        "end": 280.124
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 280.124,
+        "end": 280.395
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 280.395,
+        "end": 280.666
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 280.666,
+        "end": 280.937
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 280.937,
+        "end": 281.208
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 281.208,
+        "end": 281.479
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 281.479,
+        "end": 281.75
+      }
+    ],
+    "id": 52
+  },
+  {
+    "text": "第十十题",
+    "startTime": 286.49,
+    "endTime": 288.99,
+    "pinyin": "dì shí shí tí",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 286.49,
+        "end": 287.115
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 287.115,
+        "end": 287.74
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 287.74,
+        "end": 288.365
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 288.365,
+        "end": 288.99
+      }
+    ],
+    "id": 53
+  },
+  {
+    "text": "女",
+    "startTime": 288.829,
+    "endTime": 291.329,
+    "pinyin": "nǚ",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 288.829,
+        "end": 291.329
+      }
+    ],
+    "id": 54
+  },
+  {
+    "text": "女：你看这个怎么样？",
+    "startTime": 290.37,
+    "endTime": 292.87,
+    "pinyin": "nǚ ： nǐ kàn zhè ge zěn me yàng ？",
+    "viet": "Nán: qǐng Wèn 第 1 7 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 290.37,
+        "end": 290.62
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 290.62,
+        "end": 290.87
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 290.87,
+        "end": 291.12
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 291.12,
+        "end": 291.37
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 291.37,
+        "end": 291.62
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 291.62,
+        "end": 291.87
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 291.87,
+        "end": 292.12
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 292.12,
+        "end": 292.37
+      },
+      {
+        "word": "样",
+        "pinyin": "yàng",
+        "start": 292.37,
+        "end": 292.62
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 292.62,
+        "end": 292.87
+      }
+    ],
+    "id": 55
+  },
+  {
+    "text": "女：你看这个怎么样？",
+    "startTime": 294.588,
+    "endTime": 297.088,
+    "pinyin": "nǚ ： nǐ kàn zhè ge zěn me yàng ？",
+    "viet": "Nán: qǐng Wèn 第 1 7 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 294.588,
+        "end": 294.838
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 294.838,
+        "end": 295.088
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 295.088,
+        "end": 295.338
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 295.338,
+        "end": 295.588
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 295.588,
+        "end": 295.838
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 295.838,
+        "end": 296.088
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 296.088,
+        "end": 296.338
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 296.338,
+        "end": 296.588
+      },
+      {
+        "word": "样",
+        "pinyin": "yàng",
+        "start": 296.588,
+        "end": 296.838
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 296.838,
+        "end": 297.088
+      }
+    ],
+    "id": 56
+  },
+  {
+    "text": "第 20 题",
+    "startTime": 301.149,
+    "endTime": 303.649,
+    "pinyin": "dì   2 0   tí",
+    "viet": "Câu số 20",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 301.149,
+        "end": 301.5656666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 301.5656666666667,
+        "end": 301.9823333333333
+      },
+      {
+        "word": "2",
+        "pinyin": "2",
+        "start": 301.9823333333333,
+        "end": 302.399
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 302.399,
+        "end": 302.8156666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 302.8156666666667,
+        "end": 303.2323333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 303.2323333333333,
+        "end": 303.649
+      }
+    ],
+    "id": 57
+  },
+  {
+    "text": "题",
+    "startTime": 303.49,
+    "endTime": 305.99,
+    "pinyin": "tí",
+    "words": [
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 303.49,
+        "end": 305.99
+      }
+    ],
+    "id": 58
+  },
+  {
+    "text": "男：你现在去机场？",
+    "startTime": 304.55,
+    "endTime": 307.05,
+    "pinyin": "nán ： nǐ xiàn zài qù jī chǎng ？",
+    "viet": "Nán: qǐng Wèn 第 1 8 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 304.55,
+        "end": 304.828
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 304.828,
+        "end": 305.106
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 305.106,
+        "end": 305.383
+      },
+      {
+        "word": "现",
+        "pinyin": "xiàn",
+        "start": 305.383,
+        "end": 305.661
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 305.661,
+        "end": 305.939
+      },
+      {
+        "word": "去",
+        "pinyin": "qù",
+        "start": 305.939,
+        "end": 306.217
+      },
+      {
+        "word": "机",
+        "pinyin": "jī",
+        "start": 306.217,
+        "end": 306.494
+      },
+      {
+        "word": "场",
+        "pinyin": "chǎng",
+        "start": 306.494,
+        "end": 306.772
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 306.772,
+        "end": 307.05
+      }
+    ],
+    "id": 59
+  },
+  {
+    "text": "男：你现在去机场？",
+    "startTime": 308.85,
+    "endTime": 311.35,
+    "pinyin": "nán ： nǐ xiàn zài qù jī chǎng ？",
+    "viet": "Nán: qǐng Wèn 第 1 8 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 308.85,
+        "end": 309.128
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 309.128,
+        "end": 309.406
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 309.406,
+        "end": 309.683
+      },
+      {
+        "word": "现",
+        "pinyin": "xiàn",
+        "start": 309.683,
+        "end": 309.961
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 309.961,
+        "end": 310.239
+      },
+      {
+        "word": "去",
+        "pinyin": "qù",
+        "start": 310.239,
+        "end": 310.517
+      },
+      {
+        "word": "机",
+        "pinyin": "jī",
+        "start": 310.517,
+        "end": 310.794
+      },
+      {
+        "word": "场",
+        "pinyin": "chǎng",
+        "start": 310.794,
+        "end": 311.072
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 311.072,
+        "end": 311.35
+      }
+    ],
+    "id": 60
+  },
+  {
+    "text": "第 19 题",
+    "startTime": 315.449,
+    "endTime": 317.949,
+    "pinyin": "dì   1 9   tí",
+    "viet": "Câu số 19",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 315.449,
+        "end": 315.8656666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 315.8656666666667,
+        "end": 316.2823333333333
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 316.2823333333333,
+        "end": 316.699
+      },
+      {
+        "word": "9",
+        "pinyin": "9",
+        "start": 316.699,
+        "end": 317.1156666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 317.1156666666667,
+        "end": 317.5323333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 317.5323333333333,
+        "end": 317.949
+      }
+    ],
+    "id": 61
+  },
+  {
+    "text": "第 27 题",
+    "startTime": 317.79,
+    "endTime": 320.689,
+    "pinyin": "dì   2 7   tí",
+    "viet": "Câu số 27",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 317.79,
+        "end": 318.27316666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 318.27316666666667,
+        "end": 318.7563333333334
+      },
+      {
+        "word": "2",
+        "pinyin": "2",
+        "start": 318.7563333333334,
+        "end": 319.2395
+      },
+      {
+        "word": "7",
+        "pinyin": "7",
+        "start": 319.2395,
+        "end": 319.72266666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 319.72266666666667,
+        "end": 320.2058333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 320.2058333333334,
+        "end": 320.689
+      }
+    ],
+    "id": 62
+  },
+  {
+    "text": "第 27 题",
+    "startTime": 323.769,
+    "endTime": 326.569,
+    "pinyin": "dì   2 7   tí",
+    "viet": "Câu số 27",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 323.769,
+        "end": 324.2356666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 324.2356666666667,
+        "end": 324.70233333333334
+      },
+      {
+        "word": "2",
+        "pinyin": "2",
+        "start": 324.70233333333334,
+        "end": 325.169
+      },
+      {
+        "word": "7",
+        "pinyin": "7",
+        "start": 325.169,
+        "end": 325.6356666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 325.6356666666667,
+        "end": 326.1023333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 326.1023333333334,
+        "end": 326.569
+      }
+    ],
+    "id": 63
+  },
+  {
+    "text": "第 10 题",
+    "startTime": 331.49,
+    "endTime": 333.99,
+    "pinyin": "dì   1 0   tí",
+    "viet": "Câu số 10",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 331.49,
+        "end": 331.9066666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 331.9066666666667,
+        "end": 332.3233333333333
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 332.3233333333333,
+        "end": 332.74
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 332.74,
+        "end": 333.1566666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 333.1566666666667,
+        "end": 333.5733333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 333.5733333333333,
+        "end": 333.99
+      }
+    ],
+    "id": 64
+  },
+  {
+    "text": "男：我说“一二三”，大家一起笑，好吗？",
+    "startTime": 333.769,
+    "endTime": 337.85,
+    "pinyin": "nán ： wǒ shuō “ yī èr sān ”， dà jiā yì qǐ xiào ， hǎo ma ？",
+    "viet": "Nán: qǐng Wèn 第 2 0 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 333.769,
+        "end": 333.984
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 333.984,
+        "end": 334.199
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 334.199,
+        "end": 334.413
+      },
+      {
+        "word": "说",
+        "pinyin": "shuō",
+        "start": 334.413,
+        "end": 334.628
+      },
+      {
+        "word": "“",
+        "pinyin": "“",
+        "start": 334.628,
+        "end": 334.843
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 334.843,
+        "end": 335.058
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 335.058,
+        "end": 335.273
+      },
+      {
+        "word": "三",
+        "pinyin": "sān",
+        "start": 335.273,
+        "end": 335.487
+      },
+      {
+        "word": "”",
+        "pinyin": "”",
+        "start": 335.487,
+        "end": 335.702
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 335.702,
+        "end": 335.917
+      },
+      {
+        "word": "大",
+        "pinyin": "dà",
+        "start": 335.917,
+        "end": 336.132
+      },
+      {
+        "word": "家",
+        "pinyin": "jiā",
+        "start": 336.132,
+        "end": 336.346
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 336.346,
+        "end": 336.561
+      },
+      {
+        "word": "起",
+        "pinyin": "qǐ",
+        "start": 336.561,
+        "end": 336.776
+      },
+      {
+        "word": "笑",
+        "pinyin": "xiào",
+        "start": 336.776,
+        "end": 336.991
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 336.991,
+        "end": 337.206
+      },
+      {
+        "word": "好",
+        "pinyin": "hǎo",
+        "start": 337.206,
+        "end": 337.42
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 337.42,
+        "end": 337.635
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 337.635,
+        "end": 337.85
+      }
+    ],
+    "id": 65
+  },
+  {
+    "text": "男：我说“一二三”，大家一起笑，好吗？",
+    "startTime": 340.97,
+    "endTime": 344.689,
+    "pinyin": "nán ： wǒ shuō “ yī èr sān ”， dà jiā yì qǐ xiào ， hǎo ma ？",
+    "viet": "Nán: qǐng Wèn 第 2 0 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 340.97,
+        "end": 341.166
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 341.166,
+        "end": 341.361
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 341.361,
+        "end": 341.557
+      },
+      {
+        "word": "说",
+        "pinyin": "shuō",
+        "start": 341.557,
+        "end": 341.753
+      },
+      {
+        "word": "“",
+        "pinyin": "“",
+        "start": 341.753,
+        "end": 341.949
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 341.949,
+        "end": 342.144
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 342.144,
+        "end": 342.34
+      },
+      {
+        "word": "三",
+        "pinyin": "sān",
+        "start": 342.34,
+        "end": 342.536
+      },
+      {
+        "word": "”",
+        "pinyin": "”",
+        "start": 342.536,
+        "end": 342.732
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 342.732,
+        "end": 342.927
+      },
+      {
+        "word": "大",
+        "pinyin": "dà",
+        "start": 342.927,
+        "end": 343.123
+      },
+      {
+        "word": "家",
+        "pinyin": "jiā",
+        "start": 343.123,
+        "end": 343.319
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 343.319,
+        "end": 343.515
+      },
+      {
+        "word": "起",
+        "pinyin": "qǐ",
+        "start": 343.515,
+        "end": 343.71
+      },
+      {
+        "word": "笑",
+        "pinyin": "xiào",
+        "start": 343.71,
+        "end": 343.906
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 343.906,
+        "end": 344.102
+      },
+      {
+        "word": "好",
+        "pinyin": "hǎo",
+        "start": 344.102,
+        "end": 344.298
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 344.298,
+        "end": 344.493
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 344.493,
+        "end": 344.689
+      }
+    ],
+    "id": 66
+  },
+  {
+    "text": "第 10 题",
+    "startTime": 349.43,
+    "endTime": 353.689,
+    "pinyin": "dì   1 0   tí",
+    "viet": "Câu số 10",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 349.43,
+        "end": 350.13983333333334
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 350.13983333333334,
+        "end": 350.8496666666667
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 350.8496666666667,
+        "end": 351.5595
+      },
+      {
+        "word": "0",
+        "pinyin": "0",
+        "start": 351.5595,
+        "end": 352.26933333333335
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 352.26933333333335,
+        "end": 352.9791666666667
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 352.9791666666667,
+        "end": 353.689
+      }
+    ],
+    "id": 67
+  },
+  {
+    "text": "第 21 题",
+    "startTime": 354.61,
+    "endTime": 357.11,
+    "pinyin": "dì   2 1   tí",
+    "viet": "Câu số 21",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 354.61,
+        "end": 355.0266666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 355.0266666666667,
+        "end": 355.4433333333333
+      },
+      {
+        "word": "2",
+        "pinyin": "2",
+        "start": 355.4433333333333,
+        "end": 355.86
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 355.86,
+        "end": 356.2766666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 356.2766666666667,
+        "end": 356.6933333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 356.6933333333333,
+        "end": 357.11
+      }
+    ],
+    "id": 68
+  },
+  {
+    "text": "男二十一题",
+    "startTime": 359.588,
+    "endTime": 362.088,
+    "pinyin": "nán èr shí yī tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 359.588,
+        "end": 360.088
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 360.088,
+        "end": 360.588
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 360.588,
+        "end": 361.088
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 361.088,
+        "end": 361.588
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 361.588,
+        "end": 362.088
+      }
+    ],
+    "id": 69
+  },
+  {
+    "text": "女：您去过北京吗？",
+    "startTime": 362.028,
+    "endTime": 364.528,
+    "pinyin": "nǚ ： nín qù guò běi jīng ma ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 362.028,
+        "end": 362.306
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 362.306,
+        "end": 362.584
+      },
+      {
+        "word": "您",
+        "pinyin": "nín",
+        "start": 362.584,
+        "end": 362.861
+      },
+      {
+        "word": "去",
+        "pinyin": "qù",
+        "start": 362.861,
+        "end": 363.139
+      },
+      {
+        "word": "过",
+        "pinyin": "guò",
+        "start": 363.139,
+        "end": 363.417
+      },
+      {
+        "word": "北",
+        "pinyin": "běi",
+        "start": 363.417,
+        "end": 363.695
+      },
+      {
+        "word": "京",
+        "pinyin": "jīng",
+        "start": 363.695,
+        "end": 363.972
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 363.972,
+        "end": 364.25
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 364.25,
+        "end": 364.528
+      }
+    ],
+    "id": 70
+  },
+  {
+    "text": "男你去过十题题",
+    "startTime": 367.23,
+    "endTime": 369.73,
+    "pinyin": "nán nǐ qù guò shí tí tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 367.23,
+        "end": 367.58714285714285
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 367.58714285714285,
+        "end": 367.94428571428574
+      },
+      {
+        "word": "去",
+        "pinyin": "qù",
+        "start": 367.94428571428574,
+        "end": 368.3014285714286
+      },
+      {
+        "word": "过",
+        "pinyin": "guò",
+        "start": 368.3014285714286,
+        "end": 368.65857142857146
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 368.65857142857146,
+        "end": 369.0157142857143
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 369.0157142857143,
+        "end": 369.3728571428572
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 369.3728571428572,
+        "end": 369.73
+      }
+    ],
+    "id": 71
+  },
+  {
+    "text": "第 27 题",
+    "startTime": 373.97,
+    "endTime": 376.47,
+    "pinyin": "dì   2 7   tí",
+    "viet": "Câu số 27",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 373.97,
+        "end": 374.3866666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 374.3866666666667,
+        "end": 374.80333333333334
+      },
+      {
+        "word": "2",
+        "pinyin": "2",
+        "start": 374.80333333333334,
+        "end": 375.22
+      },
+      {
+        "word": "7",
+        "pinyin": "7",
+        "start": 375.22,
+        "end": 375.6366666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 375.6366666666667,
+        "end": 376.05333333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 376.05333333333334,
+        "end": 376.47
+      }
+    ],
+    "id": 72
+  },
+  {
+    "text": "男：中午吃饭怎么没看到你？",
+    "startTime": 376.43,
+    "endTime": 379.25,
+    "pinyin": "nán ： zhōng wǔ chī fàn zěn me méi kàn dào nǐ ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 376.43,
+        "end": 376.647
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 376.647,
+        "end": 376.864
+      },
+      {
+        "word": "中",
+        "pinyin": "zhōng",
+        "start": 376.864,
+        "end": 377.081
+      },
+      {
+        "word": "午",
+        "pinyin": "wǔ",
+        "start": 377.081,
+        "end": 377.298
+      },
+      {
+        "word": "吃",
+        "pinyin": "chī",
+        "start": 377.298,
+        "end": 377.515
+      },
+      {
+        "word": "饭",
+        "pinyin": "fàn",
+        "start": 377.515,
+        "end": 377.732
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 377.732,
+        "end": 377.948
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 377.948,
+        "end": 378.165
+      },
+      {
+        "word": "没",
+        "pinyin": "méi",
+        "start": 378.165,
+        "end": 378.382
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 378.382,
+        "end": 378.599
+      },
+      {
+        "word": "到",
+        "pinyin": "dào",
+        "start": 378.599,
+        "end": 378.816
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 378.816,
+        "end": 379.033
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 379.033,
+        "end": 379.25
+      }
+    ],
+    "id": 73
+  },
+  {
+    "text": "男：中午吃饭怎么没看到你？",
+    "startTime": 382.37,
+    "endTime": 385.29,
+    "pinyin": "nán ： zhōng wǔ chī fàn zěn me méi kàn dào nǐ ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 382.37,
+        "end": 382.595
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 382.595,
+        "end": 382.819
+      },
+      {
+        "word": "中",
+        "pinyin": "zhōng",
+        "start": 382.819,
+        "end": 383.044
+      },
+      {
+        "word": "午",
+        "pinyin": "wǔ",
+        "start": 383.044,
+        "end": 383.268
+      },
+      {
+        "word": "吃",
+        "pinyin": "chī",
+        "start": 383.268,
+        "end": 383.493
+      },
+      {
+        "word": "饭",
+        "pinyin": "fàn",
+        "start": 383.493,
+        "end": 383.718
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 383.718,
+        "end": 383.942
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 383.942,
+        "end": 384.167
+      },
+      {
+        "word": "没",
+        "pinyin": "méi",
+        "start": 384.167,
+        "end": 384.392
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 384.392,
+        "end": 384.616
+      },
+      {
+        "word": "到",
+        "pinyin": "dào",
+        "start": 384.616,
+        "end": 384.841
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 384.841,
+        "end": 385.065
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 385.065,
+        "end": 385.29
+      }
+    ],
+    "id": 74
+  },
+  {
+    "text": "男二十三题",
+    "startTime": 390.209,
+    "endTime": 392.709,
+    "pinyin": "nán èr shí sān tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 390.209,
+        "end": 390.709
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 390.709,
+        "end": 391.209
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 391.209,
+        "end": 391.709
+      },
+      {
+        "word": "三",
+        "pinyin": "sān",
+        "start": 391.709,
+        "end": 392.209
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 392.209,
+        "end": 392.709
+      }
+    ],
+    "id": 75
+  },
+  {
+    "text": "女：你怎么买了这么多菜？",
+    "startTime": 392.769,
+    "endTime": 395.269,
+    "pinyin": "nǚ ： nǐ zěn me mǎi le zhè me duō cài ？",
+    "viet": "Nán: qǐng Wèn 第 1 5 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 392.769,
+        "end": 392.977
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 392.977,
+        "end": 393.186
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 393.186,
+        "end": 393.394
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 393.394,
+        "end": 393.602
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 393.602,
+        "end": 393.811
+      },
+      {
+        "word": "买",
+        "pinyin": "mǎi",
+        "start": 393.811,
+        "end": 394.019
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 394.019,
+        "end": 394.227
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 394.227,
+        "end": 394.436
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 394.436,
+        "end": 394.644
+      },
+      {
+        "word": "多",
+        "pinyin": "duō",
+        "start": 394.644,
+        "end": 394.852
+      },
+      {
+        "word": "菜",
+        "pinyin": "cài",
+        "start": 394.852,
+        "end": 395.061
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 395.061,
+        "end": 395.269
+      }
+    ],
+    "id": 76
+  },
+  {
+    "text": "女：小明怎么没来上课？",
+    "startTime": 398.269,
+    "endTime": 400.769,
+    "pinyin": "nǚ ： xiǎo míng zěn me méi lái shàng kè ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 398.269,
+        "end": 398.496
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 398.496,
+        "end": 398.724
+      },
+      {
+        "word": "小",
+        "pinyin": "xiǎo",
+        "start": 398.724,
+        "end": 398.951
+      },
+      {
+        "word": "明",
+        "pinyin": "míng",
+        "start": 398.951,
+        "end": 399.178
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 399.178,
+        "end": 399.405
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 399.405,
+        "end": 399.633
+      },
+      {
+        "word": "没",
+        "pinyin": "méi",
+        "start": 399.633,
+        "end": 399.86
+      },
+      {
+        "word": "来",
+        "pinyin": "lái",
+        "start": 399.86,
+        "end": 400.087
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "start": 400.087,
+        "end": 400.314
+      },
+      {
+        "word": "课",
+        "pinyin": "kè",
+        "start": 400.314,
+        "end": 400.542
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 400.542,
+        "end": 400.769
+      }
+    ],
+    "id": 77
+  },
+  {
+    "text": "男二十三题",
+    "startTime": 405.449,
+    "endTime": 407.949,
+    "pinyin": "nán èr shí sān tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 405.449,
+        "end": 405.949
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 405.949,
+        "end": 406.449
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 406.449,
+        "end": 406.949
+      },
+      {
+        "word": "三",
+        "pinyin": "sān",
+        "start": 406.949,
+        "end": 407.449
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 407.449,
+        "end": 407.949
+      }
+    ],
+    "id": 78
+  },
+  {
+    "text": "男你十你题题",
+    "startTime": 407.97,
+    "endTime": 410.49,
+    "pinyin": "nán nǐ shí nǐ tí tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 407.97,
+        "end": 408.39000000000004
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 408.39000000000004,
+        "end": 408.81
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 408.81,
+        "end": 409.23
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 409.23,
+        "end": 409.65000000000003
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 409.65000000000003,
+        "end": 410.07
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 410.07,
+        "end": 410.49
+      }
+    ],
+    "id": 79
+  },
+  {
+    "text": "女你天你七题",
+    "startTime": 413.73,
+    "endTime": 416.23,
+    "pinyin": "nǚ nǐ tiān nǐ qī tí",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 413.73,
+        "end": 414.1466666666667
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 414.1466666666667,
+        "end": 414.56333333333333
+      },
+      {
+        "word": "天",
+        "pinyin": "tiān",
+        "start": 414.56333333333333,
+        "end": 414.98
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 414.98,
+        "end": 415.3966666666667
+      },
+      {
+        "word": "七",
+        "pinyin": "qī",
+        "start": 415.3966666666667,
+        "end": 415.81333333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 415.81333333333333,
+        "end": 416.23
+      }
+    ],
+    "id": 80
+  },
+  {
+    "text": "第 23 题",
+    "startTime": 420.75,
+    "endTime": 423.25,
+    "pinyin": "dì   2 3   tí",
+    "viet": "Câu số 23",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 420.75,
+        "end": 421.1666666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 421.1666666666667,
+        "end": 421.5833333333333
+      },
+      {
+        "word": "2",
+        "pinyin": "2",
+        "start": 421.5833333333333,
+        "end": 422
+      },
+      {
+        "word": "3",
+        "pinyin": "3",
+        "start": 422,
+        "end": 422.4166666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 422.4166666666667,
+        "end": 422.8333333333333
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 422.8333333333333,
+        "end": 423.25
+      }
+    ],
+    "id": 81
+  },
+  {
+    "text": "女：小张，这是今天的报纸吗？",
+    "startTime": 423.269,
+    "endTime": 426.569,
+    "pinyin": "nǚ ： xiǎo zhāng ， zhè shì jīn tiān de bào zhǐ ma ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 423.269,
+        "end": 423.505
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 423.505,
+        "end": 423.74
+      },
+      {
+        "word": "小",
+        "pinyin": "xiǎo",
+        "start": 423.74,
+        "end": 423.976
+      },
+      {
+        "word": "张",
+        "pinyin": "zhāng",
+        "start": 423.976,
+        "end": 424.212
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 424.212,
+        "end": 424.448
+      },
+      {
+        "word": "这",
+        "pinyin": "zhè",
+        "start": 424.448,
+        "end": 424.683
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 424.683,
+        "end": 424.919
+      },
+      {
+        "word": "今",
+        "pinyin": "jīn",
+        "start": 424.919,
+        "end": 425.155
+      },
+      {
+        "word": "天",
+        "pinyin": "tiān",
+        "start": 425.155,
+        "end": 425.39
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 425.39,
+        "end": 425.626
+      },
+      {
+        "word": "报",
+        "pinyin": "bào",
+        "start": 425.626,
+        "end": 425.862
+      },
+      {
+        "word": "纸",
+        "pinyin": "zhǐ",
+        "start": 425.862,
+        "end": 426.098
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 426.098,
+        "end": 426.333
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 426.333,
+        "end": 426.569
+      }
+    ],
+    "id": 82
+  },
+  {
+    "text": "男你题我是今书要你几吗",
+    "startTime": 429.769,
+    "endTime": 432.75,
+    "pinyin": "nán nǐ tí wǒ shì jīn shū yào nǐ jǐ ma",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 429.769,
+        "end": 430.04
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 430.04,
+        "end": 430.311
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 430.311,
+        "end": 430.582
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 430.582,
+        "end": 430.853
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 430.853,
+        "end": 431.124
+      },
+      {
+        "word": "今",
+        "pinyin": "jīn",
+        "start": 431.124,
+        "end": 431.395
+      },
+      {
+        "word": "书",
+        "pinyin": "shū",
+        "start": 431.395,
+        "end": 431.666
+      },
+      {
+        "word": "要",
+        "pinyin": "yào",
+        "start": 431.666,
+        "end": 431.937
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 431.937,
+        "end": 432.208
+      },
+      {
+        "word": "几",
+        "pinyin": "jǐ",
+        "start": 432.208,
+        "end": 432.479
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 432.479,
+        "end": 432.75
+      }
+    ],
+    "id": 83
+  },
+  {
+    "text": "男二十一题",
+    "startTime": 437.67,
+    "endTime": 440.17,
+    "pinyin": "nán èr shí yī tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 437.67,
+        "end": 438.17
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 438.17,
+        "end": 438.67
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 438.67,
+        "end": 439.17
+      },
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "start": 439.17,
+        "end": 439.67
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 439.67,
+        "end": 440.17
+      }
+    ],
+    "id": 84
+  },
+  {
+    "text": "男：你妹妹下午几点到？",
+    "startTime": 440.149,
+    "endTime": 442.649,
+    "pinyin": "nán ： nǐ mèi mèi xià wǔ jǐ diǎn dào ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 440.149,
+        "end": 440.376
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 440.376,
+        "end": 440.604
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 440.604,
+        "end": 440.831
+      },
+      {
+        "word": "妹",
+        "pinyin": "mèi",
+        "start": 440.831,
+        "end": 441.058
+      },
+      {
+        "word": "妹",
+        "pinyin": "mèi",
+        "start": 441.058,
+        "end": 441.285
+      },
+      {
+        "word": "下",
+        "pinyin": "xià",
+        "start": 441.285,
+        "end": 441.513
+      },
+      {
+        "word": "午",
+        "pinyin": "wǔ",
+        "start": 441.513,
+        "end": 441.74
+      },
+      {
+        "word": "几",
+        "pinyin": "jǐ",
+        "start": 441.74,
+        "end": 441.967
+      },
+      {
+        "word": "点",
+        "pinyin": "diǎn",
+        "start": 441.967,
+        "end": 442.194
+      },
+      {
+        "word": "到",
+        "pinyin": "dào",
+        "start": 442.194,
+        "end": 442.422
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 442.422,
+        "end": 442.649
+      }
+    ],
+    "id": 85
+  },
+  {
+    "text": "男：你妹妹下午几点到？",
+    "startTime": 445.55,
+    "endTime": 448.05,
+    "pinyin": "nán ： nǐ mèi mèi xià wǔ jǐ diǎn dào ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 445.55,
+        "end": 445.777
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 445.777,
+        "end": 446.005
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 446.005,
+        "end": 446.232
+      },
+      {
+        "word": "妹",
+        "pinyin": "mèi",
+        "start": 446.232,
+        "end": 446.459
+      },
+      {
+        "word": "妹",
+        "pinyin": "mèi",
+        "start": 446.459,
+        "end": 446.686
+      },
+      {
+        "word": "下",
+        "pinyin": "xià",
+        "start": 446.686,
+        "end": 446.914
+      },
+      {
+        "word": "午",
+        "pinyin": "wǔ",
+        "start": 446.914,
+        "end": 447.141
+      },
+      {
+        "word": "几",
+        "pinyin": "jǐ",
+        "start": 447.141,
+        "end": 447.368
+      },
+      {
+        "word": "点",
+        "pinyin": "diǎn",
+        "start": 447.368,
+        "end": 447.595
+      },
+      {
+        "word": "到",
+        "pinyin": "dào",
+        "start": 447.595,
+        "end": 447.823
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 447.823,
+        "end": 448.05
+      }
+    ],
+    "id": 86
+  },
+  {
+    "text": "男二十七题",
+    "startTime": 452.689,
+    "endTime": 455.189,
+    "pinyin": "nán èr shí qī tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 452.689,
+        "end": 453.189
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 453.189,
+        "end": 453.689
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 453.689,
+        "end": 454.189
+      },
+      {
+        "word": "七",
+        "pinyin": "qī",
+        "start": 454.189,
+        "end": 454.689
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 454.689,
+        "end": 455.189
+      }
+    ],
+    "id": 87
+  },
+  {
+    "text": "女：我在路上买了些水果，你去洗几个？",
+    "startTime": 455.149,
+    "endTime": 459.028,
+    "pinyin": "nǚ ： wǒ zài lù shàng mǎi le xiē shuǐ guǒ ， nǐ qù xǐ jǐ gè ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 455.149,
+        "end": 455.365
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 455.365,
+        "end": 455.58
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 455.58,
+        "end": 455.796
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 455.796,
+        "end": 456.011
+      },
+      {
+        "word": "路",
+        "pinyin": "lù",
+        "start": 456.011,
+        "end": 456.227
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "start": 456.227,
+        "end": 456.442
+      },
+      {
+        "word": "买",
+        "pinyin": "mǎi",
+        "start": 456.442,
+        "end": 456.658
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 456.658,
+        "end": 456.873
+      },
+      {
+        "word": "些",
+        "pinyin": "xiē",
+        "start": 456.873,
+        "end": 457.089
+      },
+      {
+        "word": "水",
+        "pinyin": "shuǐ",
+        "start": 457.089,
+        "end": 457.304
+      },
+      {
+        "word": "果",
+        "pinyin": "guǒ",
+        "start": 457.304,
+        "end": 457.52
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 457.52,
+        "end": 457.735
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 457.735,
+        "end": 457.951
+      },
+      {
+        "word": "去",
+        "pinyin": "qù",
+        "start": 457.951,
+        "end": 458.166
+      },
+      {
+        "word": "洗",
+        "pinyin": "xǐ",
+        "start": 458.166,
+        "end": 458.382
+      },
+      {
+        "word": "几",
+        "pinyin": "jǐ",
+        "start": 458.382,
+        "end": 458.597
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 458.597,
+        "end": 458.813
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 458.813,
+        "end": 459.028
+      }
+    ],
+    "id": 88
+  },
+  {
+    "text": "女：我在路上买了些水果，你去洗几个？",
+    "startTime": 462.11,
+    "endTime": 465.87,
+    "pinyin": "nǚ ： wǒ zài lù shàng mǎi le xiē shuǐ guǒ ， nǐ qù xǐ jǐ gè ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 462.11,
+        "end": 462.319
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 462.319,
+        "end": 462.528
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 462.528,
+        "end": 462.737
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 462.737,
+        "end": 462.946
+      },
+      {
+        "word": "路",
+        "pinyin": "lù",
+        "start": 462.946,
+        "end": 463.154
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "start": 463.154,
+        "end": 463.363
+      },
+      {
+        "word": "买",
+        "pinyin": "mǎi",
+        "start": 463.363,
+        "end": 463.572
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 463.572,
+        "end": 463.781
+      },
+      {
+        "word": "些",
+        "pinyin": "xiē",
+        "start": 463.781,
+        "end": 463.99
+      },
+      {
+        "word": "水",
+        "pinyin": "shuǐ",
+        "start": 463.99,
+        "end": 464.199
+      },
+      {
+        "word": "果",
+        "pinyin": "guǒ",
+        "start": 464.199,
+        "end": 464.408
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 464.408,
+        "end": 464.617
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 464.617,
+        "end": 464.826
+      },
+      {
+        "word": "去",
+        "pinyin": "qù",
+        "start": 464.826,
+        "end": 465.034
+      },
+      {
+        "word": "洗",
+        "pinyin": "xǐ",
+        "start": 465.034,
+        "end": 465.243
+      },
+      {
+        "word": "几",
+        "pinyin": "jǐ",
+        "start": 465.243,
+        "end": 465.452
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 465.452,
+        "end": 465.661
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 465.661,
+        "end": 465.87
+      }
+    ],
+    "id": 89
+  },
+  {
+    "text": "男二十七题",
+    "startTime": 470.79,
+    "endTime": 473.29,
+    "pinyin": "nán èr shí qī tí",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 470.79,
+        "end": 471.29
+      },
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 471.29,
+        "end": 471.79
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 471.79,
+        "end": 472.29
+      },
+      {
+        "word": "七",
+        "pinyin": "qī",
+        "start": 472.29,
+        "end": 472.79
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 472.79,
+        "end": 473.29
+      }
+    ],
+    "id": 90
+  },
+  {
+    "text": "男",
+    "startTime": 473.269,
+    "endTime": 475.769,
+    "pinyin": "nán",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 473.269,
+        "end": 475.769
+      }
+    ],
+    "id": 91
+  },
+  {
+    "text": "男：桌子上的那本书是你的？",
+    "startTime": 474.35,
+    "endTime": 476.85,
+    "pinyin": "nán ： zhuō zi shàng de nà běn shū shì nǐ de ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 474.35,
+        "end": 474.542
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 474.542,
+        "end": 474.735
+      },
+      {
+        "word": "桌",
+        "pinyin": "zhuō",
+        "start": 474.735,
+        "end": 474.927
+      },
+      {
+        "word": "子",
+        "pinyin": "zǐ",
+        "start": 474.927,
+        "end": 475.119
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "start": 475.119,
+        "end": 475.312
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 475.312,
+        "end": 475.504
+      },
+      {
+        "word": "那",
+        "pinyin": "nà",
+        "start": 475.504,
+        "end": 475.696
+      },
+      {
+        "word": "本",
+        "pinyin": "běn",
+        "start": 475.696,
+        "end": 475.888
+      },
+      {
+        "word": "书",
+        "pinyin": "shū",
+        "start": 475.888,
+        "end": 476.081
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 476.081,
+        "end": 476.273
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 476.273,
+        "end": 476.465
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 476.465,
+        "end": 476.658
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 476.658,
+        "end": 476.85
+      }
+    ],
+    "id": 92
+  },
+  {
+    "text": "男：桌子上的那本书是你的？",
+    "startTime": 479.689,
+    "endTime": 482.67,
+    "pinyin": "nán ： zhuō zi shàng de nà běn shū shì nǐ de ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 479.689,
+        "end": 479.918
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 479.918,
+        "end": 480.148
+      },
+      {
+        "word": "桌",
+        "pinyin": "zhuō",
+        "start": 480.148,
+        "end": 480.377
+      },
+      {
+        "word": "子",
+        "pinyin": "zǐ",
+        "start": 480.377,
+        "end": 480.606
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "start": 480.606,
+        "end": 480.836
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 480.836,
+        "end": 481.065
+      },
+      {
+        "word": "那",
+        "pinyin": "nà",
+        "start": 481.065,
+        "end": 481.294
+      },
+      {
+        "word": "本",
+        "pinyin": "běn",
+        "start": 481.294,
+        "end": 481.523
+      },
+      {
+        "word": "书",
+        "pinyin": "shū",
+        "start": 481.523,
+        "end": 481.753
+      },
+      {
+        "word": "是",
+        "pinyin": "shì",
+        "start": 481.753,
+        "end": 481.982
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 481.982,
+        "end": 482.211
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 482.211,
+        "end": 482.441
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 482.441,
+        "end": 482.67
+      }
+    ],
+    "id": 93
+  },
+  {
+    "text": "第 19 题",
+    "startTime": 487.588,
+    "endTime": 490.088,
+    "pinyin": "dì   1 9   tí",
+    "viet": "Câu số 19",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 487.588,
+        "end": 488.0046666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 488.0046666666667,
+        "end": 488.42133333333334
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 488.42133333333334,
+        "end": 488.838
+      },
+      {
+        "word": "9",
+        "pinyin": "9",
+        "start": 488.838,
+        "end": 489.2546666666667
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 489.2546666666667,
+        "end": 489.67133333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 489.67133333333334,
+        "end": 490.088
+      }
+    ],
+    "id": 94
+  },
+  {
+    "text": "第 31 题",
+    "startTime": 490.069,
+    "endTime": 492.81,
+    "pinyin": "dì   3 1   tí",
+    "viet": "Câu số 31",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 490.069,
+        "end": 490.52583333333337
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 490.52583333333337,
+        "end": 490.98266666666666
+      },
+      {
+        "word": "3",
+        "pinyin": "3",
+        "start": 490.98266666666666,
+        "end": 491.4395
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 491.4395,
+        "end": 491.89633333333336
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 491.89633333333336,
+        "end": 492.35316666666665
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 492.35316666666665,
+        "end": 492.81
+      }
+    ],
+    "id": 95
+  },
+  {
+    "text": "女：我听说你儿子在医院工作？",
+    "startTime": 496.009,
+    "endTime": 498.829,
+    "pinyin": "nǚ ： wǒ tīng shuō nǐ ér zi zài yī yuàn gōng zuò ？",
+    "viet": "Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 496.009,
+        "end": 496.21
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 496.21,
+        "end": 496.412
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 496.412,
+        "end": 496.613
+      },
+      {
+        "word": "听",
+        "pinyin": "tīng",
+        "start": 496.613,
+        "end": 496.815
+      },
+      {
+        "word": "说",
+        "pinyin": "shuō",
+        "start": 496.815,
+        "end": 497.016
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 497.016,
+        "end": 497.218
+      },
+      {
+        "word": "儿",
+        "pinyin": "ér",
+        "start": 497.218,
+        "end": 497.419
+      },
+      {
+        "word": "子",
+        "pinyin": "zǐ",
+        "start": 497.419,
+        "end": 497.62
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 497.62,
+        "end": 497.822
+      },
+      {
+        "word": "医",
+        "pinyin": "yī",
+        "start": 497.822,
+        "end": 498.023
+      },
+      {
+        "word": "院",
+        "pinyin": "yuàn",
+        "start": 498.023,
+        "end": 498.225
+      },
+      {
+        "word": "工",
+        "pinyin": "gōng",
+        "start": 498.225,
+        "end": 498.426
+      },
+      {
+        "word": "作",
+        "pinyin": "zuò",
+        "start": 498.426,
+        "end": 498.628
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 498.628,
+        "end": 498.829
+      }
+    ],
+    "id": 96
+  },
+  {
+    "text": "二十题男",
+    "startTime": 503.75,
+    "endTime": 506.25,
+    "pinyin": "èr shí tí nán",
+    "words": [
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 503.75,
+        "end": 504.375
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 504.375,
+        "end": 505
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 505,
+        "end": 505.625
+      },
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 505.625,
+        "end": 506.25
+      }
+    ],
+    "id": 97
+  },
+  {
+    "text": "你",
+    "startTime": 506.149,
+    "endTime": 508.649,
+    "pinyin": "nǐ",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 506.149,
+        "end": 508.649
+      }
+    ],
+    "id": 98
+  },
+  {
+    "text": "怎子你说十了题你",
+    "startTime": 507.25,
+    "endTime": 509.75,
+    "pinyin": "zěn zǐ nǐ shuō shí le tí nǐ",
+    "words": [
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 507.25,
+        "end": 507.5625
+      },
+      {
+        "word": "子",
+        "pinyin": "zǐ",
+        "start": 507.5625,
+        "end": 507.875
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 507.875,
+        "end": 508.1875
+      },
+      {
+        "word": "说",
+        "pinyin": "shuō",
+        "start": 508.1875,
+        "end": 508.5
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 508.5,
+        "end": 508.8125
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 508.8125,
+        "end": 509.125
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 509.125,
+        "end": 509.4375
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 509.4375,
+        "end": 509.75
+      }
+    ],
+    "id": 99
+  },
+  {
+    "text": "你在上了了个了吗第",
+    "startTime": 511.629,
+    "endTime": 514.129,
+    "pinyin": "nǐ zài shàng liǎo liǎo gè le ma dì",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 511.629,
+        "end": 511.9067777777778
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 511.9067777777778,
+        "end": 512.1845555555556
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "start": 512.1845555555556,
+        "end": 512.4623333333334
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 512.4623333333334,
+        "end": 512.7401111111111
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 512.7401111111111,
+        "end": 513.0178888888889
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 513.0178888888889,
+        "end": 513.2956666666666
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 513.2956666666666,
+        "end": 513.5734444444445
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 513.5734444444445,
+        "end": 513.8512222222222
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 513.8512222222222,
+        "end": 514.129
+      }
+    ],
+    "id": 100
+  },
+  {
+    "text": "十题题你第五个题每题听两题男",
+    "startTime": 518.49,
+    "endTime": 522.57,
+    "pinyin": "shí tí tí nǐ dì wǔ gè tí měi tí tīng liǎng tí nán",
+    "words": [
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 518.49,
+        "end": 518.7814285714286
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 518.7814285714286,
+        "end": 519.0728571428572
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 519.0728571428572,
+        "end": 519.3642857142858
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 519.3642857142858,
+        "end": 519.6557142857143
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 519.6557142857143,
+        "end": 519.9471428571429
+      },
+      {
+        "word": "五",
+        "pinyin": "wǔ",
+        "start": 519.9471428571429,
+        "end": 520.2385714285715
+      },
+      {
+        "word": "个",
+        "pinyin": "gè",
+        "start": 520.2385714285715,
+        "end": 520.53
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 520.53,
+        "end": 520.8214285714286
+      },
+      {
+        "word": "每",
+        "pinyin": "měi",
+        "start": 520.8214285714286,
+        "end": 521.1128571428571
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 521.1128571428571,
+        "end": 521.4042857142857
+      },
+      {
+        "word": "听",
+        "pinyin": "tīng",
+        "start": 521.4042857142857,
+        "end": 521.6957142857143
+      },
+      {
+        "word": "两",
+        "pinyin": "liǎng",
+        "start": 521.6957142857143,
+        "end": 521.9871428571429
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 521.9871428571429,
+        "end": 522.2785714285715
+      },
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 522.2785714285715,
+        "end": 522.57
+      }
+    ],
+    "id": 101
+  },
+  {
+    "text": "第 31 题",
+    "startTime": 523.49,
+    "endTime": 525.99,
+    "pinyin": "dì   3 1   tí",
+    "viet": "Câu số 31",
+    "words": [
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 523.49,
+        "end": 523.9066666666666
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 523.9066666666666,
+        "end": 524.3233333333334
+      },
+      {
+        "word": "3",
+        "pinyin": "3",
+        "start": 524.3233333333334,
+        "end": 524.74
+      },
+      {
+        "word": "1",
+        "pinyin": "1",
+        "start": 524.74,
+        "end": 525.1566666666666
+      },
+      {
+        "word": " ",
+        "pinyin": " ",
+        "start": 525.1566666666666,
+        "end": 525.5733333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 525.5733333333334,
+        "end": 525.99
+      }
+    ],
+    "id": 102
+  },
+  {
+    "text": "二十七题男",
+    "startTime": 528.47,
+    "endTime": 530.97,
+    "pinyin": "èr shí qī tí nán",
+    "words": [
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 528.47,
+        "end": 528.97
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 528.97,
+        "end": 529.47
+      },
+      {
+        "word": "七",
+        "pinyin": "qī",
+        "start": 529.47,
+        "end": 529.97
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 529.97,
+        "end": 530.47
+      },
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 530.47,
+        "end": 530.97
+      }
+    ],
+    "id": 103
+  },
+  {
+    "text": "男：对不起，我米晚了。",
+    "startTime": 531.048,
+    "endTime": 533.85,
+    "pinyin": "nán ： duì bù qǐ ， wǒ mǐ wǎn le 。",
+    "viet": "Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 531.048,
+        "end": 531.303
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 531.303,
+        "end": 531.557
+      },
+      {
+        "word": "对",
+        "pinyin": "duì",
+        "start": 531.557,
+        "end": 531.812
+      },
+      {
+        "word": "不",
+        "pinyin": "bù",
+        "start": 531.812,
+        "end": 532.067
+      },
+      {
+        "word": "起",
+        "pinyin": "qǐ",
+        "start": 532.067,
+        "end": 532.322
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 532.322,
+        "end": 532.576
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 532.576,
+        "end": 532.831
+      },
+      {
+        "word": "米",
+        "pinyin": "mǐ",
+        "start": 532.831,
+        "end": 533.086
+      },
+      {
+        "word": "晚",
+        "pinyin": "wǎn",
+        "start": 533.086,
+        "end": 533.341
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 533.341,
+        "end": 533.595
+      },
+      {
+        "word": "。",
+        "pinyin": "。",
+        "start": 533.595,
+        "end": 533.85
+      }
+    ],
+    "id": 104
+  },
+  {
+    "text": "你不题第十十题男",
+    "startTime": 536.928,
+    "endTime": 539.428,
+    "pinyin": "nǐ bù tí dì shí shí tí nán",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 536.928,
+        "end": 537.2405
+      },
+      {
+        "word": "不",
+        "pinyin": "bù",
+        "start": 537.2405,
+        "end": 537.553
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 537.553,
+        "end": 537.8655
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 537.8655,
+        "end": 538.178
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 538.178,
+        "end": 538.4905
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 538.4905,
+        "end": 538.803
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 538.803,
+        "end": 539.1155
+      },
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 539.1155,
+        "end": 539.428
+      }
+    ],
+    "id": 105
+  },
+  {
+    "text": "二十三题男",
+    "startTime": 544.25,
+    "endTime": 546.75,
+    "pinyin": "èr shí sān tí nán",
+    "words": [
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 544.25,
+        "end": 544.75
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 544.75,
+        "end": 545.25
+      },
+      {
+        "word": "三",
+        "pinyin": "sān",
+        "start": 545.25,
+        "end": 545.75
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 545.75,
+        "end": 546.25
+      },
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 546.25,
+        "end": 546.75
+      }
+    ],
+    "id": 106
+  },
+  {
+    "text": "女：小李，我的汉语书在你那儿吗？",
+    "startTime": 546.71,
+    "endTime": 549.99,
+    "pinyin": "nǚ ： xiǎo lǐ ， wǒ de hàn yǔ shū zài nǐ nà ér ma ？",
+    "viet": "Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 546.71,
+        "end": 546.915
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 546.915,
+        "end": 547.12
+      },
+      {
+        "word": "小",
+        "pinyin": "xiǎo",
+        "start": 547.12,
+        "end": 547.325
+      },
+      {
+        "word": "李",
+        "pinyin": "lǐ",
+        "start": 547.325,
+        "end": 547.53
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 547.53,
+        "end": 547.735
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 547.735,
+        "end": 547.94
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 547.94,
+        "end": 548.145
+      },
+      {
+        "word": "汉",
+        "pinyin": "hàn",
+        "start": 548.145,
+        "end": 548.35
+      },
+      {
+        "word": "语",
+        "pinyin": "yǔ",
+        "start": 548.35,
+        "end": 548.555
+      },
+      {
+        "word": "书",
+        "pinyin": "shū",
+        "start": 548.555,
+        "end": 548.76
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 548.76,
+        "end": 548.965
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 548.965,
+        "end": 549.17
+      },
+      {
+        "word": "那",
+        "pinyin": "nà",
+        "start": 549.17,
+        "end": 549.375
+      },
+      {
+        "word": "儿",
+        "pinyin": "ér",
+        "start": 549.375,
+        "end": 549.58
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 549.58,
+        "end": 549.785
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 549.785,
+        "end": 549.99
+      }
+    ],
+    "id": 107
+  },
+  {
+    "text": "女：小李，我的汉语书在你那儿吗？",
+    "startTime": 553.168,
+    "endTime": 556.389,
+    "pinyin": "nǚ ： xiǎo lǐ ， wǒ de hàn yǔ shū zài nǐ nà ér ma ？",
+    "viet": "Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?",
+    "words": [
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 553.168,
+        "end": 553.369
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 553.369,
+        "end": 553.571
+      },
+      {
+        "word": "小",
+        "pinyin": "xiǎo",
+        "start": 553.571,
+        "end": 553.772
+      },
+      {
+        "word": "李",
+        "pinyin": "lǐ",
+        "start": 553.772,
+        "end": 553.973
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 553.973,
+        "end": 554.175
+      },
+      {
+        "word": "我",
+        "pinyin": "wǒ",
+        "start": 554.175,
+        "end": 554.376
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 554.376,
+        "end": 554.577
+      },
+      {
+        "word": "汉",
+        "pinyin": "hàn",
+        "start": 554.577,
+        "end": 554.779
+      },
+      {
+        "word": "语",
+        "pinyin": "yǔ",
+        "start": 554.779,
+        "end": 554.98
+      },
+      {
+        "word": "书",
+        "pinyin": "shū",
+        "start": 554.98,
+        "end": 555.181
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 555.181,
+        "end": 555.382
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 555.382,
+        "end": 555.584
+      },
+      {
+        "word": "那",
+        "pinyin": "nà",
+        "start": 555.584,
+        "end": 555.785
+      },
+      {
+        "word": "儿",
+        "pinyin": "ér",
+        "start": 555.785,
+        "end": 555.986
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 555.986,
+        "end": 556.188
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 556.188,
+        "end": 556.389
+      }
+    ],
+    "id": 108
+  },
+  {
+    "text": "二十题题你",
+    "startTime": 561.23,
+    "endTime": 563.73,
+    "pinyin": "èr shí tí tí nǐ",
+    "words": [
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 561.23,
+        "end": 561.73
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 561.73,
+        "end": 562.23
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 562.23,
+        "end": 562.73
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 562.73,
+        "end": 563.23
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 563.23,
+        "end": 563.73
+      }
+    ],
+    "id": 109
+  },
+  {
+    "text": "男：请问，今天上午的票还有吗？",
+    "startTime": 563.788,
+    "endTime": 567.21,
+    "pinyin": "nán ： qǐng wèn ， jīn tiān shàng wǔ de piào hái yǒu ma ？",
+    "viet": "Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 563.788,
+        "end": 564.016
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 564.016,
+        "end": 564.244
+      },
+      {
+        "word": "请",
+        "pinyin": "qǐng",
+        "start": 564.244,
+        "end": 564.472
+      },
+      {
+        "word": "问",
+        "pinyin": "wèn",
+        "start": 564.472,
+        "end": 564.701
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 564.701,
+        "end": 564.929
+      },
+      {
+        "word": "今",
+        "pinyin": "jīn",
+        "start": 564.929,
+        "end": 565.157
+      },
+      {
+        "word": "天",
+        "pinyin": "tiān",
+        "start": 565.157,
+        "end": 565.385
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "start": 565.385,
+        "end": 565.613
+      },
+      {
+        "word": "午",
+        "pinyin": "wǔ",
+        "start": 565.613,
+        "end": 565.841
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 565.841,
+        "end": 566.069
+      },
+      {
+        "word": "票",
+        "pinyin": "piào",
+        "start": 566.069,
+        "end": 566.297
+      },
+      {
+        "word": "还",
+        "pinyin": "hái",
+        "start": 566.297,
+        "end": 566.526
+      },
+      {
+        "word": "有",
+        "pinyin": "yǒu",
+        "start": 566.526,
+        "end": 566.754
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 566.754,
+        "end": 566.982
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 566.982,
+        "end": 567.21
+      }
+    ],
+    "id": 110
+  },
+  {
+    "text": "男：请问，今天上午的票还有吗？",
+    "startTime": 570.308,
+    "endTime": 573.57,
+    "pinyin": "nán ： qǐng wèn ， jīn tiān shàng wǔ de piào hái yǒu ma ？",
+    "viet": "Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?",
+    "words": [
+      {
+        "word": "男",
+        "pinyin": "nán",
+        "start": 570.308,
+        "end": 570.525
+      },
+      {
+        "word": "：",
+        "pinyin": "：",
+        "start": 570.525,
+        "end": 570.743
+      },
+      {
+        "word": "请",
+        "pinyin": "qǐng",
+        "start": 570.743,
+        "end": 570.96
+      },
+      {
+        "word": "问",
+        "pinyin": "wèn",
+        "start": 570.96,
+        "end": 571.178
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 571.178,
+        "end": 571.395
+      },
+      {
+        "word": "今",
+        "pinyin": "jīn",
+        "start": 571.395,
+        "end": 571.613
+      },
+      {
+        "word": "天",
+        "pinyin": "tiān",
+        "start": 571.613,
+        "end": 571.83
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "start": 571.83,
+        "end": 572.048
+      },
+      {
+        "word": "午",
+        "pinyin": "wǔ",
+        "start": 572.048,
+        "end": 572.265
+      },
+      {
+        "word": "的",
+        "pinyin": "de",
+        "start": 572.265,
+        "end": 572.483
+      },
+      {
+        "word": "票",
+        "pinyin": "piào",
+        "start": 572.483,
+        "end": 572.7
+      },
+      {
+        "word": "还",
+        "pinyin": "hái",
+        "start": 572.7,
+        "end": 572.918
+      },
+      {
+        "word": "有",
+        "pinyin": "yǒu",
+        "start": 572.918,
+        "end": 573.135
+      },
+      {
+        "word": "吗",
+        "pinyin": "ma",
+        "start": 573.135,
+        "end": 573.353
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 573.353,
+        "end": 573.57
+      }
+    ],
+    "id": 111
+  },
+  {
+    "text": "三十题题第",
+    "startTime": 578.49,
+    "endTime": 580.99,
+    "pinyin": "sān shí tí tí dì",
+    "words": [
+      {
+        "word": "三",
+        "pinyin": "sān",
+        "start": 578.49,
+        "end": 578.99
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 578.99,
+        "end": 579.49
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 579.49,
+        "end": 579.99
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 579.99,
+        "end": 580.49
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 580.49,
+        "end": 580.99
+      }
+    ],
+    "id": 112
+  },
+  {
+    "text": "二十七题女你",
+    "startTime": 580.97,
+    "endTime": 583.47,
+    "pinyin": "èr shí qī tí nǚ nǐ",
+    "words": [
+      {
+        "word": "二",
+        "pinyin": "èr",
+        "start": 580.97,
+        "end": 581.3866666666667
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 581.3866666666667,
+        "end": 581.8033333333334
+      },
+      {
+        "word": "七",
+        "pinyin": "qī",
+        "start": 581.8033333333334,
+        "end": 582.22
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 582.22,
+        "end": 582.6366666666667
+      },
+      {
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 582.6366666666667,
+        "end": 583.0533333333334
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 583.0533333333334,
+        "end": 583.47
+      }
+    ],
+    "id": 113
+  },
+  {
+    "text": "去十了了你你",
+    "startTime": 585.75,
+    "endTime": 588.25,
+    "pinyin": "qù shí liǎo liǎo nǐ nǐ",
+    "words": [
+      {
+        "word": "去",
+        "pinyin": "qù",
+        "start": 585.75,
+        "end": 586.1666666666666
+      },
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 586.1666666666666,
+        "end": 586.5833333333334
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 586.5833333333334,
+        "end": 587
+      },
+      {
+        "word": "了",
+        "pinyin": "liǎo",
+        "start": 587,
+        "end": 587.4166666666666
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 587.4166666666666,
+        "end": 587.8333333333334
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 587.8333333333334,
+        "end": 588.25
+      }
+    ],
+    "id": 114
+  },
+  {
+    "text": "十题题你第",
+    "startTime": 591.99,
+    "endTime": 594.49,
+    "pinyin": "shí tí tí nǐ dì",
+    "words": [
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 591.99,
+        "end": 592.49
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 592.49,
+        "end": 592.99
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 592.99,
+        "end": 593.49
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 593.49,
+        "end": 593.99
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 593.99,
+        "end": 594.49
+      }
+    ],
+    "id": 115
+  },
+  {
+    "text": "十题题题你第",
+    "startTime": 594.629,
+    "endTime": 597.129,
+    "pinyin": "shí tí tí tí nǐ dì",
+    "words": [
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 594.629,
+        "end": 595.0456666666666
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 595.0456666666666,
+        "end": 595.4623333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 595.4623333333334,
+        "end": 595.879
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 595.879,
+        "end": 596.2956666666666
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 596.2956666666666,
+        "end": 596.7123333333334
+      },
+      {
+        "word": "第",
+        "pinyin": "dì",
+        "start": 596.7123333333334,
+        "end": 597.129
+      }
+    ],
+    "id": 116
+  },
+  {
+    "text": "十题题你你在",
+    "startTime": 599.47,
+    "endTime": 601.97,
+    "pinyin": "shí tí tí nǐ nǐ zài",
+    "words": [
+      {
+        "word": "十",
+        "pinyin": "shí",
+        "start": 599.47,
+        "end": 599.8866666666667
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 599.8866666666667,
+        "end": 600.3033333333334
+      },
+      {
+        "word": "题",
+        "pinyin": "tí",
+        "start": 600.3033333333334,
+        "end": 600.72
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 600.72,
+        "end": 601.1366666666667
+      },
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 601.1366666666667,
+        "end": 601.5533333333334
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 601.5533333333334,
+        "end": 601.97
+      }
+    ],
+    "id": 117
+  },
+  {
+    "text": "你看，小狗在玩儿什么呢？",
+    "startTime": 606.009,
+    "endTime": 608.509,
+    "pinyin": "nǐ kàn ， xiǎo gǒu zài wán ér shén me ne ？",
+    "viet": "Nhìn xem, con chó con đang chơi với cái gì?",
+    "words": [
+      {
+        "word": "你",
+        "pinyin": "nǐ",
+        "start": 606.009,
+        "end": 606.217
+      },
+      {
+        "word": "看",
+        "pinyin": "kàn",
+        "start": 606.217,
+        "end": 606.426
+      },
+      {
+        "word": "，",
+        "pinyin": "，",
+        "start": 606.426,
+        "end": 606.634
+      },
+      {
+        "word": "小",
+        "pinyin": "xiǎo",
+        "start": 606.634,
+        "end": 606.842
+      },
+      {
+        "word": "狗",
+        "pinyin": "gǒu",
+        "start": 606.842,
+        "end": 607.051
+      },
+      {
+        "word": "在",
+        "pinyin": "zài",
+        "start": 607.051,
+        "end": 607.259
+      },
+      {
+        "word": "玩",
+        "pinyin": "wán",
+        "start": 607.259,
+        "end": 607.467
+      },
+      {
+        "word": "儿",
+        "pinyin": "ér",
+        "start": 607.467,
+        "end": 607.676
+      },
+      {
+        "word": "什",
+        "pinyin": "shén",
+        "start": 607.676,
+        "end": 607.884
+      },
+      {
+        "word": "么",
+        "pinyin": "me",
+        "start": 607.884,
+        "end": 608.092
+      },
+      {
+        "word": "呢",
+        "pinyin": "ne",
+        "start": 608.092,
+        "end": 608.301
+      },
+      {
+        "word": "？",
+        "pinyin": "？",
+        "start": 608.301,
+        "end": 608.509
+      }
+    ],
+    "id": 118
+  }
+]

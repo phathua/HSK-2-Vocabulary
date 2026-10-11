@@ -13,7 +13,22 @@ export function parseSrt(srtContent: string): SubtitleItem[] {
     if (lines.length >= 3) {
       const id = parseInt(lines[0].trim(), 10);
       const timeLine = lines[1].trim();
-      const text = lines.slice(2).join('\n').trim();
+
+      let viet = '';
+      const textLines: string[] = [];
+      for (const rawLine of lines.slice(2)) {
+        const trimmed = rawLine.trim();
+        if (trimmed.includes('[VIET]')) {
+          const parts = trimmed.split('[VIET]');
+          const t = parts[0].trim();
+          const v = parts[1].trim();
+          if (t) textLines.push(t);
+          if (v) viet = v;
+        } else if (trimmed) {
+          textLines.push(trimmed);
+        }
+      }
+      const text = textLines.join('\n').trim();
 
       const timeMatch = timeLine.match(/(\d{2}):(\d{2}):(\d{2}),(\d{3})\s*-->\s*(\d{2}):(\d{2}):(\d{2}),(\d{3})/);
       if (timeMatch) {
@@ -36,12 +51,24 @@ export function parseSrt(srtContent: string): SubtitleItem[] {
           py = '';
         }
 
+        const chars = Array.from(text);
+        const dur = Math.max(0.5, endTime - startTime);
+        const step = dur / Math.max(1, chars.length);
+        const words = chars.map((ch, idx) => ({
+          word: ch,
+          pinyin: pinyin(ch),
+          start: startTime + idx * step,
+          end: startTime + (idx + 1) * step
+        }));
+
         subtitles.push({
           id,
           startTime,
           endTime,
           text,
-          pinyin: py
+          pinyin: py,
+          viet: viet || undefined,
+          words
         });
       }
     }
@@ -53,7 +80,18 @@ export function parseSrt(srtContent: string): SubtitleItem[] {
 export async function fetchSrt(examCode: string, baseUrl: string): Promise<SubtitleItem[]> {
   let loadedSubtitles: SubtitleItem[] = [];
 
-  // Try local static bundle first (/exams/<CODE>/<CODE>.srt)
+  // 1. Try local pre-generated subtitles.json first (rich sentence & word-level + viet translations)
+  try {
+    const jsonRes = await fetch(`/exams/${examCode}/subtitles.json`);
+    if (jsonRes.ok) {
+      const data = await jsonRes.json();
+      if (Array.isArray(data) && data.length > 0) {
+        return data;
+      }
+    }
+  } catch {}
+
+  // 2. Try local static bundle (/exams/<CODE>/<CODE>.srt)
   try {
     const localRes = await fetch(`/exams/${examCode}/${examCode}.srt`);
     if (localRes.ok) {
@@ -62,7 +100,7 @@ export async function fetchSrt(examCode: string, baseUrl: string): Promise<Subti
     }
   } catch {}
 
-  // Fallback to CDN URL if not found locally
+  // 3. Fallback to CDN URL if not found locally
   if (loadedSubtitles.length === 0) {
     try {
       const response = await fetch(`${baseUrl}/${examCode}/${examCode}.srt`);
@@ -75,16 +113,11 @@ export async function fetchSrt(examCode: string, baseUrl: string): Promise<Subti
     }
   }
 
-  // Prepend standardized intro rules subtitles ONLY if the file does not have early intro lines (< 100s)
+  // Prepend standardized intro rules subtitles ONLY if the file does not have early intro lines (< 28s)
   if (loadedSubtitles.length > 0) {
     const firstSub = loadedSubtitles[0];
-    if (firstSub.startTime > 100) {
-      // Intro completely missing: prepend standardized intro rules (0:00 - ~02:00)
+    if (firstSub.startTime > 28) {
       return [...EXAM_INTRO_RULES_SUBTITLES, ...loadedSubtitles];
-    } else if (firstSub.startTime <= 5 && firstSub.text.includes('Nhạc dạo đầu') && firstSub.endTime > 60) {
-      // If there's only a single placeholder intro block that ends around 68s, replace it with rich intro rules
-      const remainingSubs = loadedSubtitles.slice(1);
-      return [...EXAM_INTRO_RULES_SUBTITLES, ...remainingSubs];
     }
     return loadedSubtitles;
   }

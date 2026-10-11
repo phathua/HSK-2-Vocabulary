@@ -59,7 +59,10 @@
   const activeSubtitle = $derived.by(() => {
     if (activeSubtitleIndex < 0 || activeSubtitleIndex >= subtitles.length) return null;
     const sub = subtitles[activeSubtitleIndex];
-    if (currentTime > sub.endTime + 1.0) return null;
+    const nextSub = subtitles[activeSubtitleIndex + 1];
+    // Cho phép giữ hiển thị câu vừa nói cho đến khi câu tiếp theo bắt đầu (hoặc tối đa 6 giây sau khi nói xong)
+    const maxHold = nextSub ? Math.min(nextSub.startTime, sub.endTime + 6.0) : sub.endTime + 6.0;
+    if (currentTime > maxHold) return null;
     return sub;
   });
 
@@ -434,6 +437,15 @@
             </div>
           {/if}
         </div>
+
+        <!-- Bản dịch tiếng Việt của cả câu (nhẹ nhàng, thanh lịch, không có tiền tố thừa) -->
+        {#if activeSubtitle.viet}
+          <div class="px-1 text-center sm:text-left">
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-neutral-300 italic font-medium tracking-wide">
+              {activeSubtitle.viet}
+            </p>
+          </div>
+        {/if}
       </div>
     {/if}
 
@@ -533,6 +545,11 @@
                      {#if sub.pinyin}
                        <span class="text-sm md:text-base font-mono transition-colors duration-300 {i === activeSubtitleIndex ? 'text-amber-600 dark:text-amber-400 font-semibold' : 'text-slate-500 dark:text-neutral-500'}">
                          {sub.pinyin}
+                       </span>
+                     {/if}
+                     {#if sub.viet}
+                       <span class="text-xs md:text-sm italic font-medium transition-colors duration-300 {i === activeSubtitleIndex ? 'text-slate-700 dark:text-neutral-200' : 'text-slate-500 dark:text-neutral-400'}">
+                         {sub.viet}
                        </span>
                      {/if}
                    </div>
