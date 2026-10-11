@@ -490,7 +490,7 @@
     "endTime": 90.4,
     "text": "例如：我每天坐公共汽车去上班。",
     "pinyin": "lìrú ： wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
-    "viet": "Ví dụ",
+    "viet": "Ví dụ: Tôi đi xe buýt đi làm mỗi ngày.",
     "words": [
       {
         "word": "例如",
@@ -552,9 +552,9 @@
     "id": 11,
     "startTime": 91.4,
     "endTime": 97.4,
-    "text": "例如：我每天坐公共汽车去上班。",
-    "pinyin": "lìrú ： wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
-    "viet": "Ví dụ",
+    "text": "我每天坐公共汽车去上班。",
+    "pinyin": "wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
+    "viet": "Tôi đi xe buýt đi làm mỗi ngày.",
     "words": [
       {
         "word": "例如",
@@ -616,9 +616,9 @@
     "id": 12,
     "startTime": 100.4,
     "endTime": 106.4,
-    "text": "第 1 题",
-    "pinyin": "dì   1   tí",
-    "viet": "Câu số 1",
+    "text": "现在开始第1题。",
+    "pinyin": "xiànzài kāishǐ dì 1 tí 。",
+    "viet": "Bây giờ bắt đầu câu 1:",
     "words": [
       {
         "word": "第",
@@ -3562,7 +3562,7 @@
     "endTime": 442.4,
     "text": "十四,",
     "pinyin": "shísì ,",
-    "viet": "Nam: Anh có thể mời em nhảy một điệu được không?\nNữ: Vâng ạ.",
+    "viet": "Câu số 14",
     "words": [
       {
         "word": "十四",
@@ -3730,7 +3730,7 @@
     "endTime": 452.9,
     "text": "十五,",
     "pinyin": "shíwǔ ,",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 15",
     "words": [
       {
         "word": "十五",
@@ -4148,7 +4148,7 @@
     "endTime": 488.4,
     "text": "十五,",
     "pinyin": "shíwǔ ,",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 15",
     "words": [
       {
         "word": "十五",
@@ -4352,7 +4352,7 @@
     "endTime": 518.4,
     "text": "十六,",
     "pinyin": "shíliù ,",
-    "viet": "Đừng nói chuyện nữa, phim sắp bắt đầu rồi.",
+    "viet": "Câu số 16",
     "words": [
       {
         "word": "十六",
@@ -4668,7 +4668,7 @@
     "endTime": 529.4,
     "text": "十六,",
     "pinyin": "shíliù ,",
-    "viet": "Nam: Em nhìn thấy chưa? Chúng mình phải lên tận trên đó đấy.\nNữ: Em thấy rồi, cao thật đấy.",
+    "viet": "Câu số 16",
     "words": [
       {
         "word": "十六",
@@ -4984,7 +4984,7 @@
     "endTime": 542.4,
     "text": "十七,",
     "pinyin": "shíqī ,",
-    "viet": "Nam: Em nhìn thấy chưa? Chúng mình phải lên tận trên đó đấy.\nNữ: Em thấy rồi, cao thật đấy.",
+    "viet": "Câu số 17",
     "words": [
       {
         "word": "十七",
@@ -5262,7 +5262,7 @@
     "endTime": 552.4,
     "text": "十七,",
     "pinyin": "shíqī ,",
-    "viet": "Nữ: Sáng mai gặp lại ở trường nhé.\nNam: Được rồi, đi đường cẩn thận nhé, tạm biệt.",
+    "viet": "Câu số 17",
     "words": [
       {
         "word": "十七",
@@ -5540,7 +5540,7 @@
     "endTime": 562.4,
     "text": "十七,",
     "pinyin": "shíqī ,",
-    "viet": "Nữ: Sáng mai gặp lại ở trường nhé.\nNam: Được rồi, đi đường cẩn thận nhé, tạm biệt.",
+    "viet": "Câu số 17",
     "words": [
       {
         "word": "十七",
@@ -5712,7 +5712,7 @@
     "endTime": 581.9,
     "text": "十八,",
     "pinyin": "shíbā ,",
-    "viet": "Nữ: Sáng mai gặp lại ở trường nhé.\nNam: Được rồi, đi đường cẩn thận nhé, tạm biệt.",
+    "viet": "Câu số 18",
     "words": [
       {
         "word": "十八",
@@ -6058,7 +6058,7 @@
     "endTime": 592.9,
     "text": "十八,",
     "pinyin": "shíbā ,",
-    "viet": "Nam: Món mì bác nấu ngon thật đấy.\nNữ: Thật sao? Thế cháu ăn nhiều vào nhé, đừng khách khí.",
+    "viet": "Câu số 18",
     "words": [
       {
         "word": "十八",
@@ -6404,7 +6404,7 @@
     "endTime": 614.4,
     "text": "十九,",
     "pinyin": "shíjiǔ ,",
-    "viet": "Nam: Món mì bác nấu ngon thật đấy.\nNữ: Thật sao? Thế cháu ăn nhiều vào nhé, đừng khách khí.",
+    "viet": "Câu số 19",
     "words": [
       {
         "word": "十九",
@@ -6614,7 +6614,7 @@
     "endTime": 622.9,
     "text": "二十,",
     "pinyin": "èrshí ,",
-    "viet": "Nam: Món mì bác nấu ngon thật đấy.\nNữ: Thật sao? Thế cháu ăn nhiều vào nhé, đừng khách khí.",
+    "viet": "Câu số 20",
     "words": [
       {
         "word": "二十",
@@ -6788,7 +6788,7 @@
     "endTime": 628.9,
     "text": "二十,",
     "pinyin": "èrshí ,",
-    "viet": "Nam: Món mì bác nấu ngon thật đấy.\nNữ: Thật sao? Thế cháu ăn nhiều vào nhé, đừng khách khí.",
+    "viet": "Câu số 20",
     "words": [
       {
         "word": "二十",
@@ -7660,7 +7660,7 @@
     "endTime": 651.4,
     "text": "二十,",
     "pinyin": "èrshí ,",
-    "viet": "Nam: Món mì bác nấu ngon thật đấy.\nNữ: Thật sao? Thế cháu ăn nhiều vào nhé, đừng khách khí.",
+    "viet": "Câu số 20",
     "words": [
       {
         "word": "二十",
@@ -8658,7 +8658,7 @@
     "endTime": 713.9,
     "text": "二十一,",
     "pinyin": "èrshíyī ,",
-    "viet": "Đừng nói chuyện nữa, phim sắp bắt đầu rồi.",
+    "viet": "Câu số 21",
     "words": [
       {
         "word": "二十一",
@@ -8838,7 +8838,7 @@
     "endTime": 725.9,
     "text": "二十一,",
     "pinyin": "èrshíyī ,",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 21",
     "words": [
       {
         "word": "二十一",
@@ -8996,7 +8996,7 @@
     "endTime": 735.9,
     "text": "二十一,",
     "pinyin": "èrshíyī ,",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 21",
     "words": [
       {
         "word": "二十一",
@@ -9018,7 +9018,7 @@
     "endTime": 738.4,
     "text": "二十一,",
     "pinyin": "èrshíyī ,",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 21",
     "words": [
       {
         "word": "二十一",
@@ -9198,7 +9198,7 @@
     "endTime": 750.9,
     "text": "二十二,",
     "pinyin": "èrshíèr ,",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 22",
     "words": [
       {
         "word": "二十二",
@@ -9446,7 +9446,7 @@
     "endTime": 766.9,
     "text": "二十二,",
     "pinyin": "èrshíèr ,",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 22",
     "words": [
       {
         "word": "二十二",
@@ -9558,7 +9558,7 @@
     "endTime": 774.9,
     "text": "二十二,",
     "pinyin": "èrshíèr ,",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 22",
     "words": [
       {
         "word": "二十二",
@@ -9760,7 +9760,7 @@
     "endTime": 789.4,
     "text": "二十二,",
     "pinyin": "èrshíèr ,",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 22",
     "words": [
       {
         "word": "二十二",
@@ -9960,7 +9960,7 @@
     "endTime": 807.9,
     "text": "23.",
     "pinyin": "23 .",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 23",
     "words": [
       {
         "word": "23",
@@ -10246,7 +10246,7 @@
     "endTime": 831.9,
     "text": "23.",
     "pinyin": "23 .",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 23",
     "words": [
       {
         "word": "23",
@@ -10532,7 +10532,7 @@
     "endTime": 866.9,
     "text": "24.",
     "pinyin": "24 .",
-    "viet": "Nữ: Tiểu Cao, con gái anh xinh quá, cháu mấy tuổi rồi?\nNam: 5 tuổi rồi.\nHỏi: Con gái Tiểu Cao mấy tuổi rồi?",
+    "viet": "Câu số 24",
     "words": [
       {
         "word": "24",
@@ -10734,7 +10734,7 @@
     "endTime": 885.4,
     "text": "24.",
     "pinyin": "24 .",
-    "viet": "Nam: Nghe nói năm nay có hơn 800 người thi vào trường mình.\nNữ: Nhiều thế cơ à? Hơn năm mình thi những hơn 100 người đấy.\nHỏi: Năm nay có bao nhiêu người đăng ký thi?",
+    "viet": "Câu số 24",
     "words": [
       {
         "word": "24",
@@ -10936,7 +10936,7 @@
     "endTime": 917.4,
     "text": "25.",
     "pinyin": "25 .",
-    "viet": "Nam: Nghe nói năm nay có hơn 800 người thi vào trường mình.\nNữ: Nhiều thế cơ à? Hơn năm mình thi những hơn 100 người đấy.\nHỏi: Năm nay có bao nhiêu người đăng ký thi?",
+    "viet": "Câu số 25",
     "words": [
       {
         "word": "25",
@@ -11108,7 +11108,7 @@
     "endTime": 930.4,
     "text": "25.",
     "pinyin": "25 .",
-    "viet": "Nữ: Em gái anh xuống tàu hỏa chưa?\nNam: Xuống rồi, cô ấy đã về tới khách sạn rồi.\nHỏi: Em gái hiện tại ở đâu?",
+    "viet": "Câu số 25",
     "words": [
       {
         "word": "25",
@@ -11280,7 +11280,7 @@
     "endTime": 955.9,
     "text": "26.",
     "pinyin": "26 .",
-    "viet": "Nữ: Em gái anh xuống tàu hỏa chưa?\nNam: Xuống rồi, cô ấy đã về tới khách sạn rồi.\nHỏi: Em gái hiện tại ở đâu?",
+    "viet": "Câu số 26",
     "words": [
       {
         "word": "26",
@@ -11470,7 +11470,7 @@
     "endTime": 971.4,
     "text": "26.",
     "pinyin": "26 .",
-    "viet": "Nam: Chuyện gì mà buồn cười thế em?\nNữ: Bộ phim này hay quá, anh cũng lại đây xem thử đi.\nHỏi: Người nữ đang làm gì?",
+    "viet": "Câu số 26",
     "words": [
       {
         "word": "26",
@@ -11660,7 +11660,7 @@
     "endTime": 999.4,
     "text": "27.",
     "pinyin": "27 .",
-    "viet": "Nam: Chuyện gì mà buồn cười thế em?\nNữ: Bộ phim này hay quá, anh cũng lại đây xem thử đi.\nHỏi: Người nữ đang làm gì?",
+    "viet": "Câu số 27",
     "words": [
       {
         "word": "27",
@@ -11892,7 +11892,7 @@
     "endTime": 1017.4,
     "text": "27.",
     "pinyin": "27 .",
-    "viet": "Nữ: Cà phê đã mang tới cho ông Vương chưa anh?\nNam: Vẫn chưa nữa, mấy hôm nay anh bận quá, Chủ nhật hẵng mang đi nhé.\nHỏi: Người nam định mang cà phê cho ai?",
+    "viet": "Câu số 27",
     "words": [
       {
         "word": "27",
@@ -12124,7 +12124,7 @@
     "endTime": 1048.4,
     "text": "28.",
     "pinyin": "28 .",
-    "viet": "Nữ: Cà phê đã mang tới cho ông Vương chưa anh?\nNam: Vẫn chưa nữa, mấy hôm nay anh bận quá, Chủ nhật hẵng mang đi nhé.\nHỏi: Người nam định mang cà phê cho ai?",
+    "viet": "Câu số 28",
     "words": [
       {
         "word": "28",
@@ -12314,7 +12314,7 @@
     "endTime": 1062.4,
     "text": "28.",
     "pinyin": "28 .",
-    "viet": "Nam: Con trai đâu rồi em? Không ở trong phòng à?\nNữ: Thằng bé đi thể thao rồi, vẫn chưa về.\nHỏi: Con trai đi làm gì rồi?",
+    "viet": "Câu số 28",
     "words": [
       {
         "word": "28",
@@ -12504,7 +12504,7 @@
     "endTime": 1089.4,
     "text": "29.",
     "pinyin": "29 .",
-    "viet": "Nam: Con trai đâu rồi em? Không ở trong phòng à?\nNữ: Thằng bé đi thể thao rồi, vẫn chưa về.\nHỏi: Con trai đi làm gì rồi?",
+    "viet": "Câu số 29",
     "words": [
       {
         "word": "29",
@@ -12694,7 +12694,7 @@
     "endTime": 1105.4,
     "text": "29.",
     "pinyin": "29 .",
-    "viet": "Nữ: Thế nào rồi bác sĩ?\nNam: Không có vấn đề gì lớn đâu, tôi kê cho cô ít thuốc, về nhà nghỉ ngơi tử tế nhé.\nHỏi: Họ hiện tại đang ở đâu?",
+    "viet": "Câu số 29",
     "words": [
       {
         "word": "29",
@@ -12884,7 +12884,7 @@
     "endTime": 1135.4,
     "text": "30.",
     "pinyin": "30 .",
-    "viet": "Nữ: Thế nào rồi bác sĩ?\nNam: Không có vấn đề gì lớn đâu, tôi kê cho cô ít thuốc, về nhà nghỉ ngơi tử tế nhé.\nHỏi: Họ hiện tại đang ở đâu?",
+    "viet": "Câu số 30",
     "words": [
       {
         "word": "30",
@@ -13086,7 +13086,7 @@
     "endTime": 1149.9,
     "text": "30.",
     "pinyin": "30 .",
-    "viet": "Họ ở bên nhau rất vui vẻ.",
+    "viet": "Câu số 30",
     "words": [
       {
         "word": "30",
@@ -13816,7 +13816,7 @@
     "endTime": 1232.9,
     "text": "31.",
     "pinyin": "31 .",
-    "viet": "Nam: Phía trước công ty mới mở một nhà hàng, em đến ăn chưa?\nNữ: Tới rồi, em thấy món ăn hơi đắt.\nNam: Mặc dù đắt nhưng thức ăn làm rất ngon.\nNữ: Vâng, đồ ăn làm khá ngon thật.\nHỏi: Nhà hàng đó nằm ở đâu?",
+    "viet": "Câu số 31",
     "words": [
       {
         "word": "31",
@@ -15280,7 +15280,7 @@
     "endTime": 1322.24,
     "text": "32",
     "pinyin": "32",
-    "viet": "Nữ: Người chơi bóng rổ cùng anh buổi trưa là ai thế?\nNam: Em nói người nào cơ?\nNữ: Người mặc áo số 7 ấy.\nNam: Là Tiểu Bạch, bạn đại học của anh, hôm nào anh giới thiệu cho nhé.\nHỏi: Buổi trưa người nam chơi bóng với ai?",
+    "viet": "Câu số 32",
     "words": [
       {
         "word": "32",
@@ -15884,7 +15884,7 @@
     "endTime": 1361.04,
     "text": "33",
     "pinyin": "33",
-    "viet": "Nữ: Người chơi bóng rổ cùng anh buổi trưa là ai thế?\nNam: Em nói người nào cơ?\nNữ: Người mặc áo số 7 ấy.\nNam: Là Tiểu Bạch, bạn đại học của anh, hôm nào anh giới thiệu cho nhé.\nHỏi: Buổi trưa người nam chơi bóng với ai?",
+    "viet": "Câu số 33",
     "words": [
       {
         "word": "33",
@@ -16154,7 +16154,7 @@
     "endTime": 1381.04,
     "text": "33",
     "pinyin": "33",
-    "viet": "Nam: Đây là chó của em à?\nNữ: Vâng, hôm qua chị em tặng đấy.\nNam: Vui thật đấy, nó tên là gì?\nNữ: Em gọi nó là \"Gao Xing\" (Vui Vẻ).\nHỏi: Chị gái tặng gì cho người nữ?",
+    "viet": "Câu số 33",
     "words": [
       {
         "word": "33",
@@ -16424,7 +16424,7 @@
     "endTime": 1414.16,
     "text": "34",
     "pinyin": "34",
-    "viet": "Nam: Đây là chó của em à?\nNữ: Vâng, hôm qua chị em tặng đấy.\nNam: Vui thật đấy, nó tên là gì?\nNữ: Em gọi nó là \"Gao Xing\" (Vui Vẻ).\nHỏi: Chị gái tặng gì cho người nữ?",
+    "viet": "Câu số 34",
     "words": [
       {
         "word": "34",
@@ -16728,7 +16728,7 @@
     "endTime": 1434.0,
     "text": "34",
     "pinyin": "34",
-    "viet": "Nữ: Tối nay anh có rảnh không?\nNam: Có chứ, sao thế em?\nNữ: Máy tính của em bị hỏng rồi, anh xem giúp em với.\nNam: Được, thế 6 giờ gặp ở nhà em nhé.\nHỏi: Mấy giờ họ gặp nhau?",
+    "viet": "Câu số 34",
     "words": [
       {
         "word": "34",
@@ -17240,7 +17240,7 @@
     "endTime": 1467.08,
     "text": "35",
     "pinyin": "35",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 35",
     "words": [
       {
         "word": "35",
@@ -17708,7 +17708,7 @@
     "endTime": 1489.88,
     "text": "35",
     "pinyin": "35",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 35",
     "words": [
       {
         "word": "35",

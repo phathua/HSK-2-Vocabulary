@@ -138,28 +138,66 @@
   });
 
   let wasPlayingBeforeBlur = false;
+  let lastKnownGoodTime = 0;
 
   function neutralizeMediaSession() {
     if (typeof navigator !== 'undefined' && 'mediaSession' in navigator) {
       try {
-        navigator.mediaSession.metadata = null;
-        navigator.mediaSession.playbackState = 'none';
-        const actions: MediaSessionAction[] = [
-          'play',
-          'pause',
+        const noop = () => {};
+        const seekActions: MediaSessionAction[] = [
           'seekbackward',
           'seekforward',
           'previoustrack',
           'nexttrack',
           'seekto',
-          'stop',
           'skipad'
         ];
-        actions.forEach((action) => {
+
+        seekActions.forEach((action) => {
           try {
-            navigator.mediaSession.setActionHandler(action, null);
+            // Nuốt trọn các thao tác tua từ Lock Screen / AirPods / Control Center khi ở chế độ thi
+            navigator.mediaSession.setActionHandler(action, isExamMode ? noop : null);
           } catch {}
         });
+
+        if (isExamMode) {
+          try {
+            navigator.mediaSession.setActionHandler('pause', noop);
+            navigator.mediaSession.setActionHandler('stop', noop);
+          } catch {}
+
+          // Metadata hiển thị rõ trạng thái phòng thi
+          navigator.mediaSession.metadata = new MediaMetadata({
+            title: `HSK 2 Bài Thi Nghe (${examCode})`,
+            artist: 'Phòng thi trực tuyến (Đang thi thật - Cấm tua)',
+            album: 'HSK Online Listening'
+          });
+
+          // Mẹo Live Stream Masking: Đặt duration vô hạn để iOS Safari ẩn thanh tua (scrubber knob)
+          if ('setPositionState' in navigator.mediaSession) {
+            try {
+              navigator.mediaSession.setPositionState({
+                duration: Infinity,
+                playbackRate: 1,
+                position: 0
+              });
+            } catch {
+              try {
+                navigator.mediaSession.setPositionState({
+                  duration: Number.MAX_SAFE_INTEGER,
+                  playbackRate: 1,
+                  position: 0
+                });
+              } catch {}
+            }
+          }
+        } else {
+          navigator.mediaSession.metadata = new MediaMetadata({
+            title: `Audio ${examCode}`,
+            artist: 'HSK 2 Ôn Luyện Nghe',
+            album: 'HSK Online Listening'
+          });
+        }
       } catch {}
     }
   }
@@ -298,6 +336,7 @@
 
   function seekTo(time: number) {
     if (audioElement) {
+      lastKnownGoodTime = time;
       audioElement.currentTime = time;
       currentTime = time;
       if (!isPlaying) {
@@ -340,6 +379,19 @@
     if (audioElement) {
       currentTime = audioElement.currentTime;
       examRoomState.currentTime = currentTime;
+      if (isExamMode) {
+        lastKnownGoodTime = audioElement.currentTime;
+      }
+    }
+  }
+
+  function handleSeeking() {
+    if (isExamMode && audioElement) {
+      // Chốt chặn cứng chống gian lận: Nếu người dùng cố tua từ Control Center, Apple Watch, AirPods
+      const diff = Math.abs(audioElement.currentTime - lastKnownGoodTime);
+      if (diff > 0.8) {
+        audioElement.currentTime = lastKnownGoodTime;
+      }
     }
   }
 
@@ -569,6 +621,7 @@
       src={resolvedSrc}
       ontimeupdate={handleTimeUpdate}
       onloadedmetadata={handleLoadedMetadata}
+      onseeking={handleSeeking}
       onended={handleEnded}
       preload="auto"
     ></audio>

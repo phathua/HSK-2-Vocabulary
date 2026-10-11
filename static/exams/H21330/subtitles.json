@@ -472,9 +472,9 @@
     "id": 9,
     "startTime": 86.52,
     "endTime": 91.92,
-    "text": "例如：我每天坐公共汽车去上班。",
-    "pinyin": "lìrú ： wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
-    "viet": "Ví dụ",
+    "text": "我每天坐公共汽车去上班。",
+    "pinyin": "wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
+    "viet": "Tôi đi xe buýt đi làm mỗi ngày.",
     "words": [
       {
         "word": "例如",
@@ -538,7 +538,7 @@
     "endTime": 98.76,
     "text": "例如：我每天坐公共汽车去上班。",
     "pinyin": "lìrú ： wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
-    "viet": "Ví dụ",
+    "viet": "Ví dụ: Tôi đi xe buýt đi làm mỗi ngày.",
     "words": [
       {
         "word": "例如",
@@ -600,9 +600,9 @@
     "id": 11,
     "startTime": 105.48,
     "endTime": 108.24,
-    "text": "第 1 题",
-    "pinyin": "dì   1   tí",
-    "viet": "Câu số 1",
+    "text": "现在开始第1题。",
+    "pinyin": "xiànzài kāishǐ dì 1 tí 。",
+    "viet": "Bây giờ bắt đầu câu 1:",
     "words": [
       {
         "word": "第",
@@ -630,7 +630,7 @@
     "endTime": 113.66,
     "text": "一",
     "pinyin": "yī",
-    "viet": "Tổng cộng 35 câu.",
+    "viet": "Câu số 1",
     "words": [
       {
         "word": "一",
@@ -698,7 +698,7 @@
     "endTime": 119.86,
     "text": "二",
     "pinyin": "èr",
-    "viet": "Chào bạn! Chào mừng tham gia kỳ thi HSK 2.",
+    "viet": "Câu số 2",
     "words": [
       {
         "word": "二",
@@ -754,7 +754,7 @@
     "endTime": 125.94,
     "text": "三",
     "pinyin": "sān",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 3",
     "words": [
       {
         "word": "三",
@@ -1030,7 +1030,7 @@
     "endTime": 164.46,
     "text": "四",
     "pinyin": "sì",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 4",
     "words": [
       {
         "word": "四",
@@ -1092,7 +1092,7 @@
     "endTime": 171.3,
     "text": "五",
     "pinyin": "wǔ",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 5",
     "words": [
       {
         "word": "五",

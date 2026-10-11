@@ -394,7 +394,7 @@
     "endTime": 73.88,
     "text": "例如：我们家有三个人。",
     "pinyin": "lìrú ： wǒmen jiāyǒu sāngè rén 。",
-    "viet": "Ví dụ",
+    "viet": "Ví dụ: Nhà tôi có 3 người.",
     "words": [
       {
         "word": "例如",
@@ -446,7 +446,7 @@
     "endTime": 78.68,
     "text": "例如：我们家有三个人。",
     "pinyin": "lìrú ： wǒmen jiāyǒu sāngè rén 。",
-    "viet": "Ví dụ",
+    "viet": "Ví dụ: Nhà tôi có 3 người.",
     "words": [
       {
         "word": "例如",
@@ -498,7 +498,7 @@
     "endTime": 90.68,
     "text": "例如：我每天坐公共汽车去上班。",
     "pinyin": "lìrú ： wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
-    "viet": "Ví dụ",
+    "viet": "Ví dụ: Tôi đi xe buýt đi làm mỗi ngày.",
     "words": [
       {
         "word": "例如",
@@ -560,9 +560,9 @@
     "id": 10,
     "startTime": 91.68,
     "endTime": 97.68,
-    "text": "例如：我每天坐公共汽车去上班。",
-    "pinyin": "lìrú ： wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
-    "viet": "Ví dụ",
+    "text": "我每天坐公共汽车去上班。",
+    "pinyin": "wǒ měitiān zuò gōnggòngqìchē qù shàngbān 。",
+    "viet": "Tôi đi xe buýt đi làm mỗi ngày.",
     "words": [
       {
         "word": "例如",
@@ -624,9 +624,9 @@
     "id": 11,
     "startTime": 103.68,
     "endTime": 106.68,
-    "text": "第 1 题",
-    "pinyin": "dì   1   tí",
-    "viet": "Câu số 1",
+    "text": "现在开始第1题。",
+    "pinyin": "xiànzài kāishǐ dì 1 tí 。",
+    "viet": "Bây giờ bắt đầu câu 1:",
     "words": [
       {
         "word": "第",
@@ -654,7 +654,7 @@
     "endTime": 112.18,
     "text": "一",
     "pinyin": "yī",
-    "viet": "Tổng cộng 35 câu.",
+    "viet": "Câu số 1",
     "words": [
       {
         "word": "一",
@@ -738,7 +738,7 @@
     "endTime": 129.18,
     "text": "二",
     "pinyin": "èr",
-    "viet": "Chào bạn! Chào mừng tham gia kỳ thi HSK 2.",
+    "viet": "Câu số 2",
     "words": [
       {
         "word": "二",
@@ -812,7 +812,7 @@
     "endTime": 136.18,
     "text": "三",
     "pinyin": "sān",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 3",
     "words": [
       {
         "word": "三",
@@ -1042,7 +1042,7 @@
     "endTime": 170.18,
     "text": "四",
     "pinyin": "sì",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 4",
     "words": [
       {
         "word": "四",
@@ -1138,7 +1138,7 @@
     "endTime": 187.18,
     "text": "五",
     "pinyin": "wǔ",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 5",
     "words": [
       {
         "word": "五",
@@ -1258,7 +1258,7 @@
     "endTime": 206.18,
     "text": "六",
     "pinyin": "liù",
-    "viet": "Anh trai tôi là bác sĩ.",
+    "viet": "Câu số 6",
     "words": [
       {
         "word": "六",
@@ -1354,7 +1354,7 @@
     "endTime": 221.68,
     "text": "七",
     "pinyin": "qī",
-    "viet": "Chiếc đồng hồ đeo tay này có đẹp không?",
+    "viet": "Câu số 7",
     "words": [
       {
         "word": "七",
@@ -1486,7 +1486,7 @@
     "endTime": 242.18,
     "text": "八",
     "pinyin": "bā",
-    "viet": "Bạn đừng nói nữa, tôi không muốn nghe.",
+    "viet": "Câu số 8",
     "words": [
       {
         "word": "八",
@@ -1548,7 +1548,7 @@
     "endTime": 247.18,
     "text": "九",
     "pinyin": "jiǔ",
-    "viet": "Tay bạn sao thế?",
+    "viet": "Câu số 9",
     "words": [
       {
         "word": "九",
@@ -1656,7 +1656,7 @@
     "endTime": 272.18,
     "text": "十",
     "pinyin": "shí",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 10",
     "words": [
       {
         "word": "十",
@@ -1672,7 +1672,7 @@
     "endTime": 274.18,
     "text": "十",
     "pinyin": "shí",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 10",
     "words": [
       {
         "word": "十",
@@ -2078,7 +2078,7 @@
     "endTime": 322.18,
     "text": "十一",
     "pinyin": "shíyī",
-    "viet": "Mèo con thích ăn cá nhất.",
+    "viet": "Câu số 11",
     "words": [
       {
         "word": "十一",
@@ -2222,7 +2222,7 @@
     "endTime": 333.18,
     "text": "十一",
     "pinyin": "shíyī",
-    "viet": "Nữ: Em đi rửa tay rồi ra ăn dưa hấu nhé. | Nam: Em ăn đi, bây giờ anh không muốn ăn.",
+    "viet": "Câu số 11",
     "words": [
       {
         "word": "十一",
@@ -2360,7 +2360,7 @@
     "endTime": 343.18,
     "text": "十一",
     "pinyin": "shíyī",
-    "viet": "Nữ: Em đi rửa tay rồi ra ăn dưa hấu nhé. | Nam: Em ăn đi, bây giờ anh không muốn ăn.",
+    "viet": "Câu số 11",
     "words": [
       {
         "word": "十一",
@@ -2504,7 +2504,7 @@
     "endTime": 364.18,
     "text": "十二",
     "pinyin": "shíèr",
-    "viet": "Nữ: Em đi rửa tay rồi ra ăn dưa hấu nhé. | Nam: Em ăn đi, bây giờ anh không muốn ăn.",
+    "viet": "Câu số 12",
     "words": [
       {
         "word": "十二",
@@ -2658,7 +2658,7 @@
     "endTime": 378.18,
     "text": "十二",
     "pinyin": "shíèr",
-    "viet": "Nữ: Con muốn học múa, tìm cho con một trường học đi. | Nam: Được, tìm cái gần nhà chút nhé.",
+    "viet": "Câu số 12",
     "words": [
       {
         "word": "十二",
@@ -2812,7 +2812,7 @@
     "endTime": 400.18,
     "text": "十三",
     "pinyin": "shísān",
-    "viet": "Nữ: Con muốn học múa, tìm cho con một trường học đi. | Nam: Được, tìm cái gần nhà chút nhé.",
+    "viet": "Câu số 13",
     "words": [
       {
         "word": "十三",
@@ -2926,7 +2926,7 @@
     "endTime": 410.18,
     "text": "十三",
     "pinyin": "shísān",
-    "viet": "Nữ: Bên trong này là cái gì thế? | Nam: Em mở ra xem là biết ngay thôi.",
+    "viet": "Câu số 13",
     "words": [
       {
         "word": "十三",
@@ -3040,7 +3040,7 @@
     "endTime": 430.18,
     "text": "十四",
     "pinyin": "shísì",
-    "viet": "Nữ: Bên trong này là cái gì thế? | Nam: Em mở ra xem là biết ngay thôi.",
+    "viet": "Câu số 14",
     "words": [
       {
         "word": "十四",
@@ -3154,7 +3154,7 @@
     "endTime": 440.18,
     "text": "十四",
     "pinyin": "shísì",
-    "viet": "Nữ: Bên trong này là cái gì thế? | Nam: Em mở ra xem là biết ngay thôi.",
+    "viet": "Câu số 14",
     "words": [
       {
         "word": "十四",
@@ -3268,7 +3268,7 @@
     "endTime": 460.18,
     "text": "十五",
     "pinyin": "shíwǔ",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 15",
     "words": [
       {
         "word": "十五",
@@ -3352,7 +3352,7 @@
     "endTime": 469.18,
     "text": "十五",
     "pinyin": "shíwǔ",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 15",
     "words": [
       {
         "word": "十五",
@@ -3464,7 +3464,7 @@
     "endTime": 484.18,
     "text": "十六",
     "pinyin": "shíliù",
-    "viet": "Mèo con thích ăn cá nhất.",
+    "viet": "Câu số 16",
     "words": [
       {
         "word": "十六",
@@ -3572,7 +3572,7 @@
     "endTime": 492.18,
     "text": "十六",
     "pinyin": "shíliù",
-    "viet": "Nam: Đây là tờ báo hôm nay. | Nữ: Đúng rồi, anh xem chưa?",
+    "viet": "Câu số 16",
     "words": [
       {
         "word": "十六",
@@ -3680,7 +3680,7 @@
     "endTime": 500.18,
     "text": "十六",
     "pinyin": "shíliù",
-    "viet": "Nam: Đây là tờ báo hôm nay. | Nữ: Đúng rồi, anh xem chưa?",
+    "viet": "Câu số 16",
     "words": [
       {
         "word": "十六",
@@ -3788,7 +3788,7 @@
     "endTime": 511.18,
     "text": "十七",
     "pinyin": "shíqī",
-    "viet": "Nam: Đây là tờ báo hôm nay. | Nữ: Đúng rồi, anh xem chưa?",
+    "viet": "Câu số 17",
     "words": [
       {
         "word": "十七",
@@ -3914,7 +3914,7 @@
     "endTime": 521.18,
     "text": "十七",
     "pinyin": "shíqī",
-    "viet": "Nam: Nóng quá, anh uống chút nước rồi chạy tiếp. | Nữ: Thế em cũng nghỉ ngơi một chút.",
+    "viet": "Câu số 17",
     "words": [
       {
         "word": "十七",
@@ -4040,7 +4040,7 @@
     "endTime": 531.18,
     "text": "十七",
     "pinyin": "shíqī",
-    "viet": "Nam: Nóng quá, anh uống chút nước rồi chạy tiếp. | Nữ: Thế em cũng nghỉ ngơi một chút.",
+    "viet": "Câu số 17",
     "words": [
       {
         "word": "十七",
@@ -4166,7 +4166,7 @@
     "endTime": 552.18,
     "text": "十八",
     "pinyin": "shíbā",
-    "viet": "Nam: Nóng quá, anh uống chút nước rồi chạy tiếp. | Nữ: Thế em cũng nghỉ ngơi một chút.",
+    "viet": "Câu số 18",
     "words": [
       {
         "word": "十八",
@@ -4280,7 +4280,7 @@
     "endTime": 560.18,
     "text": "十八",
     "pinyin": "shíbā",
-    "viet": "Nữ: Em đi làm đây, tạm biệt. | Nam: Tạm biệt, em lái xe chậm thôi nhé.",
+    "viet": "Câu số 18",
     "words": [
       {
         "word": "十八",
@@ -4394,7 +4394,7 @@
     "endTime": 580.18,
     "text": "十九",
     "pinyin": "shíjiǔ",
-    "viet": "Nữ: Em đi làm đây, tạm biệt. | Nam: Tạm biệt, em lái xe chậm thôi nhé.",
+    "viet": "Câu số 19",
     "words": [
       {
         "word": "十九",
@@ -4526,7 +4526,7 @@
     "endTime": 591.18,
     "text": "十九",
     "pinyin": "shíjiǔ",
-    "viet": "Nữ: Em đi làm đây, tạm biệt. | Nam: Tạm biệt, em lái xe chậm thôi nhé.",
+    "viet": "Câu số 19",
     "words": [
       {
         "word": "十九",
@@ -4658,7 +4658,7 @@
     "endTime": 612.18,
     "text": "二十",
     "pinyin": "èrshí",
-    "viet": "Nữ: Em đi làm đây, tạm biệt. | Nam: Tạm biệt, em lái xe chậm thôi nhé.",
+    "viet": "Câu số 20",
     "words": [
       {
         "word": "二十",
@@ -4766,7 +4766,7 @@
     "endTime": 623.18,
     "text": "二十",
     "pinyin": "èrshí",
-    "viet": "Nữ: Mấy cái ly này đẹp quá, anh mua từ bao giờ thế? | Nam: Năm ngoái.",
+    "viet": "Câu số 20",
     "words": [
       {
         "word": "二十",
@@ -5386,7 +5386,7 @@
     "endTime": 698.18,
     "text": "二十一",
     "pinyin": "èrshíyī",
-    "viet": "Mèo con thích ăn cá nhất.",
+    "viet": "Câu số 21",
     "words": [
       {
         "word": "二十一",
@@ -5576,7 +5576,7 @@
     "endTime": 714.18,
     "text": "二十一",
     "pinyin": "èrshíyī",
-    "viet": "Nữ: Tiểu Cao, vào nhà ngồi đi. | Nam: Thôi, chó của tôi mất rồi, tôi phải đi tìm nó. | Hỏi: Tiểu Cao đang tìm cái gì?",
+    "viet": "Câu số 21",
     "words": [
       {
         "word": "二十一",
@@ -5766,7 +5766,7 @@
     "endTime": 733.18,
     "text": "二十二",
     "pinyin": "èrshíèr",
-    "viet": "Nữ: Tiểu Cao, vào nhà ngồi đi. | Nam: Thôi, chó của tôi mất rồi, tôi phải đi tìm nó. | Hỏi: Tiểu Cao đang tìm cái gì?",
+    "viet": "Câu số 22",
     "words": [
       {
         "word": "二十二",
@@ -5956,7 +5956,7 @@
     "endTime": 750.18,
     "text": "二十二",
     "pinyin": "èrshíèr",
-    "viet": "Nam: Hôm qua sao em không đi học? | Nữ: Em bị ốm, ở nhà nghỉ ngơi một ngày. | Hỏi: Tại sao hôm qua người nữ không đi học?",
+    "viet": "Câu số 22",
     "words": [
       {
         "word": "二十二",
@@ -6024,7 +6024,7 @@
     "endTime": 755.18,
     "text": "二十二",
     "pinyin": "èrshíèr",
-    "viet": "Nam: Hôm qua sao em không đi học? | Nữ: Em bị ốm, ở nhà nghỉ ngơi một ngày. | Hỏi: Tại sao hôm qua người nữ không đi học?",
+    "viet": "Câu số 22",
     "words": [
       {
         "word": "二十二",
@@ -6092,7 +6092,7 @@
     "endTime": 760.18,
     "text": "二十二",
     "pinyin": "èrshíèr",
-    "viet": "Nam: Hôm qua sao em không đi học? | Nữ: Em bị ốm, ở nhà nghỉ ngơi một ngày. | Hỏi: Tại sao hôm qua người nữ không đi học?",
+    "viet": "Câu số 22",
     "words": [
       {
         "word": "二十二",
@@ -6282,7 +6282,7 @@
     "endTime": 790.18,
     "text": "二十三",
     "pinyin": "èrshísān",
-    "viet": "Nam: Hôm qua sao em không đi học? | Nữ: Em bị ốm, ở nhà nghỉ ngơi một ngày. | Hỏi: Tại sao hôm qua người nữ không đi học?",
+    "viet": "Câu số 23",
     "words": [
       {
         "word": "二十三",
@@ -6454,7 +6454,7 @@
     "endTime": 803.18,
     "text": "二十三",
     "pinyin": "èrshísān",
-    "viet": "Nam: Hôm qua sao em không đi học? | Nữ: Em bị ốm, ở nhà nghỉ ngơi một ngày. | Hỏi: Tại sao hôm qua người nữ không đi học?",
+    "viet": "Câu số 23",
     "words": [
       {
         "word": "二十三",
@@ -6782,7 +6782,7 @@
     "endTime": 829.18,
     "text": "二十四",
     "pinyin": "èrshísì",
-    "viet": "Nam: Hôm qua sao em không đi học? | Nữ: Em bị ốm, ở nhà nghỉ ngơi một ngày. | Hỏi: Tại sao hôm qua người nữ không đi học?",
+    "viet": "Câu số 24",
     "words": [
       {
         "word": "二十四",
@@ -7042,7 +7042,7 @@
     "endTime": 849.18,
     "text": "二十四",
     "pinyin": "èrshísì",
-    "viet": "Nam: Sắp đến sinh nhật Tiểu Bạch rồi, nhưng tôi vẫn chưa nghĩ ra tặng cậu ấy cái gì. | Nữ: Cậu ấy thích đọc sách, bạn có thể tặng một cuốn sách. | Hỏi: Người nữ bảo người nam tặng cái gì cho Tiểu Bạch?",
+    "viet": "Câu số 24",
     "words": [
       {
         "word": "二十四",
@@ -7302,7 +7302,7 @@
     "endTime": 880.68,
     "text": "二十五",
     "pinyin": "èrshíwǔ",
-    "viet": "Nam: Sắp đến sinh nhật Tiểu Bạch rồi, nhưng tôi vẫn chưa nghĩ ra tặng cậu ấy cái gì. | Nữ: Cậu ấy thích đọc sách, bạn có thể tặng một cuốn sách. | Hỏi: Người nữ bảo người nam tặng cái gì cho Tiểu Bạch?",
+    "viet": "Câu số 25",
     "words": [
       {
         "word": "二十五",
@@ -7486,7 +7486,7 @@
     "endTime": 898.18,
     "text": "二十五",
     "pinyin": "èrshíwǔ",
-    "viet": "Nữ: Tôi đi mua sữa đây. | Nam: Trong nhà hết trứng gà rồi, em cũng mua một ít về nhé. | Hỏi: Người nữ định đi đâu?",
+    "viet": "Câu số 25",
     "words": [
       {
         "word": "二十五",
@@ -7670,7 +7670,7 @@
     "endTime": 926.18,
     "text": "二十六",
     "pinyin": "èrshíliù",
-    "viet": "Nữ: Tôi đi mua sữa đây. | Nam: Trong nhà hết trứng gà rồi, em cũng mua một ít về nhé. | Hỏi: Người nữ định đi đâu?",
+    "viet": "Câu số 26",
     "words": [
       {
         "word": "二十六",
@@ -7884,7 +7884,7 @@
     "endTime": 944.18,
     "text": "二十六",
     "pinyin": "èrshíliù",
-    "viet": "Nam: Chị làm việc ở công ty được 10 năm rồi nhỉ. | Nữ: Đúng vậy, tôi làm việc ở đây từ năm 24 tuổi. | Hỏi: Người nữ đến công ty làm việc bao lâu rồi?",
+    "viet": "Câu số 26",
     "words": [
       {
         "word": "二十六",
@@ -8098,7 +8098,7 @@
     "endTime": 968.18,
     "text": "二十七",
     "pinyin": "èrshíqī",
-    "viet": "Nam: Chị làm việc ở công ty được 10 năm rồi nhỉ. | Nữ: Đúng vậy, tôi làm việc ở đây từ năm 24 tuổi. | Hỏi: Người nữ đến công ty làm việc bao lâu rồi?",
+    "viet": "Câu số 27",
     "words": [
       {
         "word": "二十七",
@@ -8258,7 +8258,7 @@
     "endTime": 983.18,
     "text": "二十七",
     "pinyin": "èrshíqī",
-    "viet": "Nữ: Buổi trưa ăn gì đây? | Nam: Cơm nhé, anh nấu thêm hai món nữa. | Hỏi: Họ có khả năng nhất đang ở đâu?",
+    "viet": "Câu số 27",
     "words": [
       {
         "word": "二十七",
@@ -8516,7 +8516,7 @@
     "endTime": 1016.18,
     "text": "二十八",
     "pinyin": "èrshíbā",
-    "viet": "Nữ: Buổi trưa ăn gì đây? | Nam: Cơm nhé, anh nấu thêm hai món nữa. | Hỏi: Họ có khả năng nhất đang ở đâu?",
+    "viet": "Câu số 28",
     "words": [
       {
         "word": "二十八",
@@ -8712,7 +8712,7 @@
     "endTime": 1034.18,
     "text": "二十八",
     "pinyin": "èrshíbā",
-    "viet": "Nam: Chủ nhật cùng đi bơi nhé. | Nữ: Được thôi, thế buổi sáng đi nhé, chiều em không có thời gian. | Hỏi: Chủ nhật họ cùng nhau đi làm gì?",
+    "viet": "Câu số 28",
     "words": [
       {
         "word": "二十八",
@@ -8908,7 +8908,7 @@
     "endTime": 1066.18,
     "text": "二十九",
     "pinyin": "èrshíjiǔ",
-    "viet": "Nam: Chủ nhật cùng đi bơi nhé. | Nữ: Được thôi, thế buổi sáng đi nhé, chiều em không có thời gian. | Hỏi: Chủ nhật họ cùng nhau đi làm gì?",
+    "viet": "Câu số 29",
     "words": [
       {
         "word": "二十九",
@@ -9116,7 +9116,7 @@
     "endTime": 1085.18,
     "text": "二十九",
     "pinyin": "èrshíjiǔ",
-    "viet": "Nữ: Bạn đi tàu hỏa về trường à? | Nam: Tàu hỏa chậm quá, tôi định đi máy bay, 3 tiếng là tới nơi rồi. | Hỏi: Người nam muốn về trường bằng phương tiện gì?",
+    "viet": "Câu số 29",
     "words": [
       {
         "word": "二十九",
@@ -9324,7 +9324,7 @@
     "endTime": 1116.18,
     "text": "三十",
     "pinyin": "sānshí",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 30",
     "words": [
       {
         "word": "三十",
@@ -9532,7 +9532,7 @@
     "endTime": 1133.18,
     "text": "三十",
     "pinyin": "sānshí",
-    "viet": "Bài thi nghe HSK 2 gồm 4 phần, tổng cộng 35 câu.",
+    "viet": "Câu số 30",
     "words": [
       {
         "word": "三十",
@@ -10320,7 +10320,7 @@
     "endTime": 1214.32,
     "text": "31",
     "pinyin": "31",
-    "viet": "Nam: Quán hoa quả bên cạnh bệnh viện thế nào? | Nữ: Hoa quả rất rẻ, em đến đó một lần rồi. | Nam: Thật sao? Anh muốn đến đó mua ít hoa quả. | Nữ: Khi nào anh đi thì gọi em, em cũng muốn đi. | Hỏi: Quán hoa quả đó người nữ đã đến mấy lần?",
+    "viet": "Câu số 31",
     "words": [
       {
         "word": "31",
@@ -10674,7 +10674,7 @@
     "endTime": 1241.32,
     "text": "31",
     "pinyin": "31",
-    "viet": "Nam: Quán hoa quả bên cạnh bệnh viện thế nào? | Nữ: Hoa quả rất rẻ, em đến đó một lần rồi. | Nam: Thật sao? Anh muốn đến đó mua ít hoa quả. | Nữ: Khi nào anh đi thì gọi em, em cũng muốn đi. | Hỏi: Quán hoa quả đó người nữ đã đến mấy lần?",
+    "viet": "Câu số 31",
     "words": [
       {
         "word": "31",
@@ -11028,7 +11028,7 @@
     "endTime": 1271.32,
     "text": "32",
     "pinyin": "32",
-    "viet": "Nam: Quán hoa quả bên cạnh bệnh viện thế nào? | Nữ: Hoa quả rất rẻ, em đến đó một lần rồi. | Nam: Thật sao? Anh muốn đến đó mua ít hoa quả. | Nữ: Khi nào anh đi thì gọi em, em cũng muốn đi. | Hỏi: Quán hoa quả đó người nữ đã đến mấy lần?",
+    "viet": "Câu số 32",
     "words": [
       {
         "word": "32",
@@ -11044,7 +11044,7 @@
     "endTime": 1281.32,
     "text": "32",
     "pinyin": "32",
-    "viet": "Nam: Quán hoa quả bên cạnh bệnh viện thế nào? | Nữ: Hoa quả rất rẻ, em đến đó một lần rồi. | Nam: Thật sao? Anh muốn đến đó mua ít hoa quả. | Nữ: Khi nào anh đi thì gọi em, em cũng muốn đi. | Hỏi: Quán hoa quả đó người nữ đã đến mấy lần?",
+    "viet": "Câu số 32",
     "words": [
       {
         "word": "32",
@@ -11348,7 +11348,7 @@
     "endTime": 1304.32,
     "text": "32",
     "pinyin": "32",
-    "viet": "Nữ: Sao anh về muộn thế này? | Nam: Trên đường anh gặp Lý Minh bạn đại học của anh, nên cùng cậu ấy vào quán trà ngồi một chút. | Nữ: Cậu ấy đến Bắc Kinh đi du lịch à? | Nam: Đúng vậy. | Hỏi: Lý Minh đến Bắc Kinh làm gì?",
+    "viet": "Câu số 32",
     "words": [
       {
         "word": "32",
@@ -11856,7 +11856,7 @@
     "endTime": 1340.32,
     "text": "33",
     "pinyin": "33",
-    "viet": "Nữ: Sao anh về muộn thế này? | Nam: Trên đường anh gặp Lý Minh bạn đại học của anh, nên cùng cậu ấy vào quán trà ngồi một chút. | Nữ: Cậu ấy đến Bắc Kinh đi du lịch à? | Nam: Đúng vậy. | Hỏi: Lý Minh đến Bắc Kinh làm gì?",
+    "viet": "Câu số 33",
     "words": [
       {
         "word": "33",
