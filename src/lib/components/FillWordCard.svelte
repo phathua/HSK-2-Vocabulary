@@ -285,8 +285,10 @@
       <!-- CỘT 2 (Desktop col-span-7): Khu vực tương tác nhập liệu (Slots + Bảng gợi ý / Ô gõ thủ công) -->
       <div class="w-full lg:col-span-7 flex flex-col items-center justify-center py-2 lg:pl-4 space-y-4">
         {#if isTileMode && appState.fillWordChunks.length > 0}
+          {@const hasWrongSlots = appState.fillWordChunks.some(c => c.slots.some(s => s.userChar !== s.char))}
           {@const isSkipped = appState.fillAnswered && appState.fillFeedback?.type === 'skip'}
-          {@const isWrong = appState.fillAnswered && appState.fillFeedback?.type === 'wrong'}
+          {@const isWrong = appState.fillAnswered && (appState.fillFeedback?.type === 'wrong' || hasWrongSlots)}
+          {@const isCorrect = appState.fillAnswered && !isSkipped && !isWrong}
           {@const curChunk = appState.fillWordChunks[appState.currentChunkIndex]}
           {@const wrongSlots = isWrong ? curChunk?.slots.filter(s => s.userChar !== s.char) || [] : []}
           {@const neededCorrectChars = isWrong ? wrongSlots.map(s => s.char) : []}
@@ -340,10 +342,21 @@
               {/each}
             </div>
 
-            <!-- Khu vực Pill Đáp án đúng khi trả lời sai -->
+            <!-- Khu vực Pill Đáp án đúng dưới ô điền từ -->
             {#if isWrong}
-              <div class="text-xs sm:text-sm font-black text-rose-500 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 px-3.5 py-1.5 rounded-xl shadow-2xs">
-                Đáp án đúng: <span class="underline underline-offset-2 tracking-wide">{appState.currentFillItem.pinyin}</span>
+              <div class="text-xs sm:text-sm font-black text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 px-3.5 py-1.5 rounded-xl shadow-2xs flex items-center gap-1.5 animate-in fade-in duration-150">
+                <XCircle weight="fill" class="w-4 h-4 text-rose-500 shrink-0" />
+                <span>Đáp án đúng: <strong class="underline underline-offset-2 tracking-wide font-mono text-rose-600 dark:text-rose-300">{appState.currentFillItem.pinyin}</strong></span>
+              </div>
+            {:else if isSkipped}
+              <div class="text-xs sm:text-sm font-black text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/50 px-3.5 py-1.5 rounded-xl shadow-2xs flex items-center gap-1.5 animate-in fade-in duration-150">
+                <FastForward weight="fill" class="w-4 h-4 text-amber-500 shrink-0" />
+                <span>Đáp án: <strong class="underline underline-offset-2 tracking-wide font-mono">{appState.currentFillItem.pinyin}</strong></span>
+              </div>
+            {:else if isCorrect}
+              <div class="text-xs sm:text-sm font-black text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900/50 px-3.5 py-1.5 rounded-xl shadow-2xs flex items-center gap-1.5 animate-in fade-in duration-150">
+                <CheckCircle weight="fill" class="w-4 h-4 text-emerald-500 shrink-0" />
+                <span>Chính xác: <strong class="tracking-wide font-mono">{appState.currentFillItem.pinyin}</strong></span>
               </div>
             {/if}
 
@@ -363,7 +376,7 @@
                       onclick={(e) => handleTileClick(tile.id, e)}
                       class={`min-w-10 h-11 px-3 rounded-xl font-black text-base flex items-center justify-center transition-all select-none border-b-4 ${
                         isCorrectHighlight
-                          ? 'bg-emerald-500 text-white border-emerald-700 ring-2 ring-emerald-400 shadow-sm cursor-default'
+                          ? 'bg-emerald-500 text-white border-emerald-700 ring-2 ring-emerald-400 shadow-sm cursor-default animate-pulse'
                           : tile.isUsed
                             ? 'bg-slate-200/50 dark:bg-[#282A2C] border-slate-200 dark:border-[#353739] text-slate-400/40 dark:text-[#8E918F]/30 pointer-events-none cursor-default'
                             : 'bg-white hover:bg-slate-100 dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border-slate-300 dark:border-[#3f4245] shadow-2xs active:border-b-0 active:translate-y-1 cursor-pointer'
@@ -484,7 +497,8 @@
     <!-- BẢNG CHỌN KÝ TỰ (TILE BANK) CHO MOBILE / TABLET (< lg): Ẩn trên desktop (lg:hidden) vì desktop đã có ở Cột 2 -->
     {#if isTileMode && appState.fillWordChunks[appState.currentChunkIndex]}
       {@const curChunk = appState.fillWordChunks[appState.currentChunkIndex]}
-      {@const isWrong = appState.fillAnswered && appState.fillFeedback?.type === 'wrong'}
+      {@const hasWrongSlots = appState.fillWordChunks.some(c => c.slots.some(s => s.userChar !== s.char))}
+      {@const isWrong = appState.fillAnswered && (appState.fillFeedback?.type === 'wrong' || hasWrongSlots)}
       {@const wrongSlots = isWrong ? curChunk.slots.filter(s => s.userChar !== s.char) : []}
       {@const neededCorrectChars = isWrong ? wrongSlots.map(s => s.char) : []}
       <div class="lg:hidden bg-white dark:bg-[#1B1B1B] rounded-2xl border border-slate-200 dark:border-[#282A2C] p-2.5 shadow-2xs space-y-2">
@@ -500,7 +514,7 @@
               onclick={(e) => handleTileClick(tile.id, e)}
               class={`min-w-9 h-10 sm:min-w-11 sm:h-12 px-2.5 rounded-xl font-black text-base sm:text-lg flex items-center justify-center transition-all select-none border-b-4 ${
                 isCorrectHighlight
-                  ? 'bg-emerald-500 text-white border-emerald-700 ring-2 ring-emerald-400 shadow-sm cursor-default'
+                  ? 'bg-emerald-500 text-white border-emerald-700 ring-2 ring-emerald-400 shadow-sm cursor-default animate-pulse'
                   : tile.isUsed
                     ? 'bg-slate-100/70 dark:bg-[#242628]/70 border-slate-200 dark:border-[#353739] text-slate-400/40 dark:text-[#8E918F]/30 pointer-events-none cursor-default'
                     : 'bg-slate-50 hover:bg-white dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border-slate-300 dark:border-[#3f4245] shadow-2xs active:border-b-0 active:translate-y-1 cursor-pointer'

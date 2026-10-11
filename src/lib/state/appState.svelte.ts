@@ -485,13 +485,27 @@ export class AppState {
     const isZhToVi = this.direction === 'zh_to_vi';
     let isCorrect = false;
 
-    if (isZhToVi) {
+    if (this.fillSubMode === 'tiles' && !isZhToVi && this.fillWordChunks.length > 0) {
+      // Ở chế độ Ghép thẻ ký tự (Tiles), phải đúng từng ký tự (kể cả thanh điệu ā, á, ǎ, à)
+      isCorrect = this.fillWordChunks.every(chunk =>
+        chunk.slots.every(slot => slot.userChar === slot.char)
+      );
+      if (!isCorrect) {
+        // Tự động focus vào vế đầu tiên bị sai để hiển thị gợi ý đúng
+        const firstWrongIdx = this.fillWordChunks.findIndex(c =>
+          c.slots.some(s => s.userChar !== s.char)
+        );
+        if (firstWrongIdx !== -1) {
+          this.currentChunkIndex = firstWrongIdx;
+        }
+      }
+    } else if (isZhToVi) {
       // Nhập nghĩa tiếng Việt
       const inputNorm = this.fillInput.trim().toLowerCase();
       const vietNorm = this.currentFillItem.viet.toLowerCase();
       isCorrect = vietNorm.includes(inputNorm) || inputNorm.includes(vietNorm);
     } else {
-      // Nhập Pinyin tiếng Trung
+      // Nhập Pinyin tiếng Trung thủ công
       isCorrect = checkPinyinAnswer(this.fillInput, this.currentFillItem.pinyin);
     }
 
