@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount, onDestroy } from 'svelte';
   import Check from 'phosphor-svelte/lib/Check';
   import X from 'phosphor-svelte/lib/X';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
@@ -11,9 +12,12 @@
   import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
   import ListNumbers from 'phosphor-svelte/lib/ListNumbers';
   import Clock from 'phosphor-svelte/lib/Clock';
+  import Play from 'phosphor-svelte/lib/Play';
+  import Pause from 'phosphor-svelte/lib/Pause';
   import SmartImage from '../SmartImage.svelte';
   import type { QuestionItem } from '#lib/types/exam';
-  import { getExamImageUrl } from '#lib/utils/examAssets';
+  import { getExamImageUrl, getExamAudioUrl, R2_PUBLIC_BASE_URL } from '#lib/utils/examAssets';
+  import { fetchSrt, type SubtitleItem } from '#lib/utils/srtParser';
   import { speakChinese } from '#lib/utils/speech';
   import { appState } from '#lib/state/appState.svelte';
 
@@ -26,6 +30,8 @@
     timeRemainingSeconds?: number;
     totalCorrect?: number;
     totalWrong?: number;
+    audioSrc?: string | null;
+    examCode?: string;
     onSelectAnswer: (val: string) => void;
     onToggleFlag: () => void;
     onNextQuestion: () => void;
@@ -43,6 +49,8 @@
     timeRemainingSeconds = 3300,
     totalCorrect = 0,
     totalWrong = 0,
+    audioSrc = null,
+    examCode = '',
     onSelectAnswer,
     onToggleFlag,
     onNextQuestion,
@@ -52,7 +60,19 @@
   }: Props = $props();
 
   let isImageZoomed = $state(false);
-  let isSpeaking = $state(false);
+  let audioElement: HTMLAudioElement | undefined = $state();
+  let isPlaying = $state(false);
+  let audioCurrentTime = $state(0);
+  let audioDuration = $state(0);
+  let subtitles = $state<SubtitleItem[]>([]);
+  let wasPlayingBeforeBlur = false;
+
+  const resolvedAudioSrc = $derived(getExamAudioUrl(examCode || question.exam_code, audioSrc));
+
+  const audioProgressPercent = $derived.by(() => {
+    if (!audioDuration || audioDuration <= 0) return 0;
+    return Math.min(100, Math.max(0, (audioCurrentTime / audioDuration) * 100));
+  });
 
   // Suy đoán các lựa chọn trả lời tùy theo phần thi
   interface ChoiceOption {
@@ -119,14 +139,187 @@
     return `${mins.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   }
 
-  function handlePlayAudio() {
-    const textToSpeak = question.listening_script || question.text || '';
-    if (!textToSpeak) return;
-    isSpeaking = true;
-    speakChinese(textToSpeak, appState.volume);
-    setTimeout(() => {
-      isSpeaking = false;
-    }, 2000);
+  function formatAudioTime(secs: number): string {
+    const mins = Math.floor(secs / 60);
+    const s = Math.floor(secs % 60);
+    return `${mins.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
+
+  function findQuestionTimestamp(qNo: number, script?: string | null): number | null {
+    if (!subtitles || subtitles.length === 0) return null;
+    const numRegex = new RegExp(`(?:第\\s*${qNo}\\s*[题題])|(?:第${qNo}[题題])`);
+    let match = subtitles.find((s) => s.text && numRegex.test(s.text));
+    if (match) return match.startTime;
+
+    if (script) {
+      const cleanScript = script.replace(/[^\u4e00-\u9fa5]/g, '');
+      if (cleanScript.length >= 2) {
+        match = subtitles.find((s) => {
+          const cleanSub = (s.text || '').replace(/[^\u4e00-\u9fa5]/g, '');
+          return cleanSub.length >= 2 && (cleanSub.includes(cleanScript) || cleanScript.includes(cleanSub));
+        });
+        if (match) return match.startTime;
+      }
+    }
+    return null;
+  }
+
+  // Tự động tạm dừng khi đổi câu hỏi và nhảy tới timestamp câu hỏi tương ứng
+  $effect(() => {
+    const qNo = question.question_no;
+    const script = question.listening_script;
+    if (audioElement && isPlaying) {
+      audioElement.pause();
+      isPlaying = false;
+    }
+    if (isListeningQuestion && audioElement) {
+      const targetTime = findQuestionTimestamp(qNo, script);
+      if (targetTime !== null && targetTime >= 0) {
+        audioElement.currentTime = targetTime;
+        audioCurrentTime = targetTime;
+      }
+    }
+  });
+
+  function neutralizeMediaSession() {
+    if (typeof navigator !== 'undefined' && 'mediaSession' in navigator) {
+      try {
+        navigator.mediaSession.metadata = null;
+        navigator.mediaSession.playbackState = 'none';
+        const actions: MediaSessionAction[] = [
+          'play', 'pause', 'seekbackward', 'seekforward',
+          'previoustrack', 'nexttrack', 'seekto', 'stop', 'skipad'
+        ];
+        actions.forEach((action) => {
+          try {
+            navigator.mediaSession.setActionHandler(action, null);
+          } catch {}
+        });
+      } catch {}
+    }
+  }
+
+  function handleVisibilityChange() {
+    if (document.hidden) {
+      if (isPlaying) {
+        wasPlayingBeforeBlur = true;
+        if (audioElement) {
+          audioElement.pause();
+        }
+        isPlaying = false;
+        if ('mediaSession' in navigator) {
+          navigator.mediaSession.playbackState = 'none';
+        }
+      }
+    } else {
+      if (wasPlayingBeforeBlur) {
+        wasPlayingBeforeBlur = false;
+        if (audioElement) {
+          audioElement.play().then(() => {
+            isPlaying = true;
+            neutralizeMediaSession();
+          }).catch(console.warn);
+        }
+      }
+    }
+  }
+
+  function handleWindowBlur() {
+    if (isPlaying) {
+      wasPlayingBeforeBlur = true;
+      if (audioElement) {
+        audioElement.pause();
+      }
+      isPlaying = false;
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = 'none';
+      }
+    }
+  }
+
+  function handleWindowFocus() {
+    if (wasPlayingBeforeBlur && !document.hidden) {
+      wasPlayingBeforeBlur = false;
+      if (audioElement) {
+        audioElement.play().then(() => {
+          isPlaying = true;
+          neutralizeMediaSession();
+        }).catch(console.warn);
+      }
+    }
+  }
+
+  onMount(() => {
+    const code = examCode || question.exam_code;
+    if (code) {
+      fetchSrt(code, R2_PUBLIC_BASE_URL).then((data) => {
+        if (data.length > 0) subtitles = data;
+      });
+    }
+
+    neutralizeMediaSession();
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('blur', handleWindowBlur);
+    window.addEventListener('focus', handleWindowFocus);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('blur', handleWindowBlur);
+      window.removeEventListener('focus', handleWindowFocus);
+    };
+  });
+
+  onDestroy(() => {
+    if (audioElement) {
+      audioElement.pause();
+    }
+    isPlaying = false;
+  });
+
+  function togglePlayAudio() {
+    if (!audioElement || !resolvedAudioSrc) {
+      const textToSpeak = question.listening_script || question.text || '';
+      if (!textToSpeak) return;
+      if (isPlaying) {
+        isPlaying = false;
+        return;
+      }
+      isPlaying = true;
+      speakChinese(textToSpeak, appState.volume);
+      setTimeout(() => {
+        isPlaying = false;
+      }, 2500);
+      return;
+    }
+
+    if (isPlaying) {
+      audioElement.pause();
+      isPlaying = false;
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = 'none';
+      }
+    } else {
+      neutralizeMediaSession();
+      audioElement.play().then(() => {
+        isPlaying = true;
+        neutralizeMediaSession();
+      }).catch((e) => {
+        console.warn('Audio play failed, fallback to TTS:', e);
+        const textToSpeak = question.listening_script || question.text || '';
+        if (textToSpeak) {
+          speakChinese(textToSpeak, appState.volume);
+        }
+      });
+    }
+  }
+
+  function handleAudioSeek(e: Event) {
+    const target = e.target as HTMLInputElement;
+    const val = parseFloat(target.value);
+    audioCurrentTime = val;
+    if (audioElement) {
+      audioElement.currentTime = val;
+    }
   }
 
   function handleKeydown(e: KeyboardEvent) {
@@ -141,6 +334,25 @@
 </script>
 
 <svelte:window onkeydown={handleKeydown} />
+
+<!-- Hidden audio element for listening questions -->
+{#if resolvedAudioSrc}
+  <audio
+    bind:this={audioElement}
+    src={resolvedAudioSrc}
+    preload="metadata"
+    ontimeupdate={() => {
+      if (audioElement) audioCurrentTime = audioElement.currentTime;
+    }}
+    onloadedmetadata={() => {
+      if (audioElement) audioDuration = audioElement.duration;
+    }}
+    onended={() => {
+      isPlaying = false;
+    }}
+    class="hidden"
+  ></audio>
+{/if}
 
 <!-- Container chính phong cách MultipleChoiceQuizCard: Chiếm trọn 1 view, không bị scroll thừa -->
 <div class="flex-1 min-h-0 flex flex-col justify-between overflow-hidden">
@@ -159,9 +371,8 @@
       <span class="text-xs font-black uppercase tracking-wider">Câu {question.question_no}/{totalQuestions}</span>
     </button>
 
-    <!-- Floating Buttons Phải: Nút Cắm cờ + Nút Loa phát âm thanh -->
+    <!-- Floating Buttons Phải: Nút Cắm cờ -->
     <div class="absolute top-3 right-3 flex items-center gap-1.5 z-10">
-      <!-- Nút Cắm cờ -->
       <button
         type="button"
         onclick={onToggleFlag}
@@ -174,24 +385,61 @@
       >
         <BookmarkSimple weight={isFlagged ? 'fill' : 'bold'} class="w-4 h-4 sm:w-5 sm:h-5" />
       </button>
-
-      <!-- Nút Loa TTS: Chỉ hiện cho câu nghe hoặc câu có chữ Hán -->
-      {#if isListeningQuestion || question.listening_script || question.text}
-        <button
-          type="button"
-          onclick={handlePlayAudio}
-          class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center shadow-md active:scale-95 transition-transform cursor-pointer {isSpeaking ? 'animate-pulse ring-2 ring-emerald-400' : ''}"
-          title="Bấm để nghe lời thoại câu hỏi"
-        >
-          <SpeakerHigh weight="bold" class="w-4 h-4 sm:w-5 sm:h-5" />
-        </button>
-      {/if}
     </div>
 
     <!-- Container Nội Dung: 2 Cột trên Desktop (lg:grid lg:grid-cols-12), 1 Cột trên Mobile -->
     <div class="w-full flex-1 flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center justify-center my-auto py-1 min-h-0">
       <!-- CỘT 1 (Desktop col-span-5): Tranh minh họa, Đề bài, Hán tự to rõ, Giải thích tức thì -->
       <div class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-1 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6 max-h-full overflow-y-auto scrollbar-none">
+        <!-- Thanh Tiến Độ Âm Thanh Tích Hợp (Dành cho câu hỏi phần Nghe) -->
+        {#if isListeningQuestion}
+          <div class="w-full max-w-sm mb-2 px-3 py-1.5 sm:py-2 bg-slate-50 dark:bg-[#282A2C]/60 rounded-2xl border border-slate-200 dark:border-[#37393B] shadow-2xs flex items-center gap-2.5 shrink-0">
+            <!-- Nút Play / Pause -->
+            <button
+              type="button"
+              onclick={togglePlayAudio}
+              class="w-8 h-8 rounded-full bg-orange-600 hover:bg-orange-700 active:scale-95 text-white flex items-center justify-center shrink-0 shadow-sm transition-transform cursor-pointer"
+              title={isPlaying ? "Tạm dừng audio" : "Phát audio câu hỏi"}
+              aria-label={isPlaying ? "Tạm dừng" : "Phát audio"}
+            >
+              {#if isPlaying}
+                <Pause weight="fill" class="w-3.5 h-3.5" />
+              {:else}
+                <Play weight="fill" class="w-3.5 h-3.5 ml-0.5" />
+              {/if}
+            </button>
+
+            <!-- Thanh Tua & Thời Gian -->
+            <div class="flex-1 min-w-0 flex flex-col gap-1 text-left">
+              <div class="flex items-center justify-between text-[10px] font-bold font-mono text-slate-500 dark:text-[#8E918F]">
+                <span class="flex items-center gap-1 text-slate-700 dark:text-slate-200 font-extrabold truncate">
+                  <SpeakerHigh weight="bold" class="w-3 h-3 text-orange-500 shrink-0" />
+                  <span class="truncate">Audio Câu {question.question_no}</span>
+                </span>
+                <span class="shrink-0">{formatAudioTime(audioCurrentTime)} / {formatAudioTime(audioDuration)}</span>
+              </div>
+
+              <!-- Thanh trượt Progress Bar -->
+              <div class="relative w-full h-1.5 sm:h-2 bg-slate-200 dark:bg-neutral-700 rounded-full overflow-hidden cursor-pointer">
+                <div
+                  class="h-full bg-orange-500 rounded-full transition-all duration-100"
+                  style="width: {audioProgressPercent}%"
+                ></div>
+                <input
+                  type="range"
+                  min="0"
+                  max={audioDuration || 100}
+                  step="0.5"
+                  value={audioCurrentTime}
+                  oninput={handleAudioSeek}
+                  class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                  aria-label="Tua audio"
+                />
+              </div>
+            </div>
+          </div>
+        {/if}
+
         <!-- Ảnh câu hỏi nếu có -->
         {#if question.image}
           <div class="relative mb-2 max-h-[30vh] sm:max-h-[36vh] flex items-center justify-center">
@@ -225,7 +473,7 @@
         <!-- Tiêu đề câu hỏi / Prompt Text -->
         <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">
           {#if isTrueFalse}
-            Chọn Đúng (√) hoặc Sai (×):
+            Chọn Đúng hoặc Sai:
           {:else if question.part.includes('Part 2') || question.type.includes('Match')}
             Chọn tranh A - F phù hợp:
           {:else}
@@ -304,12 +552,18 @@
                     : 'bg-slate-200/60 dark:bg-[#282A2C] text-slate-400 border-slate-200 dark:border-[#37393B]'
                 }`}
               >
-                {opt.icon === 'check' ? '√' : opt.icon === 'x' ? '×' : opt.value}
+                {#if opt.icon === 'check'}
+                  <Check weight="bold" class="w-4 h-4" />
+                {:else if opt.icon === 'x'}
+                  <X weight="bold" class="w-4 h-4" />
+                {:else}
+                  {opt.value}
+                {/if}
               </div>
 
               <div class="flex-1 min-w-0">
                 <span class="text-sm font-bold truncate">
-                  {opt.label !== opt.value ? `${opt.label} (${opt.value})` : opt.label}
+                  {isTrueFalse ? opt.label : opt.label !== opt.value ? `${opt.label} (${opt.value})` : opt.label}
                 </span>
               </div>
             </button>
@@ -375,12 +629,18 @@
                 : 'bg-slate-200/60 dark:bg-[#282A2C] text-slate-400 border-slate-200 dark:border-[#37393B]'
             }`}
           >
-            {opt.icon === 'check' ? '√' : opt.icon === 'x' ? '×' : opt.value}
+            {#if opt.icon === 'check'}
+              <Check weight="bold" class="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            {:else if opt.icon === 'x'}
+              <X weight="bold" class="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            {:else}
+              {opt.value}
+            {/if}
           </div>
 
           <div class="flex-1 min-w-0">
             <span class="text-xs sm:text-sm font-bold truncate">
-              {opt.label !== opt.value ? `${opt.label} (${opt.value})` : opt.label}
+              {isTrueFalse ? opt.label : opt.label !== opt.value ? `${opt.label} (${opt.value})` : opt.label}
             </span>
           </div>
         </button>

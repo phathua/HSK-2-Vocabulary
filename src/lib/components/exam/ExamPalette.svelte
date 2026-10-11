@@ -54,7 +54,7 @@
   </div>
 
   <!-- Grid 60 items -->
-  <div class="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-5 lg:grid-cols-6 gap-1.5 max-h-[60vh] overflow-y-auto pr-1 scrollbar-thin">
+  <div class="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-5 lg:grid-cols-6 gap-2 p-2 max-h-[60vh] overflow-y-auto scrollbar-thin">
     {#each numbers as qNo}
       {@const isAnswered = !!answers[qNo]}
       {@const isFlag = !!flagged[qNo]}
@@ -68,7 +68,7 @@
         type="button"
         onclick={() => onScrollTo(qNo)}
         class="h-8 rounded-xl font-bold text-xs flex items-center justify-center relative cursor-pointer transition-all border {
-          isActive ? 'ring-2 ring-orange-500 ring-offset-1 dark:ring-offset-neutral-900 scale-105 z-10 font-black' : ''
+          isActive ? 'ring-2 ring-orange-500 ring-offset-2 dark:ring-offset-neutral-900 z-10 font-black shadow-sm' : ''
         } {
           isCorrect
             ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs'

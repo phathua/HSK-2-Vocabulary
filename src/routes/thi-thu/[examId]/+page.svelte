@@ -269,29 +269,6 @@
             <span>Thi Nhanh</span>
           </button>
         </div>
-
-        <!-- Phải: Nút mở danh sách câu hỏi trên Mobile (< lg) + Đồng hồ đếm ngược -->
-        <div class="flex items-center gap-1.5">
-          <!-- Nút mở Drawer Bảng 60 câu trên Mobile -->
-          <button
-            type="button"
-            onclick={() => (showPaletteModal = true)}
-            class="lg:hidden h-9 px-2.5 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-[#282A2C] transition-colors shadow-2xs flex items-center gap-1 cursor-pointer active:scale-95"
-            title="Xem bảng 60 câu hỏi"
-          >
-            <ListNumbers weight="bold" class="w-4 h-4 text-orange-500" />
-            <span class="font-mono">{totalAnswered}/{exam.total_questions}</span>
-          </button>
-
-          <!-- Đồng hồ thời gian thi còn lại -->
-          <div
-            class="h-9 px-2.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-white dark:bg-[#1B1B1B] text-slate-700 dark:text-[#E3E3E3] flex items-center gap-1.5 font-mono font-black text-xs shadow-2xs"
-            title="Thời gian làm bài thi"
-          >
-            <Clock weight="duotone" class="w-4 h-4 text-orange-500" />
-            <span>{Math.floor(timeRemainingSeconds / 60)}:{String(timeRemainingSeconds % 60).padStart(2, '0')}</span>
-          </div>
-        </div>
       </div>
 
       <!-- 2. Thẻ Trắc Nghiệm Single View (100% Khớp Không Cuộn Trang) -->
@@ -307,6 +284,8 @@
             {timeRemainingSeconds}
             totalCorrect={scoreResults.totalCorrect}
             totalWrong={totalAnswered - scoreResults.totalCorrect}
+            audioSrc={exam.audio_ogg || exam.audio_mp3 || exam.audio_url}
+            examCode={exam.exam_code ?? examId ?? ''}
             onSelectAnswer={(val) => handleSelectAnswer(currentQ.question_no, val)}
             onToggleFlag={() => handleToggleFlag(currentQ.question_no)}
             onNextQuestion={() => {
