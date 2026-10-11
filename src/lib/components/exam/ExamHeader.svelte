@@ -83,13 +83,5 @@
         <span>Luyện Tập</span>
       </button>
     </div>
-
-    <!-- Đồng hồ đếm ngược trên Header (chỉ ở chế độ thi) -->
-    {#if mode === 'exam'}
-      <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-2xl border {isLowTime ? 'bg-red-50 dark:bg-red-950/50 border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 animate-pulse' : 'bg-slate-50 dark:bg-neutral-800/80 border-slate-200 dark:border-neutral-700 text-slate-700 dark:text-slate-300'} font-mono font-black text-xs sm:text-sm">
-        <Clock weight="duotone" class="w-4 h-4 {isLowTime ? 'text-red-600' : 'text-orange-500'}" />
-        <span>{formatCountdown(timeRemainingSeconds)}</span>
-      </div>
-    {/if}
   </div>
 </div>

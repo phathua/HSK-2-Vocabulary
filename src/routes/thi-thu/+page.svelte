@@ -323,8 +323,12 @@
 {#if enteringExam}
   <div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fade-in select-none">
     <div class="bg-white dark:bg-[#1E1E1E] border border-slate-200 dark:border-[#282A2C] rounded-3xl p-6 max-w-xs w-full shadow-2xl flex flex-col items-center text-center">
-      <div class="w-12 h-12 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center mb-3.5">
-        <Exam weight="duotone" class="w-6 h-6 animate-pulse" />
+      <div class="w-24 h-24 mb-2 relative flex items-center justify-center">
+        <img
+          src="/icons/panda-exam-loading.webp"
+          alt="Mascot Gấu trúc thi HSK"
+          class="w-full h-full object-contain filter drop-shadow-md animate-bounce"
+        />
       </div>
       <h3 class="text-sm font-black text-slate-900 dark:text-[#E3E3E3]">
         Đang mở phòng thi...
@@ -333,7 +337,7 @@
         Mã đề: {enteringExam.code}
       </p>
       <p class="text-[11px] text-slate-500 dark:text-[#8E918F] mt-1 leading-relaxed">
-        Đang nạp 60 câu hỏi & tệp âm thanh OGG...
+        Đang nạp 60 câu hỏi & tệp âm thanh bài thi...
       </p>
       <div class="w-full bg-slate-100 dark:bg-neutral-800 h-1.5 rounded-full overflow-hidden mt-4">
         <div class="h-full bg-orange-600 rounded-full animate-indeterminate"></div>

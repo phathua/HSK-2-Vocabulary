@@ -70,7 +70,7 @@
 
       <div class="leading-tight min-w-0">
         <span class="font-black text-sm text-slate-900 dark:text-[#E3E3E3] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors whitespace-nowrap">
-          {appState.currentLevelDisplay}
+          {isExamRoom ? 'HSK 2' : appState.currentLevelDisplay}
         </span>
       </div>
     </button>

@@ -27,6 +27,7 @@ export interface ExamDetail {
   total_questions: number;
   audio_ogg?: string | null;
   audio_mp3?: string | null;
+  audio_url?: string | null;
   images_count?: number;
   questions: QuestionItem[];
 }

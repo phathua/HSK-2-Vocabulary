@@ -190,7 +190,7 @@
 
 <Header />
 
-<main bind:this={mainScrollEl} class="flex-1 flex flex-col min-h-0 my-3 overflow-y-auto pr-1 pb-16">
+<main bind:this={mainScrollEl} class="flex-1 flex flex-col min-h-0 my-2 overflow-y-auto pr-1 pb-3">
   {#if isLoading}
     <div class="flex-1 flex items-center justify-center p-12">
       <div class="flex flex-col items-center gap-3">
@@ -233,10 +233,11 @@
     />
 
     <!-- Trình Phát Audio Cho Đề Thi: Sticky trực tiếp dưới Header -->
-    {#if exam.audio_ogg}
+    {@const audioSource = exam.audio_ogg || exam.audio_mp3 || exam.audio_url}
+    {#if audioSource}
       <ExamAudioPlayer
-        audioSrc={exam.audio_ogg}
-        examCode={exam.exam_code}
+        audioSrc={audioSource}
+        examCode={exam.exam_code ?? examId ?? ''}
         isExamMode={mode === 'exam'}
         listeningQuestions={listeningQuestions}
       />
@@ -314,19 +315,21 @@
         />
       </div>
     </div>
-
-    <!-- Sticky Bottom Bar -->
-    <ExamBottomBar
-      {mode}
-      {timeRemainingSeconds}
-      answeredCount={totalAnswered}
-      totalCount={exam.total_questions}
-      onSubmit={handleSubmitExam}
-      onRetry={handleRetry}
-      onTogglePaletteModal={() => (showPaletteModal = true)}
-    />
   {/if}
 </main>
+
+{#if exam}
+  <!-- Sticky Bottom Bar nằm dưới chân cột nội dung, không đè lên SidebarMenu bên trái -->
+  <ExamBottomBar
+    {mode}
+    {timeRemainingSeconds}
+    answeredCount={totalAnswered}
+    totalCount={exam.total_questions}
+    onSubmit={handleSubmitExam}
+    onRetry={handleRetry}
+    onTogglePaletteModal={() => (showPaletteModal = true)}
+  />
+{/if}
 
 <!-- Modal Bảng Câu Hỏi Trên Thiết Bị Di Động (Mobile Palette Drawer) -->
 {#if showPaletteModal && exam}

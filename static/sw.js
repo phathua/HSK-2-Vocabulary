@@ -1,7 +1,7 @@
 // Service Worker cho ứng dụng Ôn Tập HSK 2
 // Cho phép chạy offline hoàn toàn, kể cả F5 lại trang
 
-const CACHE_NAME = 'hsk2-pwa-cache-v1';
+const CACHE_NAME = 'hsk2-pwa-cache-v2';
 
 const STATIC_ASSETS = [
   '/',
@@ -9,7 +9,9 @@ const STATIC_ASSETS = [
   '/favicon.png',
   '/apple-touch-icon.png',
   '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  '/icons/icon-512.png',
+  '/icons/panda-offline.webp',
+  '/icons/panda-exam-loading.webp'
 ];
 
 self.addEventListener('install', (event) => {
@@ -74,13 +76,32 @@ self.addEventListener('fetch', (event) => {
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Mất kết nối mạng - Ôn Tập HSK 2</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8fafc; color: #0f172a; margin: 0; padding: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; box-sizing: border-box; }
-    .card { background: #ffffff; border-radius: 1.75rem; padding: 2rem 1.5rem; max-width: 22rem; width: 100%; box-shadow: 0 20px 40px -15px rgba(0,0,0,0.07); border: 1px solid #e2e8f0; }
-    .icon { font-size: 3rem; margin-bottom: 0.75rem; }
-    h1 { font-size: 1.25rem; font-weight: 900; margin: 0 0 0.5rem 0; color: #0f172a; }
-    p { font-size: 0.8125rem; color: #64748b; line-height: 1.5; margin: 0 0 1.25rem 0; font-weight: 500; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 2.75rem; background: #2563eb; color: #ffffff; font-weight: 800; font-size: 0.8125rem; border-radius: 0.875rem; text-decoration: none; border: none; cursor: pointer; transition: transform 0.1s; }
-    .btn:active { transform: scale(0.97); }
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #64748b;
+      --btn-bg: #ea580c;
+      --btn-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #131314;
+        --card-bg: #1e1e1e;
+        --border: #282a2c;
+        --text: #e3e3e3;
+        --muted: #8e918f;
+        --btn-bg: #ea580c;
+        --btn-text: #ffffff;
+      }
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; box-sizing: border-box; transition: background-color 0.2s, color 0.2s; }
+    .card { background: var(--card-bg); border-radius: 1.75rem; padding: 2rem 1.5rem; max-width: 22rem; width: 100%; box-shadow: 0 20px 40px -15px rgba(0,0,0,0.15); border: 1px solid var(--border); }
+    h1 { font-size: 1.25rem; font-weight: 900; margin: 0 0 0.5rem 0; color: var(--text); }
+    p { font-size: 0.8125rem; color: var(--muted); line-height: 1.5; margin: 0 0 1.25rem 0; font-weight: 500; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 2.75rem; background: var(--btn-bg); color: var(--btn-text); font-weight: 800; font-size: 0.8125rem; border-radius: 0.875rem; text-decoration: none; border: none; cursor: pointer; transition: transform 0.1s, opacity 0.15s; }
+    .btn:active { transform: scale(0.97); opacity: 0.9; }
   </style>
 </head>
 <body>
