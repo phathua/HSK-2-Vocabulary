@@ -1,13 +1,8 @@
 import { pinyin } from 'pinyin-pro';
+import { type SubtitleItem, type SubtitleWord, EXAM_INTRO_RULES_SUBTITLES } from './examRulesIntro';
 
-export interface SubtitleItem {
-  id: number;
-  startTime: number;
-  endTime: number;
-  text: string;
-  pinyin?: string;
-  isIntro?: boolean;
-}
+export type { SubtitleItem, SubtitleWord };
+export { EXAM_INTRO_RULES_SUBTITLES };
 
 export function parseSrt(srtContent: string): SubtitleItem[] {
   const blocks = srtContent.trim().split(/\n\s*\n/);
@@ -56,25 +51,43 @@ export function parseSrt(srtContent: string): SubtitleItem[] {
 }
 
 export async function fetchSrt(examCode: string, baseUrl: string): Promise<SubtitleItem[]> {
+  let loadedSubtitles: SubtitleItem[] = [];
+
   // Try local static bundle first (/exams/<CODE>/<CODE>.srt)
   try {
     const localRes = await fetch(`/exams/${examCode}/${examCode}.srt`);
     if (localRes.ok) {
       const text = await localRes.text();
-      return parseSrt(text);
+      loadedSubtitles = parseSrt(text);
     }
   } catch {}
 
-  // Fallback to CDN URL
-  try {
-    const response = await fetch(`${baseUrl}/${examCode}/${examCode}.srt`);
-    if (!response.ok) {
-      return [];
+  // Fallback to CDN URL if not found locally
+  if (loadedSubtitles.length === 0) {
+    try {
+      const response = await fetch(`${baseUrl}/${examCode}/${examCode}.srt`);
+      if (response.ok) {
+        const srtContent = await response.text();
+        loadedSubtitles = parseSrt(srtContent);
+      }
+    } catch (error) {
+      console.error('Failed to fetch SRT:', error);
     }
-    const srtContent = await response.text();
-    return parseSrt(srtContent);
-  } catch (error) {
-    console.error('Failed to fetch SRT:', error);
-    return [];
   }
+
+  // Prepend standardized intro rules subtitles if the file does not have early intro lines (0:00 - ~02:00)
+  if (loadedSubtitles.length > 0) {
+    const firstSub = loadedSubtitles[0];
+    if (firstSub.startTime > 30) {
+      // Intro missing: prepend standardized intro rules (0:00 - ~02:00)
+      return [...EXAM_INTRO_RULES_SUBTITLES, ...loadedSubtitles];
+    } else if (firstSub.startTime <= 5 && firstSub.text.includes('Nhạc dạo đầu')) {
+      // If there's only a single placeholder intro block that ends around 68s, replace it with rich intro rules
+      const remainingSubs = loadedSubtitles.slice(1);
+      return [...EXAM_INTRO_RULES_SUBTITLES, ...remainingSubs];
+    }
+    return loadedSubtitles;
+  }
+
+  return [...EXAM_INTRO_RULES_SUBTITLES];
 }

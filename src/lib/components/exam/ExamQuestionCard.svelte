@@ -43,7 +43,15 @@
   }
 
   const optionChoices = $derived.by((): ChoiceOption[] => {
-    // 1. Nếu câu hỏi có cấu hình options riêng (từ JSON Mock Atlas hoặc Chinese Tools)
+    // 1. True/False: Luôn ưu tiên hiển thị nút Đúng (Check) và Sai (X) với value √ và ×
+    if (question.type.includes('True/False')) {
+      return [
+        { label: 'Đúng', value: '√', icon: 'check' },
+        { label: 'Sai', value: '×', icon: 'x' }
+      ];
+    }
+
+    // 2. Nếu câu hỏi có cấu hình options riêng (từ JSON Mock Atlas hoặc Chinese Tools)
     if (question.options && question.options.length > 0) {
       return question.options.map((opt) => {
         if (typeof opt === 'string') {
@@ -55,14 +63,6 @@
           image: opt.image
         };
       });
-    }
-
-    // 2. True/False
-    if (question.type.includes('True/False')) {
-      return [
-        { label: 'Đúng', value: '√', icon: 'check' },
-        { label: 'Sai', value: '×', icon: 'x' }
-      ];
     }
 
     // 3. Tranh A - F

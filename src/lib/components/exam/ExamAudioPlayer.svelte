@@ -6,6 +6,9 @@
   import HourglassMedium from 'phosphor-svelte/lib/HourglassMedium';
   import LockSimple from 'phosphor-svelte/lib/LockSimple';
   import FileText from 'phosphor-svelte/lib/FileText';
+  import ClosedCaptioning from 'phosphor-svelte/lib/ClosedCaptioning';
+  import CaretDown from 'phosphor-svelte/lib/CaretDown';
+  import CaretUp from 'phosphor-svelte/lib/CaretUp';
   import X from 'phosphor-svelte/lib/X';
   import { examRoomState } from '#lib/state/examRoomState.svelte';
   import type { QuestionItem } from '#lib/types/exam';
@@ -34,9 +37,10 @@
   let isPreviewPhase = $state(true);
   let previewTimer: any = null;
 
-  // Transcript Modal state
+  // Subtitle Overlay state (gắn liền thanh audio player)
+  let showSubtitleOverlay = $state(true); // Bật mặc định hoặc toggle nhanh
   let showTranscriptModal = $state(false);
-  let activeTranscriptPart = $state('karaoke'); // 'karaoke' | 'all' | 'Part 1' | 'Part 2' | 'Part 3' | 'Part 4'
+  let activeTranscriptPart = $state('all'); // 'all' | 'Part 1' | 'Part 2' | 'Part 3' | 'Part 4'
 
   let subtitles = $state<SubtitleItem[]>([]);
   let activeSubtitleIndex = $derived.by(() => {
@@ -52,8 +56,33 @@
     return idx;
   });
 
+  const activeSubtitle = $derived.by(() => {
+    if (activeSubtitleIndex < 0 || activeSubtitleIndex >= subtitles.length) return null;
+    return subtitles[activeSubtitleIndex];
+  });
+
+  const currentWords = $derived.by(() => {
+    if (!activeSubtitle) return [];
+    if (activeSubtitle.words && activeSubtitle.words.length > 0) {
+      return activeSubtitle.words;
+    }
+    // Tự sinh word segments fallback nếu SRT chưa có words
+    const text = activeSubtitle.text;
+    const py = activeSubtitle.pinyin ? activeSubtitle.pinyin.split(/\s+/) : [];
+    const chars = Array.from(text);
+    const count = chars.length;
+    const dur = Math.max(0.5, activeSubtitle.endTime - activeSubtitle.startTime);
+    const step = dur / Math.max(1, count);
+
+    return chars.map((ch, idx) => ({
+      word: ch,
+      pinyin: py[idx] || '',
+      start: activeSubtitle.startTime + idx * step,
+      end: activeSubtitle.startTime + (idx + 1) * step
+    }));
+  });
+
   const filteredTranscripts = $derived.by(() => {
-    if (activeTranscriptPart === 'karaoke') return [];
     if (activeTranscriptPart === 'all') {
       return listeningQuestions;
     }
@@ -295,18 +324,35 @@
         </div>
       {/if}
 
-      <!-- Trạng thái bên phải & Nút Bản chép lời -->
+      <!-- Trạng thái bên phải & Nút Phụ đề (Lời) + Modal Tất cả -->
       <div class="flex items-center gap-1.5 shrink-0">
+        <!-- Nút Lời: Toggle Subtitle Overlay trực tiếp -->
+        <button
+          type="button"
+          onclick={() => (showSubtitleOverlay = !showSubtitleOverlay)}
+          class="flex items-center gap-1 px-2.5 py-1 sm:py-1.5 rounded-xl font-bold text-xs cursor-pointer transition-all border {showSubtitleOverlay ? 'bg-orange-600 text-white border-orange-600 shadow-xs' : 'bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-slate-700 dark:text-neutral-200 border-slate-200 dark:border-neutral-700'}"
+          title={showSubtitleOverlay ? 'Tắt khung phụ đề Karaoke' : 'Bật khung phụ đề Karaoke bên dưới'}
+          aria-pressed={showSubtitleOverlay}
+        >
+          <ClosedCaptioning weight={showSubtitleOverlay ? 'fill' : 'bold'} class="w-3.5 h-3.5 {showSubtitleOverlay ? 'text-white' : 'text-orange-600 dark:text-orange-400'}" />
+          <span class="hidden sm:inline">Lời</span>
+          {#if showSubtitleOverlay}
+            <CaretUp weight="bold" class="w-3 h-3 ml-0.5 opacity-80" />
+          {:else}
+            <CaretDown weight="bold" class="w-3 h-3 ml-0.5 opacity-80" />
+          {/if}
+        </button>
+
         {#if listeningQuestions.length > 0}
+          <!-- Nút xem kịch bản đầy đủ 35 câu -->
           <button
             type="button"
             onclick={() => (showTranscriptModal = true)}
             class="flex items-center gap-1 px-2.5 py-1 sm:py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-slate-700 dark:text-neutral-200 font-bold text-xs cursor-pointer transition-colors border border-slate-200 dark:border-neutral-700"
-            title="Xem toàn bộ kịch bản bài nghe (Transcript)"
+            title="Xem toàn bộ kịch bản 35 câu nghe (Transcript)"
           >
-            <FileText class="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
-            <span class="hidden sm:inline">Bản chép lời</span>
-            <span class="sm:hidden">Lời</span>
+            <FileText class="w-3.5 h-3.5 text-slate-500 dark:text-neutral-400" />
+            <span class="hidden md:inline">Toàn bộ</span>
           </button>
         {/if}
 
@@ -339,6 +385,60 @@
             class="h-full bg-orange-500 transition-all duration-150"
             style="width: {duration ? (currentTime / duration) * 100 : 0}%"
           ></div>
+        {/if}
+      </div>
+    {/if}
+
+    <!-- Khung Subtitle Overlay gắn liền trực tiếp ngay dưới Audio Player (Word-by-word Karaoke) -->
+    {#if showSubtitleOverlay && activeSubtitle}
+      <div
+        class="mt-2.5 pt-2.5 border-t border-slate-200/80 dark:border-neutral-800/80 flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-1 duration-200"
+      >
+        <!-- Hàng hiển thị Karaoke Word-by-Word -->
+        <div class="flex flex-wrap items-end gap-x-1.5 gap-y-2 justify-center sm:justify-start px-1 py-1">
+          {#if activeSubtitle.words && activeSubtitle.words.length > 0}
+            {#each activeSubtitle.words as w}
+              {@const isWordActive = currentTime >= w.start && currentTime <= w.end}
+              <div
+                class="inline-flex flex-col items-center justify-end transition-all duration-150 rounded-lg px-1.5 py-0.5 {isWordActive ? 'bg-orange-100 dark:bg-orange-950/80 ring-2 ring-orange-500/40 scale-105 shadow-xs' : 'bg-transparent'}"
+              >
+                <!-- Chữ Hán ở trên -->
+                <span
+                  class="text-base sm:text-lg font-serif font-bold transition-colors leading-none {isWordActive ? 'text-orange-600 dark:text-orange-400 font-extrabold' : 'text-slate-800 dark:text-slate-100'}"
+                >
+                  {w.word}
+                </span>
+                <!-- Pinyin ở chân -->
+                {#if w.pinyin}
+                  <span
+                    class="text-[10px] sm:text-xs font-mono transition-colors mt-0.5 leading-none {isWordActive ? 'text-amber-700 dark:text-amber-300 font-bold' : 'text-slate-400 dark:text-neutral-400'}"
+                  >
+                    {w.pinyin}
+                  </span>
+                {/if}
+              </div>
+            {/each}
+          {:else}
+            <!-- Fallback hiển thị cả cụm nếu chưa bóc tách word lẻ -->
+            <div class="flex flex-col items-center sm:items-start">
+              <span class="text-base sm:text-lg font-serif font-bold text-orange-600 dark:text-orange-400">
+                {activeSubtitle.text}
+              </span>
+              {#if activeSubtitle.pinyin}
+                <span class="text-xs font-mono text-amber-600 dark:text-amber-400 mt-0.5">
+                  {activeSubtitle.pinyin}
+                </span>
+              {/if}
+            </div>
+          {/if}
+        </div>
+
+        <!-- Dòng giải nghĩa tiếng Việt đi kèm -->
+        {#if activeSubtitle.viet}
+          <div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-neutral-400 font-medium px-1 bg-slate-50/70 dark:bg-neutral-800/40 rounded-lg py-1 border border-slate-200/50 dark:border-neutral-800">
+            <span class="font-bold text-orange-600 dark:text-orange-400 shrink-0">Dịch nghĩa:</span>
+            <span class="truncate">{activeSubtitle.viet}</span>
+          </div>
         {/if}
       </div>
     {/if}
