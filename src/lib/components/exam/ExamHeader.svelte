@@ -64,23 +64,25 @@
   </div>
 
   <div class="flex items-center gap-2.5 shrink-0 self-end md:self-center">
-    <!-- Switch Chế độ: Thi Thật / Luyện tập Quiz -->
+    <!-- Switch Chế độ: Thi Thử Chuẩn / Thi Nhanh -->
     <div class="flex items-center bg-slate-100 dark:bg-neutral-800 p-1 rounded-2xl text-xs font-bold">
       <button
         type="button"
         onclick={() => onModeChange('exam')}
         class="px-2.5 sm:px-3 py-1.5 rounded-xl cursor-pointer transition-all flex items-center gap-1.5 {mode === 'exam' ? 'bg-white dark:bg-neutral-700 text-orange-600 dark:text-orange-400 shadow-xs' : 'text-slate-600 dark:text-slate-400'}"
+        title="Thi Thử Chuẩn: Cuộn làm toàn bài 60 câu, nộp bài tính điểm"
       >
         <Exam weight="bold" class="w-3.5 h-3.5" />
-        <span>Thi Thật</span>
+        <span>Thi Thử Chuẩn</span>
       </button>
       <button
         type="button"
         onclick={() => onModeChange('practice')}
         class="px-2.5 sm:px-3 py-1.5 rounded-xl cursor-pointer transition-all flex items-center gap-1.5 {mode === 'practice' ? 'bg-white dark:bg-neutral-700 text-orange-600 dark:text-orange-400 shadow-xs' : 'text-slate-600 dark:text-slate-400'}"
+        title="Thi Nhanh: Làm từng câu, hiện đáp án đúng/sai tức thì kèm giải thích"
       >
         <Lightning weight="bold" class="w-3.5 h-3.5 text-amber-500" />
-        <span>Luyện Tập</span>
+        <span>Thi Nhanh</span>
       </button>
     </div>
   </div>

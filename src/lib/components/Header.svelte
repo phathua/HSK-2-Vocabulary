@@ -89,29 +89,27 @@
     <!-- Trong phòng thi: Bộ đếm thời gian CHỈ HIỆN KHI CUỘN XUỐNG (isScrolled) -->
     {#if isExamRoom && examRoomState.isScrolled}
       <div class="flex items-center gap-1.5 shrink-0 animate-fade-in">
-        <!-- Bộ đếm thời gian: CHỈ XUẤT HIỆN Ở CHẾ ĐỘ THI -->
-        {#if examRoomState.isExamMode}
-          {#if examRoomState.isPreviewPhase}
-            <!-- Đếm ngược 60s xem trước đề (chưa trừ vào 55 phút) -->
-            <button
-              type="button"
-              onclick={() => examRoomState.startAudio()}
-              class="h-9 px-2.5 rounded-xl border border-amber-300 dark:border-amber-900/60 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 flex items-center gap-1.5 font-mono font-black text-xs cursor-pointer shadow-2xs active:scale-95 transition-all"
-              title="Đang xem trước đề. Bấm để phát audio ngay!"
-            >
-              <HourglassMedium weight="bold" class="w-4 h-4 text-amber-600 animate-spin" />
-              <span>{examRoomState.previewSeconds}s</span>
-            </button>
-          {:else}
-            <!-- Đồng hồ thời gian làm bài 55 phút -->
-            <div
-              class="h-9 px-2.5 rounded-xl border {examRoomState.timeRemainingSeconds < 300 ? 'border-red-300 dark:border-red-900/60 bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 animate-pulse' : 'border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] text-slate-700 dark:text-[#E3E3E3]'} flex items-center gap-1.5 font-mono font-black text-xs shadow-2xs"
-              title="Thời gian làm bài thi"
-            >
-              <Clock weight="duotone" class="w-4 h-4 {examRoomState.timeRemainingSeconds < 300 ? 'text-red-500' : 'text-orange-500'}" />
-              <span>{formatTime(examRoomState.timeRemainingSeconds)}</span>
-            </div>
-          {/if}
+        <!-- Bộ đếm thời gian: Hiển thị ở cả 2 chế độ thi -->
+        {#if examRoomState.isPreviewPhase}
+          <!-- Đếm ngược 60s xem trước đề (chưa trừ vào 55 phút) -->
+          <button
+            type="button"
+            onclick={() => examRoomState.startAudio()}
+            class="h-9 px-2.5 rounded-xl border border-amber-300 dark:border-amber-900/60 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 flex items-center gap-1.5 font-mono font-black text-xs cursor-pointer shadow-2xs active:scale-95 transition-all"
+            title="Đang xem trước đề. Bấm để phát audio ngay!"
+          >
+            <HourglassMedium weight="bold" class="w-4 h-4 text-amber-600 animate-spin" />
+            <span>{examRoomState.previewSeconds}s</span>
+          </button>
+        {:else}
+          <!-- Đồng hồ thời gian làm bài 55 phút -->
+          <div
+            class="h-9 px-2.5 rounded-xl border {examRoomState.timeRemainingSeconds < 300 ? 'border-red-300 dark:border-red-900/60 bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 animate-pulse' : 'border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] text-slate-700 dark:text-[#E3E3E3]'} flex items-center gap-1.5 font-mono font-black text-xs shadow-2xs"
+            title="Thời gian làm bài thi"
+          >
+            <Clock weight="duotone" class="w-4 h-4 {examRoomState.timeRemainingSeconds < 300 ? 'text-red-500' : 'text-orange-500'}" />
+            <span>{formatTime(examRoomState.timeRemainingSeconds)}</span>
+          </div>
         {/if}
       </div>
     {:else if isHomePage}

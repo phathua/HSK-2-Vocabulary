@@ -31,7 +31,7 @@
     return `${mins.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   }
 
-  const isLowTime = $derived(mode === 'exam' && timeRemainingSeconds < 300);
+  const isLowTime = $derived(timeRemainingSeconds < 300);
 </script>
 
 <div class="shrink-0 mt-auto bg-white/95 dark:bg-[#1B1B1B]/95 backdrop-blur-md border border-slate-200 dark:border-[#282A2C] rounded-2xl px-2.5 sm:px-4 py-2 sm:py-2.5 shadow-lg safe-area-bottom">
@@ -59,13 +59,11 @@
       </div>
     </div>
 
-    <!-- Giữa: Đồng hồ đếm ngược -->
-    {#if mode === 'exam'}
-      <div class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1 rounded-xl border {isLowTime ? 'bg-red-50 dark:bg-red-950/50 border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 animate-pulse' : 'bg-slate-50 dark:bg-neutral-800/80 border-slate-200 dark:border-neutral-700 text-slate-700 dark:text-slate-300'} font-mono font-black text-xs sm:text-sm shrink-0 shadow-2xs">
-        <Clock weight="duotone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 {isLowTime ? 'text-red-600' : 'text-orange-500'} shrink-0" />
-        <span>{formatCountdown(timeRemainingSeconds)}</span>
-      </div>
-    {/if}
+    <!-- Giữa: Đồng hồ đếm ngược (Hiển thị ở cả 2 chế độ thi) -->
+    <div class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1 rounded-xl border {isLowTime ? 'bg-red-50 dark:bg-red-950/50 border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 animate-pulse' : 'bg-slate-50 dark:bg-neutral-800/80 border-slate-200 dark:border-neutral-700 text-slate-700 dark:text-slate-300'} font-mono font-black text-xs sm:text-sm shrink-0 shadow-2xs">
+      <Clock weight="duotone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 {isLowTime ? 'text-red-600' : 'text-orange-500'} shrink-0" />
+      <span>{formatCountdown(timeRemainingSeconds)}</span>
+    </div>
 
     <!-- Phải: Nút Làm lại & Nộp bài -->
     <div class="flex items-center gap-1 sm:gap-2 shrink-0">

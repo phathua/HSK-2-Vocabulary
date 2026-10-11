@@ -109,9 +109,11 @@
     examRoomState.previewSeconds = 0;
 
     if (audioElement) {
+      neutralizeMediaSession();
       audioElement.play().then(() => {
         isPlaying = true;
         examRoomState.isPlaying = true;
+        neutralizeMediaSession();
       }).catch((e) => {
         console.warn('Audio autoplay failed or blocked by browser:', e);
         isPlaying = false;
@@ -132,6 +134,87 @@
       }
     }
   });
+
+  let wasPlayingBeforeBlur = false;
+
+  function neutralizeMediaSession() {
+    if (typeof navigator !== 'undefined' && 'mediaSession' in navigator) {
+      try {
+        navigator.mediaSession.metadata = null;
+        navigator.mediaSession.playbackState = 'none';
+        const actions: MediaSessionAction[] = [
+          'play',
+          'pause',
+          'seekbackward',
+          'seekforward',
+          'previoustrack',
+          'nexttrack',
+          'seekto',
+          'stop',
+          'skipad'
+        ];
+        actions.forEach((action) => {
+          try {
+            navigator.mediaSession.setActionHandler(action, null);
+          } catch {}
+        });
+      } catch {}
+    }
+  }
+
+  function handleVisibilityChange() {
+    if (document.hidden) {
+      if (isPlaying) {
+        wasPlayingBeforeBlur = true;
+        if (audioElement) {
+          audioElement.pause();
+        }
+        isPlaying = false;
+        examRoomState.isPlaying = false;
+        if ('mediaSession' in navigator) {
+          navigator.mediaSession.playbackState = 'none';
+        }
+      }
+    } else {
+      if (wasPlayingBeforeBlur) {
+        wasPlayingBeforeBlur = false;
+        if (audioElement) {
+          audioElement.play().then(() => {
+            isPlaying = true;
+            examRoomState.isPlaying = true;
+            neutralizeMediaSession();
+          }).catch(console.warn);
+        }
+      }
+    }
+  }
+
+  function handleWindowBlur() {
+    if (isPlaying) {
+      wasPlayingBeforeBlur = true;
+      if (audioElement) {
+        audioElement.pause();
+      }
+      isPlaying = false;
+      examRoomState.isPlaying = false;
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = 'none';
+      }
+    }
+  }
+
+  function handleWindowFocus() {
+    if (wasPlayingBeforeBlur && !document.hidden) {
+      wasPlayingBeforeBlur = false;
+      if (audioElement) {
+        audioElement.play().then(() => {
+          isPlaying = true;
+          examRoomState.isPlaying = true;
+          neutralizeMediaSession();
+        }).catch(console.warn);
+      }
+    }
+  }
 
   onMount(() => {
     examRoomState.startAudioFn = startAudioPlayback;
@@ -194,10 +277,19 @@
       mainScrollContainer.addEventListener('scroll', handleScroll, { passive: true });
     }
 
+    // Ngăn OS (iOS Safari, Android Chrome) điều khiển Audio và Pause khi out-tab/mất focus
+    neutralizeMediaSession();
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('blur', handleWindowBlur);
+    window.addEventListener('focus', handleWindowFocus);
+
     return () => {
       if (mainScrollContainer) {
         mainScrollContainer.removeEventListener('scroll', handleScroll);
       }
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('blur', handleWindowBlur);
+      window.removeEventListener('focus', handleWindowFocus);
     };
   });
 
@@ -232,10 +324,15 @@
       audioElement.pause();
       isPlaying = false;
       examRoomState.isPlaying = false;
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = 'none';
+      }
     } else {
+      neutralizeMediaSession();
       audioElement.play().catch(console.error);
       isPlaying = true;
       examRoomState.isPlaying = true;
+      neutralizeMediaSession();
     }
   }
 

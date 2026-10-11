@@ -9,6 +9,7 @@
     isExamSubmitted?: boolean;
     mode?: 'exam' | 'practice';
     correctMap?: Record<number, boolean>;
+    currentQuestionNo?: number;
     onScrollTo: (qNo: number) => void;
   }
 
@@ -19,6 +20,7 @@
     isExamSubmitted = false,
     mode = 'exam',
     correctMap = {},
+    currentQuestionNo = 1,
     onScrollTo
   }: Props = $props();
 
@@ -60,10 +62,14 @@
       {@const isCorrect = shouldShowResult && correctMap[qNo] === true}
       {@const isWrong = shouldShowResult && correctMap[qNo] === false}
 
+      {@const isActive = mode === 'practice' && qNo === currentQuestionNo}
+
       <button
         type="button"
         onclick={() => onScrollTo(qNo)}
         class="h-8 rounded-xl font-bold text-xs flex items-center justify-center relative cursor-pointer transition-all border {
+          isActive ? 'ring-2 ring-orange-500 ring-offset-1 dark:ring-offset-neutral-900 scale-105 z-10 font-black' : ''
+        } {
           isCorrect
             ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs'
             : isWrong
