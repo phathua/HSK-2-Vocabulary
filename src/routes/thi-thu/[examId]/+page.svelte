@@ -204,7 +204,7 @@
 
 <main
   bind:this={mainScrollEl}
-  class="flex-1 flex flex-col min-h-0 {mode === 'practice' ? 'overflow-hidden my-1' : 'overflow-y-auto my-2 pr-1 pb-3'}"
+  class="flex-1 flex flex-col min-h-0 {mode === 'practice' ? 'overflow-y-auto lg:overflow-hidden my-1' : 'overflow-y-auto my-2 pr-1 pb-3'}"
 >
   {#if isLoading}
     <div class="flex-1 flex items-center justify-center p-12">
@@ -228,10 +228,10 @@
         Quay lại danh mục
       </a>
     </div>
-  {:else if mode === 'practice'}
-    {@const currentQ = exam.questions[currentQuestionIndex]}
-    {#if currentQ}
-      <!-- 1. Thanh Điều Hướng Siêu Gọn (~38px) Cho Chế Độ Thi Nhanh -->
+  {:else}
+    <!-- 1. HEADER ĐIỀU KHIỂN PHÒNG THI TÙY THEO CHẾ ĐỘ -->
+    {#if mode === 'practice'}
+      <!-- Thanh Điều Hướng Siêu Gọn (~38px) Cho Chế Độ Thi Nhanh -->
       <div class="shrink-0 flex items-center justify-between gap-2 mb-2 px-0.5">
         <!-- Nút Quay Lại + Badge Mã Đề -->
         <div class="flex items-center gap-2">
@@ -270,75 +270,27 @@
           </button>
         </div>
       </div>
-
-      <!-- 2. Thẻ Trắc Nghiệm Single View (100% Khớp Không Cuộn Trang) -->
-      <div class="flex-1 min-h-0 flex flex-col lg:grid lg:grid-cols-12 lg:gap-5 items-stretch overflow-hidden">
-        <!-- Cột Thẻ Câu Hỏi Hiện Tại (8/12 cột Desktop, 12/12 Mobile) -->
-        <div class="lg:col-span-8 h-full flex flex-col min-h-0 overflow-hidden">
-          <ExamQuickQuizCard
-            question={currentQ}
-            questionIndex={currentQuestionIndex}
-            totalQuestions={exam.total_questions}
-            selectedAnswer={answers[currentQ.question_no]}
-            isFlagged={flagged[currentQ.question_no]}
-            {timeRemainingSeconds}
-            totalCorrect={scoreResults.totalCorrect}
-            totalWrong={totalAnswered - scoreResults.totalCorrect}
-            audioSrc={exam.audio_ogg || exam.audio_mp3 || exam.audio_url}
-            examCode={exam.exam_code ?? examId ?? ''}
-            onSelectAnswer={(val) => handleSelectAnswer(currentQ.question_no, val)}
-            onToggleFlag={() => handleToggleFlag(currentQ.question_no)}
-            onNextQuestion={() => {
-              if (currentQuestionIndex < exam.total_questions - 1) {
-                currentQuestionIndex += 1;
-              }
-            }}
-            onPrevQuestion={() => {
-              if (currentQuestionIndex > 0) {
-                currentQuestionIndex -= 1;
-              }
-            }}
-            onOpenPalette={() => (showPaletteModal = true)}
-            onSubmitExam={handleSubmitExam}
-          />
-        </div>
-
-        <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) -->
-        <div class="lg:col-span-4 hidden lg:block h-full min-h-0 overflow-y-auto">
-          <ExamPalette
-            totalQuestions={exam.total_questions}
-            {answers}
-            {flagged}
-            {mode}
-            isExamSubmitted={isSubmitted}
-            correctMap={scoreResults.correctMap}
-            currentQuestionNo={currentQ.question_no}
-            onScrollTo={handleScrollTo}
-          />
-        </div>
-      </div>
+    {:else}
+      <!-- Top Header Điều Khiển Phòng Thi -->
+      <ExamHeader
+        title={exam.title ?? 'Đề Thi HSK 2'}
+        examCode={exam.exam_code ?? examId ?? ''}
+        {mode}
+        {timeRemainingSeconds}
+        answeredCount={totalAnswered}
+        totalCount={exam.total_questions}
+        onModeChange={(newMode) => (mode = newMode)}
+        onExitRequest={() => {
+          if (mode === 'exam' && !isSubmitted) {
+            showExitModal = true;
+          } else {
+            goto('/thi-thu');
+          }
+        }}
+      />
     {/if}
-  {:else}
-    <!-- CHẾ ĐỘ THI THỬ CHUẨN (EXAM MODE) -->
-    <!-- Top Header Điều Khiển Phòng Thi -->
-    <ExamHeader
-      title={exam.title ?? 'Đề Thi HSK 2'}
-      examCode={exam.exam_code ?? examId ?? ''}
-      {mode}
-      {timeRemainingSeconds}
-      answeredCount={totalAnswered}
-      totalCount={exam.total_questions}
-      onModeChange={(newMode) => (mode = newMode)}
-      onExitRequest={() => {
-        if (mode === 'exam' && !isSubmitted) {
-          showExitModal = true;
-        } else {
-          goto('/thi-thu');
-        }
-      }}
-    />
 
-    <!-- Trình Phát Audio Cho Đề Thi: Sticky trực tiếp dưới Header -->
+    <!-- 2. TRÌNH PHÁT AUDIO DÙNG CHUNG DUY NHẤT: Bền vững, không bị gián đoạn hay ngắt âm thanh khi đổi mode -->
     {@const audioSource = exam.audio_ogg || exam.audio_mp3 || exam.audio_url}
     {#if audioSource}
       <ExamAudioPlayer
@@ -349,8 +301,58 @@
       />
     {/if}
 
-    <!-- Bố Cục Phòng Thi (Split Layout: Cột Câu Hỏi + Palette 60 ô) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start mt-2">
+    <!-- 3. NỘI DUNG PHÒNG THI -->
+    {#if mode === 'practice'}
+      {@const currentQ = exam.questions[currentQuestionIndex]}
+      {#if currentQ}
+        <!-- Thẻ Trắc Nghiệm Single View (100% Khớp Không Cuộn Trang) -->
+        <div class="flex-1 min-h-0 flex flex-col lg:grid lg:grid-cols-12 lg:gap-5 items-stretch overflow-hidden">
+          <!-- Cột Thẻ Câu Hỏi Hiện Tại (8/12 cột Desktop, 12/12 Mobile) -->
+          <div class="lg:col-span-8 h-full flex flex-col min-h-0 overflow-hidden">
+            <ExamQuickQuizCard
+              question={currentQ}
+              questionIndex={currentQuestionIndex}
+              totalQuestions={exam.total_questions}
+              selectedAnswer={answers[currentQ.question_no]}
+              isFlagged={flagged[currentQ.question_no]}
+              {timeRemainingSeconds}
+              totalCorrect={scoreResults.totalCorrect}
+              totalWrong={totalAnswered - scoreResults.totalCorrect}
+              onSelectAnswer={(val) => handleSelectAnswer(currentQ.question_no, val)}
+              onToggleFlag={() => handleToggleFlag(currentQ.question_no)}
+              onNextQuestion={() => {
+                if (currentQuestionIndex < exam.total_questions - 1) {
+                  currentQuestionIndex += 1;
+                }
+              }}
+              onPrevQuestion={() => {
+                if (currentQuestionIndex > 0) {
+                  currentQuestionIndex -= 1;
+                }
+              }}
+              onOpenPalette={() => (showPaletteModal = true)}
+              onSubmitExam={handleSubmitExam}
+            />
+          </div>
+
+          <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) -->
+          <div class="lg:col-span-4 hidden lg:block h-full min-h-0 overflow-y-auto">
+            <ExamPalette
+              totalQuestions={exam.total_questions}
+              {answers}
+              {flagged}
+              {mode}
+              isExamSubmitted={isSubmitted}
+              correctMap={scoreResults.correctMap}
+              currentQuestionNo={currentQ.question_no}
+              onScrollTo={handleScrollTo}
+            />
+          </div>
+        </div>
+      {/if}
+    {:else}
+      <!-- Bố Cục Phòng Thi (Split Layout: Cột Câu Hỏi + Palette 60 ô) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start mt-2">
       <!-- Cột Nội Dung Câu Hỏi (8/12 cột trên màn hình lớn) -->
       <div class="lg:col-span-8 space-y-6">
         <!-- Phần 1: Nghe -->
@@ -423,6 +425,7 @@
       </div>
     </div>
   {/if}
+{/if}
 </main>
 
 {#if exam && mode === 'exam'}

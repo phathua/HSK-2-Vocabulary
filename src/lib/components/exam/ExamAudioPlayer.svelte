@@ -246,24 +246,20 @@
       }
     });
 
-    if (isExamMode) {
-      isPreviewPhase = true;
-      previewSeconds = 60;
-      examRoomState.isPreviewPhase = true;
-      examRoomState.previewSeconds = 60;
+    // Khởi động 60s đọc đề bắt đầu cho phòng thi (cả 2 chế độ)
+    isPreviewPhase = true;
+    previewSeconds = 60;
+    examRoomState.isPreviewPhase = true;
+    examRoomState.previewSeconds = 60;
 
-      previewTimer = setInterval(() => {
-        if (previewSeconds > 1) {
-          previewSeconds -= 1;
-          examRoomState.previewSeconds = previewSeconds;
-        } else {
-          startAudioPlayback();
-        }
-      }, 1000);
-    } else {
-      isPreviewPhase = false;
-      examRoomState.isPreviewPhase = false;
-    }
+    previewTimer = setInterval(() => {
+      if (previewSeconds > 1) {
+        previewSeconds -= 1;
+        examRoomState.previewSeconds = previewSeconds;
+      } else {
+        startAudioPlayback();
+      }
+    }, 1000);
 
     // Lắng nghe scroll trên <main> để thu nhỏ card thành thanh mini sticky bar
     mainScrollContainer = cardElement?.closest('main') as HTMLElement | null;
@@ -312,10 +308,12 @@
 
   function togglePlay() {
     if (!audioElement) return;
+    if (isPreviewPhase) {
+      startAudioPlayback();
+      return;
+    }
+
     if (isExamMode) {
-      if (isPreviewPhase) {
-        startAudioPlayback();
-      }
       return;
     }
 
@@ -458,18 +456,16 @@
           </button>
         {/if}
 
-        {#if isExamMode}
-          {#if isPreviewPhase}
-            <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 font-mono font-bold text-xs">
-              <HourglassMedium class="w-3.5 h-3.5 animate-spin text-amber-600" />
-              <span>{previewSeconds}s</span>
-            </div>
-          {:else}
-            <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-100/80 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold text-[11px]">
-              <LockSimple class="w-3.5 h-3.5" />
-              <span class="hidden sm:inline">Thi thật</span>
-            </div>
-          {/if}
+        {#if isPreviewPhase}
+          <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 font-mono font-bold text-xs">
+            <HourglassMedium class="w-3.5 h-3.5 animate-spin text-amber-600" />
+            <span>{previewSeconds}s</span>
+          </div>
+        {:else if isExamMode}
+          <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-100/80 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold text-[11px]">
+            <LockSimple class="w-3.5 h-3.5" />
+            <span class="hidden sm:inline">Thi thật</span>
+          </div>
         {/if}
       </div>
     </div>
@@ -477,7 +473,7 @@
     <!-- Thanh tiến độ bài nghe khi chưa cuộn -->
     {#if !isScrolled}
       <div class="mt-2.5 relative w-full h-1 bg-slate-200/80 dark:bg-neutral-800 rounded-full overflow-hidden">
-        {#if isExamMode && isPreviewPhase}
+        {#if isPreviewPhase}
           <div
             class="h-full bg-amber-500 transition-all duration-1000 ease-linear"
             style="width: {((60 - previewSeconds) / 60) * 100}%"
@@ -492,16 +488,29 @@
     {/if}
 
     <!-- Khung Subtitle Overlay gắn liền trực tiếp ngay dưới Audio Player (Word-by-word Karaoke) -->
-    {#if showSubtitleOverlay && activeSubtitle}
-      <div
-        class="mt-2.5 pt-2.5 border-t border-slate-200/80 dark:border-neutral-800/80 flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-1 duration-200"
-      >
-        <!-- Hàng hiển thị Karaoke Word-by-Word hoặc Thông báo Nhạc dạo -->
-        {#if activeSubtitle.text.includes('🎵')}
-          <div class="flex items-center justify-center gap-2 py-2 text-slate-500 dark:text-neutral-400 font-medium text-xs sm:text-sm">
-            <span class="text-base animate-bounce">🎵</span>
-            <span>Đang phát nhạc dạo đầu bài thi HSK 2...</span>
+    {#if showSubtitleOverlay}
+      {#if isPreviewPhase}
+        <div
+          class="mt-2.5 pt-2.5 border-t border-slate-200/80 dark:border-neutral-800/80 flex flex-col items-center justify-center gap-1 py-1.5 animate-in fade-in duration-200"
+        >
+          <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-bold text-xs sm:text-sm">
+            <span class="text-base animate-pulse">⏳</span>
+            <span>60 giây đọc đề bắt đầu... (còn {previewSeconds}s)</span>
           </div>
+          <span class="text-[11px] text-slate-500 dark:text-neutral-400 italic">
+            Thời gian xem trước và chuẩn bị làm bài
+          </span>
+        </div>
+      {:else if activeSubtitle}
+        <div
+          class="mt-2.5 pt-2.5 border-t border-slate-200/80 dark:border-neutral-800/80 flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-1 duration-200"
+        >
+          <!-- Hàng hiển thị Karaoke Word-by-Word hoặc Thông báo Nhạc dạo -->
+          {#if activeSubtitle.text.includes('🎵')}
+            <div class="flex items-center justify-center gap-2 py-2 text-slate-500 dark:text-neutral-400 font-medium text-xs sm:text-sm">
+              <span class="text-base animate-bounce">🎵</span>
+              <span>Đang phát nhạc dạo đầu bài thi HSK 2...</span>
+            </div>
         {:else}
           <div class="flex flex-wrap items-end gap-x-1.5 gap-y-2 justify-center sm:justify-start px-1 py-1">
             {#if currentWords.length > 0}
@@ -552,6 +561,7 @@
         {/if}
       </div>
     {/if}
+  {/if}
 
     <!-- Thẻ Audio ẩn -->
     <audio
