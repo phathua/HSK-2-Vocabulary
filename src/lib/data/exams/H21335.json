@@ -444,10 +444,13 @@
       "question_no": 36,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 36",
+      "text": "我觉得这件就很不错。(wǒ jué de zhè jiàn jiù hěn bú cuò。)",
       "answer": "F",
-      "listening_script": "",
-      "board_image": "images/H21335_board_36_40.webp"
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_36.webp",
+      "board_image": "images/H21335_board_36_40.webp",
+      "explanation": "Đáp án [F]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -456,10 +459,13 @@
       "question_no": 37,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 37",
+      "text": "米饭做好了，快来吃饭吧。(mǐ fàn zuò hǎo le， kuài lái chī fàn ba。)",
       "answer": "A",
-      "listening_script": "",
-      "board_image": "images/H21335_board_36_40.webp"
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_37.webp",
+      "board_image": "images/H21335_board_36_40.webp",
+      "explanation": "Đáp án [A]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -468,10 +474,13 @@
       "question_no": 38,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 38",
+      "text": "它能听懂你说的话吗？(tā néng tīng dǒng nǐ shuō de huà ma？)",
       "answer": "E",
-      "listening_script": "",
-      "board_image": "images/H21335_board_36_40.webp"
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_38.webp",
+      "board_image": "images/H21335_board_36_40.webp",
+      "explanation": "Đáp án [E]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -480,10 +489,13 @@
       "question_no": 39,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 39",
+      "text": "喂，我已经下飞机了，现在正往家里走呢。(wèi， wǒ yǐ jīng xià fēi jī le， xiàn zài zhèng wǎng jiā lǐ zǒu ne。)",
       "answer": "B",
-      "listening_script": "",
-      "board_image": "images/H21335_board_36_40.webp"
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_39.webp",
+      "board_image": "images/H21335_board_36_40.webp",
+      "explanation": "Đáp án [B]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -492,10 +504,13 @@
       "question_no": 40,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 40",
+      "text": "来，喝杯咖啡，休息一下。(lái， hē bēi kā fēi， xiū xī yī xià。)",
       "answer": "C",
-      "listening_script": "",
-      "board_image": "images/H21335_board_36_40.webp"
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_40.webp",
+      "board_image": "images/H21335_board_36_40.webp",
+      "explanation": "Đáp án [C]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -504,10 +519,21 @@
       "question_no": 41,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 41",
+      "text": "对不起，让你等了这么长 ( )(duì bù qǐ， ràng nǐ děng le zhè me zhǎng  ( ))",
       "answer": "C",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_41.webp",
+      "options": [
+        "A 再 (zài)",
+        "B 忙 (máng)",
+        "C 时间 (shí jiān)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 唱歌 (chàng gē)"
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [C]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -516,10 +542,21 @@
       "question_no": 42,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 42",
+      "text": "别电视太近，对眼晴不好，坐远点儿。 ( )(bié diàn shì tài jìn， duì yǎn qíng bù hǎo， zuò yuǎn diǎn ér 。 ( ))",
       "answer": "D",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_42.webp",
+      "options": [
+        "A 再 (zài)",
+        "B 忙 (máng)",
+        "C 时间 (shí jiān)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 唱歌 (chàng gē)"
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [D]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -528,10 +565,21 @@
       "question_no": 43,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 43",
+      "text": "这个手机还能便宜些吗? ( )(zhè ge shǒu jī hái néng pián yi xiē ma ? ( ))",
       "answer": "A",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_43.webp",
+      "options": [
+        "A 再 (zài)",
+        "B 忙 (máng)",
+        "C 时间 (shí jiān)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 唱歌 (chàng gē)"
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [A]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -540,10 +588,21 @@
       "question_no": 44,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 44",
+      "text": "没想到你妻子（）这么好听(méi xiǎng dào nǐ qī zǐ （） zhè me hǎo tīng)",
       "answer": "F",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_44.webp",
+      "options": [
+        "A 再 (zài)",
+        "B 忙 (máng)",
+        "C 时间 (shí jiān)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 唱歌 (chàng gē)"
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [F]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -552,10 +611,21 @@
       "question_no": 45,
       "image": null,
       "type": "Fill Blank",
-      "text": "Câu hỏi đọc số 45",
+      "text": "女：你每天几点睡觉？男：10点，有时候工作)，可能会晚一点儿。 ( )(nǚ： nǐ měi tiān jǐ diǎn shuì jiào？ nán ：10 diǎn， yǒu shí hòu gōng zuò )， kě néng huì wǎn yì diǎn ér 。 ( ))",
       "answer": "B",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_45.webp",
+      "options": [
+        "A 再 (zài)",
+        "B 忙 (máng)",
+        "C 时间 (shí jiān)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 唱歌 (chàng gē)"
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [B]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -564,10 +634,13 @@
       "question_no": 46,
       "image": null,
       "type": "True/False",
-      "text": "Câu hỏi đọc số 46",
+      "text": "姐姐，第一题我不会做，你做完饭能帮我看看吗？\n★ 姐姐正在房间里学习。(jiě jiě， dì yī tí wǒ bú huì zuò， nǐ zuò wán fàn néng bāng wǒ kàn kàn ma？ ★ jiě jiě zhèng zài fáng jiān lǐ xué xí。)",
       "answer": "×",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_46.webp",
+      "board_image": null,
+      "explanation": "Đáp án [×]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -576,10 +649,13 @@
       "question_no": 47,
       "image": null,
       "type": "True/False",
-      "text": "Câu hỏi đọc số 47",
+      "text": "我认识你丈夫，去年在中国旅游的时候，我们见过一次。\n★ 他去过中国(wǒ rèn shí nǐ zhàng fū， qù nián zài zhōng guó lǚ yóu de shí hòu， wǒ men jiàn guò yī cì。 ★ tā qù guò zhōng guó)",
       "answer": "√",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_47.webp",
+      "board_image": null,
+      "explanation": "Đáp án [√]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -588,10 +664,13 @@
       "question_no": 48,
       "image": null,
       "type": "True/False",
-      "text": "Câu hỏi đọc số 48",
+      "text": "今晚的雪下得真大，不知道明天早上还能不能去跑步。\n★ 外面下雨了。(jīn wǎn de xuě xià dé zhēn dà， bù zhī dào míng tiān zǎo shàng hái néng bù néng qù pǎo bù。 ★ wài miàn xià yǔ le。)",
       "answer": "×",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_48.webp",
+      "board_image": null,
+      "explanation": "Đáp án [×]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -600,10 +679,13 @@
       "question_no": 49,
       "image": null,
       "type": "True/False",
-      "text": "Câu hỏi đọc số 49",
+      "text": "刘小姐生病了，所以今天没来公司。您有什么事情可以和我说，等她来了，我再告诉她。\n★ 刘小姐今天身体不太好。(liú xiǎo jiě shēng bìng le， suǒ yǐ jīn tiān méi lái gōng sī。 nín yǒu shén me shì qíng kě yǐ hé wǒ shuō， děng tā lái le， wǒ zài gào sù tā。 ★ liú xiǎo jiě jīn tiān shēn tǐ bù tài hǎo。)",
       "answer": "√",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_49.webp",
+      "board_image": null,
+      "explanation": "Đáp án [√]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -612,10 +694,13 @@
       "question_no": 50,
       "image": null,
       "type": "True/False",
-      "text": "Câu hỏi đọc số 50",
+      "text": "知道你今天要回家，妈妈做了很多菜，有你最爱吃的鱼。快去洗洗手来吃饭吧。\n★ 他今天不在家吃饭。第四部分第51-55题A床上那件衣服是要洗的吗?B明天天气很好，我们出去玩儿吧？C名字都在这上面吗？怎么没看到我的？D我已经在回去的路上了E他在哪儿呢？你看见他了吗？F吃完鸡蛋就走吧，都9点了，火车快要开了。例如：他还在教室里学习。E51.我们再要杯牛奶？52.我也不知道，这是小王写的，你问他吧。53.我下午有课，后天怎么样?54．不是，我下午踢球还要穿呢。55．我下班了，你呢？(zhī dào nǐ jīn tiān yào huí jiā， mā mā zuò le hěn duō cài， yǒu nǐ zuì ài chī de yú。 kuài qù xǐ xǐ shǒu lái chī fàn ba。 ★ tā jīn tiān bù zài jiā chī fàn。 dì sì bù fèn dì 51-55 tí A chuáng shàng nà jiàn yī fú shì yào xǐ de ma ?B míng tiān tiān qì hěn hǎo， wǒ men chū qù wán ér ba ？C míng zì dōu zài zhè shàng miàn ma？ zěn me méi kàn dào wǒ de ？D wǒ yǐ jīng zài huí qù de lù shàng le E tā zài nǎ ér ne？ nǐ kàn jiàn tā le ma ？F chī wán jī dàn jiù zǒu ba， dōu 9 diǎn le， huǒ chē kuài yào kāi le。 lì rú： tā hái zài jiào shì lǐ xué xí 。E51. wǒ men zài yào bēi niú nǎi ？52. wǒ yě bù zhī dào， zhè shì xiǎo wáng xiě de， nǐ wèn tā ba 。53. wǒ xià wǔ yǒu kè， hòu tiān zěn me yàng ?54． bú shì， wǒ xià wǔ tī qiú hái yào chuān ne 。55． wǒ xià bān le， nǐ ne？)",
       "answer": "×",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_50.webp",
+      "board_image": null,
+      "explanation": "Đáp án [×]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -624,10 +709,21 @@
       "question_no": 51,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 51",
+      "text": "请选择对应的答句 (Câu hỏi 51)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 51))",
       "answer": "F",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_51.webp",
+      "options": [
+        "A ...",
+        "B 大家都非常喜欢她。 (dà jiā dōu fēi cháng xǐ huān tā。)",
+        "C 好的，这就给您送来。 (hǎo de， zhè jiù gěi nín sòng lái。)",
+        "D 你慢点儿开，让我好好看看 (nǐ màn diǎn ér kāi， ràng wǒ hǎo hǎo kàn kàn)",
+        "E 一个朋友，让我帮他买去北京的票。56．谁打来的电话?57．我觉得我们走错了，不是往右。58.下午的汉语考试在哪儿考?59.小晴是个爱笑、爱帮助人的孩子。60.服务员，我们这桌少两个椅子。 (yí gè péng yǒu， ràng wǒ bāng tā mǎi qù běi jīng de piào 。56． shuí dǎ lái de diàn huà ?57． wǒ jué de wǒ men zǒu cuò le， bú shì wǎng yòu 。58. xià wǔ de hàn yǔ kǎo shì zài nǎ ér kǎo ?59. xiǎo qíng shì gè ài xiào、 ài bāng zhù rén de hái zi 。60. fú wù yuán， wǒ men zhè zhuō shǎo liǎng gè yǐ zi。)",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [F]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -636,10 +732,21 @@
       "question_no": 52,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 52",
+      "text": "请选择对应的答句 (Câu hỏi 52)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 52))",
       "answer": "C",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_52.webp",
+      "options": [
+        "A ...",
+        "B 大家都非常喜欢她。 (dà jiā dōu fēi cháng xǐ huān tā。)",
+        "C 好的，这就给您送来。 (hǎo de， zhè jiù gěi nín sòng lái。)",
+        "D 你慢点儿开，让我好好看看 (nǐ màn diǎn ér kāi， ràng wǒ hǎo hǎo kàn kàn)",
+        "E 一个朋友，让我帮他买去北京的票。56．谁打来的电话?57．我觉得我们走错了，不是往右。58.下午的汉语考试在哪儿考?59.小晴是个爱笑、爱帮助人的孩子。60.服务员，我们这桌少两个椅子。 (yí gè péng yǒu， ràng wǒ bāng tā mǎi qù běi jīng de piào 。56． shuí dǎ lái de diàn huà ?57． wǒ jué de wǒ men zǒu cuò le， bú shì wǎng yòu 。58. xià wǔ de hàn yǔ kǎo shì zài nǎ ér kǎo ?59. xiǎo qíng shì gè ài xiào、 ài bāng zhù rén de hái zi 。60. fú wù yuán， wǒ men zhè zhuō shǎo liǎng gè yǐ zi。)",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [C]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -648,10 +755,21 @@
       "question_no": 53,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 53",
+      "text": "请选择对应的答句 (Câu hỏi 53)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 53))",
       "answer": "B",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_53.webp",
+      "options": [
+        "A ...",
+        "B 大家都非常喜欢她。 (dà jiā dōu fēi cháng xǐ huān tā。)",
+        "C 好的，这就给您送来。 (hǎo de， zhè jiù gěi nín sòng lái。)",
+        "D 你慢点儿开，让我好好看看 (nǐ màn diǎn ér kāi， ràng wǒ hǎo hǎo kàn kàn)",
+        "E 一个朋友，让我帮他买去北京的票。56．谁打来的电话?57．我觉得我们走错了，不是往右。58.下午的汉语考试在哪儿考?59.小晴是个爱笑、爱帮助人的孩子。60.服务员，我们这桌少两个椅子。 (yí gè péng yǒu， ràng wǒ bāng tā mǎi qù běi jīng de piào 。56． shuí dǎ lái de diàn huà ?57． wǒ jué de wǒ men zǒu cuò le， bú shì wǎng yòu 。58. xià wǔ de hàn yǔ kǎo shì zài nǎ ér kǎo ?59. xiǎo qíng shì gè ài xiào、 ài bāng zhù rén de hái zi 。60. fú wù yuán， wǒ men zhè zhuō shǎo liǎng gè yǐ zi。)",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [B]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -660,10 +778,21 @@
       "question_no": 54,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 54",
+      "text": "请选择对应的答句 (Câu hỏi 54)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 54))",
       "answer": "A",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_54.webp",
+      "options": [
+        "A ...",
+        "B 大家都非常喜欢她。 (dà jiā dōu fēi cháng xǐ huān tā。)",
+        "C 好的，这就给您送来。 (hǎo de， zhè jiù gěi nín sòng lái。)",
+        "D 你慢点儿开，让我好好看看 (nǐ màn diǎn ér kāi， ràng wǒ hǎo hǎo kàn kàn)",
+        "E 一个朋友，让我帮他买去北京的票。56．谁打来的电话?57．我觉得我们走错了，不是往右。58.下午的汉语考试在哪儿考?59.小晴是个爱笑、爱帮助人的孩子。60.服务员，我们这桌少两个椅子。 (yí gè péng yǒu， ràng wǒ bāng tā mǎi qù běi jīng de piào 。56． shuí dǎ lái de diàn huà ?57． wǒ jué de wǒ men zǒu cuò le， bú shì wǎng yòu 。58. xià wǔ de hàn yǔ kǎo shì zài nǎ ér kǎo ?59. xiǎo qíng shì gè ài xiào、 ài bāng zhù rén de hái zi 。60. fú wù yuán， wǒ men zhè zhuō shǎo liǎng gè yǐ zi。)",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [A]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -672,10 +801,21 @@
       "question_no": 55,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 55",
+      "text": "请选择对应的答句 (Câu hỏi 55)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 55))",
       "answer": "D",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_55.webp",
+      "options": [
+        "A ...",
+        "B 大家都非常喜欢她。 (dà jiā dōu fēi cháng xǐ huān tā。)",
+        "C 好的，这就给您送来。 (hǎo de， zhè jiù gěi nín sòng lái。)",
+        "D 你慢点儿开，让我好好看看 (nǐ màn diǎn ér kāi， ràng wǒ hǎo hǎo kàn kàn)",
+        "E 一个朋友，让我帮他买去北京的票。56．谁打来的电话?57．我觉得我们走错了，不是往右。58.下午的汉语考试在哪儿考?59.小晴是个爱笑、爱帮助人的孩子。60.服务员，我们这桌少两个椅子。 (yí gè péng yǒu， ràng wǒ bāng tā mǎi qù běi jīng de piào 。56． shuí dǎ lái de diàn huà ?57． wǒ jué de wǒ men zǒu cuò le， bú shì wǎng yòu 。58. xià wǔ de hàn yǔ kǎo shì zài nǎ ér kǎo ?59. xiǎo qíng shì gè ài xiào、 ài bāng zhù rén de hái zi 。60. fú wù yuán， wǒ men zhè zhuō shǎo liǎng gè yǐ zi。)",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [D]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -684,10 +824,21 @@
       "question_no": 56,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 56",
+      "text": "请选择对应的答句 (Câu hỏi 56)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 56))",
       "answer": "E",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_56.webp",
+      "options": [
+        "A ...",
+        "B ...",
+        "C ...",
+        "D ...",
+        "E ...",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [E]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -696,10 +847,21 @@
       "question_no": 57,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 57",
+      "text": "请选择对应的答句 (Câu hỏi 57)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 57))",
       "answer": "D",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_57.webp",
+      "options": [
+        "A ...",
+        "B ...",
+        "C ...",
+        "D ...",
+        "E ...",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [D]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -708,10 +870,21 @@
       "question_no": 58,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 58",
+      "text": "请选择对应的答句 (Câu hỏi 58)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 58))",
       "answer": "A",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_58.webp",
+      "options": [
+        "A ...",
+        "B ...",
+        "C ...",
+        "D ...",
+        "E ...",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [A]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -720,10 +893,21 @@
       "question_no": 59,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 59",
+      "text": "请选择对应的答句 (Câu hỏi 59)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 59))",
       "answer": "B",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_59.webp",
+      "options": [
+        "A ...",
+        "B ...",
+        "C ...",
+        "D ...",
+        "E ...",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [B]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     },
     {
       "exam_code": "H21335",
@@ -732,10 +916,21 @@
       "question_no": 60,
       "image": null,
       "type": "Sentence Match",
-      "text": "Câu hỏi đọc số 60",
+      "text": "请选择对应的答句 (Câu hỏi 60)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 60))",
       "answer": "C",
-      "listening_script": "",
-      "board_image": null
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_60.webp",
+      "options": [
+        "A ...",
+        "B ...",
+        "C ...",
+        "D ...",
+        "E ...",
+        "F ..."
+      ],
+      "board_image": null,
+      "explanation": "Đáp án [C]: Ghép với câu đối thoại tương ứng.",
+      "listening_pinyin": null
     }
   ]
 }
