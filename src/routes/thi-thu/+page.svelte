@@ -11,6 +11,7 @@
   import X from 'phosphor-svelte/lib/X';
   import BookOpen from 'phosphor-svelte/lib/BookOpen';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
+  import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import { mockExamsData, type MockExamItem } from '#lib/data/mockExamsList';
@@ -18,6 +19,25 @@
   import { getExamImageUrl } from '#lib/utils/examAssets';
 
   import { goto, preloadData } from '$app/navigation';
+
+  // Danh sách các mã đề đã được đối chiếu & kiểm duyệt chuẩn 100% với đề thi thật
+  const VERIFIED_EXAMS = new Set([
+    'H2-YJ',
+    'H20000',
+    'H20901',
+    'H20902',
+    'H21002',
+    'H21003',
+    'H21004',
+    'H21005',
+    'H21006',
+    'H21007',
+    'H21008',
+    'H21009',
+    'H21112',
+    'H21113',
+    'H21332'
+  ]);
 
   let selectedFilter = $state('all');
   let enteringExam = $state<MockExamItem | null>(null);
@@ -36,6 +56,7 @@
     selectedFilter === 'all'
       ? mockExamsData
       : mockExamsData.filter((e: MockExamItem) => {
+          if (selectedFilter === 'verified') return VERIFIED_EXAMS.has(e.code);
           if (selectedFilter === 'hanban') return e.tag.includes('Đề thi thật') || e.tag.includes('Chính thức');
           if (selectedFilter === 'sample') return e.tag.includes('Đề mẫu');
           if (selectedFilter === 'mock') return e.tag.includes('Mock');
@@ -94,6 +115,16 @@
     </button>
     <button
       type="button"
+      onclick={() => (selectedFilter = 'verified')}
+      class="px-3 py-1.5 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-1 {selectedFilter === 'verified'
+        ? 'bg-emerald-600 text-white shadow-2xs'
+        : 'bg-slate-200/70 dark:bg-[#1B1B1B] hover:bg-slate-200 dark:hover:bg-[#282A2C] text-slate-600 dark:text-[#8E918F]'}"
+    >
+      <CheckCircle weight="fill" class="w-3.5 h-3.5 text-emerald-300" />
+      <span>Đã chuẩn ({mockExamsData.filter((e) => VERIFIED_EXAMS.has(e.code)).length})</span>
+    </button>
+    <button
+      type="button"
       onclick={() => (selectedFilter = 'hanban')}
       class="px-3 py-1.5 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 {selectedFilter === 'hanban'
         ? 'bg-orange-600 text-white shadow-2xs'
@@ -145,6 +176,25 @@
               <div class="flex flex-col items-center justify-center text-slate-400">
                 <Exam class="w-6 h-6 text-orange-500" />
                 <span class="text-[9px] font-mono mt-0.5">HSK 2</span>
+              </div>
+            {/if}
+
+            <!-- Badge trạng thái kiểm duyệt nhỏ gọn ở góc dưới thumbnail -->
+            {#if VERIFIED_EXAMS.has(exam.code)}
+              <div
+                class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-emerald-600/90 text-white text-[8px] sm:text-[9px] font-black leading-none backdrop-blur-xs shadow-xs flex items-center gap-0.5"
+                title="Đề đã kiểm duyệt chuẩn 100%"
+              >
+                <CheckCircle weight="fill" class="w-2.5 h-2.5" />
+                <span>Chuẩn</span>
+              </div>
+            {:else}
+              <div
+                class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-amber-500/95 text-white text-[8px] sm:text-[9px] font-black leading-none backdrop-blur-xs shadow-xs flex items-center gap-0.5"
+                title="Đề đang rà soát / Chưa chuẩn hóa"
+              >
+                <WarningCircle weight="fill" class="w-2.5 h-2.5" />
+                <span>Chưa chuẩn</span>
               </div>
             {/if}
           </div>
