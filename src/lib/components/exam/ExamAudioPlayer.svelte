@@ -10,6 +10,8 @@
   import CaretDown from 'phosphor-svelte/lib/CaretDown';
   import CaretUp from 'phosphor-svelte/lib/CaretUp';
   import X from 'phosphor-svelte/lib/X';
+  import MusicNotes from 'phosphor-svelte/lib/MusicNotes';
+  import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import { examRoomState } from '#lib/state/examRoomState.svelte';
   import type { QuestionItem } from '#lib/types/exam';
 
@@ -229,7 +231,7 @@
             id: 0,
             startTime: 0,
             endTime: 28.5,
-            text: "🎵 Đang phát nhạc dạo đầu & Giới thiệu quy chế bài thi...",
+            text: "Đang phát nhạc dạo đầu & Giới thiệu quy chế bài thi...",
             pinyin: ""
           }
         ];
@@ -504,9 +506,9 @@
           class="mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-slate-200/80 dark:border-neutral-800/80 flex flex-col gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-1 duration-200"
         >
           <!-- Hàng hiển thị Karaoke Word-by-Word hoặc Thông báo Nhạc dạo -->
-          {#if activeSubtitle.text.includes('🎵')}
+          {#if activeSubtitle.text.toLowerCase().includes('nhạc dạo') || activeSubtitle.text.toLowerCase().includes('nhạc')}
             <div class="flex items-center justify-center gap-1.5 py-0.5 sm:py-1 text-slate-500 dark:text-neutral-400 font-medium text-xs">
-              <span class="animate-bounce">🎵</span>
+              <MusicNotes weight="fill" class="w-3.5 h-3.5 text-amber-500 animate-bounce" />
               <span>Đang phát nhạc dạo đầu bài thi HSK 2...</span>
             </div>
           {:else}
@@ -726,7 +728,10 @@
                     <!-- Giải thích / Nghĩa tiếng Việt nếu có -->
                     {#if q.explanation}
                       <div class="pt-2 border-t border-slate-200/60 dark:border-neutral-800 text-[11px] md:text-xs text-slate-600 dark:text-neutral-300 select-text leading-relaxed">
-                        <span class="font-bold text-amber-600 dark:text-amber-400">💡 Giải nghĩa:</span>
+                        <span class="font-bold text-amber-600 dark:text-amber-400 inline-flex items-center gap-1">
+                          <Lightbulb weight="fill" class="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                          <span>Giải nghĩa:</span>
+                        </span>
                         {q.explanation}
                       </div>
                     {/if}

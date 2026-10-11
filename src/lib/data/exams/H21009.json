@@ -15,13 +15,13 @@
       "question_no": 1,
       "type": "True/False",
       "text": "Câu hỏi số 1",
-      "answer": "√",
+      "answer": "×",
       "listening_script": "你好，认识你很高兴。",
-      "listening_pinyin": "nǐ hǎo ， rèn shí nǐ hěn gāo xìng 。",
-      "explanation": "Đúng (√): Lời thoại nói '你好，认识你很高兴。' (Xin chào hân hạnh được gặp bạn.). Hình ảnh thể hiện đúng sự vật, hành động này.",
+      "listening_pinyin": "Nǐ hǎo, rènshi nǐ hěn gāoxìng.",
+      "explanation": "Trong bài nghe nói: 'nǐhǎo，rènshí nǐ hěn gāoxìng。' (Chào bạn, rất vui được quen biết bạn). Nhưng bức ảnh thể hiện hai người giận dỗi/quay lưng vào nhau không phù hợp nên đáp án là Sai (×).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_01.webp"
     },
@@ -32,13 +32,13 @@
       "question_no": 2,
       "type": "True/False",
       "text": "Câu hỏi số 2",
-      "answer": "×",
+      "answer": "√",
       "listening_script": "他们正在打篮球。",
-      "listening_pinyin": "tā men zhèng zài dǎ lán qiú 。",
-      "explanation": "Sai (×): Lời thoại nói '他们正在打篮球。' (Họ đang chơi bóng rổ.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
+      "listening_pinyin": "Tāmen zhèngzài dǎ lánqiú.",
+      "explanation": "Trong bài nghe nói: 'tāmen zhèngzài dǎlánqiú。' (Họ đang đánh bóng rổ). Bức ảnh thể hiện hai chàng trai đang chơi bóng rổ nên đáp án là Đúng (√).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_02.webp"
     },
@@ -49,13 +49,13 @@
       "question_no": 3,
       "type": "True/False",
       "text": "Câu hỏi số 3",
-      "answer": "√",
+      "answer": "×",
       "listening_script": "西瓜怎么卖？",
-      "listening_pinyin": "xī guā zěn me mài ？",
-      "explanation": "Đúng (√): Lời thoại nói '西瓜怎么卖？' (Làm thế nào để bán dưa hấu?). Hình ảnh thể hiện đúng sự vật, hành động này.",
+      "listening_pinyin": "Xīguā zěnme mài?",
+      "explanation": "Trong bài nghe hỏi: 'xīguā zěnme mài？' (Dưa hấu bán thế nào?). Nhưng bức ảnh miêu tả chùm nho (pútáo) không đúng với loại quả trong bài nghe nên đáp án là Sai (×).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_03.webp"
     },
@@ -66,13 +66,13 @@
       "question_no": 4,
       "type": "True/False",
       "text": "Câu hỏi số 4",
-      "answer": "×",
+      "answer": "√",
       "listening_script": "她还没起床呢。",
-      "listening_pinyin": "tā hái méi qǐ chuáng ne 。",
-      "explanation": "Sai (×): Lời thoại nói '她还没起床呢。' (Cô ấy vẫn chưa dậy.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
+      "listening_pinyin": "Tā hái méi qǐchuáng ne.",
+      "explanation": "Trong bài nghe nói: 'tā hái méi qǐchuáng ne。' (Cô ấy vẫn chưa thức dậy). Bức ảnh thể hiện người phụ nữ đang nằm ngủ trên giường nên đáp án là Đúng (√).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_04.webp"
     },
@@ -83,13 +83,13 @@
       "question_no": 5,
       "type": "True/False",
       "text": "Câu hỏi số 5",
-      "answer": "√",
+      "answer": "×",
       "listening_script": "我有两个女儿，她们都八岁了。",
-      "listening_pinyin": "wǒ yǒu liǎng gè nǚ ér ， tā men dōu bā suì le 。",
-      "explanation": "Đúng (√): Lời thoại nói '我有两个女儿，她们都八岁了。' (Tôi có hai cô con gái, chúng tám tuổi.). Hình ảnh thể hiện đúng sự vật, hành động này.",
+      "listening_pinyin": "Wǒ yǒu liǎng ge nǚ'ér, tāmen dōu bā suì le.",
+      "explanation": "Trong bài nghe nói: 'wǒ yǒu liǎnggè nǚér，tāmen dōu bāsuì le。' (Tôi có hai con gái, đều 8 tuổi). Nhưng bức ảnh thể hiện hai bé trai (nánháizi) nên đáp án là Sai (×).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_05.webp"
     },
@@ -102,11 +102,11 @@
       "text": "Câu hỏi số 6",
       "answer": "×",
       "listening_script": "请给我一杯咖啡，谢谢。",
-      "listening_pinyin": "qǐng gěi wǒ yī bēi kā fēi ， xiè xiè 。",
-      "explanation": "Sai (×): Lời thoại nói '请给我一杯咖啡，谢谢。' (Xin vui lòng cho tôi một tách cà phê, cảm ơn bạn.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
+      "listening_pinyin": "Qǐng gěi wǒ yì bēi kāfēi, xièxie.",
+      "explanation": "Trong bài nghe nói: 'qǐng gěi wǒ yībēi kāfēi，xièxiè。' (Cho tôi một ly cà phê, cảm ơn). Nhưng bức ảnh miêu tả hành động đưa/nhận cuốn sách nên đáp án là Sai (×).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_06.webp"
     },
@@ -119,11 +119,11 @@
       "text": "Câu hỏi số 7",
       "answer": "√",
       "listening_script": "太累了，让我休息一下吧。",
-      "listening_pinyin": "tài lèi le ， ràng wǒ xiū xī yī xià ba 。",
-      "explanation": "Đúng (√): Lời thoại nói '太累了，让我休息一下吧。' (Tôi mệt quá, hãy để tôi nghỉ ngơi.). Hình ảnh thể hiện đúng sự vật, hành động này.",
+      "listening_pinyin": "Tài lèi le, ràng wǒ xiūxi yíxià ba.",
+      "explanation": "Trong bài nghe nói: 'tàilèi le，ràng wǒ xiūxī yīxià ba。' (Mệt quá, cho tôi nghỉ ngơi một chút). Bức ảnh thể hiện người phụ nữ nằm nghỉ trên ghế nên đáp án là Đúng (√).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_07.webp"
     },
@@ -134,13 +134,13 @@
       "question_no": 8,
       "type": "True/False",
       "text": "Câu hỏi số 8",
-      "answer": "×",
+      "answer": "√",
       "listening_script": "我喜欢唱歌。",
-      "listening_pinyin": "wǒ xǐ huān chàng gē 。",
-      "explanation": "Sai (×): Lời thoại nói '我喜欢唱歌。' (Tôi thích ca hát.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
+      "listening_pinyin": "Wǒ xǐhuan chànggē.",
+      "explanation": "Trong bài nghe nói: 'wǒ xǐhuān chànggē。' (Tôi thích hát). Bức ảnh thể hiện người phụ nữ cầm micro ca hát nên đáp án là Đúng (√).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_08.webp"
     },
@@ -153,11 +153,11 @@
       "text": "Câu hỏi số 9",
       "answer": "√",
       "listening_script": "我穿这件怎么样？",
-      "listening_pinyin": "wǒ chuān zhè jiàn zěn me yàng ？",
-      "explanation": "Đúng (√): Lời thoại nói '我穿这件怎么样？' (Làm thế nào để tôi mặc cái này?). Hình ảnh thể hiện đúng sự vật, hành động này.",
+      "listening_pinyin": "Wǒ chuān zhè jiàn zěnmeyàng?",
+      "explanation": "Trong bài nghe nói: 'wǒ chuān zhèjiàn zěnmeyàng？' (Tôi mặc bộ này thế nào?). Bức ảnh thể hiện người đàn ông ướm thử trang phục trước gương nên đáp án là Đúng (√).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_09.webp"
     },
@@ -170,11 +170,11 @@
       "text": "Câu hỏi số 10",
       "answer": "×",
       "listening_script": "他今天走着去学校。",
-      "listening_pinyin": "tā jīn tiān zǒu zhe qù xué xiào 。",
-      "explanation": "Sai (×): Lời thoại nói '他今天走着去学校。' (Hôm nay anh ấy đi bộ đến trường.). Nhưng trong hình ảnh là một sự vật hoặc hành động khác, không phải như mô tả.",
+      "listening_pinyin": "Tā jīntiān zǒuzhe qù xuéxiào.",
+      "explanation": "Trong bài nghe nói: 'tā jīntiān zǒu zhe qù xuéxiào。' (Hôm nay cậu ấy đi bộ đến trường). Nhưng bức ảnh miêu tả người đàn ông đang lái xe ô tô (kāichē) nên đáp án là Sai (×).",
       "options": [
-        "√",
-        "×"
+        "√ Đúng",
+        "× Sai"
       ],
       "image": "images/q_10.webp"
     },
@@ -185,10 +185,10 @@
       "question_no": 11,
       "type": "Single Choice",
       "text": "Câu hỏi số 11",
-      "answer": "E",
-      "listening_script": "女：别说话，儿子在睡觉呢。",
-      "listening_pinyin": "nǚ ： bié shuō huà ， ér zi zài shuì jiào ne 。",
-      "explanation": "Đáp án [E]: Lời thoại hội thoại [男：请问第11题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 1 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình E.",
+      "answer": "A",
+      "listening_script": "[女:] 别说话，儿子在睡觉呢。\n[男:] 好的，那我们去外面说。",
+      "listening_pinyin": "Bié shuōhuà, érzi zài shuìjiào ne. / Hǎo de, nà wǒmen qù wàimian shuō.",
+      "explanation": "Bài nghe nhắc đến 'érzi zài shuìjiào' (con trai đang ngủ). Trong bảng tranh A-F, bức ảnh A thể hiện em bé nằm ngủ nên đáp án là A.",
       "options": [
         "A",
         "B",
@@ -203,9 +203,9 @@
       "type": "Single Choice",
       "text": "Câu hỏi số 12",
       "answer": "F",
-      "listening_script": "男：王小姐，你的电脑没问题了吧？",
-      "listening_pinyin": "nán ： wáng xiǎo jiě ， nǐ de diàn nǎo méi wèn tí le ba ？",
-      "explanation": "Đáp án [F]: Lời thoại hội thoại [男：请问第12题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 2 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình F.",
+      "listening_script": "[男:] 王小姐，你的电脑没问题了吧？\n[女:] 已经好了，谢谢你。",
+      "listening_pinyin": "Wáng xiǎojiě, nǐ de diànnǎo méi wèntí le ba? / Yǐjīng hǎo le, xièxie nǐ.",
+      "explanation": "Bài nghe nhắc đến 'diànnǎo' (máy tính). Bức ảnh F miêu tả chiếc máy tính nên đáp án là F.",
       "options": [
         "A",
         "B",
@@ -219,10 +219,10 @@
       "question_no": 13,
       "type": "Single Choice",
       "text": "Câu hỏi số 13",
-      "answer": "A",
-      "listening_script": "女：你和你的同学坐那儿可以吗？",
-      "listening_pinyin": "nǚ ： nǐ hé nǐ de tóng xué zuò nà ér kě yǐ ma ？",
-      "explanation": "Đáp án [A]: Lời thoại hội thoại [男：请问第13题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 3 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình A.",
+      "answer": "C",
+      "listening_script": "[女:] 你和你的同学坐那儿可以吗？\n[男:] 可以，但是我们两个人，还少个椅子。",
+      "listening_pinyin": "Nǐ hé nǐ de tóngxué zuò nàr kěyǐ ma? / Kěyǐ, dànshì wǒmen liǎng ge rén, hái shǎo ge yǐzi.",
+      "explanation": "Bài nghe nhắc đến 'zuò nàér' và 'shǎogè yǐzi' (thiếu cái ghế). Bức ảnh C miêu tả bàn ghế ăn cơm nên đáp án là C.",
       "options": [
         "A",
         "B",
@@ -236,10 +236,10 @@
       "question_no": 14,
       "type": "Single Choice",
       "text": "Câu hỏi số 14",
-      "answer": "B",
-      "listening_script": "男：它跑得真快，这是你的狗吗？",
-      "listening_pinyin": "nán ： tā pǎo dé zhēn kuài ， zhè shì nǐ de gǒu ma ？",
-      "explanation": "Đáp án [B]: Lời thoại hội thoại [男：请问第14题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 4 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình B.",
+      "answer": "E",
+      "listening_script": "[男:] 它跑得真快，这是你的狗吗？\n[女:] 不是，它是我姐姐的。",
+      "listening_pinyin": "Tā pǎo de zhēn kuài, zhè shì nǐ de gǒu ma? / Bú shì, tā shì wǒ jiějie de.",
+      "explanation": "Bài nghe nhắc đến 'gǒu' (con chó). Bức ảnh E miêu tả chú chó nhỏ nên đáp án là E.",
       "options": [
         "A",
         "B",
@@ -253,10 +253,10 @@
       "question_no": 15,
       "type": "Single Choice",
       "text": "Câu hỏi số 15",
-      "answer": "C",
-      "listening_script": "女：公共汽车来了，再见。",
-      "listening_pinyin": "nǚ ： gōng gòng qì chē lái le ， zài jiàn 。",
-      "explanation": "Đáp án [C]: Lời thoại hội thoại [男：请问第15题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 5 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình C.",
+      "answer": "B",
+      "listening_script": "[女:] 公共汽车来了，再见。\n[男:] 再见，明天见。",
+      "listening_pinyin": "Gōnggòng qìchē lái le, zàijiàn. / Zàijiàn, míngtiān jiàn.",
+      "explanation": "Bài nghe nhắc đến 'gōnggòngqìchē' (xe buýt). Bức ảnh B miêu tả chiếc xe buýt công cộng nên đáp án là B.",
       "options": [
         "A",
         "B",
@@ -270,10 +270,10 @@
       "question_no": 16,
       "type": "Single Choice",
       "text": "Câu hỏi số 16",
-      "answer": "D",
-      "listening_script": "男：你看见了吗？",
-      "listening_pinyin": "nán ： nǐ kàn jiàn le ma ？",
-      "explanation": "Đáp án [D]: Lời thoại hội thoại [男：请问第16题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 6 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình D.",
+      "answer": "C",
+      "listening_script": "[男:] 你看见了吗？\n[女:] 我看见了，颜色是黑的。",
+      "listening_pinyin": "Nǐ kànjiàn le ma? / Wǒ kànjiàn le, yánsè shì hēi de.",
+      "explanation": "Bài nghe nhắc đến đồ vật màu đen 'yánsè shì hēi de'. Bức ảnh C miêu tả chiếc mắt kính đen nên đáp án là C.",
       "options": [
         "A",
         "B",
@@ -287,10 +287,10 @@
       "question_no": 17,
       "type": "Single Choice",
       "text": "Câu hỏi số 17",
-      "answer": "E",
-      "listening_script": "女：你喝红茶吗？",
-      "listening_pinyin": "nǚ ： nǐ hē hóng chá ma ？",
-      "explanation": "Đáp án [E]: Lời thoại hội thoại [男：请问第17题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 7 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình E.",
+      "answer": "B",
+      "listening_script": "[女:] 你喝红茶吗？\n[男:] 谢谢，给我来一杯。",
+      "listening_pinyin": "Nǐ hē hóngchá ma? / Xièxie, gěi wǒ lái yì bēi.",
+      "explanation": "Bài nghe nhắc đến 'hóngchá' (hồng trà). Bức ảnh B miêu tả tách trà thơm nóng nên đáp án là B.",
       "options": [
         "A",
         "B",
@@ -304,10 +304,10 @@
       "question_no": 18,
       "type": "Single Choice",
       "text": "Câu hỏi số 18",
-      "answer": "F",
-      "listening_script": "男：喂，你下来吧，我到了。",
-      "listening_pinyin": "nán ： wèi ， nǐ xià lái ba ， wǒ dào le 。",
-      "explanation": "Đáp án [F]: Lời thoại hội thoại [男：请问第18题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 8 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình F.",
+      "answer": "D",
+      "listening_script": "[男:] 喂，你下来吧，我到了。\n[女:] 好的，你等我几分钟，我这就下来。",
+      "listening_pinyin": "Wèi, nǐ xiàlai ba, wǒ dào le. / Hǎo de, nǐ děng wǒ jǐ fēnzhōng, wǒ zhè jiù xiàlai.",
+      "explanation": "Bài nghe nhắc đến 'nǐ xiàlái ba，wǒ dào le' (Xuống đây đi, tôi đến rồi). Bức ảnh D miêu tả người nghe điện thoại chờ dưới nhà nên đáp án là D.",
       "options": [
         "A",
         "B",
@@ -322,9 +322,9 @@
       "type": "Single Choice",
       "text": "Câu hỏi số 19",
       "answer": "A",
-      "listening_script": "女：我们中午吃什么？",
-      "listening_pinyin": "nǚ ： wǒ men zhōng wǔ chī shén me ？",
-      "explanation": "Đáp án [A]: Lời thoại hội thoại [男：请问第19题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 1 9 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình A.",
+      "listening_script": "[女:] 我们中午吃什么？\n[男:] 我爱吃你做的鱼，你做鱼，我做米饭。",
+      "listening_pinyin": "Wǒmen zhōngwǔ chī shénme? / Wǒ ài chī nǐ zuò de yú, nǐ zuò yú, wǒ zuò mǐfàn.",
+      "explanation": "Bài nghe nhắc đến 'zuòyú' (làm món cá). Bức ảnh A miêu tả đĩa cá thơm ngon nên đáp án là A.",
       "options": [
         "A",
         "B",
@@ -338,10 +338,10 @@
       "question_no": 20,
       "type": "Single Choice",
       "text": "Câu hỏi số 20",
-      "answer": "B",
-      "listening_script": "男：你现在在学汉语？",
-      "listening_pinyin": "nán ： nǐ xiàn zài zài xué hàn yǔ ？",
-      "explanation": "Đáp án [B]: Lời thoại hội thoại [男：请问第20题在哪里？ 女：就在前面左转。 (Nán: qǐng Wèn 第 2 0 题 zài nǎ 里? Nǚ: jiù zài qiánmiàn 左 转.)] khớp với bức hình B.",
+      "answer": "E",
+      "listening_script": "[男:] 你现在在学汉语？\n[女:] 是，你看，这是我的名字。你笑什么？",
+      "listening_pinyin": "Nǐ xiànzài zài xué Hànyǔ? / Shì, nǐ kàn, zhè shì wǒ de míngzi. Nǐ xiào shénme?",
+      "explanation": "Bài nghe nhắc đến 'zhè shì wǒ de míngzì' (đây là tên của tôi). Bức ảnh E miêu tả trang giấy viết tên chữ Hán nên đáp án là E.",
       "options": [
         "A",
         "B",
@@ -355,14 +355,14 @@
       "question_no": 21,
       "type": "Single Choice",
       "text": "Câu hỏi số 21",
-      "answer": "C",
-      "listening_script": "女：去商店了？买什么东西了？",
-      "listening_pinyin": "nǚ ： qù shāng diàn le ？ mǎi shén me dōng xī le ？",
-      "explanation": "Đáp án [C]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "answer": "A",
+      "listening_script": "[女:] 去商店了？买什么东西了？\n[男:] 买了几斤苹果，非常好吃。\n[问:] 男的买什么了？",
+      "listening_pinyin": "Qù shāngdiàn le? Mǎi shénme dōngxi le? / Mǎi le jǐ jīn píngguǒ, fēicháng hǎochī. / Wèn: Nán de mǎi shénme le?",
+      "explanation": "Trong bài nghe người nam trả lời 'mǎi le jǐjīn píngguǒ' (Mua vài cân táo) nên đáp án chính xác là A.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 苹果 (píngguǒ)",
+        "B 牛奶 (niúnǎi)",
+        "C 鸡蛋 (jīdàn)"
       ]
     },
     {
@@ -373,13 +373,13 @@
       "type": "Single Choice",
       "text": "Câu hỏi số 22",
       "answer": "A",
-      "listening_script": "男：张小姐还没来？",
-      "listening_pinyin": "nán ： zhāng xiǎo jiě hái méi lái ？",
-      "explanation": "Đáp án [A]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "listening_script": "[男:] 张小姐还没来？\n[女:] 是，她打电话说还在路上，九点前能到。\n[问:] 张小姐现在在哪儿？",
+      "listening_pinyin": "Zhāng xiǎojiě hái méi lái? / Shì, tā dǎ diànhuà shuō hái zài lù shang, jiǔ diǎn qián néng dào. / Wèn: Zhāng xiǎojiě xiànzài zài nǎr?",
+      "explanation": "Người nữ cho biết 'hái zài lùshàng' (Vẫn đang trên đường) nên đáp án chính xác là A.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 路上 (lù shang)",
+        "B 机场 (jīchǎng)",
+        "C 学校 (xuéxiào)"
       ]
     },
     {
@@ -389,14 +389,14 @@
       "question_no": 23,
       "type": "Single Choice",
       "text": "Câu hỏi số 23",
-      "answer": "B",
-      "listening_script": "女：这个问题谁会回答？",
-      "listening_pinyin": "nǚ ： zhè ge wèn tí shuí huì huí dá ？",
-      "explanation": "Đáp án [B]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "answer": "A",
+      "listening_script": "[女:] 这个问题谁会回答？\n[男:] 老师，我会。\n[问:] 他们最可能在做什么？",
+      "listening_pinyin": "Zhège wèntí shéi huì huídá? / Lǎoshī, wǒ huì. / Wèn: Tāmen zuì kěnéng zài zuò shénme?",
+      "explanation": "Người nam gọi 'lǎoshī' (thầy/cô giáo) và xung phong trả lời câu hỏi nên ngữ cảnh mấu chốt là đang 'shàngkè' (lên lớp/học bài), đáp án là A.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 上课 (shàngkè)",
+        "B 看电视 (kàn diànshì)",
+        "C 买电影票 (mǎi diànyǐngpiào)"
       ]
     },
     {
@@ -406,14 +406,14 @@
       "question_no": 24,
       "type": "Single Choice",
       "text": "Câu hỏi số 24",
-      "answer": "C",
-      "listening_script": "男：我们去吃点儿东西吧。",
-      "listening_pinyin": "nán ： wǒ men qù chī diǎn ér dōng xī ba 。",
-      "explanation": "Đáp án [C]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "answer": "B",
+      "listening_script": "[男:] 我们去吃点东西吧。\n[女:] 时间有点儿晚了，去火车站吃吧。\n[问:] 女的为什么不现在吃饭？",
+      "listening_pinyin": "Wǒmen qù chī diǎn dōngxi ba. / Shíjiān yǒudiǎnr wǎn le, qù huǒchēzhàn chī ba. / Wèn: Nǚ de wèi shénme bù xiànzài chīfàn?",
+      "explanation": "Người nữ nêu rõ lý do 'shíjiān yǒudiǎnér wǎn le' (Thời gian hơi muộn rồi) nên đáp án chính xác là B.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 吃水果了 (chī shuǐguǒ le)",
+        "B 时间晚了 (shíjiān wǎn le)",
+        "C 饭馆儿人多 (fànguǎnr rén duō)"
       ]
     },
     {
@@ -423,14 +423,14 @@
       "question_no": 25,
       "type": "Single Choice",
       "text": "Câu hỏi số 25",
-      "answer": "A",
-      "listening_script": "女：要下雨了，快点儿回家吧。",
-      "listening_pinyin": "nǚ ： yào xià yǔ le ， kuài diǎn ér huí jiā ba 。",
-      "explanation": "Đáp án [A]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "answer": "C",
+      "listening_script": "[女:] 要下雨了，快点儿回家吧。\n[男:] 没关系，我开车来的，我送你回去。\n[问:] 现在天气怎么样？",
+      "listening_pinyin": "Yào xià yǔ le, kuài diǎnr huí jiā ba. / Méi guānxi, wǒ kāichē lái de, wǒ sòng nǐ huíqù. / Wèn: Xiànzài tiānqì zěnmeyàng?",
+      "explanation": "Lời thoại mở đầu nêu rõ 'yào xiàyǔ le' (Trời sắp mưa rồi) đồng nghĩa với 'kuài xiàyǔ le', đáp án chính xác là C.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 是晴天 (shì qíngtiān)",
+        "B 下雪了 (xià xuě le)",
+        "C 快下雨了 (kuài xià yǔ le)"
       ]
     },
     {
@@ -440,14 +440,14 @@
       "question_no": 26,
       "type": "Single Choice",
       "text": "Câu hỏi số 26",
-      "answer": "B",
-      "listening_script": "男：你今天晚上吃药了没有？",
-      "listening_pinyin": "nán ： nǐ jīn tiān wǎn shàng chī yào le méi yǒu ？",
-      "explanation": "Đáp án [B]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "answer": "C",
+      "listening_script": "[男:] 你今天晚上吃药了没有？\n[女:] 没呢，医生说睡觉前一小时再吃。\n[问:] 女的什么时候吃药？",
+      "listening_pinyin": "Nǐ jīntiān wǎnshang chī yào le méiyǒu? / Méi ne, yīshēng shuō shuìjiào qián yì xiǎoshí zài chī. / Wèn: Nǚ de shénme shíhou chī yào?",
+      "explanation": "Người nữ trả lời theo lời dặn bác sĩ 'shuìjiào qián yī xiǎoshí zài chī' (Trước khi ngủ 1 tiếng mới uống) nên đáp án chính xác là C.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 早上 (zǎoshang)",
+        "B 下午 (xiàwǔ)",
+        "C 睡觉前 (shuìjiào qián)"
       ]
     },
     {
@@ -457,14 +457,14 @@
       "question_no": 27,
       "type": "Single Choice",
       "text": "Câu hỏi số 27",
-      "answer": "C",
-      "listening_script": "女：你妹妹快考试了吧？",
-      "listening_pinyin": "nǚ ： nǐ mèi mèi kuài kǎo shì le ba ？",
-      "explanation": "Đáp án [C]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "answer": "A",
+      "listening_script": "[女:] 你妹妹快考试了吧？\n[男:] 已经考完了，她昨天就考完了。\n[问:] 昨天谁考试了？",
+      "listening_pinyin": "Nǐ mèimei kuài kǎoshì le ba? / Yǐjīng kǎo wán le, tā zuótiān jiù kǎo wán le. / Wèn: Zuótiān shéi kǎoshì le?",
+      "explanation": "Người nam nói 'mèimèi yǐjīng kǎowán le，tā zuótiān jiù kǎowán le' (Em gái đã thi xong, em ấy thi xong từ hôm qua) nên đáp án chính xác là A.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 妹妹 (mèimei)",
+        "B 弟弟 (dìdi)",
+        "C 哥哥 (gēge)"
       ]
     },
     {
@@ -474,14 +474,14 @@
       "question_no": 28,
       "type": "Single Choice",
       "text": "Câu hỏi số 28",
-      "answer": "A",
-      "listening_script": "男：你好，这块儿手表多少钱？",
-      "listening_pinyin": "nán ： nǐ hǎo ， zhè kuài ér shǒu biǎo duō shǎo qián ？",
-      "explanation": "Đáp án [A]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "answer": "C",
+      "listening_script": "[男:] 你好，这块儿手表多少钱？\n[女:] 对不起，我也来买东西的。\n[问:] 男的怎么了？",
+      "listening_pinyin": "Nǐ hǎo, zhè kuàir shǒubiǎo duōshao qián? / Duìbuqǐ, wǒ yě lái mǎi dōngxi de. / Wèn: Nán de zěnmeyàng le?",
+      "explanation": "Người nam hỏi giá mua hàng nhưng người nữ trả lời cô ấy cũng là khách mua hàng, chứng tỏ người nam đã nhận nhầm người ('rèncuò rén le'), đáp án chính xác là C.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 生病了 (shēngbìng le)",
+        "B 听不懂 (tīng bù dǒng)",
+        "C 认错人了 (rèncuò rén le)"
       ]
     },
     {
@@ -492,13 +492,13 @@
       "type": "Single Choice",
       "text": "Câu hỏi số 29",
       "answer": "B",
-      "listening_script": "女：我明天上午去公司找你，你有时间吗？",
-      "listening_pinyin": "nǚ ： wǒ míng tiān shàng wǔ qù gōng sī zhǎo nǐ ， nǐ yǒu shí jiān ma ？",
-      "explanation": "Đáp án [B]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "listening_script": "[女:] 我明天上午去公司找你，你有时间吗？\n[男:] 可以，没问题，我在六零四。\n[问:] 男的在哪个房间？",
+      "listening_pinyin": "Wǒ míngtiān shàngwǔ qù gōngsī zhǎo nǐ, nǐ yǒu shíjiān ma? / Kěyǐ, méi wèntí, wǒ zài liù líng sì. / Wèn: Nán de zài nǎge fángjiān?",
+      "explanation": "Người nam đọc số phòng 'liùlíng sì' (604) nên đáp án chính xác là B.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 406",
+        "B 604",
+        "C 606"
       ]
     },
     {
@@ -508,14 +508,14 @@
       "question_no": 30,
       "type": "Single Choice",
       "text": "Câu hỏi số 30",
-      "answer": "C",
-      "listening_script": "男：你准备什么时候去中国旅游？",
-      "listening_pinyin": "nán ： nǐ zhǔn bèi shén me shí hòu qù zhōng guó lǚ yóu ？",
-      "explanation": "Đáp án [C]: Dựa vào bài nghe [女：明天我们一起去跑步吧？ 男：好的，没问题。 问：他们明天去做什么？ (Nǚ: míngtiān wǒ men yìqǐ qù pǎobù ba? Nán: hǎo de, méi wèntí. Wèn: tā men míngtiān qù zuò shén me?)] để chọn đáp án chính xác.",
+      "answer": "B",
+      "listening_script": "[男:] 你准备什么时候去中国旅游？\n[女:] 可能是下个星期四。\n[问:] 女的准备去中国做什么？",
+      "listening_pinyin": "Nǐ zhǔnbèi shénme shíhou qù Zhōngguó lǚyóu? / Kěnéng shì xià ge xīngqīsì. / Wèn: Nǚ de zhǔnbèi qù Zhōngguó zuò shénme?",
+      "explanation": "Câu hỏi hỏi mục đích đi Trung Quốc, bài nghe nêu rõ đi 'lǚyóu' (Du lịch) nên đáp án chính xác là B.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 学习 (xuéxí)",
+        "B 旅游 (lǚyóu)",
+        "C 工作 (gōngzuò)"
       ]
     },
     {
@@ -526,13 +526,13 @@
       "type": "Single Choice",
       "text": "Câu hỏi số 31",
       "answer": "A",
-      "listening_script": "A",
-      "listening_pinyin": "A",
-      "explanation": "Đáp án [A]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
+      "listening_script": "[男:] 请进，欢迎大家来我家玩儿。\n[女:] 谢谢，您的新家真大。\n[男:] 请坐，你们 headquarters 都是第一次来？\n[女:] 是的，我们都没来过。\n[问:] 他的新家怎么样？",
+      "listening_pinyin": "Qǐng jìn, huānyíng dàjiā lái wǒ jiā wánr. / Xièxie, nín de xīn jiā zhēn dà. / Qǐng zuò, nǐmen dōu shì dì-yī cì lái? / Shì de, wǒmen dōu méi lái guo. / Wèn: Tā de xīn jiā zěnmeyàng?",
+      "explanation": "Người nữ khen 'nín de xīnjiā zhēndà' (Nhà mới của bác to thật đấy) nên đáp án chính xác là A.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 很大 (hěn dà)",
+        "B 很小 (hěn xiǎo)",
+        "C 很远 (hěn yuǎn)"
       ]
     },
     {
@@ -542,14 +542,14 @@
       "question_no": 32,
       "type": "Single Choice",
       "text": "Câu hỏi số 32",
-      "answer": "B",
-      "listening_script": "女：下午你没什么事情吧？",
-      "listening_pinyin": "nǚ ： xià wǔ nǐ méi shén me shì qíng ba ？",
-      "explanation": "Đáp án [B]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
+      "answer": "C",
+      "listening_script": "[女:] 下午你没什么事情吧？\n[男:] 没什么事，我就在教室里看看书。\n[女:] 一起去踢足球怎么样？\n[男:] 女生也爱踢足球？好，还有谁？\n[问:] 他们准备下午做什么？",
+      "listening_pinyin": "Xiàwǔ nǐ méi shénme shìqing ba? / Méi shénme shì, wǒ jiù zài jiàoshì lǐ kànkan shū. / Yìqǐ qù tī zúqiú zěnmeyàng? / Nǚshēng yě ài tī zúqiú? Hǎo, hái yǒu shéi? / Wèn: Tāmen zhǔnbèi xiàwǔ zuò shénme?",
+      "explanation": "Người nữ rủ 'yìqǐ qù tīzúqiú zěnmeyàng？' và người nam đồng ý nên đáp án chính xác là C.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 跳舞 (tiàowǔ)",
+        "B 读书 (dú shū)",
+        "C 踢足球 (tī zúqiú)"
       ]
     },
     {
@@ -559,14 +559,14 @@
       "question_no": 33,
       "type": "Single Choice",
       "text": "Câu hỏi số 33",
-      "answer": "C",
-      "listening_script": "男：你好，请问白先生在吗？",
-      "listening_pinyin": "nán ： nǐ hǎo ， qǐng wèn bái xiān shēng zài ma ？",
-      "explanation": "Đáp án [C]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
+      "answer": "B",
+      "listening_script": "[男:] 你好，请问白先生在吗？\n[女:] 他去学校了，您打他手机吧。\n[男:] 好的，谢谢你。\n[女:] 不客气，再见。\n[问:] 男的想找谁？",
+      "listening_pinyin": "Nǐ hǎo, qǐng wèn Bái xiānsheng zài ma? / Tā qù xuéxiào le, nín dǎ tā shǒujī ba. / Hǎo de, xièxie nǐ. / Nǚ: Bú kèqi, zàijiàn. / Wèn: Nán de xiǎng zhǎo shéi?",
+      "explanation": "Lời thoại đầu tiên người nam hỏi rõ 'qǐngwèn bái xiānshēng zài ma？' (Cho hỏi ông Bạch có ở đây không?) nên đáp án chính xác là B.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 妻子 (qīzi)",
+        "B 白先生 (Bái xiānsheng)",
+        "C 服务员 (fúwùyuán)"
       ]
     },
     {
@@ -576,14 +576,14 @@
       "question_no": 34,
       "type": "Single Choice",
       "text": "Câu hỏi số 34",
-      "answer": "A",
-      "listening_script": "女：你好，羊肉多少钱一斤？",
-      "listening_pinyin": "nǚ ： nǐ hǎo ， yáng ròu duō shǎo qián yī jīn ？",
-      "explanation": "Đáp án [A]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
+      "answer": "B",
+      "listening_script": "[女:] 你好，羊肉多少钱一斤？\n[男:] 十二块。\n[女:] 我买一百斤，能便宜些吗？\n[男:] 那您给我一千吧。\n[问:] 男的要多少钱？",
+      "listening_pinyin": "Nǐ hǎo, yángròu duōshao qián yì jīn? / Shí'èr kuài. / Wǒ mǎi yìbǎi jīn, néng piányi xiē ma? / Nà nín gěi wǒ yìqiān ba. / Wèn: Nán de yào duōshao qián?",
+      "explanation": "Bảng đáp án chính thức quy định đáp án cho câu 34 là B (1100yuán).",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 1000 元 (yìqiān yuán)",
+        "B 1100 元 (yìqiān yìbǎi yuán)",
+        "C 1200 元 (yìqiān èrbǎi yuán)"
       ]
     },
     {
@@ -593,14 +593,14 @@
       "question_no": 35,
       "type": "Single Choice",
       "text": "Câu hỏi số 35",
-      "answer": "B",
-      "listening_script": "男：你明天怎么去机场？",
-      "listening_pinyin": "nán ： nǐ míng tiān zěn me qù jī chǎng ？",
-      "explanation": "Đáp án [B]: Dựa vào bài nghe [男：今天的牛奶真新鲜。 女：是的，我早上刚刚在商店买的。 问：牛奶是什么时候买的？ (Nán: jīntiān de niúnǎi zhēn xīn 鲜. Nǚ: shì de, wǒ zǎoshang 刚 刚 zài shāngdiàn mǎi de. Wèn: niúnǎi shì shén me 时 候 mǎi de?)] để chọn đáp án chính xác.",
+      "answer": "C",
+      "listening_script": "[男:] 你明天怎么去机场？\n[女:] 我打出租车就行，你不要送了。\n[男:] 好吧，你哪天回来？\n[女:] 十八号我就回来了。\n[问:] 女的明天怎么去机场？",
+      "listening_pinyin": "Nǐ míngtiān zěnme qù jīchǎng? / Wǒ dǎ chūzūchē jiù xíng, nǐ bú yào sòng le. / Hǎo ba, nǐ nǎ tiān huílai? / Shíbā hào wǒ jiù huílai le. / Wèn: Nǚ de míngtiān zěnme qù jīchǎng?",
+      "explanation": "Người nữ trả lời 'wǒ dǎ chūzūchē jiùxíng' (Tôi đi xe taxi là được rồi) nên đáp án chính xác là C.",
       "options": [
-        "A",
-        "B",
-        "C"
+        "A 开车 (kāi chē)",
+        "B 坐船 (zuò chuán)",
+        "C 坐出租车 (zuò chūzūchē)"
       ]
     },
     {
@@ -615,9 +615,17 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_36.webp",
       "board_image": "images/H21009_board_36_40.webp",
-      "explanation": "Câu 36 miêu tả nội dung '前面还可以，后面有点儿长。'. Bức ảnh C thể hiện chính xác ngữ cảnh này nên đáp án là C.",
+      "explanation": "Cắt tóc (mái tóc phía sau hơi dài) ghép với tranh C cô gái cắt tóc.",
       "listening_pinyin": null,
-      "pinyin": "Qiánmiàn hái kěyǐ, hòumiàn yǒudiǎnr cháng."
+      "pinyin": "Qiánmiàn hái kěyǐ, hòumiàn yǒu diǎnr cháng.",
+      "options": [
+        "A: Chàng trai nhảy hiphop nhào lộn",
+        "B: Mấy chiếc áo phơi trên dây",
+        "C: Cô gái cắt tóc trước gương",
+        "D: Chàng trai cầm bóng rổ chuẩn bị ném",
+        "E: Người phụ nữ chọn mua rau củ",
+        "F: Cô gái chống cằm suy nghĩ"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -631,9 +639,17 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_37.webp",
       "board_image": "images/H21009_board_36_40.webp",
-      "explanation": "Câu 37 miêu tả nội dung '你来吧，这里的菜还不错。'. Bức ảnh E thể hiện chính xác ngữ cảnh này nên đáp án là E.",
+      "explanation": "Chọn mua rau củ tươi ghép với tranh E người phụ nữ mua rau.",
       "listening_pinyin": null,
-      "pinyin": "Nǐ lái ba, zhèlǐ de cài hái bú cuò."
+      "pinyin": "Nǐ lái ba, zhèlǐ de cài hái búcuò.",
+      "options": [
+        "A: Chàng trai nhảy hiphop nhào lộn",
+        "B: Mấy chiếc áo phơi trên dây",
+        "C: Cô gái cắt tóc trước gương",
+        "D: Chàng trai cầm bóng rổ chuẩn bị ném",
+        "E: Người phụ nữ chọn mua rau củ",
+        "F: Cô gái chống cằm suy nghĩ"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -647,9 +663,17 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_38.webp",
       "board_image": "images/H21009_board_36_40.webp",
-      "explanation": "Câu 38 miêu tả nội dung '我想想，这个题是什么意思呢？'. Bức ảnh F thể hiện chính xác ngữ cảnh này nên đáp án là F.",
+      "explanation": "Suy nghĩ bài tập ghép với tranh F cô gái chống cằm suy nghĩ.",
       "listening_pinyin": null,
-      "pinyin": "Wǒ xiǎngxiāng, zhège tí shì shénme yìsi ne?"
+      "pinyin": "Wǒ xiǎngxiang, zhège tí shì shénme yìsi ne?",
+      "options": [
+        "A: Chàng trai nhảy hiphop nhào lộn",
+        "B: Mấy chiếc áo phơi trên dây",
+        "C: Cô gái cắt tóc trước gương",
+        "D: Chàng trai cầm bóng rổ chuẩn bị ném",
+        "E: Người phụ nữ chọn mua rau củ",
+        "F: Cô gái chống cằm suy nghĩ"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -663,9 +687,17 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_39.webp",
       "board_image": "images/H21009_board_36_40.webp",
-      "explanation": "Câu 39 miêu tả nội dung '妈，那几件衣服是你洗的吗？'. Bức ảnh B thể hiện chính xác ngữ cảnh này nên đáp án là B.",
+      "explanation": "Mấy chiếc áo giặt phơi trên dây ghép với tranh B.",
       "listening_pinyin": null,
-      "pinyin": "Mā, nà jǐ jiàn yīfu shì nǐ xǐ de ma?"
+      "pinyin": "Mā, nà jǐ jiàn yīfu shì nǐ xǐ de ma?",
+      "options": [
+        "A: Chàng trai nhảy hiphop nhào lộn",
+        "B: Mấy chiếc áo phơi trên dây",
+        "C: Cô gái cắt tóc trước gương",
+        "D: Chàng trai cầm bóng rổ chuẩn bị ném",
+        "E: Người phụ nữ chọn mua rau củ",
+        "F: Cô gái chống cằm suy nghĩ"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -679,9 +711,17 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_40.webp",
       "board_image": "images/H21009_board_36_40.webp",
-      "explanation": "Câu 40 miêu tả nội dung '这是我的学生，他爱跳舞。'. Bức ảnh A thể hiện chính xác ngữ cảnh này nên đáp án là A.",
+      "explanation": "Học sinh thích nhảy múa ghép với tranh A chàng trai nhảy hiphop nhào lộn.",
       "listening_pinyin": null,
-      "pinyin": "Zhè shì wǒ de xuésheng, tā ài tiàowǔ."
+      "pinyin": "Zhè shì wǒ de xuésheng, tā ài tiàowǔ.",
+      "options": [
+        "A: Chàng trai nhảy hiphop nhào lộn",
+        "B: Mấy chiếc áo phơi trên dây",
+        "C: Cô gái cắt tóc trước gương",
+        "D: Chàng trai cầm bóng rổ chuẩn bị ném",
+        "E: Người phụ nữ chọn mua rau củ",
+        "F: Cô gái chống cằm suy nghĩ"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -690,20 +730,20 @@
       "question_no": 41,
       "image": null,
       "type": "Fill in Blank",
-      "text": "现在是北京（ ）17 点。",
+      "text": "现在是北京（ ）17点。",
       "answer": "C",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_41.webp",
       "options": [
-        "A 告诉 (gàosu)",
-        "B 卖 (mài)",
-        "C 时间 (shíjiān)",
-        "D 右 (yòu)",
-        "E 贵 (guì)",
-        "F 眼睛 (yǎnjing)"
+        "A: 告诉 (gàosu)",
+        "B: 卖 (mài)",
+        "C: 时间 (shíjiān)",
+        "D: 右 (yòu)",
+        "E: 贵 (guì)",
+        "F: 眼睛 (yǎnjing)"
       ],
       "board_image": null,
-      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '现在是北京（ ）17 点。', từ thích hợp điền vào chỗ trống là C (A 告诉(gàosu) B 卖(mài) C 时间(shíjiān) D 右(yòu) E 贵(guì) F 眼睛(yǎnjing)).",
+      "explanation": "Điền 'shíjiān' (thời gian): xiànzài shì běijīng shíjiān17diǎn (Bây giờ là 17 giờ theo giờ Bắc Kinh).",
       "listening_pinyin": null,
       "pinyin": "Xiànzài shì Běijīng ( ) 17 diǎn."
     },
@@ -719,15 +759,15 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_42.webp",
       "options": [
-        "A 告诉 (gàosu)",
-        "B 卖 (mài)",
-        "C 时间 (shíjiān)",
-        "D 右 (yòu)",
-        "E 贵 (guì)",
-        "F 眼睛 (yǎnjing)"
+        "A: 告诉 (gàosu)",
+        "B: 卖 (mài)",
+        "C: 时间 (shíjiān)",
+        "D: 右 (yòu)",
+        "E: 贵 (guì)",
+        "F: 眼睛 (yǎnjing)"
       ],
       "board_image": null,
-      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '请问，您知道哪儿（ ）报纸吗？', từ thích hợp điền vào chỗ trống là B (A 告诉(gàosu) B 卖(mài) C 时间(shíjiān) D 右(yòu) E 贵(guì) F 眼睛(yǎnjing)).",
+      "explanation": "Điền 'mài' (bán): nín zhīdào nǎér mài bàozhǐ ma (Bạn có biết ở đâu bán báo không).",
       "listening_pinyin": null,
       "pinyin": "Qǐng wèn, nín zhīdào nǎr ( ) bàozhǐ ma?"
     },
@@ -743,15 +783,15 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_43.webp",
       "options": [
-        "A 告诉 (gàosu)",
-        "B 卖 (mài)",
-        "C 时间 (shíjiān)",
-        "D 右 (yòu)",
-        "E 贵 (guì)",
-        "F 眼睛 (yǎnjing)"
+        "A: 告诉 (gàosu)",
+        "B: 卖 (mài)",
+        "C: 时间 (shíjiān)",
+        "D: 右 (yòu)",
+        "E: 贵 (guì)",
+        "F: 眼睛 (yǎnjing)"
       ],
       "board_image": null,
-      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '看书的时候，（ ）别离得太近。', từ thích hợp điền vào chỗ trống là F (A 告诉(gàosu) B 卖(mài) C 时间(shíjiān) D 右(yòu) E 贵(guì) F 眼睛(yǎnjing)).",
+      "explanation": "Điền 'yǎnjīng' (mắt): kànshū de shíhòu，yǎnjīng biélí détàijìn (Khi đọc sách, mắt đừng để quá gần).",
       "listening_pinyin": null,
       "pinyin": "Kàn shū de shíhou, ( ) bié lí de tài jìn."
     },
@@ -767,17 +807,17 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_44.webp",
       "options": [
-        "A 告诉 (gàosu)",
-        "B 卖 (mài)",
-        "C 时间 (shíjiān)",
-        "D 右 (yòu)",
-        "E 贵 (guì)",
-        "F 眼睛 (yǎnjing)"
+        "A: 告诉 (gàosu)",
+        "B: 卖 (mài)",
+        "C: 时间 (shíjiān)",
+        "D: 右 (yòu)",
+        "E: 贵 (guì)",
+        "F: 眼睛 (yǎnjing)"
       ],
       "board_image": null,
-      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '你看这儿，向左是热水，向（ ）是冷水。', từ thích hợp điền vào chỗ trống là D (A 告诉(gàosu) B 卖(mài) C 时间(shíjiān) D 右(yòu) E 贵(guì) F 眼睛(yǎnjing)).",
+      "explanation": "Điền 'yòu' (bên phải) đối lập với 'zuǒ' (bên trái): xiàng yòu shì lěngshuǐ (Rẽ phải là nước lạnh).",
       "listening_pinyin": null,
-      "pinyin": "Nǐ kàn zhèr, xiàng zuǒ shì rè shuǐ, xiàng ( ) shì lěng shuǐ."
+      "pinyin": "Nǐ kàn zhèr, xiàng zuǒ shì rèshuǐ, xiàng ( ) shì lěngshuǐ."
     },
     {
       "exam_code": "H21009",
@@ -786,22 +826,22 @@
       "question_no": 45,
       "image": null,
       "type": "Fill in Blank",
-      "text": "女：今天是你的生日，生日快乐！谢谢，是谁（ ）你的？男：是妈妈。",
+      "text": "女：今天是你的生日，生日快乐！\n男：谢谢，是谁（ ）你的？",
       "answer": "A",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_45.webp",
       "options": [
-        "A 告诉 (gàosu)",
-        "B 卖 (mài)",
-        "C 时间 (shíjiān)",
-        "D 右 (yòu)",
-        "E 贵 (guì)",
-        "F 眼睛 (yǎnjing)"
+        "A: 告诉 (gàosu)",
+        "B: 卖 (mài)",
+        "C: 时间 (shíjiān)",
+        "D: 右 (yòu)",
+        "E: 贵 (guì)",
+        "F: 眼睛 (yǎnjing)"
       ],
       "board_image": null,
-      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '女：今天是你的生日，生日快乐！谢谢，是谁（ ）你的？男：是妈妈。', từ thích hợp điền vào chỗ trống là A (A 告诉(gàosu) B 卖(mài) C 时间(shíjiān) D 右(yòu) E 贵(guì) F 眼睛(yǎnjing)).",
+      "explanation": "Điền 'gàosù' (mách/nói cho biết): shì shuí gàosù nǐ de (Là ai nói cho bạn biết thế).",
       "listening_pinyin": null,
-      "pinyin": "Nǚ: Jīntiān shì nǐ de shēngrì, shēngrì kuàilè! Xièxie, shì shéi ( ) nǐ de? Nán: Shì māma."
+      "pinyin": "Nǚ: Jīntiān shì nǐ de shēngrì, shēngrì kuàilè!\nNán: Xièxie, shì shéi ( ) nǐ de?"
     },
     {
       "exam_code": "H21009",
@@ -810,14 +850,19 @@
       "question_no": 46,
       "image": null,
       "type": "True/False",
-      "text": "因为他就住在公司旁边，每天走路上班，所以没买自行车。 ★ 他要买自行车。",
+      "text": "因为他就住在公司旁边，每天走路上班，所以没买自行车。\n★ 他要买自行车。",
       "answer": "×",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_46.webp",
       "board_image": null,
-      "explanation": "Đoạn văn đưa ra thông tin '因为他就住在公司旁边，每天走路上班，所以没买自行车。 ★ 他要买自行车。'. Nhận định mâu thuẫn hoặc không chính xác so với bài đọc nên đáp án là Sai (×).",
+      "explanation": "Đoạn văn ghi rõ 'méimǎi zìxíngchē' (không mua xe đạp) nên câu nhận định 'tā yào mǎi zìxíngchē' (Anh ấy muốn mua xe đạp) là Sai (×).",
       "listening_pinyin": null,
-      "pinyin": "Yīnwei tā jiù zhù zài gōngsī pángbiān, měi tiān zǒulù shàngbān, suǒyǐ méi mǎi zìxíngchē. ★ Tā yào mǎi zìxíngchē."
+      "pinyin": "Yīnwèi tā jiù zhù zài gōngsī pángbiān, měi tiān zǒulù shàngbān, suǒyǐ méi mǎi zìxíngchē.\n★ Tā yào mǎi zìxíngchē.",
+      "statement_pinyin": "tā yào mǎi zìxíngchē.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -826,14 +871,19 @@
       "question_no": 47,
       "image": null,
       "type": "True/False",
-      "text": "不知道小高有没有女朋友。我认识一个女孩子，25岁，很漂亮，在医院上班。 ★ 他想给小高介绍女朋友。",
+      "text": "不知道小高有没有女朋友。我认识一个女孩子，25岁，很漂亮，在医院上班。\n★ 他想给小高介绍女朋友。",
       "answer": "√",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_47.webp",
       "board_image": null,
-      "explanation": "Đoạn văn đưa ra thông tin '不知道小高有没有女朋友。我认识一个女孩子，25岁，很漂亮，在医院上班。 ★ 他想给小高介绍女朋友。'. Nhận định khẳng định hoàn toàn phù hợp với nội dung bài đọc nên đáp án là Đúng (√).",
+      "explanation": "Đoạn văn muốn tìm bạn gái cho Tiểu Cao nên nhận định 'tā xiǎng gěi xiǎogāo jièshào nǚpéngyǒu' là Đúng (√).",
       "listening_pinyin": null,
-      "pinyin": "Bù zhīdào Xiǎo Gāo yǒu méiyǒu nǚpéngyou. Wǒ rènshi yí ge nǚháizi, 25 suì, hěn piàoliang, zài yīyuàn shàngbān. ★ Tā xiǎng gěi Xiǎo Gāo jièshào nǚpéngyou."
+      "pinyin": "Bù zhīdào Xiǎo Gāo yǒu méiyǒu nǚpéngyou. Wǒ rènshi yí ge nǚháizi, 25 suì, hěn piàoliang, zài yīyuàn shàngbān.\n★ Tā xiǎng gěi Xiǎo Gāo jièshào nǚpéngyou.",
+      "statement_pinyin": "tā xiǎng gěi xiǎogāo jièshào nǚpéngyǒu.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -842,14 +892,19 @@
       "question_no": 48,
       "image": null,
       "type": "True/False",
-      "text": "上星期四，我丈夫在你们这儿买了张桌子，但是到今天还没送来，我想问问是怎么了？ ★ 桌子已经送到了。",
+      "text": "上星期四，我丈夫在你们这儿买了张桌子，但是到今天还没送来，我想问问是怎么了？\n★ 桌子已经送来了。",
       "answer": "×",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_48.webp",
       "board_image": null,
-      "explanation": "Đoạn văn đưa ra thông tin '上星期四，我丈夫在你们这儿买了张桌子，但是到今天还没送来，我想问问是怎么了？ ★ 桌子已经送到了。'. Nhận định mâu thuẫn hoặc không chính xác so với bài đọc nên đáp án là Sai (×).",
+      "explanation": "Đoạn văn ghi 'dào jīntiān hái méi sònglái' (Đến hôm nay vẫn chưa giao tới) nên nhận định 'zhuōzi yǐjīng sònglái le' (Bàn đã giao tới rồi) là Sai (×).",
       "listening_pinyin": null,
-      "pinyin": "Shàng xīngqīsì, wǒ zhàngfu zài nǐmen zhèr mǎile zhāng zhuōzi, dànshì dào jīntiān hái méi sònglái, wǒ xiǎng wènwen shì zěnme le? ★ Zhuōzi yǐjīng sòng dào le."
+      "pinyin": "Shàng xīngqīsì, wǒ zhàngfu zài nǐmen zhèr mǎi le zhāng zhuōzi, dànshì dào jīntiān hái méi sònglái, wǒ xiǎng wènwen shì zěnme le?\n★ Zhuōzi yǐjīng sònglái le.",
+      "statement_pinyin": "zhuōzi yǐjīng sònglái le.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -858,14 +913,19 @@
       "question_no": 49,
       "image": null,
       "type": "True/False",
-      "text": "昨天考试过后，他今天高兴得跳了起来。 ★ 他今天很高兴。",
+      "text": "从今年3月开始，我每个星期都去跑步，每次跑一个小时，我觉得身体比去年好多了。\n★ 跑步对他的身体有帮助。",
       "answer": "√",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_49.webp",
       "board_image": null,
-      "explanation": "Đoạn văn đưa ra thông tin '昨天考试过后，他今天高兴得跳了起来。 ★ 他今天很高兴。'. Nhận định khẳng định hoàn toàn phù hợp với nội dung bài đọc nên đáp án là Đúng (√).",
+      "explanation": "Đoạn văn ghi 'shēntǐ bǐ qùnián hǎoduō le' (Sức khỏe tốt hơn năm ngoái nhiều) nên nhận định 'pǎobù duì tā de shēntǐ yǒu bāngzhù' (Chạy bộ có ích cho sức khỏe của anh ấy) là Đúng (√).",
       "listening_pinyin": null,
-      "pinyin": "Zuótiān kǎoshì guòhòu, tā jīntiān gāoxìng de tiào le qǐlai. ★ Tā jīntiān hěn gāoxìng."
+      "pinyin": "Cóng jīnnián 3 yuè kāishǐ, wǒ měi ge xīngqī dōu qù pǎobù, měi cì pǎo yí ge xiǎoshí, wǒ juéde shēntǐ bǐ qùnián hǎo duō le.\n★ Pǎobù duì tā de shēntǐ yǒu bāngzhù.",
+      "statement_pinyin": "pǎobù duì tā de shēntǐ yǒu bāngzhù.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -874,14 +934,19 @@
       "question_no": 50,
       "image": null,
       "type": "True/False",
-      "text": "昨天买了个手表，今天不知道放在哪儿了，看来我真的老了。 ★ 他的手表找到了。",
+      "text": "这两天儿子早上很早就出门，晚上回来还要写东西，真希望他不那么忙。\n★ 她希望儿子别太忙。",
       "answer": "√",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_50.webp",
       "board_image": null,
-      "explanation": "Đoạn văn đưa ra thông tin '昨天买了个手表，今天不知道放在哪儿了，看来我真的老了。 ★ 他的手表找到了。'. Nhận định khẳng định hoàn toàn phù hợp với nội dung bài đọc nên đáp án là Đúng (√).",
+      "explanation": "Đoạn văn ghi 'zhēn xīwàng tā bù nàme máng' (Thật hy vọng nó không bận rộn như thế) trùng khớp với nhận định 'tā xīwàng érzi biétàimáng' nên là Đúng (√).",
       "listening_pinyin": null,
-      "pinyin": "Zuótiān mǎile ge shǒubǐaò, jīntiān jiù bù zhǐdào fàng zài nǎr le, kànlái wǒ zhēn de lǎo le. ★ Tā de shǒubǐaò zhǎodào le."
+      "pinyin": "Zhè liǎng tiān érzi zǎoshang hěn zǎo jiù chū mén, wǎnshang huílai hái yào xiě dōngxi, zhēn xīwàng tā bù nàme máng.\n★ Tā xīwàng érzi bié tài máng.",
+      "statement_pinyin": "tā xīwàng érzi biétàimáng.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
     },
     {
       "exam_code": "H21009",
@@ -895,15 +960,15 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_51.webp",
       "options": [
-        "A 好，现在开始。",
-        "B 没关系，再游10分钟就休息。",
-        "C 我已经帮你打电话问了，不可以。",
-        "D 和朋友们在一起，我非常高兴。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 她姓白，就是“白色”的白，叫白云。"
+        "A: 好，现在开始。",
+        "B: 没关系，再游10分钟就休息。",
+        "C: 我已经帮你打电话问了，不可以。",
+        "D: 和朋友们在一起，我非常高兴。",
+        "E: 他在哪儿呢？看见他了吗？",
+        "F: 她姓白，就是“白色”的白，叫白云。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '欢迎你们下次再来。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là D.",
+      "explanation": "Chào mừng đáp lời vui vẻ khi ở bên bạn bè (hé péngyǒu men zài yìqǐ，wǒ fēichánggāoxìng).",
       "listening_pinyin": null,
       "pinyin": "Huānyíng nǐmen xià cì zài lái."
     },
@@ -919,17 +984,17 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_52.webp",
       "options": [
-        "A 好，现在开始。",
-        "B 没关系，再游10分钟就休息。",
-        "C 我已经帮你打电话问了，不可以。",
-        "D 和朋友们在一起，我非常高兴。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 她姓白，就是“白色”的白，叫白云。"
+        "A: 好，现在开始。",
+        "B: 没关系，再游10分钟就休息。",
+        "C: 我已经帮你打电话问了，不可以。",
+        "D: 和朋友们在一起，我非常高兴。",
+        "E: 他在哪儿呢？看见他了吗？",
+        "F: 她姓白，就是“白色”的白，叫白云。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '不知道我的猫能不能上飞机。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là C.",
+      "explanation": "Hỏi mèo lên máy bay được không ghép với câu trả lời đã gọi điện hỏi giúp (wǒ yǐjīng bāng nǐ dǎdiànhuà wèn le，bù kěyǐ).",
       "listening_pinyin": null,
-      "pinyin": "Bù zhīdào wǒ de māo néngbunéng shàng fēijī."
+      "pinyin": "Bù zhīdào wǒ de māo néng bunéng shàng fēijī."
     },
     {
       "exam_code": "H21009",
@@ -943,15 +1008,15 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_53.webp",
       "options": [
-        "A 好，现在开始。",
-        "B 没关系，再游10分钟就休息。",
-        "C 我已经帮你打电话问了，不可以。",
-        "D 和朋友们在一起，我非常高兴。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 她姓白，就是“白色”的白，叫白云。"
+        "A: 好，现在开始。",
+        "B: 没关系，再游10分钟就休息。",
+        "C: 我已经帮你打电话问了，不可以。",
+        "D: 和朋友们在一起，我非常高兴。",
+        "E: 他在哪儿呢？看见他了吗？",
+        "F: 她姓白，就是“白色”的白，叫白云。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '很长时间没运动了，你慢一点儿。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là B.",
+      "explanation": "Bảo bơi chậm/nhắc vận động ghép với (méiguānxì，zàiyóu10fēnzhōng jiù xiūxī).",
       "listening_pinyin": null,
       "pinyin": "Hěn cháng shíjiān méi yùndòng le, nǐ màn yìdiǎnr."
     },
@@ -967,15 +1032,15 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_54.webp",
       "options": [
-        "A 好，现在开始。",
-        "B 没关系，再游10分钟就休息。",
-        "C 我已经帮你打电话问了，不可以。",
-        "D 和朋友们在一起，我非常高兴。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 她姓白，就是“白色”的白，叫白云。"
+        "A: 好，现在开始。",
+        "B: 没关系，再游10分钟就休息。",
+        "C: 我已经帮你打电话问了，不可以。",
+        "D: 和朋友们在一起，我非常高兴。",
+        "E: 他在哪儿呢？看见他了吗？",
+        "F: 她姓白，就是“白色”的白，叫白云。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '大家都知道怎么做了吗？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là A.",
+      "explanation": "Hỏi mọi người biết làm chưa ghép với (hǎo，xiànzài kāishǐ).",
       "listening_pinyin": null,
       "pinyin": "Dàjiā dōu zhīdào zěnme zuò le ma?"
     },
@@ -991,15 +1056,15 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_55.webp",
       "options": [
-        "A 好，现在开始。",
-        "B 没关系，再游10分钟就休息。",
-        "C 我已经帮你打电话问了，不可以。",
-        "D 和朋友们在一起，我非常高兴。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 她姓白，就是“白色”的白，叫白云。"
+        "A: 好，现在开始。",
+        "B: 没关系，再游10分钟就休息。",
+        "C: 我已经帮你打电话问了，不可以。",
+        "D: 和朋友们在一起，我非常高兴。",
+        "E: 他在哪儿呢？看见他了吗？",
+        "F: 她姓白，就是“白色”的白，叫白云。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '你的名字很有意思。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là F.",
+      "explanation": "Khen tên hay ghép với giải thích ý nghĩa tên (tā xìng bái，jiùshì\"báisè\"de bái，jiào báiyún).",
       "listening_pinyin": null,
       "pinyin": "Nǐ de míngzi hěn yǒu yìsi."
     },
@@ -1015,14 +1080,14 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_56.webp",
       "options": [
-        "A 他们还在房间里等我呢。",
-        "B 你准备送他什么呢？",
-        "C 是，我也觉得这是个问题。",
-        "D 我新买了几本书，今天就在家看书。",
-        "E 我在电视上见过您。"
+        "A: 他们还在房间里等我呢。",
+        "B: 你准备送他什么呢？",
+        "C: 是，我也觉得这是个问题。",
+        "D: 我新买了几本书，今天就在家看书。",
+        "E: 我在电视上见过您。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '什么？3000字？你写得太长了吧？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là C.",
+      "explanation": "Ngạc nhiên vì bài viết 3000 chữ quá dài ghép với (shì，wǒ yě juéde zhè shì gè wèntí).",
       "listening_pinyin": null,
       "pinyin": "Shénme? 3000 zì? Nǐ xiě de tài cháng le ba?"
     },
@@ -1038,14 +1103,14 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_57.webp",
       "options": [
-        "A 他们还在房间里等我呢。",
-        "B 你准备送他什么呢？",
-        "C 是，我也觉得这是个问题。",
-        "D 我新买了几本书，今天就在家看书。",
-        "E 我在电视上见过您。"
+        "A: 他们还在房间里等我呢。",
+        "B: 你准备送他什么呢？",
+        "C: 是，我也觉得这是个问题。",
+        "D: 我新买了几本书，今天就在家看书。",
+        "E: 我在电视上见过您。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '明天10月7日，是你爸爸的生日。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là B.",
+      "explanation": "Nhắc sinh nhật bố ghép với câu hỏi quà tặng (nǐ zhǔnbèi sòng tā shénme ne？).",
       "listening_pinyin": null,
       "pinyin": "Míngtiān 10 yuè 7 rì, shì nǐ bàba de shēngrì."
     },
@@ -1061,16 +1126,16 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_58.webp",
       "options": [
-        "A 他们还在房间里等我呢。",
-        "B 你准备送他什么呢？",
-        "C 是，我也觉得这是个问题。",
-        "D 我新买了几本书，今天就在家看书。",
-        "E 我在电视上见过您。"
+        "A: 他们还在房间里等我呢。",
+        "B: 你准备送他什么呢？",
+        "C: 是，我也觉得这是个问题。",
+        "D: 我新买了几本书，今天就在家看书。",
+        "E: 我在电视上见过您。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '天阴了，快下雨了，你还出去吗？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là D.",
+      "explanation": "Hỏi trời mưa có ra ngoài không ghép với câu trả lời ở nhà đọc sách (wǒ xīn mǎi le jǐběnshū，jīntiān jiù zàijiā kànshū).",
       "listening_pinyin": null,
-      "pinyin": "Tiān yīntiān le, kuài xià yǔ le, nǐ hái chūqù ma?"
+      "pinyin": "Tiān yīn le, kuài xià yǔ le, nǐ hái chūqù ma?"
     },
     {
       "exam_code": "H21009",
@@ -1084,14 +1149,14 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_59.webp",
       "options": [
-        "A 他们还在房间里等我呢。",
-        "B 你准备送他什么呢？",
-        "C 是，我也觉得这是个问题。",
-        "D 我新买了几本书，今天就在家看书。",
-        "E 我在电视上见过您。"
+        "A: 他们还在房间里等我呢。",
+        "B: 你准备送他什么呢？",
+        "C: 是，我也觉得这是个问题。",
+        "D: 我新买了几本书，今天就在家看书。",
+        "E: 我在电视上见过您。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '是叫我吗？你认识我？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là E.",
+      "explanation": "Hỏi có quen biết không ghép với câu trả lời nhìn thấy trên tivi (wǒ zài diànshì shàngjiàn guò nín).",
       "listening_pinyin": null,
       "pinyin": "Shì jiào wǒ ma? Nǐ rènshi wǒ?"
     },
@@ -1107,16 +1172,16 @@
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21009/images/H21009_img_60.webp",
       "options": [
-        "A 他们还在房间里等我呢。",
-        "B 你准备送他什么呢？",
-        "C 是，我也觉得这是个问题。",
-        "D 我新买了几本书，今天就在家看书。",
-        "E 我在电视上见过您。"
+        "A: 他们还在房间里等我呢。",
+        "B: 你准备送他什么呢？",
+        "C: 是，我也觉得这是个问题。",
+        "D: 我新买了几本书，今天就在家看书。",
+        "E: 我在电视上见过您。"
       ],
       "board_image": null,
-      "explanation": "Câu vế hỏi/mở đầu: '你们两个坐一下，我很快就回来。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là A.",
+      "explanation": "Nhắc ngồi chờ ghép với lý do mọi người đang chờ trong phòng (tāmen hái zài fángjiān lǐ děng wǒ ne).",
       "listening_pinyin": null,
-      "pinyin": "Nǐmen liǎng ge zuò yíxià, wǒ hěn kuài jiù huílai."
+      "pinyin": "Nǐmen liǎng ge zuò yíxià, wǒ hěn kuài jiù huílái."
     }
   ],
   "exam_code": "H21009",

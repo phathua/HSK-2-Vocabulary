@@ -3,6 +3,8 @@
   import X from 'phosphor-svelte/lib/X';
   import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';
   import MagnifyingGlassPlus from 'phosphor-svelte/lib/MagnifyingGlassPlus';
+  import Headphones from 'phosphor-svelte/lib/Headphones';
+  import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import type { QuestionItem, ExamMode } from '#lib/types/exam';
   import { getExamImageUrl } from '#lib/utils/examAssets';
 
@@ -332,8 +334,15 @@
       {/if}
     </div>
   {:else if question.text}
-    <div class="text-sm md:text-base font-medium text-slate-800 dark:text-slate-200 my-2 leading-relaxed">
-      {question.text}
+    <div class="space-y-1 my-2 select-text">
+      <div class="text-base md:text-xl font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
+        {question.text}
+      </div>
+      {#if question.pinyin}
+        <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
+          {question.pinyin}
+        </div>
+      {/if}
     </div>
   {/if}
 
@@ -528,7 +537,8 @@
       {#if question.listening_script}
         <div class="mt-2.5 pt-2.5 border-t border-current/15 text-slate-700 dark:text-neutral-300">
           <span class="font-bold flex items-center gap-1.5 mb-1">
-            🎧 Lời thoại nghe (Transcript):
+            <Headphones weight="fill" class="w-4 h-4 text-sky-600 dark:text-sky-400 shrink-0" />
+            <span>Lời thoại nghe (Transcript):</span>
           </span>
           <p class="font-mono text-[11px] md:text-xs leading-relaxed select-text bg-white/60 dark:bg-black/20 p-2.5 rounded-xl border border-current/10">
             {question.listening_script}
@@ -539,7 +549,8 @@
       {#if question.explanation}
         <div class="mt-2.5 pt-2.5 border-t border-current/15 text-slate-700 dark:text-neutral-300">
           <span class="font-bold flex items-center gap-1.5 mb-1 text-slate-800 dark:text-neutral-200">
-            💡 Giải thích chi tiết:
+            <Lightbulb weight="fill" class="w-4 h-4 text-amber-500 shrink-0" />
+            <span>Giải thích chi tiết:</span>
           </span>
           <p class="text-[11px] md:text-xs leading-relaxed select-text bg-white/60 dark:bg-black/20 p-2.5 rounded-xl border border-current/10">
             {question.explanation}

@@ -6,7 +6,9 @@
   import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
   import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
   import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';
+  import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
   import MagnifyingGlassPlus from 'phosphor-svelte/lib/MagnifyingGlassPlus';
+  import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import Trophy from 'phosphor-svelte/lib/Trophy';
   import ListNumbers from 'phosphor-svelte/lib/ListNumbers';
   import Clock from 'phosphor-svelte/lib/Clock';
@@ -285,8 +287,9 @@
                 <span class="hidden sm:inline">Phóng to</span>
               </button>
               <!-- Badge gợi ý chạm phóng to góc dưới (không tốn thêm chiều cao) -->
-              <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-black/55 text-white text-[9px] font-bold backdrop-blur-xs pointer-events-none whitespace-nowrap shadow-xs">
-                🔍 Chạm để phóng to A – F
+              <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-black/55 text-white text-[9px] font-bold backdrop-blur-xs pointer-events-none whitespace-nowrap shadow-xs flex items-center gap-1">
+                <MagnifyingGlass weight="bold" class="w-2.5 h-2.5" />
+                <span>Chạm để phóng to A – F</span>
               </div>
             </div>
           </div>
@@ -395,8 +398,9 @@
             {/if}
 
             {#if question.explanation}
-              <div class="text-[11px] mt-1 text-slate-600 dark:text-neutral-300 leading-tight">
-                <span class="font-bold text-amber-600 dark:text-amber-400">💡</span> {question.explanation}
+              <div class="text-[11px] mt-1 text-slate-600 dark:text-neutral-300 leading-tight flex items-start gap-1">
+                <Lightbulb weight="fill" class="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+                <span>{question.explanation}</span>
               </div>
             {/if}
           </div>
@@ -429,8 +433,9 @@
             {/if}
 
             {#if question.explanation}
-              <div class="text-xs sm:text-sm mt-1.5 text-slate-600 dark:text-neutral-300 leading-snug">
-                <span class="font-bold text-amber-600 dark:text-amber-400">💡</span> {question.explanation}
+              <div class="text-xs sm:text-sm mt-1.5 text-slate-600 dark:text-neutral-300 leading-snug flex items-start gap-1.5">
+                <Lightbulb weight="fill" class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <span>{question.explanation}</span>
               </div>
             {/if}
           </div>
