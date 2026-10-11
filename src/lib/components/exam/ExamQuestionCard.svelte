@@ -55,6 +55,15 @@
     if (question.options && question.options.length > 0) {
       return question.options.map((opt) => {
         if (typeof opt === 'string') {
+          const m = opt.match(/^([A-Fa-f])[\s\.．、:：]*(.*)$/);
+          if (m) {
+            const letter = m[1].toUpperCase();
+            const textContent = m[2].trim();
+            return {
+              value: letter,
+              label: textContent || letter
+            };
+          }
           return { label: opt, value: opt };
         }
         return {
@@ -85,9 +94,62 @@
     ];
   });
 
+  // Tách câu hỏi thành các tầng hiển thị có trật tự: Hàng chữ Hán ở trên, Pinyin ở dưới
+  const parsedQuestionDisplay = $derived.by(() => {
+    const raw = question.text || '';
+    if (!raw || raw.startsWith('Câu hỏi nghe số')) return null;
+
+    if (raw.includes('★')) {
+      const parts = raw.split('★');
+      const contextRaw = parts[0].trim();
+      const statementRaw = (parts[1] || '').trim();
+
+      const parseChunk = (str: string) => {
+        const m = str.match(/^(.*?)\s*[\(（]([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s,\.\?!’'\-—]+)[\)）]?$/);
+        if (m) {
+          return { hanzi: m[1].trim(), pinyin: m[2].trim() };
+        }
+        return { hanzi: str, pinyin: '' };
+      };
+
+      const ctx = parseChunk(contextRaw);
+      const stmt = parseChunk(statementRaw);
+
+      return {
+        isTrueFalseStatement: true,
+        hanzi: '',
+        pinyin: '',
+        contextHanzi: ctx.hanzi,
+        contextPinyin: question.pinyin || ctx.pinyin,
+        statementHanzi: stmt.hanzi,
+        statementPinyin: question.statement_pinyin || stmt.pinyin
+      };
+    }
+
+    const m = raw.match(/^(.*?)\s*[\(（]([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s,\.\?!’'\-—]+)[\)）]$/);
+    if (m) {
+      return {
+        isTrueFalseStatement: false,
+        hanzi: m[1].trim(),
+        pinyin: question.pinyin || m[2].trim()
+      };
+    }
+
+    return {
+      isTrueFalseStatement: false,
+      hanzi: raw,
+      pinyin: question.pinyin || ''
+    };
+  });
+
   const isTrueFalse = $derived(question.type.includes('True/False'));
   const hasImageOptions = $derived(optionChoices.some((opt) => !!opt.image));
-  const isMultipleChoiceList = $derived(!isTrueFalse && (optionChoices.length > 0 && (optionChoices.some((opt) => opt.label.length > 3) || optionChoices.length <= 4)));
+  const isMultipleChoiceList = $derived(
+    !isTrueFalse &&
+    optionChoices.length > 0 &&
+    optionChoices.some((opt) => opt.label !== opt.value) &&
+    (optionChoices.some((opt) => opt.label.length > 3) || optionChoices.length <= 4)
+  );
 
   // Chế độ Luyện tập: Bấm là hiện đáp án ngay lập tức (không cần nút check). Chế độ Thi: hiện khi nộp bài
   const shouldReveal = $derived(isExamSubmitted || (mode === 'practice' && !!selectedAnswer));
@@ -192,8 +254,84 @@
     </div>
   {/if}
 
-  <!-- Lời thoại / Câu hỏi dạng text -->
-  {#if question.text}
+  <!-- Tiêu đề câu hỏi / Prompt Text -->
+  <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] mb-2 select-none">
+    {#if question.section.includes('Reading') || question.question_no >= 36}
+      {#if question.part.includes('Part 1') || (question.question_no >= 36 && question.question_no <= 40)}
+        Xem tranh và chọn câu phù hợp (A – F):
+      {:else if question.part.includes('Part 2') || (question.question_no >= 41 && question.question_no <= 45)}
+        Chọn từ thích hợp điền vào chỗ trống (A – F):
+      {:else if question.part.includes('Part 3') || (question.question_no >= 46 && question.question_no <= 50)}
+        Đọc đoạn văn và phán đoán Đúng / Sai:
+      {:else}
+        Chọn câu đối thoại phù hợp (A – F):
+      {/if}
+    {:else if isTrueFalse}
+      Nghe và phán đoán Đúng hoặc Sai:
+    {:else if question.part.includes('Part 2') || question.type.includes('Match')}
+      Nghe và chọn tranh A – F phù hợp:
+    {:else}
+      Nghe và chọn đáp án chính xác:
+    {/if}
+  </div>
+
+  <!-- Lời thoại / Câu hỏi dạng text phân tầng có trật tự -->
+  {#if parsedQuestionDisplay}
+    <div class="my-3 space-y-1.5 select-text">
+      {#if parsedQuestionDisplay.isTrueFalseStatement}
+        <!-- Part 3: Khối Ngữ cảnh + Khối Nhận định ★ -->
+        <div class="bg-slate-50/80 dark:bg-[#202224]/80 border border-slate-200/80 dark:border-neutral-800 rounded-2xl p-3.5 space-y-3">
+          <div>
+            <div class="text-base md:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
+              {parsedQuestionDisplay.contextHanzi}
+            </div>
+            {#if parsedQuestionDisplay.contextPinyin}
+              <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mt-0.5">
+                {parsedQuestionDisplay.contextPinyin}
+              </div>
+            {/if}
+          </div>
+
+          <div class="pt-2.5 border-t border-slate-200/60 dark:border-neutral-700/60 flex items-start gap-2.5">
+            <span class="px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-xs font-black shrink-0">
+              ★ Nhận định
+            </span>
+            <div class="flex-1">
+              <div class="text-base md:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
+                {parsedQuestionDisplay.statementHanzi}
+              </div>
+              {#if parsedQuestionDisplay.statementPinyin}
+                <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mt-0.5">
+                  {parsedQuestionDisplay.statementPinyin}
+                </div>
+              {/if}
+            </div>
+          </div>
+        </div>
+      {:else}
+        <!-- Câu thông thường: Hàng trên Chữ Hán, Hàng dưới Pinyin -->
+        <div class="space-y-1">
+          <div class="text-base md:text-xl font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
+            {#if parsedQuestionDisplay.hanzi.includes('( )') || parsedQuestionDisplay.hanzi.includes('（ ）')}
+              {@const parts = parsedQuestionDisplay.hanzi.split(/[\(（]\s*[\)）]/)}
+              <span>{parts[0]}</span>
+              <span class="inline-block mx-1.5 px-3 py-0.5 border-b-2 border-orange-500 text-orange-600 dark:text-orange-400 font-mono text-sm bg-orange-50 dark:bg-orange-950/40 rounded">
+                ( &nbsp;&nbsp;&nbsp;&nbsp; )
+              </span>
+              <span>{parts[1] || ''}</span>
+            {:else}
+              {parsedQuestionDisplay.hanzi}
+            {/if}
+          </div>
+          {#if parsedQuestionDisplay.pinyin}
+            <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
+              {parsedQuestionDisplay.pinyin}
+            </div>
+          {/if}
+        </div>
+      {/if}
+    </div>
+  {:else if question.text}
     <div class="text-sm md:text-base font-medium text-slate-800 dark:text-slate-200 my-2 leading-relaxed">
       {question.text}
     </div>
@@ -271,7 +409,9 @@
             }">
               {opt.value}
             </span>
-            <span class="text-xs font-bold text-slate-700 dark:text-slate-200">{opt.label}</span>
+            {#if opt.label !== opt.value}
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-200">{opt.label}</span>
+            {/if}
           </div>
         </button>
       {/each}
@@ -344,7 +484,9 @@
           }">
             {opt.value}
           </span>
-          <span>{opt.label}</span>
+          {#if opt.label !== opt.value}
+            <span>{opt.label}</span>
+          {/if}
         </button>
       {/each}
     </div>

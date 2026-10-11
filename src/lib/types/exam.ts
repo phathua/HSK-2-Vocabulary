@@ -18,6 +18,8 @@ export interface QuestionItem {
   explanation?: string | null;
   explanation_pinyin?: string | null;
   text?: string;
+  pinyin?: string | null;
+  statement_pinyin?: string | null;
   options?: Array<string | QuestionOption>;
 }
 

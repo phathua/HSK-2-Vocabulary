@@ -502,13 +502,14 @@
       "question_no": 36,
       "image": null,
       "type": "Sentence Match",
-      "text": "雨不下了，天晴了。(yǔ bù xià le， tiān qíng le。)",
+      "text": "我喜欢这块儿手表，因为是女朋友送的。",
       "answer": "F",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_36.webp",
       "board_image": "images/H21003_board_36_40.webp",
-      "explanation": "Đáp án [F]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
-      "listening_pinyin": null
+      "explanation": "Câu 36 miêu tả nội dung '我喜欢这块儿手表，因为是女朋友送的。'. Bức ảnh F thể hiện chính xác ngữ cảnh này nên đáp án là F.",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ xǐhuan zhè kuàir shǒubiǎo, yīnwei shì nǚpéngyou sòng de."
     },
     {
       "exam_code": "H21003",
@@ -517,13 +518,14 @@
       "question_no": 37,
       "image": null,
       "type": "Sentence Match",
-      "text": "他给女朋友买了一个新手机。(tā gěi nǚ péng yǒu mǎi le yí gè xīn shǒu jī。)",
+      "text": "她的狗跳得真高。",
       "answer": "C",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_37.webp",
       "board_image": "images/H21003_board_36_40.webp",
-      "explanation": "Đáp án [C]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
-      "listening_pinyin": null
+      "explanation": "Câu 37 miêu tả nội dung '她的狗跳得真高。'. Bức ảnh C thể hiện chính xác ngữ cảnh này nên đáp án là C.",
+      "listening_pinyin": null,
+      "pinyin": "Tā de gǒu tiào de zhēn gāo."
     },
     {
       "exam_code": "H21003",
@@ -532,13 +534,14 @@
       "question_no": 38,
       "image": null,
       "type": "Sentence Match",
-      "text": "准备好了吗？好，笑一笑。(zhǔn bèi hǎo le ma？ hǎo， xiào yī xiào。)",
+      "text": "别说话，让她睡吧。",
       "answer": "B",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_38.webp",
       "board_image": "images/H21003_board_36_40.webp",
-      "explanation": "Đáp án [B]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
-      "listening_pinyin": null
+      "explanation": "Câu 38 miêu tả nội dung '别说话，让她睡吧。'. Bức ảnh B thể hiện chính xác ngữ cảnh này nên đáp án là B.",
+      "listening_pinyin": null,
+      "pinyin": "Bié shuōhuà, ràng tā shuì ba."
     },
     {
       "exam_code": "H21003",
@@ -547,13 +550,14 @@
       "question_no": 39,
       "image": null,
       "type": "Sentence Match",
-      "text": "非常欢迎你来我们公司工作！(fēi cháng huān yíng nǐ lái wǒ men gōng sī gōng zuò！)",
+      "text": "我想想，这个字怎么读呢？",
       "answer": "E",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_39.webp",
       "board_image": "images/H21003_board_36_40.webp",
-      "explanation": "Đáp án [E]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
-      "listening_pinyin": null
+      "explanation": "Câu 39 miêu tả nội dung '我想想，这个字怎么读呢？'. Bức ảnh E thể hiện chính xác ngữ cảnh này nên đáp án là E.",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ xiǎngxiāng, zhège zì zěnme dú ne?"
     },
     {
       "exam_code": "H21003",
@@ -562,13 +566,14 @@
       "question_no": 40,
       "image": null,
       "type": "Sentence Match",
-      "text": "每天早上她都要慢跑一小时。(měi tiān zǎo shàng tā dōu yào màn pǎo yī xiǎo shí。)",
+      "text": "房间里太热了，把门打开吧。",
       "answer": "A",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_40.webp",
       "board_image": "images/H21003_board_36_40.webp",
-      "explanation": "Đáp án [A]: Khớp với hình ảnh tương ứng trong bảng tranh A - F.",
-      "listening_pinyin": null
+      "explanation": "Câu 40 miêu tả nội dung '房间里太热了，把门打开吧。'. Bức ảnh A thể hiện chính xác ngữ cảnh này nên đáp án là A.",
+      "listening_pinyin": null,
+      "pinyin": "Fángjiān lǐ tài rè le, bǎ mén dǎkāi ba."
     },
     {
       "exam_code": "H21003",
@@ -576,22 +581,23 @@
       "part": "Part 2",
       "question_no": 41,
       "image": null,
-      "type": "Fill Blank",
-      "text": "天阴了，可能要下 ( )(tiān yīn le， kě néng yào xià  ( ))",
+      "type": "Fill in Blank",
+      "text": "你（ ）吗？他是我哥哥。",
       "answer": "F",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_41.webp",
       "options": [
-        "A 一起 (yì qǐ)",
-        "B 西瓜 (xī guā)",
-        "C 题 (tí)",
-        "D 号 (hào)",
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
         "E 贵 (guì)",
-        "F 雪 (xuě)"
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
-      "explanation": "Đáp án [F]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
-      "listening_pinyin": null
+      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '你（ ）吗？他是我哥哥。', từ thích hợp điền vào chỗ trống là F (A 认识(rènshi) B 从(cóng) C 鱼(yú) D 为什么(wèi shénme) E 贵(guì) F 介绍(jièshào)).",
+      "listening_pinyin": null,
+      "pinyin": "Nǐ ( ) me? Tā shì wǒ gēge."
     },
     {
       "exam_code": "H21003",
@@ -599,22 +605,23 @@
       "part": "Part 2",
       "question_no": 42,
       "image": null,
-      "type": "Fill Blank",
-      "text": "我要睡觉了，那些明天再做吧。 ( )(wǒ yào shuì jiào le， nà xiē míng tiān zài zuò ba 。 ( ))",
+      "type": "Fill in Blank",
+      "text": "这道题我不知道（ ）错了。",
       "answer": "C",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_42.webp",
       "options": [
-        "A 一起 (yì qǐ)",
-        "B 西瓜 (xī guā)",
-        "C 题 (tí)",
-        "D 号 (hào)",
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
         "E 贵 (guì)",
-        "F 雪 (xuě)"
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
-      "explanation": "Đáp án [C]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
-      "listening_pinyin": null
+      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '这道题我不知道（ ）错了。', từ thích hợp điền vào chỗ trống là C (A 认识(rènshi) B 从(cóng) C 鱼(yú) D 为什么(wèi shénme) E 贵(guì) F 介绍(jièshào)).",
+      "listening_pinyin": null,
+      "pinyin": "Zhè dào tí wǒ bù zhīdào ( ) cuò le."
     },
     {
       "exam_code": "H21003",
@@ -622,22 +629,23 @@
       "part": "Part 2",
       "question_no": 43,
       "image": null,
-      "type": "Fill Blank",
-      "text": "我希望能和你在（(wǒ xī wàng néng hé nǐ zài（)",
+      "type": "Fill in Blank",
+      "text": "您好，我来（ ）一下，这是王经理。",
       "answer": "A",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_43.webp",
       "options": [
-        "A 一起 (yì qǐ)",
-        "B 西瓜 (xī guā)",
-        "C 题 (tí)",
-        "D 号 (hào)",
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
         "E 贵 (guì)",
-        "F 雪 (xuě)"
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
-      "explanation": "Đáp án [A]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
-      "listening_pinyin": null
+      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '您好，我来（ ）一下，这是王经理。', từ thích hợp điền vào chỗ trống là A (A 认识(rènshi) B 从(cóng) C 鱼(yú) D 为什么(wèi shénme) E 贵(guì) F 介绍(jièshào)).",
+      "listening_pinyin": null,
+      "pinyin": "Nín hǎo, wǒ lái ( ) yíxià, zhè shì Wáng jīnglǐ."
     },
     {
       "exam_code": "H21003",
@@ -645,22 +653,23 @@
       "part": "Part 2",
       "question_no": 44,
       "image": null,
-      "type": "Fill Blank",
-      "text": "我今年14岁，我的生日是6月7（(wǒ jīn nián 14 suì， wǒ de shēng rì shì 6 yuè 7（)",
+      "type": "Fill in Blank",
+      "text": "我（ ）8岁开始学习滑动。",
       "answer": "D",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_44.webp",
       "options": [
-        "A 一起 (yì qǐ)",
-        "B 西瓜 (xī guā)",
-        "C 题 (tí)",
-        "D 号 (hào)",
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
         "E 贵 (guì)",
-        "F 雪 (xuě)"
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
-      "explanation": "Đáp án [D]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
-      "listening_pinyin": null
+      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '我（ ）8岁开始学习滑动。', từ thích hợp điền vào chỗ trống là D (A 认识(rènshi) B 从(cóng) C 鱼(yú) D 为什么(wèi shénme) E 贵(guì) F 介绍(jièshào)).",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ ( ) 8 suì kāishǐ xuéxí jīandòng."
     },
     {
       "exam_code": "H21003",
@@ -668,22 +677,23 @@
       "part": "Part 2",
       "question_no": 45,
       "image": null,
-      "type": "Fill Blank",
-      "text": "男：现在（多少钱一斤？女：我看看，这儿写着呢，5元一斤。(nán： xiàn zài（duō shǎo qián yī jīn？ nǚ： wǒ kàn kàn， zhè ér xiě zhe ne ，5 yuán yī jīn。)",
+      "type": "Fill in Blank",
+      "text": "商店里的（ ）非常新鲜。",
       "answer": "B",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_45.webp",
       "options": [
-        "A 一起 (yì qǐ)",
-        "B 西瓜 (xī guā)",
-        "C 题 (tí)",
-        "D 号 (hào)",
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
         "E 贵 (guì)",
-        "F 雪 (xuě)"
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
-      "explanation": "Đáp án [B]: Từ cần điền vào chỗ trống giúp hoàn thành câu hoàn chỉnh.",
-      "listening_pinyin": null
+      "explanation": "Căn cứ vào ngữ cảnh và ngữ pháp câu '商店里的（ ）非常新鲜。', từ thích hợp điền vào chỗ trống là B (A 认识(rènshi) B 从(cóng) C 鱼(yú) D 为什么(wèi shénme) E 贵(guì) F 介绍(jièshào)).",
+      "listening_pinyin": null,
+      "pinyin": "Shāngdiàn lǐ de ( ) fēicháng xīnxiān."
     },
     {
       "exam_code": "H21003",
@@ -692,13 +702,14 @@
       "question_no": 46,
       "image": null,
       "type": "True/False",
-      "text": "您请进，这就是我的家。这个房间是我和我丈夫的，旁边那个小的是孩子的房间\n★ 我们的房间比孩子的大。(nín qǐng jìn， zhè jiù shì wǒ de jiā。 zhè ge fáng jiān shì wǒ hé wǒ zhàng fū de， páng biān nà ge xiǎo de shì hái zi de fáng jiān ★ wǒ men de fáng jiān bǐ hái zi de dà。)",
+      "text": "您请进，这就是我的家。这个房间是我和我丈夫的，旁边那个小的是孩子的房间。 ★ 我们的房间比孩子的大。",
       "answer": "√",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_46.webp",
       "board_image": null,
-      "explanation": "Đáp án [√]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
-      "listening_pinyin": null
+      "explanation": "Đoạn văn đưa ra thông tin '您请进，这就是我的家。这个房间是我和我丈夫的，旁边那个小的是孩子的房间。 ★ 我们的房间比孩子的大。'. Nhận định khẳng định hoàn toàn phù hợp với nội dung bài đọc nên đáp án là Đúng (√).",
+      "listening_pinyin": null,
+      "pinyin": "Nín qǐng jìn, zhè jiù shì wǒ de jiā. Zhège fángjiān shì wǒ hé wǒ zhàngfu de, pángbiān nàge xiǎo de shì háizi de fángjiān. ★ Wǒmen de fángjiān bǐ háizi de dà."
     },
     {
       "exam_code": "H21003",
@@ -707,13 +718,14 @@
       "question_no": 47,
       "image": null,
       "type": "True/False",
-      "text": "我爸爸不爱喝咖啡，他喜欢喝茶，每天上午都会喝几杯热茶。\n★ 爸爸觉得茶不好喝。(wǒ bà bà bù ài hē kā fēi， tā xǐ huān hē chá， měi tiān shàng wǔ dū huì hē jǐ bēi rè chá。 ★ bà bà jué de chá bù hǎo hē。)",
+      "text": "我爸爸不爱喝咖啡，他喜欢喝茶，每天上午都会喝几杯热茶。 ★ 爸爸觉得茶不好喝。",
       "answer": "×",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_47.webp",
       "board_image": null,
-      "explanation": "Đáp án [×]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
-      "listening_pinyin": null
+      "explanation": "Đoạn văn đưa ra thông tin '我爸爸不爱喝咖啡，他喜欢喝茶，每天上午都会喝几杯热茶。 ★ 爸爸觉得茶不好喝。'. Nhận định mâu thuẫn hoặc không chính xác so với bài đọc nên đáp án là Sai (×).",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ bàba bù ài hē kāfēi, tā xǐhuan hē chá, měi tiān shàngwǔ dōu huì hē jǐ bēi rè chá. ★ Bàba juéde chá bù hǎohē."
     },
     {
       "exam_code": "H21003",
@@ -722,13 +734,14 @@
       "question_no": 48,
       "image": null,
       "type": "True/False",
-      "text": "他在火车站工作，每天都很忙，但他很少说累，他觉得能帮助人们是他最大的快乐。\n★ 他很喜欢他的工作(tā zài huǒ chē zhàn gōng zuò， měi tiān dōu hěn máng， dàn tā hěn shǎo shuō lèi， tā jué de néng bāng zhù rén men shì tā zuì dà de kuài lè。 ★ tā hěn xǐ huān tā de gōng zuò)",
+      "text": "他在火车站工作，每天都很忙，但他很少说累，他觉得能帮助人们是他最大的快乐。 ★ 他很喜欢他的工作。",
       "answer": "√",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_48.webp",
       "board_image": null,
-      "explanation": "Đáp án [√]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
-      "listening_pinyin": null
+      "explanation": "Đoạn văn đưa ra thông tin '他在火车站工作，每天都很忙，但他很少说累，他觉得能帮助人们是他最大的快乐。 ★ 他很喜欢他的工作。'. Nhận định khẳng định hoàn toàn phù hợp với nội dung bài đọc nên đáp án là Đúng (√).",
+      "listening_pinyin": null,
+      "pinyin": "Tā zài huǒchēzhàn gōngzuò, měi tiān dōu hěn máng, dàn tā hěn shǎo shuō lèi, tā juéde néng bāngzhù rénmen shì tā zuìdà de kuàilè. ★ Tā hěn xǐhuan tā de gōngzuò."
     },
     {
       "exam_code": "H21003",
@@ -737,13 +750,14 @@
       "question_no": 49,
       "image": null,
       "type": "True/False",
-      "text": "这些桌子和椅子都是100多年前做的，所以比现在的要贵很多。\n★ 这些桌子、椅子都很新。(zhè xiē zhuō zi hé yǐ zi dōu shì 100 duō nián qián zuò de， suǒ yǐ bǐ xiàn zài de yào guì hěn duō。 ★ zhè xiē zhuō zi、 yǐ zi dōu hěn xīn。)",
+      "text": "这些桌子和椅子都是100年前做的，所以比现在的要贵很多。 ★ 这些桌子、椅子都很新。",
       "answer": "×",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_49.webp",
       "board_image": null,
-      "explanation": "Đáp án [×]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
-      "listening_pinyin": null
+      "explanation": "Đoạn văn đưa ra thông tin '这些桌子和椅子都是100年前做的，所以比现在的要贵很多。 ★ 这些桌子、椅子都很新。'. Nhận định mâu thuẫn hoặc không chính xác so với bài đọc nên đáp án là Sai (×).",
+      "listening_pinyin": null,
+      "pinyin": "Zhèxiē zhuōzi hé yǐzi dōu shì 100 duō nián qián zuò de, suǒyǐ bǐ xiànzài de yào guì hěn duō. ★ Zhèxiē zhuōzi, yǐzi dōu hěn xīn."
     },
     {
       "exam_code": "H21003",
@@ -752,13 +766,14 @@
       "question_no": 50,
       "image": null,
       "type": "True/False",
-      "text": "他做的菜比我做的好吃，但是因为工作忙，他很少做。\n★ 他不会做菜。第四部分第51-55题A对不起，再给我一天时间？B王老师，你的电话C一个鸡蛋，喝了些牛奶。D你出去的时候多穿些衣服。E他在哪儿呢？你看见他了吗？F这船是从上海开来的。例如：他还在教室里学习。E51．它很大，能坐一千多人。52.今天真冷，有零下10℃吧？53．第一次来这儿？早上吃什么了？54.那本书你读完了吗？55.谢谢！是谁？(tā zuò de cài bǐ wǒ zuò de hǎo chī， dàn shì yīn wèi gōng zuò máng， tā hěn shǎo zuò。 ★ tā bú huì zuò cài。 dì sì bù fèn dì 51-55 tí A duì bù qǐ， zài gěi wǒ yī tiān shí jiān ？B wáng lǎo shī， nǐ de diàn huà C yí gè jī dàn， hē le xiē niú nǎi 。D nǐ chū qù de shí hòu duō chuān xiē yī fú 。E tā zài nǎ ér ne？ nǐ kàn jiàn tā le ma ？F zhè chuán shì cóng shàng hǎi kāi lái de。 lì rú： tā hái zài jiào shì lǐ xué xí 。E51． tā hěn dà， néng zuò yī qiān duō rén 。52. jīn tiān zhēn lěng， yǒu líng xià 10℃ ba ？53． dì yī cì lái zhè ér？ zǎo shàng chī shén me le ？54. nà běn shū nǐ dú wán le ma ？55. xiè xiè！ shì shuí？)",
+      "text": "他做的菜比我做的好吃，但是因为工作忙，他很少做。 ★ 他不会做菜。",
       "answer": "×",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_50.webp",
       "board_image": null,
-      "explanation": "Đáp án [×]: Phán đoán tính đúng/sai dựa vào ngữ cảnh bài đọc.",
-      "listening_pinyin": null
+      "explanation": "Đoạn văn đưa ra thông tin '他做的菜比我做的好吃，但是因为工作忙，他很少做。 ★ 他不会做菜。'. Nhận định mâu thuẫn hoặc không chính xác so với bài đọc nên đáp án là Sai (×).",
+      "listening_pinyin": null,
+      "pinyin": "Tā zuò de cài bǐ wǒ zuò de hǎochī, dànshì yīnwei gōngzuò máng, tā hěn shǎo zuò. ★ Tā bù huì zuò cài."
     },
     {
       "exam_code": "H21003",
@@ -766,22 +781,23 @@
       "part": "Part 4",
       "question_no": 51,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 51)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 51))",
+      "type": "Dialogue Match",
+      "text": "它很大，能坐一千多人。",
       "answer": "F",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_51.webp",
       "options": [
-        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì si。)",
-        "B 太多了吧？这是药！ (tài duō le ba？ zhè shì yào！)",
-        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jiě zhēn gāo， zhè me piào liàng， tā yǒu nán péng yǒu le ma？)",
-        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne。)",
-        "E 您看了吗？没什么问题吧？56．这个字你写错了，是“白”，不是“百57.你要给她介绍一个吗？58.我的小猫呢？59.我爸爸姓刘，我妈妈姓杨，所以我叫刘杨60.医生说大人一天可以吃4次。 (nín kàn le ma？ méi shén me wèn tí ba ？56． zhè ge zì nǐ xiě cuò le， shì“bái ”， bú shì“bǎi 57. nǐ yào gěi tā jiè shào yí gè ma ？58. wǒ de xiǎo māo ne ？59. wǒ bà bà xìng liú， wǒ mā mā xìng yáng， suǒ yǐ wǒ jiào liú yáng 60. yī shēng shuō dà rén yī tiān kě yǐ chī 4 cì。)",
-        "F ..."
+        "A 对不起，再给我一天时间？",
+        "B 王老师，你的电话。",
+        "C 一个鸡蛋，喝了些牛奶。",
+        "D 你出去的时候多穿些衣服。",
+        "E 他在哪儿呢？看见他了吗？",
+        "F 这船是从上海开来的。"
       ],
       "board_image": null,
-      "explanation": "Đáp án [F]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '它很大，能坐一千多人。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là F.",
+      "listening_pinyin": null,
+      "pinyin": "Tā hěn dà, néng zuò yìqiān duō rén."
     },
     {
       "exam_code": "H21003",
@@ -789,22 +805,23 @@
       "part": "Part 4",
       "question_no": 52,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 52)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 52))",
+      "type": "Dialogue Match",
+      "text": "Jīntiān zhēn lěng, yǒu líng xià 10℃ ba? (今天真冷，有零下10℃吧？)",
       "answer": "D",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_52.webp",
       "options": [
-        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì si。)",
-        "B 太多了吧？这是药！ (tài duō le ba？ zhè shì yào！)",
-        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jiě zhēn gāo， zhè me piào liàng， tā yǒu nán péng yǒu le ma？)",
-        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne。)",
-        "E 您看了吗？没什么问题吧？56．这个字你写错了，是“白”，不是“百57.你要给她介绍一个吗？58.我的小猫呢？59.我爸爸姓刘，我妈妈姓杨，所以我叫刘杨60.医生说大人一天可以吃4次。 (nín kàn le ma？ méi shén me wèn tí ba ？56． zhè ge zì nǐ xiě cuò le， shì“bái ”， bú shì“bǎi 57. nǐ yào gěi tā jiè shào yí gè ma ？58. wǒ de xiǎo māo ne ？59. wǒ bà bà xìng liú， wǒ mā mā xìng yáng， suǒ yǐ wǒ jiào liú yáng 60. yī shēng shuō dà rén yī tiān kě yǐ chī 4 cì。)",
-        "F ..."
+        "A 对不起，再给我一天时间？",
+        "B 王老师，你的电话。",
+        "C 一个鸡蛋，喝了些牛奶。",
+        "D 你出去的时候多穿些衣服。",
+        "E 他在哪儿呢？看见他了吗？",
+        "F 这船是从上海开来的。"
       ],
       "board_image": null,
-      "explanation": "Đáp án [D]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: 'Jīntiān zhēn lěng, yǒu líng xià 10℃ ba? (今天真冷，有零下10℃吧？)'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là D.",
+      "listening_pinyin": null,
+      "pinyin": "Jīntiān zhēn lěng, yǒu líng xià 10℃ ba? (今天真冷，有零下10℃吧？)"
     },
     {
       "exam_code": "H21003",
@@ -812,22 +829,23 @@
       "part": "Part 4",
       "question_no": 53,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 53)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 53))",
+      "type": "Dialogue Match",
+      "text": "第一次来这儿？早上吃什么了？",
       "answer": "C",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_53.webp",
       "options": [
-        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì si。)",
-        "B 太多了吧？这是药！ (tài duō le ba？ zhè shì yào！)",
-        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jiě zhēn gāo， zhè me piào liàng， tā yǒu nán péng yǒu le ma？)",
-        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne。)",
-        "E 您看了吗？没什么问题吧？56．这个字你写错了，是“白”，不是“百57.你要给她介绍一个吗？58.我的小猫呢？59.我爸爸姓刘，我妈妈姓杨，所以我叫刘杨60.医生说大人一天可以吃4次。 (nín kàn le ma？ méi shén me wèn tí ba ？56． zhè ge zì nǐ xiě cuò le， shì“bái ”， bú shì“bǎi 57. nǐ yào gěi tā jiè shào yí gè ma ？58. wǒ de xiǎo māo ne ？59. wǒ bà bà xìng liú， wǒ mā mā xìng yáng， suǒ yǐ wǒ jiào liú yáng 60. yī shēng shuō dà rén yī tiān kě yǐ chī 4 cì。)",
-        "F ..."
+        "A 对不起，再给我一天时间？",
+        "B 王老师，你的电话。",
+        "C 一个鸡蛋，喝了些牛奶。",
+        "D 你出去的时候多穿些衣服。",
+        "E 他在哪儿呢？看见他了吗？",
+        "F 这船是从上海开来的。"
       ],
       "board_image": null,
-      "explanation": "Đáp án [C]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '第一次来这儿？早上吃什么了？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là C.",
+      "listening_pinyin": null,
+      "pinyin": "Dì-yī cì lái zhèr? Zǎoshang chī shénme le?"
     },
     {
       "exam_code": "H21003",
@@ -835,22 +853,23 @@
       "part": "Part 4",
       "question_no": 54,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 54)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 54))",
+      "type": "Dialogue Match",
+      "text": "那本书你读完了吗？",
       "answer": "A",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_54.webp",
       "options": [
-        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì si。)",
-        "B 太多了吧？这是药！ (tài duō le ba？ zhè shì yào！)",
-        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jiě zhēn gāo， zhè me piào liàng， tā yǒu nán péng yǒu le ma？)",
-        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne。)",
-        "E 您看了吗？没什么问题吧？56．这个字你写错了，是“白”，不是“百57.你要给她介绍一个吗？58.我的小猫呢？59.我爸爸姓刘，我妈妈姓杨，所以我叫刘杨60.医生说大人一天可以吃4次。 (nín kàn le ma？ méi shén me wèn tí ba ？56． zhè ge zì nǐ xiě cuò le， shì“bái ”， bú shì“bǎi 57. nǐ yào gěi tā jiè shào yí gè ma ？58. wǒ de xiǎo māo ne ？59. wǒ bà bà xìng liú， wǒ mā mā xìng yáng， suǒ yǐ wǒ jiào liú yáng 60. yī shēng shuō dà rén yī tiān kě yǐ chī 4 cì。)",
-        "F ..."
+        "A 对不起，再给我一天时间？",
+        "B 王老师，你的电话。",
+        "C 一个鸡蛋，喝了些牛奶。",
+        "D 你出去的时候多穿些衣服。",
+        "E 他在哪儿呢？看见他了吗？",
+        "F 这船是从上海开来的。"
       ],
       "board_image": null,
-      "explanation": "Đáp án [A]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '那本书你读完了吗？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là A.",
+      "listening_pinyin": null,
+      "pinyin": "Nà běn shū nǐ dú wán le ma?"
     },
     {
       "exam_code": "H21003",
@@ -858,22 +877,23 @@
       "part": "Part 4",
       "question_no": 55,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 55)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 55))",
+      "type": "Dialogue Match",
+      "text": "谢谢！是谁？",
       "answer": "B",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_55.webp",
       "options": [
-        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì si。)",
-        "B 太多了吧？这是药！ (tài duō le ba？ zhè shì yào！)",
-        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jiě zhēn gāo， zhè me piào liàng， tā yǒu nán péng yǒu le ma？)",
-        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne。)",
-        "E 您看了吗？没什么问题吧？56．这个字你写错了，是“白”，不是“百57.你要给她介绍一个吗？58.我的小猫呢？59.我爸爸姓刘，我妈妈姓杨，所以我叫刘杨60.医生说大人一天可以吃4次。 (nín kàn le ma？ méi shén me wèn tí ba ？56． zhè ge zì nǐ xiě cuò le， shì“bái ”， bú shì“bǎi 57. nǐ yào gěi tā jiè shào yí gè ma ？58. wǒ de xiǎo māo ne ？59. wǒ bà bà xìng liú， wǒ mā mā xìng yáng， suǒ yǐ wǒ jiào liú yáng 60. yī shēng shuō dà rén yī tiān kě yǐ chī 4 cì。)",
-        "F ..."
+        "A 对不起，再给我一天时间？",
+        "B 王老师，你的电话。",
+        "C 一个鸡蛋，喝了些牛奶。",
+        "D 你出去的时候多穿些衣服。",
+        "E 他在哪儿呢？看见他了吗？",
+        "F 这船是从上海开来的。"
       ],
       "board_image": null,
-      "explanation": "Đáp án [B]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '谢谢！是谁？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là B.",
+      "listening_pinyin": null,
+      "pinyin": "Xièxie! Shì shéi?"
     },
     {
       "exam_code": "H21003",
@@ -881,22 +901,22 @@
       "part": "Part 4",
       "question_no": 56,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 56)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 56))",
+      "type": "Dialogue Match",
+      "text": "这个字你写错了，是“白”，不是“百”。",
       "answer": "E",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_56.webp",
       "options": [
-        "A ...",
-        "B ...",
-        "C ...",
-        "D ...",
-        "E ...",
-        "F ..."
+        "A 这个名字很有意思。",
+        "B 太多了吧？这是药！",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？",
+        "D 在门后面玩儿呢。",
+        "E 您看了吗？没什么问题吧？"
       ],
       "board_image": null,
-      "explanation": "Đáp án [E]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '这个字你写错了，是“白”，不是“百”。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là E.",
+      "listening_pinyin": null,
+      "pinyin": "Zhège zì nǐ xiě cuò le, shì 'bái', bú shì 'bǎi'."
     },
     {
       "exam_code": "H21003",
@@ -904,22 +924,22 @@
       "part": "Part 4",
       "question_no": 57,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 57)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 57))",
+      "type": "Dialogue Match",
+      "text": "你要给她介绍一个吗？",
       "answer": "C",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_57.webp",
       "options": [
-        "A ...",
-        "B ...",
-        "C ...",
-        "D ...",
-        "E ...",
-        "F ..."
+        "A 这个名字很有意思。",
+        "B 太多了吧？这是药！",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？",
+        "D 在门后面玩儿呢。",
+        "E 您看了吗？没什么问题吧？"
       ],
       "board_image": null,
-      "explanation": "Đáp án [C]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '你要给她介绍一个吗？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là C.",
+      "listening_pinyin": null,
+      "pinyin": "Nǐ yào gěi tā jièshào yí ge ma?"
     },
     {
       "exam_code": "H21003",
@@ -927,22 +947,22 @@
       "part": "Part 4",
       "question_no": 58,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 58)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 58))",
+      "type": "Dialogue Match",
+      "text": "我的小猫呢？",
       "answer": "D",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_58.webp",
       "options": [
-        "A ...",
-        "B ...",
-        "C ...",
-        "D ...",
-        "E ...",
-        "F ..."
+        "A 这个名字很有意思。",
+        "B 太多了吧？这是药！",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？",
+        "D 在门后面玩儿呢。",
+        "E 您看了吗？没什么问题吧？"
       ],
       "board_image": null,
-      "explanation": "Đáp án [D]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '我的小猫呢？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là D.",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ de xiǎomāo ne?"
     },
     {
       "exam_code": "H21003",
@@ -950,22 +970,22 @@
       "part": "Part 4",
       "question_no": 59,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 59)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 59))",
+      "type": "Dialogue Match",
+      "text": "我爸爸姓刘，我妈妈姓杨，所以我叫刘杨。",
       "answer": "A",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_59.webp",
       "options": [
-        "A ...",
-        "B ...",
-        "C ...",
-        "D ...",
-        "E ...",
-        "F ..."
+        "A 这个名字很有意思。",
+        "B 太多了吧？这是药！",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？",
+        "D 在门后面玩儿呢。",
+        "E 您看了吗？没什么问题吧？"
       ],
       "board_image": null,
-      "explanation": "Đáp án [A]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '我爸爸姓刘，我妈妈姓杨，所以我叫刘杨。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là A.",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ bàba xìng Liú, wǒ māma xìng Yáng, suǒyǐ wǒ jiào Liúyáng."
     },
     {
       "exam_code": "H21003",
@@ -973,22 +993,22 @@
       "part": "Part 4",
       "question_no": 60,
       "image": null,
-      "type": "Sentence Match",
-      "text": "请选择对应的答句 (Câu hỏi 60)(qǐng xuǎn zé duì yìng de dá jù  (Câu hỏi 60))",
+      "type": "Dialogue Match",
+      "text": "医生说大人一天可以吃 4 次。",
       "answer": "B",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_60.webp",
       "options": [
-        "A ...",
-        "B ...",
-        "C ...",
-        "D ...",
-        "E ...",
-        "F ..."
+        "A 这个名字很有意思。",
+        "B 太多了吧？这是药！",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？",
+        "D 在门后面玩儿呢。",
+        "E 您看了吗？没什么问题吧？"
       ],
       "board_image": null,
-      "explanation": "Đáp án [B]: Ghép với câu đối thoại tương ứng.",
-      "listening_pinyin": null
+      "explanation": "Câu vế hỏi/mở đầu: '医生说大人一天可以吃 4 次。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là B.",
+      "listening_pinyin": null,
+      "pinyin": "Yīshēng shuō dàren yì tiān kěyǐ chī 4 cì."
     }
   ]
 }

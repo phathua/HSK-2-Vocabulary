@@ -67,10 +67,19 @@
       ];
     }
 
-    // 2. Nếu câu hỏi có cấu hình options riêng
+    // 2. Nếu câu hỏi có cấu hình options riêng (bóc tách tiền tố chữ cái A-F nếu có)
     if (question.options && question.options.length > 0) {
       return question.options.map((opt) => {
         if (typeof opt === 'string') {
+          const m = opt.match(/^([A-Fa-f])[\s\.．、:：]*(.*)$/);
+          if (m) {
+            const letter = m[1].toUpperCase();
+            const textContent = m[2].trim();
+            return {
+              value: letter,
+              label: textContent || letter
+            };
+          }
           return { label: opt, value: opt };
         }
         return {
@@ -99,6 +108,56 @@
       { label: 'B', value: 'B' },
       { label: 'C', value: 'C' }
     ];
+  });
+
+  // Tách câu hỏi thành các tầng hiển thị có trật tự: Hàng chữ Hán ở trên, Pinyin ở dưới
+  const parsedQuestionDisplay = $derived.by(() => {
+    const raw = question.text || '';
+    if (!raw || raw.startsWith('Câu hỏi nghe số')) return null;
+
+    // 1. Trường hợp có dấu ★ (True/False Part 3)
+    if (raw.includes('★')) {
+      const parts = raw.split('★');
+      const contextRaw = parts[0].trim();
+      const statementRaw = (parts[1] || '').trim();
+
+      const parseChunk = (str: string) => {
+        const m = str.match(/^(.*?)\s*[\(（]([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s,\.\?!’'\-—]+)[\)）]?$/);
+        if (m) {
+          return { hanzi: m[1].trim(), pinyin: m[2].trim() };
+        }
+        return { hanzi: str, pinyin: '' };
+      };
+
+      const ctx = parseChunk(contextRaw);
+      const stmt = parseChunk(statementRaw);
+
+      return {
+        isTrueFalseStatement: true,
+        hanzi: '',
+        pinyin: '',
+        contextHanzi: ctx.hanzi,
+        contextPinyin: question.pinyin || ctx.pinyin,
+        statementHanzi: stmt.hanzi,
+        statementPinyin: question.statement_pinyin || stmt.pinyin
+      };
+    }
+
+    // 2. Trường hợp câu đơn: Chữ Hán (pinyin)
+    const m = raw.match(/^(.*?)\s*[\(（]([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s,\.\?!’'\-—]+)[\)）]$/);
+    if (m) {
+      return {
+        isTrueFalseStatement: false,
+        hanzi: m[1].trim(),
+        pinyin: question.pinyin || m[2].trim()
+      };
+    }
+
+    return {
+      isTrueFalseStatement: false,
+      hanzi: raw,
+      pinyin: question.pinyin || ''
+    };
   });
 
   const isTrueFalse = $derived(question.type.includes('True/False'));
@@ -234,19 +293,81 @@
         {/if}
 
         <!-- Tiêu đề câu hỏi / Prompt Text -->
-        <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-0.5 sm:mb-1">
-          {#if isTrueFalse}
-            Chọn Đúng hoặc Sai:
+        <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 text-center">
+          {#if question.section.includes('Reading') || question.question_no >= 36}
+            {#if question.part.includes('Part 1') || (question.question_no >= 36 && question.question_no <= 40)}
+              Xem tranh và chọn câu phù hợp (A – F):
+            {:else if question.part.includes('Part 2') || (question.question_no >= 41 && question.question_no <= 45)}
+              Chọn từ thích hợp điền vào chỗ trống (A – F):
+            {:else if question.part.includes('Part 3') || (question.question_no >= 46 && question.question_no <= 50)}
+              Đọc đoạn văn và phán đoán Đúng / Sai:
+            {:else}
+              Chọn câu đối thoại phù hợp (A – F):
+            {/if}
+          {:else if isTrueFalse}
+            Nghe và phán đoán Đúng hoặc Sai:
           {:else if question.part.includes('Part 2') || question.type.includes('Match')}
-            Chọn tranh A – F phù hợp:
+            Nghe và chọn tranh A – F phù hợp:
           {:else}
-            Chọn đáp án chính xác:
+            Nghe và chọn đáp án chính xác:
           {/if}
         </span>
 
-        {#if question.text && !question.text.startsWith('Câu hỏi nghe số')}
-          <div class="text-base sm:text-xl lg:text-2xl font-black text-slate-900 dark:text-[#E3E3E3] mb-1 max-w-sm leading-snug font-serif">
-            {question.text}
+        <!-- Khối hiển thị đề bài phân tầng: Hàng trên chữ Hán, Hàng dưới Pinyin -->
+        {#if parsedQuestionDisplay}
+          <div class="w-full max-w-sm mb-2 text-center select-text">
+            {#if parsedQuestionDisplay.isTrueFalseStatement}
+              <!-- Part 3: Khối Ngữ cảnh + Khối Nhận định ★ -->
+              <div class="bg-slate-50/70 dark:bg-[#202224]/80 border border-slate-200/80 dark:border-neutral-800 rounded-2xl p-3 text-left space-y-2.5">
+                <div>
+                  <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
+                    {parsedQuestionDisplay.contextHanzi}
+                  </div>
+                  {#if parsedQuestionDisplay.contextPinyin}
+                    <div class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide mt-0.5">
+                      {parsedQuestionDisplay.contextPinyin}
+                    </div>
+                  {/if}
+                </div>
+
+                <div class="pt-2 border-t border-slate-200/60 dark:border-neutral-700/60 flex items-start gap-2">
+                  <span class="px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-[11px] font-black shrink-0">
+                    ★ Nhận định
+                  </span>
+                  <div class="flex-1">
+                    <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
+                      {parsedQuestionDisplay.statementHanzi}
+                    </div>
+                    {#if parsedQuestionDisplay.statementPinyin}
+                      <div class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide mt-0.5">
+                        {parsedQuestionDisplay.statementPinyin}
+                      </div>
+                    {/if}
+                  </div>
+                </div>
+              </div>
+            {:else}
+              <!-- Câu thông thường: Hàng trên Chữ Hán, Hàng dưới Pinyin -->
+              <div class="space-y-1">
+                <div class="text-lg sm:text-2xl font-black text-slate-900 dark:text-[#E3E3E3] leading-snug font-serif">
+                  {#if parsedQuestionDisplay.hanzi.includes('( )') || parsedQuestionDisplay.hanzi.includes('（ ）')}
+                    {@const parts = parsedQuestionDisplay.hanzi.split(/[\(（]\s*[\)）]/)}
+                    <span>{parts[0]}</span>
+                    <span class="inline-block mx-1.5 px-3 py-0.5 border-b-2 border-orange-500 text-orange-600 dark:text-orange-400 font-mono text-sm bg-orange-50 dark:bg-orange-950/40 rounded">
+                      ( &nbsp;&nbsp;&nbsp;&nbsp; )
+                    </span>
+                    <span>{parts[1] || ''}</span>
+                  {:else}
+                    {parsedQuestionDisplay.hanzi}
+                  {/if}
+                </div>
+                {#if parsedQuestionDisplay.pinyin}
+                  <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
+                    {parsedQuestionDisplay.pinyin}
+                  </div>
+                {/if}
+              </div>
+            {/if}
           </div>
         {/if}
 
@@ -294,7 +415,7 @@
             <button
               type="button"
               onclick={() => onSelectAnswer(opt.value)}
-              class={`min-h-[58px] p-3 rounded-2xl font-black text-left flex items-center gap-2.5 transition-all cursor-pointer border-2 relative select-none ${
+              class={`min-h-[58px] p-3 rounded-2xl font-black text-left flex items-center ${opt.label === opt.value ? 'justify-center' : 'gap-2.5'} transition-all cursor-pointer border-2 relative select-none ${
                 !isRevealed
                   ? 'bg-white dark:bg-[#1B1B1B] hover:bg-slate-50 dark:hover:bg-[#282A2C] border-slate-200 dark:border-[#282A2C] active:scale-98 shadow-2xs text-slate-800 dark:text-slate-200'
                   : isTarget
@@ -324,11 +445,13 @@
                 {/if}
               </div>
 
-              <div class="flex-1 min-w-0">
-                <span class="text-sm font-bold truncate">
-                  {isTrueFalse ? opt.label : opt.label !== opt.value ? `${opt.label} (${opt.value})` : opt.label}
-                </span>
-              </div>
+              {#if opt.label !== opt.value}
+                <div class="flex-1 min-w-0">
+                  <span class="text-sm font-bold truncate">
+                    {opt.label}
+                  </span>
+                </div>
+              {/if}
             </button>
           {/each}
         </div>
@@ -371,7 +494,7 @@
         <button
           type="button"
           onclick={() => onSelectAnswer(opt.value)}
-          class={`min-h-[52px] sm:min-h-[60px] p-2.5 rounded-2xl font-black text-left flex items-center gap-2 transition-all cursor-pointer border-2 relative select-none ${
+          class={`min-h-[52px] sm:min-h-[60px] p-2.5 rounded-2xl font-black text-left flex items-center ${opt.label === opt.value ? 'justify-center' : 'gap-2'} transition-all cursor-pointer border-2 relative select-none ${
             !isRevealed
               ? 'bg-white dark:bg-[#1B1B1B] hover:bg-slate-50 dark:hover:bg-[#282A2C] border-slate-200 dark:border-[#282A2C] active:scale-98 shadow-2xs text-slate-800 dark:text-slate-200'
               : isTarget
@@ -401,11 +524,13 @@
             {/if}
           </div>
 
-          <div class="flex-1 min-w-0">
-            <span class="text-xs sm:text-sm font-bold truncate">
-              {isTrueFalse ? opt.label : opt.label !== opt.value ? `${opt.label} (${opt.value})` : opt.label}
-            </span>
-          </div>
+          {#if opt.label !== opt.value}
+            <div class="flex-1 min-w-0">
+              <span class="text-xs sm:text-sm font-bold truncate">
+                {opt.label}
+              </span>
+            </div>
+          {/if}
         </button>
       {/each}
     </div>
