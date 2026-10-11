@@ -399,44 +399,51 @@
       <div
         class="mt-2.5 pt-2.5 border-t border-slate-200/80 dark:border-neutral-800/80 flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-1 duration-200"
       >
-        <!-- Hàng hiển thị Karaoke Word-by-Word -->
-        <div class="flex flex-wrap items-end gap-x-1.5 gap-y-2 justify-center sm:justify-start px-1 py-1">
-          {#if currentWords.length > 0}
-            {#each currentWords as w}
-              {@const isWordActive = currentTime >= w.start && currentTime <= w.end}
-              <div
-                class="inline-flex flex-col items-center justify-end transition-all duration-150 rounded-lg px-1.5 py-0.5 {isWordActive ? 'bg-orange-100 dark:bg-orange-950/80 ring-2 ring-orange-500/40 scale-105 shadow-xs' : 'bg-transparent'}"
-              >
-                <!-- Chữ Hán ở trên -->
-                <span
-                  class="text-base sm:text-lg font-serif font-bold transition-colors leading-none {isWordActive ? 'text-orange-600 dark:text-orange-400 font-extrabold' : 'text-slate-800 dark:text-slate-100'}"
+        <!-- Hàng hiển thị Karaoke Word-by-Word hoặc Thông báo Nhạc dạo -->
+        {#if activeSubtitle.isIntro || activeSubtitle.text.includes('🎵')}
+          <div class="flex items-center justify-center gap-2 py-2 text-slate-500 dark:text-neutral-400 font-medium text-xs sm:text-sm">
+            <span class="text-base animate-bounce">🎵</span>
+            <span>Đang phát nhạc dạo đầu bài thi HSK 2...</span>
+          </div>
+        {:else}
+          <div class="flex flex-wrap items-end gap-x-1.5 gap-y-2 justify-center sm:justify-start px-1 py-1">
+            {#if currentWords.length > 0}
+              {#each currentWords as w}
+                {@const isWordActive = currentTime >= w.start && currentTime <= w.end}
+                <div
+                  class="inline-flex flex-col items-center justify-end transition-all duration-150 rounded-lg px-1.5 py-0.5 {isWordActive ? 'bg-orange-100 dark:bg-orange-950/80 ring-2 ring-orange-500/40 scale-105 shadow-xs' : 'bg-transparent'}"
                 >
-                  {w.word}
-                </span>
-                <!-- Pinyin ở chân -->
-                {#if w.pinyin}
+                  <!-- Chữ Hán ở trên -->
                   <span
-                    class="text-[10px] sm:text-xs font-mono transition-colors mt-0.5 leading-none {isWordActive ? 'text-amber-700 dark:text-amber-300 font-bold' : 'text-slate-400 dark:text-neutral-400'}"
+                    class="text-base sm:text-lg font-serif font-bold transition-colors leading-none {isWordActive ? 'text-orange-600 dark:text-orange-400 font-extrabold' : 'text-slate-800 dark:text-slate-100'}"
                   >
-                    {w.pinyin}
+                    {w.word}
+                  </span>
+                  <!-- Pinyin ở chân -->
+                  {#if w.pinyin}
+                    <span
+                      class="text-[10px] sm:text-xs font-mono transition-colors mt-0.5 leading-none {isWordActive ? 'text-amber-700 dark:text-amber-300 font-bold' : 'text-slate-400 dark:text-neutral-400'}"
+                    >
+                      {w.pinyin}
+                    </span>
+                  {/if}
+                </div>
+              {/each}
+            {:else}
+              <!-- Fallback hiển thị cả cụm nếu chưa bóc tách word lẻ -->
+              <div class="flex flex-col items-center sm:items-start">
+                <span class="text-base sm:text-lg font-serif font-bold text-orange-600 dark:text-orange-400">
+                  {activeSubtitle.text}
+                </span>
+                {#if activeSubtitle.pinyin}
+                  <span class="text-xs font-mono text-amber-600 dark:text-amber-400 mt-0.5">
+                    {activeSubtitle.pinyin}
                   </span>
                 {/if}
               </div>
-            {/each}
-          {:else}
-            <!-- Fallback hiển thị cả cụm nếu chưa bóc tách word lẻ -->
-            <div class="flex flex-col items-center sm:items-start">
-              <span class="text-base sm:text-lg font-serif font-bold text-orange-600 dark:text-orange-400">
-                {activeSubtitle.text}
-              </span>
-              {#if activeSubtitle.pinyin}
-                <span class="text-xs font-mono text-amber-600 dark:text-amber-400 mt-0.5">
-                  {activeSubtitle.pinyin}
-                </span>
-              {/if}
-            </div>
-          {/if}
-        </div>
+            {/if}
+          </div>
+        {/if}
 
         <!-- Bản dịch tiếng Việt của cả câu (nhẹ nhàng, thanh lịch, không có tiền tố thừa) -->
         {#if activeSubtitle.viet}
@@ -475,18 +482,33 @@
       class="bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] rounded-3xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden"
     >
       <!-- Header Modal -->
-      <div class="p-4 sm:px-6 border-b border-slate-200 dark:border-neutral-800 flex items-center justify-between gap-3 shrink-0">
+      <div class="p-3.5 sm:px-6 border-b border-slate-200 dark:border-neutral-800 flex items-center justify-between gap-3 shrink-0">
         <div class="flex items-center gap-2.5 min-w-0">
-          <div class="w-9 h-9 rounded-2xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
-            <FileText class="w-5 h-5" />
+          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-2xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
+            <FileText class="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
-          <div>
-            <h3 id="transcript-modal-title" class="text-sm sm:text-base font-black text-slate-900 dark:text-slate-100">
-              Bản chép lời bài nghe (Transcript)
-            </h3>
-            <p class="text-[11px] text-slate-500 dark:text-neutral-400 font-medium">
-              Đề thi: {examCode} • Toàn bộ 35 câu nghe
-            </p>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2">
+              <h3 id="transcript-modal-title" class="text-xs sm:text-sm font-black text-slate-900 dark:text-slate-100 truncate">
+                Bản chép lời bài nghe
+              </h3>
+              <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 font-bold shrink-0">
+                {examCode}
+              </span>
+            </div>
+            <!-- Live Audio Progress trên Header Modal -->
+            <div class="flex items-center gap-2 mt-0.5">
+              <span class="text-[11px] font-mono font-bold text-orange-600 dark:text-orange-400">
+                {formatTime(currentTime)}
+              </span>
+              <span class="text-[10px] text-slate-400">/</span>
+              <span class="text-[11px] font-mono text-slate-500 dark:text-neutral-400">
+                {formatTime(duration)}
+              </span>
+              <div class="w-16 sm:w-28 h-1 bg-slate-200 dark:bg-neutral-800 rounded-full overflow-hidden ml-1">
+                <div class="h-full bg-orange-500 transition-all duration-200" style="width: {duration ? (currentTime / duration) * 100 : 0}%"></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -501,7 +523,7 @@
       </div>
 
       <!-- Filter Tabs theo Part (Phần 1 - 4) -->
-      <div class="flex items-center gap-1.5 p-3 sm:px-6 bg-slate-50 dark:bg-[#202020] border-b border-slate-200 dark:border-neutral-800 overflow-x-auto shrink-0">
+      <div class="flex items-center gap-1.5 p-2.5 sm:px-6 bg-slate-50 dark:bg-[#202020] border-b border-slate-200 dark:border-neutral-800 overflow-x-auto shrink-0">
         {#each [
           { id: 'karaoke', label: 'Lời chạy trực tiếp (Karaoke)' },
           { id: 'all', label: 'Tất cả (35 câu)' },
@@ -513,7 +535,7 @@
           <button
             type="button"
             onclick={() => (activeTranscriptPart = tab.id)}
-            class="px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-all cursor-pointer {
+            class="px-2.5 py-1 rounded-xl text-xs font-bold shrink-0 transition-all cursor-pointer {
               activeTranscriptPart === tab.id
                 ? 'bg-orange-600 text-white shadow-xs'
                 : 'bg-white dark:bg-neutral-800 text-slate-600 dark:text-neutral-300 hover:bg-slate-100 dark:hover:bg-neutral-700 border border-slate-200 dark:border-neutral-700'
@@ -525,9 +547,9 @@
       </div>
 
       <!-- Nội dung danh sách lời thoại -->
-      <div class="flex-1 overflow-y-auto p-4 sm:p-6" bind:this={scrollContainer}>
+      <div class="flex-1 overflow-y-auto p-3 sm:p-5" bind:this={scrollContainer}>
         {#if activeTranscriptPart === 'karaoke'}
-          <div class="space-y-4 max-w-xl mx-auto py-8">
+          <div class="space-y-2 max-w-xl mx-auto py-2">
             {#if subtitles.length === 0}
                <div class="text-center py-8 text-xs text-slate-500">Đang tải lời chạy trực tiếp...</div>
             {:else}
@@ -536,22 +558,27 @@
                    type="button"
                    id="subtitle-{i}"
                    onclick={() => seekTo(sub.startTime)}
-                   class="w-full text-left p-4 rounded-2xl transition-all duration-300 cursor-pointer block {i === activeSubtitleIndex ? 'bg-orange-100 dark:bg-orange-900/40 border border-orange-200 dark:border-orange-800 shadow-sm scale-[1.02]' : 'bg-transparent hover:bg-slate-50 dark:hover:bg-neutral-800/50 opacity-60 hover:opacity-100'}"
+                   class="w-full text-left p-2.5 sm:p-3 rounded-2xl transition-all duration-200 cursor-pointer block {i === activeSubtitleIndex ? 'bg-orange-500/10 dark:bg-orange-950/40 border border-orange-300 dark:border-orange-800/80 shadow-xs ring-1 ring-orange-500/30' : 'bg-transparent hover:bg-slate-50 dark:hover:bg-neutral-800/50 opacity-70 hover:opacity-100'}"
                  >
-                   <div class="flex flex-col gap-1 w-full">
-                     <span class="text-lg md:text-xl font-medium font-serif leading-relaxed transition-colors duration-300 {i === activeSubtitleIndex ? 'text-orange-700 dark:text-orange-300 font-bold' : 'text-slate-700 dark:text-neutral-300'}">
-                       {@html sub.text.replace(/\n/g, '<br/>')}
+                   <div class="flex items-start justify-between gap-2.5">
+                     <div class="flex flex-col gap-0.5 flex-1 min-w-0">
+                       <span class="text-sm sm:text-base font-medium font-serif leading-snug {i === activeSubtitleIndex ? 'text-orange-700 dark:text-orange-300 font-bold' : 'text-slate-800 dark:text-slate-200'}">
+                         {@html sub.text.replace(/\n/g, '<br/>')}
+                       </span>
+                       {#if sub.pinyin}
+                         <span class="text-[11px] sm:text-xs font-mono {i === activeSubtitleIndex ? 'text-amber-600 dark:text-amber-400 font-semibold' : 'text-slate-400 dark:text-neutral-500'}">
+                           {sub.pinyin}
+                         </span>
+                       {/if}
+                       {#if sub.viet}
+                         <span class="text-xs italic font-medium mt-0.5 leading-snug {i === activeSubtitleIndex ? 'text-slate-700 dark:text-neutral-200' : 'text-slate-400 dark:text-neutral-400'}">
+                           {sub.viet}
+                         </span>
+                       {/if}
+                     </div>
+                     <span class="px-2 py-0.5 rounded-lg text-[10px] font-mono font-bold shrink-0 transition-colors {i === activeSubtitleIndex ? 'bg-orange-600 text-white' : 'bg-slate-100 dark:bg-neutral-800 text-slate-500 dark:text-neutral-400'}">
+                       {formatTime(sub.startTime)}
                      </span>
-                     {#if sub.pinyin}
-                       <span class="text-sm md:text-base font-mono transition-colors duration-300 {i === activeSubtitleIndex ? 'text-amber-600 dark:text-amber-400 font-semibold' : 'text-slate-500 dark:text-neutral-500'}">
-                         {sub.pinyin}
-                       </span>
-                     {/if}
-                     {#if sub.viet}
-                       <span class="text-xs md:text-sm italic font-medium transition-colors duration-300 {i === activeSubtitleIndex ? 'text-slate-700 dark:text-neutral-200' : 'text-slate-500 dark:text-neutral-400'}">
-                         {sub.viet}
-                       </span>
-                     {/if}
                    </div>
                  </button>
                {/each}
