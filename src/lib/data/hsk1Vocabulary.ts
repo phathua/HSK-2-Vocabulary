@@ -19,6 +19,7 @@ export const HSK1_LESSON_INFOS: LessonInfo[] = [
 ];
 
 export const HSK1_VOCABULARY: VocabItem[] = [
+
   // ==================== BÀI 1 (6 từ) ====================
   { id: "hsk1-1-1", pinyin: "nǐ", viet: "bạn, anh/chị", hanzi: "你", lesson: 1, image: "https://images.pexels.com/photos/905947/pexels-photo-905947.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-1-2", pinyin: "hǎo", viet: "tốt, khỏe, hay", hanzi: "好", lesson: 1, image: "https://images.pexels.com/photos/8831809/pexels-photo-8831809.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -33,7 +34,7 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-2-3", pinyin: "bú kèqi", viet: "đừng khách sáo, không có gì", hanzi: "不客气", lesson: 2, image: "https://images.pexels.com/photos/33944557/pexels-photo-33944557.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-2-4", pinyin: "zàijiàn", viet: "tạm biệt", hanzi: "再见", lesson: 2, image: "https://images.pexels.com/photos/8832738/pexels-photo-8832738.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
-  // ==================== BÀI 3 (9 từ) ====================
+  // ==================== BÀI 3 (12 từ) ====================
   { id: "hsk1-3-1", pinyin: "jiào", viet: "gọi, tên là", hanzi: "叫", lesson: 3, image: "https://images.pexels.com/photos/11861959/pexels-photo-11861959.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-3-2", pinyin: "shénme", viet: "cái gì", hanzi: "什么", lesson: 3, image: "https://images.pexels.com/photos/14997034/pexels-photo-14997034.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-3-3", pinyin: "míngzi", viet: "tên", hanzi: "名字", lesson: 3, image: "https://images.pexels.com/photos/12579758/pexels-photo-12579758.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -43,9 +44,13 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-3-7", pinyin: "ma", viet: "trợ từ nghi vấn (không, hả, à)", hanzi: "吗", lesson: 3, image: "https://images.pexels.com/photos/14997034/pexels-photo-14997034.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-3-8", pinyin: "xuésheng", viet: "học sinh, sinh viên", hanzi: "学生", lesson: 3, image: "https://images.pexels.com/photos/8199252/pexels-photo-8199252.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-3-9", pinyin: "rén", viet: "người", hanzi: "人", lesson: 3, image: "https://images.pexels.com/photos/3228887/pexels-photo-3228887.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-3-中国", pinyin: "Zhōngguó", viet: "Trung Quốc", hanzi: "中国", lesson: 3, image: "https://images.pexels.com/photos/36562293/pexels-photo-36562293.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-3-李月", pinyin: "Lǐ Yuè", viet: "Lý Nguyệt", hanzi: "李月", lesson: 3, image: "https://images.pexels.com/photos/8617961/pexels-photo-8617961.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-3-玛丽", pinyin: "Mǎlì", viet: "Mary, Mã Lệ", hanzi: "玛丽", lesson: 3, image: "https://images.pexels.com/photos/874151/pexels-photo-874151.png?auto=compress&cs=tinysrgb&h=350" },
 
   // ==================== BÀI 4 (10 từ) ====================
   { id: "hsk1-4-1", pinyin: "tā", viet: "cô ấy, bà ấy", hanzi: "她", lesson: 4, image: "https://images.pexels.com/photos/874151/pexels-photo-874151.png?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-4-10", pinyin: "péngyou", viet: "bạn bè", hanzi: "朋友", lesson: 4, image: "https://images.pexels.com/photos/6705873/pexels-photo-6705873.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-4-2", pinyin: "shéi", viet: "ai", hanzi: "谁", lesson: 4, image: "https://images.pexels.com/photos/5763066/pexels-photo-5763066.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-4-3", pinyin: "de", viet: "trợ từ sở hữu (của)", hanzi: "的", lesson: 4, image: "https://images.pexels.com/photos/10154712/pexels-photo-10154712.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-4-4", pinyin: "Hànyǔ", viet: "tiếng Trung", hanzi: "汉语", lesson: 4, image: "https://images.pexels.com/photos/31069603/pexels-photo-31069603.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -54,10 +59,10 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-4-7", pinyin: "ne", viet: "thế, còn... thì sao", hanzi: "呢", lesson: 4, image: "https://images.pexels.com/photos/14200836/pexels-photo-14200836.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-4-8", pinyin: "tā", viet: "anh ấy, ông ấy", hanzi: "他", lesson: 4, image: "https://images.pexels.com/photos/6265198/pexels-photo-6265198.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-4-9", pinyin: "tóngxué", viet: "bạn học", hanzi: "同学", lesson: 4, image: "https://images.pexels.com/photos/9489923/pexels-photo-9489923.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-4-10", pinyin: "péngyou", viet: "bạn bè", hanzi: "朋友", lesson: 4, image: "https://images.pexels.com/photos/6705873/pexels-photo-6705873.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
-  // ==================== BÀI 5 (10 từ) ====================
+  // ==================== BÀI 5 (22 từ) ====================
   { id: "hsk1-5-1", pinyin: "jiā", viet: "nhà, gia đình", hanzi: "家", lesson: 5, image: "https://images.pexels.com/photos/30348304/pexels-photo-30348304.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-10", pinyin: "dà", viet: "lớn, nhiều tuổi", hanzi: "大", lesson: 5, image: "https://images.pexels.com/photos/7983622/pexels-photo-7983622.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-5-2", pinyin: "yǒu", viet: "có", hanzi: "有", lesson: 5, image: "https://images.pexels.com/photos/31743604/pexels-photo-31743604.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-5-3", pinyin: "kǒu", viet: "lượng từ chỉ người trong nhà", hanzi: "口", lesson: 5, image: "https://images.pexels.com/photos/11956948/pexels-photo-11956948.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-5-4", pinyin: "nǚ'ér", viet: "con gái", hanzi: "女儿", lesson: 5, image: "https://images.pexels.com/photos/29650590/pexels-photo-29650590.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -66,10 +71,24 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-5-7", pinyin: "le", viet: "trợ từ (rồi)", hanzi: "了", lesson: 5, image: "https://images.pexels.com/photos/38028968/pexels-photo-38028968.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-5-8", pinyin: "jīnnián", viet: "năm nay", hanzi: "今年", lesson: 5, image: "https://images.pexels.com/photos/12921076/pexels-photo-12921076.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-5-9", pinyin: "duō", viet: "bao nhiêu (hỏi tuổi/mức độ)", hanzi: "多", lesson: 5, image: "https://images.pexels.com/photos/47040/meter-tape-measure-measure-gage-47040.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-5-10", pinyin: "dà", viet: "lớn, nhiều tuổi", hanzi: "大", lesson: 5, image: "https://images.pexels.com/photos/7983622/pexels-photo-7983622.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-一", pinyin: "yī", viet: "một, số 1", hanzi: "一", lesson: 5, image: "https://images.pexels.com/photos/1329296/pexels-photo-1329296.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-七", pinyin: "qī", viet: "bảy, số 7", hanzi: "七", lesson: 5, image: "https://images.pexels.com/photos/1329302/pexels-photo-1329302.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-三", pinyin: "sān", viet: "ba, số 3", hanzi: "三", lesson: 5, image: "https://images.pexels.com/photos/1329298/pexels-photo-1329298.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-九", pinyin: "jiǔ", viet: "chín, số 9", hanzi: "九", lesson: 5, image: "https://images.pexels.com/photos/1329304/pexels-photo-1329304.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-二", pinyin: "èr", viet: "hai, số 2", hanzi: "二", lesson: 5, image: "https://images.pexels.com/photos/1329297/pexels-photo-1329297.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-五", pinyin: "wǔ", viet: "năm, số 5", hanzi: "五", lesson: 5, image: "https://images.pexels.com/photos/1329300/pexels-photo-1329300.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-八", pinyin: "bā", viet: "tám, số 8", hanzi: "八", lesson: 5, image: "https://images.pexels.com/photos/1329303/pexels-photo-1329303.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-六", pinyin: "liù", viet: "sáu, số 6", hanzi: "六", lesson: 5, image: "https://images.pexels.com/photos/1329301/pexels-photo-1329301.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-十", pinyin: "shí", viet: "mười, số 10", hanzi: "十", lesson: 5, image: "https://images.pexels.com/photos/1329305/pexels-photo-1329305.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-四", pinyin: "sì", viet: "bốn, số 4", hanzi: "四", lesson: 5, image: "https://images.pexels.com/photos/1329299/pexels-photo-1329299.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-说话", pinyin: "shuōhuà", viet: "nói chuyện, phát biểu", hanzi: "说话", lesson: 5, image: "https://images.pexels.com/photos/18325674/pexels-photo-18325674.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-5-零", pinyin: "líng", viet: "không, số 0", hanzi: "零", lesson: 5, image: "https://images.pexels.com/photos/34968620/pexels-photo-34968620.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
   // ==================== BÀI 6 (12 từ) ====================
   { id: "hsk1-6-1", pinyin: "huì", viet: "biết (qua học tập)", hanzi: "会", lesson: 6, image: "https://images.pexels.com/photos/32098834/pexels-photo-32098834.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-6-10", pinyin: "zì", viet: "chữ", hanzi: "字", lesson: 6, image: "https://images.pexels.com/photos/34935972/pexels-photo-34935972.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-6-11", pinyin: "zěnme", viet: "thế nào, làm sao", hanzi: "怎么", lesson: 6, image: "https://images.pexels.com/photos/35923029/pexels-photo-35923029.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-6-12", pinyin: "dú", viet: "đọc", hanzi: "读", lesson: 6, image: "https://images.pexels.com/photos/4170628/pexels-photo-4170628.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-6-2", pinyin: "shuō", viet: "nói", hanzi: "说", lesson: 6, image: "https://images.pexels.com/photos/6201175/pexels-photo-6201175.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-6-3", pinyin: "māma", viet: "mẹ", hanzi: "妈妈", lesson: 6, image: "https://images.pexels.com/photos/18689091/pexels-photo-18689091.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-6-4", pinyin: "cài", viet: "món ăn, rau", hanzi: "菜", lesson: 6, image: "https://images.pexels.com/photos/15597768/pexels-photo-15597768.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -78,12 +97,12 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-6-7", pinyin: "zuò", viet: "làm, nấu", hanzi: "做", lesson: 6, image: "https://images.pexels.com/photos/30795870/pexels-photo-30795870.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-6-8", pinyin: "xiě", viet: "viết", hanzi: "写", lesson: 6, image: "https://images.pexels.com/photos/16282318/pexels-photo-16282318.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-6-9", pinyin: "Hànzì", viet: "chữ Hán", hanzi: "汉字", lesson: 6, image: "https://images.pexels.com/photos/31069603/pexels-photo-31069603.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-6-10", pinyin: "zì", viet: "chữ", hanzi: "字", lesson: 6, image: "https://images.pexels.com/photos/34935972/pexels-photo-34935972.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-6-11", pinyin: "zěnme", viet: "thế nào, làm sao", hanzi: "怎么", lesson: 6, image: "https://images.pexels.com/photos/35923029/pexels-photo-35923029.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-6-12", pinyin: "dú", viet: "đọc", hanzi: "读", lesson: 6, image: "https://images.pexels.com/photos/4170628/pexels-photo-4170628.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
   // ==================== BÀI 7 (12 từ) ====================
   { id: "hsk1-7-1", pinyin: "qǐng", viet: "xin, mời", hanzi: "请", lesson: 7, image: "https://images.pexels.com/photos/8832724/pexels-photo-8832724.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-7-10", pinyin: "xuéxiào", viet: "trường học", hanzi: "学校", lesson: 7, image: "https://images.pexels.com/photos/2676888/pexels-photo-2676888.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-7-11", pinyin: "kàn", viet: "nhìn, xem, đọc", hanzi: "看", lesson: 7, image: "https://images.pexels.com/photos/38364311/pexels-photo-38364311.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-7-12", pinyin: "shū", viet: "sách", hanzi: "书", lesson: 7, image: "https://images.pexels.com/photos/8145576/pexels-photo-8145576.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-7-2", pinyin: "wèn", viet: "hỏi", hanzi: "问", lesson: 7, image: "https://images.pexels.com/photos/8618062/pexels-photo-8618062.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-7-3", pinyin: "jīntiān", viet: "hôm nay", hanzi: "今天", lesson: 7, image: "https://images.pexels.com/photos/15644350/pexels-photo-15644350.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-7-4", pinyin: "hào", viet: "ngày, số", hanzi: "号", lesson: 7, image: "https://images.pexels.com/photos/5504162/pexels-photo-5504162.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -92,12 +111,15 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-7-7", pinyin: "zuótiān", viet: "hôm qua", hanzi: "昨天", lesson: 7, image: "https://images.pexels.com/photos/5740996/pexels-photo-5740996.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-7-8", pinyin: "míngtiān", viet: "ngày mai", hanzi: "明天", lesson: 7, image: "https://images.pexels.com/photos/15644350/pexels-photo-15644350.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-7-9", pinyin: "qù", viet: "đi", hanzi: "去", lesson: 7, image: "https://images.pexels.com/photos/33745067/pexels-photo-33745067.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-7-10", pinyin: "xuéxiào", viet: "trường học", hanzi: "学校", lesson: 7, image: "https://images.pexels.com/photos/2676888/pexels-photo-2676888.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-7-11", pinyin: "kàn", viet: "nhìn, xem, đọc", hanzi: "看", lesson: 7, image: "https://images.pexels.com/photos/38364311/pexels-photo-38364311.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-7-12", pinyin: "shū", viet: "sách", hanzi: "书", lesson: 7, image: "https://images.pexels.com/photos/8145576/pexels-photo-8145576.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
   // ==================== BÀI 8 (15 từ) ====================
   { id: "hsk1-8-1", pinyin: "xiǎng", viet: "muốn, nghĩ", hanzi: "想", lesson: 8, image: "https://images.pexels.com/photos/36922121/pexels-photo-36922121.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-8-10", pinyin: "bēizi", viet: "cốc, ly", hanzi: "杯子", lesson: 8, image: "https://images.pexels.com/photos/9000378/pexels-photo-9000378.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-8-11", pinyin: "zhè", viet: "đây, này", hanzi: "这", lesson: 8, image: "https://images.pexels.com/photos/33858785/pexels-photo-33858785.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-8-12", pinyin: "duōshao", viet: "bao nhiêu", hanzi: "多少", lesson: 8, image: "https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-8-13", pinyin: "qián", viet: "tiền", hanzi: "钱", lesson: 8, image: "https://images.pexels.com/photos/9539613/pexels-photo-9539613.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-8-14", pinyin: "kuài", viet: "đồng (đơn vị tiền tệ)", hanzi: "块", lesson: 8, image: "https://images.pexels.com/photos/4607597/pexels-photo-4607597.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-8-15", pinyin: "nà", viet: "kia, đó", hanzi: "那", lesson: 8, image: "https://images.pexels.com/photos/842687/pexels-photo-842687.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-8-2", pinyin: "hē", viet: "uống", hanzi: "喝", lesson: 8, image: "https://images.pexels.com/photos/11754189/pexels-photo-11754189.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-8-3", pinyin: "chá", viet: "trà", hanzi: "茶", lesson: 8, image: "https://images.pexels.com/photos/30742323/pexels-photo-30742323.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-8-4", pinyin: "chī", viet: "ăn", hanzi: "吃", lesson: 8, image: "https://images.pexels.com/photos/13518954/pexels-photo-13518954.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -106,15 +128,12 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-8-7", pinyin: "shāngdiàn", viet: "cửa hàng", hanzi: "商店", lesson: 8, image: "https://images.pexels.com/photos/9070122/pexels-photo-9070122.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-8-8", pinyin: "mǎi", viet: "mua", hanzi: "买", lesson: 8, image: "https://images.pexels.com/photos/8743972/pexels-photo-8743972.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-8-9", pinyin: "gè", viet: "cái, chiếc (lượng từ chung)", hanzi: "个", lesson: 8, image: "https://images.pexels.com/photos/7397134/pexels-photo-7397134.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-8-10", pinyin: "bēizi", viet: "cốc, ly", hanzi: "杯子", lesson: 8, image: "https://images.pexels.com/photos/9000378/pexels-photo-9000378.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-8-11", pinyin: "zhè", viet: "đây, này", hanzi: "这", lesson: 8, image: "https://images.pexels.com/photos/33858785/pexels-photo-33858785.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-8-12", pinyin: "duōshao", viet: "bao nhiêu", hanzi: "多少", lesson: 8, image: "https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-8-13", pinyin: "qián", viet: "tiền", hanzi: "钱", lesson: 8, image: "https://images.pexels.com/photos/9539613/pexels-photo-9539613.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-8-14", pinyin: "kuài", viet: "đồng (đơn vị tiền tệ)", hanzi: "块", lesson: 8, image: "https://images.pexels.com/photos/4607597/pexels-photo-4607597.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-8-15", pinyin: "nà", viet: "kia, đó", hanzi: "那", lesson: 8, image: "https://images.pexels.com/photos/842687/pexels-photo-842687.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
-  // ==================== BÀI 9 (12 từ) ====================
+  // ==================== BÀI 9 (14 từ) ====================
   { id: "hsk1-9-1", pinyin: "xiǎo", viet: "nhỏ, bé", hanzi: "小", lesson: 9, image: "https://images.pexels.com/photos/15373305/pexels-photo-15373305.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-9-10", pinyin: "yīyuàn", viet: "bệnh viện", hanzi: "医院", lesson: 9, image: "https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-9-11", pinyin: "yīshēng", viet: "bác sĩ", hanzi: "医生", lesson: 9, image: "https://images.pexels.com/photos/19601385/pexels-photo-19601385.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-9-12", pinyin: "bàba", viet: "bố, cha", hanzi: "爸爸", lesson: 9, image: "https://images.pexels.com/photos/19284179/pexels-photo-19284179.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-9-2", pinyin: "māo", viet: "mèo", hanzi: "猫", lesson: 9, image: "https://images.pexels.com/photos/14820983/pexels-photo-14820983.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-9-3", pinyin: "zài", viet: "ở, tại", hanzi: "在", lesson: 9, image: "https://images.pexels.com/photos/17184739/pexels-photo-17184739.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-9-4", pinyin: "nǎr", viet: "đâu, ở đâu", hanzi: "哪儿", lesson: 9, image: "https://images.pexels.com/photos/4452372/pexels-photo-4452372.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -123,12 +142,14 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-9-7", pinyin: "xiàmiàn", viet: "phía dưới, dưới", hanzi: "下面", lesson: 9, image: "https://images.pexels.com/photos/3104526/pexels-photo-3104526.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-9-8", pinyin: "gōngzuò", viet: "làm việc, công việc", hanzi: "工作", lesson: 9, image: "https://images.pexels.com/photos/7793675/pexels-photo-7793675.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-9-9", pinyin: "érzi", viet: "con trai", hanzi: "儿子", lesson: 9, image: "https://images.pexels.com/photos/15427723/pexels-photo-15427723.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-9-10", pinyin: "yīyuàn", viet: "bệnh viện", hanzi: "医院", lesson: 9, image: "https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-9-11", pinyin: "yīshēng", viet: "bác sĩ", hanzi: "医生", lesson: 9, image: "https://images.pexels.com/photos/19601385/pexels-photo-19601385.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-9-12", pinyin: "bàba", viet: "bố, cha", hanzi: "爸爸", lesson: 9, image: "https://images.pexels.com/photos/19284179/pexels-photo-19284179.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-9-下", pinyin: "xià", viet: "dưới, xuống, tan (làm)", hanzi: "下", lesson: 9, image: "https://images.pexels.com/photos/1729386/pexels-photo-1729386.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-9-那儿", pinyin: "nàr", viet: "chỗ kia, nơi đó", hanzi: "那儿", lesson: 9, image: "https://images.pexels.com/photos/8617981/pexels-photo-8617981.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
-  // ==================== BÀI 10 (12 từ) ====================
+  // ==================== BÀI 10 (14 từ) ====================
   { id: "hsk1-10-1", pinyin: "zhuōzi", viet: "cái bàn", hanzi: "桌子", lesson: 10, image: "https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-10-10", pinyin: "méiyǒu", viet: "không có", hanzi: "没有", lesson: 10, image: "https://images.pexels.com/photos/11662256/pexels-photo-11662256.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-10-11", pinyin: "néng", viet: "có thể", hanzi: "能", lesson: 10, image: "https://images.pexels.com/photos/35740586/pexels-photo-35740586.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-10-12", pinyin: "zuò", viet: "ngồi", hanzi: "坐", lesson: 10, image: "https://images.pexels.com/photos/11112735/pexels-photo-11112735.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-10-2", pinyin: "shàng", viet: "trên, phía trên", hanzi: "上", lesson: 10, image: "https://images.pexels.com/photos/27025187/pexels-photo-27025187.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-10-3", pinyin: "diànnǎo", viet: "máy tính", hanzi: "电脑", lesson: 10, image: "https://images.pexels.com/photos/12200696/pexels-photo-12200696.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-10-4", pinyin: "hé", viet: "và", hanzi: "和", lesson: 10, image: "https://images.pexels.com/photos/9385078/pexels-photo-9385078.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -137,12 +158,13 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-10-7", pinyin: "qiánmiàn", viet: "phía trước", hanzi: "前面", lesson: 10, image: "https://images.pexels.com/photos/14578428/pexels-photo-14578428.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-10-8", pinyin: "hòumiàn", viet: "phía sau", hanzi: "后面", lesson: 10, image: "https://images.pexels.com/photos/7261633/pexels-photo-7261633.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-10-9", pinyin: "zhèr", viet: "ở đây, chỗ này", hanzi: "这儿", lesson: 10, image: "https://images.pexels.com/photos/5227690/pexels-photo-5227690.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-10-10", pinyin: "méiyǒu", viet: "không có", hanzi: "没有", lesson: 10, image: "https://images.pexels.com/photos/11662256/pexels-photo-11662256.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-10-11", pinyin: "néng", viet: "có thể", hanzi: "能", lesson: 10, image: "https://images.pexels.com/photos/35740586/pexels-photo-35740586.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-10-12", pinyin: "zuò", viet: "ngồi", hanzi: "坐", lesson: 10, image: "https://images.pexels.com/photos/11112735/pexels-photo-11112735.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-10-没", pinyin: "méi", viet: "chưa, không có", hanzi: "没", lesson: 10, image: "https://images.pexels.com/photos/33944557/pexels-photo-33944557.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-10-王方", pinyin: "Wáng Fāng", viet: "Vương Phương", hanzi: "王方", lesson: 10, image: "https://images.pexels.com/photos/8199252/pexels-photo-8199252.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
-  // ==================== BÀI 11 (11 từ) ====================
+  // ==================== BÀI 11 (12 từ) ====================
   { id: "hsk1-11-1", pinyin: "xiànzài", viet: "bây giờ, hiện tại", hanzi: "现在", lesson: 11, image: "https://images.pexels.com/photos/14979013/pexels-photo-14979013.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-11-10", pinyin: "zhù", viet: "ở, cư trú", hanzi: "住", lesson: 11, image: "https://images.pexels.com/photos/19028887/pexels-photo-19028887.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-11-11", pinyin: "qián", viet: "trước", hanzi: "前", lesson: 11, image: "https://images.pexels.com/photos/36032986/pexels-photo-36032986.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-11-2", pinyin: "diǎn", viet: "giờ", hanzi: "点", lesson: 11, image: "https://images.pexels.com/photos/36143696/pexels-photo-36143696.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-11-3", pinyin: "fēn", viet: "phút", hanzi: "分", lesson: 11, image: "https://images.pexels.com/photos/28977357/pexels-photo-28977357.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-11-4", pinyin: "zhōngwǔ", viet: "buổi trưa", hanzi: "中午", lesson: 11, image: "https://images.pexels.com/photos/8363978/pexels-photo-8363978.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -151,11 +173,12 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-11-7", pinyin: "huí", viet: "về, trở về", hanzi: "回", lesson: 11, image: "https://images.pexels.com/photos/38240997/pexels-photo-38240997.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-11-8", pinyin: "wǒmen", viet: "chúng tôi, chúng ta", hanzi: "我们", lesson: 11, image: "https://images.pexels.com/photos/8436544/pexels-photo-8436544.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-11-9", pinyin: "diànyǐng", viet: "phim", hanzi: "电影", lesson: 11, image: "https://images.pexels.com/photos/7603970/pexels-photo-7603970.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-11-10", pinyin: "zhù", viet: "ở, cư trú", hanzi: "住", lesson: 11, image: "https://images.pexels.com/photos/19028887/pexels-photo-19028887.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-11-11", pinyin: "qián", viet: "trước", hanzi: "前", lesson: 11, image: "https://images.pexels.com/photos/36032986/pexels-photo-36032986.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-11-北京", pinyin: "Běijīng", viet: "Bắc Kinh", hanzi: "北京", lesson: 11, image: "https://images.pexels.com/photos/35580920/pexels-photo-35580920.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
-  // ==================== BÀI 12 (11 từ) ====================
+  // ==================== BÀI 12 (13 từ) ====================
   { id: "hsk1-12-1", pinyin: "tiānqì", viet: "thời tiết", hanzi: "天气", lesson: 12, image: "https://images.pexels.com/photos/9940016/pexels-photo-9940016.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-12-10", pinyin: "shuǐguǒ", viet: "hoa quả, trái cây", hanzi: "水果", lesson: 12, image: "https://images.pexels.com/photos/15537200/pexels-photo-15537200.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-12-11", pinyin: "shuǐ", viet: "nước", hanzi: "水", lesson: 12, image: "https://images.pexels.com/photos/9000378/pexels-photo-9000378.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-12-2", pinyin: "zěnmeyàng", viet: "như thế nào, ra sao", hanzi: "怎么样", lesson: 12, image: "https://images.pexels.com/photos/8837261/pexels-photo-8837261.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-12-3", pinyin: "tài", viet: "quá, lắm", hanzi: "太", lesson: 12, image: "https://images.pexels.com/photos/10822567/pexels-photo-10822567.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-12-4", pinyin: "rè", viet: "nóng", hanzi: "热", lesson: 12, image: "https://images.pexels.com/photos/28944485/pexels-photo-28944485.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -164,11 +187,12 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-12-7", pinyin: "shēntǐ", viet: "sức khỏe, cơ thể", hanzi: "身体", lesson: 12, image: "https://images.pexels.com/photos/14236897/pexels-photo-14236897.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-12-8", pinyin: "ài", viet: "yêu, thích", hanzi: "爱", lesson: 12, image: "https://images.pexels.com/photos/28800805/pexels-photo-28800805.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-12-9", pinyin: "xiē", viet: "một vài, một ít", hanzi: "些", lesson: 12, image: "https://images.pexels.com/photos/793772/pexels-photo-793772.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-12-10", pinyin: "shuǐguǒ", viet: "hoa quả, trái cây", hanzi: "水果", lesson: 12, image: "https://images.pexels.com/photos/15537200/pexels-photo-15537200.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-12-11", pinyin: "shuǐ", viet: "nước", hanzi: "水", lesson: 12, image: "https://images.pexels.com/photos/9000378/pexels-photo-9000378.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-12-小姐", pinyin: "xiǎojiě", viet: "cô, cô gái", hanzi: "小姐", lesson: 12, image: "https://images.pexels.com/photos/16160801/pexels-photo-16160801.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-12-来", pinyin: "lái", viet: "đến, tới", hanzi: "来", lesson: 12, image: "https://images.pexels.com/photos/28908752/pexels-photo-28908752.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
-  // ==================== BÀI 13 (10 từ) ====================
+  // ==================== BÀI 13 (11 từ) ====================
   { id: "hsk1-13-1", pinyin: "wèi", viet: "alo, này", hanzi: "喂", lesson: 13, image: "https://images.pexels.com/photos/40035691/pexels-photo-40035691.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-13-10", pinyin: "ba", viet: "trợ từ ngữ khí (đi, nhé)", hanzi: "吧", lesson: 13, image: "https://images.pexels.com/photos/19568315/pexels-photo-19568315.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-13-2", pinyin: "yě", viet: "cũng", hanzi: "也", lesson: 13, image: "https://images.pexels.com/photos/2386192/pexels-photo-2386192.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-13-3", pinyin: "xuéxí", viet: "học, học tập", hanzi: "学习", lesson: 13, image: "https://images.pexels.com/photos/9489923/pexels-photo-9489923.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-13-4", pinyin: "shàngwǔ", viet: "buổi sáng", hanzi: "上午", lesson: 13, image: "https://images.pexels.com/photos/18281419/pexels-photo-18281419.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -177,10 +201,17 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-13-7", pinyin: "xǐhuan", viet: "thích", hanzi: "喜欢", lesson: 13, image: "https://images.pexels.com/photos/15277088/pexels-photo-15277088.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-13-8", pinyin: "gěi", viet: "cho, cho ai", hanzi: "给", lesson: 13, image: "https://images.pexels.com/photos/14197884/pexels-photo-14197884.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-13-9", pinyin: "dǎ diànhuà", viet: "gọi điện thoại", hanzi: "打电话", lesson: 13, image: "https://images.pexels.com/photos/11861959/pexels-photo-11861959.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-13-10", pinyin: "ba", viet: "trợ từ ngữ khí (đi, nhé)", hanzi: "吧", lesson: 13, image: "https://images.pexels.com/photos/19568315/pexels-photo-19568315.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-13-大卫", pinyin: "Dàwèi", viet: "David, Đại Vệ", hanzi: "大卫", lesson: 13, image: "https://images.pexels.com/photos/6265198/pexels-photo-6265198.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
   // ==================== BÀI 14 (17 từ) ====================
   { id: "hsk1-14-1", pinyin: "dōngxi", viet: "đồ đạc, đồ vật", hanzi: "东西", lesson: 14, image: "https://images.pexels.com/photos/19869755/pexels-photo-19869755.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-14-10", pinyin: "hòu", viet: "sau, sau khi", hanzi: "后", lesson: 14, image: "https://images.pexels.com/photos/9069402/pexels-photo-9069402.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-14-11", pinyin: "yīfu", viet: "quần áo", hanzi: "衣服", lesson: 14, image: "https://images.pexels.com/photos/13632832/pexels-photo-13632832.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-14-12", pinyin: "piàoliang", viet: "đẹp", hanzi: "漂亮", lesson: 14, image: "https://images.pexels.com/photos/1031965/pexels-photo-1031965.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-14-14", pinyin: "shǎo", viet: "ít", hanzi: "少", lesson: 14, image: "https://images.pexels.com/photos/13986935/pexels-photo-13986935.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-14-15", pinyin: "zhèxiē", viet: "những cái này", hanzi: "这些", lesson: 14, image: "https://images.pexels.com/photos/14759603/pexels-photo-14759603.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-14-16", pinyin: "dōu", viet: "đều", hanzi: "都", lesson: 14, image: "https://images.pexels.com/photos/12517417/pexels-photo-12517417.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-14-17", pinyin: "Zhāng", viet: "Trương (họ người)", hanzi: "张", lesson: 14, image: "https://images.pexels.com/photos/7431661/pexels-photo-7431661.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-14-2", pinyin: "yìdiǎnr", viet: "một ít, một chút", hanzi: "一点儿", lesson: 14, image: "https://images.pexels.com/photos/8830877/pexels-photo-8830877.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-14-3", pinyin: "píngguǒ", viet: "quả táo", hanzi: "苹果", lesson: 14, image: "https://images.pexels.com/photos/914911/pexels-photo-914911.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-14-4", pinyin: "kànjiàn", viet: "nhìn thấy", hanzi: "看见", lesson: 14, image: "https://images.pexels.com/photos/29723779/pexels-photo-29723779.jpeg?auto=compress&cs=tinysrgb&h=350" },
@@ -189,14 +220,7 @@ export const HSK1_VOCABULARY: VocabItem[] = [
   { id: "hsk1-14-7", pinyin: "chē", viet: "xe", hanzi: "车", lesson: 14, image: "https://images.pexels.com/photos/9975992/pexels-photo-9975992.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-14-8", pinyin: "huílái", viet: "trở về", hanzi: "回来", lesson: 14, image: "https://images.pexels.com/photos/11825154/pexels-photo-11825154.jpeg?auto=compress&cs=tinysrgb&h=350" },
   { id: "hsk1-14-9", pinyin: "fēnzhōng", viet: "phút", hanzi: "分钟", lesson: 14, image: "https://images.pexels.com/photos/15930049/pexels-photo-15930049.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-14-10", pinyin: "hòu", viet: "sau, sau khi", hanzi: "后", lesson: 14, image: "https://images.pexels.com/photos/9069402/pexels-photo-9069402.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-14-11", pinyin: "yīfu", viet: "quần áo", hanzi: "衣服", lesson: 14, image: "https://images.pexels.com/photos/13632832/pexels-photo-13632832.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-14-12", pinyin: "piàoliang", viet: "đẹp", hanzi: "漂亮", lesson: 14, image: "https://images.pexels.com/photos/1031965/pexels-photo-1031965.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-14-13", pinyin: "tīng", viet: "nghe", hanzi: "听", lesson: 14, image: "https://images.pexels.com/photos/14905028/pexels-photo-14905028.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-14-14", pinyin: "shǎo", viet: "ít", hanzi: "少", lesson: 14, image: "https://images.pexels.com/photos/13986935/pexels-photo-13986935.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-14-15", pinyin: "zhèxiē", viet: "những cái này", hanzi: "这些", lesson: 14, image: "https://images.pexels.com/photos/14759603/pexels-photo-14759603.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-14-16", pinyin: "dōu", viet: "đều", hanzi: "都", lesson: 14, image: "https://images.pexels.com/photos/12517417/pexels-photo-12517417.jpeg?auto=compress&cs=tinysrgb&h=350" },
-  { id: "hsk1-14-17", pinyin: "Zhāng", viet: "Trương (họ người)", hanzi: "张", lesson: 14, image: "https://images.pexels.com/photos/7431661/pexels-photo-7431661.jpeg?auto=compress&cs=tinysrgb&h=350" },
+  { id: "hsk1-14-张欢", pinyin: "Zhāng Huān", viet: "Trương Hoan", hanzi: "张欢", lesson: 14, image: "https://images.pexels.com/photos/8199252/pexels-photo-8199252.jpeg?auto=compress&cs=tinysrgb&h=350" },
 
   // ==================== BÀI 15 (9 từ) ====================
   { id: "hsk1-15-1", pinyin: "rènshi", viet: "quen biết", hanzi: "认识", lesson: 15, image: "https://images.pexels.com/photos/8832726/pexels-photo-8832726.jpeg?auto=compress&cs=tinysrgb&h=350" },

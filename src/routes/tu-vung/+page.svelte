@@ -138,6 +138,10 @@
       // 4. Tiếng Việt (có dấu & không dấu)
       if (item.viet.toLowerCase().includes(q)) return true;
       if (removeVietnameseTones(item.viet).includes(qNoViet)) return true;
+      if (item.vi_meaning_short && item.vi_meaning_short.toLowerCase().includes(q)) return true;
+      if (item.vi_meaning_short && removeVietnameseTones(item.vi_meaning_short).includes(qNoViet)) return true;
+      if (item.vi_meaning_full && item.vi_meaning_full.toLowerCase().includes(q)) return true;
+      if (item.vi_meaning_full && removeVietnameseTones(item.vi_meaning_full).includes(qNoViet)) return true;
 
       // 5. Hán Việt (có dấu & không dấu)
       if (item.hanViet && item.hanViet.toLowerCase().includes(q)) return true;
@@ -162,7 +166,8 @@
       (w) =>
         w.hanzi.toLowerCase() === rawQ ||
         w.pinyinClean.toLowerCase() === rawQ ||
-        stripPinyinTones(w.pinyinClean) === stripPinyinTones(rawQ)
+        stripPinyinTones(w.pinyinClean) === stripPinyinTones(rawQ) ||
+        stripPinyinTones(w.pinyin) === stripPinyinTones(rawQ)
     );
     return exact || searchResults[0];
   });
@@ -322,7 +327,7 @@
                         {sug.pinyin}
                       </span>
                       <span class="text-xs text-slate-500 dark:text-[#8E918F] truncate max-w-[200px] sm:max-w-xs">
-                        {sug.viet}
+                        {sug.vi_meaning_short || sug.viet}
                       </span>
                     </div>
 
@@ -562,6 +567,51 @@
                         {/if}
                       </div>
                     {/each}
+                  </div>
+                </div>
+              {:else if currentWord.vi_meaning_short || currentWord.vi_meaning_full}
+                <div class="space-y-3">
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] flex items-center gap-1.5">
+                    <Sparkle weight="duotone" class="w-4 h-4 text-rose-500" />
+                    Ý nghĩa tiếng Việt
+                  </h3>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Cột 1: Ý nghĩa ngắn gọn -->
+                    <div class="p-4 rounded-2xl bg-rose-50/40 dark:bg-[#282A2C]/70 border border-rose-100 dark:border-[#37393B] flex flex-col justify-between">
+                      <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                          <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300">
+                            Ý nghĩa ngắn gọn
+                          </span>
+                        </div>
+                        <p class="text-xl md:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+                          {currentWord.vi_meaning_short || currentWord.viet}
+                        </p>
+                      </div>
+                      <p class="text-[11px] text-slate-400 dark:text-[#8E918F] mt-3">
+                        Nghĩa cô đọng, dễ nhớ
+                      </p>
+                    </div>
+
+                    <!-- Cột 2: Giải thích đầy đủ & Ngữ cảnh -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#282A2C]/50 border border-slate-100 dark:border-[#37393B] flex flex-col justify-between">
+                      <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                          <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold bg-slate-200/80 dark:bg-[#37393B] text-slate-700 dark:text-[#C4C7C5]">
+                            Giải thích đầy đủ & Cách dùng
+                          </span>
+                        </div>
+                        <p class="text-sm md:text-base font-medium text-slate-700 dark:text-[#E3E3E3] leading-relaxed">
+                          {currentWord.vi_meaning_full || currentWord.viet}
+                        </p>
+                      </div>
+                      {#if currentWord.partOfSpeech}
+                        <p class="text-[11px] text-slate-400 dark:text-[#8E918F] mt-3">
+                          Từ loại: <span class="font-semibold text-slate-600 dark:text-[#C4C7C5]">{currentWord.partOfSpeech}</span>
+                        </p>
+                      {/if}
+                    </div>
                   </div>
                 </div>
               {:else}
