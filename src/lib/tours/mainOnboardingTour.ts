@@ -185,13 +185,15 @@ export const mainOnboardingTour: TourDefinition = {
     },
     {
       id: 'filter-grid',
-      target: '[data-tour="filter-lessons-grid"]',
-      title: 'Danh mục 15 bài học chủ đề',
+      target: () =>
+        document.querySelector('[data-tour="filter-lessons-scroll"]') ||
+        document.querySelector('[data-tour="filter-lessons-grid"]'),
+      title: 'Danh mục bài học ôn tập 📚',
       description: 'Chạm để bật/tắt từng bài học theo tiến độ học của bạn trên lớp. Các từ vựng của bài đã chọn sẽ tự động xuất hiện trong mọi bài tập.',
       placement: 'top',
-      illustration: '/icons/panda-exam-loading.webp',
-      spotlightPadding: 6,
-      spotlightRadius: 20,
+      illustration: '/tour/mascot_buffalo.webp',
+      spotlightPadding: 4,
+      spotlightRadius: 16,
       onBeforeStep: async () => {
         appState.filterModalOpen = true;
         await delay(150);
@@ -263,6 +265,22 @@ export const mainOnboardingTour: TourDefinition = {
 
     // --- 6. CHẾ ĐỘ 2: TRẮC NGHIỆM (QUIZ) ---
     {
+      id: 'tab-quiz-intro',
+      target: '[data-tour="tab-btn-quiz"]',
+      title: 'Khám phá Chế độ Trắc nghiệm 🎯',
+      description: 'Chạm vào tab "Trắc nghiệm" trên thanh điều hướng để bắt đầu luyện tập phản xạ chọn đáp án nhanh.',
+      placement: 'bottom',
+      illustration: '/tour/mascot_tiger.webp',
+      spotlightPadding: 4,
+      spotlightRadius: 14,
+      onBeforeStep: async () => {
+        appState.activeTab = 'fill';
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'fill';
+      }
+    },
+    {
       id: 'quiz-mode',
       target: '[data-tour="quiz-card-container"]',
       title: 'Chế độ Trắc nghiệm 4 đáp án 🎯',
@@ -283,6 +301,22 @@ export const mainOnboardingTour: TourDefinition = {
 
     // --- 7. CHẾ ĐỘ 3: THẺ TỪ (FLASHCARD) ---
     {
+      id: 'tab-flash-intro',
+      target: '[data-tour="tab-btn-flash"]',
+      title: 'Khám phá Chế độ Thẻ từ 🗂️',
+      description: 'Chạm vào tab "Thẻ từ" để chuyển sang chế độ Flashcard 3D lật mở đa chiều và ghi nhớ từ vựng dài hạn.',
+      placement: 'bottom',
+      illustration: '/tour/mascot_tiger.webp',
+      spotlightPadding: 4,
+      spotlightRadius: 14,
+      onBeforeStep: async () => {
+        appState.activeTab = 'quiz';
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'quiz';
+      }
+    },
+    {
       id: 'flash-mode',
       target: '[data-tour="flash-card-stack"]',
       title: 'Chế độ Thẻ từ Flashcard 3D 🗂️',
@@ -302,6 +336,22 @@ export const mainOnboardingTour: TourDefinition = {
     },
 
     // --- 8. CHẾ ĐỘ 4: PHÁT ÂM (SPEECH AI) ---
+    {
+      id: 'tab-speech-intro',
+      target: '[data-tour="tab-btn-speech"]',
+      title: 'Khám phá Chế độ Luyện phát âm 🎙️',
+      description: 'Chạm vào tab "Phát âm" để bắt đầu luyện nói chuẩn bản xứ cùng trợ lý AI nhận diện giọng nói tiếng Trung.',
+      placement: 'bottom',
+      illustration: '/tour/mascot_monkey.webp',
+      spotlightPadding: 4,
+      spotlightRadius: 14,
+      onBeforeStep: async () => {
+        appState.activeTab = 'flash';
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'flash';
+      }
+    },
     {
       id: 'speech-mode',
       target: '[data-tour="speech-card-container"]',

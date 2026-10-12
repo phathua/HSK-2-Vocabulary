@@ -6,6 +6,7 @@
   import CaretLeft from 'phosphor-svelte/lib/CaretLeft';
   import Check from 'phosphor-svelte/lib/Check';
   import X from 'phosphor-svelte/lib/X';
+  import TourSwipeGesture from './TourSwipeGesture.svelte';
 
   let popoverEl = $state<HTMLDivElement | null>(null);
 
@@ -33,10 +34,11 @@
     let resizeObserver: ResizeObserver | null = null;
     let currentObservedEl: Element | null = null;
 
-    function update(actualHeight?: number) {
+    function update(actualHeight?: number, actualWidth?: number) {
       if (!tourState.isActive) return;
       const height = actualHeight ?? popoverEl?.offsetHeight;
-      tourState.refreshPosition(height);
+      const width = actualWidth ?? popoverEl?.offsetWidth;
+      tourState.refreshPosition(height, width);
     }
 
     function handleUpdate() {
@@ -90,7 +92,9 @@
       if (popoverEl) {
         const observer = new ResizeObserver((entries) => {
           for (const entry of entries) {
-            update(entry.contentRect.height);
+            const h = entry.borderBoxSize?.[0]?.blockSize ?? entry.contentRect.height;
+            const w = entry.borderBoxSize?.[0]?.inlineSize ?? entry.contentRect.width;
+            update(h, w);
           }
         });
         observer.observe(popoverEl);
@@ -158,6 +162,11 @@
     ></div>
   {/if}
 
+  <!-- 2.5. Interactive Gesture Animation (Vuốt thẻ flashcard trái / phải) -->
+  {#if tourState.targetRect && (tourState.currentStep.gesture === 'swipe-horizontal' || tourState.currentStep.id === 'flash-card-swipe' || tourState.currentStep.id === 'flash-mode')}
+    <TourSwipeGesture targetRect={tourState.targetRect} />
+  {/if}
+
   <!-- 3. Soft Flat 2.0 Tour Popover Card -->
   {#if tourState.popoverPos}
     <div
@@ -189,7 +198,7 @@
 
         <!-- Step Body: Mascot Illustration + Content -->
         <div class="flex items-center gap-3.5 sm:gap-4 min-w-0">
-          <div class="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 aspect-square flex items-center justify-center select-none pointer-events-none rounded-2xl bg-blue-50/60 dark:bg-[#282A2C]/60 border border-blue-100 dark:border-[#37393B] overflow-hidden shadow-2xs">
+          <div class="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 aspect-square flex items-center justify-center select-none pointer-events-none">
             <img
               src={tourState.currentStep.illustration || '/icons/icon-192.png'}
               alt={tourState.currentStep.title}

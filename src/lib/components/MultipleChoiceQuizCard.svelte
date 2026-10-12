@@ -32,6 +32,7 @@
   <!-- Floating Lesson Select Button (Icon cây bút nổi bật to bằng nút TTS bên phải, mở modal bài học) -->
   <button
     type="button"
+    data-tour="quiz-lesson-btn"
     onclick={() => (appState.filterModalOpen = true)}
     class="absolute top-3.5 left-3.5 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-2xl h-10 sm:h-11 px-3 flex items-center justify-center gap-1.5 shadow-md transition-transform cursor-pointer"
     title="Bấm để chọn bài học"
@@ -43,6 +44,7 @@
   <!-- Floating Speaker Button: Chỉ bấm nghe khi muốn, câu hỏi không tự động lộ âm -->
   <button
     type="button"
+    data-tour="quiz-speaker-btn"
     onclick={() => appState.speakCurrent()}
     class="absolute top-3.5 right-3.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-sm active:scale-95 transition-transform cursor-pointer"
     title="Phát âm tiếng Trung"
@@ -55,7 +57,10 @@
     <div class="w-full flex-1 flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center justify-center my-auto py-1">
       
       <!-- CỘT 1 (Desktop col-span-5): Đề bài & Hình ảnh gọn gàng & Loa TTS -->
-      <div class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-2 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6">
+      <div
+        data-tour="quiz-prompt-area"
+        class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-2 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6"
+      >
         <!-- Vocabulary Image: Chỉ hiển thị khi hỏi nghĩa tiếng Việt -> Chọn tiếng Trung (!isZhToVi). Ẩn hoàn toàn khi hỏi tiếng Trung để tránh lộ đáp án -->
         {#if !isZhToVi && appState.currentQuizItem.image}
           <div class="relative mb-2 sm:mb-3">
@@ -89,7 +94,7 @@
       <!-- CỘT 2 (Desktop col-span-7): 4 Đáp án trắc nghiệm & Nút tiếp theo trên Desktop (lg:flex) -->
       <div class="w-full lg:col-span-7 hidden lg:flex flex-col items-center justify-center py-2 lg:pl-4 space-y-3">
         <!-- 4 Option Grid trên Desktop -->
-        <div class="w-full grid grid-cols-2 gap-2.5">
+        <div data-tour="quiz-options-area" class="w-full grid grid-cols-2 gap-2.5">
           {#each appState.quizOptions as opt, idx (opt.id)}
             {@const isSelected = appState.quizSelectedId === opt.id}
             {@const isTarget = opt.id === appState.currentQuizItem.id}
@@ -188,7 +193,7 @@
   <footer class="shrink-0 mt-2 space-y-2">
     <!-- 4 Option Grid & Nút Tiếp Theo (chỉ hiện trên Mobile/Tablet < lg vì Desktop đã ở Cột 2) -->
     <div class="lg:hidden space-y-2">
-      <div class="grid grid-cols-2 gap-2">
+      <div data-tour="quiz-options-area" class="grid grid-cols-2 gap-2">
         {#each appState.quizOptions as opt, idx (opt.id)}
           {@const isSelected = appState.quizSelectedId === opt.id}
           {@const isTarget = opt.id === appState.currentQuizItem.id}
@@ -261,7 +266,7 @@
     </div>
 
     <!-- Micro Stats Footer -->
-    <div class="flex justify-between items-center px-3 py-1 bg-white dark:bg-[#1B1B1B] rounded-xl border border-slate-200 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] transition-colors">
+    <div data-tour="quiz-stats-bar" class="flex justify-between items-center px-3 py-1 bg-white dark:bg-[#1B1B1B] rounded-xl border border-slate-200 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] transition-colors">
       <span class="flex items-center gap-1">
         <CheckCircle weight="duotone" class="w-3.5 h-3.5 text-emerald-500" />
         Đúng: <b class="text-slate-900 dark:text-[#E3E3E3]">{appState.quizCorrect}</b>

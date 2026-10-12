@@ -406,8 +406,8 @@
       </div>
 
       <!-- Scrollable 2-Column Grid Cards -->
-      <div class="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-0.5 mb-3">
-        <div data-tour="filter-lessons-grid" class="grid grid-cols-2 gap-2">
+      <div data-tour="filter-lessons-scroll" class="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-0.5 mb-3">
+        <div class="grid grid-cols-2 gap-2">
           {#each activeLessons as info (info.lesson)}
             {@const isSelected = !!activeSelected[info.lesson]}
             {@const count = activeVocab.filter((v: any) => v.lesson === info.lesson).length}

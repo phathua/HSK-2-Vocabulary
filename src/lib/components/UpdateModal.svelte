@@ -39,9 +39,9 @@
       return {
         label: 'Vá lỗi',
         icon: Wrench,
-        colorClass: 'text-amber-700',
-        bgClass: 'bg-amber-50',
-        borderClass: 'border-amber-200/80'
+        colorClass: 'text-amber-700 dark:text-amber-400',
+        bgClass: 'bg-amber-50 dark:bg-amber-950/40',
+        borderClass: 'border-amber-200/80 dark:border-amber-800/50'
       };
     }
 
@@ -51,26 +51,26 @@
         return {
           label: 'Phát âm mới',
           icon: SpeakerHigh,
-          colorClass: 'text-blue-700',
-          bgClass: 'bg-blue-50',
-          borderClass: 'border-blue-200/80'
+          colorClass: 'text-blue-700 dark:text-blue-400',
+          bgClass: 'bg-blue-50 dark:bg-blue-950/40',
+          borderClass: 'border-blue-200/80 dark:border-blue-800/50'
         };
       }
       if (raw.includes('bài học') || raw.includes('từ vựng') || raw.includes('hsk')) {
         return {
           label: 'Từ vựng mới',
           icon: Books,
-          colorClass: 'text-indigo-700',
-          bgClass: 'bg-indigo-50',
-          borderClass: 'border-indigo-200/80'
+          colorClass: 'text-indigo-700 dark:text-indigo-400',
+          bgClass: 'bg-indigo-50 dark:bg-indigo-950/40',
+          borderClass: 'border-indigo-200/80 dark:border-indigo-800/50'
         };
       }
       return {
         label: 'Tính năng mới!',
         icon: Sparkle,
-        colorClass: 'text-blue-700',
-        bgClass: 'bg-blue-50',
-        borderClass: 'border-blue-200/80'
+        colorClass: 'text-blue-700 dark:text-blue-400',
+        bgClass: 'bg-blue-50 dark:bg-blue-950/40',
+        borderClass: 'border-blue-200/80 dark:border-blue-800/50'
       };
     }
 
@@ -79,9 +79,9 @@
       return {
         label: 'Giao diện mới',
         icon: PaintBrushBroad,
-        colorClass: 'text-teal-700',
-        bgClass: 'bg-teal-50',
-        borderClass: 'border-teal-200/80'
+        colorClass: 'text-teal-700 dark:text-teal-400',
+        bgClass: 'bg-teal-50 dark:bg-teal-950/40',
+        borderClass: 'border-teal-200/80 dark:border-teal-800/50'
       };
     }
 
@@ -90,18 +90,18 @@
       return {
         label: 'Tối ưu tốc độ',
         icon: Lightning,
-        colorClass: 'text-violet-700',
-        bgClass: 'bg-violet-50',
-        borderClass: 'border-violet-200/80'
+        colorClass: 'text-violet-700 dark:text-violet-400',
+        bgClass: 'bg-violet-50 dark:bg-violet-950/40',
+        borderClass: 'border-violet-200/80 dark:border-violet-800/50'
       };
     }
 
     return {
       label: 'Cải tiến mới',
       icon: CheckCircle,
-      colorClass: 'text-emerald-700',
-      bgClass: 'bg-emerald-50',
-      borderClass: 'border-emerald-200/80'
+      colorClass: 'text-emerald-700 dark:text-emerald-400',
+      bgClass: 'bg-emerald-50 dark:bg-emerald-950/40',
+      borderClass: 'border-emerald-200/80 dark:border-emerald-800/50'
     };
   }
 
@@ -140,9 +140,9 @@
       result.push({
         label: 'Tính năng mới!',
         icon: Sparkle,
-        colorClass: 'text-blue-700',
-        bgClass: 'bg-blue-50',
-        borderClass: 'border-blue-200/80'
+        colorClass: 'text-blue-700 dark:text-blue-400',
+        bgClass: 'bg-blue-50 dark:bg-blue-950/40',
+        borderClass: 'border-blue-200/80 dark:border-blue-800/50'
       });
     }
 
@@ -245,19 +245,19 @@
 
     <!-- Bottom Sheet Popup Container: Sát viền màn hình 2 bên trên mobile (w-full max-w-lg), bo tròn góc trên -->
     <div
-      class="relative z-10 w-full sm:max-w-md overflow-hidden flex flex-col items-center text-center p-6 sm:p-7 bg-white rounded-t-[2.25rem] sm:rounded-[2.5rem] shadow-[0_-15px_40px_rgba(0,0,0,0.2)] sm:shadow-2xl border-t sm:border border-slate-200/90"
+      class="relative z-10 w-full sm:max-w-md overflow-hidden flex flex-col items-center text-center p-6 sm:p-7 bg-white dark:bg-[#1B1B1B] rounded-t-[2.25rem] sm:rounded-[2.5rem] shadow-[0_-15px_40px_rgba(0,0,0,0.2)] sm:shadow-2xl border-t sm:border border-slate-200/90 dark:border-[#282A2C]"
       transition:fly={{ y: 260, duration: 320, opacity: 0.2 }}
       role="dialog"
       aria-modal="true"
     >
       <!-- Drag handle indicator for mobile sheet style -->
-      <div class="sm:hidden w-12 h-1.5 rounded-full bg-slate-200 mb-3 -mt-2"></div>
+      <div class="sm:hidden w-12 h-1.5 rounded-full bg-slate-200 dark:bg-[#37393B] mb-3 -mt-2"></div>
 
       {#if !isUpdating}
         <button
           type="button"
           onclick={handleDismiss}
-          class="absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-200 cursor-pointer transition-colors active:scale-90"
+          class="absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 rounded-full bg-slate-100 dark:bg-[#282A2C] flex items-center justify-center text-slate-400 dark:text-[#8E918F] hover:text-slate-700 dark:hover:text-[#E3E3E3] hover:bg-slate-200 dark:hover:bg-[#37393B] cursor-pointer transition-colors active:scale-90"
           aria-label="Đóng"
         >
           <X weight="bold" class="w-4 h-4" />
@@ -265,13 +265,13 @@
       {/if}
 
       <!-- Ambient Glow Blobs -->
-      <div class="pointer-events-none absolute -top-16 -left-16 h-48 w-48 rounded-full bg-amber-500/10 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-16 -right-16 h-48 w-48 rounded-full bg-orange-500/15 blur-3xl"></div>
+      <div class="pointer-events-none absolute -top-16 -left-16 h-48 w-48 rounded-full bg-amber-500/10 dark:bg-amber-500/5 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-16 -right-16 h-48 w-48 rounded-full bg-orange-500/15 dark:bg-orange-500/10 blur-3xl"></div>
 
       <!-- Vùng hình ảnh Mascot Gấu Trúc cưỡi Tên lửa TO & RỰC RỠ -->
       <div class="relative z-10 w-44 h-44 sm:w-48 sm:h-48 flex items-center justify-center mb-1">
         <!-- Ánh sáng hào quang mở rộng phía sau mascot -->
-        <div class="absolute inset-0 bg-gradient-to-t from-amber-400/15 to-orange-400/15 blur-2xl rounded-full scale-110"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-amber-400/15 to-orange-400/15 dark:from-amber-400/10 dark:to-orange-400/10 blur-2xl rounded-full scale-110"></div>
 
         <!-- Mascot Gấu Trúc: Khi bấm nâng cấp -> bay vút lên trời mất hút -->
         <div
@@ -291,11 +291,11 @@
         {#if isLaunched}
           <div class="absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none z-20 flex items-center justify-center">
             <!-- Đám khói chính ở giữa -->
-            <div class="smoke-puff smoke-center w-14 h-14 rounded-full bg-amber-50/95 border border-amber-100/60 shadow-[0_4px_16px_rgba(251,191,36,0.35)]"></div>
+            <div class="smoke-puff smoke-center w-14 h-14 rounded-full bg-amber-50/95 dark:bg-[#37393B]/95 border border-amber-100/60 dark:border-amber-400/20 shadow-[0_4px_16px_rgba(251,191,36,0.35)]"></div>
             <!-- Cụm khói phình sang trái -->
-            <div class="smoke-puff smoke-left w-11 h-11 rounded-full bg-orange-50/90 border border-orange-100/50 shadow-[0_4px_12px_rgba(251,146,60,0.25)]"></div>
+            <div class="smoke-puff smoke-left w-11 h-11 rounded-full bg-orange-50/90 dark:bg-[#282A2C]/90 border border-orange-100/50 dark:border-orange-400/20 shadow-[0_4px_12px_rgba(251,146,60,0.25)]"></div>
             <!-- Cụm khói phình sang phải -->
-            <div class="smoke-puff smoke-right w-11 h-11 rounded-full bg-amber-100/90 border border-amber-200/50 shadow-[0_4px_12px_rgba(251,191,36,0.25)]"></div>
+            <div class="smoke-puff smoke-right w-11 h-11 rounded-full bg-amber-100/90 dark:bg-[#282A2C]/90 border border-amber-200/50 dark:border-amber-400/20 shadow-[0_4px_12px_rgba(251,191,36,0.25)]"></div>
             <!-- Hạt lửa nhỏ vàng kim bay xuống dưới -->
             <div class="smoke-spark spark-1 w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_8px_#F59E0B]"></div>
             <div class="smoke-spark spark-2 w-2 h-2 rounded-full bg-orange-400 shadow-[0_0_8px_#F97316]"></div>
@@ -306,10 +306,10 @@
 
       <!-- Tiêu đề phiên bản thanh lịch sang trọng giống hình mẫu -->
       <div class="relative z-10 flex flex-col items-center mb-4">
-        <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-tight">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-[#E3E3E3] tracking-tight leading-tight">
           Đã có phiên bản mới
         </h2>
-        <p class="text-xs text-slate-500 leading-relaxed max-w-[280px] mt-1 font-medium">
+        <p class="text-xs text-slate-500 dark:text-[#A8ABA7] leading-relaxed max-w-[280px] mt-1 font-medium">
           Phiên bản <b>v{newVersion}</b> đã sẵn sàng với các cải tiến mới nhất dành cho bạn.
         </p>
       </div>
@@ -318,21 +318,21 @@
       {#if !isUpdating}
         <div class="relative z-10 w-full mb-6 px-1">
           {#if isLoading}
-            <div class="flex items-center justify-center gap-2 py-3 text-slate-400 text-xs">
-              <CircleNotch size={16} class="animate-spin text-blue-600" />
+            <div class="flex items-center justify-center gap-2 py-3 text-slate-400 dark:text-[#8E918F] text-xs">
+              <CircleNotch size={16} class="animate-spin text-blue-600 dark:text-blue-400" />
               <span>Đang kiểm tra...</span>
             </div>
           {:else if fetchError}
-            <p class="text-xs text-slate-400 py-2">{fetchError}</p>
+            <p class="text-xs text-slate-400 dark:text-[#8E918F] py-2">{fetchError}</p>
           {:else if displayBadges.length > 0}
             <div class="flex items-center justify-center gap-2.5 sm:gap-3 flex-wrap">
               {#each displayBadges as badge}
                 {@const BadgeIcon = badge.icon}
-                <div class="flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-50 border border-slate-100 shadow-2xs min-w-[72px] sm:min-w-[78px] transition-transform hover:-translate-y-0.5">
+                <div class="flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-50 dark:bg-[#282A2C]/70 border border-slate-100 dark:border-[#37393B] shadow-2xs min-w-[72px] sm:min-w-[78px] transition-transform hover:-translate-y-0.5">
                   <div class={`w-10 h-10 rounded-xl flex items-center justify-center border shadow-xs ${badge.bgClass} ${badge.colorClass} ${badge.borderClass}`}>
                     <BadgeIcon weight="duotone" class="w-5 h-5" />
                   </div>
-                  <span class="text-[11px] font-black text-slate-700 tracking-tight text-center leading-none">
+                  <span class="text-[11px] font-black text-slate-700 dark:text-[#E3E3E3] tracking-tight text-center leading-none">
                     {badge.label}
                   </span>
                 </div>
@@ -347,7 +347,7 @@
         <div class="relative z-10 flex flex-col gap-2 w-full px-1">
           <button
             type="button"
-            class="w-full h-12 rounded-2xl text-xs sm:text-sm font-black uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] cursor-pointer"
+            class="w-full h-12 rounded-2xl text-xs sm:text-sm font-black uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] cursor-pointer"
             onclick={handleUpdate}
           >
             <Rocket size={17} weight="bold" />
@@ -356,14 +356,14 @@
 
           <button
             type="button"
-            class="w-full py-2.5 rounded-xl text-xs font-bold text-slate-400 hover:text-slate-700 transition-colors cursor-pointer active:scale-95"
+            class="w-full py-2.5 rounded-xl text-xs font-bold text-slate-400 dark:text-[#8E918F] hover:text-slate-700 dark:hover:text-[#E3E3E3] transition-colors cursor-pointer active:scale-95"
             onclick={handleDismiss}
           >
             Để sau
           </button>
         </div>
       {:else}
-        <div class="relative z-10 flex items-center justify-center gap-2 text-blue-600 font-extrabold text-xs py-3 animate-pulse">
+        <div class="relative z-10 flex items-center justify-center gap-2 text-blue-600 dark:text-blue-400 font-extrabold text-xs py-3 animate-pulse">
           <CircleNotch size={16} class="animate-spin" />
           <span>Đang làm mới dữ liệu và kích hoạt phiên bản mới...</span>
         </div>

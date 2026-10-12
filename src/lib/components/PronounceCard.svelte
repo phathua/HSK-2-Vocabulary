@@ -419,6 +419,7 @@
   <!-- Floating Lesson Select Button -->
   <button
     type="button"
+    data-tour="speech-lesson-btn"
     onclick={() => (appState.filterModalOpen = true)}
     class="absolute top-3.5 left-3.5 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-2xl h-10 sm:h-11 px-3 flex items-center justify-center gap-1.5 shadow-md transition-transform cursor-pointer"
     title="Bấm để chọn bài học"
@@ -432,6 +433,7 @@
   <!-- Floating Audio Speaker Button: Bấm nghe mẫu dọn dẹp micro sạch sẽ -->
   <button
     type="button"
+    data-tour="speech-speaker-btn"
     disabled={isRecording || isBusy}
     onclick={handleSpeakSample}
     class="absolute top-3.5 right-3.5 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-2xl w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shadow-sm transition-transform cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
@@ -454,7 +456,7 @@
       {/if}
 
       <!-- Prompt Question & Target Character -->
-      <div class="space-y-1 mb-2">
+      <div data-tour="speech-prompt-area" class="space-y-1 mb-2">
         <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400">
           Hãy phát âm từ vựng bên dưới
         </span>
@@ -547,7 +549,7 @@
           </div>
         {:else}
           <!-- Khi CHƯA NỘP: 3 nút [X Hủy] - [Mic Ghi âm] - [Tick Xác nhận] -->
-          <div class="flex items-center justify-center gap-4 sm:gap-6">
+          <div data-tour="speech-mic-controls" class="flex items-center justify-center gap-4 sm:gap-6">
             <!-- Button X: Hủy / xóa bản ghi -->
             <button
               type="button"
@@ -562,6 +564,7 @@
             <!-- Main Big Circular Mic / Stop Button -->
             <button
               type="button"
+              data-tour="speech-mic-btn"
               onclick={toggleRecord}
               disabled={isBusy}
               class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all duration-200 cursor-pointer disabled:opacity-75 disabled:pointer-events-none {isRecording
@@ -590,7 +593,7 @@
         {/if}
 
         <!-- Checkbox: Tự động xác nhận đáp án -->
-        <label class="mt-3 inline-flex items-center gap-2.5 cursor-pointer select-none text-xs sm:text-sm text-slate-600 hover:text-slate-800 transition-colors">
+        <label data-tour="speech-auto-checkbox" class="mt-3 inline-flex items-center gap-2.5 cursor-pointer select-none text-xs sm:text-sm text-slate-600 dark:text-[#A8ABA7] hover:text-slate-800 dark:hover:text-[#E3E3E3] transition-colors">
           <input
             type="checkbox"
             checked={appState.speechAutoSubmit}

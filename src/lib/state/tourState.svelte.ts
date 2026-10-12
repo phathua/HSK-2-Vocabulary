@@ -64,6 +64,13 @@ class TourState {
     return true;
   }
 
+  async startTabTour(tab: 'fill' | 'quiz' | 'flash' | 'speech', force = false): Promise<boolean> {
+    const { TAB_TOURS } = await import('#lib/tours/tabTours');
+    const tour = TAB_TOURS[tab];
+    if (!tour) return false;
+    return this.startTour(tour, force);
+  }
+
   async goToStep(index: number): Promise<void> {
     if (index < 0 || index >= this.activeSteps.length) return;
 
@@ -234,18 +241,22 @@ class TourState {
     }
   }
 
-  refreshPosition(actualPopoverHeight?: number): void {
+  refreshPosition(actualPopoverHeight?: number, actualPopoverWidth?: number): void {
     if (!this.isActive || !this.currentStep) return;
+
+    const margin = 16;
+    const gap = 12;
+
+    const maxAvailableWidth = Math.min(420, window.innerWidth - margin * 2);
+    const popoverWidth = actualPopoverWidth ? Math.min(actualPopoverWidth, maxAvailableWidth) : maxAvailableWidth;
+    const popoverHeight = actualPopoverHeight || 220;
 
     const el = this.resolveTargetElement(this.currentStep);
     if (!el) {
-      const fallbackPadding = 16;
-      const width = Math.min(360, window.innerWidth - 32);
-      const height = actualPopoverHeight || 200;
       this.targetRect = null;
       this.popoverPos = {
-        top: Math.max(fallbackPadding, (window.innerHeight - height) / 2),
-        left: Math.max(fallbackPadding, (window.innerWidth - width) / 2),
+        top: Math.max(margin, Math.round((window.innerHeight - popoverHeight) / 2)),
+        left: Math.max(margin, Math.round((window.innerWidth - popoverWidth) / 2)),
         placement: 'bottom'
       };
       return;
@@ -283,49 +294,38 @@ class TourState {
       radius
     };
 
-    const popoverWidth = Math.min(380, window.innerWidth - 32);
-    const popoverHeight = actualPopoverHeight || 220;
-    const margin = 16;
-    const gap = 12;
-
+    // Xác định placement thông minh (auto-flip nếu thiếu khoảng trống)
     let placement: 'top' | 'bottom' = 'bottom';
+    const spaceBelow = window.innerHeight - (targetTop + targetHeight + gap);
+    const spaceAbove = targetTop - gap;
+
     if (this.currentStep.placement === 'top') {
-      placement = 'top';
+      placement = spaceAbove >= popoverHeight || spaceAbove > spaceBelow ? 'top' : 'bottom';
     } else if (this.currentStep.placement === 'bottom') {
-      placement = 'bottom';
+      placement = spaceBelow >= popoverHeight || spaceBelow > spaceAbove ? 'bottom' : 'top';
     } else {
-      const spaceBelow = window.innerHeight - (targetTop + targetHeight);
-      const spaceAbove = targetTop;
-      placement = spaceBelow < popoverHeight + gap && spaceAbove > spaceBelow ? 'top' : 'bottom';
+      placement = spaceBelow >= popoverHeight ? 'bottom' : 'top';
     }
 
     let top = 0;
     if (placement === 'bottom') {
       top = targetTop + targetHeight + gap;
-      if (top + popoverHeight > window.innerHeight - margin) {
-        if (targetTop - popoverHeight - gap > margin) {
-          placement = 'top';
-          top = targetTop - popoverHeight - gap;
-        } else {
-          top = Math.max(margin, window.innerHeight - popoverHeight - margin);
-        }
-      }
     } else {
       top = targetTop - popoverHeight - gap;
-      if (top < margin) {
-        if (targetTop + targetHeight + gap + popoverHeight < window.innerHeight - margin) {
-          placement = 'bottom';
-          top = targetTop + targetHeight + gap;
-        } else {
-          top = margin;
-        }
-      }
     }
 
-    // Căn giữa theo chiều ngang của target
-    let left = targetLeft + (targetWidth - popoverWidth) / 2;
-    // Đảm bảo không tràn viền trái/phải màn hình
-    left = Math.max(margin, Math.min(left, window.innerWidth - popoverWidth - margin));
+    // Clamping an toàn cho top để không tràn trên/dưới
+    top = Math.max(margin, Math.min(top, window.innerHeight - popoverHeight - margin));
+
+    // Căn giữa theo target
+    const targetCenter = targetLeft + targetWidth / 2;
+    let left = targetCenter - popoverWidth / 2;
+
+    // Clamping tuyệt đối an toàn cho left:
+    // Đảm bảo popover luôn cách lề trái và phải ít nhất `margin` (16px), không bao giờ bị cắt hay tràn mép
+    const maxLeft = window.innerWidth - popoverWidth - margin;
+    const minLeft = margin;
+    left = Math.max(minLeft, Math.min(left, maxLeft));
 
     this.popoverPos = {
       top: Math.round(top),

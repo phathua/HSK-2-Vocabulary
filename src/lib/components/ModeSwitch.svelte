@@ -5,6 +5,8 @@
   import Cards from 'phosphor-svelte/lib/Cards';
   import Microphone from 'phosphor-svelte/lib/Microphone';
 
+  import { tourState } from '#lib/state/tourState.svelte';
+
   const progressPercent = $derived.by(() => {
     if (appState.activeTab === 'fill') {
       return appState.totalFillCount > 0 ? (appState.fillDoneCount / appState.totalFillCount) * 100 : 0;
@@ -25,6 +27,15 @@
     if (appState.activeTab === 'flash') return `${appState.flashKnown}/${appState.totalFlashCount}`;
     return `${appState.speechCorrect}/${appState.speechDoneCount}`;
   });
+
+  function handleTabClick(tab: 'fill' | 'quiz' | 'flash' | 'speech') {
+    appState.activeTab = tab;
+    if (!tourState.isActive && !tourState.isTourSeen(`hsk_tour_${tab}_seen`)) {
+      setTimeout(() => {
+        tourState.startTabTour(tab);
+      }, 300);
+    }
+  }
 </script>
 
 <div class="shrink-0 my-2">
@@ -36,7 +47,8 @@
     <!-- Tab 1: Điền từ -->
     <button
       type="button"
-      onclick={() => (appState.activeTab = 'fill')}
+      data-tour="tab-btn-fill"
+      onclick={() => handleTabClick('fill')}
       class={`py-1.5 md:py-2 px-0.5 rounded-xl font-black text-xs md:text-sm flex items-center justify-center gap-1 transition-all cursor-pointer whitespace-nowrap min-w-0 ${
         appState.activeTab === 'fill'
           ? 'bg-white dark:bg-[#282A2C] text-slate-900 dark:text-[#E3E3E3] shadow-xs'
@@ -50,7 +62,8 @@
     <!-- Tab 2: Trắc nghiệm -->
     <button
       type="button"
-      onclick={() => (appState.activeTab = 'quiz')}
+      data-tour="tab-btn-quiz"
+      onclick={() => handleTabClick('quiz')}
       class={`py-1.5 md:py-2 px-0.5 rounded-xl font-black text-xs md:text-sm flex items-center justify-center gap-1 transition-all cursor-pointer whitespace-nowrap min-w-0 ${
         appState.activeTab === 'quiz'
           ? 'bg-white dark:bg-[#282A2C] text-slate-900 dark:text-[#E3E3E3] shadow-xs'
@@ -64,7 +77,8 @@
     <!-- Tab 3: Thẻ Flashcard -->
     <button
       type="button"
-      onclick={() => (appState.activeTab = 'flash')}
+      data-tour="tab-btn-flash"
+      onclick={() => handleTabClick('flash')}
       class={`py-1.5 md:py-2 px-0.5 rounded-xl font-black text-xs md:text-sm flex items-center justify-center gap-1 transition-all cursor-pointer whitespace-nowrap min-w-0 ${
         appState.activeTab === 'flash'
           ? 'bg-white dark:bg-[#282A2C] text-slate-900 dark:text-[#E3E3E3] shadow-xs'
@@ -78,7 +92,8 @@
     <!-- Tab 4: Phát âm (Tính năng mới) -->
     <button
       type="button"
-      onclick={() => (appState.activeTab = 'speech')}
+      data-tour="tab-btn-speech"
+      onclick={() => handleTabClick('speech')}
       class={`py-1.5 md:py-2 px-0.5 rounded-xl font-black text-xs md:text-sm flex items-center justify-center gap-1 transition-all cursor-pointer whitespace-nowrap min-w-0 ${
         appState.activeTab === 'speech'
           ? 'bg-white dark:bg-[#282A2C] text-slate-900 dark:text-[#E3E3E3] shadow-xs'

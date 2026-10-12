@@ -27,6 +27,47 @@ html.dark, html.dark body {
   scrollbar-width: none;
 }
 
+/* ========================================================
+   GLOBAL CUSTOM SCROLLBAR (LIGHT & DARK MODE)
+   ======================================================== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+html.dark * {
+  scrollbar-color: #37393b transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #37393b;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #5e6160;
+}
+
 @keyframes pop {
   0% {
     transform: scale(0.96);

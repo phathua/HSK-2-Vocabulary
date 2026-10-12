@@ -280,6 +280,7 @@
       <div class="flex items-center gap-1.5">
         <button
           type="button"
+          data-tour="flashcard-lesson-btn"
           onclick={() => {
             registerUserAction();
             appState.filterModalOpen = true;
@@ -309,6 +310,7 @@
       <div class="flex items-center gap-1.5">
         <button
           type="button"
+          data-tour="flashcard-speaker-btn"
           onclick={(e) => {
             e.stopPropagation();
             registerUserAction();
@@ -548,7 +550,7 @@
     <!-- Bottom Controls: Micro Stats (Đồng nhất độ cao và màu nền với FillWordCard và MultipleChoiceQuizCard) -->
     <footer class="shrink-0 mt-2">
       <!-- Micro Stats Footer -->
-      <div class="flex justify-between items-center px-3 py-1 bg-white dark:bg-[#1B1B1B] rounded-xl border border-slate-200 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] transition-colors">
+      <div data-tour="flashcard-stats-bar" class="flex justify-between items-center px-3 py-1 bg-white dark:bg-[#1B1B1B] rounded-xl border border-slate-200 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] transition-colors">
         <span class="flex items-center gap-1">
           <CheckCircle weight="duotone" class="w-3.5 h-3.5 text-emerald-500" />
           Thuộc: <b class="text-slate-900 dark:text-[#E3E3E3]">{appState.flashKnown}</b>
