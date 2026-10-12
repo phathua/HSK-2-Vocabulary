@@ -129,10 +129,15 @@ export async function speakVietnamese(text: string, volume: number = 1.0): Promi
         .replace(/\s+/g, ' ')
         .trim();
 
+      const isIOS =
+        typeof navigator !== 'undefined' &&
+        (/iPad|iPhone|iPod/.test(navigator.userAgent) ||
+          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+
       const utt = new SpeechSynthesisUtterance(cleanText);
       utt.voice = viVoice;
       utt.lang = viVoice.lang || 'vi-VN';
-      utt.rate = 0.95; // Tốc độ tự nhiên, rõ ràng cho tiếng Việt
+      utt.rate = isIOS ? 1.6 : 1.0; // Riêng iOS giọng Việt nói chậm nên tăng tốc lên 1.6; các nền tảng khác giữ 1.0
       utt.pitch = 1.0;
       utt.volume = volume;
 
