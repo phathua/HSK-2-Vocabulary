@@ -21,7 +21,21 @@
       appState.quizSelectedId !== null &&
       appState.quizSelectedId !== appState.currentQuizItem?.id
   );
+  const showFeedbackDrawer = $derived(
+    appState.enableFeedbackDrawer && appState.quizAnswered
+  );
+
+  function handleKeyDown(e: KeyboardEvent) {
+    if (appState.quizAnswered && !showFeedbackDrawer) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        appState.nextQuizItem();
+      }
+    }
+  }
 </script>
+
+<svelte:window onkeydown={handleKeyDown} />
 
 <!-- Main Multiple Choice Quiz Card -->
 <div class="relative flex-1 min-h-0 flex flex-col w-full h-full">
@@ -148,7 +162,7 @@
           {/each}
         </div>
 
-        <!-- Nút hướng dẫn trên Desktop Cột 2 -->
+        <!-- Nút hành động Desktop Cột 2 -->
         {#if !appState.quizAnswered}
           <div class="h-11 w-full">
             <button
@@ -157,6 +171,17 @@
               class="w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-slate-200 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] border border-slate-300/60 dark:border-[#37393B] cursor-not-allowed opacity-80"
             >
               <span>Chọn 1 đáp án để kiểm tra</span>
+            </button>
+          </div>
+        {:else if !showFeedbackDrawer}
+          <div class="h-11 w-full">
+            <button
+              type="button"
+              onclick={() => appState.nextQuizItem()}
+              class="w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-md cursor-pointer animate-[pop_0.15s_ease]"
+            >
+              <span>Câu tiếp theo</span>
+              <ArrowRight weight="bold" class="w-4 h-4" />
             </button>
           </div>
         {/if}
@@ -251,7 +276,7 @@
         {/each}
       </div>
 
-      <!-- Nút Câu tiếp theo chỉ hiện nếu chưa có Drawer -->
+      <!-- Nút hành động Mobile/Tablet -->
       {#if !appState.quizAnswered}
         <div class="h-11 sm:h-12 w-full">
           <button
@@ -260,6 +285,17 @@
             class="w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-slate-200 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] border border-slate-300/60 dark:border-[#37393B] cursor-not-allowed opacity-80"
           >
             <span>Chọn 1 đáp án</span>
+          </button>
+        </div>
+      {:else if !showFeedbackDrawer}
+        <div class="h-11 sm:h-12 w-full">
+          <button
+            type="button"
+            onclick={() => appState.nextQuizItem()}
+            class="w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-md cursor-pointer animate-[pop_0.15s_ease]"
+          >
+            <span>Câu tiếp theo</span>
+            <ArrowRight weight="bold" class="w-4 h-4" />
           </button>
         </div>
       {/if}
@@ -283,7 +319,7 @@
   </footer>
 {/if}
 
-  {#if appState.currentQuizItem}
+  {#if showFeedbackDrawer && appState.currentQuizItem}
     <AnswerFeedbackDrawer
       isAnswered={appState.quizAnswered}
       isCorrect={isQuizCorrect}

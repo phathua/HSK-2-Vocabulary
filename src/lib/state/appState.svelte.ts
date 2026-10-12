@@ -28,6 +28,7 @@ export class AppState {
   volume = $state(0.7);
   themeMode = $state<'light' | 'dark' | 'system'>('system');
   theme = $state<'light' | 'dark'>('dark');
+  enableFeedbackDrawer = $state<boolean>(false);
 
   // Bài học chọn lọc (Bài 1-15 cho từng cấp độ)
   selectedLessonsHsk1 = $state<Record<number, boolean>>({});
@@ -171,6 +172,7 @@ export class AppState {
       this.autoPlay = localStorage.getItem('HSK_AUTOPLAY') === 'true';
       const vol = localStorage.getItem('HSK_VOLUME');
       this.volume = vol ? parseFloat(vol) : 0.7;
+      this.enableFeedbackDrawer = localStorage.getItem('HSK_ENABLE_FEEDBACK_DRAWER') === 'true';
 
       const savedThemeMode = localStorage.getItem('HSK_THEME_MODE') as 'light' | 'dark' | 'system';
       if (savedThemeMode === 'light' || savedThemeMode === 'dark' || savedThemeMode === 'system') {
@@ -272,6 +274,7 @@ export class AppState {
       localStorage.setItem('HSK2_SELECTED_LESSONS', JSON.stringify(this.selectedLessonsHsk2));
       localStorage.setItem('HSK_AUTOPLAY', this.autoPlay ? 'true' : 'false');
       localStorage.setItem('HSK_VOLUME', this.volume.toString());
+      localStorage.setItem('HSK_ENABLE_FEEDBACK_DRAWER', this.enableFeedbackDrawer ? 'true' : 'false');
       localStorage.setItem('HSK_SPEECH_AUTO_SUBMIT', this.speechAutoSubmit ? 'true' : 'false');
       localStorage.setItem('HSK_THEME_MODE', this.themeMode);
       localStorage.setItem('HSK_THEME', this.theme);

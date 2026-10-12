@@ -101,6 +101,26 @@
           </button>
         </div>
 
+        <!-- Feedback Drawer Toggle: Bật hoặc tắt popup kết quả kèm mascot Panda -->
+        <div class="flex items-center justify-between bg-slate-50 dark:bg-[#282A2C]/80 p-3 rounded-2xl border border-slate-200 dark:border-[#37393B]">
+          <div>
+            <span class="font-bold text-sm text-slate-800 dark:text-[#E3E3E3] block">Popup kết quả Mascot</span>
+            <span class="text-xs text-slate-500 dark:text-[#8E918F] block">Hiện drawer gấu trúc khi trả lời đúng/sai/bỏ qua</span>
+          </div>
+          <button
+            type="button"
+            aria-label="Bật hoặc tắt popup kết quả Mascot"
+            title="Bật hoặc tắt popup kết quả Mascot"
+            onclick={() => {
+              appState.enableFeedbackDrawer = !appState.enableFeedbackDrawer;
+              appState.saveToLocalStorage();
+            }}
+            class={`w-12 h-7 rounded-full p-1 transition-colors cursor-pointer ${appState.enableFeedbackDrawer ? 'bg-blue-600' : 'bg-slate-300 dark:bg-[#37393B]'}`}
+          >
+            <div class={`w-5 h-5 bg-white rounded-full shadow-md transition-transform ${appState.enableFeedbackDrawer ? 'translate-x-5' : 'translate-x-0'}`}></div>
+          </button>
+        </div>
+
         <!-- Volume Slider -->
         <div class="bg-slate-50 dark:bg-[#282A2C]/80 p-3 rounded-2xl border border-slate-200 dark:border-[#37393B]">
           <div class="flex justify-between items-center mb-2">

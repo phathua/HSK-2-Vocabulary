@@ -67,6 +67,10 @@
   const isZhToVi = $derived(appState.direction === 'zh_to_vi');
   // Chế độ Chọn từ khả dụng khi học xuôi (gõ/chọn Pinyin)
   const isTileMode = $derived(appState.fillSubMode === 'tiles' && !isZhToVi);
+  // Drawer Mascot CHỈ xuất hiện khi bật trong Cài đặt VÀ đang ở chế độ Chọn từ (Tile mode), KHÔNG BAO GIỜ hiện ở chế độ Thủ công
+  const showFeedbackDrawer = $derived(
+    appState.enableFeedbackDrawer && isTileMode && appState.fillAnswered
+  );
 
   // Animation bay từ Tile hàng dưới lên Slot hàng trên
   function handleTileClick(tileId: string, event: MouseEvent) {
@@ -527,10 +531,14 @@
       </div>
     {/if}
 
-    <!-- BẢNG CHỌN KÝ TỰ (TILE BANK) HOẶC INPUT CHO MOBILE / TABLET: Chỉ hiện khi chưa trả lời -->
-    {#if !appState.fillAnswered}
+    <!-- BẢNG CHỌN KÝ TỰ (TILE BANK) HOẶC INPUT CHO MOBILE / TABLET -->
+    {#if !showFeedbackDrawer}
       {#if isTileMode && appState.fillWordChunks[appState.currentChunkIndex]}
         {@const curChunk = appState.fillWordChunks[appState.currentChunkIndex]}
+        {@const hasWrongSlots = appState.fillWordChunks.some(c => c.slots.some(s => s.userChar !== s.char))}
+        {@const isWrong = appState.fillAnswered && (appState.fillFeedback?.type === 'wrong' || hasWrongSlots)}
+        {@const wrongSlots = isWrong ? curChunk.slots.filter(s => s.userChar !== s.char) : []}
+        {@const neededCorrectChars = isWrong ? wrongSlots.map(s => s.char) : []}
         <div
           data-tour="fill-tile-bank"
           class="lg:hidden bg-white dark:bg-[#1B1B1B] rounded-2xl border border-slate-200 dark:border-[#282A2C] p-2.5 shadow-2xs space-y-2"
@@ -538,15 +546,18 @@
           <!-- Tile Grid -->
           <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
             {#each curChunk.tiles as tile}
+              {@const isCorrectHighlight = isWrong && !tile.isDistractor && neededCorrectChars.includes(tile.char)}
               <button
                 id={tile.id}
                 type="button"
-                disabled={tile.isUsed}
+                disabled={tile.isUsed || appState.fillAnswered}
                 onclick={(e) => handleTileClick(tile.id, e)}
                 class={`min-w-9 h-10 sm:min-w-11 sm:h-12 px-2.5 rounded-xl font-black text-base sm:text-lg flex items-center justify-center transition-all select-none border-b-4 ${
-                  tile.isUsed
-                    ? 'bg-slate-100/70 dark:bg-[#242628]/70 border-slate-200 dark:border-[#353739] text-slate-400/40 dark:text-[#8E918F]/30 pointer-events-none cursor-default'
-                    : 'bg-slate-50 hover:bg-white dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border-slate-300 dark:border-[#3f4245] shadow-2xs active:border-b-0 active:translate-y-1 cursor-pointer'
+                  isCorrectHighlight
+                    ? 'bg-emerald-500 text-white border-emerald-700 ring-2 ring-emerald-400 shadow-sm cursor-default animate-pulse'
+                    : tile.isUsed
+                      ? 'bg-slate-100/70 dark:bg-[#242628]/70 border-slate-200 dark:border-[#353739] text-slate-400/40 dark:text-[#8E918F]/30 pointer-events-none cursor-default'
+                      : 'bg-slate-50 hover:bg-white dark:bg-[#282A2C] dark:hover:bg-[#323537] text-slate-800 dark:text-[#E3E3E3] border-slate-300 dark:border-[#3f4245] shadow-2xs active:border-b-0 active:translate-y-1 cursor-pointer'
                 }`}
               >
                 {tile.char}
@@ -563,6 +574,7 @@
             value={appState.fillInput}
             oninput={handleInputChange}
             onkeydown={handleKeyDown}
+            disabled={appState.fillAnswered}
             placeholder={!isZhToVi ? "Gõ Pinyin (vd: ni3hao3)..." : "Gõ nghĩa tiếng Việt..."}
             class="min-w-0 flex-1 h-11 sm:h-12 bg-white dark:bg-[#282A2C] border-2 border-slate-200 dark:border-[#37393B] focus:border-blue-500 dark:focus:border-blue-400 rounded-2xl px-3 sm:px-4 text-sm sm:text-base font-bold text-slate-900 dark:text-[#E3E3E3] outline-none shadow-2xs transition-colors"
             autocomplete="off"
@@ -574,46 +586,57 @@
             class="h-11 sm:h-12 px-3 sm:px-4 bg-amber-400 hover:bg-amber-500 active:scale-95 text-slate-900 font-black text-xs sm:text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1 transition-all shrink-0 cursor-pointer"
           >
             <Check weight="bold" class="w-4 h-4" />
-            <span>Kiểm tra</span>
+            <span>{appState.fillAnswered ? "Tiếp" : "Kiểm tra"}</span>
           </button>
         </div>
 
         <!-- Tone Keyboard (khi gõ thủ công trên mobile/tablet) -->
         {#if !isZhToVi}
           <div class="lg:hidden">
-            <ToneKeyboard onInsertChar={handleInsertChar} />
+            <ToneKeyboard onInsertChar={handleInsertChar} disabled={appState.fillAnswered} />
           </div>
         {/if}
       {/if}
 
-      <!-- Action Buttons: Chỉ hiện khi chưa trả lời -->
+      <!-- Action Buttons -->
       <div data-tour="fill-action-buttons" class="flex gap-2 items-center">
-        <button
-          type="button"
-          onclick={() => appState.skipFill()}
-          class="flex-1 h-11 sm:h-12 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-black text-xs sm:text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1 transition-all cursor-pointer"
-        >
-          <ArrowRight weight="bold" class="w-4 h-4" />
-          <span>Bỏ qua</span>
-        </button>
-        <button
-          type="button"
-          onclick={() => appState.hintFill()}
-          disabled={appState.fillHintShown}
-          class="h-11 sm:h-12 px-3.5 sm:px-4 bg-purple-600 hover:bg-purple-700 active:scale-95 disabled:opacity-50 text-white font-black text-xs sm:text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1 transition-all shrink-0 cursor-pointer"
-        >
-          <Lightbulb weight="bold" class="w-4 h-4" />
-          <span>Đáp án</span>
-        </button>
-
-        {#if isTileMode}
+        {#if !appState.fillAnswered}
           <button
             type="button"
-            onclick={() => appState.backspaceSlot(appState.currentChunkIndex)}
-            class="h-11 sm:h-12 w-11 sm:w-12 bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/50 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900/60 rounded-2xl flex items-center justify-center shadow-2xs active:scale-95 transition-all shrink-0 cursor-pointer"
-            title="Xoá ký tự vừa nhập"
+            onclick={() => appState.skipFill()}
+            class="flex-1 h-11 sm:h-12 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-black text-xs sm:text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1 transition-all cursor-pointer"
           >
-            <Backspace weight="bold" class="w-5 h-5" />
+            <ArrowRight weight="bold" class="w-4 h-4" />
+            <span>Bỏ qua</span>
+          </button>
+          <button
+            type="button"
+            onclick={() => appState.hintFill()}
+            disabled={appState.fillHintShown}
+            class="h-11 sm:h-12 px-3.5 sm:px-4 bg-purple-600 hover:bg-purple-700 active:scale-95 disabled:opacity-50 text-white font-black text-xs sm:text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1 transition-all shrink-0 cursor-pointer"
+          >
+            <Lightbulb weight="bold" class="w-4 h-4" />
+            <span>Đáp án</span>
+          </button>
+
+          {#if isTileMode}
+            <button
+              type="button"
+              onclick={() => appState.backspaceSlot(appState.currentChunkIndex)}
+              class="h-11 sm:h-12 w-11 sm:w-12 bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/50 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900/60 rounded-2xl flex items-center justify-center shadow-2xs active:scale-95 transition-all shrink-0 cursor-pointer"
+              title="Xoá ký tự vừa nhập"
+            >
+              <Backspace weight="bold" class="w-5 h-5" />
+            </button>
+          {/if}
+        {:else}
+          <button
+            type="button"
+            onclick={() => appState.nextFillItem()}
+            class="w-full h-11 sm:h-12 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-black text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+          >
+            <span>Tiếp tục từ sau</span>
+            <ArrowRight weight="bold" class="w-4 h-4" />
           </button>
         {/if}
       </div>
@@ -640,5 +663,7 @@
   </footer>
 {/if}
 
-  <FillFeedbackDrawer />
+  {#if showFeedbackDrawer}
+    <FillFeedbackDrawer />
+  {/if}
 </div>
