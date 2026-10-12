@@ -8,6 +8,12 @@ import { toast } from 'svelte-sonner';
 export type HskLevel = 'HSK1' | 'HSK2';
 export type AppTab = 'fill' | 'quiz' | 'flash' | 'speech';
 export type QuizDirection = 'vi_to_zh' | 'zh_to_vi';
+export type ItemStatus = 'unreached' | 'correct' | 'wrong' | 'skipped';
+
+export interface ProgressSegment {
+  id: string;
+  status: ItemStatus;
+}
 
 const DATA_VERSION = 'v5_fresh_start';
 
@@ -63,6 +69,8 @@ export class AppState {
 
   // 1. Chế độ Điền từ (Fill Word)
   fillDeck = $state<VocabItem[]>([]);
+  fillSessionList = $state<VocabItem[]>([]);
+  fillItemStatus = $state<Record<string, ItemStatus>>({});
   currentFillItem = $state<VocabItem | null>(null);
   fillInput = $state('');
   fillSubMode = $state<'tiles' | 'keyboard'>('tiles'); // 'tiles' (Chọn từ) hoặc 'keyboard' (Thủ công)
@@ -80,6 +88,8 @@ export class AppState {
 
   // 2. Chế độ Trắc nghiệm (Multiple Choice Quiz)
   quizDeck = $state<VocabItem[]>([]);
+  quizSessionList = $state<VocabItem[]>([]);
+  quizItemStatus = $state<Record<string, ItemStatus>>({});
   currentQuizItem = $state<VocabItem | null>(null);
   quizOptions = $state<VocabItem[]>([]);
   quizSelectedId = $state<string | null>(null);
@@ -90,6 +100,8 @@ export class AppState {
 
   // 3. Chế độ Flashcard
   flashDeck = $state<VocabItem[]>([]);
+  flashSessionList = $state<VocabItem[]>([]);
+  flashItemStatus = $state<Record<string, ItemStatus>>({});
   currentFlashItem = $state<VocabItem | null>(null);
   flashKnown = $state(0);
   flashUnknown = $state(0);
@@ -97,6 +109,8 @@ export class AppState {
 
   // 4. Chế độ Phát âm (Speech Recognition)
   speechDeck = $state<VocabItem[]>([]);
+  speechSessionList = $state<VocabItem[]>([]);
+  speechItemStatus = $state<Record<string, ItemStatus>>({});
   currentSpeechItem = $state<VocabItem | null>(null);
   speechDoneCount = $state(0);
   speechCorrect = $state(0);
@@ -109,11 +123,36 @@ export class AppState {
 
   // Computed totals
   totalFillCount = $derived(
-    this.isFillReviewMode ? this.wrongFillWords.length + this.fillDoneCount : this.filteredVocab.length
+    this.isFillReviewMode ? this.wrongFillWords.length + this.fillDoneCount : (this.fillSessionList.length || this.filteredVocab.length)
   );
-  totalQuizCount = $derived(this.filteredVocab.length);
-  totalFlashCount = $derived(this.filteredVocab.length);
-  totalSpeechCount = $derived(this.filteredVocab.length);
+  totalQuizCount = $derived(this.quizSessionList.length || this.filteredVocab.length);
+  totalFlashCount = $derived(this.flashSessionList.length || this.filteredVocab.length);
+  totalSpeechCount = $derived(this.speechSessionList.length || this.filteredVocab.length);
+
+  // Phân đoạn tiến độ hiện tại cho tab đang học
+  currentProgressSegments = $derived.by<ProgressSegment[]>(() => {
+    let list: VocabItem[] = [];
+    let statusMap: Record<string, ItemStatus> = {};
+
+    if (this.activeTab === 'fill') {
+      list = this.fillSessionList;
+      statusMap = this.fillItemStatus;
+    } else if (this.activeTab === 'quiz') {
+      list = this.quizSessionList;
+      statusMap = this.quizItemStatus;
+    } else if (this.activeTab === 'flash') {
+      list = this.flashSessionList;
+      statusMap = this.flashItemStatus;
+    } else {
+      list = this.speechSessionList;
+      statusMap = this.speechItemStatus;
+    }
+
+    return list.map(item => ({
+      id: item.id,
+      status: statusMap[item.id] || 'unreached'
+    }));
+  });
 
   constructor() {
     this.initFromLocalStorage();
@@ -433,6 +472,13 @@ export class AppState {
     const curr = shuffled[shuffled.length - 1] || null;
 
     this.fillDeck = shuffled;
+    this.fillSessionList = [...shuffled].reverse();
+    const initialFillStatus: Record<string, ItemStatus> = {};
+    for (const item of this.fillSessionList) {
+      initialFillStatus[item.id] = 'unreached';
+    }
+    this.fillItemStatus = initialFillStatus;
+
     this.currentFillItem = curr;
     this.fillCorrect = 0;
     this.fillWrong = 0;
@@ -516,6 +562,7 @@ export class AppState {
 
     if (isCorrect) {
       this.fillCorrect++;
+      this.fillItemStatus[this.currentFillItem.id] = 'correct';
       this.fillFeedback = {
         text: `Chính xác! ${isZhToVi ? `Nghĩa: "${this.currentFillItem.viet}"` : `Pinyin: "${this.currentFillItem.pinyin}"`}`,
         type: 'correct'
@@ -524,6 +571,7 @@ export class AppState {
       speakChinese(this.currentFillItem.hanzi, this.volume);
     } else {
       this.fillWrong++;
+      this.fillItemStatus[this.currentFillItem.id] = 'wrong';
       this.fillFeedback = {
         text: `Sai rồi! Đáp án: "${isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin}"`,
         type: 'wrong'
@@ -539,6 +587,7 @@ export class AppState {
     if (this.fillAnswered || !this.currentFillItem) return;
     this.fillSkipCount++;
     this.fillDoneCount++;
+    this.fillItemStatus[this.currentFillItem.id] = 'skipped';
     const isZhToVi = this.direction === 'zh_to_vi';
     this.fillFeedback = {
       text: `Đáp án: "${isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin}"`,
@@ -585,6 +634,13 @@ export class AppState {
     const curr = shuffled[shuffled.length - 1] || null;
 
     this.quizDeck = shuffled;
+    this.quizSessionList = [...shuffled].reverse();
+    const initialQuizStatus: Record<string, ItemStatus> = {};
+    for (const item of this.quizSessionList) {
+      initialQuizStatus[item.id] = 'unreached';
+    }
+    this.quizItemStatus = initialQuizStatus;
+
     this.currentQuizItem = curr;
     this.quizCorrect = 0;
     this.quizWrong = 0;
@@ -616,8 +672,10 @@ export class AppState {
     const isCorrect = item.id === this.currentQuizItem.id;
     if (isCorrect) {
       this.quizCorrect++;
+      this.quizItemStatus[this.currentQuizItem.id] = 'correct';
     } else {
       this.quizWrong++;
+      this.quizItemStatus[this.currentQuizItem.id] = 'wrong';
     }
 
     // TTS phát âm NGAY SAU KHI chọn câu trả lời (Tuyệt đối không phát âm trước)
@@ -650,6 +708,13 @@ export class AppState {
     const curr = shuffled[shuffled.length - 1] || null;
 
     this.flashDeck = shuffled;
+    this.flashSessionList = [...shuffled].reverse();
+    const initialFlashStatus: Record<string, ItemStatus> = {};
+    for (const item of this.flashSessionList) {
+      initialFlashStatus[item.id] = 'unreached';
+    }
+    this.flashItemStatus = initialFlashStatus;
+
     this.currentFlashItem = curr;
     this.flashKnown = 0;
     this.flashUnknown = 0;
@@ -680,16 +745,23 @@ export class AppState {
   }
 
   markFlashKnown() {
-    this.flashKnown++;
+    if (this.currentFlashItem) {
+      this.flashItemStatus[this.currentFlashItem.id] = 'correct';
+    }
+    this.flashKnown = Object.values(this.flashItemStatus).filter(s => s === 'correct').length;
+    this.flashUnknown = Object.values(this.flashItemStatus).filter(s => s === 'wrong').length;
     this.nextFlashItem();
   }
 
   // Khi "Chưa thuộc": Bỏ qua từ này ngay, chèn lại sau 5 đến 10 từ tiếp theo ngẫu nhiên
   markFlashUnknown() {
-    this.flashUnknown++;
     if (!this.currentFlashItem) return;
 
     const itemToRequeue = this.currentFlashItem;
+    this.flashItemStatus[itemToRequeue.id] = 'wrong';
+    this.flashKnown = Object.values(this.flashItemStatus).filter(s => s === 'correct').length;
+    this.flashUnknown = Object.values(this.flashItemStatus).filter(s => s === 'wrong').length;
+
     const remaining = [...this.flashDeck];
     remaining.pop(); // Bỏ từ hiện tại ra khỏi đầu thẻ
 
@@ -725,6 +797,13 @@ export class AppState {
     const curr = shuffled[shuffled.length - 1] || null;
 
     this.speechDeck = shuffled;
+    this.speechSessionList = [...shuffled].reverse();
+    const initialSpeechStatus: Record<string, ItemStatus> = {};
+    for (const item of this.speechSessionList) {
+      initialSpeechStatus[item.id] = 'unreached';
+    }
+    this.speechItemStatus = initialSpeechStatus;
+
     this.currentSpeechItem = curr;
     this.speechDoneCount = 0;
     this.speechCorrect = 0;
@@ -780,12 +859,14 @@ export class AppState {
 
     if (isCorrect) {
       this.speechCorrect++;
+      this.speechItemStatus[this.currentSpeechItem.id] = 'correct';
       this.speechFeedback = {
         text: 'Phát âm chuẩn xác!',
         type: 'correct'
       };
     } else {
       this.speechWrong++;
+      this.speechItemStatus[this.currentSpeechItem.id] = 'wrong';
       this.speechFeedback = {
         text: `Chưa chính xác: chuẩn là ${targetPinyin}`,
         type: 'wrong'

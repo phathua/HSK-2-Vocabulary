@@ -7,18 +7,12 @@
 
   import { tourState } from '#lib/state/tourState.svelte';
 
+  const segmentsCount = $derived(appState.currentProgressSegments.length);
+
   const progressPercent = $derived.by(() => {
-    if (appState.activeTab === 'fill') {
-      return appState.totalFillCount > 0 ? (appState.fillDoneCount / appState.totalFillCount) * 100 : 0;
-    } else if (appState.activeTab === 'quiz') {
-      return appState.totalQuizCount > 0 ? (appState.quizDoneCount / appState.totalQuizCount) * 100 : 0;
-    } else if (appState.activeTab === 'flash') {
-      return appState.totalFlashCount > 0
-        ? ((appState.flashKnown + appState.flashUnknown) / appState.totalFlashCount) * 100
-        : 0;
-    } else {
-      return appState.totalSpeechCount > 0 ? (appState.speechDoneCount / appState.totalSpeechCount) * 100 : 0;
-    }
+    if (segmentsCount === 0) return 0;
+    const attemptedCount = appState.currentProgressSegments.filter(s => s.status !== 'unreached').length;
+    return Math.min(100, Math.round((attemptedCount / segmentsCount) * 100));
   });
 
   const currentScoreText = $derived.by(() => {
@@ -108,14 +102,29 @@
   <!-- Micro Progress & Live Score Indicator -->
   <div data-tour="progress-score-bar" class="mt-1.5 px-1">
     <div class="flex items-center justify-between text-[10px] md:text-xs font-bold text-slate-400 dark:text-[#8E918F]">
-      <span>Tiến độ ({Math.round(progressPercent)}%)</span>
+      <span>Tiến độ ({progressPercent}%)</span>
       <span class="text-slate-600 dark:text-[#E3E3E3] font-black">Điểm: {currentScoreText}</span>
     </div>
-    <div class="w-full bg-slate-200 dark:bg-[#282A2C] h-1 md:h-1.5 rounded-full overflow-hidden mt-0.5">
-      <div
-        class="bg-blue-600 h-full transition-all duration-300 rounded-full"
-        style={`width: ${progressPercent}%`}
-      ></div>
+    <div
+      class="w-full bg-slate-300/70 dark:bg-[#1C1D1F] h-1.5 md:h-2 rounded-full overflow-hidden mt-0.5 flex {segmentsCount <= 60 ? 'gap-[1px]' : 'gap-0'}"
+    >
+      {#if segmentsCount === 0}
+        <div class="h-full w-full bg-slate-200 dark:bg-[#282A2C]"></div>
+      {:else}
+        {#each appState.currentProgressSegments as seg (seg.id)}
+          <div
+            class={`h-full flex-1 transition-colors duration-200 ${
+              seg.status === 'correct'
+                ? 'bg-blue-600 dark:bg-blue-500'
+                : seg.status === 'wrong'
+                ? 'bg-rose-500 dark:bg-rose-500'
+                : seg.status === 'skipped'
+                ? 'bg-amber-400 dark:bg-amber-400'
+                : 'bg-slate-200 dark:bg-[#282A2C]'
+            }`}
+          ></div>
+        {/each}
+      {/if}
     </div>
   </div>
 </div>
