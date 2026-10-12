@@ -294,15 +294,17 @@ class TourState {
       radius
     };
 
-    // Xác định placement thông minh (auto-flip nếu thiếu khoảng trống)
+    // Xác định placement thông minh (chỉ auto-flip khi phía đối diện THỰC SỰ ĐỦ CHỖ)
     let placement: 'top' | 'bottom' = 'bottom';
     const spaceBelow = window.innerHeight - (targetTop + targetHeight + gap);
     const spaceAbove = targetTop - gap;
 
     if (this.currentStep.placement === 'top') {
-      placement = spaceAbove >= popoverHeight || spaceAbove > spaceBelow ? 'top' : 'bottom';
+      // Chỉ lật xuống dưới nếu phía trên KHÔNG đủ chỗ VÀ phía dưới THỰC SỰ ĐỦ chỗ
+      placement = spaceAbove < popoverHeight && spaceBelow >= popoverHeight ? 'bottom' : 'top';
     } else if (this.currentStep.placement === 'bottom') {
-      placement = spaceBelow >= popoverHeight || spaceBelow > spaceAbove ? 'bottom' : 'top';
+      // Chỉ lật lên trên nếu phía dưới KHÔNG đủ chỗ VÀ phía trên THỰC SỰ ĐỦ chỗ
+      placement = spaceBelow < popoverHeight && spaceAbove >= popoverHeight ? 'top' : 'bottom';
     } else {
       placement = spaceBelow >= popoverHeight ? 'bottom' : 'top';
     }

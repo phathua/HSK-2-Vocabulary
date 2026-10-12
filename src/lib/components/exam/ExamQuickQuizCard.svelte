@@ -633,7 +633,7 @@
       <!-- Modal Header -->
       <div class="w-full flex items-center justify-between pb-2 mb-1 border-b border-slate-100 dark:border-[#282A2C] shrink-0">
         <span class="text-xs sm:text-sm font-bold text-slate-800 dark:text-neutral-200 flex items-center gap-1.5">
-          {question.board_image ? '🖼️ Bảng tranh đối chiếu (A – F)' : `📷 Ảnh câu ${question.question_no}`}
+          {question.board_image ? 'Bảng tranh đối chiếu (A – F)' : `Ảnh câu ${question.question_no}`}
         </span>
         <button
           type="button"

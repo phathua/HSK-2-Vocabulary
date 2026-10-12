@@ -191,7 +191,7 @@
   {#if question.board_image && showBoardImage}
     <div class="relative group my-3 max-w-xl rounded-2xl overflow-hidden border border-slate-200/90 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xs">
       <div class="px-3 py-1.5 bg-slate-100 dark:bg-neutral-800 text-[11px] font-bold text-slate-600 dark:text-neutral-300 flex items-center justify-between border-b border-slate-200 dark:border-neutral-700">
-        <span>🖼️ Bảng tranh lựa chọn (A - F):</span>
+        <span>Bảng tranh lựa chọn (A - F):</span>
         <span class="text-[10px] text-slate-400">Bấm để phóng to</span>
       </div>
       <button
@@ -226,7 +226,7 @@
         title="Xem bảng tranh A - F của phần thi này"
       >
         <MagnifyingGlassPlus class="w-3.5 h-3.5" />
-        <span>🖼️ Xem bảng tranh A – F</span>
+        <span>Xem bảng tranh A – F</span>
       </button>
     </div>
   {:else if question.image}

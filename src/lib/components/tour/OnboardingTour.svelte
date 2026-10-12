@@ -7,6 +7,7 @@
   import Check from 'phosphor-svelte/lib/Check';
   import X from 'phosphor-svelte/lib/X';
   import TourSwipeGesture from './TourSwipeGesture.svelte';
+  import TourTapGesture from './TourTapGesture.svelte';
 
   let popoverEl = $state<HTMLDivElement | null>(null);
 
@@ -162,9 +163,13 @@
     ></div>
   {/if}
 
-  <!-- 2.5. Interactive Gesture Animation (Vuốt thẻ flashcard trái / phải) -->
-  {#if tourState.targetRect && (tourState.currentStep.gesture === 'swipe-horizontal' || tourState.currentStep.id === 'flash-card-swipe' || tourState.currentStep.id === 'flash-mode')}
-    <TourSwipeGesture targetRect={tourState.targetRect} />
+  <!-- 2.5. Interactive Gesture Animation (Chạm lật thẻ hoặc Vuốt thẻ flashcard) -->
+  {#if tourState.targetRect}
+    {#if tourState.currentStep.gesture === 'tap' || tourState.currentStep.id === 'flash-card-flip'}
+      <TourTapGesture targetRect={tourState.targetRect} />
+    {:else if tourState.currentStep.gesture === 'swipe-horizontal' || tourState.currentStep.id === 'flash-card-swipe' || tourState.currentStep.id === 'flash-mode'}
+      <TourSwipeGesture targetRect={tourState.targetRect} />
+    {/if}
   {/if}
 
   <!-- 3. Soft Flat 2.0 Tour Popover Card -->

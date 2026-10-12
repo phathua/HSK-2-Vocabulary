@@ -15,7 +15,7 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'welcome',
       target: '[data-tour="header-brand"]',
-      title: 'Chào mừng bạn đến với Ôn Tập HSK! 🐼',
+      title: 'Chào mừng bạn đến với Ôn Tập HSK!',
       description: 'Linh vật Panda HSK sẽ đồng hành cùng bạn chinh phục trọn vẹn từ vựng HSK 1 & HSK 2 với 4 phương pháp luyện phản xạ đa giác quan.',
       placement: 'bottom',
       illustration: '/tour/panda_welcome.webp',
@@ -188,7 +188,7 @@ export const mainOnboardingTour: TourDefinition = {
       target: () =>
         document.querySelector('[data-tour="filter-lessons-scroll"]') ||
         document.querySelector('[data-tour="filter-lessons-grid"]'),
-      title: 'Danh mục bài học ôn tập 📚',
+      title: 'Danh mục bài học ôn tập',
       description: 'Chạm để bật/tắt từng bài học theo tiến độ học của bạn trên lớp. Các từ vựng của bài đã chọn sẽ tự động xuất hiện trong mọi bài tập.',
       placement: 'top',
       illustration: '/tour/mascot_buffalo.webp',
@@ -267,7 +267,7 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'tab-quiz-intro',
       target: '[data-tour="tab-btn-quiz"]',
-      title: 'Khám phá Chế độ Trắc nghiệm 🎯',
+      title: 'Khám phá Chế độ Trắc nghiệm',
       description: 'Chạm vào tab "Trắc nghiệm" trên thanh điều hướng để bắt đầu luyện tập phản xạ chọn đáp án nhanh.',
       placement: 'bottom',
       illustration: '/tour/mascot_tiger.webp',
@@ -282,8 +282,8 @@ export const mainOnboardingTour: TourDefinition = {
     },
     {
       id: 'quiz-mode',
-      target: '[data-tour="quiz-card-container"]',
-      title: 'Chế độ Trắc nghiệm 4 đáp án 🎯',
+      target: '[data-tour="quiz-options-area"]',
+      title: 'Chế độ Trắc nghiệm 4 đáp án',
       description: 'Rèn luyện phản xạ nhanh với 4 phương án A, B, C, D. Hệ thống phản hồi màu sắc ngay lập tức (xanh lá khi đúng, đỏ khi sai kèm giải thích).',
       placement: 'top',
       illustration: '/tour/mascot_buffalo.webp',
@@ -303,7 +303,7 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'tab-flash-intro',
       target: '[data-tour="tab-btn-flash"]',
-      title: 'Khám phá Chế độ Thẻ từ 🗂️',
+      title: 'Khám phá Chế độ Thẻ từ',
       description: 'Chạm vào tab "Thẻ từ" để chuyển sang chế độ Flashcard 3D lật mở đa chiều và ghi nhớ từ vựng dài hạn.',
       placement: 'bottom',
       illustration: '/tour/mascot_tiger.webp',
@@ -319,9 +319,10 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'flash-mode',
       target: '[data-tour="flash-card-stack"]',
-      title: 'Chế độ Thẻ từ Flashcard 3D 🗂️',
-      description: 'Chạm vào thẻ để lật xem Chữ Hán, Pinyin và Ví dụ. Vuốt thẻ sang PHẢI nếu bạn đã "THUỘC", hoặc vuốt sang TRÁI nếu bạn còn "QUÊN".',
-      placement: 'top',
+      title: 'Chế độ Thẻ từ Flashcard 3D',
+      description: 'Chạm vào thẻ để lật xem Chữ Hán, Pinyin và Ví dụ. Vuốt thẻ sang Phải nếu bạn đã thuộc, hoặc vuốt sang Trái nếu bạn còn quên.',
+      gesture: 'swipe-horizontal',
+      placement: 'bottom',
       illustration: '/tour/mascot_cat.webp',
       spotlightPadding: 8,
       spotlightRadius: 26,
@@ -339,7 +340,7 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'tab-speech-intro',
       target: '[data-tour="tab-btn-speech"]',
-      title: 'Khám phá Chế độ Luyện phát âm 🎙️',
+      title: 'Khám phá Chế độ Luyện phát âm',
       description: 'Chạm vào tab "Phát âm" để bắt đầu luyện nói chuẩn bản xứ cùng trợ lý AI nhận diện giọng nói tiếng Trung.',
       placement: 'bottom',
       illustration: '/tour/mascot_monkey.webp',
@@ -354,13 +355,13 @@ export const mainOnboardingTour: TourDefinition = {
     },
     {
       id: 'speech-mode',
-      target: '[data-tour="speech-card-container"]',
-      title: 'Chế độ Luyện phát âm thông minh 🎙️',
+      target: '[data-tour="speech-mic-btn"]',
+      title: 'Chế độ Luyện phát âm thông minh',
       description: 'Nghe phát âm chuẩn bản xứ, sau đó bấm nút Micro để AI nhận diện giọng nói tiếng Trung của bạn trong thời gian thực.',
       placement: 'top',
       illustration: '/tour/mascot_girl.webp',
       spotlightPadding: 8,
-      spotlightRadius: 26,
+      spotlightRadius: 9999,
       onBeforeStep: async () => {
         appState.activeTab = 'speech';
         await delay(200);
@@ -375,7 +376,7 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'tour-finish',
       target: '[data-tour="header-brand"]',
-      title: 'Bạn đã sẵn sàng chinh phục HSK! 🚀',
+      title: 'Bạn đã sẵn sàng chinh phục HSK!',
       description: 'Mọi tính năng đã được làm quen. Hãy bắt đầu buổi học đầu tiên ngay bây giờ cùng chú gấu trúc Panda nhé. Chúc bạn học tốt!',
       placement: 'bottom',
       illustration: '/tour/panda_rocket.webp',

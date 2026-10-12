@@ -135,13 +135,13 @@
             }}
             class="w-full py-2.5 px-3 rounded-2xl bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900/50 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
           >
-            <span>🔄 Học lại từ đầu chế độ này</span>
+            <span>Học lại từ đầu chế độ này</span>
           </button>
         </div>
 
         <!-- Telex helper -->
         <div class="bg-blue-50/70 dark:bg-[#282A2C]/90 p-3 rounded-2xl border border-blue-200 dark:border-[#37393B] text-xs text-blue-900 dark:text-blue-300 font-semibold leading-relaxed">
-          ⌨ <b>Gõ Telex Pinyin tiện lợi:</b><br />
+          <b>Gõ Telex Pinyin tiện lợi:</b><br />
           Gõ <code class="bg-white dark:bg-[#1B1B1B] px-1 py-0.5 rounded text-blue-700 dark:text-blue-300">ni3hao3</code> hoặc <code class="bg-white dark:bg-[#1B1B1B] px-1 py-0.5 rounded text-blue-700 dark:text-blue-300">nihaoj</code> sẽ tự chuyển thành pinyin chuẩn!
         </div>
 
@@ -156,7 +156,7 @@
             }}
             class="w-full py-2.5 px-3 rounded-2xl bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900/50 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
           >
-            <span>📖 Xem lại hướng dẫn sử dụng</span>
+            <span>Xem lại hướng dẫn sử dụng</span>
           </button>
         </div>
 
@@ -173,7 +173,7 @@
             }}
             class="w-full py-2.5 px-3 rounded-2xl bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] text-slate-700 dark:text-[#C4C7C5] text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
           >
-            <span>🚀 Kiểm tra bản cập nhật mới</span>
+            <span>Kiểm tra bản cập nhật mới</span>
           </button>
         </div>
       </div>

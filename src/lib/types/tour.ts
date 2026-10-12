@@ -15,8 +15,8 @@ export interface TourStep {
   spotlightRadius?: number;
   /** Optional mascot / illustration image URL */
   illustration?: string;
-  /** Optional gesture animation overlay (vd: swipe-horizontal cho flashcard) */
-  gesture?: 'swipe-horizontal';
+  /** Optional gesture animation overlay (vd: swipe-horizontal hoặc tap cho flashcard) */
+  gesture?: 'swipe-horizontal' | 'tap';
   /** Optional hook before navigating to step */
   onBeforeStep?: () => Promise<void> | void;
   /** Optional hook after completing/advancing from step */

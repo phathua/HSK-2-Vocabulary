@@ -11,8 +11,20 @@
   import { untrack } from 'svelte';
   import type { VocabItem } from '#lib/data/hsk2Vocabulary';
   import SmartImage from './SmartImage.svelte';
+  import { tourState } from '#lib/state/tourState.svelte';
 
   const isZhToVi = $derived(appState.direction === 'zh_to_vi');
+  const isTourSwipeStep = $derived(
+    tourState.isActive &&
+    (tourState.currentStep?.gesture === 'swipe-horizontal' ||
+     tourState.currentStep?.id === 'flash-card-swipe' ||
+     tourState.currentStep?.id === 'flash-mode')
+  );
+  const isTourFlipStep = $derived(
+    tourState.isActive &&
+    (tourState.currentStep?.gesture === 'tap' ||
+     tourState.currentStep?.id === 'flash-card-flip')
+  );
 
   // Thẻ kế tiếp trong ngăn xếp (under card)
   const nextCardItem = $derived.by(() => {
@@ -333,13 +345,17 @@
       <!-- ================= UNDER CARD (THẺ ĐỨNG SAU TRỒI LÊN KHI VUỐT) ================= -->
       {#if nextCardItem}
         <div
-          class="absolute inset-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden pointer-events-none transition-colors"
-          style={`
-            transform: translateY(${isLeavingDeck ? 0 : underTranslateY}px) scale(${isLeavingDeck ? 1 : underScale});
-            opacity: ${isLeavingDeck ? 1 : underOpacity};
-            transition: ${isDragging || isAppearing ? 'none' : 'transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.32s'};
-            z-index: 10;
-          `}
+          class={`absolute inset-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden pointer-events-none transition-colors ${
+            isTourSwipeStep && !isDragging ? 'tour-preview-undercard' : ''
+          }`}
+          style={isTourSwipeStep && !isDragging
+            ? undefined
+            : `
+              transform: translateY(${isLeavingDeck ? 0 : underTranslateY}px) scale(${isLeavingDeck ? 1 : underScale});
+              opacity: ${isLeavingDeck ? 1 : underOpacity};
+              transition: ${isDragging || isAppearing ? 'none' : 'transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.32s'};
+              z-index: 10;
+            `}
         >
           {#if nextCardItem.image}
             <div class="relative mb-3 md:mb-5">
@@ -377,37 +393,49 @@
         onpointermove={handlePointerMove}
         onpointerup={handlePointerUp}
         onpointercancel={handlePointerUp}
-        class="w-full h-full relative cursor-grab active:cursor-grabbing touch-none select-none [transform-style:preserve-3d]"
-        style={`
-          transform: translate3d(${offsetX}px, ${offsetY}px, 0) rotate(${rotateDeg}deg);
-          transition: ${isDragging || isLeavingDeck || isAppearing ? 'none' : 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)'};
-          opacity: ${isLeavingDeck ? 0 : 1};
-          pointer-events: ${isLeavingDeck ? 'none' : 'auto'};
-          z-index: 20;
-        `}
+        class={`w-full h-full relative cursor-grab active:cursor-grabbing touch-none select-none [transform-style:preserve-3d] ${
+          isTourSwipeStep && !isDragging ? 'tour-preview-card' : ''
+        }`}
+        style={isTourSwipeStep && !isDragging
+          ? undefined
+          : `
+            transform: translate3d(${offsetX}px, ${offsetY}px, 0) rotate(${rotateDeg}deg);
+            transition: ${isDragging || isLeavingDeck || isAppearing ? 'none' : 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)'};
+            opacity: ${isLeavingDeck ? 0 : 1};
+            pointer-events: ${isLeavingDeck ? 'none' : 'auto'};
+            z-index: 20;
+          `}
       >
         <!-- 3D Flip Container -->
         <div
-          class="w-full h-full relative [transform-style:preserve-3d]"
-          style={`
-            transform: rotateY(${isFlipped ? 180 : 0}deg);
-            transition: ${skipFlipTransition || isAppearing ? 'none' : 'transform 0.5s ease-out'};
-          `}
+          class={`w-full h-full relative [transform-style:preserve-3d] ${
+            isTourFlipStep ? 'tour-preview-flip' : ''
+          }`}
+          style={isTourFlipStep
+            ? undefined
+            : `
+              transform: rotateY(${isFlipped ? 180 : 0}deg);
+              transition: ${skipFlipTransition || isAppearing ? 'none' : 'transform 0.5s ease-out'};
+            `}
         >
           <!-- ================= FRONT FACE (CÂU HỎI - KHÔNG LỘ ĐÁP ÁN) ================= -->
           <div
             class="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden transition-colors"
           >
-            <!-- Tinder Stamps (Stamp Thuộc / Stamp Quên) -->
+            <!-- Tinder Stamps (Nghiêng trái thì Quên hiện góc trên bên phải; Nghiêng phải thì Thuộc hiện góc trên bên trái) -->
             <div
-              class="absolute top-5 left-5 border-3 border-emerald-500 text-emerald-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform -rotate-12 pointer-events-none bg-emerald-50/95 dark:bg-emerald-950/90 shadow-sm transition-opacity"
-              style={`opacity: ${likeOpacity};`}
+              class={`absolute top-5 left-5 border-3 border-emerald-500 text-emerald-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform -rotate-12 pointer-events-none bg-emerald-50/95 dark:bg-emerald-950/90 shadow-sm transition-opacity ${
+                isTourSwipeStep && !isDragging ? 'tour-preview-stamp-like' : ''
+              }`}
+              style={isTourSwipeStep && !isDragging ? undefined : `opacity: ${likeOpacity};`}
             >
               THUỘC
             </div>
             <div
-              class="absolute top-5 right-5 border-3 border-rose-500 text-rose-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform rotate-12 pointer-events-none bg-rose-50/95 dark:bg-rose-950/90 shadow-sm transition-opacity"
-              style={`opacity: ${nopeOpacity};`}
+              class={`absolute top-5 right-5 border-3 border-rose-500 text-rose-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform rotate-12 pointer-events-none bg-rose-50/95 dark:bg-rose-950/90 shadow-sm transition-opacity ${
+                isTourSwipeStep && !isDragging ? 'tour-preview-stamp-nope' : ''
+              }`}
+              style={isTourSwipeStep && !isDragging ? undefined : `opacity: ${nopeOpacity};`}
             >
               QUÊN
             </div>
@@ -591,3 +619,120 @@
     </div>
   {/if}
 </div>
+
+<style>
+  :global(.tour-preview-card) {
+    animation: tourCardSwipe 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+    will-change: transform;
+    pointer-events: none;
+  }
+
+  @keyframes tourCardSwipe {
+    0%, 8% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    14% {
+      transform: translate3d(20px, -1px, 0) rotate(1.5deg);
+    }
+    30% {
+      transform: translate3d(75px, -6px, 0) rotate(6deg);
+    }
+    38% {
+      transform: translate3d(75px, -6px, 0) rotate(6deg);
+    }
+    48%, 56% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    62% {
+      transform: translate3d(-20px, -1px, 0) rotate(-1.5deg);
+    }
+    78% {
+      transform: translate3d(-75px, -6px, 0) rotate(-6deg);
+    }
+    86% {
+      transform: translate3d(-75px, -6px, 0) rotate(-6deg);
+    }
+    96%, 100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+  }
+
+  :global(.tour-preview-flip) {
+    animation: tourCardFlip 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+    transform-style: preserve-3d !important;
+  }
+
+  @keyframes tourCardFlip {
+    0%, 12% {
+      transform: rotateY(0deg);
+    }
+    30%, 60% {
+      transform: rotateY(180deg);
+    }
+    78%, 100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+  :global(.tour-preview-stamp-like) {
+    animation: tourStampLike 3.4s ease-in-out infinite !important;
+  }
+  @keyframes tourStampLike {
+    0%, 12% {
+      opacity: 0;
+      transform: rotate(-12deg) scale(0.9);
+    }
+    24%, 38% {
+      opacity: 0.95;
+      transform: rotate(-12deg) scale(1);
+    }
+    46%, 100% {
+      opacity: 0;
+      transform: rotate(-12deg) scale(0.9);
+    }
+  }
+
+  :global(.tour-preview-stamp-nope) {
+    animation: tourStampNope 3.4s ease-in-out infinite !important;
+  }
+  @keyframes tourStampNope {
+    0%, 60% {
+      opacity: 0;
+      transform: rotate(12deg) scale(0.9);
+    }
+    72%, 86% {
+      opacity: 0.95;
+      transform: rotate(12deg) scale(1);
+    }
+    94%, 100% {
+      opacity: 0;
+      transform: rotate(12deg) scale(0.9);
+    }
+  }
+
+  :global(.tour-preview-undercard) {
+    animation: tourUnderCard 3.4s ease-in-out infinite !important;
+  }
+  @keyframes tourUnderCard {
+    0%, 14% {
+      transform: translateY(12px) scale(0.95);
+      opacity: 0.75;
+    }
+    30%, 38% {
+      transform: translateY(5px) scale(0.98);
+      opacity: 0.9;
+    }
+    48%, 62% {
+      transform: translateY(12px) scale(0.95);
+      opacity: 0.75;
+    }
+    78%, 86% {
+      transform: translateY(5px) scale(0.98);
+      opacity: 0.9;
+    }
+    96%, 100% {
+      transform: translateY(12px) scale(0.95);
+      opacity: 0.75;
+    }
+  }
+</style>

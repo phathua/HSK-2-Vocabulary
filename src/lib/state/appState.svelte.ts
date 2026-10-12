@@ -562,7 +562,7 @@ export class AppState {
     const ans = isZhToVi ? this.currentFillItem.viet : this.currentFillItem.pinyin;
     
     // Bắn thông báo Toast nhẹ nhàng ở trên cùng, không che ô chọn
-    toast.info(`💡 Gợi ý: "${ans}"`, {
+    toast.info(`Gợi ý: "${ans}"`, {
       duration: 3500
     });
     this.fillHintShown = true;
@@ -776,7 +776,7 @@ export class AppState {
     if (isCorrect) {
       this.speechCorrect++;
       this.speechFeedback = {
-        text: 'Phát âm chuẩn xác! 🎉',
+        text: 'Phát âm chuẩn xác!',
         type: 'correct'
       };
     } else {

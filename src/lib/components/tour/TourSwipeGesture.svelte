@@ -1,7 +1,5 @@
 <script lang="ts">
   import HandPointing from 'phosphor-svelte/lib/HandPointing';
-  import Check from 'phosphor-svelte/lib/Check';
-  import X from 'phosphor-svelte/lib/X';
 
   let {
     targetRect
@@ -10,9 +8,9 @@
   } = $props();
 </script>
 
-<!-- Swipe Gesture Indicator Overlay over Flashcard -->
+<!-- Minimalist Hand Gesture Overlay synchronized with Card Swipe -->
 <div
-  class="fixed pointer-events-none z-[186] flex flex-col items-center justify-center select-none"
+  class="fixed pointer-events-none z-[186] flex items-center justify-center select-none"
   style="
     left: {targetRect.x}px;
     top: {targetRect.y}px;
@@ -21,207 +19,190 @@
   "
   aria-hidden="true"
 >
-  <!-- Background Gesture Canvas: Pills & Guide track -->
-  <div class="relative w-full max-w-[340px] sm:max-w-[380px] h-36 flex items-center justify-center">
-    
-    <!-- Left Pill: Quên (Vuốt trái) -->
-    <div
-      class="pill-left absolute left-2 sm:left-4 flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-rose-500/90 dark:bg-rose-950/90 text-white text-xs sm:text-sm font-black border-2 border-rose-400 dark:border-rose-600 shadow-lg backdrop-blur-xs select-none"
-    >
-      <X size={16} weight="bold" />
-      <span>Quên (Trái)</span>
-    </div>
+  <div class="relative w-full h-full flex items-center justify-center">
+    <!-- Touch Point Ripple Waves -->
+    <div class="touch-ripple-right absolute pointer-events-none w-14 h-14 rounded-full border-2 border-white/70 bg-white/15"></div>
+    <div class="touch-ripple-left absolute pointer-events-none w-14 h-14 rounded-full border-2 border-white/70 bg-white/15"></div>
 
-    <!-- Center Swipe Track Guide (Dashed line with directional arrows) -->
-    <div class="w-48 sm:w-56 h-0.5 border-b-2 border-dashed border-white/50 dark:border-white/30 flex items-center justify-between px-1">
-      <span class="text-xs text-rose-300 font-bold -translate-y-0.5">◀</span>
-      <div class="w-2 h-2 rounded-full bg-white/70 shadow-xs"></div>
-      <span class="text-xs text-emerald-300 font-bold -translate-y-0.5">▶</span>
-    </div>
-
-    <!-- Right Pill: Thuộc (Vuốt phải) -->
-    <div
-      class="pill-right absolute right-2 sm:right-4 flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-emerald-500/90 dark:bg-emerald-950/90 text-white text-xs sm:text-sm font-black border-2 border-emerald-400 dark:border-emerald-600 shadow-lg backdrop-blur-xs select-none"
-    >
-      <span>Thuộc (Phải)</span>
-      <Check size={16} weight="bold" />
-    </div>
-
-    <!-- Touch Down Ripple Rings at Center -->
-    <div class="ripple-ring-right absolute pointer-events-none w-16 h-16 rounded-full border-2 border-blue-400/80 bg-blue-400/20"></div>
-    <div class="ripple-ring-left absolute pointer-events-none w-16 h-16 rounded-full border-2 border-blue-400/80 bg-blue-400/20"></div>
-
-    <!-- Animated Hand Pointer -->
-    <div class="hand-actor absolute flex flex-col items-center justify-center">
-      <div class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center shadow-[0_12px_28px_rgba(37,99,235,0.55)] border-2 border-white ring-4 ring-blue-500/35">
-        <HandPointing size={28} weight="fill" class="text-white drop-shadow-sm -translate-y-0.5" />
+    <!-- Minimalist Gesture Hand (Line-art aesthetic inspired by UI gesture standards) -->
+    <div class="gesture-hand-wrapper absolute flex flex-col items-center justify-center">
+      <!-- Directional Action Cues (Nổi phía trên ngón tay, không đè lên chữ phía dưới) -->
+      <div class="absolute -top-7 flex items-center justify-center h-6 w-36 pointer-events-none z-10">
+        <span class="cue-pill cue-like absolute px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider text-emerald-300 bg-emerald-950/90 border border-emerald-500/60 shadow-lg whitespace-nowrap">
+          Vuốt phải ➔ Thuộc
+        </span>
+        <span class="cue-pill cue-nope absolute px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider text-rose-300 bg-rose-950/90 border border-rose-500/60 shadow-lg whitespace-nowrap">
+          Vuốt trái ➔ Quên
+        </span>
       </div>
-      <div class="mt-1 px-2 py-0.5 rounded-md bg-slate-900/80 text-white text-[10px] font-bold tracking-wider uppercase shadow-xs">
-        Vuốt thẻ
+
+      <div class="relative flex items-center justify-center">
+        <!-- Finger tip touch glow -->
+        <span class="finger-glow absolute -top-1 w-5 h-5 rounded-full bg-blue-400/40 blur-xs"></span>
+        <HandPointing
+          size={46}
+          weight="duotone"
+          class="text-white drop-shadow-[0_10px_22px_rgba(0,0,0,0.65)] filter transition-transform"
+        />
       </div>
     </div>
-
   </div>
 </div>
 
 <style>
-  /* 1. Animation ngón tay chạm và vuốt trái phải liên tục */
-  .hand-actor {
-    animation: swipeHandLoop 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  .cue-like {
+    animation: cueLikeAnim 3.4s ease-in-out infinite;
+  }
+  @keyframes cueLikeAnim {
+    0%, 12% {
+      opacity: 0;
+      transform: translateY(4px) scale(0.95);
+    }
+    20%, 36% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    44%, 100% {
+      opacity: 0;
+      transform: translateY(4px) scale(0.95);
+    }
+  }
+
+  .cue-nope {
+    animation: cueNopeAnim 3.4s ease-in-out infinite;
+  }
+  @keyframes cueNopeAnim {
+    0%, 60% {
+      opacity: 0;
+      transform: translateY(4px) scale(0.95);
+    }
+    68%, 84% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    92%, 100% {
+      opacity: 0;
+      transform: translateY(4px) scale(0.95);
+    }
+  }
+  /* Synchronization: 3.4s cubic-bezier(0.4, 0, 0.2, 1) matching FlashcardDeck tourCardSwipe */
+  .gesture-hand-wrapper {
+    animation: handSwipeGesture 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     will-change: transform, opacity;
   }
 
-  @keyframes swipeHandLoop {
-    0% {
+  @keyframes handSwipeGesture {
+    0%, 8% {
       transform: translate3d(0, 0, 0) scale(1);
-      opacity: 0.9;
-    }
-    8% {
-      /* Chạm ngón tay xuống (Tap effect) */
-      transform: translate3d(0, 0, 0) scale(0.82);
-      opacity: 1;
+      opacity: 0.95;
     }
     14% {
-      /* Bắt đầu lướt sang phải */
-      transform: translate3d(24px, 0, 0) scale(0.85) rotate(6deg);
+      /* Touch down & drag right */
+      transform: translate3d(20px, -1px, 0) scale(0.9) rotate(3deg);
       opacity: 1;
     }
-    34% {
-      /* Lướt tới đỉnh mép phải */
-      transform: translate3d(105px, 0, 0) scale(0.85) rotate(14deg);
+    30% {
+      /* Full right swipe */
+      transform: translate3d(75px, -6px, 0) scale(0.9) rotate(7deg);
       opacity: 1;
     }
-    40% {
-      /* Nhấc ngón tay lên */
-      transform: translate3d(115px, -8px, 0) scale(1.06) rotate(6deg);
-      opacity: 0.7;
+    38% {
+      /* Lift finger up */
+      transform: translate3d(85px, -12px, 0) scale(1.04) rotate(4deg);
+      opacity: 0.85;
     }
-    46% {
-      /* Biến mất khi quay về giữa */
-      transform: translate3d(30px, 0, 0) scale(1);
-      opacity: 0;
+    48%, 56% {
+      /* Glide back to center */
+      transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+      opacity: 0.95;
     }
-    52% {
-      /* Xuất hiện lại ở tâm */
-      transform: translate3d(0, 0, 0) scale(1);
-      opacity: 0.9;
-    }
-    58% {
-      /* Chạm ngón tay xuống lần 2 (Tap effect) */
-      transform: translate3d(0, 0, 0) scale(0.82);
+    62% {
+      /* Touch down & drag left */
+      transform: translate3d(-20px, -1px, 0) scale(0.9) rotate(-3deg);
       opacity: 1;
     }
-    64% {
-      /* Bắt đầu lướt sang trái */
-      transform: translate3d(-24px, 0, 0) scale(0.85) rotate(-6deg);
+    78% {
+      /* Full left swipe */
+      transform: translate3d(-75px, -6px, 0) scale(0.9) rotate(-7deg);
       opacity: 1;
     }
-    84% {
-      /* Lướt tới đỉnh mép trái */
-      transform: translate3d(-105px, 0, 0) scale(0.85) rotate(-14deg);
-      opacity: 1;
+    86% {
+      /* Lift finger up */
+      transform: translate3d(-85px, -12px, 0) scale(1.04) rotate(-4deg);
+      opacity: 0.85;
     }
-    90% {
-      /* Nhấc ngón tay lên */
-      transform: translate3d(-115px, -8px, 0) scale(1.06) rotate(-6deg);
-      opacity: 0.7;
-    }
-    94% {
-      /* Biến mất khi quay về giữa */
-      transform: translate3d(-30px, 0, 0) scale(1);
-      opacity: 0;
-    }
-    100% {
-      transform: translate3d(0, 0, 0) scale(1);
-      opacity: 0.9;
+    96%, 100% {
+      /* Glide back to center */
+      transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+      opacity: 0.95;
     }
   }
 
-  /* 2. Hiệu ứng sóng chạm (Ripple) */
-  .ripple-ring-right {
-    animation: rippleRight 3.4s ease-out infinite;
+  /* Ripple Waves at touch points */
+  .touch-ripple-right {
+    animation: rippleRightPulse 3.4s ease-out infinite;
   }
-  @keyframes rippleRight {
-    0%, 6% {
-      transform: scale(0.3);
+  @keyframes rippleRightPulse {
+    0%, 7% {
+      transform: scale(0.2);
       opacity: 0;
     }
     8% {
-      transform: scale(0.4);
+      transform: scale(0.35);
       opacity: 0.9;
     }
     20% {
-      transform: scale(1.9);
+      transform: scale(1.8);
       opacity: 0;
     }
     100% {
-      transform: scale(1.9);
+      transform: scale(1.8);
       opacity: 0;
     }
   }
 
-  .ripple-ring-left {
-    animation: rippleLeft 3.4s ease-out infinite;
+  .touch-ripple-left {
+    animation: rippleLeftPulse 3.4s ease-out infinite;
   }
-  @keyframes rippleLeft {
-    0%, 56% {
-      transform: scale(0.3);
+  @keyframes rippleLeftPulse {
+    0%, 55% {
+      transform: scale(0.2);
       opacity: 0;
     }
-    58% {
-      transform: scale(0.4);
+    56% {
+      transform: scale(0.35);
       opacity: 0.9;
     }
-    70% {
-      transform: scale(1.9);
+    68% {
+      transform: scale(1.8);
       opacity: 0;
     }
     100% {
-      transform: scale(1.9);
+      transform: scale(1.8);
       opacity: 0;
     }
   }
 
-  /* 3. Hiệu ứng sáng rực ở Pill Thuộc & Pill Quên đồng bộ với cử chỉ vuốt */
-  .pill-right {
-    animation: glowRightPill 3.4s ease-in-out infinite;
+  .finger-glow {
+    animation: fingerGlowPulse 3.4s ease-in-out infinite;
   }
-  @keyframes glowRightPill {
-    0%, 14% {
-      transform: scale(1);
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
-      border-color: rgba(52, 211, 153, 0.6);
+  @keyframes fingerGlowPulse {
+    0%, 6% {
+      opacity: 0.3;
     }
-    24%, 38% {
-      transform: scale(1.08);
-      box-shadow: 0 0 24px rgba(16, 185, 129, 0.7);
-      border-color: rgba(16, 185, 129, 1);
+    8%, 34% {
+      opacity: 0.95;
+      background-color: rgba(52, 211, 153, 0.6);
     }
-    48%, 100% {
-      transform: scale(1);
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
-      border-color: rgba(52, 211, 153, 0.6);
+    38%, 54% {
+      opacity: 0.3;
     }
-  }
-
-  .pill-left {
-    animation: glowLeftPill 3.4s ease-in-out infinite;
-  }
-  @keyframes glowLeftPill {
-    0%, 64% {
-      transform: scale(1);
-      box-shadow: 0 4px 12px rgba(244, 63, 94, 0.2);
-      border-color: rgba(251, 113, 133, 0.6);
+    56%, 82% {
+      opacity: 0.95;
+      background-color: rgba(251, 113, 133, 0.6);
     }
-    74%, 88% {
-      transform: scale(1.08);
-      box-shadow: 0 0 24px rgba(244, 63, 94, 0.7);
-      border-color: rgba(244, 63, 94, 1);
-    }
-    96%, 100% {
-      transform: scale(1);
-      box-shadow: 0 4px 12px rgba(244, 63, 94, 0.2);
-      border-color: rgba(251, 113, 133, 0.6);
+    86%, 100% {
+      opacity: 0.3;
     }
   }
 </style>

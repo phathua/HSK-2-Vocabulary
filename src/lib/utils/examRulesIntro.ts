@@ -21,7 +21,7 @@ export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
     id: 1000,
     startTime: 0,
     endTime: 30.5,
-    text: "🎵 Nhạc dạo đầu bài thi HSK 2...",
+    text: "Nhạc dạo đầu bài thi HSK 2...",
     pinyin: "",
     viet: "Nhạc dạo đầu bài thi HSK 2...",
     isIntro: true,

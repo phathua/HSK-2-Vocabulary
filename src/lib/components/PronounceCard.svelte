@@ -335,7 +335,7 @@
     appState.checkSpeechAnswer(livePinyin, liveHanzi);
 
     if (appState.speechFeedback?.type === 'correct') {
-      toast.success('Phát âm chuẩn xác! 🎉', {
+      toast.success('Phát âm chuẩn xác!', {
         description: `${targetHanzi} • ${targetPinyin}`
       });
     } else {
@@ -529,6 +529,7 @@
 
             <button
               type="button"
+              data-tour="speech-mic-btn"
               disabled={isBusy}
               onclick={() => { handleRetry(); setTimeout(startRecording, 300); }}
               class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all bg-gradient-to-tr from-blue-600 to-indigo-600 text-white disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
