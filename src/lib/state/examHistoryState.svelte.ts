@@ -58,6 +58,17 @@ class ExamHistoryState {
   getAttemptsCount(examCode: string): number {
     return this.records.filter((r) => r.examCode === examCode).length;
   }
+
+  clearHistory() {
+    this.records = [];
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch (e) {
+        console.error('Lỗi khi xóa lịch sử thi:', e);
+      }
+    }
+  }
 }
 
 export const examHistoryState = new ExamHistoryState();

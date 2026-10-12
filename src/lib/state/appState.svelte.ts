@@ -35,6 +35,7 @@ export class AppState {
   themeMode = $state<'light' | 'dark' | 'system'>('system');
   theme = $state<'light' | 'dark'>('dark');
   enableFeedbackDrawer = $state<boolean>(false);
+  enableFillHints = $state<boolean>(true);
 
   // Bài học chọn lọc (Bài 1-15 cho từng cấp độ)
   selectedLessonsHsk1 = $state<Record<number, boolean>>({});
@@ -212,6 +213,7 @@ export class AppState {
       const vol = localStorage.getItem('HSK_VOLUME');
       this.volume = vol ? parseFloat(vol) : 0.7;
       this.enableFeedbackDrawer = localStorage.getItem('HSK_ENABLE_FEEDBACK_DRAWER') === 'true';
+      this.enableFillHints = localStorage.getItem('HSK_ENABLE_FILL_HINTS') !== 'false';
 
       const savedThemeMode = localStorage.getItem('HSK_THEME_MODE') as 'light' | 'dark' | 'system';
       if (savedThemeMode === 'light' || savedThemeMode === 'dark' || savedThemeMode === 'system') {
@@ -314,6 +316,7 @@ export class AppState {
       localStorage.setItem('HSK_AUTOPLAY', this.autoPlay ? 'true' : 'false');
       localStorage.setItem('HSK_VOLUME', this.volume.toString());
       localStorage.setItem('HSK_ENABLE_FEEDBACK_DRAWER', this.enableFeedbackDrawer ? 'true' : 'false');
+      localStorage.setItem('HSK_ENABLE_FILL_HINTS', this.enableFillHints ? 'true' : 'false');
       localStorage.setItem('HSK_SPEECH_AUTO_SUBMIT', this.speechAutoSubmit ? 'true' : 'false');
       localStorage.setItem('HSK_THEME_MODE', this.themeMode);
       localStorage.setItem('HSK_THEME', this.theme);
@@ -358,8 +361,17 @@ export class AppState {
     }
   }
 
+  toggleFillHints() {
+    this.enableFillHints = !this.enableFillHints;
+    this.saveToLocalStorage();
+    if (this.activeTab === 'fill' && !this.fillAnswered && this.currentFillItem) {
+      this.setupFillChunks();
+    }
+  }
+
   toggleFillSubMode() {
     this.fillSubMode = this.fillSubMode === 'tiles' ? 'keyboard' : 'tiles';
+    this.setupFillChunks();
     this.saveToLocalStorage();
   }
 
@@ -371,11 +383,17 @@ export class AppState {
       return;
     }
     const isZhToVi = this.direction === 'zh_to_vi';
-    // Chế độ 'tiles' chỉ hoạt động khi điền Pinyin tiếng Trung (vi_to_zh)
-    // Nếu zh_to_vi, ta dùng text input hoặc nếu có pinyin thì chunks theo pinyin
-    this.fillWordChunks = buildWordChunks(this.currentFillItem.pinyin);
+    const isTileMode = this.fillSubMode === 'tiles' && !isZhToVi;
+    // Chế độ gõ thủ công (keyboard) TUYỆT ĐỐI KHÔNG BAO GIỜ hiển thị ký tự gợi ý, dù có bật trong Cài đặt
+    const allowHints = this.enableFillHints && isTileMode;
+    this.fillWordChunks = buildWordChunks(this.currentFillItem.pinyin, allowHints);
     this.currentChunkIndex = 0;
-    this.syncFillInputFromChunks();
+
+    if (isTileMode) {
+      this.syncFillInputFromChunks();
+    } else {
+      this.fillInput = '';
+    }
   }
 
   // Đồng bộ giá trị fillInput từ các slot đã điền
@@ -941,6 +959,63 @@ export class AppState {
     this.initFlash();
     this.initSpeech(this.filteredVocab);
     this.saveToLocalStorage();
+  }
+
+  resetAllSettings() {
+    if (typeof window === 'undefined') return;
+    try {
+      const keysToRemove = [
+        'HSK_CURRENT_LEVEL',
+        'HSK_DIRECTION',
+        'HSK_ACTIVE_TAB',
+        'HSK_FILL_SUBMODE',
+        'HSK_ENABLE_FILL_HINTS',
+        'HSK1_SELECTED_LESSONS',
+        'HSK2_SELECTED_LESSONS',
+        'HSK_AUTOPLAY',
+        'HSK_VOLUME',
+        'HSK_ENABLE_FEEDBACK_DRAWER',
+        'HSK_SPEECH_AUTO_SUBMIT',
+        'HSK_THEME_MODE',
+        'HSK_THEME',
+        'hsk2_exam_history_v1',
+        'hsk2_grammar_learned_ids',
+        'HSK_DICT_BOOKMARKS',
+        'hsk_tour_voice_enabled'
+      ];
+      for (const k of keysToRemove) {
+        localStorage.removeItem(k);
+      }
+      for (let i = localStorage.length - 1; i >= 0; i--) {
+        const key = localStorage.key(i);
+        if (key && (key.startsWith('hsk_tour_') || key.startsWith('tour_'))) {
+          localStorage.removeItem(key);
+        }
+      }
+
+      this.currentLevel = 'HSK2';
+      this.direction = 'vi_to_zh';
+      this.activeTab = 'fill';
+      this.fillSubMode = 'tiles';
+      this.enableFillHints = true;
+      this.autoPlay = false;
+      this.volume = 0.7;
+      this.enableFeedbackDrawer = false;
+      this.speechAutoSubmit = true;
+      this.themeMode = 'system';
+      this.updateEffectiveTheme();
+      this.applyTheme();
+
+      const defaultLessons: Record<number, boolean> = {};
+      for (let i = 1; i <= 15; i++) defaultLessons[i] = true;
+      this.selectedLessonsHsk1 = { ...defaultLessons };
+      this.selectedLessonsHsk2 = { ...defaultLessons };
+
+      this.saveToLocalStorage();
+      this.resetCurrentTab();
+    } catch (e) {
+      console.warn('Lỗi khi khôi phục cài đặt gốc:', e);
+    }
   }
 }
 

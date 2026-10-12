@@ -135,7 +135,7 @@ function generateDistractorsForChar(ch: string, count: number = 2): string[] {
 /**
  * Tạo danh sách các chunks từ một chuỗi Pinyin đầy đủ (ví dụ: "gōnggòng qìchē")
  */
-export function buildWordChunks(pinyinStr: string): WordChunk[] {
+export function buildWordChunks(pinyinStr: string, allowHints: boolean = true): WordChunk[] {
   if (!pinyinStr) return [];
 
   // Tách theo khoảng trắng
@@ -146,14 +146,17 @@ export function buildWordChunks(pinyinStr: string): WordChunk[] {
     const len = chars.length;
 
     // Xác định số lượng ký tự cho sẵn (prefilled)
+    // Nếu allowHints = false: không cho sẵn bất kỳ ký tự nào
     // Nếu từ ngắn (≤ 4 ký tự): 0 ký tự cho sẵn
     // Nếu từ trung bình (5-7 ký tự): 1 ký tự cho sẵn (ưu tiên vị trí đầu hoặc phụ âm quen thuộc)
     // Nếu từ dài (> 7 ký tự): 1-2 ký tự cho sẵn
     let prefillCount = 0;
-    if (len >= 5 && len <= 7) {
-      prefillCount = 1;
-    } else if (len > 7) {
-      prefillCount = 2;
+    if (allowHints) {
+      if (len >= 5 && len <= 7) {
+        prefillCount = 1;
+      } else if (len > 7) {
+        prefillCount = 2;
+      }
     }
 
     // Chọn vị trí ngẫu nhiên để cho sẵn ký tự
