@@ -122,10 +122,16 @@ export async function speakVietnamese(text: string, volume: number = 1.0): Promi
 
   return new Promise((resolve) => {
     try {
-      // Chuẩn hóa văn bản thuyết minh tiếng Việt
+      // Chuẩn hóa văn bản thuyết minh thuần tiếng Việt cho TTS đọc tự nhiên
       const cleanText = text
         .replace(/➔/g, 'sang')
         .replace(/[★✕]/g, '')
+        .replace(/\bHSK\b/gi, 'Hát ét ca')
+        .replace(/\bAI\b/gi, 'Ây ai')
+        .replace(/\bPinyin\b/gi, 'Pin in')
+        .replace(/\b3D\b/gi, 'Ba đê')
+        .replace(/\btab\b/gi, 'thẻ')
+        .replace(/\bmenu\b/gi, 'thực đơn')
         .replace(/\s+/g, ' ')
         .trim();
 
@@ -137,7 +143,7 @@ export async function speakVietnamese(text: string, volume: number = 1.0): Promi
       const utt = new SpeechSynthesisUtterance(cleanText);
       utt.voice = viVoice;
       utt.lang = viVoice.lang || 'vi-VN';
-      utt.rate = isIOS ? 1.6 : 1.0; // Riêng iOS giọng Việt nói chậm nên tăng tốc lên 1.6; các nền tảng khác giữ 1.0
+      utt.rate = isIOS ? 1.3 : 1.0; // Riêng iOS giọng Việt tăng vừa vặn lên 1.3 theo yêu cầu; nền tảng khác 1.0
       utt.pitch = 1.0;
       utt.volume = volume;
 
