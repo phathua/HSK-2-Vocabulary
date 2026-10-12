@@ -304,14 +304,16 @@ export class AppState {
     }
   }
 
-  speakCurrent() {
+  async speakCurrent(): Promise<void> {
     let text = '';
     if (this.activeTab === 'fill') text = this.currentFillItem?.hanzi || '';
     else if (this.activeTab === 'quiz') text = this.currentQuizItem?.hanzi || '';
     else if (this.activeTab === 'flash') text = this.currentFlashItem?.hanzi || '';
     else if (this.activeTab === 'speech') text = this.currentSpeechItem?.hanzi || '';
 
-    if (text) speakChinese(text, this.volume);
+    if (text) {
+      await speakChinese(text, this.volume);
+    }
   }
 
   toggleFillSubMode() {

@@ -1,5 +1,7 @@
 import { tick } from 'svelte';
 import type { TourDefinition, TourStep, TargetRect, PopoverPosition } from '#lib/types/tour';
+import { stopSpeech, speakVietnamese } from '#lib/utils/speech';
+import { appState } from '#lib/state/appState.svelte';
 
 class TourState {
   isActive = $state(false);
@@ -9,6 +11,18 @@ class TourState {
   targetRect = $state<TargetRect | null>(null);
   popoverPos = $state<PopoverPosition | null>(null);
   isTransitioning = $state(false);
+  isVoiceEnabled = $state(true);
+
+  private currentAudioSessionId = 0;
+
+  constructor() {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('hsk_tour_voice_enabled');
+      if (saved !== null) {
+        this.isVoiceEnabled = saved === 'true';
+      }
+    }
+  }
 
   get currentStep(): TourStep | null {
     if (!this.isActive || this.activeSteps.length === 0) return null;
@@ -71,9 +85,28 @@ class TourState {
     return this.startTour(tour, force);
   }
 
+  toggleVoice(): void {
+    this.isVoiceEnabled = !this.isVoiceEnabled;
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('hsk_tour_voice_enabled', String(this.isVoiceEnabled));
+    }
+    if (!this.isVoiceEnabled) {
+      this.cancelSpeech();
+    } else if (this.isActive && this.currentStep) {
+      const el = this.resolveTargetElement(this.currentStep);
+      this.playStepAudio(this.currentStep, el);
+    }
+  }
+
+  cancelSpeech(): void {
+    this.currentAudioSessionId++;
+    stopSpeech();
+  }
+
   async goToStep(index: number): Promise<void> {
     if (index < 0 || index >= this.activeSteps.length) return;
 
+    this.cancelSpeech();
     this.isTransitioning = true;
     const step = this.activeSteps[index];
 
@@ -96,10 +129,15 @@ class TourState {
 
     this.refreshPosition();
     this.isTransitioning = false;
+
+    // Tự động phát âm thanh theo kịch bản (nút loa tiếng Trung trước -> tiếng Việt sau)
+    this.playStepAudio(step, el);
   }
 
   async nextStep(): Promise<void> {
     if (!this.isActive || !this.currentStep) return;
+
+    this.cancelSpeech();
 
     if (this.currentStep.onAfterStep) {
       try {
@@ -120,6 +158,8 @@ class TourState {
   async prevStep(): Promise<void> {
     if (!this.isActive || this.isFirstStep || !this.currentStep) return;
 
+    this.cancelSpeech();
+
     if (this.currentStep.onPrevStep) {
       try {
         await this.currentStep.onPrevStep();
@@ -133,6 +173,7 @@ class TourState {
   }
 
   async skipTour(permanently = true): Promise<void> {
+    this.cancelSpeech();
     const tour = this.activeTour;
     if (permanently && tour && typeof window !== 'undefined') {
       const key = this.getStorageKey(tour);
@@ -149,6 +190,7 @@ class TourState {
   }
 
   async finishTour(): Promise<void> {
+    this.cancelSpeech();
     const tour = this.activeTour;
     if (tour && typeof window !== 'undefined') {
       const key = this.getStorageKey(tour);
@@ -165,6 +207,7 @@ class TourState {
   }
 
   closeTour(): void {
+    this.cancelSpeech();
     this.isActive = false;
     this.activeTour = null;
     this.activeSteps = [];
@@ -172,6 +215,46 @@ class TourState {
     this.targetRect = null;
     this.popoverPos = null;
     this.isTransitioning = false;
+  }
+
+  private async playStepAudio(step: TourStep, el: Element | null): Promise<void> {
+    const sessionId = ++this.currentAudioSessionId;
+    stopSpeech();
+
+    const isSpeakerTarget =
+      (typeof step.target === 'string' && step.target.includes('speaker')) ||
+      step.id.includes('speaker');
+
+    // 1. Nếu bước này highlight nút Loa / TTS: kích hoạt phát âm tiếng Trung trước
+    if (isSpeakerTarget) {
+      if (el) {
+        try {
+          (el as HTMLElement).classList.add('ring-4', 'ring-emerald-400/60', 'scale-95');
+          setTimeout(() => {
+            (el as HTMLElement)?.classList.remove('ring-4', 'ring-emerald-400/60', 'scale-95');
+          }, 350);
+        } catch {}
+      }
+
+      // Tự động phát âm tiếng Trung của từ vựng hiện tại và ĐỢI nói xong
+      await appState.speakCurrent();
+
+      // Kiểm tra xem người dùng có đổi bước hoặc đóng tour trong lúc chờ không
+      if (!this.isActive || this.currentAudioSessionId !== sessionId) {
+        return;
+      }
+
+      // Khoảng nghỉ tự nhiên 400ms giữa tiếng Trung và tiếng Việt
+      await new Promise((r) => setTimeout(r, 400));
+      if (!this.isActive || this.currentAudioSessionId !== sessionId) {
+        return;
+      }
+    }
+
+    // 2. Tự động đọc thuyết minh tiếng Việt trong bảng hướng dẫn (hỗ trợ Safari)
+    if (this.isActive && this.isVoiceEnabled && this.currentAudioSessionId === sessionId) {
+      await speakVietnamese(step.description);
+    }
   }
 
   async waitForTargetElement(step: TourStep, timeoutMs = 2500): Promise<Element | null> {

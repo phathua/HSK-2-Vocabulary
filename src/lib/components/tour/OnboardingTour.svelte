@@ -6,6 +6,8 @@
   import CaretLeft from 'phosphor-svelte/lib/CaretLeft';
   import Check from 'phosphor-svelte/lib/Check';
   import X from 'phosphor-svelte/lib/X';
+  import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
+  import SpeakerSlash from 'phosphor-svelte/lib/SpeakerSlash';
   import TourSwipeGesture from './TourSwipeGesture.svelte';
   import TourTapGesture from './TourTapGesture.svelte';
 
@@ -184,21 +186,43 @@
       transition:scale={{ start: 0.95, duration: 200 }}
     >
       <div class="relative z-10 flex flex-col gap-3">
-        <!-- Header: Step badge and Skip button -->
+        <!-- Header: Step badge and Audio/Skip round action buttons -->
         <div class="flex items-center justify-between">
           <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-blue-600/10 text-blue-600 dark:text-blue-400">
             Bước {tourState.currentStepIndex + 1} / {tourState.totalSteps}
           </span>
 
-          <button
-            type="button"
-            class="text-xs font-semibold text-slate-400 hover:text-slate-700 dark:hover:text-[#E3E3E3] transition-colors cursor-pointer px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-[#282A2C] flex items-center gap-1"
-            onclick={() => tourState.skipTour(true)}
-            title="Bỏ qua hướng dẫn"
-          >
-            <span>Bỏ qua</span>
-            <X size={12} weight="bold" />
-          </button>
+          <div class="flex items-center gap-1.5">
+            <!-- Nút Loa bật/tắt thuyết minh giọng nói tiếng Việt (mặc định BẬT) -->
+            <button
+              type="button"
+              onclick={() => tourState.toggleVoice()}
+              class={`w-7 h-7 rounded-full flex items-center justify-center transition-all cursor-pointer shadow-2xs active:scale-95 ${
+                tourState.isVoiceEnabled
+                  ? 'bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/60'
+                  : 'bg-slate-100 dark:bg-[#282A2C] text-slate-400 dark:text-[#8E918F] hover:bg-slate-200 dark:hover:bg-[#37393B]'
+              }`}
+              title={tourState.isVoiceEnabled ? 'Tắt đọc hướng dẫn tiếng Việt' : 'Bật đọc hướng dẫn tiếng Việt'}
+              aria-label={tourState.isVoiceEnabled ? 'Tắt đọc hướng dẫn tiếng Việt' : 'Bật đọc hướng dẫn tiếng Việt'}
+            >
+              {#if tourState.isVoiceEnabled}
+                <SpeakerHigh size={14} weight="bold" />
+              {:else}
+                <SpeakerSlash size={14} weight="bold" />
+              {/if}
+            </button>
+
+            <!-- Nút bỏ qua: Icon X tròn gọn gàng có nền xám -->
+            <button
+              type="button"
+              onclick={() => tourState.skipTour(true)}
+              class="w-7 h-7 rounded-full bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] text-slate-500 hover:text-slate-800 dark:text-[#A8ABA7] dark:hover:text-white transition-all flex items-center justify-center cursor-pointer shadow-2xs active:scale-95"
+              title="Đóng / Bỏ qua hướng dẫn"
+              aria-label="Đóng / Bỏ qua hướng dẫn"
+            >
+              <X size={13} weight="bold" />
+            </button>
+          </div>
         </div>
 
         <!-- Step Body: Mascot Illustration + Content -->

@@ -15,8 +15,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'welcome',
       target: '[data-tour="header-brand"]',
-      title: 'Chào mừng bạn đến với Ôn Tập HSK!',
-      description: 'Linh vật Panda HSK sẽ đồng hành cùng bạn chinh phục trọn vẹn từ vựng HSK 1 & HSK 2 với 4 phương pháp luyện phản xạ đa giác quan.',
+      title: 'Chào mừng bạn đến với HSK!',
+      description: 'Gấu trúc Panda sẽ đồng hành cùng bạn ôn luyện hơn 450 từ vựng HSK 1 và HSK 2.',
       placement: 'bottom',
       illustration: '/tour/panda_welcome.webp',
       spotlightPadding: 6,
@@ -36,7 +36,7 @@ export const mainOnboardingTour: TourDefinition = {
         return document.querySelector('[data-tour="header-menu"]') || document.querySelector('[data-tour="sidebar-container"]');
       },
       title: 'Thực đơn hệ thống',
-      description: 'Chạm vào nút Menu (hoặc thanh bên) để mở lối tắt đến tất cả các phòng học: Ngữ pháp, Thi thử, Nhiệm vụ và Tra từ điển.',
+      description: 'Chạm để mở menu: Ngữ pháp, Thi thử, Nhiệm vụ và Tra từ điển.',
       placement: 'bottom',
       illustration: '/tour/mascot_fox.webp',
       spotlightPadding: 6,
@@ -52,8 +52,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'sidebar-search',
       target: '[data-tour="sidebar-search"]',
-      title: 'Tra cứu Từ điển HSK nhanh',
-      description: 'Tìm kiếm nghĩa tiếng Việt, chữ Hán, Pinyin và ví dụ câu thực tế của hơn 450 từ vựng HSK 1 & 2 bất cứ lúc nào.',
+      title: 'Tra cứu Từ điển HSK',
+      description: 'Tìm kiếm nghĩa tiếng Việt, chữ Hán và Pinyin nhanh chóng.',
       placement: 'bottom',
       illustration: '/tour/panda_detective.webp',
       spotlightPadding: 6,
@@ -74,8 +74,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'sidebar-nav',
       target: '[data-tour="sidebar-nav"]',
-      title: 'Hệ sinh thái luyện thi toàn diện',
-      description: 'Dễ dàng chuyển đổi giữa học Ngữ pháp trọng điểm, Phòng thi thử chuẩn Hanban, Nhiệm vụ ngày và Bảng xếp hạng thi đua.',
+      title: 'Hệ thống phòng học',
+      description: 'Truy cập phòng Ngữ pháp, Đề thi thử, Nhiệm vụ và Bảng xếp hạng.',
       placement: 'bottom',
       illustration: '/tour/mascot_tiger.webp',
       spotlightPadding: 6,
@@ -98,8 +98,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'header-direction',
       target: '[data-tour="header-direction"]',
-      title: 'Đảo chiều câu hỏi thông minh',
-      description: 'Linh hoạt đổi chiều: Hỏi tiếng Việt ➔ Chọn chữ Hán/Pinyin, hoặc Hỏi chữ Hán ➔ Chọn nghĩa tiếng Việt để nhớ sâu 2 chiều.',
+      title: 'Đổi chiều câu hỏi',
+      description: 'Linh hoạt đổi chiều: Hỏi tiếng Việt chọn chữ Hán, hoặc hỏi chữ Hán chọn tiếng Việt.',
       placement: 'bottom',
       illustration: '/tour/mascot_monkey.webp',
       spotlightPadding: 6,
@@ -117,8 +117,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'header-settings',
       target: '[data-tour="header-settings"]',
-      title: 'Cài đặt & Xem lại hướng dẫn',
-      description: 'Tùy chỉnh giao diện Sáng / Tối, chỉnh âm lượng loa, bật tự động phát âm và mở lại hướng dẫn sử dụng bất cứ lúc nào.',
+      title: 'Cài đặt giao diện',
+      description: 'Chỉnh giao diện Sáng / Tối, âm lượng loa và xem lại hướng dẫn.',
       placement: 'bottom',
       illustration: '/tour/panda_think.webp',
       spotlightPadding: 6,
@@ -129,8 +129,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'modes-tabs',
       target: '[data-tour="mode-switch-tabs"]',
-      title: '4 Chế độ luyện tập chuyên sâu',
-      description: 'Luyện tập toàn diện 4 giác quan: Điền từ (ghép pinyin), Trắc nghiệm (phản xạ nhanh), Thẻ từ (ghi nhớ dài hạn), và Phát âm (nhận diện giọng nói AI).',
+      title: '4 Chế độ luyện tập',
+      description: 'Luyện tập toàn diện: Điền từ, Trắc nghiệm, Thẻ từ Flashcard và Luyện phát âm.',
       placement: 'bottom',
       illustration: '/icons/panda-correct.webp',
       spotlightPadding: 4,
@@ -142,8 +142,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'progress-bar',
       target: '[data-tour="progress-score-bar"]',
-      title: 'Tiến độ & Điểm số trực tiếp',
-      description: 'Thanh tiến độ theo dõi phần trăm bài học đã hoàn thành và tỷ lệ câu trả lời đúng trên tổng số câu hỏi trong bài.',
+      title: 'Tiến độ học tập',
+      description: 'Theo dõi phần trăm hoàn thành và tỷ lệ trả lời đúng trong bài.',
       placement: 'bottom',
       illustration: '/icons/panda-correct.webp',
       spotlightPadding: 6,
@@ -154,8 +154,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'fill-lesson-btn',
       target: '[data-tour="fill-lesson-btn"]',
-      title: 'Nút Bài học đang luyện tập',
-      description: 'Hiển thị bài học hiện tại (Bài 1 - 15). Chạm vào đây để mở bảng chọn bài học hoặc chuyển cấp độ HSK.',
+      title: 'Chọn bài học HSK',
+      description: 'Chạm để mở bảng chọn bài học từ Bài 1 đến Bài 15.',
       placement: 'bottom',
       illustration: '/tour/mascot_tiger.webp',
       spotlightPadding: 6,
@@ -168,8 +168,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'filter-level',
       target: '[data-tour="filter-level-switch"]',
-      title: 'Chọn cấp độ HSK 1 hoặc HSK 2',
-      description: 'Dễ dàng chuyển đổi giữa 15 bài HSK 1 (150 từ vựng) hoặc 15 bài HSK 2 (300 từ vựng), hoặc tích hợp học trộn cả 2 cấp độ!',
+      title: 'Chọn cấp độ HSK 1 hoặc 2',
+      description: 'Chuyển đổi giữa HSK 1 (150 từ), HSK 2 (300 từ) hoặc học trộn cả 2 cấp độ.',
       placement: 'bottom',
       illustration: '/tour/mascot_fox.webp',
       spotlightPadding: 6,
@@ -188,8 +188,8 @@ export const mainOnboardingTour: TourDefinition = {
       target: () =>
         document.querySelector('[data-tour="filter-lessons-scroll"]') ||
         document.querySelector('[data-tour="filter-lessons-grid"]'),
-      title: 'Danh mục bài học ôn tập',
-      description: 'Chạm để bật/tắt từng bài học theo tiến độ học của bạn trên lớp. Các từ vựng của bài đã chọn sẽ tự động xuất hiện trong mọi bài tập.',
+      title: 'Danh sách bài học',
+      description: 'Chạm để chọn các bài học bạn muốn ôn luyện.',
       placement: 'top',
       illustration: '/tour/mascot_buffalo.webp',
       spotlightPadding: 4,
@@ -206,8 +206,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'fill-submode',
       target: '[data-tour="fill-submode-btn"]',
-      title: 'Chọn từ hoặc Gõ phím thủ công',
-      description: 'Chế độ "Chọn từ": Chọn ký tự có sẵn để ghép Pinyin. Chế độ "Thủ công": Tự gõ Telex Pinyin tiện lợi (ví dụ gõ ni3hao3 hoặc nihaoj).',
+      title: 'Ghép từ hoặc gõ telex',
+      description: 'Chuyển đổi giữa chạm ký tự gợi ý hoặc tự gõ telex thanh điệu.',
       placement: 'bottom',
       illustration: '/tour/panda_detective.webp',
       spotlightPadding: 6,
@@ -225,8 +225,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'fill-prompt',
       target: '[data-tour="fill-prompt-area"]',
-      title: 'Đề bài, Chữ Hán & Loa phát âm',
-      description: 'Quan sát chữ Hán, nghĩa tiếng Việt và hình ảnh gợi ý. Nhấn biểu tượng Loa xanh lá để nghe phát âm mẫu chuẩn giọng Bắc Kinh.',
+      title: 'Đề bài và Loa phát âm',
+      description: 'Quan sát chữ Hán, nghĩa từ vựng và chạm Loa để nghe phát âm mẫu.',
       placement: 'bottom',
       illustration: '/tour/panda_think.webp',
       spotlightPadding: 8,
@@ -235,8 +235,9 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'fill-slots',
       target: '[data-tour="fill-slots-area"]',
-      title: 'Hàng ô Slot ghép Pinyin',
-      description: 'Các ô trống tương ứng với từng ký tự Pinyin. Chọn các ký tự gợi ý ở dưới để ghép chữ, hoặc chạm trực tiếp vào ô để gỡ bỏ ký tự.',
+      includeTarget: '[data-tour="fill-tile-bank"]',
+      title: 'Ghép ký tự Pinyin',
+      description: 'Chạm các ký tự bên dưới để điền vào ô trống, hoặc chạm lại để gỡ bỏ.',
       placement: 'top',
       illustration: '/tour/panda_detective.webp',
       spotlightPadding: 6,
@@ -245,8 +246,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'fill-actions',
       target: '[data-tour="fill-action-buttons"]',
-      title: 'Các nút hỗ trợ làm bài',
-      description: 'Nút "Bỏ qua" để chuyển câu tiếp, nút "Đáp án" (bóng đèn) để xem gợi ý khi gặp từ khó, và nút Backspace để xóa nhanh ký tự vừa nhập.',
+      title: 'Nút hỗ trợ làm bài',
+      description: 'Bấm Bỏ qua để sang câu mới, hoặc bấm bóng đèn để xem gợi ý.',
       placement: 'top',
       illustration: '/tour/mascot_monkey.webp',
       spotlightPadding: 6,
@@ -255,8 +256,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'fill-stats',
       target: '[data-tour="fill-stats-bar"]',
-      title: 'Bảng thống kê kết quả trực tiếp',
-      description: 'Ghi nhận tức thì số câu Đúng (xanh), câu Sai (đỏ) và số câu Bỏ qua (vàng) để bạn đánh giá mức độ ghi nhớ từ vựng.',
+      title: 'Thống kê kết quả',
+      description: 'Theo dõi trực tiếp số câu Đúng, câu Sai và câu Bỏ qua.',
       placement: 'top',
       illustration: '/icons/panda-wrong.webp',
       spotlightPadding: 6,
@@ -267,8 +268,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'tab-quiz-intro',
       target: '[data-tour="tab-btn-quiz"]',
-      title: 'Khám phá Chế độ Trắc nghiệm',
-      description: 'Chạm vào tab "Trắc nghiệm" trên thanh điều hướng để bắt đầu luyện tập phản xạ chọn đáp án nhanh.',
+      title: 'Chế độ Trắc nghiệm',
+      description: 'Chạm tab Trắc nghiệm để bắt đầu phản xạ chọn đáp án nhanh.',
       placement: 'bottom',
       illustration: '/tour/mascot_tiger.webp',
       spotlightPadding: 4,
@@ -283,8 +284,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'quiz-mode',
       target: '[data-tour="quiz-options-area"]',
-      title: 'Chế độ Trắc nghiệm 4 đáp án',
-      description: 'Rèn luyện phản xạ nhanh với 4 phương án A, B, C, D. Hệ thống phản hồi màu sắc ngay lập tức (xanh lá khi đúng, đỏ khi sai kèm giải thích).',
+      title: 'Trắc nghiệm 4 đáp án',
+      description: 'Chạm chọn 1 trong 4 đáp án để kiểm tra phản xạ từ vựng.',
       placement: 'top',
       illustration: '/tour/mascot_buffalo.webp',
       spotlightPadding: 8,
@@ -303,8 +304,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'tab-flash-intro',
       target: '[data-tour="tab-btn-flash"]',
-      title: 'Khám phá Chế độ Thẻ từ',
-      description: 'Chạm vào tab "Thẻ từ" để chuyển sang chế độ Flashcard 3D lật mở đa chiều và ghi nhớ từ vựng dài hạn.',
+      title: 'Chế độ Thẻ từ Flashcard',
+      description: 'Chạm tab Thẻ từ để chuyển sang ôn luyện bằng Flashcard 3D.',
       placement: 'bottom',
       illustration: '/tour/mascot_tiger.webp',
       spotlightPadding: 4,
@@ -319,8 +320,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'flash-mode',
       target: '[data-tour="flash-card-stack"]',
-      title: 'Chế độ Thẻ từ Flashcard 3D',
-      description: 'Chạm vào thẻ để lật xem Chữ Hán, Pinyin và Ví dụ. Vuốt thẻ sang Phải nếu bạn đã thuộc, hoặc vuốt sang Trái nếu bạn còn quên.',
+      title: 'Thẻ từ Flashcard 3D',
+      description: 'Chạm thẻ để lật xem đáp án, vuốt phải nếu thuộc và vuốt trái nếu quên.',
       gesture: 'swipe-horizontal',
       placement: 'bottom',
       illustration: '/tour/mascot_cat.webp',
@@ -340,8 +341,8 @@ export const mainOnboardingTour: TourDefinition = {
     {
       id: 'tab-speech-intro',
       target: '[data-tour="tab-btn-speech"]',
-      title: 'Khám phá Chế độ Luyện phát âm',
-      description: 'Chạm vào tab "Phát âm" để bắt đầu luyện nói chuẩn bản xứ cùng trợ lý AI nhận diện giọng nói tiếng Trung.',
+      title: 'Chế độ Luyện phát âm',
+      description: 'Chạm tab Phát âm để luyện nói tiếng Trung chuẩn giọng Bắc Kinh.',
       placement: 'bottom',
       illustration: '/tour/mascot_monkey.webp',
       spotlightPadding: 4,
@@ -354,14 +355,14 @@ export const mainOnboardingTour: TourDefinition = {
       }
     },
     {
-      id: 'speech-mode',
-      target: '[data-tour="speech-mic-btn"]',
-      title: 'Chế độ Luyện phát âm thông minh',
-      description: 'Nghe phát âm chuẩn bản xứ, sau đó bấm nút Micro để AI nhận diện giọng nói tiếng Trung của bạn trong thời gian thực.',
-      placement: 'top',
+      id: 'speech-speaker-step',
+      target: '[data-tour="speech-speaker-btn"]',
+      title: 'Loa phát âm mẫu',
+      description: 'Bấm biểu tượng Loa để nghe phát âm chuẩn thanh điệu trước khi nói.',
+      placement: 'bottom',
       illustration: '/tour/mascot_girl.webp',
-      spotlightPadding: 8,
-      spotlightRadius: 9999,
+      spotlightPadding: 6,
+      spotlightRadius: 18,
       onBeforeStep: async () => {
         appState.activeTab = 'speech';
         await delay(200);
@@ -371,13 +372,31 @@ export const mainOnboardingTour: TourDefinition = {
         await delay(200);
       }
     },
+    {
+      id: 'speech-mode',
+      target: '[data-tour="speech-mic-btn"]',
+      title: 'Bấm Micro để luyện nói',
+      description: 'Bấm nút Micro to và nói từ tiếng Trung để AI chấm điểm trực tiếp.',
+      placement: 'top',
+      illustration: '/tour/mascot_girl.webp',
+      spotlightPadding: 8,
+      spotlightRadius: 9999,
+      onBeforeStep: async () => {
+        appState.activeTab = 'speech';
+        await delay(200);
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'speech';
+        await delay(200);
+      }
+    },
 
     // --- 9. HOÀN TẤT TOUR ---
     {
       id: 'tour-finish',
       target: '[data-tour="header-brand"]',
-      title: 'Bạn đã sẵn sàng chinh phục HSK!',
-      description: 'Mọi tính năng đã được làm quen. Hãy bắt đầu buổi học đầu tiên ngay bây giờ cùng chú gấu trúc Panda nhé. Chúc bạn học tốt!',
+      title: 'Bắt đầu học ngay!',
+      description: 'Bạn đã nắm rõ mọi tính năng. Chúc bạn ôn tập HSK thật hiệu quả!',
       placement: 'bottom',
       illustration: '/tour/panda_rocket.webp',
       spotlightPadding: 6,

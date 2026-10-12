@@ -263,6 +263,7 @@
             </div>
             <button
               type="button"
+              data-tour="fill-speaker-btn"
               onclick={() => appState.speakCurrent()}
               class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center shadow-xs active:scale-95 transition-transform cursor-pointer shrink-0"
               title="Phát âm tiếng Trung"
@@ -279,6 +280,7 @@
             </div>
             <button
               type="button"
+              data-tour="fill-speaker-btn"
               onclick={() => appState.speakCurrent()}
               class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center shadow-xs active:scale-95 transition-transform cursor-pointer shrink-0"
               title="Phát âm tiếng Trung"

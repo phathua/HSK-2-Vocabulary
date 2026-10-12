@@ -1,26 +1,167 @@
-// Web Speech API Voice synthesizer for Chinese (zh-CN)
+// Web Speech API Voice synthesizer for Chinese (zh-CN) & Vietnamese (vi-VN)
+// Tối ưu hóa đặc biệt cho Safari (iOS & macOS): chống Garbage Collection ngắt giữa chừng,
+// tự động resume audio context và xử lý onvoiceschanged.
 
-export function speakChinese(text: string, volume: number = 0.7): void {
+let activeUtterance: SpeechSynthesisUtterance | null = null;
+let cachedVoices: SpeechSynthesisVoice[] = [];
+
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  cachedVoices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => {
+    cachedVoices = window.speechSynthesis.getVoices();
+  };
+}
+
+export function stopSpeech(): void {
   try {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window) || !text) return;
-    
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+    activeUtterance = null;
     window.speechSynthesis.cancel();
-    const utt = new SpeechSynthesisUtterance(text);
-    utt.lang = 'zh-CN';
-    utt.rate = 0.85;
-    utt.volume = volume;
-
-    const voices = window.speechSynthesis.getVoices();
-    const zhVoice = voices.find(v => v.lang === 'zh-CN' || v.lang.startsWith('zh'));
-    if (zhVoice) {
-      utt.voice = zhVoice;
-    }
-
-    window.speechSynthesis.resume();
-    window.speechSynthesis.speak(utt);
   } catch (err) {
-    console.warn('Speech synthesis error:', err);
+    console.warn('stopSpeech error:', err);
   }
+}
+
+export function speakChinese(text: string, volume: number = 0.7): Promise<void> {
+  return new Promise((resolve) => {
+    try {
+      if (typeof window === 'undefined' || !('speechSynthesis' in window) || !text) {
+        return resolve();
+      }
+
+      stopSpeech();
+
+      const utt = new SpeechSynthesisUtterance(text);
+      utt.lang = 'zh-CN';
+      utt.rate = 0.85;
+      utt.volume = volume;
+
+      const voices = cachedVoices.length > 0 ? cachedVoices : window.speechSynthesis.getVoices();
+      const zhVoice = voices.find((v) => v.lang === 'zh-CN' || v.lang.startsWith('zh'));
+      if (zhVoice) {
+        utt.voice = zhVoice;
+      }
+
+      // Giữ tham chiếu để Safari WebKit không Garbage Collect ngắt giữa chừng
+      activeUtterance = utt;
+
+      let hasResolved = false;
+      const safeResolve = () => {
+        if (!hasResolved) {
+          hasResolved = true;
+          activeUtterance = null;
+          resolve();
+        }
+      };
+
+      utt.onend = safeResolve;
+      utt.onerror = safeResolve;
+
+      // Timeout dự phòng tránh treo nếu Safari không bắn event onend
+      setTimeout(safeResolve, 4000);
+
+      window.speechSynthesis.resume();
+      window.speechSynthesis.speak(utt);
+    } catch (err) {
+      console.warn('Speech synthesis error (Chinese):', err);
+      resolve();
+    }
+  });
+}
+
+function getAvailableVietnameseVoice(): Promise<SpeechSynthesisVoice | null> {
+  return new Promise((resolve) => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      return resolve(null);
+    }
+    const check = () => {
+      const voices = cachedVoices.length > 0 ? cachedVoices : window.speechSynthesis.getVoices();
+      return (
+        voices.find((v) => v.lang === 'vi-VN' || v.lang === 'vi_VN') ||
+        voices.find((v) => v.lang.toLowerCase().startsWith('vi')) ||
+        null
+      );
+    };
+
+    const immediate = check();
+    if (immediate) return resolve(immediate);
+
+    let resolved = false;
+    const timer = setTimeout(() => {
+      if (!resolved) {
+        resolved = true;
+        resolve(check());
+      }
+    }, 250);
+
+    const prevHandler = window.speechSynthesis.onvoiceschanged;
+    window.speechSynthesis.onvoiceschanged = (e) => {
+      cachedVoices = window.speechSynthesis.getVoices();
+      if (typeof prevHandler === 'function') prevHandler.call(window.speechSynthesis, e);
+      if (!resolved) {
+        resolved = true;
+        clearTimeout(timer);
+        resolve(check());
+      }
+    };
+  });
+}
+
+export async function speakVietnamese(text: string, volume: number = 1.0): Promise<void> {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window) || !text) {
+    return;
+  }
+
+  stopSpeech();
+
+  // BẮT BUỘC: Chỉ phát khi THỰC SỰ có giọng tiếng Việt, tuyệt đối không fallback sang giọng tiếng Anh
+  const viVoice = await getAvailableVietnameseVoice();
+  if (!viVoice) {
+    return;
+  }
+
+  return new Promise((resolve) => {
+    try {
+      // Chuẩn hóa văn bản thuyết minh tiếng Việt
+      const cleanText = text
+        .replace(/➔/g, 'sang')
+        .replace(/[★✕]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      const utt = new SpeechSynthesisUtterance(cleanText);
+      utt.voice = viVoice;
+      utt.lang = viVoice.lang || 'vi-VN';
+      utt.rate = 0.95; // Tốc độ tự nhiên, rõ ràng cho tiếng Việt
+      utt.pitch = 1.0;
+      utt.volume = volume;
+
+      // Giữ tham chiếu chống Safari GC bug
+      activeUtterance = utt;
+
+      let hasResolved = false;
+      const safeResolve = () => {
+        if (!hasResolved) {
+          hasResolved = true;
+          activeUtterance = null;
+          resolve();
+        }
+      };
+
+      utt.onend = safeResolve;
+      utt.onerror = safeResolve;
+
+      // Timeout dự phòng tỷ lệ theo độ dài văn bản
+      const maxDuration = Math.max(3000, Math.ceil(cleanText.length / 8) * 1000);
+      setTimeout(safeResolve, maxDuration);
+
+      window.speechSynthesis.resume();
+      window.speechSynthesis.speak(utt);
+    } catch (err) {
+      console.warn('Speech synthesis error (Vietnamese):', err);
+      resolve();
+    }
+  });
 }
 
 export function convertTelexToPinyin(str: string): string {
