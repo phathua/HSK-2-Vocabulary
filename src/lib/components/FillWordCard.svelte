@@ -16,7 +16,7 @@
   import SquaresFour from 'phosphor-svelte/lib/SquaresFour';
   import Backspace from 'phosphor-svelte/lib/Backspace';
   import SmartImage from './SmartImage.svelte';
-  import FillFeedbackDrawer from './FillFeedbackDrawer.svelte';
+  import AnswerFeedbackDrawer from './AnswerFeedbackDrawer.svelte';
   import { flip } from 'svelte/animate';
 
   let inputEl: HTMLInputElement | null = $state(null);
@@ -71,6 +71,9 @@
   const showFeedbackDrawer = $derived(
     appState.enableFeedbackDrawer && isTileMode && appState.fillAnswered
   );
+  const isFillSkipped = $derived(appState.fillAnswered && appState.fillFeedback?.type === 'skip');
+  const isFillWrong = $derived(appState.fillAnswered && appState.fillFeedback?.type === 'wrong');
+  const isFillCorrect = $derived(appState.fillAnswered && appState.fillFeedback?.type === 'correct');
 
   // Animation bay từ Tile hàng dưới lên Slot hàng trên
   function handleTileClick(tileId: string, event: MouseEvent) {
@@ -663,7 +666,15 @@
   </footer>
 {/if}
 
-  {#if showFeedbackDrawer}
-    <FillFeedbackDrawer />
+  {#if showFeedbackDrawer && appState.currentFillItem}
+    <AnswerFeedbackDrawer
+      isAnswered={appState.fillAnswered}
+      isCorrect={isFillCorrect}
+      isWrong={isFillWrong}
+      isSkipped={isFillSkipped}
+      correctAnswerText={isZhToVi ? appState.currentFillItem.viet : appState.currentFillItem.pinyin}
+      extraInfoText={!isZhToVi ? appState.currentFillItem.viet : `${appState.currentFillItem.hanzi} (${appState.currentFillItem.pinyin})`}
+      onNext={() => appState.nextFillItem()}
+    />
   {/if}
 </div>

@@ -94,11 +94,11 @@
 <svelte:window onkeydown={handleKeydown} />
 
 {#if isAnswered}
-  <!-- Wrapper cố định ở đáy, không chặn click bên ngoài -->
-  <div class="absolute inset-x-0 bottom-0 z-40 w-full flex justify-center pointer-events-none">
-    <!-- Drawer Container: Chiều cao thoải mái hơn, bớt cong (phẳng hiện đại), không pill kéo -->
+  <!-- Wrapper cố định sát đáy màn hình (viewport), hoàn toàn nằm ngoài card và padding trang -->
+  <div class="fixed inset-x-0 bottom-0 z-50 w-full pointer-events-none flex justify-center">
+    <!-- Drawer Container: Trải dài full bề ngang đáy màn hình, màu nền khớp theo trạng thái -->
     <div
-      class={`pointer-events-auto relative w-full rounded-t-xl sm:rounded-2xl border-t-2 sm:border transition-colors duration-200 px-3.5 sm:px-5 pt-3.5 sm:pt-4 pb-4 sm:pb-5 min-h-[148px] sm:min-h-[162px] flex items-center ${
+      class={`pointer-events-auto w-full border-t-2 transition-colors duration-200 overflow-visible pt-3.5 sm:pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] px-3.5 sm:px-6 shadow-[0_-14px_36px_rgba(0,0,0,0.2)] ${
         isCorrect
           ? 'bg-emerald-50 dark:bg-[#0d2117] border-emerald-400 dark:border-emerald-600 shadow-[0_-14px_36px_rgba(16,185,129,0.25)]'
           : isWrong
@@ -109,26 +109,27 @@
       role="region"
       aria-label="Kết quả câu hỏi"
     >
-      <!-- Mascot Panda: To rõ, đứng từ sát đáy lên, đầu & thân trên lòi hẳn ra ngoài viền trên -->
-      <div
-        class="absolute bottom-2 left-1 sm:left-3 z-30 pointer-events-none select-none mascot-pop flex items-end justify-center"
-      >
-        <!-- Vòng hào quang mềm mại dưới chân mascot -->
+      <div class="relative w-full max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto flex items-center min-h-[142px] sm:min-h-[155px]">
+        <!-- Mascot Panda: To rõ, đứng từ sát đáy lên, đầu & thân trên lòi hẳn ra ngoài viền trên -->
         <div
-          class={`absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-8 rounded-full blur-md opacity-35 ${
-            isCorrect ? 'bg-emerald-400' : isWrong ? 'bg-rose-400' : 'bg-amber-400'
-          }`}
-        ></div>
-        <img
-          src={mascotSrc}
-          alt="HSK Panda Mascot"
-          class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.3)] transition-transform duration-300"
-          loading="eager"
-        />
-      </div>
+          class="absolute bottom-1 sm:bottom-2 left-0 sm:left-2 z-30 pointer-events-none select-none mascot-pop flex items-end justify-center"
+        >
+          <!-- Vòng hào quang mềm mại dưới chân mascot -->
+          <div
+            class={`absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-8 rounded-full blur-md opacity-35 ${
+              isCorrect ? 'bg-emerald-400' : isWrong ? 'bg-rose-400' : 'bg-amber-400'
+            }`}
+          ></div>
+          <img
+            src={mascotSrc}
+            alt="HSK Panda Mascot"
+            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.3)] transition-transform duration-300"
+            loading="eager"
+          />
+        </div>
 
-      <!-- Khối nội dung bên phải Mascot -->
-      <div class="w-full pl-30 sm:pl-36 md:pl-42 flex flex-col justify-between min-h-[6.2rem] sm:min-h-[6.8rem] gap-2 sm:gap-2.5">
+        <!-- Khối nội dung bên phải Mascot -->
+        <div class="w-full pl-30 sm:pl-36 md:pl-42 flex flex-col justify-between min-h-[6.2rem] sm:min-h-[6.8rem] gap-2 sm:gap-2.5">
         <!-- Hàng tiêu đề phản hồi + đính chính đáp án -->
         <div class="flex flex-col text-left">
           <!-- Tiêu đề phản hồi ngẫu nhiên -->
@@ -197,6 +198,7 @@
       </div>
     </div>
   </div>
+</div>
 {/if}
 
 <style>

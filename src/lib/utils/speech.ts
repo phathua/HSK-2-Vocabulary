@@ -201,12 +201,13 @@ export function convertTelexToPinyin(str: string): string {
   return s;
 }
 
-const norm = (s: string) => s.toLowerCase().replace(/[-_\s]+/g, ' ').trim();
+const norm = (s: string) => s.normalize('NFC').toLowerCase().replace(/[-_\s]+/g, ' ').trim();
 const stripTones = (s: string) =>
   s.normalize('NFD')
    .replace(/[\u0300-\u036f]/g, '')
    .replace(/[üǖǘǚǜ]/g, 'u')
    .replace(/v/g, 'u')
+   .replace(/[1-5]/g, '')
    .replace(/[-_\s]+/g, ' ')
    .trim();
 
