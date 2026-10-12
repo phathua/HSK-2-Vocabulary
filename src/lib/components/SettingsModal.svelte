@@ -23,6 +23,7 @@
   import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
   import Sparkle from 'phosphor-svelte/lib/Sparkle';
   import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
+  import ImageSquare from 'phosphor-svelte/lib/ImageSquare';
   import ArrowCounterClockwise from 'phosphor-svelte/lib/ArrowCounterClockwise';
   import Keyboard from 'phosphor-svelte/lib/Keyboard';
   import Compass from 'phosphor-svelte/lib/Compass';
@@ -418,6 +419,29 @@
                   class={`w-11 h-6 rounded-full p-0.5 transition-colors cursor-pointer shrink-0 ${appState.enableFillHints ? 'bg-blue-600' : 'bg-slate-300 dark:bg-[#37393B]'}`}
                 >
                   <div class={`w-5 h-5 bg-white rounded-full shadow-md transition-transform ${appState.enableFillHints ? 'translate-x-5' : 'translate-x-0'}`}></div>
+                </button>
+              </div>
+
+              <!-- Bật / Tắt Hiển thị ảnh minh họa trên trang chủ -->
+              <div class="flex items-center justify-between bg-slate-50 dark:bg-[#282A2C]/80 p-3 rounded-2xl border border-slate-200 dark:border-[#37393B]">
+                <div class="flex items-center gap-2.5 pr-2">
+                  <ImageSquare weight="duotone" class="w-4 h-4 text-sky-500 shrink-0" />
+                  <div>
+                    <span class="font-extrabold text-xs sm:text-sm text-slate-800 dark:text-[#E3E3E3] block leading-tight">Hiển thị ảnh minh họa</span>
+                    <span class="text-[11px] text-slate-500 dark:text-[#8E918F] block mt-0.5">
+                      Bật hoặc ẩn hoàn toàn khung ảnh minh họa trên các câu hỏi luyện tập ở trang chủ
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  aria-label="Bật hoặc tắt hiển thị ảnh minh họa câu hỏi"
+                  title="Bật hoặc tắt hiển thị ảnh minh họa câu hỏi"
+                  onclick={() => appState.toggleShowQuestionImages()}
+                  class={`w-11 h-6 rounded-full p-0.5 transition-colors cursor-pointer shrink-0 ${appState.showQuestionImages ? 'bg-blue-600' : 'bg-slate-300 dark:bg-[#37393B]'}`}
+                >
+                  <div class={`w-5 h-5 bg-white rounded-full shadow-md transition-transform ${appState.showQuestionImages ? 'translate-x-5' : 'translate-x-0'}`}></div>
                 </button>
               </div>
 

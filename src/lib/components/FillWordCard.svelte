@@ -268,7 +268,7 @@
         class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-2 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6"
       >
         <!-- Vocabulary Image: Kích thước tối ưu gọn gàng hơn trên desktop -->
-        {#if appState.currentFillItem.image}
+        {#if appState.showQuestionImages && appState.currentFillItem.image}
           <div class="relative mb-2 sm:mb-3">
             <SmartImage
               src={appState.currentFillItem.image}

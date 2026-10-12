@@ -641,7 +641,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "tên riêng nhân vật nữ giáo viên trong giáo trình HSK 1",
     "vi_meaning_short": "Lý Nguyệt",
     "enMeaning": "Li Yue (name)",
-    "image": "https://images.pexels.com/photos/8617961/pexels-photo-8617961.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8MXx8ZnJpZW5kbHklMjBjaGluZXNlJTIwZmVtYWxlJTIwdGVhY2hlcnxlbnwwfHx8fDE3OTE4MjkxNjl8MA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "李月老师"
     ],
@@ -677,7 +677,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "tên riêng phiên âm nước ngoài (Mary) trong giáo trình",
     "vi_meaning_short": "Mary, Mã Lệ",
     "enMeaning": "Mary (name)",
-    "image": "https://images.pexels.com/photos/874151/pexels-photo-874151.png?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/9489929/pexels-photo-9489929.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "玛丽同学"
     ],
@@ -1037,7 +1037,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "nước Cộng hòa Nhân dân Trung Hoa",
     "vi_meaning_short": "Trung Quốc",
     "enMeaning": "China",
-    "image": "https://images.pexels.com/photos/36562293/pexels-photo-36562293.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/4445241/pexels-photo-4445241.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "去中国",
       "中国人",
@@ -1502,7 +1502,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số bảy và đứng trước số chín trong hệ đếm",
     "vi_meaning_short": "tám, số 8",
     "enMeaning": "eight",
-    "image": "https://images.pexels.com/photos/1329303/pexels-photo-1329303.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1571664638276-b3e6b70499e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8M3x8bnVtYmVyJTIwZWlnaHR8ZW58MHx8fHwxNzkxODI4OTgwfDA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "八个",
       "八点",
@@ -1645,7 +1645,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số một và đứng trước số ba trong hệ đếm",
     "vi_meaning_short": "hai, số 2",
     "enMeaning": "two",
-    "image": "https://images.pexels.com/photos/1329297/pexels-photo-1329297.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://pixabay.com/get/g939f05af9f2b28bf44f53fed67910124379eb139bb740c2bf1e83fe46a963b21e61d46f8834f2a479f29f41e2d5916e0_640.jpg",
     "collocations": [
       "二月",
       "第二",
@@ -1807,7 +1807,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số tám và đứng trước số mười trong hệ đếm",
     "vi_meaning_short": "chín, số 9",
     "enMeaning": "nine",
-    "image": "https://images.pexels.com/photos/1329304/pexels-photo-1329304.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1660684470385-2a062d528b08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8MXx8bnVtYmVyJTIwbmluZXxlbnwwfHx8fDE3OTE4MjkwMDN8MA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "九个",
       "九点",
@@ -1918,7 +1918,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số năm và đứng trước số bảy trong hệ đếm",
     "vi_meaning_short": "sáu, số 6",
     "enMeaning": "six",
-    "image": "https://images.pexels.com/photos/1329301/pexels-photo-1329301.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/10355568/pexels-photo-10355568.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "六个",
       "六点",
@@ -2007,7 +2007,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số sáu và đứng trước số tám trong hệ đếm",
     "vi_meaning_short": "bảy, số 7",
     "enMeaning": "seven",
-    "image": "https://images.pexels.com/photos/1329302/pexels-photo-1329302.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1571577275698-54f36820ee9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8MXx8bnVtYmVyJTIwc2V2ZW58ZW58MHx8fHwxNzkxODI4OTU5fDA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "七个",
       "七点",
@@ -2051,7 +2051,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số hai và đứng trước số bốn trong hệ đếm",
     "vi_meaning_short": "ba, số 3",
     "enMeaning": "three",
-    "image": "https://images.pexels.com/photos/1329298/pexels-photo-1329298.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/23319061/pexels-photo-23319061.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "三个",
       "三点",
@@ -2095,7 +2095,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số chín trong hệ đếm cơ số 10",
     "vi_meaning_short": "mười, số 10",
     "enMeaning": "ten",
-    "image": "https://images.pexels.com/photos/1329305/pexels-photo-1329305.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1631453494181-f762d692583a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8Mnx8bnVtYmVyJTIwdGVufGVufDB8fHx8MTc5MTgyOTAyNHww&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "十个",
       "十点",
@@ -2139,7 +2139,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số ba và đứng trước số năm trong hệ đếm",
     "vi_meaning_short": "bốn, số 4",
     "enMeaning": "four",
-    "image": "https://images.pexels.com/photos/1329299/pexels-photo-1329299.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1620645514399-2cd0fe1de8ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8M3x8bnVtYmVyJTIwZm91cnxlbnwwfHx8fDE3OTE4Mjg4OTZ8MA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "四个",
       "四点",
@@ -2228,7 +2228,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đứng sau số bốn và đứng trước số sáu trong hệ đếm",
     "vi_meaning_short": "năm, số 5",
     "enMeaning": "five",
-    "image": "https://images.pexels.com/photos/1329300/pexels-photo-1329300.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1582731489394-51b65c9fcb04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8Mnx8bnVtYmVyJTIwZml2ZXxlbnwwfHx8fDE3OTE4Mjg5MTZ8MA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "五个",
       "五点",
@@ -2272,7 +2272,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số tự nhiên đầu tiên trong hệ đếm cơ số 10",
     "vi_meaning_short": "một, số 1",
     "enMeaning": "one",
-    "image": "https://images.pexels.com/photos/1329296/pexels-photo-1329296.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://pixabay.com/get/g29c3df3b26649aacd011f26aa7102ee34ab93e0f5c51bc34829b0cd72c8762492aeb569acd3ef4bf9b56b48ba03a28b038aac19320a5193e22f5dee991788941_640.jpg",
     "collocations": [
       "一个",
       "一点儿",
@@ -4277,7 +4277,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "chỉ vị trí khoảng cách xa người nói",
     "vi_meaning_short": "chỗ kia, nơi đó",
     "enMeaning": "there",
-    "image": "https://images.pexels.com/photos/8617981/pexels-photo-8617981.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://pixabay.com/get/g137abc4ba12f9aefacec775320fb3e67cba5efeebfdf4ac0ee4063fdc2c4270aa0b6625f4c4597904bbebcb718e7a320_640.jpg",
     "collocations": [
       "去那儿",
       "在那儿"
@@ -4323,7 +4323,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "vị trí phía dưới hoặc hành động đi xuống, kết thúc (tan làm, tan học)",
     "vi_meaning_short": "dưới, xuống, tan (làm)",
     "enMeaning": "under, below, to go down",
-    "image": "https://images.pexels.com/photos/1729386/pexels-photo-1729386.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1557223562-6c77ef16210f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8MXx8Z2V0dGluZyUyMG9mZiUyMGJ1c3xlbnwwfHx8fDE3OTE4MjkxNTV8MA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "桌子下",
       "下班",
@@ -4845,7 +4845,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "phó từ phủ định hành động đã xảy ra trong quá khứ hoặc biểu thị sự không có",
     "vi_meaning_short": "chưa, không có",
     "enMeaning": "not, have not",
-    "image": "https://images.pexels.com/photos/33944557/pexels-photo-33944557.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1519916478825-b1d7aef08f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8Mnx8ZW1wdHklMjBlbXB0eSUyMGJvd2x8ZW58MHx8fHwxNzkxODI5MTA0fDA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "没有",
       "没去",
@@ -5061,7 +5061,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "tên riêng nhân vật trong bài học giáo trình HSK 1",
     "vi_meaning_short": "Vương Phương",
     "enMeaning": "Wang Fang (name)",
-    "image": "https://images.pexels.com/photos/8199252/pexels-photo-8199252.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/21006299/pexels-photo-21006299.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "王方同学"
     ],
@@ -5228,7 +5228,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "tên thủ đô của nước Cộng hòa Nhân dân Trung Hoa",
     "vi_meaning_short": "Bắc Kinh",
     "enMeaning": "Beijing",
-    "image": "https://images.pexels.com/photos/35580920/pexels-photo-35580920.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.unsplash.com/photo-1614555383820-941c466f1b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDk2MTUyfDB8MXxzZWFyY2h8Mnx8QmVpamluZyUyMEZvcmJpZGRlbiUyMGNpdHl8ZW58MHx8fHwxNzkxODI5MDY0fDA&ixlib=rb-4.1.0&q=80&w=400",
     "collocations": [
       "去北京",
       "北京人",
@@ -5762,7 +5762,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "hành động di chuyển từ chỗ khác hướng về vị trí của người nói",
     "vi_meaning_short": "đến, tới",
     "enMeaning": "to come",
-    "image": "https://images.pexels.com/photos/28908752/pexels-photo-28908752.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/8036573/pexels-photo-8036573.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "来到",
       "请来",
@@ -6133,7 +6133,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "từ xưng呼 lịch sự dành cho phụ nữ trẻ tuổi",
     "vi_meaning_short": "cô, cô gái",
     "enMeaning": "Miss, young lady",
-    "image": "https://images.pexels.com/photos/16160801/pexels-photo-16160801.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/8846648/pexels-photo-8846648.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "张小姐",
       "李小姐"
@@ -6309,7 +6309,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "tên riêng phiên âm nước ngoài (David) trong giáo trình",
     "vi_meaning_short": "David, Đại Vệ",
     "enMeaning": "David (name)",
-    "image": "https://images.pexels.com/photos/6265198/pexels-photo-6265198.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/7683736/pexels-photo-7683736.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "大卫同学"
     ],
@@ -7247,7 +7247,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "tên riêng nhân vật học sinh trong giáo trình HSK 1",
     "vi_meaning_short": "Trương Hoan",
     "enMeaning": "Zhang Huan (name)",
-    "image": "https://images.pexels.com/photos/8199252/pexels-photo-8199252.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/7683889/pexels-photo-7683889.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "张欢同学"
     ],
@@ -7607,7 +7607,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "Hoa Hoa (tên con mèo)",
     "vi_meaning_short": "Hoa Hoa (tên mèo)",
     "enMeaning": "Huahua (cat's name)",
-    "image": "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://pixabay.com/get/ged8807667040156e74b5de4a44d4f259f0d1196ae7f1b73079186ee2db237ecf9e32c4f95199fe3a1226dad12aa4165d15aeecb5acc66f1ee3dbbe54c8d3cd88_640.jpg",
     "collocations": [
       "猫叫花花"
     ],
@@ -8017,7 +8017,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "bể bơi",
     "vi_meaning_short": "hồ bơi, nhà thi đấu bơi lội",
     "enMeaning": "swimming pool, natatorium",
-    "image": "https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://pixabay.com/get/g37020ee818a71f629ef5aa170e40459bf1ba9bf5098b7f391d916ab6f8231643541fd49e4d636b1f02c62619fab08f756792eadff31cc3eb4039c0fc46734620_640.jpg",
     "collocations": [
       "去游泳馆"
     ],
@@ -8157,7 +8157,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "ra, ra ngoài",
     "vi_meaning_short": "ra, đi ra",
     "enMeaning": "to go out, come out",
-    "image": "https://images.pexels.com/photos/29457126/pexels-photo-29457126.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/11297774/pexels-photo-11297774.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "出去",
       "出门",
@@ -8720,7 +8720,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "bữa sáng",
     "vi_meaning_short": "bữa sáng, điểm tâm",
     "enMeaning": "breakfast",
-    "image": "https://images.pexels.com/photos/103124/pexels-photo-103124.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/32334386/pexels-photo-32334386.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "吃早饭",
       "做早饭"
@@ -8955,7 +8955,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "có màu hồng",
     "vi_meaning_short": "màu hồng, phấn",
     "enMeaning": "pink, powder",
-    "image": "https://images.pexels.com/photos/938580/pexels-photo-938580.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/39617749/pexels-photo-39617749.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "粉色的",
       "面粉"
@@ -9045,7 +9045,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "có màu đỏ",
     "vi_meaning_short": "màu đỏ",
     "enMeaning": "red",
-    "image": "https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/36272661/pexels-photo-36272661.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "红色的",
       "红茶",
@@ -10026,7 +10026,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "tan làm",
     "vi_meaning_short": "tan làm, hết ca làm",
     "enMeaning": "to off work, finish work",
-    "image": "https://images.pexels.com/photos/37342792/pexels-photo-37342792.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/9623660/pexels-photo-9623660.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "下班后",
       "准备下班"
@@ -10727,7 +10727,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "quán trà",
     "vi_meaning_short": "quán trà, tiệm trà",
     "enMeaning": "teahouse",
-    "image": "https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/7596850/pexels-photo-7596850.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "去茶馆儿喝茶"
     ],
@@ -10907,7 +10907,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "mì trứng",
     "vi_meaning_short": "tô mì trứng",
     "enMeaning": "egg noodles",
-    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/5907999/pexels-photo-5907999.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "吃鸡蛋面"
     ],
@@ -10949,7 +10949,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "thịt gà",
     "vi_meaning_short": "thịt gà",
     "enMeaning": "chicken meat",
-    "image": "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/36850060/pexels-photo-36850060.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "吃鸡肉",
       "炒鸡肉"
@@ -11089,7 +11089,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "quán cà phê",
     "vi_meaning_short": "quán cà phê",
     "enMeaning": "coffee shop, cafe",
-    "image": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://pixabay.com/get/gfadba38bd377e8db4ecce15a8e9df41a0226cacf59b1f806cfca8f5242cf26b421030d807fb85a04893e5f5f10746035bfdfd54d799ae056ea1dfb87e4fc7fd5_640.jpg",
     "collocations": [
       "去咖啡馆儿"
     ],
@@ -11180,7 +11180,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "quán mì",
     "vi_meaning_short": "quán mì, tiệm mì",
     "enMeaning": "noodle shop",
-    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/36002731/pexels-photo-36002731.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "去面馆儿吃面"
     ],
@@ -11265,7 +11265,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "trà sữa",
     "vi_meaning_short": "trà sữa",
     "enMeaning": "milk tea",
-    "image": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/28915280/pexels-photo-28915280.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "喝奶茶",
       "一杯奶茶"
@@ -11628,7 +11628,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "nhà cửa",
     "vi_meaning_short": "ngôi nhà, căn nhà",
     "enMeaning": "house, building",
-    "image": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/7746940/pexels-photo-7746940.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "买房子",
       "租房子"
@@ -12050,7 +12050,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "nhà khách, khách sạn",
     "vi_meaning_short": "nhà nghỉ, nhà khách nhỏ",
     "enMeaning": "inn, small hotel",
-    "image": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/32334284/pexels-photo-32334284.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "住旅馆"
     ],
@@ -12383,7 +12383,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "màu trắng",
     "vi_meaning_short": "màu trắng",
     "enMeaning": "white color",
-    "image": "https://images.pexels.com/photos/11412596/pexels-photo-11412596.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/8582271/pexels-photo-8582271.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "白色的"
     ],
@@ -12668,7 +12668,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "màu đen",
     "vi_meaning_short": "màu đen",
     "enMeaning": "black color",
-    "image": "https://images.pexels.com/photos/1694900/pexels-photo-1694900.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/11548432/pexels-photo-11548432.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "黑色的"
     ],
@@ -13521,7 +13521,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "máy thu hình, tivi",
     "vi_meaning_short": "tivi, máy truyền hình",
     "enMeaning": "television set",
-    "image": "https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://pixabay.com/get/gb97ee8933595a9c58b77bc82f7f6584f760491e7e44dea17fd4caff8645f29679eb21be62a232fc5da98d48ec0524b7e1b841f676b11d7519623811ff8b02f90_640.jpg",
     "collocations": [
       "看电视机",
       "买电视机"
@@ -14219,7 +14219,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "bé gái, cô gái",
     "vi_meaning_short": "cô gái, bé gái",
     "enMeaning": "girl",
-    "image": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/14137881/pexels-photo-14137881.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "那个女孩儿",
       "爱笑的女孩儿"
@@ -14314,7 +14314,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "nói chuyện",
     "vi_meaning_short": "nói chuyện, phát biểu",
     "enMeaning": "to speak, talk",
-    "image": "https://images.pexels.com/photos/18325674/pexels-photo-18325674.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/12179672/pexels-photo-12179672.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "说话的人",
       "别说话"
@@ -14734,7 +14734,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "số không",
     "vi_meaning_short": "số 0, lẻ",
     "enMeaning": "zero",
-    "image": "https://images.pexels.com/photos/34968620/pexels-photo-34968620.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/7563555/pexels-photo-7563555.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "二零一一年",
       "零下"
@@ -14872,7 +14872,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "rửa tay",
     "vi_meaning_short": "rửa tay",
     "enMeaning": "to wash hands",
-    "image": "https://images.pexels.com/photos/4202924/pexels-photo-4202924.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/4031827/pexels-photo-4031827.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "去洗手",
       "洗手间"
@@ -15243,7 +15243,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "phía nào, bên nào",
     "vi_meaning_short": "bên nào, phía nào",
     "enMeaning": "which side, where",
-    "image": "https://images.pexels.com/photos/938582/pexels-photo-938582.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/2801126/pexels-photo-2801126.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "在哪边"
     ],
@@ -15290,7 +15290,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "phía đó, bên đó",
     "vi_meaning_short": "bên đó, chỗ kia",
     "enMeaning": "over there, that side",
-    "image": "https://images.pexels.com/photos/938582/pexels-photo-938582.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/9972849/pexels-photo-9972849.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "在那边"
     ],
@@ -15522,7 +15522,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "Dương Tiếu Tiếu (tên người)",
     "vi_meaning_short": "Dương Tiếu Tiếu (tên riêng)",
     "enMeaning": "Yang Xiaoxiao (person name)",
-    "image": "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/4003769/pexels-photo-4003769.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "叫杨笑笑"
     ],
@@ -15657,7 +15657,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "phía này, bên này",
     "vi_meaning_short": "bên này, chỗ này",
     "enMeaning": "this side, over here",
-    "image": "https://images.pexels.com/photos/938582/pexels-photo-938582.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/19285888/pexels-photo-19285888.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "在这边",
       "请这边走"
@@ -15976,7 +15976,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "nghe nhạc",
     "vi_meaning_short": "nghe nhạc, nghe bài hát",
     "enMeaning": "to listen to songs/music",
-    "image": "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/3756747/pexels-photo-3756747.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "喜欢听歌",
       "戴耳机听歌"
@@ -16112,7 +16112,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "thú vị",
     "vi_meaning_short": "hay, thú vị",
     "enMeaning": "interesting, fun",
-    "image": "https://images.pexels.com/photos/20107107/pexels-photo-20107107.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/7991525/pexels-photo-7991525.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "很有意思",
       "非常有意思"
@@ -16299,7 +16299,7 @@ export const DICTIONARY_WORDS: DictWord[] = [
     "vi_meaning_full": "vào ga",
     "vi_meaning_short": "vào ga, vào bến",
     "enMeaning": "to enter station",
-    "image": "https://images.pexels.com/photos/33928465/pexels-photo-33928465.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "image": "https://images.pexels.com/photos/7251095/pexels-photo-7251095.jpeg?auto=compress&cs=tinysrgb&h=350",
     "collocations": [
       "火车进站了"
     ],

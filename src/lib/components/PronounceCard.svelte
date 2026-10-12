@@ -445,7 +445,7 @@
   {#if appState.currentSpeechItem}
     <div class="flex-1 w-full flex flex-col justify-center items-center py-1 sm:py-2 max-w-md mx-auto my-auto">
       <!-- Vocabulary Illustration Image -->
-      {#if appState.currentSpeechItem.image}
+      {#if appState.showQuestionImages && appState.currentSpeechItem.image}
         <div class="mb-2 md:mb-4 flex items-center justify-center flex-shrink-0">
           <SmartImage
             src={appState.currentSpeechItem.image}

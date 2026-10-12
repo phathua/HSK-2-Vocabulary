@@ -76,7 +76,7 @@
         class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-2 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6"
       >
         <!-- Vocabulary Image: Chỉ hiển thị khi hỏi nghĩa tiếng Việt -> Chọn tiếng Trung (!isZhToVi). Ẩn hoàn toàn khi hỏi tiếng Trung để tránh lộ đáp án -->
-        {#if !isZhToVi && appState.currentQuizItem.image}
+        {#if appState.showQuestionImages && !isZhToVi && appState.currentQuizItem.image}
           <div class="relative mb-2 sm:mb-3">
             <SmartImage
               src={appState.currentQuizItem.image}

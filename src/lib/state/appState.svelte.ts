@@ -36,6 +36,7 @@ export class AppState {
   theme = $state<'light' | 'dark'>('dark');
   enableFeedbackDrawer = $state<boolean>(false);
   enableFillHints = $state<boolean>(true);
+  showQuestionImages = $state<boolean>(true);
 
   // Bài học chọn lọc (Bài 1-15 cho từng cấp độ)
   selectedLessonsHsk1 = $state<Record<number, boolean>>({});
@@ -214,6 +215,7 @@ export class AppState {
       this.volume = vol ? parseFloat(vol) : 0.7;
       this.enableFeedbackDrawer = localStorage.getItem('HSK_ENABLE_FEEDBACK_DRAWER') === 'true';
       this.enableFillHints = localStorage.getItem('HSK_ENABLE_FILL_HINTS') !== 'false';
+      this.showQuestionImages = localStorage.getItem('HSK_SHOW_QUESTION_IMAGES') !== 'false';
 
       const savedThemeMode = localStorage.getItem('HSK_THEME_MODE') as 'light' | 'dark' | 'system';
       if (savedThemeMode === 'light' || savedThemeMode === 'dark' || savedThemeMode === 'system') {
@@ -317,6 +319,7 @@ export class AppState {
       localStorage.setItem('HSK_VOLUME', this.volume.toString());
       localStorage.setItem('HSK_ENABLE_FEEDBACK_DRAWER', this.enableFeedbackDrawer ? 'true' : 'false');
       localStorage.setItem('HSK_ENABLE_FILL_HINTS', this.enableFillHints ? 'true' : 'false');
+      localStorage.setItem('HSK_SHOW_QUESTION_IMAGES', this.showQuestionImages ? 'true' : 'false');
       localStorage.setItem('HSK_SPEECH_AUTO_SUBMIT', this.speechAutoSubmit ? 'true' : 'false');
       localStorage.setItem('HSK_THEME_MODE', this.themeMode);
       localStorage.setItem('HSK_THEME', this.theme);
@@ -367,6 +370,11 @@ export class AppState {
     if (this.activeTab === 'fill' && !this.fillAnswered && this.currentFillItem) {
       this.setupFillChunks();
     }
+  }
+
+  toggleShowQuestionImages() {
+    this.showQuestionImages = !this.showQuestionImages;
+    this.saveToLocalStorage();
   }
 
   toggleFillSubMode() {
@@ -978,6 +986,7 @@ export class AppState {
         'HSK_SPEECH_AUTO_SUBMIT',
         'HSK_THEME_MODE',
         'HSK_THEME',
+        'HSK_SHOW_QUESTION_IMAGES',
         'hsk2_exam_history_v1',
         'hsk2_grammar_learned_ids',
         'HSK_DICT_BOOKMARKS',
@@ -998,6 +1007,7 @@ export class AppState {
       this.activeTab = 'fill';
       this.fillSubMode = 'tiles';
       this.enableFillHints = true;
+      this.showQuestionImages = true;
       this.autoPlay = false;
       this.volume = 0.7;
       this.enableFeedbackDrawer = false;

@@ -357,7 +357,7 @@
               z-index: 10;
             `}
         >
-          {#if nextCardItem.image}
+          {#if appState.showQuestionImages && nextCardItem.image}
             <div class="relative mb-3 md:mb-5">
               <SmartImage
                 src={nextCardItem.image}
@@ -441,7 +441,7 @@
             </div>
 
             <!-- Card Image -->
-            {#if appState.currentFlashItem.image}
+            {#if appState.showQuestionImages && appState.currentFlashItem.image}
               <div class="relative mb-3 md:mb-5 pointer-events-none">
                 <SmartImage
                   src={appState.currentFlashItem.image}
@@ -549,7 +549,7 @@
               </span>
             </div>
           {:else}
-            {#if flyingCard.image}
+            {#if appState.showQuestionImages && flyingCard.image}
               <div class="relative mb-3">
                 <SmartImage
                   src={flyingCard.image}
