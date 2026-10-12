@@ -19,7 +19,18 @@
   import AnswerFeedbackDrawer from './AnswerFeedbackDrawer.svelte';
   import { flip } from 'svelte/animate';
 
-  let inputEl: HTMLInputElement | null = $state(null);
+  let desktopInputEl: HTMLInputElement | null = $state(null);
+  let mobileInputEl: HTMLInputElement | null = $state(null);
+
+  function getActiveInput(): HTMLInputElement | null {
+    if (document.activeElement instanceof HTMLInputElement) {
+      return document.activeElement;
+    }
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      return mobileInputEl || desktopInputEl;
+    }
+    return desktopInputEl || mobileInputEl;
+  }
 
   // Quản lý active flying animation
   let flyingLetter = $state<{
@@ -35,18 +46,29 @@
 
   function handleInsertChar(ch: string) {
     if (appState.fillAnswered) return;
-    if (!inputEl) {
+    const targetInput = getActiveInput();
+    if (!targetInput) {
       appState.fillInput += ch;
       return;
     }
-    const start = inputEl.selectionStart || 0;
-    const end = inputEl.selectionEnd || 0;
+    const isCurrentlyFocused = document.activeElement === targetInput;
+    const start = targetInput.selectionStart ?? appState.fillInput.length;
+    const end = targetInput.selectionEnd ?? appState.fillInput.length;
     const newVal = appState.fillInput.slice(0, start) + ch + appState.fillInput.slice(end);
     appState.fillInput = newVal;
-    setTimeout(() => {
-      inputEl?.focus();
-      inputEl?.setSelectionRange(start + 1, start + 1);
-    }, 0);
+    const nextCursor = start + ch.length;
+
+    if (isCurrentlyFocused) {
+      // Giữ nguyên focus hiện tại mà không gọi lại .focus(), ngăn hoàn toàn iOS giật bàn phím ảo
+      requestAnimationFrame(() => {
+        targetInput.setSelectionRange(nextCursor, nextCursor);
+      });
+    } else {
+      targetInput.focus();
+      requestAnimationFrame(() => {
+        targetInput.setSelectionRange(nextCursor, nextCursor);
+      });
+    }
   }
 
   function handleInputChange(e: Event) {
@@ -439,7 +461,7 @@
 
             <div class="w-full max-w-md flex items-stretch gap-2">
               <input
-                bind:this={inputEl}
+                bind:this={desktopInputEl}
                 type="text"
                 value={appState.fillInput}
                 oninput={handleInputChange}
@@ -572,7 +594,7 @@
         <!-- Input Row Thủ Công CHO MOBILE / TABLET (< lg): Ẩn trên desktop (lg:hidden) vì desktop đã có ở Cột 2 -->
         <div class="lg:hidden flex items-stretch gap-1.5 sm:gap-2">
           <input
-            bind:this={inputEl}
+            bind:this={mobileInputEl}
             type="text"
             value={appState.fillInput}
             oninput={handleInputChange}

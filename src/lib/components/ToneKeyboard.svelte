@@ -18,6 +18,11 @@
     'ū', 'ú', 'ǔ', 'ù',
     'ǖ', 'ǘ', 'ǚ', 'ǜ', 'ü'
   ];
+
+  function handleButtonPointerDown(e: PointerEvent) {
+    // Ngăn chặn sự kiện cướp focus khỏi ô nhập liệu trên iOS / trình duyệt
+    e.preventDefault();
+  }
 </script>
 
 <div class="bg-white dark:bg-[#1B1B1B] p-1.5 rounded-2xl border border-slate-200 dark:border-[#282A2C] shadow-2xs transition-colors">
@@ -30,6 +35,9 @@
 
     <button
       type="button"
+      tabindex="-1"
+      onpointerdown={handleButtonPointerDown}
+      onmousedown={(e) => e.preventDefault()}
       onclick={() => (isExpanded = !isExpanded)}
       class="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-[#282A2C] dark:hover:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5] flex items-center gap-1 transition-all cursor-pointer active:scale-95"
       title={isExpanded ? 'Thu gọn thành 1 hàng' : 'Mở rộng toàn bộ bảng dấu'}
@@ -50,7 +58,10 @@
       {#each TONES as ch (ch)}
         <button
           type="button"
+          tabindex="-1"
           disabled={disabled}
+          onpointerdown={handleButtonPointerDown}
+          onmousedown={(e) => e.preventDefault()}
           onclick={() => onInsertChar(ch)}
           class="h-9 sm:h-10 rounded-xl bg-slate-50 hover:bg-blue-50 dark:bg-[#282A2C] dark:hover:bg-[#37393B] hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-[#37393B] hover:border-blue-300 dark:hover:border-blue-500/50 text-slate-800 dark:text-[#E3E3E3] text-sm sm:text-base font-extrabold flex items-center justify-center active:scale-90 transition-all shadow-2xs cursor-pointer disabled:opacity-50"
         >
@@ -64,7 +75,10 @@
       {#each TONES as ch (ch)}
         <button
           type="button"
+          tabindex="-1"
           disabled={disabled}
+          onpointerdown={handleButtonPointerDown}
+          onmousedown={(e) => e.preventDefault()}
           onclick={() => onInsertChar(ch)}
           class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-50 hover:bg-blue-50 dark:bg-[#282A2C] dark:hover:bg-[#37393B] hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-[#37393B] hover:border-blue-300 dark:hover:border-blue-500/50 text-slate-800 dark:text-[#E3E3E3] text-sm sm:text-base font-extrabold flex items-center justify-center shrink-0 active:scale-90 transition-all shadow-2xs cursor-pointer disabled:opacity-50"
         >
