@@ -52,10 +52,28 @@ export const fillWordTour: TourDefinition = {
     },
     {
       id: 'fill-slots',
-      target: '[data-tour="fill-slots-area"]',
-      includeTarget: '[data-tour="fill-tile-bank"]',
-      title: 'Ghép ký tự Pinyin',
-      description: 'Chạm các ký tự gợi ý bên dưới để điền, hoặc chạm vào ô để gỡ bỏ.',
+      target: () => {
+        if (appState.fillSubMode === 'keyboard') {
+          return document.querySelector('[data-tour="fill-manual-input"]');
+        }
+        return document.querySelector('[data-tour="fill-slots-area"]');
+      },
+      includeTarget: () => {
+        if (appState.fillSubMode === 'keyboard') {
+          return document.querySelector('[data-tour="fill-tone-keyboard"]');
+        }
+        return document.querySelector('[data-tour="fill-tile-bank"]');
+      },
+      get title() {
+        return appState.fillSubMode === 'keyboard'
+          ? 'Nhập câu trả lời & Bảng dấu'
+          : 'Ghép ký tự Pinyin';
+      },
+      get description() {
+        return appState.fillSubMode === 'keyboard'
+          ? 'Gõ câu trả lời vào ô nhập và dùng bảng dấu Pinyin để thêm thanh điệu.'
+          : 'Chạm các ký tự gợi ý bên dưới để điền, hoặc chạm vào ô để gỡ bỏ.';
+      },
       placement: 'top',
       illustration: '/tour/mascot_buffalo.webp',
       spotlightPadding: 6,

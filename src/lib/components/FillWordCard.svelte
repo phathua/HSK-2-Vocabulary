@@ -459,7 +459,7 @@
               Nhập câu trả lời
             </span>
 
-            <div class="w-full max-w-md flex items-stretch gap-2">
+            <div data-tour="fill-manual-input" class="w-full max-w-md flex items-stretch gap-2">
               <input
                 bind:this={desktopInputEl}
                 type="text"
@@ -483,7 +483,7 @@
             </div>
 
             {#if !isZhToVi}
-              <div class="w-full max-w-md hidden lg:block">
+              <div data-tour="fill-tone-keyboard" class="w-full max-w-md hidden lg:block">
                 <ToneKeyboard onInsertChar={handleInsertChar} disabled={appState.fillAnswered} />
               </div>
             {/if}
@@ -592,7 +592,7 @@
         </div>
       {:else}
         <!-- Input Row Thủ Công CHO MOBILE / TABLET (< lg): Ẩn trên desktop (lg:hidden) vì desktop đã có ở Cột 2 -->
-        <div class="lg:hidden flex items-stretch gap-1.5 sm:gap-2">
+        <div data-tour="fill-manual-input" class="lg:hidden flex items-stretch gap-1.5 sm:gap-2">
           <input
             bind:this={mobileInputEl}
             type="text"
@@ -617,7 +617,7 @@
 
         <!-- Tone Keyboard (khi gõ thủ công trên mobile/tablet) -->
         {#if !isZhToVi}
-          <div class="lg:hidden">
+          <div data-tour="fill-tone-keyboard" class="lg:hidden">
             <ToneKeyboard onInsertChar={handleInsertChar} disabled={appState.fillAnswered} />
           </div>
         {/if}
