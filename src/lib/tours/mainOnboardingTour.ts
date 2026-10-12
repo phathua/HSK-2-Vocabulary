@@ -18,7 +18,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Chào mừng bạn đến với Ôn Tập HSK! 🐼',
       description: 'Linh vật Panda HSK sẽ đồng hành cùng bạn chinh phục trọn vẹn từ vựng HSK 1 & HSK 2 với 4 phương pháp luyện phản xạ đa giác quan.',
       placement: 'bottom',
-      illustration: '/tour/panda_welcome.png',
+      illustration: '/tour/panda_welcome.webp',
       spotlightPadding: 6,
       spotlightRadius: 20,
       onBeforeStep: async () => {
@@ -38,7 +38,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Thực đơn hệ thống',
       description: 'Chạm vào nút Menu (hoặc thanh bên) để mở lối tắt đến tất cả các phòng học: Ngữ pháp, Thi thử, Nhiệm vụ và Tra từ điển.',
       placement: 'bottom',
-      illustration: '/tour/panda_explore.png',
+      illustration: '/tour/mascot_fox.webp',
       spotlightPadding: 6,
       spotlightRadius: 18,
       onBeforeStep: async () => {
@@ -55,7 +55,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Tra cứu Từ điển HSK nhanh',
       description: 'Tìm kiếm nghĩa tiếng Việt, chữ Hán, Pinyin và ví dụ câu thực tế của hơn 450 từ vựng HSK 1 & 2 bất cứ lúc nào.',
       placement: 'bottom',
-      illustration: '/tour/panda_detective.png',
+      illustration: '/tour/panda_detective.webp',
       spotlightPadding: 6,
       spotlightRadius: 18,
       onBeforeStep: async () => {
@@ -77,7 +77,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Hệ sinh thái luyện thi toàn diện',
       description: 'Dễ dàng chuyển đổi giữa học Ngữ pháp trọng điểm, Phòng thi thử chuẩn Hanban, Nhiệm vụ ngày và Bảng xếp hạng thi đua.',
       placement: 'bottom',
-      illustration: '/tour/panda_explore.png',
+      illustration: '/tour/mascot_tiger.webp',
       spotlightPadding: 6,
       spotlightRadius: 22,
       onBeforeStep: async () => {
@@ -101,7 +101,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Đảo chiều câu hỏi thông minh',
       description: 'Linh hoạt đổi chiều: Hỏi tiếng Việt ➔ Chọn chữ Hán/Pinyin, hoặc Hỏi chữ Hán ➔ Chọn nghĩa tiếng Việt để nhớ sâu 2 chiều.',
       placement: 'bottom',
-      illustration: '/icons/panda-skip.webp',
+      illustration: '/tour/mascot_monkey.webp',
       spotlightPadding: 6,
       spotlightRadius: 18,
       onBeforeStep: async () => {
@@ -120,7 +120,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Cài đặt & Xem lại hướng dẫn',
       description: 'Tùy chỉnh giao diện Sáng / Tối, chỉnh âm lượng loa, bật tự động phát âm và mở lại hướng dẫn sử dụng bất cứ lúc nào.',
       placement: 'bottom',
-      illustration: '/tour/panda_welcome.png',
+      illustration: '/tour/panda_think.webp',
       spotlightPadding: 6,
       spotlightRadius: 18
     },
@@ -157,7 +157,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Nút Bài học đang luyện tập',
       description: 'Hiển thị bài học hiện tại (Bài 1 - 15). Chạm vào đây để mở bảng chọn bài học hoặc chuyển cấp độ HSK.',
       placement: 'bottom',
-      illustration: '/tour/panda_explore.png',
+      illustration: '/tour/mascot_tiger.webp',
       spotlightPadding: 6,
       spotlightRadius: 18,
       onBeforeStep: async () => {
@@ -171,7 +171,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Chọn cấp độ HSK 1 hoặc HSK 2',
       description: 'Dễ dàng chuyển đổi giữa 15 bài HSK 1 (150 từ vựng) hoặc 15 bài HSK 2 (300 từ vựng), hoặc tích hợp học trộn cả 2 cấp độ!',
       placement: 'bottom',
-      illustration: '/tour/panda_explore.png',
+      illustration: '/tour/mascot_fox.webp',
       spotlightPadding: 6,
       spotlightRadius: 18,
       onBeforeStep: async () => {
@@ -207,7 +207,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Chọn từ hoặc Gõ phím thủ công',
       description: 'Chế độ "Chọn từ": Chọn ký tự có sẵn để ghép Pinyin. Chế độ "Thủ công": Tự gõ Telex Pinyin tiện lợi (ví dụ gõ ni3hao3 hoặc nihaoj).',
       placement: 'bottom',
-      illustration: '/tour/panda_detective.png',
+      illustration: '/tour/panda_detective.webp',
       spotlightPadding: 6,
       spotlightRadius: 18,
       onBeforeStep: async () => {
@@ -226,7 +226,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Đề bài, Chữ Hán & Loa phát âm',
       description: 'Quan sát chữ Hán, nghĩa tiếng Việt và hình ảnh gợi ý. Nhấn biểu tượng Loa xanh lá để nghe phát âm mẫu chuẩn giọng Bắc Kinh.',
       placement: 'bottom',
-      illustration: '/tour/panda_vocalist.png',
+      illustration: '/tour/panda_think.webp',
       spotlightPadding: 8,
       spotlightRadius: 22
     },
@@ -236,7 +236,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Hàng ô Slot ghép Pinyin',
       description: 'Các ô trống tương ứng với từng ký tự Pinyin. Chọn các ký tự gợi ý ở dưới để ghép chữ, hoặc chạm trực tiếp vào ô để gỡ bỏ ký tự.',
       placement: 'top',
-      illustration: '/tour/panda_detective.png',
+      illustration: '/tour/panda_detective.webp',
       spotlightPadding: 6,
       spotlightRadius: 18
     },
@@ -246,7 +246,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Các nút hỗ trợ làm bài',
       description: 'Nút "Bỏ qua" để chuyển câu tiếp, nút "Đáp án" (bóng đèn) để xem gợi ý khi gặp từ khó, và nút Backspace để xóa nhanh ký tự vừa nhập.',
       placement: 'top',
-      illustration: '/icons/panda-skip.webp',
+      illustration: '/tour/mascot_monkey.webp',
       spotlightPadding: 6,
       spotlightRadius: 20
     },
@@ -268,7 +268,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Chế độ Trắc nghiệm 4 đáp án 🎯',
       description: 'Rèn luyện phản xạ nhanh với 4 phương án A, B, C, D. Hệ thống phản hồi màu sắc ngay lập tức (xanh lá khi đúng, đỏ khi sai kèm giải thích).',
       placement: 'top',
-      illustration: '/tour/panda_think.png',
+      illustration: '/tour/mascot_buffalo.webp',
       spotlightPadding: 8,
       spotlightRadius: 24,
       onBeforeStep: async () => {
@@ -288,7 +288,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Chế độ Thẻ từ Flashcard 3D 🗂️',
       description: 'Chạm vào thẻ để lật xem Chữ Hán, Pinyin và Ví dụ. Vuốt thẻ sang PHẢI nếu bạn đã "THUỘC", hoặc vuốt sang TRÁI nếu bạn còn "QUÊN".',
       placement: 'top',
-      illustration: '/tour/friend_lily.png',
+      illustration: '/tour/mascot_cat.webp',
       spotlightPadding: 8,
       spotlightRadius: 26,
       onBeforeStep: async () => {
@@ -308,7 +308,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Chế độ Luyện phát âm thông minh 🎙️',
       description: 'Nghe phát âm chuẩn bản xứ, sau đó bấm nút Micro để AI nhận diện giọng nói tiếng Trung của bạn trong thời gian thực.',
       placement: 'top',
-      illustration: '/tour/panda_vocalist.png',
+      illustration: '/tour/mascot_girl.webp',
       spotlightPadding: 8,
       spotlightRadius: 26,
       onBeforeStep: async () => {
@@ -328,7 +328,7 @@ export const mainOnboardingTour: TourDefinition = {
       title: 'Bạn đã sẵn sàng chinh phục HSK! 🚀',
       description: 'Mọi tính năng đã được làm quen. Hãy bắt đầu buổi học đầu tiên ngay bây giờ cùng chú gấu trúc Panda nhé. Chúc bạn học tốt!',
       placement: 'bottom',
-      illustration: '/tour/panda_rocket.png',
+      illustration: '/tour/panda_rocket.webp',
       spotlightPadding: 6,
       spotlightRadius: 20,
       onBeforeStep: async () => {
