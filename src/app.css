@@ -199,3 +199,18 @@ input[type="range"]::-moz-range-thumb:hover {
   transform: scale(1.18);
   box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4), 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
+
+/* ========================================================
+   SVELTE-SONNER: ĐỔI NÚT ĐÓNG TOAST SANG GÓC TRÊN BÊN PHẢI
+   ======================================================== */
+:where([data-sonner-toaster]) {
+  --toast-close-button-start: unset !important;
+  --toast-close-button-end: 0 !important;
+  --toast-close-button-transform: translate(35%, -35%) !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-close-button] {
+  left: unset !important;
+  right: 0 !important;
+  transform: translate(35%, -35%) !important;
+}
