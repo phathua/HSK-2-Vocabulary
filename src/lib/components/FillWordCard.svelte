@@ -194,6 +194,7 @@
     <!-- Floating Lesson Select Button -->
     <button
       type="button"
+      data-tour="fill-lesson-btn"
       onclick={() => (appState.filterModalOpen = true)}
       class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-2xl h-10 px-3.5 flex items-center justify-center gap-1.5 shadow-sm transition-transform cursor-pointer"
       title="Bấm để chọn bài học"
@@ -206,6 +207,7 @@
     {#if !isZhToVi && appState.currentFillItem}
       <button
         type="button"
+        data-tour="fill-submode-btn"
         onclick={() => appState.toggleFillSubMode()}
         class={`rounded-2xl h-10 px-3.5 flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all cursor-pointer text-xs font-black text-white ${
           appState.fillSubMode === 'tiles'
@@ -232,7 +234,10 @@
     <div class="w-full flex-1 flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center justify-center my-auto py-1">
       
       <!-- CỘT 1 (Desktop col-span-5): Đề bài & Hình ảnh gọn gàng & Loa TTS -->
-      <div class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-2 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6">
+      <div
+        data-tour="fill-prompt-area"
+        class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-2 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6"
+      >
         <!-- Vocabulary Image: Kích thước tối ưu gọn gàng hơn trên desktop -->
         {#if appState.currentFillItem.image}
           <div class="relative mb-2 sm:mb-3">
@@ -304,7 +309,10 @@
             </span>
 
             <!-- Hàng các ô Slot điền từ: Luôn căn giữa (justify-center), cuộn ngang mượt mà nếu quá dài -->
-            <div class="w-full flex items-center justify-center overflow-x-auto no-scrollbar gap-x-2.5 sm:gap-x-4 py-2 px-1">
+            <div
+              data-tour="fill-slots-area"
+              class="w-full flex items-center justify-center overflow-x-auto no-scrollbar gap-x-2.5 sm:gap-x-4 py-2 px-1"
+            >
               {#each appState.fillWordChunks as chunk, cIdx}
                 <div
                   role="button"
@@ -382,7 +390,10 @@
 
             <!-- DESKTOP CHỈ HIỆN TẠI CỘT 2: BẢNG KÝ TỰ (TILE BANK) TRONG CỘT 2 TRÊN MÀN HÌNH LỚN -->
             {#if curChunk}
-              <div class="hidden lg:flex w-full bg-slate-50/70 dark:bg-[#242628]/60 rounded-2xl border border-slate-200 dark:border-[#282A2C] p-3 shadow-2xs flex-col items-center gap-2 mt-2">
+              <div
+                data-tour="fill-tile-bank"
+                class="hidden lg:flex w-full bg-slate-50/70 dark:bg-[#242628]/60 rounded-2xl border border-slate-200 dark:border-[#282A2C] p-3 shadow-2xs flex-col items-center gap-2 mt-2"
+              >
                 <span class="text-[11px] font-bold text-slate-400 dark:text-[#8E918F] uppercase tracking-wider">
                   Chọn ký tự điền
                 </span>
@@ -518,7 +529,10 @@
     {#if !appState.fillAnswered}
       {#if isTileMode && appState.fillWordChunks[appState.currentChunkIndex]}
         {@const curChunk = appState.fillWordChunks[appState.currentChunkIndex]}
-        <div class="lg:hidden bg-white dark:bg-[#1B1B1B] rounded-2xl border border-slate-200 dark:border-[#282A2C] p-2.5 shadow-2xs space-y-2">
+        <div
+          data-tour="fill-tile-bank"
+          class="lg:hidden bg-white dark:bg-[#1B1B1B] rounded-2xl border border-slate-200 dark:border-[#282A2C] p-2.5 shadow-2xs space-y-2"
+        >
           <!-- Tile Grid -->
           <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
             {#each curChunk.tiles as tile}
@@ -571,7 +585,7 @@
       {/if}
 
       <!-- Action Buttons: Chỉ hiện khi chưa trả lời -->
-      <div class="flex gap-2 items-center">
+      <div data-tour="fill-action-buttons" class="flex gap-2 items-center">
         <button
           type="button"
           onclick={() => appState.skipFill()}
@@ -604,7 +618,10 @@
     {/if}
 
     <!-- Micro Stats Footer -->
-    <div class="flex justify-between items-center px-3 py-1 bg-white dark:bg-[#1B1B1B] rounded-xl border border-slate-200 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] transition-colors">
+    <div
+      data-tour="fill-stats-bar"
+      class="flex justify-between items-center px-3 py-1 bg-white dark:bg-[#1B1B1B] rounded-xl border border-slate-200 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] transition-colors"
+    >
       <span class="flex items-center gap-1">
         <CheckCircle weight="duotone" class="w-3.5 h-3.5 text-emerald-500" />
         Đúng: <b class="text-slate-900 dark:text-[#E3E3E3]">{appState.fillCorrect}</b>

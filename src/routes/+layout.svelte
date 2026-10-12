@@ -2,10 +2,14 @@
   import '../app.css';
   import { onMount } from 'svelte';
   import { updated } from '$app/state';
+  import { page } from '$app/state';
   import Toast from '#lib/components/ui/Toast.svelte';
   import UpdateModal from '#lib/components/UpdateModal.svelte';
   import SidebarMenu from '#lib/components/SidebarMenu.svelte';
+  import OnboardingTour from '#lib/components/tour/OnboardingTour.svelte';
   import { appState } from '#lib/state/appState.svelte';
+  import { tourState } from '#lib/state/tourState.svelte';
+  import { mainOnboardingTour } from '#lib/tours/mainOnboardingTour';
 
   let { children } = $props<{ children: any }>();
 
@@ -33,7 +37,15 @@
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
+    // Tự động khởi chạy tour hướng dẫn cho người mới truy cập trang chính
+    const tourTimer = setTimeout(() => {
+      if (page.url.pathname === '/' && !tourState.isTourSeen(mainOnboardingTour)) {
+        tourState.startTour(mainOnboardingTour);
+      }
+    }, 600);
+
     return () => {
+      clearTimeout(tourTimer);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   });
@@ -51,4 +63,5 @@
 </div>
 
 <UpdateModal />
+<OnboardingTour />
 

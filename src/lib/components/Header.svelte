@@ -45,6 +45,7 @@
     <!-- Nút 3 gạch ngoài cùng bên trái (chỉ hiện trên Mobile/Tablet, ẩn trên Desktop lg vì có sidebar cố định) -->
     <button
       type="button"
+      data-tour="header-menu"
       onclick={() => (appState.sidebarOpen = true)}
       class="lg:hidden w-9 h-9 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center justify-center text-slate-700 dark:text-[#E3E3E3] transition-all cursor-pointer active:scale-95 shrink-0"
       title="Mở menu điều hướng"
@@ -56,6 +57,7 @@
     <!-- Click to choose Level/Lesson -->
     <button
       type="button"
+      data-tour="header-brand"
       onclick={() => (appState.filterModalOpen = true)}
       class="flex items-center gap-2.5 text-left cursor-pointer active:scale-98 transition-transform group"
       title="Bấm để chọn bài học hoặc đổi cấp độ HSK"
@@ -116,6 +118,7 @@
       <!-- Chỉ hiện nút đổi chiều ngôn ngữ ở Trang Chủ -->
       <button
         type="button"
+        data-tour="header-direction"
         onclick={() => appState.toggleDirection()}
         class="h-9 px-2.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs active:scale-95"
         title={appState.direction === 'vi_to_zh' ? 'Đang hỏi: Việt ➔ Trung. Bấm để đổi sang: Trung ➔ Việt' : 'Đang hỏi: Trung ➔ Việt. Bấm để đổi sang: Việt ➔ Trung'}
@@ -140,6 +143,7 @@
     <!-- Settings Button (luôn giữ lại) -->
     <button
       type="button"
+      data-tour="header-settings"
       onclick={() => (appState.settingsModalOpen = true)}
       class="w-9 h-9 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center justify-center text-slate-600 dark:text-[#C4C7C5] transition-colors cursor-pointer active:scale-95"
       title="Cài đặt âm thanh & giao diện"

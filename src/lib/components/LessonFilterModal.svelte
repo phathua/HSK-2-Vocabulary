@@ -359,7 +359,10 @@
       </div>
 
       <!-- Level Switcher: HSK 1 & HSK 2 (Chuyển tab để chọn bài, vẫn giữ trộn 2 bên) -->
-      <div class="grid grid-cols-2 gap-1.5 p-1 bg-slate-100 dark:bg-[#282A2C] rounded-2xl mb-2.5 shrink-0">
+      <div
+        data-tour="filter-level-switch"
+        class="grid grid-cols-2 gap-1.5 p-1 bg-slate-100 dark:bg-[#282A2C] rounded-2xl mb-2.5 shrink-0"
+      >
         <button
           type="button"
           onclick={() => appState.setLevel('HSK1')}
@@ -404,7 +407,7 @@
 
       <!-- Scrollable 2-Column Grid Cards -->
       <div class="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-0.5 mb-3">
-        <div class="grid grid-cols-2 gap-2">
+        <div data-tour="filter-lessons-grid" class="grid grid-cols-2 gap-2">
           {#each activeLessons as info (info.lesson)}
             {@const isSelected = !!activeSelected[info.lesson]}
             {@const count = activeVocab.filter((v: any) => v.lesson === info.lesson).length}

@@ -412,7 +412,10 @@
 </script>
 
 <!-- Main Pronounce Card -->
-<main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-center items-center text-center relative overflow-hidden transition-colors">
+<main
+  data-tour="speech-card-container"
+  class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-center items-center text-center relative overflow-hidden transition-colors"
+>
   <!-- Floating Lesson Select Button -->
   <button
     type="button"

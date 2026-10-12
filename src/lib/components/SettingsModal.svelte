@@ -7,6 +7,8 @@
   import Sun from 'phosphor-svelte/lib/Sun';
   import Moon from 'phosphor-svelte/lib/Moon';
   import Desktop from 'phosphor-svelte/lib/Desktop';
+  import { tourState } from '#lib/state/tourState.svelte';
+  import { mainOnboardingTour } from '#lib/tours/mainOnboardingTour';
 </script>
 
 {#if appState.settingsModalOpen}
@@ -141,6 +143,21 @@
         <div class="bg-blue-50/70 dark:bg-[#282A2C]/90 p-3 rounded-2xl border border-blue-200 dark:border-[#37393B] text-xs text-blue-900 dark:text-blue-300 font-semibold leading-relaxed">
           ⌨ <b>Gõ Telex Pinyin tiện lợi:</b><br />
           Gõ <code class="bg-white dark:bg-[#1B1B1B] px-1 py-0.5 rounded text-blue-700 dark:text-blue-300">ni3hao3</code> hoặc <code class="bg-white dark:bg-[#1B1B1B] px-1 py-0.5 rounded text-blue-700 dark:text-blue-300">nihaoj</code> sẽ tự chuyển thành pinyin chuẩn!
+        </div>
+
+        <!-- Replay Onboarding Tour Button -->
+        <div class="pt-0.5">
+          <button
+            type="button"
+            onclick={() => {
+              appState.settingsModalOpen = false;
+              tourState.resetTour(mainOnboardingTour);
+              tourState.startTour(mainOnboardingTour, true);
+            }}
+            class="w-full py-2.5 px-3 rounded-2xl bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900/50 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+          >
+            <span>📖 Xem lại hướng dẫn sử dụng</span>
+          </button>
         </div>
 
         <!-- Check Update Button -->

@@ -29,7 +29,10 @@
 
 <div class="shrink-0 my-2">
   <!-- Clean Segmented Control: 4 Chế độ rõ ràng, cân đối, icon đồng nhất Phosphor -->
-  <div class="grid grid-cols-4 gap-1 p-1 bg-slate-200/80 dark:bg-[#1B1B1B] border border-transparent dark:border-[#282A2C] rounded-2xl transition-colors">
+  <div
+    data-tour="mode-switch-tabs"
+    class="grid grid-cols-4 gap-1 p-1 bg-slate-200/80 dark:bg-[#1B1B1B] border border-transparent dark:border-[#282A2C] rounded-2xl transition-colors"
+  >
     <!-- Tab 1: Điền từ -->
     <button
       type="button"
@@ -88,14 +91,16 @@
   </div>
 
   <!-- Micro Progress & Live Score Indicator -->
-  <div class="flex items-center justify-between text-[10px] md:text-xs font-bold text-slate-400 dark:text-[#8E918F] mt-1.5 px-1">
-    <span>Tiến độ ({Math.round(progressPercent)}%)</span>
-    <span class="text-slate-600 dark:text-[#E3E3E3] font-black">Điểm: {currentScoreText}</span>
-  </div>
-  <div class="w-full bg-slate-200 dark:bg-[#282A2C] h-1 md:h-1.5 rounded-full overflow-hidden mt-0.5">
-    <div
-      class="bg-blue-600 h-full transition-all duration-300 rounded-full"
-      style={`width: ${progressPercent}%`}
-    ></div>
+  <div data-tour="progress-score-bar" class="mt-1.5 px-1">
+    <div class="flex items-center justify-between text-[10px] md:text-xs font-bold text-slate-400 dark:text-[#8E918F]">
+      <span>Tiến độ ({Math.round(progressPercent)}%)</span>
+      <span class="text-slate-600 dark:text-[#E3E3E3] font-black">Điểm: {currentScoreText}</span>
+    </div>
+    <div class="w-full bg-slate-200 dark:bg-[#282A2C] h-1 md:h-1.5 rounded-full overflow-hidden mt-0.5">
+      <div
+        class="bg-blue-600 h-full transition-all duration-300 rounded-full"
+        style={`width: ${progressPercent}%`}
+      ></div>
+    </div>
   </div>
 </div>

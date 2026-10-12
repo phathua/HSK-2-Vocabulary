@@ -10,6 +10,9 @@
   import Trophy from 'phosphor-svelte/lib/Trophy';
   import CaretRight from 'phosphor-svelte/lib/CaretRight';
   import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
+  import Compass from 'phosphor-svelte/lib/Compass';
+  import { tourState } from '#lib/state/tourState.svelte';
+  import { mainOnboardingTour } from '#lib/tours/mainOnboardingTour';
 
   const menuItems = [
     {
@@ -87,10 +90,17 @@
   function closeMobileSidebar() {
     appState.sidebarOpen = false;
   }
+
+  function startOnboardingTour() {
+    closeMobileSidebar();
+    tourState.resetTour(mainOnboardingTour);
+    tourState.startTour(mainOnboardingTour, true);
+  }
 </script>
 
 <!-- ================= DESKTOP SIDEBAR (CỐ ĐỊNH, KHÔNG BỊ COLLAPSE TRÊN MÀN HÌNH RỘNG >= lg) ================= -->
 <aside
+  data-tour="sidebar-container"
   class="hidden lg:flex w-72 shrink-0 h-full bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-xs flex-col justify-between overflow-hidden transition-colors select-none"
   aria-label="Thanh điều hướng chính trên máy tính"
 >
@@ -115,6 +125,7 @@
   <div class="px-3.5 pt-3 pb-1">
     <a
       href="/tu-vung"
+      data-tour="sidebar-search"
       class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-slate-100/80 dark:bg-[#282A2C]/60 hover:bg-slate-200/70 dark:hover:bg-[#282A2C] border border-slate-200/60 dark:border-[#37393B] text-slate-500 dark:text-[#8E918F] transition-all group shadow-2xs"
     >
       <MagnifyingGlass weight="bold" class="w-4 h-4 text-slate-400 group-hover:text-rose-500 transition-colors" />
@@ -124,7 +135,7 @@
   </div>
 
   <!-- Desktop Nav List -->
-  <div class="p-3.5 space-y-2 overflow-y-auto flex-1">
+  <div data-tour="sidebar-nav" class="p-3.5 space-y-2 overflow-y-auto flex-1">
     <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] px-2 mb-1">
       Hệ thống học tập
     </p>
@@ -166,6 +177,24 @@
         <CaretRight weight="bold" class={`w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 transition-transform shrink-0 ${isActive ? item.colorClasses.text : ''}`} />
       </a>
     {/each}
+
+    <!-- Nút Khám phá / Hướng dẫn Onboarding Tour trên Desktop -->
+    <button
+      type="button"
+      onclick={startOnboardingTour}
+      class="w-full mt-2 flex items-center justify-between p-3 rounded-2xl border border-blue-200/70 dark:border-blue-900/50 bg-blue-50/60 dark:bg-blue-950/30 hover:bg-blue-100/70 dark:hover:bg-blue-900/40 text-blue-700 dark:text-blue-300 transition-all cursor-pointer group active:scale-98 shadow-2xs"
+    >
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-blue-600 text-white shadow-xs group-hover:rotate-12 transition-transform">
+          <Compass weight="duotone" class="w-5 h-5" />
+        </div>
+        <div class="text-left min-w-0">
+          <span class="text-xs font-black block truncate">Hướng dẫn sử dụng</span>
+          <span class="text-[11px] text-blue-600/70 dark:text-blue-400/70 block truncate mt-0.5">Xem lại tour tổng quan</span>
+        </div>
+      </div>
+      <CaretRight weight="bold" class="w-3.5 h-3.5 text-blue-500 shrink-0" />
+    </button>
   </div>
 
   <!-- Desktop Footer -->
@@ -195,6 +224,7 @@
 
   <!-- Slide-out Drawer Panel (Animation trượt từ bên trái qua phải) -->
   <div
+    data-tour="sidebar-container"
     transition:fly={{ x: -320, duration: 250, easing: cubicOut }}
     class="lg:hidden fixed top-0 left-0 bottom-0 z-50 w-full max-w-xs sm:max-w-sm bg-white dark:bg-[#1B1B1B] shadow-2xl border-r border-slate-200 dark:border-[#282A2C] flex flex-col justify-between select-none"
     role="dialog"
@@ -222,6 +252,7 @@
     <div class="px-4 pt-3 pb-1">
       <a
         href="/tu-vung"
+        data-tour="sidebar-search"
         onclick={closeMobileSidebar}
         class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-slate-100/80 dark:bg-[#282A2C]/60 hover:bg-slate-200/70 dark:hover:bg-[#282A2C] border border-slate-200/60 dark:border-[#37393B] text-slate-500 dark:text-[#8E918F] transition-all"
       >
@@ -232,7 +263,7 @@
     </div>
 
     <!-- Navigation List (To rõ ràng, dễ nhìn, mỗi nút một màu riêng biệt) -->
-    <div class="p-4 space-y-2.5 overflow-y-auto flex-1">
+    <div data-tour="sidebar-nav" class="p-4 space-y-2.5 overflow-y-auto flex-1">
       <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] px-2 mb-1">
         Danh mục học tập
       </p>
@@ -276,6 +307,24 @@
           <CaretRight weight="bold" class={`w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition-transform shrink-0 ${isActive ? item.colorClasses.text : ''}`} />
         </a>
       {/each}
+
+      <!-- Nút Khám phá / Hướng dẫn Onboarding Tour trên Mobile -->
+      <button
+        type="button"
+        onclick={startOnboardingTour}
+        class="w-full mt-2 flex items-center justify-between p-3.5 rounded-2xl border border-blue-200/70 dark:border-blue-900/50 bg-blue-50/60 dark:bg-blue-950/30 hover:bg-blue-100/70 dark:hover:bg-blue-900/40 text-blue-700 dark:text-blue-300 transition-all cursor-pointer group active:scale-98 shadow-2xs"
+      >
+        <div class="flex items-center gap-3.5 min-w-0">
+          <div class="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 bg-blue-600 text-white shadow-xs group-hover:rotate-12 transition-transform">
+            <Compass weight="duotone" class="w-6 h-6" />
+          </div>
+          <div class="text-left min-w-0">
+            <span class="text-sm font-extrabold block truncate">Hướng dẫn sử dụng</span>
+            <span class="text-xs text-blue-600/70 dark:text-blue-400/70 block truncate mt-0.5">Xem lại tour tổng quan</span>
+          </div>
+        </div>
+        <CaretRight weight="bold" class="w-4 h-4 text-blue-500 shrink-0" />
+      </button>
     </div>
 
     <!-- Drawer Footer -->

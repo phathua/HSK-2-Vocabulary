@@ -323,7 +323,10 @@
     </div>
 
     <!-- Swipeable Tinder Stack Area -->
-    <div class="flex-1 min-h-0 relative flex items-center justify-center w-full [perspective:1200px] overflow-hidden">
+    <div
+      data-tour="flash-card-stack"
+      class="flex-1 min-h-0 relative flex items-center justify-center w-full [perspective:1200px] overflow-hidden"
+    >
       
       <!-- ================= UNDER CARD (THẺ ĐỨNG SAU TRỒI LÊN KHI VUỐT) ================= -->
       {#if nextCardItem}
