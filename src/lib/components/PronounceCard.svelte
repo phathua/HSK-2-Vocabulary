@@ -442,7 +442,15 @@
     <SpeakerHigh weight="bold" class="w-5 h-5 sm:w-6 sm:h-6" />
   </button>
 
-  {#if appState.currentSpeechItem}
+  {#if !appState.isInitialized}
+    <!-- Skeleton Loading Screen (Triệt tiêu hiện tượng flick completed screen khi F5) -->
+    <div class="flex-1 w-full flex flex-col justify-center items-center py-6 max-w-md mx-auto my-auto animate-pulse">
+      <div class="w-36 h-36 rounded-2xl bg-slate-200 dark:bg-[#282A2C] mb-4"></div>
+      <div class="w-32 h-6 rounded-full bg-slate-100 dark:bg-[#242628] mb-3"></div>
+      <div class="w-48 h-12 rounded-xl bg-slate-200 dark:bg-[#282A2C] mb-6"></div>
+      <div class="w-20 h-20 rounded-full bg-slate-200 dark:bg-[#282A2C]"></div>
+    </div>
+  {:else if appState.currentSpeechItem}
     <div class="flex-1 w-full flex flex-col justify-center items-center py-1 sm:py-2 max-w-md mx-auto my-auto">
       <!-- Vocabulary Illustration Image -->
       {#if appState.showQuestionImages && appState.currentSpeechItem.image}

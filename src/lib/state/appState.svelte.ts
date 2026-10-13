@@ -29,6 +29,7 @@ export class AppState {
   updateModalOpen = $state(false);
   sidebarOpen = $state(false);
   spotlightOpen = $state(false);
+  isInitialized = $state(false);
 
   // Cài đặt
   autoPlay = $state(false);
@@ -305,6 +306,7 @@ export class AppState {
     if (this.speechDeck.length === 0 || !this.currentSpeechItem) {
       this.initSpeech();
     }
+    this.isInitialized = true;
   }
 
   saveToLocalStorage() {

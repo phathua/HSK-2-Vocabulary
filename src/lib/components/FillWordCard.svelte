@@ -258,7 +258,15 @@
     {/if}
   </div>
 
-  {#if appState.currentFillItem}
+  {#if !appState.isInitialized}
+    <!-- Skeleton Loading Screen (Triệt tiêu hiện tượng flick completed screen khi F5) -->
+    <div class="w-full flex-1 flex flex-col items-center justify-center p-6 animate-pulse">
+      <div class="w-36 h-36 rounded-2xl bg-slate-200 dark:bg-[#282A2C] mb-4"></div>
+      <div class="w-48 h-10 rounded-xl bg-slate-200 dark:bg-[#282A2C] mb-3"></div>
+      <div class="w-64 h-8 rounded-lg bg-slate-100 dark:bg-[#242628] mb-6"></div>
+      <div class="w-full max-w-sm h-12 rounded-2xl bg-slate-100 dark:bg-[#242628]"></div>
+    </div>
+  {:else if appState.currentFillItem}
     <!-- Container: 2 cột trên Desktop (lg:), 1 cột trên Mobile/Tablet -->
     <div class="w-full flex-1 flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center justify-center my-auto py-1">
       

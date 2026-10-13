@@ -81,7 +81,8 @@
       }`}
     >
       <CheckSquareOffset weight="bold" class="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
-      <span>Trắc nghiệm</span>
+      <span class="hidden min-[380px]:inline">Trắc nghiệm</span>
+      <span class="min-[380px]:hidden">Quiz</span>
     </button>
 
     <!-- Tab 4: Phát âm -->

@@ -8,6 +8,9 @@
   import XCircle from 'phosphor-svelte/lib/XCircle';
   import FastForward from 'phosphor-svelte/lib/FastForward';
   import ArrowsHorizontal from 'phosphor-svelte/lib/ArrowsHorizontal';
+  import CaretLeft from 'phosphor-svelte/lib/CaretLeft';
+  import CaretRight from 'phosphor-svelte/lib/CaretRight';
+  import { speakChinese } from '#lib/utils/speech';
   import { untrack } from 'svelte';
   import type { VocabItem } from '#lib/data/hsk2Vocabulary';
   import SmartImage from './SmartImage.svelte';
@@ -277,6 +280,25 @@
     }
   }
 
+  // Bàn phím máy tính toàn cục (ArrowLeft / ArrowRight / Space / ArrowUp / ArrowDown)
+  function handleWindowKeydown(e: KeyboardEvent) {
+    if (appState.filterModalOpen || appState.settingsModalOpen || appState.spotlightOpen || tourState.isActive) return;
+    const target = e.target as HTMLElement;
+    const tag = target?.tagName?.toLowerCase();
+    if (tag === 'input' || tag === 'textarea' || target?.isContentEditable) return;
+
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      triggerSwipe('right');
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      triggerSwipe('left');
+    } else if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      toggleFlip();
+    }
+  }
+
   function triggerSwipe(direction: 'left' | 'right') {
     if (flyingCard || !appState.currentFlashItem) return;
     registerUserAction();
@@ -284,50 +306,64 @@
   }
 </script>
 
+<svelte:window onkeydown={handleWindowKeydown} />
+
 <!-- Flashcard Container Deck -->
-<div class="flex-1 min-h-0 flex flex-col relative select-none">
-  {#if appState.currentFlashItem}
-    <!-- Top Bar Controls above Deck -->
-    <div class="flex items-center justify-between mb-2 shrink-0 px-1">
-      <div class="flex items-center gap-1.5">
-        <button
-          type="button"
-          data-tour="flashcard-lesson-btn"
-          onclick={() => {
-            registerUserAction();
-            appState.filterModalOpen = true;
-          }}
-          class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-xl h-8.5 px-2.5 flex items-center justify-center gap-1.5 shadow-2xs transition-all cursor-pointer"
-          title="Bấm để chọn bài học"
-        >
-          <PencilLine weight="bold" class="w-4 h-4" />
-          <span class="text-xs font-black uppercase">Bài {appState.currentFlashItem.lesson || 1}</span>
-        </button>
-      </div>
+{#if !appState.isInitialized}
+  <!-- Skeleton Loading Screen (Triệt tiêu hiện tượng flick completed screen khi F5) -->
+  <div class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-6 flex flex-col items-center justify-center animate-pulse">
+    <div class="w-32 h-8 rounded-xl bg-slate-200 dark:bg-[#282A2C] mb-6"></div>
+    <div class="w-36 h-36 rounded-2xl bg-slate-200 dark:bg-[#282A2C] mb-4"></div>
+    <div class="w-48 h-10 rounded-xl bg-slate-200 dark:bg-[#282A2C] mb-3"></div>
+    <div class="w-32 h-6 rounded-lg bg-slate-100 dark:bg-[#242628] mb-6"></div>
+    <div class="w-full max-w-xs h-10 rounded-xl bg-slate-100 dark:bg-[#242628]"></div>
+  </div>
+{:else}
+  <div class="flex-1 min-h-0 flex flex-col lg:flex-row lg:gap-4 relative select-none z-10">
+    <!-- Left Column: Card, Controls & Quick Actions -->
+    <div class="flex-1 min-h-0 flex flex-col relative h-full">
+      {#if appState.currentFlashItem}
+        <!-- Top Bar Controls above Deck -->
+        <div class="flex items-center justify-between mb-2 shrink-0 px-1">
+          <div class="flex items-center gap-1.5">
+            <button
+              type="button"
+              data-tour="flashcard-lesson-btn"
+              onclick={() => {
+                registerUserAction();
+                appState.filterModalOpen = true;
+              }}
+              class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-xl h-8.5 px-2.5 flex items-center justify-center gap-1.5 shadow-2xs transition-all cursor-pointer"
+              title="Bấm để chọn bài học"
+            >
+              <PencilLine weight="bold" class="w-4 h-4" />
+              <span class="text-xs font-black uppercase">Bài {appState.currentFlashItem.lesson || 1}</span>
+            </button>
+          </div>
 
-      <!-- Quick Audio -->
-      <div class="flex items-center gap-1.5">
-        <button
-          type="button"
-          data-tour="flashcard-speaker-btn"
-          onclick={(e) => {
-            e.stopPropagation();
-            registerUserAction();
-            appState.speakCurrent();
-          }}
-          class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center shadow-2xs active:scale-95 transition-all cursor-pointer"
-          title="Phát âm tiếng Trung"
-        >
-          <SpeakerHigh weight="bold" class="w-4 h-4" />
-        </button>
-      </div>
-    </div>
+          <!-- Quick Audio -->
+          <div class="flex items-center gap-1.5">
+            <button
+              type="button"
+              data-tour="flashcard-speaker-btn"
+              onclick={(e) => {
+                e.stopPropagation();
+                registerUserAction();
+                appState.speakCurrent();
+              }}
+              class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center shadow-2xs active:scale-95 transition-all cursor-pointer"
+              title="Phát âm tiếng Trung"
+            >
+              <SpeakerHigh weight="bold" class="w-4 h-4" />
+            </button>
+          </div>
+        </div>
 
-    <!-- Swipeable Tinder Stack Area -->
-    <div
-      data-tour="flash-card-stack"
-      class="flex-1 min-h-0 relative flex items-center justify-center w-full [perspective:1200px] overflow-hidden"
-    >
+        <!-- Swipeable Tinder Stack Area -->
+        <div
+          data-tour="flash-card-stack"
+          class="flex-1 min-h-0 relative flex items-center justify-center w-full [perspective:1200px] overflow-visible py-1"
+        >
       
       <!-- ================= UNDER CARD (THẺ ĐỨNG SAU TRỒI LÊN KHI VUỐT) ================= -->
       {#if nextCardItem}
@@ -390,7 +426,7 @@
             transition: ${isDragging || isLeavingDeck || isAppearing ? 'none' : 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)'};
             opacity: ${isLeavingDeck ? 0 : 1};
             pointer-events: ${isLeavingDeck ? 'none' : 'auto'};
-            z-index: 20;
+            z-index: ${isDragging ? 40 : 20};
           `}
       >
         <!-- 3D Flip Container -->
@@ -470,15 +506,15 @@
           <div
             class="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] bg-white dark:bg-[#1B1B1B] rounded-3xl border-2 border-blue-200 dark:border-blue-900/60 shadow-sm p-4 md:p-6 flex flex-col items-center justify-center text-center overflow-hidden transition-colors"
           >
-            <!-- Mirrored Stamps on Back Face -->
+            <!-- Stamps on Back Face (Đồng bộ vị trí với mặt trước, không bị đảo lộn) -->
             <div
-              class="absolute top-5 right-5 border-3 border-emerald-500 text-emerald-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform rotate-12 pointer-events-none bg-emerald-50/95 dark:bg-emerald-950/90 shadow-sm transition-opacity"
+              class="absolute top-5 left-5 border-3 border-emerald-500 text-emerald-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform -rotate-12 pointer-events-none bg-emerald-50/95 dark:bg-emerald-950/90 shadow-sm transition-opacity"
               style={`opacity: ${likeOpacity};`}
             >
               THUỘC
             </div>
             <div
-              class="absolute top-5 left-5 border-3 border-rose-500 text-rose-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform -rotate-12 pointer-events-none bg-rose-50/95 dark:bg-rose-950/90 shadow-sm transition-opacity"
+              class="absolute top-5 right-5 border-3 border-rose-500 text-rose-600 rounded-xl px-3 py-1 font-black text-lg tracking-wider transform rotate-12 pointer-events-none bg-rose-50/95 dark:bg-rose-950/90 shadow-sm transition-opacity"
               style={`opacity: ${nopeOpacity};`}
             >
               QUÊN
@@ -562,6 +598,38 @@
       {/if}
     </div>
 
+    <!-- Quick Actions: < (Quên), Lật thẻ, > (Thuộc) hỗ trợ cả bấm chuột & phím tắt bàn phím -->
+    <div class="flex items-center justify-center gap-2 sm:gap-3 mt-2 shrink-0">
+      <button
+        type="button"
+        onclick={() => triggerSwipe('left')}
+        class="flex-1 max-w-[140px] py-2 px-3 rounded-2xl bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/50 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900/60 font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-2xs active:scale-95 transition-all cursor-pointer"
+        title="Chưa thuộc (Phím mũi tên trái ←)"
+      >
+        <CaretLeft weight="bold" class="w-4 h-4 shrink-0" />
+        <span>Quên</span>
+      </button>
+
+      <button
+        type="button"
+        onclick={toggleFlip}
+        class="py-2 px-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 dark:bg-[#282A2C] dark:hover:bg-[#37393B] text-slate-700 dark:text-[#E3E3E3] border border-slate-200 dark:border-[#37393B] font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-2xs active:scale-95 transition-all cursor-pointer"
+        title="Lật thẻ xem đáp án (Phím Space)"
+      >
+        <span>{isFlipped ? 'Mặt trước' : 'Lật thẻ'}</span>
+      </button>
+
+      <button
+        type="button"
+        onclick={() => triggerSwipe('right')}
+        class="flex-1 max-w-[140px] py-2 px-3 rounded-2xl bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:hover:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-900/60 font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-2xs active:scale-95 transition-all cursor-pointer"
+        title="Đã thuộc (Phím mũi tên phải →)"
+      >
+        <span>Thuộc</span>
+        <CaretRight weight="bold" class="w-4 h-4 shrink-0" />
+      </button>
+    </div>
+
     <!-- Bottom Controls: Micro Stats (Đồng nhất độ cao và màu nền với FillWordCard và MultipleChoiceQuizCard) -->
     <footer class="shrink-0 mt-2">
       <!-- Micro Stats Footer -->
@@ -605,7 +673,75 @@
       </button>
     </div>
   {/if}
+  </div>
+
+  <!-- Desktop Right Column: Danh sách từ vựng trong lượt học -->
+  <div class="hidden lg:flex lg:w-72 xl:w-80 flex-col h-full bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 overflow-hidden shrink-0">
+    <div class="flex items-center justify-between pb-3 mb-2 border-b border-slate-100 dark:border-[#282A2C] shrink-0">
+      <div class="flex items-center gap-2">
+        <h3 class="text-xs font-black uppercase tracking-wider text-slate-800 dark:text-[#E3E3E3]">Tiến độ từ vựng</h3>
+        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#8E918F]">
+          {appState.flashKnown}/{appState.totalFlashCount}
+        </span>
+      </div>
+      <span class="text-[10px] text-slate-400 dark:text-[#8E918F] font-medium">Bấm loa để nghe</span>
+    </div>
+
+    <div class="flex-1 overflow-y-auto space-y-1.5 pr-1 text-xs">
+      {#each appState.flashSessionList as item (item.id)}
+        {@const status = appState.flashItemStatus[item.id] || 'unreached'}
+        {@const isCurrent = appState.currentFlashItem?.id === item.id}
+        {@const isLearned = status === 'correct'}
+        
+        <div
+          class={`flex items-center justify-between p-2 rounded-xl transition-all border ${
+            isLearned
+              ? 'bg-emerald-50/80 dark:bg-emerald-950/30 border-emerald-200/80 dark:border-emerald-900/50 text-emerald-900 dark:text-emerald-300'
+              : isCurrent
+              ? 'bg-blue-50/80 dark:bg-blue-950/30 border-blue-300 dark:border-blue-800 text-slate-900 dark:text-[#E3E3E3] ring-1 ring-blue-400'
+              : 'bg-slate-50/60 dark:bg-[#202124] border-slate-100 dark:border-[#282A2C] text-slate-400 dark:text-[#6E7173] opacity-60'
+          }`}
+        >
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class={`w-2 h-2 rounded-full shrink-0 ${
+                isLearned
+                  ? 'bg-emerald-500'
+                  : status === 'wrong'
+                  ? 'bg-rose-400'
+                  : 'bg-slate-300 dark:bg-[#444746]'
+              }`}
+            ></div>
+            <div class="min-w-0 truncate">
+              <span class={`font-black ${isLearned ? 'text-emerald-700 dark:text-emerald-300' : isCurrent ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-[#8E918F]'}`}>
+                {item.hanzi}
+              </span>
+              <span class="text-[11px] text-slate-400 dark:text-[#8E918F] ml-1">
+                {item.pinyin}
+              </span>
+              <span class={`block text-[11px] truncate ${isLearned ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400 dark:text-[#6E7173]'}`}>
+                {item.viet}
+              </span>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onclick={(e) => {
+              e.stopPropagation();
+              speakChinese(item.hanzi, appState.volume);
+            }}
+            class="p-1 rounded-lg hover:bg-white dark:hover:bg-[#282A2C] text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors shrink-0"
+            title="Phát âm"
+          >
+            <SpeakerHigh class="w-3.5 h-3.5" />
+          </button>
+        </div>
+      {/each}
+    </div>
+  </div>
 </div>
+{/if}
 
 <style>
   :global(.tour-preview-card) {
