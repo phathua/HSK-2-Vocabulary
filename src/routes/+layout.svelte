@@ -7,6 +7,7 @@
   import UpdateModal from '#lib/components/UpdateModal.svelte';
   import SidebarMenu from '#lib/components/SidebarMenu.svelte';
   import OnboardingTour from '#lib/components/tour/OnboardingTour.svelte';
+  import SpotlightSearchModal from '#lib/components/dictionary/SpotlightSearchModal.svelte';
   import { appState } from '#lib/state/appState.svelte';
   import { tourState } from '#lib/state/tourState.svelte';
   import { mainOnboardingTour } from '#lib/tours/mainOnboardingTour';
@@ -35,7 +36,15 @@
       }
     };
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        appState.spotlightOpen = !appState.spotlightOpen;
+      }
+    };
+
     document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('keydown', handleKeyDown);
 
     // Tự động khởi chạy tour hướng dẫn cho người mới truy cập trang chính
     const tourTimer = setTimeout(() => {
@@ -47,6 +56,7 @@
     return () => {
       clearTimeout(tourTimer);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   });
 </script>
@@ -64,4 +74,5 @@
 
 <UpdateModal />
 <OnboardingTour />
+<SpotlightSearchModal />
 

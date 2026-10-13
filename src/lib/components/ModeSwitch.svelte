@@ -4,6 +4,7 @@
   import CheckSquareOffset from 'phosphor-svelte/lib/CheckSquareOffset';
   import Cards from 'phosphor-svelte/lib/Cards';
   import Microphone from 'phosphor-svelte/lib/Microphone';
+  import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
 
   import { tourState } from '#lib/state/tourState.svelte';
 
@@ -105,26 +106,39 @@
       <span>Tiến độ ({progressPercent}%)</span>
       <span class="text-slate-600 dark:text-[#E3E3E3] font-black">Điểm: {currentScoreText}</span>
     </div>
-    <div
-      class="w-full bg-slate-300/70 dark:bg-[#1C1D1F] h-1.5 md:h-2 rounded-full overflow-hidden mt-0.5 flex {segmentsCount <= 60 ? 'gap-[1px]' : 'gap-0'}"
-    >
-      {#if segmentsCount === 0}
-        <div class="h-full w-full bg-slate-200 dark:bg-[#282A2C]"></div>
-      {:else}
-        {#each appState.currentProgressSegments as seg (seg.id)}
-          <div
-            class={`h-full flex-1 transition-colors duration-200 ${
-              seg.status === 'correct'
-                ? 'bg-blue-600 dark:bg-blue-500'
-                : seg.status === 'wrong'
-                ? 'bg-rose-500 dark:bg-rose-500'
-                : seg.status === 'skipped'
-                ? 'bg-amber-400 dark:bg-amber-400'
-                : 'bg-slate-200 dark:bg-[#282A2C]'
-            }`}
-          ></div>
-        {/each}
-      {/if}
+    <div class="flex items-center gap-1.5 mt-0.5">
+      <div
+        class="flex-1 bg-slate-300/70 dark:bg-[#1C1D1F] h-1.5 md:h-2 rounded-full overflow-hidden flex {segmentsCount <= 60 ? 'gap-[1px]' : 'gap-0'}"
+      >
+        {#if segmentsCount === 0}
+          <div class="h-full w-full bg-slate-200 dark:bg-[#282A2C]"></div>
+        {:else}
+          {#each appState.currentProgressSegments as seg (seg.id)}
+            <div
+              class={`h-full flex-1 transition-colors duration-200 ${
+                seg.status === 'correct'
+                  ? 'bg-blue-600 dark:bg-blue-500'
+                  : seg.status === 'wrong'
+                  ? 'bg-rose-500 dark:bg-rose-500'
+                  : seg.status === 'skipped'
+                  ? 'bg-amber-400 dark:bg-amber-400'
+                  : 'bg-slate-200 dark:bg-[#282A2C]'
+              }`}
+            ></div>
+          {/each}
+        {/if}
+      </div>
+
+      <!-- Nút Rotate bên phải ngoài cùng của thanh tiến độ -->
+      <button
+        type="button"
+        onclick={() => appState.resetCurrentGameProgress()}
+        class="w-5 h-5 rounded-md flex items-center justify-center text-slate-400 hover:text-slate-700 dark:text-[#8E918F] dark:hover:text-[#E3E3E3] hover:bg-slate-200/70 dark:hover:bg-[#282A2C] transition-colors cursor-pointer shrink-0 active:scale-90"
+        title="Làm lại tiến độ bài học này"
+        aria-label="Làm lại tiến độ"
+      >
+        <ArrowClockwise weight="bold" class="w-3.5 h-3.5" />
+      </button>
     </div>
   </div>
 </div>

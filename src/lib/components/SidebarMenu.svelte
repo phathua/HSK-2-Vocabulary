@@ -10,7 +10,7 @@
   import Trophy from 'phosphor-svelte/lib/Trophy';
   import CaretRight from 'phosphor-svelte/lib/CaretRight';
   import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
-  import Compass from 'phosphor-svelte/lib/Compass';
+  import Question from 'phosphor-svelte/lib/Question';
   import { tourState } from '#lib/state/tourState.svelte';
   import { mainOnboardingTour } from '#lib/tours/mainOnboardingTour';
 
@@ -105,20 +105,33 @@
   aria-label="Thanh điều hướng chính trên máy tính"
 >
   <!-- Desktop Header -->
-  <div class="p-4.5 border-b border-slate-100 dark:border-[#282A2C] flex items-center gap-3">
-    <img
-      src="/icons/icon-192.png"
-      alt="Mascot HSK 2"
-      class="w-11 h-11 rounded-2xl object-cover shadow-xs border border-blue-100 dark:border-blue-900/40"
-    />
-    <div>
-      <h2 class="text-sm font-black text-slate-900 dark:text-[#E3E3E3] leading-tight">
-        Ôn Tập HSK
-      </h2>
-      <p class="text-[11px] font-semibold text-slate-400 dark:text-[#8E918F] mt-0.5">
-        Cấp độ: {appState.currentLevel} • Đầy đủ 15 bài
-      </p>
+  <div class="p-4.5 border-b border-slate-100 dark:border-[#282A2C] flex items-center justify-between gap-2">
+    <div class="flex items-center gap-3 min-w-0">
+      <img
+        src="/icons/icon-192.png"
+        alt="Mascot HSK 2"
+        class="w-11 h-11 rounded-2xl object-cover shadow-xs border border-blue-100 dark:border-blue-900/40 shrink-0"
+      />
+      <div class="min-w-0">
+        <h2 class="text-sm font-black text-slate-900 dark:text-[#E3E3E3] leading-tight truncate">
+          Ôn Tập HSK
+        </h2>
+        <p class="text-[11px] font-semibold text-slate-400 dark:text-[#8E918F] mt-0.5 truncate">
+          Cấp độ: {appState.currentLevel} • Đầy đủ 15 bài
+        </p>
+      </div>
     </div>
+
+    <!-- Icon nhỏ không label ở cạnh phải header sidebar: Hướng dẫn sử dụng -->
+    <button
+      type="button"
+      onclick={startOnboardingTour}
+      class="w-8 h-8 rounded-xl border border-slate-200 dark:border-[#37393B] bg-slate-50 dark:bg-[#282A2C] hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:border-blue-200 dark:hover:border-blue-800 text-slate-500 hover:text-blue-600 dark:text-[#8E918F] dark:hover:text-blue-400 flex items-center justify-center transition-colors cursor-pointer shrink-0 active:scale-95"
+      title="Hướng dẫn sử dụng"
+      aria-label="Hướng dẫn sử dụng"
+    >
+      <Question weight="bold" class="w-4 h-4" />
+    </button>
   </div>
 
   <!-- Quick Search Bar Widget -->
@@ -177,37 +190,28 @@
         <CaretRight weight="bold" class={`w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 transition-transform shrink-0 ${isActive ? item.colorClasses.text : ''}`} />
       </a>
     {/each}
-
-    <!-- Nút Khám phá / Hướng dẫn Onboarding Tour trên Desktop -->
-    <button
-      type="button"
-      onclick={startOnboardingTour}
-      class="w-full mt-2 flex items-center justify-between p-3 rounded-2xl border border-blue-200/70 dark:border-blue-900/50 bg-blue-50/60 dark:bg-blue-950/30 hover:bg-blue-100/70 dark:hover:bg-blue-900/40 text-blue-700 dark:text-blue-300 transition-all cursor-pointer group active:scale-98 shadow-2xs"
-    >
-      <div class="flex items-center gap-3 min-w-0">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-blue-600 text-white shadow-xs group-hover:rotate-12 transition-transform">
-          <Compass weight="duotone" class="w-5 h-5" />
-        </div>
-        <div class="text-left min-w-0">
-          <span class="text-xs font-black block truncate">Hướng dẫn sử dụng</span>
-          <span class="text-[11px] text-blue-600/70 dark:text-blue-400/70 block truncate mt-0.5">Xem lại tour tổng quan</span>
-        </div>
-      </div>
-      <CaretRight weight="bold" class="w-3.5 h-3.5 text-blue-500 shrink-0" />
-    </button>
   </div>
 
-  <!-- Desktop Footer -->
+  <!-- Desktop Footer: Cho phép bấm vào để mở LessonFilterModal -->
   <div class="p-3.5 border-t border-slate-100 dark:border-[#282A2C] bg-slate-50/50 dark:bg-[#131314]/50">
-    <div class="bg-white dark:bg-[#282A2C] p-3 rounded-2xl border border-slate-200/80 dark:border-[#37393B] flex items-center justify-between">
+    <button
+      type="button"
+      onclick={() => (appState.filterModalOpen = true)}
+      class="w-full bg-white dark:bg-[#282A2C] hover:bg-slate-50 dark:hover:bg-[#37393B] hover:border-blue-300 dark:hover:border-blue-800/60 p-3 rounded-2xl border border-slate-200/80 dark:border-[#37393B] flex items-center justify-between cursor-pointer transition-all active:scale-98 text-left shadow-2xs group"
+      title="Bấm để chọn bài học hoặc đổi cấp độ HSK"
+    >
       <div class="text-xs">
-        <span class="font-extrabold text-slate-800 dark:text-[#E3E3E3] block">Từ vựng đã chọn</span>
-        <span class="text-slate-400 dark:text-[#8E918F] font-semibold">{appState.filteredVocab.length} / {appState.allVocab.length} từ</span>
+        <span class="font-extrabold text-slate-800 dark:text-[#E3E3E3] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors block">
+          Từ vựng đã chọn
+        </span>
+        <span class="text-slate-400 dark:text-[#8E918F] font-semibold">
+          {appState.filteredVocab.length} / {appState.allVocab.length} từ
+        </span>
       </div>
       <span class="text-xs font-black px-2 py-1 rounded-xl bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
         {appState.currentLevelDisplay}
       </span>
-    </div>
+    </button>
   </div>
 </aside>
 
@@ -231,21 +235,34 @@
     aria-modal="true"
     aria-label="Menu điều hướng chính"
   >
-    <!-- Drawer Header (Không có nút X, bấm ra ngoài để đóng) -->
-    <div class="p-5 border-b border-slate-100 dark:border-[#282A2C] flex items-center gap-3">
-      <img
-        src="/icons/icon-192.png"
-        alt="Mascot HSK 2"
-        class="w-12 h-12 rounded-2xl object-cover shadow-xs border border-blue-100 dark:border-blue-900/50 shrink-0"
-      />
-      <div class="min-w-0">
-        <h2 class="text-base font-black text-slate-900 dark:text-[#E3E3E3] leading-tight">
-          Ôn Tập HSK
-        </h2>
-        <p class="text-xs font-semibold text-slate-400 dark:text-[#8E918F] mt-0.5">
-          Cấp độ: {appState.currentLevel} • Chuỗi học tập
-        </p>
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-slate-100 dark:border-[#282A2C] flex items-center justify-between gap-2">
+      <div class="flex items-center gap-3 min-w-0">
+        <img
+          src="/icons/icon-192.png"
+          alt="Mascot HSK 2"
+          class="w-12 h-12 rounded-2xl object-cover shadow-xs border border-blue-100 dark:border-blue-900/50 shrink-0"
+        />
+        <div class="min-w-0">
+          <h2 class="text-base font-black text-slate-900 dark:text-[#E3E3E3] leading-tight truncate">
+            Ôn Tập HSK
+          </h2>
+          <p class="text-xs font-semibold text-slate-400 dark:text-[#8E918F] mt-0.5 truncate">
+            Cấp độ: {appState.currentLevel} • Chuỗi học tập
+          </p>
+        </div>
       </div>
+
+      <!-- Icon nhỏ không label ở cạnh phải header sidebar: Hướng dẫn sử dụng -->
+      <button
+        type="button"
+        onclick={startOnboardingTour}
+        class="w-8 h-8 rounded-xl border border-slate-200 dark:border-[#37393B] bg-slate-50 dark:bg-[#282A2C] hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:border-blue-200 dark:hover:border-blue-800 text-slate-500 hover:text-blue-600 dark:text-[#8E918F] dark:hover:text-blue-400 flex items-center justify-center transition-colors cursor-pointer shrink-0 active:scale-95"
+        title="Hướng dẫn sử dụng"
+        aria-label="Hướng dẫn sử dụng"
+      >
+        <Question weight="bold" class="w-4 h-4" />
+      </button>
     </div>
 
     <!-- Mobile Quick Search -->
@@ -262,7 +279,7 @@
       </a>
     </div>
 
-    <!-- Navigation List (To rõ ràng, dễ nhìn, mỗi nút một màu riêng biệt) -->
+    <!-- Navigation List -->
     <div data-tour="sidebar-nav" class="p-4 space-y-2.5 overflow-y-auto flex-1">
       <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] px-2 mb-1">
         Danh mục học tập
@@ -280,7 +297,6 @@
           }`}
         >
           <div class="flex items-center gap-3.5 min-w-0">
-            <!-- Icon To Nổi Bật với màu riêng biệt -->
             <div
               class={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 border ${item.colorClasses.bg} ${item.colorClasses.text} ${item.colorClasses.border} shadow-2xs group-hover:scale-105 transition-transform`}
             >
@@ -307,37 +323,31 @@
           <CaretRight weight="bold" class={`w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition-transform shrink-0 ${isActive ? item.colorClasses.text : ''}`} />
         </a>
       {/each}
-
-      <!-- Nút Khám phá / Hướng dẫn Onboarding Tour trên Mobile -->
-      <button
-        type="button"
-        onclick={startOnboardingTour}
-        class="w-full mt-2 flex items-center justify-between p-3.5 rounded-2xl border border-blue-200/70 dark:border-blue-900/50 bg-blue-50/60 dark:bg-blue-950/30 hover:bg-blue-100/70 dark:hover:bg-blue-900/40 text-blue-700 dark:text-blue-300 transition-all cursor-pointer group active:scale-98 shadow-2xs"
-      >
-        <div class="flex items-center gap-3.5 min-w-0">
-          <div class="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 bg-blue-600 text-white shadow-xs group-hover:rotate-12 transition-transform">
-            <Compass weight="duotone" class="w-6 h-6" />
-          </div>
-          <div class="text-left min-w-0">
-            <span class="text-sm font-extrabold block truncate">Hướng dẫn sử dụng</span>
-            <span class="text-xs text-blue-600/70 dark:text-blue-400/70 block truncate mt-0.5">Xem lại tour tổng quan</span>
-          </div>
-        </div>
-        <CaretRight weight="bold" class="w-4 h-4 text-blue-500 shrink-0" />
-      </button>
     </div>
 
-    <!-- Drawer Footer -->
+    <!-- Drawer Footer: Cho phép bấm vào để mở LessonFilterModal -->
     <div class="p-4 border-t border-slate-100 dark:border-[#282A2C] bg-slate-50/50 dark:bg-[#131314]/50">
-      <div class="bg-white dark:bg-[#282A2C] p-3 rounded-2xl border border-slate-200/80 dark:border-[#37393B] flex items-center justify-between">
+      <button
+        type="button"
+        onclick={() => {
+          closeMobileSidebar();
+          appState.filterModalOpen = true;
+        }}
+        class="w-full bg-white dark:bg-[#282A2C] hover:bg-slate-50 dark:hover:bg-[#37393B] hover:border-blue-300 dark:hover:border-blue-800/60 p-3 rounded-2xl border border-slate-200/80 dark:border-[#37393B] flex items-center justify-between cursor-pointer transition-all active:scale-98 text-left shadow-2xs group"
+        title="Bấm để chọn bài học hoặc đổi cấp độ HSK"
+      >
         <div class="text-xs">
-          <span class="font-extrabold text-slate-800 dark:text-[#E3E3E3] block">Từ vựng đã chọn</span>
-          <span class="text-slate-400 dark:text-[#8E918F] font-semibold">{appState.filteredVocab.length} / {appState.allVocab.length} từ</span>
+          <span class="font-extrabold text-slate-800 dark:text-[#E3E3E3] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors block">
+            Từ vựng đã chọn
+          </span>
+          <span class="text-slate-400 dark:text-[#8E918F] font-semibold">
+            {appState.filteredVocab.length} / {appState.allVocab.length} từ
+          </span>
         </div>
         <span class="text-xs font-black px-2 py-1 rounded-xl bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
           {appState.currentLevel}
         </span>
-      </div>
+      </button>
     </div>
   </div>
 {/if}

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
+  import { goto } from '$app/navigation';
   import { appState } from '#lib/state/appState.svelte';
   import { examRoomState } from '#lib/state/examRoomState.svelte';
   import SlidersHorizontal from 'phosphor-svelte/lib/SlidersHorizontal';
@@ -8,10 +9,83 @@
   import HourglassMedium from 'phosphor-svelte/lib/HourglassMedium';
   import List from 'phosphor-svelte/lib/List';
   import GraduationCap from 'phosphor-svelte/lib/GraduationCap';
+  import BookOpenText from 'phosphor-svelte/lib/BookOpenText';
+  import Exam from 'phosphor-svelte/lib/Exam';
+  import Target from 'phosphor-svelte/lib/Target';
+  import Trophy from 'phosphor-svelte/lib/Trophy';
+  import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
 
   const isHomePage = $derived(page.url.pathname === '/');
   const isGrammarPage = $derived(page.url.pathname.startsWith('/ngu-phap'));
   const isExamRoom = $derived(examRoomState.isActive);
+
+  // Cấu hình Icon và Tiêu đề động theo trang đang mở trong SidebarMenu
+  const activePageInfo = $derived.by(() => {
+    const path = page.url.pathname;
+    if (path.startsWith('/ngu-phap')) {
+      return {
+        title: 'Ngữ pháp',
+        icon: GraduationCap,
+        bg: 'bg-purple-500/10 dark:bg-purple-500/20',
+        text: 'text-purple-600 dark:text-purple-400',
+        border: 'border-purple-200 dark:border-purple-800/60'
+      };
+    }
+    if (path.startsWith('/thi-thu')) {
+      return {
+        title: 'Thi thử',
+        icon: Exam,
+        bg: 'bg-orange-500/10 dark:bg-orange-500/20',
+        text: 'text-orange-600 dark:text-orange-400',
+        border: 'border-orange-200 dark:border-orange-800/60'
+      };
+    }
+    if (path.startsWith('/nhiem-vu')) {
+      return {
+        title: 'Nhiệm vụ',
+        icon: Target,
+        bg: 'bg-emerald-500/10 dark:bg-emerald-500/20',
+        text: 'text-emerald-600 dark:text-emerald-400',
+        border: 'border-emerald-200 dark:border-emerald-800/60'
+      };
+    }
+    if (path.startsWith('/bang-xep-hang')) {
+      return {
+        title: 'Bảng xếp hạng',
+        icon: Trophy,
+        bg: 'bg-amber-500/10 dark:bg-amber-500/20',
+        text: 'text-amber-600 dark:text-amber-400',
+        border: 'border-amber-200 dark:border-amber-800/60'
+      };
+    }
+    if (path.startsWith('/tu-vung')) {
+      return {
+        title: 'Tra từ điển',
+        icon: MagnifyingGlass,
+        bg: 'bg-rose-500/10 dark:bg-rose-500/20',
+        text: 'text-rose-600 dark:text-rose-400',
+        border: 'border-rose-200 dark:border-rose-800/60'
+      };
+    }
+    // Mặc định hoặc Trang chủ: Từ vựng (Phương án 2)
+    return {
+      title: 'Từ vựng',
+      icon: BookOpenText,
+      bg: 'bg-blue-500/10 dark:bg-blue-500/20',
+      text: 'text-blue-600 dark:text-blue-400',
+      border: 'border-blue-200 dark:border-blue-800/60'
+    };
+  });
+
+  const PageIcon = $derived(activePageInfo.icon);
+
+  function handleBrandClick() {
+    if (isHomePage) {
+      appState.filterModalOpen = true;
+    } else {
+      goto('/');
+    }
+  }
 
   let grammarLearnedCount = $state(0);
   const totalGrammarCount = 18;
@@ -40,9 +114,9 @@
 </script>
 
 <header class="flex items-center justify-between shrink-0 bg-white dark:bg-[#1B1B1B] px-3 py-2 rounded-2xl shadow-xs border border-slate-200 dark:border-[#282A2C] transition-colors">
-  <!-- Left: Sidebar Hamburger Button & Mascot Brand -->
+  <!-- Left: Sidebar Hamburger Button & Dynamic Brand -->
   <div class="flex items-center gap-2">
-    <!-- Nút 3 gạch ngoài cùng bên trái (chỉ hiện trên Mobile/Tablet, ẩn trên Desktop lg vì có sidebar cố định) -->
+    <!-- Nút 3 gạch ngoài cùng bên trái (Mobile/Tablet) -->
     <button
       type="button"
       data-tour="header-menu"
@@ -54,26 +128,29 @@
       <List weight="bold" class="w-5 h-5 text-slate-700 dark:text-[#E3E3E3]" />
     </button>
 
-    <!-- Click to choose Level/Lesson -->
+    <!-- Brand Button: Đổi icon & tiêu đề theo trang, click ở trang con thì quay về trang chủ -->
     <button
       type="button"
       data-tour="header-brand"
-      onclick={() => (appState.filterModalOpen = true)}
+      onclick={handleBrandClick}
       class="flex items-center gap-2.5 text-left cursor-pointer active:scale-98 transition-transform group"
-      title="Bấm để chọn bài học hoặc đổi cấp độ HSK"
+      title={isHomePage ? 'Bấm để chọn bài học hoặc đổi cấp độ HSK' : 'Bấm để quay về Trang chủ'}
     >
-      <div class="shrink-0">
-        <img
-          src="/icons/icon-192.png"
-          alt="Ôn Tập HSK 2 Mascot"
-          class="w-10 h-10 rounded-xl object-cover shadow-xs border border-blue-100 dark:border-blue-900/50"
-        />
+      <div
+        class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border {activePageInfo.bg} {activePageInfo.text} {activePageInfo.border} shadow-2xs group-hover:scale-105 transition-transform"
+      >
+        <PageIcon weight="duotone" class="w-5 h-5" />
       </div>
 
-      <div class="leading-tight min-w-0">
+      <div class="flex items-center gap-1.5 leading-tight min-w-0">
         <span class="font-black text-sm text-slate-900 dark:text-[#E3E3E3] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors whitespace-nowrap">
-          {isExamRoom ? 'HSK 2' : appState.currentLevelDisplay}
+          {activePageInfo.title}
         </span>
+        {#if isHomePage}
+          <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
+            {isExamRoom ? 'HSK 2' : appState.currentLevelDisplay}
+          </span>
+        {/if}
       </div>
     </button>
 
@@ -86,14 +163,12 @@
     {/if}
   </div>
 
-  <!-- Right: Clean Actions -->
+  <!-- Right: Actions -->
   <div class="flex items-center gap-1.5 shrink-0">
-    <!-- Trong phòng thi: Bộ đếm thời gian CHỈ HIỆN KHI CUỘN XUỐNG (isScrolled) -->
+    <!-- Trong phòng thi: Bộ đếm thời gian CHỈ HIỆN KHI CUỘN XUỐNG -->
     {#if isExamRoom && examRoomState.isScrolled}
       <div class="flex items-center gap-1.5 shrink-0 animate-fade-in">
-        <!-- Bộ đếm thời gian: Hiển thị ở cả 2 chế độ thi -->
         {#if examRoomState.isPreviewPhase}
-          <!-- Đếm ngược 60s xem trước đề (chưa trừ vào 55 phút) -->
           <button
             type="button"
             onclick={() => examRoomState.startAudio()}
@@ -104,7 +179,6 @@
             <span>{examRoomState.previewSeconds}s</span>
           </button>
         {:else}
-          <!-- Đồng hồ thời gian làm bài 55 phút -->
           <div
             class="h-9 px-2.5 rounded-xl border {examRoomState.timeRemainingSeconds < 300 ? 'border-red-300 dark:border-red-900/60 bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 animate-pulse' : 'border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] text-slate-700 dark:text-[#E3E3E3]'} flex items-center gap-1.5 font-mono font-black text-xs shadow-2xs"
             title="Thời gian làm bài thi"
@@ -115,7 +189,7 @@
         {/if}
       </div>
     {:else if isHomePage}
-      <!-- Chỉ hiện nút đổi chiều ngôn ngữ ở Trang Chủ -->
+      <!-- Nút đổi chiều ngôn ngữ ở Trang Chủ -->
       <button
         type="button"
         data-tour="header-direction"
@@ -140,7 +214,18 @@
       </button>
     {/if}
 
-    <!-- Settings Button (luôn giữ lại) -->
+    <!-- Nút Tìm kiếm Spotlight: Đứng bên phải nút chuyển zh-to-vi và trước nút cài đặt -->
+    <button
+      type="button"
+      onclick={() => (appState.spotlightOpen = true)}
+      class="w-9 h-9 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center justify-center text-slate-600 dark:text-[#C4C7C5] transition-colors cursor-pointer active:scale-95"
+      title="Tìm kiếm từ điển HSK Spotlight (Ctrl+K)"
+      aria-label="Tìm kiếm từ điển"
+    >
+      <MagnifyingGlass weight="bold" class="w-4 h-4" />
+    </button>
+
+    <!-- Settings Button (Cài đặt) -->
     <button
       type="button"
       data-tour="header-settings"

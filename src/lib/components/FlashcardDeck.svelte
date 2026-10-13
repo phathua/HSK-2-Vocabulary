@@ -303,19 +303,6 @@
           <PencilLine weight="bold" class="w-4 h-4" />
           <span class="text-xs font-black uppercase">Bài {appState.currentFlashItem.lesson || 1}</span>
         </button>
-
-        <button
-          type="button"
-          onclick={() => {
-            cardCount = 0;
-            appState.initFlash();
-          }}
-          class="w-9 h-9 bg-white dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] text-slate-700 dark:text-[#E3E3E3] border border-slate-200 dark:border-[#37393B] rounded-xl flex items-center justify-center transition-colors cursor-pointer shadow-2xs"
-          title="Học lại từ đầu bộ thẻ"
-          aria-label="Học lại từ đầu"
-        >
-          <ArrowClockwise weight="bold" class="w-4 h-4 text-pink-600 dark:text-pink-400" />
-        </button>
       </div>
 
       <!-- Quick Audio -->

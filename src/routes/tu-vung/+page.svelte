@@ -7,6 +7,7 @@
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import HanziStrokeWriter from '#lib/components/dictionary/HanziStrokeWriter.svelte';
+  import DictionarySearchBar from '#lib/components/dictionary/DictionarySearchBar.svelte';
 
   // Phosphor Icons
   import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
@@ -344,113 +345,10 @@
           !isSearchVisible && isSticky ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
         }`}
       >
-        <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-3.5 md:p-5 border border-slate-200 dark:border-[#37393B] shadow-xs">
-          <div class="relative flex items-center">
-            <div class="absolute left-4.5 text-slate-400 dark:text-[#8E918F] pointer-events-none">
-              <MagnifyingGlass weight="bold" class="w-5 h-5 md:w-6 md:h-6 text-rose-500" />
-            </div>
-
-            <input
-              type="text"
-              bind:value={searchQuery}
-              onfocus={() => (isSearchFocused = true)}
-              onblur={() => setTimeout(() => (isSearchFocused = false), 200)}
-              placeholder="Tra từ bằng Chữ Hán, Pinyin, Hán Việt hoặc Tiếng Việt (VD: 苹果, duibuqi, quả táo)..."
-              class="w-full pl-13 pr-28 py-3 md:py-3.5 rounded-2xl bg-slate-50 dark:bg-[#282A2C] border border-slate-200 dark:border-[#37393B] text-slate-800 dark:text-[#E3E3E3] font-medium placeholder-slate-400 dark:placeholder-[#8E918F] focus:outline-hidden focus:ring-2 focus:ring-rose-500/30 focus:border-rose-500 transition-all text-xs md:text-sm shadow-inner"
-            />
-
-            <!-- Bảng đề xuất gợi ý kết quả tìm kiếm ngay dưới thanh search khi người dùng gõ -->
-            {#if isSearchFocused && searchQuery.trim() && searchSuggestions.length > 0}
-              <div
-                class="absolute left-0 right-0 top-full mt-2 bg-white dark:bg-[#1E1F20] rounded-2xl border border-slate-200 dark:border-[#37393B] shadow-xl overflow-hidden z-50 divide-y divide-slate-100 dark:divide-[#282A2C] max-h-72 overflow-y-auto"
-              >
-                {#each searchSuggestions as sug}
-                  <button
-                    type="button"
-                    onmousedown={() => selectWord(sug)}
-                    class="w-full px-4 py-2.5 flex items-center justify-between text-left hover:bg-rose-50/70 dark:hover:bg-[#282A2C] transition-colors cursor-pointer group"
-                  >
-                    <div class="flex items-center gap-3 min-w-0">
-                      <span class="text-base font-black text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
-                        {sug.hanzi}
-                      </span>
-                      <span class="text-xs font-bold text-rose-600 dark:text-rose-400">
-                        {sug.pinyin}
-                      </span>
-                      <span class="text-xs text-slate-500 dark:text-[#8E918F] truncate max-w-[200px] sm:max-w-xs">
-                        {sug.vi_meaning_short || sug.viet}
-                      </span>
-                    </div>
-
-                    <div class="flex items-center gap-2 shrink-0">
-                      {#if sug.hanViet}
-                        <span class="text-[10px] font-semibold text-slate-400 dark:text-neutral-500 hidden sm:inline">
-                          [{sug.hanViet}]
-                        </span>
-                      {/if}
-                      <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5]">
-                        HSK {sug.hskLevel}
-                      </span>
-                    </div>
-                  </button>
-                {/each}
-              </div>
-            {/if}
-
-            <div class="absolute right-3 flex items-center gap-1.5">
-              {#if searchQuery}
-                <button
-                  onclick={clearSearch}
-                  aria-label="Xóa từ khóa"
-                  class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-[#37393B] transition-colors"
-                >
-                  <X weight="bold" class="w-4 h-4" />
-                </button>
-              {/if}
-
-              <button
-                onclick={toggleVoiceInput}
-                aria-label="Nhập bằng giọng nói"
-                class={`p-2 rounded-xl border transition-all ${
-                  isListening
-                    ? 'bg-rose-500 text-white animate-pulse border-rose-600'
-                    : 'bg-white dark:bg-[#1E1F20] hover:bg-slate-100 dark:hover:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5] border-slate-200 dark:border-[#37393B]'
-                }`}
-                title="Nói tiếng Trung để tra từ"
-              >
-                <Microphone weight={isListening ? 'fill' : 'bold'} class="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-
-          <!-- Thanh chip gợi ý nhanh các từ HSK phổ biến (Ngẫu nhiên Tiếng Việt, Pinyin & Chữ Hán) -->
-          <div class="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar pt-1 text-xs">
-            <div class="flex items-center gap-1 shrink-0">
-              <span class="text-slate-400 dark:text-[#8E918F] font-semibold text-[11px]">Gợi ý:</span>
-              <button
-                type="button"
-                onclick={refreshSuggestions}
-                class="p-0.5 text-slate-400 hover:text-rose-500 rounded transition-colors"
-                title="Đổi gợi ý ngẫu nhiên"
-                aria-label="Đổi gợi ý ngẫu nhiên"
-              >
-                <ArrowClockwise weight="bold" class="w-3 h-3" />
-              </button>
-            </div>
-            {#each randomSuggestions as sug}
-              <button
-                type="button"
-                onclick={() => {
-                  searchQuery = sug.query;
-                  goto(`/tu-vung?q=${encodeURIComponent(sug.query)}`);
-                }}
-                class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-[#282A2C] hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-600 dark:text-[#C4C7C5] hover:text-rose-600 dark:hover:text-rose-300 font-medium transition-colors shrink-0 text-[11px]"
-              >
-                {sug.label}
-              </button>
-            {/each}
-          </div>
-        </div>
+        <DictionarySearchBar
+          bind:searchQuery
+          onSelectWord={selectWord}
+        />
       </div>
 
       <!-- 2. NAVIGATION TABS (KÈM ICON VÀ TÍNH NĂNG CHUYỂN ĐỔI CHUẨN XÁC) -->

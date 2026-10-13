@@ -28,6 +28,7 @@ export class AppState {
   settingsModalOpen = $state(false);
   updateModalOpen = $state(false);
   sidebarOpen = $state(false);
+  spotlightOpen = $state(false);
 
   // Cài đặt
   autoPlay = $state(false);
@@ -967,6 +968,22 @@ export class AppState {
     this.initFlash();
     this.initSpeech(this.filteredVocab);
     this.saveToLocalStorage();
+  }
+
+  resetCurrentGameProgress() {
+    if (this.activeTab === 'fill') {
+      this.initFill(this.filteredVocab, false);
+      toast.success('Đã làm lại tiến độ Điền từ');
+    } else if (this.activeTab === 'quiz') {
+      this.initQuiz(this.filteredVocab);
+      toast.success('Đã làm lại tiến độ Trắc nghiệm');
+    } else if (this.activeTab === 'flash') {
+      this.initFlash();
+      toast.success('Đã làm lại bộ Thẻ từ');
+    } else if (this.activeTab === 'speech') {
+      this.initSpeech(this.filteredVocab);
+      toast.success('Đã làm lại tiến độ Phát âm');
+    }
   }
 
   resetAllSettings() {
