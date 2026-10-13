@@ -20,6 +20,7 @@
   import ChatCircleDots from 'phosphor-svelte/lib/ChatCircleDots';
   import ImageSquare from 'phosphor-svelte/lib/ImageSquare';
   import ArrowUp from 'phosphor-svelte/lib/ArrowUp';
+  import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
   import ListBullets from 'phosphor-svelte/lib/ListBullets';
   import BookOpen from 'phosphor-svelte/lib/BookOpen';
   import PencilLine from 'phosphor-svelte/lib/PencilLine';
@@ -79,15 +80,60 @@
     }
   }
 
-  // Khởi tạo query từ URL param hoặc mặc định là từ đầu tiên
+  // Khởi tạo query từ URL param hoặc mặc định là từ đầu tiên (chỉ chạy 1 lần khi vào trang)
+  let isInitialMount = true;
+
   $effect(() => {
     const q = page.url.searchParams.get('q');
-    if (q) {
+    if (q !== null) {
       searchQuery = q;
-    } else if (!searchQuery) {
+    } else if (isInitialMount) {
+      isInitialMount = false;
       searchQuery = '你';
     }
   });
+
+  // Tạo danh sách gợi ý ngẫu nhiên kết hợp Tiếng Việt, Pinyin và Chữ Hán trực tiếp từ DICTIONARY_WORDS
+  function generateRandomSuggestions(count = 9) {
+    if (!DICTIONARY_WORDS || DICTIONARY_WORDS.length === 0) return [];
+
+    // Lọc các từ có nghĩa ngắn gọn súc tích (<= 16 ký tự, không chứa chú thích ngữ pháp dài)
+    const validWords = DICTIONARY_WORDS.filter(
+      (w) => w.vi_meaning_short && w.vi_meaning_short.length <= 16 && !w.vi_meaning_short.includes('(')
+    );
+    const pool = validWords.length >= count ? validWords : DICTIONARY_WORDS;
+
+    // Lấy ngẫu nhiên count từ vựng từ kho từ điển
+    const shuffled = [...pool].sort(() => Math.random() - 0.5).slice(0, count);
+
+    // Phân bổ ngẫu nhiên và cân bằng các loại gợi ý: Tiếng Việt, Pinyin, Chữ Hán
+    const types: Array<'zh' | 'py' | 'vi'> = [];
+    const third = Math.floor(count / 3);
+    for (let i = 0; i < third; i++) types.push('vi');
+    for (let i = 0; i < third; i++) types.push('py');
+    while (types.length < count) types.push('zh');
+    types.sort(() => Math.random() - 0.5);
+
+    return shuffled.map((word, index) => {
+      const type = types[index];
+      if (type === 'vi') {
+        const rawVi = word.vi_meaning_short || word.viet;
+        const text = rawVi.split(/[,;/]/)[0].trim();
+        return { label: text, query: text, type };
+      } else if (type === 'py') {
+        return { label: word.pinyin, query: word.pinyin, type };
+      } else {
+        return { label: word.hanzi, query: word.hanzi, type };
+      }
+    });
+  }
+
+  let randomSuggestions = $state(generateRandomSuggestions());
+
+  function refreshSuggestions() {
+    randomSuggestions = generateRandomSuggestions();
+  }
+
 
   // Bảng chuẩn hóa không dấu tiếng Việt & Pinyin
   function removeVietnameseTones(str: string): string {
@@ -163,12 +209,16 @@
   let currentWord = $derived.by(() => {
     if (searchResults.length === 0) return null;
     const rawQ = searchQuery.trim().toLowerCase();
+    if (!rawQ) return DICTIONARY_WORDS[0];
+
     const exact = searchResults.find(
       (w) =>
         w.hanzi.toLowerCase() === rawQ ||
         w.pinyinClean.toLowerCase() === rawQ ||
         stripPinyinTones(w.pinyinClean) === stripPinyinTones(rawQ) ||
-        stripPinyinTones(w.pinyin) === stripPinyinTones(rawQ)
+        stripPinyinTones(w.pinyin) === stripPinyinTones(rawQ) ||
+        (w.vi_meaning_short && w.vi_meaning_short.toLowerCase() === rawQ) ||
+        w.viet.toLowerCase() === rawQ
     );
     return exact || searchResults[0];
   });
@@ -180,7 +230,7 @@
 
   function clearSearch() {
     searchQuery = '';
-    goto('/tu-vung');
+    goto('/tu-vung', { replaceState: true });
   }
 
   // Phát âm Web Speech API
@@ -373,18 +423,30 @@
             </div>
           </div>
 
-          <!-- Thanh chip gợi ý nhanh các từ HSK phổ biến -->
+          <!-- Thanh chip gợi ý nhanh các từ HSK phổ biến (Ngẫu nhiên Tiếng Việt, Pinyin & Chữ Hán) -->
           <div class="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar pt-1 text-xs">
-            <span class="text-slate-400 dark:text-[#8E918F] font-semibold shrink-0 text-[11px]">Gợi ý:</span>
-            {#each ['对不起', '苹果', '北京', '谢谢', '高兴', '喜欢', '茶', '学习', '朋友'] as sug}
+            <div class="flex items-center gap-1 shrink-0">
+              <span class="text-slate-400 dark:text-[#8E918F] font-semibold text-[11px]">Gợi ý:</span>
               <button
+                type="button"
+                onclick={refreshSuggestions}
+                class="p-0.5 text-slate-400 hover:text-rose-500 rounded transition-colors"
+                title="Đổi gợi ý ngẫu nhiên"
+                aria-label="Đổi gợi ý ngẫu nhiên"
+              >
+                <ArrowClockwise weight="bold" class="w-3 h-3" />
+              </button>
+            </div>
+            {#each randomSuggestions as sug}
+              <button
+                type="button"
                 onclick={() => {
-                  searchQuery = sug;
-                  goto(`/tu-vung?q=${encodeURIComponent(sug)}`);
+                  searchQuery = sug.query;
+                  goto(`/tu-vung?q=${encodeURIComponent(sug.query)}`);
                 }}
                 class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-[#282A2C] hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-600 dark:text-[#C4C7C5] hover:text-rose-600 dark:hover:text-rose-300 font-medium transition-colors shrink-0 text-[11px]"
               >
-                {sug}
+                {sug.label}
               </button>
             {/each}
           </div>
