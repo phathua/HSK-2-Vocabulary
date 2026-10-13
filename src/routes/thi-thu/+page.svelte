@@ -12,9 +12,12 @@
   import BookOpen from 'phosphor-svelte/lib/BookOpen';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
   import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
+  import FilePdf from 'phosphor-svelte/lib/FilePdf';
+  import ListBullets from 'phosphor-svelte/lib/ListBullets';
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import { mockExamsData, type MockExamItem } from '#lib/data/mockExamsList';
+  import { EXAM_PDF_PAGE_COUNTS } from '#lib/data/examPdfPageCounts';
   import { examHistoryState } from '#lib/state/examHistoryState.svelte';
   import { getExamImageUrl } from '#lib/utils/examAssets';
   import { getExamData } from '#lib/utils/examLoader';
@@ -61,6 +64,12 @@
   let selectedFilter = $state('all');
   let enteringExam = $state<MockExamItem | null>(null);
   let previewExam = $state<MockExamItem | null>(null);
+  let previewTab = $state<'pdf' | 'questions'>('pdf');
+
+  function handleOpenPreview(exam: MockExamItem) {
+    previewExam = exam;
+    previewTab = 'pdf';
+  }
 
   function handleStartExam(exam: MockExamItem) {
     if (enteringExam) return;
@@ -233,12 +242,12 @@
           </div>
 
           <div class="flex items-center gap-1.5 shrink-0">
-            <!-- Nút Xem trước tóm tắt đề -->
+            <!-- Nút Xem trước đề thi -->
             <button
               type="button"
-              onclick={() => (previewExam = exam)}
+              onclick={() => handleOpenPreview(exam)}
               class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-neutral-700 bg-slate-50 dark:bg-neutral-800 hover:bg-slate-100 dark:hover:bg-neutral-700 text-slate-600 dark:text-neutral-300 font-bold text-[11px] flex items-center gap-1 transition-all cursor-pointer shadow-2xs"
-              title="Xem tóm tắt cấu trúc đề thi"
+              title="Xem trước đề thi"
             >
               <Eye weight="bold" class="w-3 h-3" />
               <span>Xem trước</span>
@@ -263,6 +272,7 @@
 <!-- Modal Xem trước Đề Thi: Cuộn xem chi tiết từng câu hỏi & hình ảnh -->
 {#if previewExam}
   {@const previewDetail = getExamData(previewExam.code)}
+  {@const pdfPages = EXAM_PDF_PAGE_COUNTS[previewExam.code] || 0}
   <!-- Backdrop -->
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -285,7 +295,7 @@
           </div>
           <div class="min-w-0">
             <span class="text-[10px] font-mono font-bold text-orange-600 dark:text-orange-400 tracking-wider uppercase">
-              Xem trước câu hỏi • {previewExam.code}
+              Xem trước đề thi • {previewExam.code}
             </span>
             <h3 class="text-sm font-black text-slate-900 dark:text-[#E3E3E3] truncate">
               {previewExam.title}
@@ -317,100 +327,161 @@
         </div>
       </div>
 
-      <!-- Quick Metrics Strip -->
-      <div class="flex items-center justify-between px-4 py-2 bg-slate-50 dark:bg-[#252525] border-b border-slate-100 dark:border-[#282A2C] text-[11px] font-bold text-slate-500 dark:text-[#8E918F] shrink-0">
-        <span class="flex items-center gap-1">
-          <Clock class="w-3.5 h-3.5 text-orange-500" />
-          55 phút
-        </span>
-        <span class="flex items-center gap-1">
-          <SpeakerHigh class="w-3.5 h-3.5 text-sky-500" />
-          Nghe: 35 câu
-        </span>
-        <span class="flex items-center gap-1">
-          <BookOpen class="w-3.5 h-3.5 text-blue-500" />
-          Đọc: 25 câu
-        </span>
-        <span class="text-emerald-600 dark:text-emerald-400">
-          60 câu hỏi
-        </span>
+      <!-- Quick Metrics Strip & Mode Tabs -->
+      <div class="px-4 py-2 bg-slate-50 dark:bg-[#252525] border-b border-slate-100 dark:border-[#282A2C] flex flex-wrap items-center justify-between gap-2 shrink-0">
+        <!-- Mode Switcher Tabs -->
+        <div class="flex items-center gap-1 bg-slate-200/70 dark:bg-[#1A1A1A] p-0.5 rounded-xl text-xs font-bold">
+          <button
+            type="button"
+            onclick={() => (previewTab = 'pdf')}
+            class="px-3 py-1 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer {previewTab === 'pdf'
+              ? 'bg-white dark:bg-[#2D2D2D] text-orange-600 dark:text-orange-400 shadow-2xs'
+              : 'text-slate-600 dark:text-[#8E918F] hover:text-slate-900 dark:hover:text-white'}"
+          >
+            <FilePdf weight="bold" class="w-3.5 h-3.5" />
+            <span>Bản scan PDF ({pdfPages} trang)</span>
+          </button>
+          <button
+            type="button"
+            onclick={() => (previewTab = 'questions')}
+            class="px-3 py-1 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer {previewTab === 'questions'
+              ? 'bg-white dark:bg-[#2D2D2D] text-orange-600 dark:text-orange-400 shadow-2xs'
+              : 'text-slate-600 dark:text-[#8E918F] hover:text-slate-900 dark:hover:text-white'}"
+          >
+            <ListBullets weight="bold" class="w-3.5 h-3.5" />
+            <span>Bóc tách câu hỏi (60 câu)</span>
+          </button>
+        </div>
+
+        <!-- Metrics Strip -->
+        <div class="flex items-center gap-3 text-[11px] font-bold text-slate-500 dark:text-[#8E918F]">
+          <span class="flex items-center gap-1">
+            <Clock class="w-3.5 h-3.5 text-orange-500" />
+            55 phút
+          </span>
+          <span class="flex items-center gap-1">
+            <SpeakerHigh class="w-3.5 h-3.5 text-sky-500" />
+            35 câu nghe
+          </span>
+          <span class="flex items-center gap-1">
+            <BookOpen class="w-3.5 h-3.5 text-blue-500" />
+            25 câu đọc
+          </span>
+        </div>
       </div>
 
       <!-- Questions Feed Body (Cuộn xem mượt mà từng câu/trang) -->
       <div class="flex-1 overflow-y-auto p-4 space-y-4">
-        {#if previewDetail && previewDetail.questions && previewDetail.questions.length > 0}
-          {#each previewDetail.questions as q, idx (idx)}
-            <div class="p-3.5 rounded-2xl bg-slate-50/80 dark:bg-[#202124] border border-slate-100 dark:border-[#282A2C] text-xs">
-              <div class="flex items-center justify-between mb-2">
-                <span class="font-black text-orange-600 dark:text-orange-400">
-                  Câu {q.question_no || (idx + 1)}
-                </span>
-                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-200/80 dark:bg-[#282A2C] text-slate-600 dark:text-[#8E918F]">
-                  {q.section || ''} {q.part ? `• ${q.part}` : ''}
-                </span>
-              </div>
-
-              <!-- Question Image if any -->
-              {#if q.image}
-                <div class="my-2 flex justify-center">
-                  <img
-                    src={getExamImageUrl(previewExam.code, q.image)}
-                    alt={`Hình câu ${q.question_no}`}
-                    class="max-h-44 sm:max-h-52 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white object-contain shadow-2xs"
-                    loading="lazy"
-                  />
+        {#if previewTab === 'pdf'}
+          {#if pdfPages > 0}
+            <div class="space-y-4 max-w-xl mx-auto">
+              {#each Array.from({ length: pdfPages }, (_, i) => i + 1) as pageNum (pageNum)}
+                <div class="flex flex-col gap-1.5">
+                  <div class="flex items-center justify-between px-1 text-[11px] font-bold text-slate-500 dark:text-[#8E918F]">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-200/80 dark:bg-[#282A2C] font-mono text-[10px]">
+                      Trang {pageNum} / {pdfPages}
+                    </span>
+                    <span class="text-[10px] text-slate-400 font-mono">HSK 2 • {previewExam.code}</span>
+                  </div>
+                  <div class="w-full bg-white dark:bg-[#141414] rounded-2xl border border-slate-200 dark:border-[#282A2C] shadow-sm overflow-hidden flex items-center justify-center p-1 sm:p-2">
+                    <img
+                      src={`/exams/${previewExam.code}/pdf_pages/page_${String(pageNum).padStart(2, '0')}.webp`}
+                      alt={`Trang ${pageNum} đề ${previewExam.code}`}
+                      class="w-full h-auto object-contain rounded-xl select-none"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-              {/if}
-
-              <!-- Board Image if any -->
-              {#if q.board_image}
-                <div class="my-2 flex justify-center">
-                  <img
-                    src={getExamImageUrl(previewExam.code, q.board_image)}
-                    alt={`Bảng đáp án câu ${q.question_no}`}
-                    class="max-h-52 sm:max-h-60 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white object-contain shadow-2xs"
-                    loading="lazy"
-                  />
-                </div>
-              {/if}
-
-              <!-- Question Text or Listening Script -->
-              {#if q.text && !q.text.startsWith('Câu hỏi nghe số')}
-                <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-sm my-1">
-                  {q.text}
-                </p>
-              {/if}
-
-              {#if q.listening_script}
-                <div class="p-2 rounded-xl bg-sky-50/80 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/40 my-1.5">
-                  <span class="text-[10px] uppercase font-bold text-sky-600 dark:text-sky-400 block mb-0.5">Lời thoại bài nghe</span>
-                  <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-xs">
-                    {q.listening_script}
-                  </p>
-                  {#if q.listening_pinyin}
-                    <p class="text-[11px] text-sky-600/80 dark:text-sky-400/80 font-medium">
-                      {q.listening_pinyin}
-                    </p>
-                  {/if}
-                </div>
-              {/if}
-
-              <!-- Options if any -->
-              {#if q.options && q.options.length > 0}
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5 mt-2">
-                  {#each q.options as opt}
-                    <div class="px-2.5 py-1.5 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] font-semibold text-slate-700 dark:text-[#C4C7C5] text-[11px] flex items-center gap-1">
-                      <span>{opt}</span>
-                    </div>
-                  {/each}
-                </div>
-              {/if}
+              {/each}
             </div>
-          {/each}
+          {:else}
+            <div class="py-16 text-center text-xs text-slate-400 flex flex-col items-center gap-3">
+              <FilePdf class="w-10 h-10 text-slate-300 dark:text-neutral-600" />
+              <p>Đề thi này chưa có bản scan PDF gốc.</p>
+              <button
+                type="button"
+                onclick={() => (previewTab = 'questions')}
+                class="px-3.5 py-1.5 rounded-xl bg-orange-600 text-white font-bold text-xs cursor-pointer"
+              >
+                Chuyển sang xem bóc tách câu hỏi
+              </button>
+            </div>
+          {/if}
         {:else}
-          <div class="py-12 text-center text-xs text-slate-400">
-            Đang tải dữ liệu câu hỏi của đề thi...
-          </div>
+          {#if previewDetail && previewDetail.questions && previewDetail.questions.length > 0}
+            {#each previewDetail.questions as q, idx (idx)}
+              <div class="p-3.5 rounded-2xl bg-slate-50/80 dark:bg-[#202124] border border-slate-100 dark:border-[#282A2C] text-xs">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-black text-orange-600 dark:text-orange-400">
+                    Câu {q.question_no || (idx + 1)}
+                  </span>
+                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-200/80 dark:bg-[#282A2C] text-slate-600 dark:text-[#8E918F]">
+                    {q.section || ''} {q.part ? `• ${q.part}` : ''}
+                  </span>
+                </div>
+
+                <!-- Question Image if any -->
+                {#if q.image}
+                  <div class="my-2 flex justify-center">
+                    <img
+                      src={getExamImageUrl(previewExam.code, q.image)}
+                      alt={`Hình câu ${q.question_no}`}
+                      class="max-h-44 sm:max-h-52 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white object-contain shadow-2xs"
+                      loading="lazy"
+                    />
+                  </div>
+                {/if}
+
+                <!-- Board Image if any -->
+                {#if q.board_image}
+                  <div class="my-2 flex justify-center">
+                    <img
+                      src={getExamImageUrl(previewExam.code, q.board_image)}
+                      alt={`Bảng đáp án câu ${q.question_no}`}
+                      class="max-h-52 sm:max-h-60 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white object-contain shadow-2xs"
+                      loading="lazy"
+                    />
+                  </div>
+                {/if}
+
+                <!-- Question Text or Listening Script -->
+                {#if q.text && !q.text.startsWith('Câu hỏi nghe số')}
+                  <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-sm my-1">
+                    {q.text}
+                  </p>
+                {/if}
+
+                {#if q.listening_script}
+                  <div class="p-2 rounded-xl bg-sky-50/80 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/40 my-1.5">
+                    <span class="text-[10px] uppercase font-bold text-sky-600 dark:text-sky-400 block mb-0.5">Lời thoại bài nghe</span>
+                    <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-xs">
+                      {q.listening_script}
+                    </p>
+                    {#if q.listening_pinyin}
+                      <p class="text-[11px] text-sky-600/80 dark:text-sky-400/80 font-medium">
+                        {q.listening_pinyin}
+                      </p>
+                    {/if}
+                  </div>
+                {/if}
+
+                <!-- Options if any -->
+                {#if q.options && q.options.length > 0}
+                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5 mt-2">
+                    {#each q.options as opt}
+                      <div class="px-2.5 py-1.5 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] font-semibold text-slate-700 dark:text-[#C4C7C5] text-[11px] flex items-center gap-1">
+                        <span>{opt}</span>
+                      </div>
+                    {/each}
+                  </div>
+                {/if}
+              </div>
+            {/each}
+          {:else}
+            <div class="py-12 text-center text-xs text-slate-400">
+              Đang tải dữ liệu câu hỏi của đề thi...
+            </div>
+          {/if}
         {/if}
       </div>
 
