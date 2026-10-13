@@ -28,6 +28,7 @@
   import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
   import { getCharacterDetail } from '#lib/data/characterDetailMap';
+  import SmartImage from '#lib/components/SmartImage.svelte';
 
   // State tìm kiếm & scroll behavior
   let searchQuery = $state('');
@@ -963,11 +964,11 @@
 
           <div class="w-full rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#18191A] relative border border-slate-100 dark:border-[#37393B] flex items-center justify-center min-h-[180px] max-h-[300px]">
             {#if currentWord.image}
-              <img
+              <SmartImage
                 src={currentWord.image}
                 alt={currentWord.viet}
-                loading="lazy"
-                class="w-full h-auto max-h-[280px] object-contain rounded-xl transition-transform duration-300"
+                objectFit="contain"
+                class="w-full h-full min-h-[180px] max-h-[280px] rounded-xl"
               />
             {:else}
               <div class="w-full py-12 flex flex-col items-center justify-center text-slate-400">

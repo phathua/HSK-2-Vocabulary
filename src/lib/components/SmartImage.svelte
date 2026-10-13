@@ -1,4 +1,10 @@
 <script lang="ts">
+  import r2MapData from '#lib/data/r2FallbackMap.json';
+  import imgbbMapData from '#lib/data/imgbbFallbackMap.json';
+
+  const r2Map = r2MapData as Record<string, string>;
+  const imgbbMap = imgbbMapData as Record<string, string>;
+
   interface Props {
     src?: string;
     fallbackSrc?: string;
@@ -12,7 +18,9 @@
   let isLoaded = $state(false);
   let hasFailedAll = $state(false);
   let activeSrc = $state('');
-  let triedFallback = $state(false);
+  let triedPropFallback = $state(false);
+  let triedR2 = $state(false);
+  let triedImgbb = $state(false);
 
   const fitMode = $derived(className.includes('object-contain') || objectFit === 'contain' ? 'object-contain' : 'object-cover');
 
@@ -21,7 +29,9 @@
     activeSrc = src;
     isLoaded = false;
     hasFailedAll = false;
-    triedFallback = false;
+    triedPropFallback = false;
+    triedR2 = false;
+    triedImgbb = false;
   });
 
   function handleLoad() {
@@ -30,16 +40,35 @@
   }
 
   function handleError() {
-    // Nếu có fallbackSrc và chưa thử fallback, chuyển sang fallbackSrc
-    if (fallbackSrc && !triedFallback && activeSrc !== fallbackSrc) {
-      triedFallback = true;
+    // 1. Thử prop fallbackSrc nếu caller truyền vào
+    if (fallbackSrc && !triedPropFallback && activeSrc !== fallbackSrc) {
+      triedPropFallback = true;
       activeSrc = fallbackSrc;
       isLoaded = false;
-    } else {
-      // Đã thử hết các nguồn hoặc không có fallback -> dừng lại hiển thị Local SVG, không loop onerror
-      hasFailedAll = true;
-      isLoaded = true;
+      return;
     }
+
+    // 2. Thử Cloudflare R2 CDN cao tốc
+    const r2Url = r2Map[src];
+    if (r2Url && !triedR2 && activeSrc !== r2Url) {
+      triedR2 = true;
+      activeSrc = r2Url;
+      isLoaded = false;
+      return;
+    }
+
+    // 3. Thử ImgBB backup secondary
+    const imgbbUrl = imgbbMap[src];
+    if (imgbbUrl && !triedImgbb && activeSrc !== imgbbUrl) {
+      triedImgbb = true;
+      activeSrc = imgbbUrl;
+      isLoaded = false;
+      return;
+    }
+
+    // 4. Đã thử hết các nguồn dự phòng -> dừng lại hiển thị Local SVG, không loop onerror
+    hasFailedAll = true;
+    isLoaded = true;
   }
 </script>
 
