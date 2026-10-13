@@ -17,6 +17,7 @@
 
   const isHomePage = $derived(page.url.pathname === '/');
   const isGrammarPage = $derived(page.url.pathname.startsWith('/ngu-phap'));
+  const isDictionaryPage = $derived(page.url.pathname.startsWith('/tu-vung'));
   const isExamRoom = $derived(examRoomState.isActive);
 
   // Cấu hình Icon và Tiêu đề động theo trang đang mở trong SidebarMenu
@@ -214,16 +215,18 @@
       </button>
     {/if}
 
-    <!-- Nút Tìm kiếm Spotlight: Đứng bên phải nút chuyển zh-to-vi và trước nút cài đặt -->
-    <button
-      type="button"
-      onclick={() => (appState.spotlightOpen = true)}
-      class="w-9 h-9 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center justify-center text-slate-600 dark:text-[#C4C7C5] transition-colors cursor-pointer active:scale-95"
-      title="Tìm kiếm từ điển HSK Spotlight (Ctrl+K)"
-      aria-label="Tìm kiếm từ điển"
-    >
-      <MagnifyingGlass weight="bold" class="w-4 h-4" />
-    </button>
+    <!-- Nút Tìm kiếm Spotlight: Đứng bên phải nút chuyển zh-to-vi và trước nút cài đặt (Ẩn khi đang ở trang từ điển /tu-vung) -->
+    {#if !isDictionaryPage}
+      <button
+        type="button"
+        onclick={() => (appState.spotlightOpen = true)}
+        class="w-9 h-9 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center justify-center text-slate-600 dark:text-[#C4C7C5] transition-colors cursor-pointer active:scale-95"
+        title="Tìm kiếm từ điển HSK Spotlight (Ctrl+K)"
+        aria-label="Tìm kiếm từ điển"
+      >
+        <MagnifyingGlass weight="bold" class="w-4 h-4" />
+      </button>
+    {/if}
 
     <!-- Settings Button (Cài đặt) -->
     <button

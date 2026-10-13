@@ -2,10 +2,10 @@ export type TourPlacement = 'top' | 'bottom' | 'auto';
 
 export interface TourStep {
   id: string;
-  /** CSS selector string or function returning DOM element */
-  target: string | (() => Element | null);
+  /** CSS selector string or function returning selector string or DOM element */
+  target: string | (() => string | Element | null);
   /** Optional secondary target element selector or getter to union into the spotlight */
-  includeTarget?: string | (() => Element | null);
+  includeTarget?: string | (() => string | Element | null);
   title: string;
   description: string;
   placement?: TourPlacement;

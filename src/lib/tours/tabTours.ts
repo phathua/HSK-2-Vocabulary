@@ -53,26 +53,38 @@ export const fillWordTour: TourDefinition = {
     {
       id: 'fill-slots',
       target: () => {
-        if (appState.fillSubMode === 'keyboard') {
-          return document.querySelector('[data-tour="fill-manual-input"]');
+        const isZhToVi = appState.direction === 'zh_to_vi';
+        const isTileMode = appState.fillSubMode === 'tiles' && !isZhToVi;
+        if (isTileMode) {
+          return '[data-tour="fill-slots-area"]';
         }
-        return document.querySelector('[data-tour="fill-slots-area"]');
+        return '[data-tour="fill-manual-input"]';
       },
       includeTarget: () => {
-        if (appState.fillSubMode === 'keyboard') {
-          return document.querySelector('[data-tour="fill-tone-keyboard"]');
+        const isZhToVi = appState.direction === 'zh_to_vi';
+        const isTileMode = appState.fillSubMode === 'tiles' && !isZhToVi;
+        if (isTileMode) {
+          return '[data-tour="fill-tile-bank"]';
         }
-        return document.querySelector('[data-tour="fill-tile-bank"]');
+        return !isZhToVi ? '[data-tour="fill-tone-keyboard"]' : null;
       },
       get title() {
-        return appState.fillSubMode === 'keyboard'
-          ? 'Nhập câu trả lời & Bảng dấu'
-          : 'Ghép ký tự Pinyin';
+        const isZhToVi = appState.direction === 'zh_to_vi';
+        const isTileMode = appState.fillSubMode === 'tiles' && !isZhToVi;
+        if (isTileMode) {
+          return 'Ghép ký tự Pinyin';
+        }
+        return isZhToVi ? 'Nhập nghĩa tiếng Việt' : 'Nhập câu trả lời & Bảng dấu';
       },
       get description() {
-        return appState.fillSubMode === 'keyboard'
-          ? 'Gõ câu trả lời vào ô nhập và dùng bảng dấu Pinyin để thêm thanh điệu.'
-          : 'Chạm các ký tự gợi ý bên dưới để điền, hoặc chạm vào ô để gỡ bỏ.';
+        const isZhToVi = appState.direction === 'zh_to_vi';
+        const isTileMode = appState.fillSubMode === 'tiles' && !isZhToVi;
+        if (isTileMode) {
+          return 'Chạm các ký tự gợi ý bên dưới để điền, hoặc chạm vào ô để gỡ bỏ.';
+        }
+        return isZhToVi
+          ? 'Gõ nghĩa tiếng Việt của từ vựng vào ô nhập liệu rồi bấm Kiểm tra.'
+          : 'Gõ câu trả lời vào ô nhập và dùng bảng dấu Pinyin để thêm thanh điệu.';
       },
       placement: 'top',
       illustration: '/tour/mascot_buffalo.webp',

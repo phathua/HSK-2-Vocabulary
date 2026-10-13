@@ -274,32 +274,66 @@ class TourState {
   }
 
   resolveTargetElement(step: TourStep): Element | null {
-    if (typeof step.target === 'function') {
-      return step.target();
-    }
-    const elements = document.querySelectorAll(step.target);
-    for (const el of elements) {
-      const rect = el.getBoundingClientRect();
-      if (rect.width > 0 && rect.height > 0) {
-        return el;
+    let target = typeof step.target === 'function' ? step.target() : step.target;
+    if (!target) return null;
+    if (typeof target === 'string') {
+      const elements = document.querySelectorAll(target);
+      for (const el of elements) {
+        const rect = el.getBoundingClientRect();
+        if (rect.width > 0 && rect.height > 0) {
+          return el;
+        }
       }
+      return elements[0] || null;
     }
-    return elements[0] || null;
+    if (target instanceof Element) {
+      const rect = target.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        return target;
+      }
+      const dataTour = target.getAttribute('data-tour');
+      if (dataTour) {
+        const candidates = document.querySelectorAll(`[data-tour="${dataTour}"]`);
+        for (const el of candidates) {
+          const r = el.getBoundingClientRect();
+          if (r.width > 0 && r.height > 0) return el;
+        }
+      }
+      return target;
+    }
+    return null;
   }
 
   resolveIncludeElement(step: TourStep): Element | null {
     if (!step.includeTarget) return null;
-    if (typeof step.includeTarget === 'function') {
-      return step.includeTarget();
-    }
-    const elements = document.querySelectorAll(step.includeTarget);
-    for (const el of elements) {
-      const rect = el.getBoundingClientRect();
-      if (rect.width > 0 && rect.height > 0) {
-        return el;
+    let target = typeof step.includeTarget === 'function' ? step.includeTarget() : step.includeTarget;
+    if (!target) return null;
+    if (typeof target === 'string') {
+      const elements = document.querySelectorAll(target);
+      for (const el of elements) {
+        const rect = el.getBoundingClientRect();
+        if (rect.width > 0 && rect.height > 0) {
+          return el;
+        }
       }
+      return null;
     }
-    return elements[0] || null;
+    if (target instanceof Element) {
+      const rect = target.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        return target;
+      }
+      const dataTour = target.getAttribute('data-tour');
+      if (dataTour) {
+        const candidates = document.querySelectorAll(`[data-tour="${dataTour}"]`);
+        for (const el of candidates) {
+          const r = el.getBoundingClientRect();
+          if (r.width > 0 && r.height > 0) return el;
+        }
+      }
+      return null;
+    }
+    return null;
   }
 
   async safeScrollToTarget(el: Element, step: TourStep): Promise<void> {
@@ -357,16 +391,18 @@ class TourState {
     const incEl = this.resolveIncludeElement(this.currentStep);
     if (incEl) {
       const incRect = incEl.getBoundingClientRect();
-      const incPadding = 6;
-      const minX = Math.min(targetLeft, incRect.left - incPadding);
-      const minY = Math.min(targetTop, incRect.top - incPadding);
-      const maxX = Math.max(targetLeft + targetWidth, incRect.right + incPadding);
-      const maxY = Math.max(targetTop + targetHeight, incRect.bottom + incPadding);
+      if (incRect.width > 0 && incRect.height > 0) {
+        const incPadding = 6;
+        const minX = Math.min(targetLeft, incRect.left - incPadding);
+        const minY = Math.min(targetTop, incRect.top - incPadding);
+        const maxX = Math.max(targetLeft + targetWidth, incRect.right + incPadding);
+        const maxY = Math.max(targetTop + targetHeight, incRect.bottom + incPadding);
 
-      targetLeft = minX;
-      targetTop = minY;
-      targetWidth = maxX - minX;
-      targetHeight = maxY - minY;
+        targetLeft = minX;
+        targetTop = minY;
+        targetWidth = maxX - minX;
+        targetHeight = maxY - minY;
+      }
     }
 
     this.targetRect = {
