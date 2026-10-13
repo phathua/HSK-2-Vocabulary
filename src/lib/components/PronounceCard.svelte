@@ -611,7 +611,7 @@
         <Confetti size={36} weight="duotone" />
       </div>
       <h3 class="text-xl font-bold text-slate-800 mb-1">Đã hoàn thành lượt luyện phát âm!</h3>
-      <p class="text-sm text-slate-500 mb-6">Bạn đã phát âm chính xác {appState.speechCorrect} / {appState.speechDoneCount} từ vựng.</p>
+      <p class="text-sm text-slate-500 mb-6">Bạn đã phát âm chính xác {appState.speechCorrect} / {appState.totalSpeechCount} từ vựng.</p>
       <button
         type="button"
         onclick={() => appState.initSpeech()}

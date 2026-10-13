@@ -24,7 +24,7 @@ export const mainOnboardingTour: TourDefinition = {
       onBeforeStep: async () => {
         appState.sidebarOpen = false;
         appState.filterModalOpen = false;
-        appState.activeTab = 'fill';
+        appState.activeTab = 'flash';
       }
     },
     {
@@ -130,30 +130,33 @@ export const mainOnboardingTour: TourDefinition = {
       id: 'modes-tabs',
       target: '[data-tour="mode-switch-tabs"]',
       title: '4 Chế độ luyện tập',
-      description: 'Luyện tập toàn diện: Điền từ, Trắc nghiệm, Thẻ từ Flashcard và Luyện phát âm.',
+      description: 'Luyện tập toàn diện: Thẻ từ Flashcard, Điền từ, Trắc nghiệm và Luyện phát âm.',
       placement: 'bottom',
       illustration: '/icons/panda-correct.webp',
       spotlightPadding: 4,
       spotlightRadius: 20,
       onBeforeStep: () => {
-        appState.activeTab = 'fill';
+        appState.activeTab = 'flash';
       }
     },
     {
       id: 'progress-bar',
       target: '[data-tour="progress-score-bar"]',
       title: 'Tiến độ học tập',
-      description: 'Theo dõi phần trăm hoàn thành và tỷ lệ trả lời đúng trong bài.',
+      description: 'Theo dõi phần trăm hoàn thành và tỷ lệ từ vựng đã thuộc trong bài.',
       placement: 'bottom',
       illustration: '/icons/panda-correct.webp',
       spotlightPadding: 6,
-      spotlightRadius: 16
+      spotlightRadius: 16,
+      onBeforeStep: () => {
+        appState.activeTab = 'flash';
+      }
     },
 
-    // --- 5. CHẾ ĐỘ 1: ĐIỀN TỪ (FILL WORD) & LIÊN KẾT MỞ MODAL LỌC BÀI ---
+    // --- 5. CHẾ ĐỘ 1: THẺ TỪ (FLASHCARD) & CHỌN BÀI HỌC ---
     {
-      id: 'fill-lesson-btn',
-      target: '[data-tour="fill-lesson-btn"]',
+      id: 'flash-lesson-btn',
+      target: '[data-tour="flashcard-lesson-btn"]',
       title: 'Chọn bài học HSK',
       description: 'Chạm để mở bảng chọn bài học từ Bài 1 đến Bài 15.',
       placement: 'bottom',
@@ -161,7 +164,11 @@ export const mainOnboardingTour: TourDefinition = {
       spotlightPadding: 6,
       spotlightRadius: 18,
       onBeforeStep: async () => {
-        appState.activeTab = 'fill';
+        appState.activeTab = 'flash';
+        appState.filterModalOpen = false;
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'flash';
         appState.filterModalOpen = false;
       }
     },
@@ -204,6 +211,44 @@ export const mainOnboardingTour: TourDefinition = {
       }
     },
     {
+      id: 'flash-mode',
+      target: '[data-tour="flash-card-stack"]',
+      title: 'Thẻ từ Flashcard 3D',
+      description: 'Chạm thẻ để lật xem đáp án, vuốt phải nếu thuộc và vuốt trái nếu quên.',
+      gesture: 'swipe-horizontal',
+      placement: 'bottom',
+      illustration: '/tour/mascot_cat.webp',
+      spotlightPadding: 8,
+      spotlightRadius: 26,
+      onBeforeStep: async () => {
+        appState.filterModalOpen = false;
+        appState.activeTab = 'flash';
+        await delay(200);
+      },
+      onPrevStep: async () => {
+        appState.filterModalOpen = false;
+        appState.activeTab = 'flash';
+      }
+    },
+
+    // --- 6. CHẾ ĐỘ 2: ĐIỀN TỪ (FILL WORD) ---
+    {
+      id: 'tab-fill-intro',
+      target: '[data-tour="tab-btn-fill"]',
+      title: 'Chế độ Điền từ',
+      description: 'Chạm tab Điền từ để ghép ký tự Pinyin hoặc gõ từ vựng.',
+      placement: 'bottom',
+      illustration: '/tour/mascot_tiger.webp',
+      spotlightPadding: 4,
+      spotlightRadius: 14,
+      onBeforeStep: async () => {
+        appState.activeTab = 'flash';
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'flash';
+      }
+    },
+    {
       id: 'fill-submode',
       target: '[data-tour="fill-submode-btn"]',
       title: 'Ghép từ hoặc gõ telex',
@@ -213,13 +258,11 @@ export const mainOnboardingTour: TourDefinition = {
       spotlightPadding: 6,
       spotlightRadius: 18,
       onBeforeStep: async () => {
-        appState.filterModalOpen = false;
         appState.activeTab = 'fill';
         await delay(200);
       },
       onPrevStep: async () => {
-        appState.filterModalOpen = false;
-        appState.activeTab = 'fill';
+        appState.activeTab = 'flash';
       }
     },
     {
@@ -230,7 +273,13 @@ export const mainOnboardingTour: TourDefinition = {
       placement: 'bottom',
       illustration: '/tour/panda_think.webp',
       spotlightPadding: 8,
-      spotlightRadius: 22
+      spotlightRadius: 22,
+      onBeforeStep: async () => {
+        appState.activeTab = 'fill';
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'fill';
+      }
     },
     {
       id: 'fill-slots',
@@ -271,7 +320,13 @@ export const mainOnboardingTour: TourDefinition = {
       placement: 'top',
       illustration: '/tour/panda_detective.webp',
       spotlightPadding: 6,
-      spotlightRadius: 18
+      spotlightRadius: 18,
+      onBeforeStep: async () => {
+        appState.activeTab = 'fill';
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'fill';
+      }
     },
     {
       id: 'fill-actions',
@@ -281,7 +336,13 @@ export const mainOnboardingTour: TourDefinition = {
       placement: 'top',
       illustration: '/tour/mascot_monkey.webp',
       spotlightPadding: 6,
-      spotlightRadius: 20
+      spotlightRadius: 20,
+      onBeforeStep: async () => {
+        appState.activeTab = 'fill';
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'fill';
+      }
     },
     {
       id: 'fill-stats',
@@ -291,10 +352,16 @@ export const mainOnboardingTour: TourDefinition = {
       placement: 'top',
       illustration: '/icons/panda-wrong.webp',
       spotlightPadding: 6,
-      spotlightRadius: 16
+      spotlightRadius: 16,
+      onBeforeStep: async () => {
+        appState.activeTab = 'fill';
+      },
+      onPrevStep: async () => {
+        appState.activeTab = 'fill';
+      }
     },
 
-    // --- 6. CHẾ ĐỘ 2: TRẮC NGHIỆM (QUIZ) ---
+    // --- 7. CHẾ ĐỘ 3: TRẮC NGHIỆM (QUIZ) ---
     {
       id: 'tab-quiz-intro',
       target: '[data-tour="tab-btn-quiz"]',
@@ -330,43 +397,6 @@ export const mainOnboardingTour: TourDefinition = {
       }
     },
 
-    // --- 7. CHẾ ĐỘ 3: THẺ TỪ (FLASHCARD) ---
-    {
-      id: 'tab-flash-intro',
-      target: '[data-tour="tab-btn-flash"]',
-      title: 'Chế độ Thẻ từ Flashcard',
-      description: 'Chạm tab Thẻ từ để chuyển sang ôn luyện bằng Flashcard 3D.',
-      placement: 'bottom',
-      illustration: '/tour/mascot_tiger.webp',
-      spotlightPadding: 4,
-      spotlightRadius: 14,
-      onBeforeStep: async () => {
-        appState.activeTab = 'quiz';
-      },
-      onPrevStep: async () => {
-        appState.activeTab = 'quiz';
-      }
-    },
-    {
-      id: 'flash-mode',
-      target: '[data-tour="flash-card-stack"]',
-      title: 'Thẻ từ Flashcard 3D',
-      description: 'Chạm thẻ để lật xem đáp án, vuốt phải nếu thuộc và vuốt trái nếu quên.',
-      gesture: 'swipe-horizontal',
-      placement: 'bottom',
-      illustration: '/tour/mascot_cat.webp',
-      spotlightPadding: 8,
-      spotlightRadius: 26,
-      onBeforeStep: async () => {
-        appState.activeTab = 'flash';
-        await delay(200);
-      },
-      onPrevStep: async () => {
-        appState.activeTab = 'quiz';
-        await delay(200);
-      }
-    },
-
     // --- 8. CHẾ ĐỘ 4: PHÁT ÂM (SPEECH AI) ---
     {
       id: 'tab-speech-intro',
@@ -378,10 +408,10 @@ export const mainOnboardingTour: TourDefinition = {
       spotlightPadding: 4,
       spotlightRadius: 14,
       onBeforeStep: async () => {
-        appState.activeTab = 'flash';
+        appState.activeTab = 'quiz';
       },
       onPrevStep: async () => {
-        appState.activeTab = 'flash';
+        appState.activeTab = 'quiz';
       }
     },
     {
@@ -398,7 +428,7 @@ export const mainOnboardingTour: TourDefinition = {
         await delay(200);
       },
       onPrevStep: async () => {
-        appState.activeTab = 'flash';
+        appState.activeTab = 'quiz';
         await delay(200);
       }
     },
@@ -432,17 +462,17 @@ export const mainOnboardingTour: TourDefinition = {
       spotlightPadding: 6,
       spotlightRadius: 20,
       onBeforeStep: async () => {
-        appState.activeTab = 'fill';
+        appState.activeTab = 'flash';
       }
     }
   ],
   onComplete: () => {
-    appState.activeTab = 'fill';
+    appState.activeTab = 'flash';
     appState.filterModalOpen = false;
     appState.sidebarOpen = false;
   },
   onSkip: () => {
-    appState.activeTab = 'fill';
+    appState.activeTab = 'flash';
     appState.filterModalOpen = false;
     appState.sidebarOpen = false;
   }

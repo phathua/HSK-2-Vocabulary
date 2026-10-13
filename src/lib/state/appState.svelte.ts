@@ -22,7 +22,7 @@ export class AppState {
   currentLevel = $state<HskLevel>('HSK2');
 
   // Điều hướng & Chế độ
-  activeTab = $state<AppTab>('fill');
+  activeTab = $state<AppTab>('flash');
   direction = $state<QuizDirection>('vi_to_zh');
   filterModalOpen = $state(false);
   settingsModalOpen = $state(false);
@@ -1021,7 +1021,7 @@ export class AppState {
 
       this.currentLevel = 'HSK2';
       this.direction = 'vi_to_zh';
-      this.activeTab = 'fill';
+      this.activeTab = 'flash';
       this.fillSubMode = 'tiles';
       this.enableFillHints = true;
       this.showQuestionImages = true;

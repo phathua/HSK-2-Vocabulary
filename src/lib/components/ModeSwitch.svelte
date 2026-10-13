@@ -17,10 +17,10 @@
   });
 
   const currentScoreText = $derived.by(() => {
-    if (appState.activeTab === 'fill') return `${appState.fillCorrect}/${appState.fillDoneCount}`;
-    if (appState.activeTab === 'quiz') return `${appState.quizCorrect}/${appState.quizDoneCount}`;
     if (appState.activeTab === 'flash') return `${appState.flashKnown}/${appState.totalFlashCount}`;
-    return `${appState.speechCorrect}/${appState.speechDoneCount}`;
+    if (appState.activeTab === 'fill') return `${appState.fillCorrect}/${appState.totalFillCount}`;
+    if (appState.activeTab === 'quiz') return `${appState.quizCorrect}/${appState.totalQuizCount}`;
+    return `${appState.speechCorrect}/${appState.totalSpeechCount}`;
   });
 
   function handleTabClick(tab: 'fill' | 'quiz' | 'flash' | 'speech') {
@@ -39,37 +39,7 @@
     data-tour="mode-switch-tabs"
     class="grid grid-cols-4 gap-1 p-1 bg-slate-200/80 dark:bg-[#1B1B1B] border border-transparent dark:border-[#282A2C] rounded-2xl transition-colors"
   >
-    <!-- Tab 1: Điền từ -->
-    <button
-      type="button"
-      data-tour="tab-btn-fill"
-      onclick={() => handleTabClick('fill')}
-      class={`py-1.5 md:py-2 px-0.5 rounded-xl font-black text-xs md:text-sm flex items-center justify-center gap-1 transition-all cursor-pointer whitespace-nowrap min-w-0 ${
-        appState.activeTab === 'fill'
-          ? 'bg-white dark:bg-[#282A2C] text-slate-900 dark:text-[#E3E3E3] shadow-xs'
-          : 'text-slate-600 dark:text-[#8E918F] hover:text-slate-900 dark:hover:text-[#E3E3E3]'
-      }`}
-    >
-      <PencilLine weight="bold" class="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
-      <span>Điền từ</span>
-    </button>
-
-    <!-- Tab 2: Trắc nghiệm -->
-    <button
-      type="button"
-      data-tour="tab-btn-quiz"
-      onclick={() => handleTabClick('quiz')}
-      class={`py-1.5 md:py-2 px-0.5 rounded-xl font-black text-xs md:text-sm flex items-center justify-center gap-1 transition-all cursor-pointer whitespace-nowrap min-w-0 ${
-        appState.activeTab === 'quiz'
-          ? 'bg-white dark:bg-[#282A2C] text-slate-900 dark:text-[#E3E3E3] shadow-xs'
-          : 'text-slate-600 dark:text-[#8E918F] hover:text-slate-900 dark:hover:text-[#E3E3E3]'
-      }`}
-    >
-      <CheckSquareOffset weight="bold" class="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
-      <span>Trắc nghiệm</span>
-    </button>
-
-    <!-- Tab 3: Thẻ Flashcard -->
+    <!-- Tab 1: Thẻ Flashcard (Đưa lên đầu tiên) -->
     <button
       type="button"
       data-tour="tab-btn-flash"
@@ -84,7 +54,37 @@
       <span>Thẻ từ</span>
     </button>
 
-    <!-- Tab 4: Phát âm (Tính năng mới) -->
+    <!-- Tab 2: Điền từ -->
+    <button
+      type="button"
+      data-tour="tab-btn-fill"
+      onclick={() => handleTabClick('fill')}
+      class={`py-1.5 md:py-2 px-0.5 rounded-xl font-black text-xs md:text-sm flex items-center justify-center gap-1 transition-all cursor-pointer whitespace-nowrap min-w-0 ${
+        appState.activeTab === 'fill'
+          ? 'bg-white dark:bg-[#282A2C] text-slate-900 dark:text-[#E3E3E3] shadow-xs'
+          : 'text-slate-600 dark:text-[#8E918F] hover:text-slate-900 dark:hover:text-[#E3E3E3]'
+      }`}
+    >
+      <PencilLine weight="bold" class="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
+      <span>Điền từ</span>
+    </button>
+
+    <!-- Tab 3: Trắc nghiệm -->
+    <button
+      type="button"
+      data-tour="tab-btn-quiz"
+      onclick={() => handleTabClick('quiz')}
+      class={`py-1.5 md:py-2 px-0.5 rounded-xl font-black text-xs md:text-sm flex items-center justify-center gap-1 transition-all cursor-pointer whitespace-nowrap min-w-0 ${
+        appState.activeTab === 'quiz'
+          ? 'bg-white dark:bg-[#282A2C] text-slate-900 dark:text-[#E3E3E3] shadow-xs'
+          : 'text-slate-600 dark:text-[#8E918F] hover:text-slate-900 dark:hover:text-[#E3E3E3]'
+      }`}
+    >
+      <CheckSquareOffset weight="bold" class="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
+      <span>Trắc nghiệm</span>
+    </button>
+
+    <!-- Tab 4: Phát âm -->
     <button
       type="button"
       data-tour="tab-btn-speech"
