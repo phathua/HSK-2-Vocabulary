@@ -17,6 +17,11 @@ const STORAGE_KEY = 'hsk2_exam_history_v1';
 
 class ExamHistoryState {
   records = $state<ExamHistoryRecord[]>([]);
+  isHistoryModalOpen = $state(false);
+
+  get completedExamsCount(): number {
+    return new Set(this.records.map((r) => r.examCode)).size;
+  }
 
   constructor() {
     if (typeof window !== 'undefined') {

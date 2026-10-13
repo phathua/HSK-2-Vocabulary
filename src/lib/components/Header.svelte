@@ -3,9 +3,11 @@
   import { goto } from '$app/navigation';
   import { appState } from '#lib/state/appState.svelte';
   import { examRoomState } from '#lib/state/examRoomState.svelte';
+  import { examHistoryState } from '#lib/state/examHistoryState.svelte';
   import SlidersHorizontal from 'phosphor-svelte/lib/SlidersHorizontal';
   import ArrowsLeftRight from 'phosphor-svelte/lib/ArrowsLeftRight';
   import Clock from 'phosphor-svelte/lib/Clock';
+  import ClockCounterClockwise from 'phosphor-svelte/lib/ClockCounterClockwise';
   import HourglassMedium from 'phosphor-svelte/lib/HourglassMedium';
   import List from 'phosphor-svelte/lib/List';
   import GraduationCap from 'phosphor-svelte/lib/GraduationCap';
@@ -17,6 +19,7 @@
 
   const isHomePage = $derived(page.url.pathname === '/');
   const isGrammarPage = $derived(page.url.pathname.startsWith('/ngu-phap'));
+  const isExamListPage = $derived(page.url.pathname.startsWith('/thi-thu') && !examRoomState.isActive);
   const isDictionaryPage = $derived(page.url.pathname.startsWith('/tu-vung'));
   const isExamRoom = $derived(examRoomState.isActive);
 
@@ -153,17 +156,27 @@
               {isExamRoom ? 'HSK 2' : appState.currentLevelDisplay}
             </span>
           </div>
+        {:else if isGrammarPage}
+          <div class="mt-1 flex items-center">
+            <span class="text-[9.5px] font-black px-1.5 py-0.5 rounded-md bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300 leading-none shadow-2xs">
+              Đã học {grammarLearnedCount}/{totalGrammarCount}
+            </span>
+          </div>
+        {:else if isExamListPage}
+          <div class="mt-1 flex items-center">
+            <span class="text-[9.5px] font-black px-1.5 py-0.5 rounded-md bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 leading-none shadow-2xs">
+              Đã thi {examHistoryState.completedExamsCount}/33 đề
+            </span>
+          </div>
+        {:else if isDictionaryPage}
+          <div class="mt-1 flex items-center">
+            <span class="text-[9.5px] font-black px-1.5 py-0.5 rounded-md bg-rose-100 dark:bg-rose-900/60 text-rose-700 dark:text-rose-300 leading-none shadow-2xs">
+              Từ điển HSK 2
+            </span>
+          </div>
         {/if}
       </div>
     </button>
-
-    <!-- Badge Ngữ Pháp: Chỉ hiện khi ở trang Ngữ pháp -->
-    {#if isGrammarPage}
-      <div class="flex items-center gap-1.5 px-2 py-1 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/60 dark:border-blue-900/50 text-blue-700 dark:text-blue-300 text-[11px] sm:text-xs font-black shadow-2xs">
-        <GraduationCap weight="duotone" class="w-3.5 h-3.5 text-blue-500 shrink-0" />
-        <span class="whitespace-nowrap">Đã học {grammarLearnedCount}/{totalGrammarCount}</span>
-      </div>
-    {/if}
   </div>
 
   <!-- Right: Actions -->
@@ -214,6 +227,19 @@
             class="w-5 h-5 rounded-full object-cover shrink-0 drop-shadow-2xs"
           />
         {/if}
+      </button>
+    {/if}
+
+    <!-- Nút Lịch sử thi: Chỉ xuất hiện ở trang Thi thử (/thi-thu), đứng ngay bên trái nút tìm kiếm -->
+    {#if isExamListPage}
+      <button
+        type="button"
+        onclick={() => (examHistoryState.isHistoryModalOpen = true)}
+        class="w-9 h-9 rounded-xl border border-orange-200 dark:border-orange-900/60 bg-orange-50 dark:bg-orange-950/40 hover:bg-orange-100 dark:hover:bg-orange-900/60 flex items-center justify-center text-orange-600 dark:text-orange-400 transition-colors cursor-pointer active:scale-95 shadow-2xs"
+        title="Lịch sử làm bài thi HSK 2"
+        aria-label="Lịch sử làm bài thi"
+      >
+        <ClockCounterClockwise weight="bold" class="w-4 h-4" />
       </button>
     {/if}
 

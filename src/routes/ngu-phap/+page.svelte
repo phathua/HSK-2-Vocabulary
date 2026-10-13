@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { page } from '$app/state';
   import { goto } from '$app/navigation';
   import Header from '#lib/components/Header.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
@@ -25,6 +26,17 @@
   let selectedOrigin = $state<'all' | 'inherited' | 'new' | 'advanced'>('all');
   let learnedMap = $state<Record<number, boolean>>({});
   let activeId = $state<number>(1);
+
+  // Đồng bộ điểm ngữ pháp khi điều hướng từ Spotlight Search
+  $effect(() => {
+    const idParam = page.url.searchParams.get('id');
+    if (idParam) {
+      const parsed = parseInt(idParam, 10);
+      if (!isNaN(parsed) && HSK2_GRAMMAR_POINTS.some((p) => p.id === parsed)) {
+        activeId = parsed;
+      }
+    }
+  });
 
   // LocalStorage keys
   const STORAGE_KEY_LEARNED = 'hsk2_grammar_learned_ids';

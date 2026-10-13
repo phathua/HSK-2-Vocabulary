@@ -8,6 +8,7 @@
   import SidebarMenu from '#lib/components/SidebarMenu.svelte';
   import OnboardingTour from '#lib/components/tour/OnboardingTour.svelte';
   import SpotlightSearchModal from '#lib/components/dictionary/SpotlightSearchModal.svelte';
+  import ExamHistoryModal from '#lib/components/exam/ExamHistoryModal.svelte';
   import { appState } from '#lib/state/appState.svelte';
   import { tourState } from '#lib/state/tourState.svelte';
   import { mainOnboardingTour } from '#lib/tours/mainOnboardingTour';
@@ -75,4 +76,5 @@
 <UpdateModal />
 <OnboardingTour />
 <SpotlightSearchModal />
+<ExamHistoryModal />
 
