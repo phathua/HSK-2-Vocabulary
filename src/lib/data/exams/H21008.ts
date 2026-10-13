@@ -1,0 +1,1153 @@
+import type { ExamDetail } from '#lib/types/exam';
+
+export const examData: ExamDetail = {
+  "id": "H21008",
+  "code": "H21008",
+  "title": "Đề Thi Thật Hanban H21008",
+  "level": "HSK 2",
+  "duration": 55,
+  "audio_url": "/exams-media/H21008/H21008_audio.mp3",
+  "has_audio": true,
+  "total_questions": 60,
+  "questions": [
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 1,
+      "type": "True/False",
+      "text": "Câu hỏi số 1",
+      "answer": "×",
+      "listening_script": "他唱歌很好听。",
+      "listening_pinyin": "Tā chànggē hěn hǎotīng.",
+      "explanation": "Trong bài nghe nói: 'tā chànggē hěn hǎotīng。' (Anh ấy hát rất hay). Nhưng bức ảnh miêu tả một người đang bịt tai nhăn mặt vì ồn nên đáp án là Sai (×).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_01.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 2,
+      "type": "True/False",
+      "text": "Câu hỏi số 2",
+      "answer": "√",
+      "listening_script": "你们谁会回答这个问题？",
+      "listening_pinyin": "Nǐmen shéi huì huídá zhè ge wèntí?",
+      "explanation": "Trong bài nghe hỏi: 'nǐmen shuí huì huídá zhège wèntí？' (Các em ai biết trả lời câu hỏi này?). Bức ảnh thể hiện học sinh giơ tay phát biểu nên đáp án là Đúng (√).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_02.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 3,
+      "type": "True/False",
+      "text": "Câu hỏi số 3",
+      "answer": "×",
+      "listening_script": "下雪了，表在外面玩儿。",
+      "listening_pinyin": "Xià xuě le, tāmen zài wàimian wánr.",
+      "explanation": "Trong bài nghe nói: 'xiàxuě le，biǎozài wàimiàn wánér。' (Tuyết rơi rồi, họ đang chơi ở ngoài trời). Bức ảnh miêu tả ba người cùng làm hình trái tim chứ không phải chơi dưới tuyết nên đáp án là Sai (×).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_03.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 4,
+      "type": "True/False",
+      "text": "Câu hỏi số 4",
+      "answer": "√",
+      "listening_script": "你想吃哪个苹果？",
+      "listening_pinyin": "Nǐ xiǎng chī nǎ ge píngguǒ?",
+      "explanation": "Trong bài nghe hỏi: 'nǐ xiǎng chī nǎge píngguǒ？' (Bạn muốn ăn quả táo nào?). Bức ảnh thể hiện người phụ nữ chống cằm nhìn các quả táo trên bàn nên đáp án là Đúng (√).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_04.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 5,
+      "type": "True/False",
+      "text": "Câu hỏi số 5",
+      "answer": "×",
+      "listening_script": "表在教室里，表在看书。",
+      "listening_pinyin": "Tā zài jiàoshì lǐ, tā zài kànshū.",
+      "explanation": "Trong bài nghe nói: 'biǎozài jiàoshì lǐ，biǎozài kànshū。' (Cô ấy ở trong lớp, cô ấy đang đọc sách). Nhưng bức ảnh miêu tả người phụ nữ nằm trên ghế sofa xem máy tính/máy đọc sách ở nhà nên đáp án là Sai (×).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_05.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 6,
+      "type": "True/False",
+      "text": "Câu hỏi số 6",
+      "answer": "×",
+      "listening_script": "我们今天有篮球课。",
+      "listening_pinyin": "Wǒmen jīntiān yǒu lánqiú kè.",
+      "explanation": "Trong bài nghe nói: 'wǒmen jīntiān yǒu lánqiú kè。' (Hôm nay chúng ta có tiết bóng rổ). Nhưng bức ảnh thể hiện cậu bé đang ôm quả bóng đá (soccer) nên đáp án là Sai (×).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_06.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 7,
+      "type": "True/False",
+      "text": "Câu hỏi số 7",
+      "answer": "√",
+      "listening_script": "你们两个听我说！",
+      "listening_pinyin": "Nǐmen liǎng ge tīng wǒ shuō!",
+      "explanation": "Trong bài nghe nói: 'nǐmen liǎnggè tīng wǒ shuō！' (Hai người nghe tôi nói đây!). Bức ảnh thể hiện hai người tranh cãi/nghe nói chuyện nên đáp án là Đúng (√).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_07.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 8,
+      "type": "True/False",
+      "text": "Câu hỏi số 8",
+      "answer": "√",
+      "listening_script": "他的狗坐在椅子上。",
+      "listening_pinyin": "Tā de gǒu zuò zài yǐzi shàng.",
+      "explanation": "Trong bài nghe nói: 'tā de gǒu zuòzài yǐzi shàng。' (Con chó của anh ấy ngồi trên ghế). Bức ảnh thể hiện chú chó ngồi trên ghế gỗ nên đáp án là Đúng (√).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_08.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 9,
+      "type": "True/False",
+      "text": "Câu hỏi số 9",
+      "answer": "×",
+      "listening_script": "要不要喝杯牛奶？",
+      "listening_pinyin": "Yào bú yào hē bēi niúnǎi?",
+      "explanation": "Trong bài nghe hỏi: 'yào búyào hēbēi niúnǎi？' (Có muốn uống ly sữa không?). Nhưng bức ảnh miêu tả hai bàn tay cụm ly rượu vang/champagne nên đáp án là Sai (×).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_09.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 1",
+      "question_no": 10,
+      "type": "True/False",
+      "text": "Câu hỏi số 10",
+      "answer": "√",
+      "listening_script": "丈夫开始学习做饭，她很高兴。",
+      "listening_pinyin": "Zhàngfu kāishǐ xuéxí zuòfàn, tā hěn gāoxìng.",
+      "explanation": "Trong bài nghe nói: 'zhàngfū kāishǐ xuéxí zuòfàn，tā hěn gāoxìng。' (Chồng bắt đầu học nấu ăn, cô ấy rất vui). Bức ảnh hai vợ chồng cùng nấu ăn trong bếp nên đáp án là Đúng (√).",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ],
+      "image": "images/q_10.webp"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 11,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 11",
+      "answer": "C",
+      "listening_script": "女：洗洗手准备吃饭。 男：我正在洗呢，怎么没水了？",
+      "listening_pinyin": "Xǐxǐ shǒu zhǔnbèi chīfàn. / Wǒ zhèngzài xǐ ne, zěnme méi shuǐ le?",
+      "explanation": "Bài nghe nhắc đến việc rửa tay chuẩn bị ăn cơm ('xǐxǐ shǒu zhǔnbèi chīfàn'). Đối chiếu với nhóm tranh A-F, bức tranh C thể hiện người đang rửa tay dưới vòi nước nên đáp án là C.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 12,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 12",
+      "answer": "E",
+      "listening_script": "男：你怎么了？生病了？ 女：没关系，我就是有点儿累。",
+      "listening_pinyin": "Nǐ zěnmeyàng le? Shēngbìng le? / Méi guānxi, wǒ jiùshì yǒudiǎnr lèi.",
+      "explanation": "Bài nghe nói về việc bị mệt ('yǒudiǎnér lèi'). Bức tranh E thể hiện người mệt mỏi nằm trên giường/ghế nên đáp án là E.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 13,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 13",
+      "answer": "B",
+      "listening_script": "女：谢谢你，多少钱？ 男：我看一下，是五十三元。",
+      "listening_pinyin": "Xièxie nǐ, duōshao qián? / Wǒ kàn yíxià, shì wǔshísān yuán.",
+      "explanation": "Bài nghe nói về việc thanh toán tiền ('shì wǔshísān yuán'). Bức tranh B thể hiện việc tính tiền/thanh toán hóa đơn nên đáp án là B.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 14,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 14",
+      "answer": "F",
+      "listening_script": "男：你们两个离电视太近了。 女：知道了，知道了。",
+      "listening_pinyin": "Nǐmen liǎng ge lí diànshì tài jìn le. / Zhīdào le, zhīdào le.",
+      "explanation": "Bài nghe nhắc nhở 'lí diànshì tàijìn le' (Ngồi quá gần tivi). Bức tranh F thể hiện hai em bé ngồi xem tivi gần màn hình nên đáp án là F.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 15,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 15",
+      "answer": "A",
+      "listening_script": "女：是不是不下雨了？ 男：不下雨了，天晴了。",
+      "listening_pinyin": "Shìbushì bú xià yǔ le? / Bú xià le, tiān qíng le.",
+      "explanation": "Bài nghe nói trời hết mưa, hửng nắng ('bùxiàyǔ le，tiānqíng le'). Bức tranh A thể hiện bầu trời nắng đẹp/dù che nên đáp án là A.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 16,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 16",
+      "answer": "D",
+      "listening_script": "男：你来看看，现在怎么样？ 女：右边有点儿高。",
+      "listening_pinyin": "Nǐ lái kànkan, xiànzài zěnmeyàng? / Yòubian yǒudiǎnr gāo.",
+      "explanation": "Bài nghe nói về việc treo khung tranh/chỉnh độ cao ('yòubiān yǒudiǎnér gāo'). Bức tranh D thể hiện hai người đang treo khung tranh lên tường nên đáp án là D.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 17,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 17",
+      "answer": "B",
+      "listening_script": "女：是你的手机吗？ 男：是，我找到它了！",
+      "listening_pinyin": "Shì nǐ de shǒujī ma? / Shì, wǒ zhǎodào tā le!",
+      "explanation": "Bài nghe nhắc đến tìm thấy điện thoại ('shì，wǒ zhǎodào tā le！'). Bức tranh B thể hiện người nam giơ cao chiếc điện thoại di động mừng rỡ nên đáp án là B.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 18,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 18",
+      "answer": "E",
+      "listening_script": "男：要不要我帮助你？ 女：好吧，这个路真不好走。",
+      "listening_pinyin": "Yào bú yào wǒ bāngzhù nǐ? / Hǎo ba, zhè ge lù zhēn bù hǎo zǒu.",
+      "explanation": "Bài nghe nói về việc leo đường khó đi và giúp đỡ ('zhège lùzhēn bùhǎo zǒu'). Bức tranh E thể hiện hai người leo núi giúp đỡ nhau nên đáp án là E.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 19,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 19",
+      "answer": "C",
+      "listening_script": "女：你让我再睡十分钟吧。 男：再睡十分钟？你看看几点了？",
+      "listening_pinyin": "Nǐ ràng wǒ zài shuì shí fēnzhōng ba. / Zài shuì shí fēnzhōng? Nǐ kànkan jǐ diǎn le?",
+      "explanation": "Bài nghe nhắc đến việc ngủ thêm 10 phút và xem đồng hồ báo thức ('zài shuì shífēnzhōng'). Bức tranh C thể hiện người nam cầm đồng hồ báo thức bên người nữ đang ngủ nên đáp án là C.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 2",
+      "question_no": 20,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 20",
+      "answer": "A",
+      "listening_script": "男：这是您女儿？已经六岁了！ 女：是，时间过得真快。",
+      "listening_pinyin": "Zhè shì nín nǚ'ér? Yǐjīng liù suì le! / Shì, shíjiān guò de zhēn kuài.",
+      "explanation": "Bài nghe nói về con gái 6 tuổi ('zhè shì nín nǚér？yǐjīng liùsuì le！'). Bức tranh A thể hiện người mẹ ôm con gái nhỏ nên đáp án là A.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 21,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 21",
+      "answer": "C",
+      "listening_script": "女：你那个朋友开出租车很多年了？ 男：是，他从七年前就开始开出租了。 问：表在说谁？",
+      "listening_pinyin": "Nǐ nà ge péngyou kāi chūzūchē hěn duō nián le? / Shì, tā cóng qī nián qián jiù kāishǐ kāi chūzū le. / Wèn: Tāmen zài shuō shéi?",
+      "explanation": "Người nữ hỏi 'nǐ nàge péngyǒu kāi chūzūchē hěnduōnián le？' (Bạn của bạn lái taxi nhiều năm rồi à?), đáp án chính xác là C (yígè péngyǒu).",
+      "options": [
+        "A 一个学生 (yí ge xuésheng)",
+        "B 一个同学 (yí ge tóngxué)",
+        "C 一个朋友 (yí ge péngyou)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 22,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 22",
+      "answer": "A",
+      "listening_script": "男：我们的电影票是下午几点的？ 女：我看看，是四点的。 问：他们下午四点做什么？",
+      "listening_pinyin": "Wǒmen de diànyǐngpiào shì xiàwǔ jǐ diǎn de? / Wǒ kànkan, shì sì diǎn de. / Wèn: Tāmen xiàwǔ sì diǎn zuò shénme?",
+      "explanation": "Người nam hỏi 'wǒmen de diànyǐngpiào shì xiàwǔ jǐdiǎn de？' và nữ đáp 'shì sìdiǎn de', như vậy lúc 4 giờ họ đi xem phim, đáp án là A (kàn diànyǐng).",
+      "options": [
+        "A 看电影 (kàn diànyǐng)",
+        "B 买电脑 (mǎi diànnǎo)",
+        "C 踢足球 (tī zúqiú)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 23,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 23",
+      "answer": "C",
+      "listening_script": "女：今天的报纸看了吗？ 男：我忙了一上午，没时间看。 问：男的是什么意思？",
+      "listening_pinyin": "Jīntiān de bàozhǐ kàn le ma? / Wǒ máng le yì shàngwǔ, méi shíjiān kàn. / Wèn: Nán de shì shénme yìsi?",
+      "explanation": "Người nam trả lời 'wǒ máng le yīshàngwǔ，méi shíjiān kàn' (Tôi bận cả sáng, không có thời gian xem), nghĩa là chưa xem báo. Đáp án là C (méi kàn bàozhǐ).",
+      "options": [
+        "A 天气太热 (tiānqì tài rè)",
+        "B 非常好吃 (fēicháng hǎochī)",
+        "C 没看报纸 (méi kàn bàozhǐ)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 24,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 24",
+      "answer": "B",
+      "listening_script": "男：我那件白色运动服呢？看见没？ 女：昨天晚上我洗了，穿别的可以吗？ 问：男的在找什么？",
+      "listening_pinyin": "Wǒ nà jiàn báisè yùndòngfú ne? Kànjiàn méi? / Zuótiān wǎnshang wǒ xǐ le, chuān bié de kěyǐ ma? / Wèn: Nán de zài zhǎo shénme?",
+      "explanation": "Người nam tìm 'báisè yùndòngfú' (Bộ đồ thể thao màu trắng), tức là tìm quần áo. Đáp án là B (yīfú).",
+      "options": [
+        "A 手机 (shǒujī)",
+        "B 衣服 (yīfu)",
+        "C 自行车 (zìxíngchē)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 25,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 25",
+      "answer": "C",
+      "listening_script": "女：我在路上买了一些水果，你去洗几个？ 男：我现在不想吃，我给你洗一个吧。 问：男的怎么了？",
+      "listening_pinyin": "Wǒ zài lù shang mǎi le yìxiē shuǐguǒ, nǐ qù xǐ jǐ ge? / Wǒ xiànzài bù xiǎng chī, wǒ gěi nǐ xǐ yí ge ba. / Wèn: Nán de zěnme le?",
+      "explanation": "Người nam nói 'wǒ xiànzài bùxiǎng chī' (Bây giờ tôi không muốn ăn), đáp án chọn C (bùxiǎng chī).",
+      "options": [
+        "A 想喝茶 (xiǎng hē chá)",
+        "B 觉得冷 (juéde lěng)",
+        "C 不想吃 (bù xiǎng chī)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 26,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 26",
+      "answer": "B",
+      "listening_script": "男：你男朋友是你的同学？ 女：不是，我和他是在中国旅游的时候认识的。 问：女的和男朋友是什么时候认识的？",
+      "listening_pinyin": "Nǐ nánpéngyou shì nǐ de tóngxué? / Búshì, wǒ hé tā shì zài Zhōngguó lǚyóu de shíhou rènshi de. / Wèn: Nǚ de hé nánpéngyou shì shénme shíhou rènshi de?",
+      "explanation": "Người nữ nói 'wǒ hé tā shì zài zhōngguó lǚyóu de shíhòu rènshí de' (Tôi và anh ấy quen nhau khi đi du lịch Trung Quốc), đáp án là B (lǚyóu).",
+      "options": [
+        "A 跳舞 (tiàowǔ)",
+        "B 旅游 (lǚyóu)",
+        "C 游泳 (yóuyǒng)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 27,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 27",
+      "answer": "A",
+      "listening_script": "女：今天你考得怎么样？ 男：没考好，后面的几个题我都不会做。 问：男的今天考得怎么样？",
+      "listening_pinyin": "Jīntiān nǐ kǎo de zěnmeyàng? / Méi kǎo hǎo, hòumiàn de jǐ ge tí wǒ dōu bú huì zuò. / Wèn: Nán de jīntiān kǎo de zěnmeyàng?",
+      "explanation": "Người nam nói 'méikǎo hǎo' (Thi không tốt), đáp án là A (bùhǎo).",
+      "options": [
+        "A 不好 (bù hǎo)",
+        "B 很好 (hěn hǎo)",
+        "C 比上次好 (bǐ shàng cì hǎo)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 28,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 28",
+      "answer": "C",
+      "listening_script": "男：再买些鸡蛋吧，家里可能没有了。 女：别买了，我中午已经买了五斤。 问：女的为什么不买鸡蛋？",
+      "listening_pinyin": "Zài mǎi xiē jīdàn ba, jiālǐ kěnéng méiyǒu le. / Bié mǎi le, wǒ zhōngwǔ yǐjīng mǎi le wǔ jīn. / Wèn: Nǚ de wèi shénme bù mǎi jīdàn?",
+      "explanation": "Người nữ bảo không mua nữa vì 'wǒ zhōngwǔ yǐjīng mǎi le wǔjīn' (Buổi trưa tôi đã mua 5 cân rồi), đáp án là C (yǐjīng mǎi le).",
+      "options": [
+        "A 太贵了 (tài guì le)",
+        "B 没钱了 (méi qián le)",
+        "C 已经买了 (yǐjīng mǎi le)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 29,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 29",
+      "answer": "B",
+      "listening_script": "女：张先生，你说的是哪本书？ 男：那本，不是左边，是右边那本。 问：他们说的是哪本书？",
+      "listening_pinyin": "Zhāng xiānnsheng, nǐ shuō de shì nǎ běn shū? / Nà běn, búshì zuǒbian, shì yòubian nà běn. / Wèn: Tāmen shuō de shì nǎ běn shū?",
+      "explanation": "Người nam chỉ rõ 'shì yòubiān nàběn' (Là cuốn bên phải), đáp án là B (yòubiān de).",
+      "options": [
+        "A 左边的 (zuǒbian de)",
+        "B 右边的 (yòubian de)",
+        "C 后边的 (hòubian de)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 3",
+      "question_no": 30,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 30",
+      "answer": "C",
+      "listening_script": "男：医生，这个药怎么吃？ 女：每天晚上睡觉前吃一次就可以了。 问：女的在哪儿工作？",
+      "listening_pinyin": "Yīshēng, zhè ge yào zěnme chī? / Měi tiān wǎnshang shuìjiào qián chī yí cì jiù kěyǐ le. / Wèn: Nǚ de zài nǎr gōngzuò?",
+      "explanation": "Người nam xưnghū 'yīshēng' (Bác sĩ) và hỏi cách uống thuốc, người nữ là bác sĩ làm việc ở bệnh viện, đáp án là C (yīyuàn).",
+      "options": [
+        "A 商店 (shāngdiàn)",
+        "B 机场 (jīchǎng)",
+        "C 医院 (yīyuàn)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 4",
+      "question_no": 31,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 31",
+      "answer": "A",
+      "listening_script": "男：你们学校有多少老师？ 女：两百多。 男：那学生呢？ 女：学生有三千多。 问：这个学校有多少老师？",
+      "listening_pinyin": "Nǐmen xuéxiào yǒu duōshao lǎoshī? / Liǎng bǎi duō. / Nà xuésheng ne? / Xuésheng yǒu sān qiān duō. / Wèn: Zhè ge xuéxiào yǒu duōshao lǎoshī?",
+      "explanation": "Bài nghe hỏi số lượng giáo viên ('yǒu duōshǎo lǎoshī？'), người nữ đáp 'liǎngbǎiduō' (Hơn 200), đáp án là A (200duō).",
+      "options": [
+        "A 200多 (200 duō) (200 duō   ( 200   du ō ))",
+        "B 400多 (400 duō) (400 duō   ( 400   du ō ))",
+        "C 1000多 (1000 duō) (1000 duō   ( 1000   du ō ))"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 4",
+      "question_no": 32,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 32",
+      "answer": "A",
+      "listening_script": "女：还没到吗？离公司太远了。 男：没呢，是很远。 女：你每天坐公共汽车去公司要多长时间？ 男：四十分钟吧。 问：他们最可能在哪儿？",
+      "listening_pinyin": "Hái méi dào ma? Lí gōngsī tài yuǎn le. / Méi ne, shì hěn yuǎn. / Nǐ měi tiān zuò gōnggòng qìchē qù gōngsī yào duō cháng shíjiān? / Sìshí fēnzhōng ba. / Wèn: Tāmen zuì kěnéng zài nǎr?",
+      "explanation": "Cuộc trò chuyện nhắc đến việc đi xe buýt ('zuò gōnggòngqìchē') và chưa tới nơi, họ đang ở trên xe. Đáp án là A (chēshàng).",
+      "options": [
+        "A 车上 (chē shang)",
+        "B 船上 (chuán shang)",
+        "C 飞机上 (fēijī shang)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 4",
+      "question_no": 33,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 33",
+      "answer": "B",
+      "listening_script": "男：喂，您好，刘先生在家吗？ 女：他不在家，他还没下班。 男：他几点下班？ 女：他五点下班。 男：那，好吧，我今天晚上再打电话。 问：刘先生几点下班？",
+      "listening_pinyin": "Wéi, nín hǎo, Liú xiānnsheng zài jiā ma? / Tā bú zài jiā, tā hái méi xiàbān. / Tā jǐ diǎn xiàbān? / Tā wǔ diǎn xiàbān. / Nà, hǎo ba, wǒ jīntiān wǎnshang zài dǎ diànhuà. / Wèn: Liú xiānnsheng jǐ diǎn xiàbān?",
+      "explanation": "Người nữ trả lời rõ 'tā wǔdiǎn xiàbān' (Ông ấy 5 giờ tan làm), đáp án là B (5diǎn).",
+      "options": [
+        "A 4点 (4 diǎn) (4 diǎn   ( 4   di ǎ n ))",
+        "B 5点 (5 diǎn) (5 diǎn   ( 5   di ǎ n ))",
+        "C 6点 (6 diǎn) (6 diǎn   ( 6   di ǎ n ))"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 4",
+      "question_no": 34,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 34",
+      "answer": "B",
+      "listening_script": "女：你妈妈现在身体怎么样？ 男：比去年好多了，她让我谢谢您。 女：不客气，你也帮我向她问好。 男：好的，谢谢您。 问：他妈妈现在怎么样？",
+      "listening_pinyin": "Nǐ māma xiànzài shēntǐ zěnmeyàng? / Bǐ qùnián hǎo duō le, tā ràng wǒ xièxie nín. / Bú kèqi, nǐ yě bāng wǒ xiàng tā wèn hǎo. / Hǎo de, xièxie nín. / Wèn: Tā māma xiànzài zěnmeyàng?",
+      "explanation": "Người nam trả lời sức khỏe mẹ 'bǐ qùnián hǎoduō le' (Tốt hơn năm ngoái nhiều), tức là sức khỏe tốt. Đáp án là B (shēntǐ bùcuò).",
+      "options": [
+        "A 爱说话 (ài shuōhuà)",
+        "B 身体不错 (shēntǐ bú cuò)",
+        "C 不是很高兴 (bù hěn gāoxìng)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Listening (听力)",
+      "part": "Part 4",
+      "question_no": 35,
+      "type": "Single Choice",
+      "text": "Câu hỏi số 35",
+      "answer": "A",
+      "listening_script": "男：一大桌子菜，我们吃得完吗？ 女：没问题，晚上我爸我妈来。 男：我说呢，你买了鱼还买羊肉。 女：快准备米饭吧。 问：女的为什么做了很多菜？",
+      "listening_pinyin": "Yí dà zhuōzi cài, wǒmen chī de wán ma? / Méi wèntí, wǎnshang wǒ bà wǒ mā lái. / Wǒ shuō ne, nǐ mǎi le yú hái mǎi yángròu. / Kuài zhǔnbèi mǐfàn ba. / Wèn: Nǚ de wèi shénme zuò le hěn duō cài?",
+      "explanation": "Người nữ giải thích làm nhiều thức ăn vì 'wǎnshàng wǒbà wǒ mālái' (Buổi tối bố mẹ tôi đến), đáp án là A (bàmā lái).",
+      "options": [
+        "A 爸妈来 (bà mā lái)",
+        "B 没米饭了 (méi mǐfàn le)",
+        "C 欢迎丈夫 (huānyíng zhàngfu)"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 1",
+      "question_no": 36,
+      "image": null,
+      "type": "Sentence Match",
+      "text": "你找我姐姐吗？她就坐在我旁边。",
+      "answer": "E",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_36.webp",
+      "board_image": "images/H21008_board_36_40.webp",
+      "explanation": "Câu thoại 'tā jiù zuòzài wǒ pángbiān' (Chị ấy ngồi ngay bên cạnh tôi) khớp với bức tranh E miêu tả hai người phụ nữ ngồi sát nhau nên đáp án là E.",
+      "listening_pinyin": null,
+      "pinyin": "Nǐ zhǎo wǒ jiějie ma? Tā jiù zuò zài wǒ pángbiān."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 1",
+      "question_no": 37,
+      "image": null,
+      "type": "Sentence Match",
+      "text": "喝杯咖啡，休息一下。",
+      "answer": "B",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_37.webp",
+      "board_image": "images/H21008_board_36_40.webp",
+      "explanation": "Câu thoại 'hēbēi kāfēi，xiūxī yīxià' (Uống ly cà phê nghỉ ngơi chút) khớp với bức tranh B miêu tả hai nữ nhân viên văn phòng cầm ly cà phê nên đáp án là B.",
+      "listening_pinyin": null,
+      "pinyin": "Hē bēi kāfēi, xiūxi yíxià."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 1",
+      "question_no": 38,
+      "image": null,
+      "type": "Sentence Match",
+      "text": "因为儿子病了，所以他没去上班。",
+      "answer": "F",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_38.webp",
+      "board_image": "images/H21008_board_36_40.webp",
+      "explanation": "Câu 'yīnwèi érzi bìng le' (Vì con trai bị ốm) khớp với bức tranh F miêu tả người bố đang đo nhiệt độ/chăm sóc con trai bị sốt nên đáp án là F.",
+      "listening_pinyin": null,
+      "pinyin": "Yīnwèi érzi bìng le, suǒyǐ tā méi qù shàngbān."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 1",
+      "question_no": 39,
+      "image": null,
+      "type": "Sentence Match",
+      "text": "今天是她的生日，大家送她很多东西。",
+      "answer": "A",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_39.webp",
+      "board_image": "images/H21008_board_36_40.webp",
+      "explanation": "Câu 'sòng tā hěnduō dōngxī' (Tặng cô ấy rất nhiều đồ) khớp với bức tranh A miêu tả cô gái ôm rất nhiều hộp quà sinh nhật nên đáp án là A.",
+      "listening_pinyin": null,
+      "pinyin": "Jīntiān shì tā de shēngrì, dàjiā sòng tā hěn duō dōngxi."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 1",
+      "question_no": 40,
+      "image": null,
+      "type": "Sentence Match",
+      "text": "女儿，你今天真是太漂亮了！",
+      "answer": "C",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_40.webp",
+      "board_image": "images/H21008_board_36_40.webp",
+      "explanation": "Câu 'nǚér，nǐ jīntiān zhēnshì tàipiàoliàng le！' (Con gái, hôm nay con thật là đẹp!) khớp với bức tranh C miêu tả người mẹ ngắm nghía con gái mặc váy cưới xinh đẹp nên đáp án là C.",
+      "listening_pinyin": null,
+      "pinyin": "Nǚ'ér, nǐ jīntiān zhēn shì tài piàoliang le!"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 2",
+      "question_no": 41,
+      "image": null,
+      "type": "Fill in Blank",
+      "text": "爸爸，您说得太（ ），我没听懂。",
+      "answer": "F",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_41.webp",
+      "options": [
+        "A: 快乐 (kuàilè)",
+        "B: 但是 (dànshì)",
+        "C: 到 (dào)",
+        "D: 眼睛 (yǎnjing)",
+        "E: 贵 (guì)",
+        "F: 快 (kuài)"
+      ],
+      "board_image": null,
+      "explanation": "Cần điền tính từ bổ nghĩa cho hành động nói quá nhanh không nghe hiểu, chọn F (kuài - kuài).",
+      "listening_pinyin": null,
+      "pinyin": "Bàba, nín shuō de tài ( ), wǒ méi tīngdǒng."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 2",
+      "question_no": 42,
+      "image": null,
+      "type": "Fill in Blank",
+      "text": "小猫的（ ）是什么颜色的？",
+      "answer": "D",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_42.webp",
+      "options": [
+        "A: 快乐 (kuàilè)",
+        "B: 但是 (dànshì)",
+        "C: 到 (dào)",
+        "D: 眼睛 (yǎnjing)",
+        "E: 贵 (guì)",
+        "F: 快 (kuài)"
+      ],
+      "board_image": null,
+      "explanation": "Hỏi màu sắc bộ phận của con mèo, chọn danh từ D (yǎnjīng - yǎnjing).",
+      "listening_pinyin": null,
+      "pinyin": "Xiǎo māo de ( ) shì shénme yánsè de?"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 2",
+      "question_no": 43,
+      "image": null,
+      "type": "Fill in Blank",
+      "text": "我知道那个女孩子姓张，（ ）不知道她叫什么。",
+      "answer": "B",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_43.webp",
+      "options": [
+        "A: 快乐 (kuàilè)",
+        "B: 但是 (dànshì)",
+        "C: 到 (dào)",
+        "D: 眼睛 (yǎnjing)",
+        "E: 贵 (guì)",
+        "F: 快 (kuài)"
+      ],
+      "board_image": null,
+      "explanation": "Biểu thị quan hệ chuyển ngoặt 'biết họ nhưng không biết tên', chọn liên từ B (dànshì - dànshì).",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ zhīdào nà ge nǚháizi xìng Zhāng, ( ) bù zhīdào tā jiào shénme."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 2",
+      "question_no": 44,
+      "image": null,
+      "type": "Fill in Blank",
+      "text": "妻子觉得读书是一件（ ）的事情。",
+      "answer": "A",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_44.webp",
+      "options": [
+        "A: 快乐 (kuàilè)",
+        "B: 但是 (dànshì)",
+        "C: 到 (dào)",
+        "D: 眼睛 (yǎnjing)",
+        "E: 贵 (guì)",
+        "F: 快 (kuài)"
+      ],
+      "board_image": null,
+      "explanation": "Cần tính từ miêu tả việc đọc sách mang lại cảm giác vui vẻ, chọn A (kuàilè - kuàilè).",
+      "listening_pinyin": null,
+      "pinyin": "Qīzi juéde dúshū shì yí jiàn ( ) de shìqing."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 2",
+      "question_no": 45,
+      "image": null,
+      "type": "Fill in Blank",
+      "text": "女：今天就（ ）这儿吧，我们明天见。 男：好的，再见。",
+      "answer": "C",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_45.webp",
+      "options": [
+        "A: 快乐 (kuàilè)",
+        "B: 但是 (dànshì)",
+        "C: 到 (dào)",
+        "D: 眼睛 (yǎnjing)",
+        "E: 贵 (guì)",
+        "F: 快 (kuài)"
+      ],
+      "board_image": null,
+      "explanation": "Cấu trúc 'dào zhèér' (đến đây thôi/kết thúc tại đây), chọn động từ C (dào - dào).",
+      "listening_pinyin": null,
+      "pinyin": "Nǚ: Jīntiān jiù ( ) zhèr ba, wǒmen míngtiān jiàn. Nán: Hǎo de, zàijiàn."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 3",
+      "question_no": 46,
+      "image": null,
+      "type": "True/False",
+      "text": "前面卖西瓜，很便宜，很好吃，我们买一个吧。\n★ 西瓜不贵。",
+      "answer": "√",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_46.webp",
+      "board_image": null,
+      "explanation": "Đoạn văn ghi 'hěn piányi' (Rất rẻ), nhận định 'xīguā bù guì' (Dưa hấu không đắt) là chính xác nên đáp án là Đúng (√).",
+      "listening_pinyin": null,
+      "pinyin": "Qiánmiàn mài xīguā, hěn piányi, yě hěn hǎochī, wǒmen mǎi yí ge ba.\n★ Xīguā bú guì.",
+      "statement_pinyin": "xīguā bù guì.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 3",
+      "question_no": 47,
+      "image": null,
+      "type": "True/False",
+      "text": "我还在火车上的时候，朋友们就打电话告诉我，他们一个小时前就到火车站了。\n★ 朋友们在等他。",
+      "answer": "√",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_47.webp",
+      "board_image": null,
+      "explanation": "Bạn bè đã đến ga tàu từ 1 tiếng trước khi nhân vật còn ở trên tàu, nghĩa là họ đang đợi nhân vật. Nhận định 'péngyǒu men zài děng tā' là Đúng (√).",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ hái zài huǒchē shang de shíhou, péngyoumen jiù dǎ diànhuà gàosu wǒ, tāmen yí ge xiǎoshí qián jiù dào huǒchēzhàn le.\n★ Péngyoumen zài děng tā.",
+      "statement_pinyin": "péngyǒu men zài děng tā.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 3",
+      "question_no": 48,
+      "image": null,
+      "type": "True/False",
+      "text": "早上，妹妹说：“今天阴天，外面太冷，我就在家看看书、看看电视。”\n★ 妹妹今天不想出门。",
+      "answer": "√",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_48.webp",
+      "board_image": null,
+      "explanation": "Em gái nói ngoài trời lạnh nên ở nhà xem sách xem tivi, trùng khớp với nhận định 'mèimèi jīntiān bùxiǎng chūmén' (Em gái hôm nay không muốn ra ngoài) nên đáp án là Đúng (√).",
+      "listening_pinyin": null,
+      "pinyin": "Zǎoshang, mèimei shuō: \"Jīntiān yīntiān, wàimian tài lěng, wǒ jiù zài jiā kànkan shū, kànkan diànshì.\"\n★ Mèimei jīntiān bù xiǎng chūmén.",
+      "statement_pinyin": "mèimèi jīntiān bùxiǎng chūmén.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 3",
+      "question_no": 49,
+      "image": null,
+      "type": "True/False",
+      "text": "要想快乐，第一，要有好身体，第二，要有你爱的人和爱你的，第三，要做你喜欢的工作。\n★ 每个人都很快乐。",
+      "answer": "×",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_49.webp",
+      "board_image": null,
+      "explanation": "Đoạn văn nêu 3 điều kiện để có được hạnh phúc chứ không khẳng định mọi người đều hạnh phúc. Nhận định 'měigè rén dōu hěn kuàilè' là Sai (×).",
+      "listening_pinyin": null,
+      "pinyin": "Yào xiǎng kuàilè, dì-yī, yào yǒu hǎo shēntǐ, dì-èr, yào yǒu nǐ ài de rén hé ài nǐ de, dì-sān, yào zuò nǐ xǐhuan de gōngzuò.\n★ Měi ge rén dōu hěn kuàilè.",
+      "statement_pinyin": "měigè rén dōu hěn kuàilè.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 3",
+      "question_no": 50,
+      "image": null,
+      "type": "True/False",
+      "text": "我每天都去那个饭馆儿吃饭。我走进饭馆儿，服务员就会笑着对 me 说：“王小姐，您来了。”\n★ 谁也不认识王小姐。",
+      "answer": "×",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_50.webp",
+      "board_image": null,
+      "explanation": "Phục vụ quán ăn mỉm cười chào đích danh 'Cô Vương', chứng tỏ quán ăn biết cô Vương. Nhận định 'shuí yě bù rènshí wángxiǎojiě' (Không ai quen cô Vương) là Sai (×).",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ měi tiān dōu qù nà ge fànguǎnr chīfàn. Wǒ zǒujìn fànguǎnr, fúwùyuán jiù huì xiàozhe duì wǒ shuō: \"Wáng xiǎojiě, nín lái le.\"\n★ Shéi yě bù rènshi Wáng xiǎojiě.",
+      "statement_pinyin": "shuí yě bù rènshí wángxiǎojiě.",
+      "options": [
+        "√ Đúng",
+        "× Sai"
+      ]
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 51,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "手表昨天慢了10分钟，现在慢19分钟。",
+      "answer": "A",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_51.webp",
+      "options": [
+        "A: 去买块新的吧，好不好？ (Qù mǎi kuài xīn de ba, hǎobuhǎo?)",
+        "B: 我准备星期六、星期日出去玩儿。(Wǒ zhǔnbèi xīngqīliù, xīngqīrì chūqù wánr.)",
+        "C: 这个房间怎么样？ (Zhè ge fángjiān zěnmeyàng?)",
+        "D: 我们认识，一起来打篮球吧。(Wǒmen rènshi, yìqǐ lái dǎ lánqiú ba.)",
+        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F: 你的名字是哪两个字？ (Nǐ de míngzi shì nǎ liǎng ge zì?)"
+      ],
+      "board_image": null,
+      "explanation": "Nói về đồng hồ đeo tay chạy chậm ngày càng nhiều, phương án ghép hợp lý là A (Khuyên đi mua cái đồng hồ mới).",
+      "listening_pinyin": null,
+      "pinyin": "Shǒubiǎo zuótiān màn le 10 fēnzhōng, xiànzài màn 19 fēnzhōng."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 52,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "能在这张纸上写一下吗？",
+      "answer": "F",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_52.webp",
+      "options": [
+        "A: 去买块新的吧，好不好？ (Qù mǎi kuài xīn de ba, hǎobuhǎo?)",
+        "B: 我准备星期六、星期日出去玩儿。(Wǒ zhǔnbèi xīngqīliù, xīngqīrì chūqù wánr.)",
+        "C: 这个房间怎么样？ (Zhè ge fángjiān zěnmeyàng?)",
+        "D: 我们认识，一起来打篮球吧。(Wǒmen rènshi, yìqǐ lái dǎ lánqiú ba.)",
+        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F: 你的名字是哪两个字？ (Nǐ de míngzi shì nǎ liǎng ge zì?)"
+      ],
+      "board_image": null,
+      "explanation": "Yêu cầu viết ra giấy, câu đáp hợp lý là F (Hỏi tên viết bằng hai chữ nào).",
+      "listening_pinyin": null,
+      "pinyin": "Néng zài zhè zhāng zhǐ shang xiě yíxià ma?"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 53,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "希望那两天不要下雨。",
+      "answer": "B",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_53.webp",
+      "options": [
+        "A: 去买块新的吧，好不好？ (Qù mǎi kuài xīn de ba, hǎobuhǎo?)",
+        "B: 我准备星期六、星期日出去玩儿。(Wǒ zhǔnbèi xīngqīliù, xīngqīrì chūqù wánr.)",
+        "C: 这个房间怎么样？ (Zhè ge fángjiān zěnmeyàng?)",
+        "D: 我们认识，一起来打篮球吧。(Wǒmen rènshi, yìqǐ lái dǎ lánqiú ba.)",
+        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F: 你的名字是哪两个字？ (Nǐ de míngzi shì nǎ liǎng ge zì?)"
+      ],
+      "board_image": null,
+      "explanation": "Nói về hy vọng 2 ngày đó không mưa, kết hợp hợp lý với B (Dự định thứ Bảy, Chủ Nhật đi chơi).",
+      "listening_pinyin": null,
+      "pinyin": "Xīwàng nà liǎng tiān bú yào xià yǔ."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 54,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "我一个人住，会不会太大了？",
+      "answer": "C",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_54.webp",
+      "options": [
+        "A: 去买块新的吧，好不好？ (Qù mǎi kuài xīn de ba, hǎobuhǎo?)",
+        "B: 我准备星期六、星期日出去玩儿。(Wǒ zhǔnbèi xīngqīliù, xīngqīrì chūqù wánr.)",
+        "C: 这个房间怎么样？ (Zhè ge fángjiān zěnmeyàng?)",
+        "D: 我们认识，一起来打篮球吧。(Wǒmen rènshi, yìqǐ lái dǎ lánqiú ba.)",
+        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F: 你的名字是哪两个字？ (Nǐ de míngzi shì nǎ liǎng ge zì?)"
+      ],
+      "board_image": null,
+      "explanation": "Hỏi về quy mô một người ở có to quá không, ghép hợp lý với câu C (Căn phòng này thế nào?).",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ yí ge rén zhù, huìbuhuì tài dà le?"
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 55,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "我给你们介绍过吗？这是我弟弟。",
+      "answer": "D",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_55.webp",
+      "options": [
+        "A: 去买块新的吧，好不好？ (Qù mǎi kuài xīn de ba, hǎobuhǎo?)",
+        "B: 我准备星期六、星期日出去玩儿。(Wǒ zhǔnbèi xīngqīliù, xīngqīrì chūqù wánr.)",
+        "C: 这个房间怎么样？ (Zhè ge fángjiān zěnmeyàng?)",
+        "D: 我们认识，一起来打篮球吧。(Wǒmen rènshi, yìqǐ lái dǎ lánqiú ba.)",
+        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F: 你的名字是哪两个字？ (Nǐ de míngzi shì nǎ liǎng ge zì?)"
+      ],
+      "board_image": null,
+      "explanation": "Giới thiệu em trai với mọi người, câu đáp hợp lý là D (Chúng tôi quen nhau rồi, cùng đá bóng/chơi bóng rổ nào).",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ gěi nǐmen jièshàoguo ma? Zhè shì wǒ dìdi."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 56,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "没问题，我的汉语学得最好。",
+      "answer": "A",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_56.webp",
+      "options": [
+        "A: 15号的考试准备得怎么样了？ (Shíbǔ hào de kǎoshì zhǔnbèi de zěnmeyàng le?)",
+        "B: 妈，他已经跑步回来了。(Mā, tā yǐjīng pǎobù huílái le.)",
+        "C: 你在北京多长时间了？ (Nǐ zài Běijīng duō cháng shíjiān le?)",
+        "D: 对不起，请等一下，这就给您送米。(Duìbuqǐ, qǐng děng yíxià, zhè jiù gěi nín sòng mǐ.)",
+        "E: 这件红色的不错，比黑的好看。(Zhè jiàn hóngsè de búcuò, bǐ hēi de hǎokàn.)"
+      ],
+      "board_image": null,
+      "explanation": "Trả lời tự tin không vấn đề gì vì học tiếng Trung tốt nhất, đối ứng với câu hỏi A (Kỳ thi ngày 15 chuẩn bị thế nào rồi?).",
+      "listening_pinyin": null,
+      "pinyin": "Méi wèntí, wǒ de Hànyǔ xué de zuì hǎo."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 57,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "服务员，我们还少两个杯子。",
+      "answer": "D",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_57.webp",
+      "options": [
+        "A: 15号的考试准备得怎么样了？ (Shíbǔ hào de kǎoshì zhǔnbèi de zěnmeyàng le?)",
+        "B: 妈，他已经跑步回来了。(Mā, tā yǐjīng pǎobù huílái le.)",
+        "C: 你在北京多长时间了？ (Nǐ zài Běijīng duō cháng shíjiān le?)",
+        "D: 对不起，请等一下，这就给您送米。(Duìbuqǐ, qǐng děng yíxià, zhè jiù gěi nín sòng mǐ.)",
+        "E: 这件红色的不错，比黑的好看。(Zhè jiàn hóngsè de búcuò, bǐ hēi de hǎokàn.)"
+      ],
+      "board_image": null,
+      "explanation": "Nói với phục viên quán ăn về việc thiếu ly, câu đáp hợp lý là D (Xin lỗi xin chờ chút, tôi mang ra ngay).",
+      "listening_pinyin": null,
+      "pinyin": "Fúwùyuán, wǒmen hái shǎo liǎng ge bēizi."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 58,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "我是2007年8月来这儿的。",
+      "answer": "C",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_58.webp",
+      "options": [
+        "A: 15号的考试准备得怎么样了？ (Shíbǔ hào de kǎoshì zhǔnbèi de zěnmeyàng le?)",
+        "B: 妈，他已经跑步回来了。(Mā, tā yǐjīng pǎobù huílái le.)",
+        "C: 你在北京多长时间了？ (Nǐ zài Běijīng duō cháng shíjiān le?)",
+        "D: 对不起，请等一下，这就给您送米。(Duìbuqǐ, qǐng děng yíxià, zhè jiù gěi nín sòng mǐ.)",
+        "E: 这件红色的不错，比黑的好看。(Zhè jiàn hóngsè de búcuò, bǐ hēi de hǎokàn.)"
+      ],
+      "board_image": null,
+      "explanation": "Trả lời thời gian đến đây từ tháng 8/2007, đáp ứng cho câu hỏi C (Bạn ở Bắc Kinh bao lâu rồi?).",
+      "listening_pinyin": null,
+      "pinyin": "Wǒ shì èrlínglíngqī nián bā yuè lái zhèr de."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 59,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "她们正在那儿买东西。",
+      "answer": "E",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_59.webp",
+      "options": [
+        "A: 15号的考试准备得怎么样了？ (Shíbǔ hào de kǎoshì zhǔnbèi de zěnmeyàng le?)",
+        "B: 妈，他已经跑步回来了。(Mā, tā yǐjīng pǎobù huílái le.)",
+        "C: 你在北京多长时间了？ (Nǐ zài Běijīng duō cháng shíjiān le?)",
+        "D: 对不起，请等一下，这就给您送米。(Duìbuqǐ, qǐng děng yíxià, zhè jiù gěi nín sòng mǐ.)",
+        "E: 这件红色的不错，比黑的好看。(Zhè jiàn hóngsè de búcuò, bǐ hēi de hǎokàn.)"
+      ],
+      "board_image": null,
+      "explanation": "Nói về việc họ đang mua đồ ở đằng kia, ghép hợp lý với E (Chiếc màu đỏ này không tệ, đẹp hơn chiếc màu đen).",
+      "listening_pinyin": null,
+      "pinyin": "Tāmen zhèngzài nàr mǎi dōngxi."
+    },
+    {
+      "exam_code": "H21008",
+      "section": "Reading (阅读)",
+      "part": "Part 4",
+      "question_no": 60,
+      "image": null,
+      "type": "Dialogue Match",
+      "text": "你哥哥起床了没有？",
+      "answer": "B",
+      "listening_script": null,
+      "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21008/images/H21008_img_60.webp",
+      "options": [
+        "A: 15号的考试准备得怎么样了？ (Shíbǔ hào de kǎoshì zhǔnbèi de zěnmeyàng le?)",
+        "B: 妈，他已经跑步回来了。(Mā, tā yǐjīng pǎobù huílái le.)",
+        "C: 你在北京多长时间了？ (Nǐ zài Běijīng duō cháng shíjiān le?)",
+        "D: 对不起，请等一下，这就给您送米。(Duìbuqǐ, qǐng děng yíxià, zhè jiù gěi nín sòng mǐ.)",
+        "E: 这件红色的不错，比黑的好看。(Zhè jiàn hóngsè de búcuò, bǐ hēi de hǎokàn.)"
+      ],
+      "board_image": null,
+      "explanation": "Hỏi anh trai đã dậy chưa, đáp án hợp lý là B (Mẹ ơi, anh ấy chạy bộ về rồi).",
+      "listening_pinyin": null,
+      "pinyin": "Nǐ gēge qǐchuáng le méiyǒu?"
+    }
+  ],
+  "exam_code": "H21008",
+  "audio_mp3": "H21008_audio.mp3",
+  "audio_ogg": "H21008_audio.ogg",
+  "images_count": 22
+};

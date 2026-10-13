@@ -1,9 +1,6 @@
 <script lang="ts">
-  import r2MapData from '#lib/data/r2FallbackMap.json';
-  import imgbbMapData from '#lib/data/imgbbFallbackMap.json';
-
-  const r2Map = r2MapData as Record<string, string>;
-  const imgbbMap = imgbbMapData as Record<string, string>;
+  import { R2_FALLBACK_MAP as r2Map } from '#lib/data/r2FallbackMap';
+  import { IMGBB_FALLBACK_MAP as imgbbMap } from '#lib/data/imgbbFallbackMap';
 
   interface Props {
     src?: string;

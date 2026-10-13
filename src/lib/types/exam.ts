@@ -11,6 +11,7 @@ export interface QuestionItem {
   question_no: number;
   type: string; // 'True/False' | 'Image Match' | 'Multiple Choice'...
   image?: string | null;
+  image_url?: string | null;
   board_image?: string | null;
   answer?: string; // '√', '×', 'A', 'B', 'C', 'D', 'E', 'F'
   listening_script?: string | null;
@@ -30,7 +31,13 @@ export interface ExamDetail {
   audio_ogg?: string | null;
   audio_mp3?: string | null;
   audio_url?: string | null;
+  audio_mp3_url?: string | null;
   images_count?: number;
+  id?: string | number;
+  code?: string;
+  level?: string | number;
+  duration?: number | string;
+  has_audio?: boolean;
   questions: QuestionItem[];
 }
 
