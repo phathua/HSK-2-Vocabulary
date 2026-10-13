@@ -48,7 +48,7 @@
       <DictionarySearchBar
         autoFocus={true}
         onSelectWord={handleSelectWord}
-        placeholder="Spotlight: Tra từ bằng Chữ Hán, Pinyin, Hán Việt hoặc Tiếng Việt..."
+        placeholder="Tra từ bằng Chữ Hán, Pinyin, Hán Việt hoặc Tiếng Việt..."
       />
 
       <!-- Nút đóng nhanh ở góc trên cùng bên phải -->

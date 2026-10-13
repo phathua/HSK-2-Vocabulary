@@ -68,9 +68,9 @@
         border: 'border-rose-200 dark:border-rose-800/60'
       };
     }
-    // Mặc định hoặc Trang chủ: Từ vựng (Phương án 2)
+    // Mặc định hoặc Trang chủ: Ôn tập
     return {
-      title: 'Từ vựng',
+      title: 'Ôn tập',
       icon: BookOpenText,
       bg: 'bg-blue-500/10 dark:bg-blue-500/20',
       text: 'text-blue-600 dark:text-blue-400',
@@ -143,12 +143,12 @@
         <PageIcon weight="duotone" class="w-5 h-5" />
       </div>
 
-      <div class="flex items-center gap-1.5 leading-tight min-w-0">
+      <div class="flex flex-col text-left leading-tight min-w-0">
         <span class="font-black text-sm text-slate-900 dark:text-[#E3E3E3] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors whitespace-nowrap">
           {activePageInfo.title}
         </span>
         {#if isHomePage}
-          <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-[#8E918F] truncate mt-0.5">
             {isExamRoom ? 'HSK 2' : appState.currentLevelDisplay}
           </span>
         {/if}

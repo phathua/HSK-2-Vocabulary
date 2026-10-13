@@ -16,7 +16,7 @@
 
   const menuItems = [
     {
-      title: 'Từ vựng',
+      title: 'Ôn tập',
       subtitle: 'Luyện 4 kỹ năng & thẻ nhớ',
       href: '/',
       icon: BookOpenText,
