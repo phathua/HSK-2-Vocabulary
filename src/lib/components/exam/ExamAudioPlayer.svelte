@@ -17,13 +17,23 @@
 
   interface Props {
     audioSrc?: string | null;
+    audioMp3Src?: string | null;
+    audioOggSrc?: string | null;
     examCode: string;
     isExamMode?: boolean; // In official exam mode: 60s preview -> auto-play non-stoppable
     listeningQuestions?: QuestionItem[];
     currentQuestionNo?: number;
   }
 
-  let { audioSrc = null, examCode, isExamMode = false, listeningQuestions = [], currentQuestionNo = 1 }: Props = $props();
+  let {
+    audioSrc = null,
+    audioMp3Src = null,
+    audioOggSrc = null,
+    examCode,
+    isExamMode = false,
+    listeningQuestions = [],
+    currentQuestionNo = 1
+  }: Props = $props();
 
   let audioElement: HTMLAudioElement | undefined = $state();
   let cardElement: HTMLElement | undefined = $state();
@@ -31,8 +41,10 @@
   let currentTime = $state(0);
   let duration = $state(0);
   let isSticky = $state(false);
+  let isAutoplayBlocked = $state(false);
+  let hasFallbackAttempted = $state(false);
 
-  import { getExamAudioUrl, R2_PUBLIC_BASE_URL } from '#lib/utils/examAssets';
+  import { getExamAudioSources, R2_PUBLIC_BASE_URL } from '#lib/utils/examAssets';
   import { fetchSrt, type SubtitleItem } from '#lib/utils/srtParser';
 
   // 60s preview countdown state
@@ -97,9 +109,33 @@
     return listeningQuestions.filter((q) => q.part === activeTranscriptPart);
   });
 
-  const resolvedSrc = $derived.by(() => {
-    return getExamAudioUrl(examCode, audioSrc);
+  const audioSources = $derived.by(() => {
+    return getExamAudioSources(examCode, audioOggSrc || audioSrc, audioMp3Src);
   });
+
+  let activeAudioSrc = $state('');
+
+  $effect(() => {
+    if (audioSources.primaryUrl && (!activeAudioSrc || !hasFallbackAttempted)) {
+      activeAudioSrc = audioSources.primaryUrl;
+    }
+  });
+
+  function handleAudioError(e: Event) {
+    console.warn('Audio playback/load error detected:', e);
+    if (!hasFallbackAttempted && audioSources.fallbackUrl && activeAudioSrc !== audioSources.fallbackUrl) {
+      console.info('Switching audio to fallback format:', audioSources.fallbackUrl);
+      hasFallbackAttempted = true;
+      activeAudioSrc = audioSources.fallbackUrl;
+      if (audioElement) {
+        audioElement.src = audioSources.fallbackUrl;
+        audioElement.load();
+        if (isPlaying) {
+          audioElement.play().catch(console.warn);
+        }
+      }
+    }
+  }
 
   function startAudioPlayback() {
     if (previewTimer) {
@@ -110,17 +146,21 @@
     previewSeconds = 0;
     examRoomState.isPreviewPhase = false;
     examRoomState.previewSeconds = 0;
+    isAutoplayBlocked = false;
 
     if (audioElement) {
       neutralizeMediaSession();
       audioElement.play().then(() => {
         isPlaying = true;
+        isAutoplayBlocked = false;
         examRoomState.isPlaying = true;
         neutralizeMediaSession();
       }).catch((e) => {
         console.warn('Audio autoplay failed or blocked by browser:', e);
         isPlaying = false;
         examRoomState.isPlaying = false;
+        // Kích hoạt cờ bị chặn autoplay trên iOS WebKit để hiện nút tương tác
+        isAutoplayBlocked = true;
       });
     }
   }
@@ -188,23 +228,17 @@
             album: 'HSK Online Listening'
           });
 
-          // Mẹo Live Stream Masking: Đặt duration vô hạn để iOS Safari ẩn thanh tua (scrubber knob)
+          // Mẹo an toàn cho iOS Safari: chỉ cập nhật position state khi duration là số hữu hạn
           if ('setPositionState' in navigator.mediaSession) {
             try {
-              navigator.mediaSession.setPositionState({
-                duration: Infinity,
-                playbackRate: 1,
-                position: 0
-              });
-            } catch {
-              try {
+              if (Number.isFinite(duration) && duration > 0) {
                 navigator.mediaSession.setPositionState({
-                  duration: Number.MAX_SAFE_INTEGER,
+                  duration: duration,
                   playbackRate: 1,
-                  position: 0
+                  position: Math.min(currentTime, duration)
                 });
-              } catch {}
-            }
+              }
+            } catch {}
           }
         } else {
           navigator.mediaSession.metadata = new MediaMetadata({
@@ -338,6 +372,17 @@
     window.addEventListener('blur', handleWindowBlur);
     window.addEventListener('focus', handleWindowFocus);
 
+    // Cơ chế mở khóa sớm (Audio Unlocking) cho iOS Safari khi chạm màn hình
+    const handleFirstTouch = () => {
+      if (audioElement && audioElement.readyState === 0) {
+        audioElement.load();
+      }
+      window.removeEventListener('touchstart', handleFirstTouch);
+      window.removeEventListener('pointerdown', handleFirstTouch);
+    };
+    window.addEventListener('touchstart', handleFirstTouch, { passive: true, once: true });
+    window.addEventListener('pointerdown', handleFirstTouch, { passive: true, once: true });
+
     return () => {
       if (mainScrollContainer) {
         mainScrollContainer.removeEventListener('scroll', handleScroll);
@@ -345,6 +390,8 @@
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('blur', handleWindowBlur);
       window.removeEventListener('focus', handleWindowFocus);
+      window.removeEventListener('touchstart', handleFirstTouch);
+      window.removeEventListener('pointerdown', handleFirstTouch);
     };
   });
 
@@ -433,7 +480,7 @@
   }
 </script>
 
-{#if audioSrc}
+{#if audioSrc || audioMp3Src || audioOggSrc}
   <!-- Audio Sticky Bar: Luôn ghim top-0 của main container, tự động co gọn khi cuộn -->
   <div
     bind:this={cardElement}
@@ -449,6 +496,17 @@
             class="rounded-full bg-orange-600 hover:bg-orange-700 active:scale-95 text-white flex items-center justify-center shrink-0 shadow-sm cursor-pointer transition-all {isScrolled ? 'w-7 h-7 sm:w-8 sm:h-8' : 'w-8 h-8 sm:w-9 sm:h-9'}"
             title="Đang xem trước 60s. Bấm để phát audio ngay!"
             aria-label="Phát audio ngay"
+          >
+            <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} translate-x-[1.5px]`} />
+          </button>
+        {:else if isExamMode && !isPreviewPhase && !isPlaying}
+          <!-- Trường hợp hết 60s xem trước nhưng bị iOS chặn tự động phát -->
+          <button
+            type="button"
+            onclick={startAudioPlayback}
+            class="rounded-full bg-orange-600 hover:bg-orange-700 active:scale-95 text-white flex items-center justify-center shrink-0 shadow-sm cursor-pointer transition-all animate-pulse {isScrolled ? 'w-7 h-7 sm:w-8 sm:h-8' : 'w-8 h-8 sm:w-9 sm:h-9'}"
+            title="Bấm để phát bài thi nghe ngay!"
+            aria-label="Bấm phát bài thi nghe"
           >
             <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} translate-x-[1.5px]`} />
           </button>
@@ -560,6 +618,25 @@
       </div>
     {/if}
 
+    <!-- Cảnh báo khi bị iOS chặn tự động phát sau 60s xem trước đề -->
+    {#if isAutoplayBlocked && !isPlaying}
+      <div
+        class="mt-1.5 sm:mt-2 p-1.5 sm:p-2 rounded-xl bg-orange-50 dark:bg-orange-950/70 border border-orange-200 dark:border-orange-800/80 flex items-center justify-between gap-2 animate-in fade-in duration-200"
+      >
+        <div class="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-orange-800 dark:text-orange-200 min-w-0">
+          <SpeakerHigh weight="fill" class="w-3.5 h-3.5 text-orange-600 shrink-0 animate-bounce" />
+          <span class="truncate">Trình duyệt chặn tự động phát. Chạm để bắt đầu nghe:</span>
+        </div>
+        <button
+          type="button"
+          onclick={startAudioPlayback}
+          class="px-2.5 py-1 rounded-lg bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold text-[11px] shrink-0 cursor-pointer shadow-xs transition-transform"
+        >
+          Phát ngay
+        </button>
+      </div>
+    {/if}
+
     <!-- Khung Subtitle Overlay gắn liền trực tiếp ngay dưới Audio Player (Word-by-word Karaoke) -->
     {#if showSubtitleOverlay && currentQuestionNo <= 35}
       {#if isPreviewPhase}
@@ -634,15 +711,17 @@
       {/if}
     {/if}
 
-    <!-- Thẻ Audio ẩn -->
+    <!-- Thẻ Audio ẩn với cơ chế fallback tương thích toàn diện iOS/Safari/Android/PC -->
     <audio
       bind:this={audioElement}
-      src={resolvedSrc}
+      src={activeAudioSrc || audioSources.primaryUrl}
       ontimeupdate={handleTimeUpdate}
       onloadedmetadata={handleLoadedMetadata}
       onseeking={handleSeeking}
       onended={handleEnded}
+      onerror={handleAudioError}
       preload="auto"
+      playsinline
     ></audio>
   </div>
 {/if}

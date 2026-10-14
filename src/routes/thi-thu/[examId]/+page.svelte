@@ -356,8 +356,8 @@
     {/if}
 
     <!-- 2. TRÌNH PHÁT AUDIO DÙNG CHUNG DUY NHẤT: Bền vững, không bị gián đoạn hay ngắt âm thanh khi đổi mode -->
-    {@const audioSource = exam.audio_ogg || exam.audio_mp3 || exam.audio_url}
-    {#if audioSource}
+    {@const audioSource = exam.audio_mp3 || exam.audio_ogg || exam.audio_url}
+    {#if audioSource || exam.audio_ogg || exam.audio_mp3}
       {@const activeQ = exam.questions[currentQuestionIndex]}
       <!-- Ở chế độ Thi Nhanh (practice) khi làm phần Đọc hiểu (Q36+), tự ẩn audio player để nhường 100% không gian cho đề đọc -->
       <div
@@ -366,6 +366,8 @@
       >
         <ExamAudioPlayer
           audioSrc={audioSource}
+          audioOggSrc={exam.audio_ogg}
+          audioMp3Src={exam.audio_mp3 || exam.audio_mp3_url}
           examCode={exam.exam_code ?? examId ?? ''}
           isExamMode={mode === 'exam'}
           listeningQuestions={listeningQuestions}
