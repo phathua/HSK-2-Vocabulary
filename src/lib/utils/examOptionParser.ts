@@ -28,8 +28,8 @@ export function parseOptionItem(optInput: string | { label: string; value?: stri
     return { letter, hanzi: '', pinyin: '', rawLabel: letter };
   }
 
-  // Check for "Hanzi (pinyin)"
-  const parenMatch = rest.match(/^(.*?)\s*[\(（]([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s,\.\?!’'\-—0-9]+)[\)）]$/);
+  // Check for "Hanzi (pinyin)" - automatically sanitizes and discards any redundant repeated parenthetical groups
+  const parenMatch = rest.match(/^([^\(（]+?)\s*[\(（]([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s,\.\?!’'\-—0-9]+)[\)）]/);
   if (parenMatch) {
     const hanzi = parenMatch[1].trim();
     const py = parenMatch[2].trim();
@@ -37,7 +37,7 @@ export function parseOptionItem(optInput: string | { label: string; value?: stri
       letter,
       hanzi,
       pinyin: py,
-      rawLabel: rest
+      rawLabel: `${hanzi} (${py})`
     };
   }
 

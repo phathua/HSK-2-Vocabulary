@@ -8,10 +8,13 @@
   import type { QuestionItem, ExamMode } from '#lib/types/exam';
   import { getExamImageUrl } from '#lib/utils/examAssets';
   import { parseOptionItem } from '#lib/utils/examOptionParser';
+  import InteractiveChineseText from './InteractiveChineseText.svelte';
+  import InteractivePinyinText from './InteractivePinyinText.svelte';
 
   interface Props {
     question: QuestionItem;
     selectedAnswer?: string;
+    answers?: Record<number, string>;
     isFlagged?: boolean;
     mode: ExamMode;
     isCheckedInPractice?: boolean;
@@ -25,6 +28,7 @@
   let {
     question,
     selectedAnswer = '',
+    answers = {},
     isFlagged = false,
     mode,
     isCheckedInPractice = false,
@@ -34,6 +38,29 @@
     onToggleFlag,
     onCheckPractice
   }: Props = $props();
+
+  function getMatchingGroup(qNo: number): [number, number] | null {
+    if (qNo >= 11 && qNo <= 15) return [11, 15];
+    if (qNo >= 16 && qNo <= 20) return [16, 20];
+    if (qNo >= 36 && qNo <= 40) return [36, 40];
+    if (qNo >= 41 && qNo <= 45) return [41, 45];
+    if (qNo >= 51 && qNo <= 55) return [51, 55];
+    if (qNo >= 56 && qNo <= 60) return [56, 60];
+    return null;
+  }
+
+  function isOptionUsedInGroup(optVal: string): boolean {
+    if (!answers) return false;
+    const group = getMatchingGroup(question.question_no);
+    if (!group) return false;
+    const [start, end] = group;
+    for (let q = start; q <= end; q++) {
+      if (q !== question.question_no && answers[q] === optVal) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   let isImageZoomed = $state(false);
 
@@ -138,14 +165,30 @@
       const ctx = parseChunk(contextRaw);
       const stmt = parseChunk(statementRaw);
 
+      let contextPinyin = ctx.pinyin;
+      let statementPinyin = stmt.pinyin;
+
+      if (question.pinyin) {
+        if (question.pinyin.includes('★')) {
+          const pyParts = question.pinyin.split('★');
+          contextPinyin = pyParts[0].trim();
+          statementPinyin = (pyParts[1] || '').trim();
+        } else if (!contextPinyin) {
+          contextPinyin = question.pinyin;
+        }
+      }
+      if (question.statement_pinyin) {
+        statementPinyin = question.statement_pinyin;
+      }
+
       return {
         isTrueFalseStatement: true,
         hanzi: '',
         pinyin: '',
         contextHanzi: ctx.hanzi,
-        contextPinyin: question.pinyin || ctx.pinyin,
+        contextPinyin,
         statementHanzi: stmt.hanzi,
-        statementPinyin: question.statement_pinyin || stmt.pinyin
+        statementPinyin
       };
     }
 
@@ -172,6 +215,12 @@
     optionChoices.length > 0 &&
     optionChoices.some((opt) => opt.label !== opt.value) &&
     (optionChoices.some((opt) => opt.label.length > 3) || optionChoices.length <= 4)
+  );
+
+  const isShortMultipleChoice = $derived(
+    isMultipleChoiceList &&
+    optionChoices.length > 3 &&
+    optionChoices.every((opt) => (opt.hanzi ? opt.hanzi.length <= 4 : opt.label.length <= 8))
   );
 
   // Chế độ Luyện tập: Bấm là hiện đáp án ngay lập tức (không cần nút check). Chế độ Thi: hiện khi nộp bài
@@ -307,11 +356,11 @@
           <div>
             {#if parsedQuestionDisplay.contextPinyin}
               <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
-                {parsedQuestionDisplay.contextPinyin}
+                <InteractivePinyinText pinyin={parsedQuestionDisplay.contextPinyin} />
               </div>
             {/if}
             <div class="text-base md:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
-              {parsedQuestionDisplay.contextHanzi}
+              <InteractiveChineseText text={parsedQuestionDisplay.contextHanzi} />
             </div>
           </div>
 
@@ -322,11 +371,11 @@
             <div class="flex-1">
               {#if parsedQuestionDisplay.statementPinyin}
                 <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
-                  {parsedQuestionDisplay.statementPinyin}
+                  <InteractivePinyinText pinyin={parsedQuestionDisplay.statementPinyin} />
                 </div>
               {/if}
               <div class="text-base md:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
-                {parsedQuestionDisplay.statementHanzi}
+                <InteractiveChineseText text={parsedQuestionDisplay.statementHanzi} />
               </div>
             </div>
           </div>
@@ -336,20 +385,11 @@
         <div class="space-y-1">
           {#if parsedQuestionDisplay.pinyin}
             <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
-              {parsedQuestionDisplay.pinyin}
+              <InteractivePinyinText pinyin={parsedQuestionDisplay.pinyin} />
             </div>
           {/if}
           <div class="text-base md:text-xl font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
-            {#if parsedQuestionDisplay.hanzi.includes('( )') || parsedQuestionDisplay.hanzi.includes('（ ）')}
-              {@const parts = parsedQuestionDisplay.hanzi.split(/[\(（]\s*[\)）]/)}
-              <span>{parts[0]}</span>
-              <span class="inline-block mx-1.5 px-3 py-0.5 border-b-2 border-orange-500 text-orange-600 dark:text-orange-400 font-mono text-sm bg-orange-50 dark:bg-orange-950/40 rounded">
-                ( &nbsp;&nbsp;&nbsp;&nbsp; )
-              </span>
-              <span>{parts[1] || ''}</span>
-            {:else}
-              {parsedQuestionDisplay.hanzi}
-            {/if}
+            <InteractiveChineseText text={parsedQuestionDisplay.hanzi} />
           </div>
         </div>
       {/if}
@@ -358,11 +398,11 @@
     <div class="space-y-1 my-2 select-text">
       {#if question.pinyin}
         <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
-          {question.pinyin}
+          <InteractivePinyinText pinyin={question.pinyin} />
         </div>
       {/if}
       <div class="text-base md:text-xl font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
-        {question.text}
+        <InteractiveChineseText text={question.text} />
       </div>
     </div>
   {/if}
@@ -447,17 +487,20 @@
       {/each}
     </div>
   {:else if isMultipleChoiceList}
-    <!-- Liệt kê từng dòng một: Chữ cái nằm trong nền tròn xám -->
-    <div class="flex flex-col gap-2.5 my-3">
+    <!-- Liệt kê đáp án: Dàn lưới 1-2 hàng nếu ngắn, hoặc theo cột nếu dài -->
+    <div class={isShortMultipleChoice ? 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5 my-3' : 'flex flex-col gap-2.5 my-3'}>
       {#each optionChoices as opt}
         {@const isSelected = selectedAnswer === opt.value}
         {@const isAnswerTarget = shouldReveal && question.answer === opt.value}
         {@const isWrongSelection = shouldReveal && isSelected && !isCorrect}
+        {@const isUsedElsewhere = !isSelected && isOptionUsedInGroup(opt.value)}
 
         <button
           type="button"
           onclick={() => onSelectAnswer(opt.value)}
-          class="w-full text-left p-3 rounded-2xl border transition-all cursor-pointer flex items-center gap-3 {
+          class="w-full text-left p-3 rounded-2xl border transition-all cursor-pointer flex items-center gap-2.5 {
+            isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity' : ''
+          } {
             isAnswerTarget
               ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200 shadow-2xs'
               : isWrongSelection
@@ -483,12 +526,12 @@
           <div class="flex-1 min-w-0 flex flex-col items-start leading-snug py-0.5 select-text">
             {#if opt.pinyin}
               <span class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-tight break-words text-left">
-                {opt.pinyin}
+                <InteractivePinyinText pinyin={opt.pinyin} />
               </span>
             {/if}
             {#if opt.hanzi}
               <span class="text-sm sm:text-base font-bold font-serif text-slate-900 dark:text-[#E3E3E3] leading-snug break-words text-left">
-                {opt.hanzi}
+                <InteractiveChineseText text={opt.hanzi} />
               </span>
             {:else}
               <span class="font-medium text-xs md:text-sm leading-relaxed">
@@ -506,11 +549,14 @@
         {@const isSelected = selectedAnswer === opt.value}
         {@const isAnswerTarget = shouldReveal && question.answer === opt.value}
         {@const isWrongSelection = shouldReveal && isSelected && !isCorrect}
+        {@const isUsedElsewhere = !isSelected && isOptionUsedInGroup(opt.value)}
 
         <button
           type="button"
           onclick={() => onSelectAnswer(opt.value)}
           class="h-11 sm:h-12 rounded-2xl font-black text-sm sm:text-base border transition-all cursor-pointer flex items-center justify-center select-none {
+            isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity' : ''
+          } {
             isAnswerTarget
               ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs ring-2 ring-emerald-500/20'
               : isWrongSelection

@@ -34,7 +34,7 @@
   const isLowTime = $derived(timeRemainingSeconds < 300);
 </script>
 
-<div class="shrink-0 mt-auto bg-white/95 dark:bg-[#1B1B1B]/95 backdrop-blur-md border border-slate-200 dark:border-[#282A2C] rounded-2xl px-2.5 sm:px-4 py-2 sm:py-2.5 shadow-lg safe-area-bottom">
+<div class="shrink-0 mt-auto bg-white/95 dark:bg-[#1B1B1B]/95 backdrop-blur-md border-t border-slate-200/90 dark:border-[#282A2C] px-3 sm:px-5 py-2.5 shadow-xs safe-area-bottom">
   <div class="w-full flex items-center justify-between gap-1.5 sm:gap-3">
     <!-- Trái: Nút mở Palette & Tiến độ làm bài -->
     <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">

@@ -459,9 +459,9 @@ export const examData: ExamDetail = {
       "explanation": "Trong bài nghe nam nói rõ: 'yǒu liǎngqiānduō' (hơn 2000 học sinh), đáp án đúng là B.",
       "listening_pinyin": "Nǐ zhīdào nǐmen xuéxiào yǒu duōshao xuésheng ma? / Zhīdào, yǒu liǎngqiān duō. / Wèn: Zhège xuéxiào yǒu duōshao xuésheng?",
       "options": [
-        "A 200多 (200 duō) (200 duō   ( 200   du ō )) (2 0 0 duō   ( 2 0 0   d u ō )   ( 2 0 0   d u ō       (   2 0 0       d u   ō   ) )) (2 0 0 duō ( 2 0 0 d u ō ) ( 2 0 0 d u ō ( 2 0 0 d u ō ) ) ( 2 0 0 d u ō ( 2 0 0 d u ō ) ( 2 0 0 d u ō ( 2 0 0 d u ō ) ) ))",
-        "B 2000多 (2000 duō) (2000 duō   ( 2000   du ō )) (2 0 0 0 duō   ( 2 0 0 0   d u ō )   ( 2 0 0 0   d u ō       (   2 0 0 0       d u   ō   ) )) (2 0 0 0 duō ( 2 0 0 0 d u ō ) ( 2 0 0 0 d u ō ( 2 0 0 0 d u ō ) ) ( 2 0 0 0 d u ō ( 2 0 0 0 d u ō ) ( 2 0 0 0 d u ō ( 2 0 0 0 d u ō ) ) ))",
-        "C 3000多 (3000 duō) (3000 duō   ( 3000   du ō )) (3 0 0 0 duō   ( 3 0 0 0   d u ō )   ( 3 0 0 0   d u ō       (   3 0 0 0       d u   ō   ) )) (3 0 0 0 duō ( 3 0 0 0 d u ō ) ( 3 0 0 0 d u ō ( 3 0 0 0 d u ō ) ) ( 3 0 0 0 d u ō ( 3 0 0 0 d u ō ) ( 3 0 0 0 d u ō ( 3 0 0 0 d u ō ) ) ))"
+        "A 200多 (200 duō)",
+        "B 2000多 (2000 duō)",
+        "C 3000多 (3000 duō)"
       ]
     },
     {
@@ -473,14 +473,14 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 24",
       "answer": "B",
-      "listening_script": "[男:] 你是什么时候来这个公司的？\n[女:] 我是去年2008年来的。\n[问:] 女 me是什么时候来这个公司的？",
+      "listening_script": "[男:] 你是什么时候来这个公司的？\n[女:] 我是去年2008年来的。\n[问:] 女的是什么时候来这个公司的？",
       "board_image": null,
       "explanation": "Trong bài nghe nữ trả lời: 'wǒ shì qùnián2008nián lái de', đáp án đúng là B.",
       "listening_pinyin": "Nǐ shì shénme shíhou lái zhège gōngsī de? / Wǒ shì qùnián 2008 nián lái de. / Wèn: Nǚ de shì shénme shíhou lái zhège gōngsī de?",
       "options": [
-        "A 2007年 (2007 nián) (2007 nián   ( 2007   ni á n )) (2 0 0 7 nián   ( 2 0 0 7   n i á n )   ( 2 0 0 7   n i á n       (   2 0 0 7       n i   á   n   ) )) (2 0 0 7 nián ( 2 0 0 7 n i á n ) ( 2 0 0 7 n i á n ( 2 0 0 7 n i á n ) ) ( 2 0 0 7 n i á n ( 2 0 0 7 n i á n ) ( 2 0 0 7 n i á n ( 2 0 0 7 n i á n ) ) ))",
-        "B 2008年 (2008 nián) (2008 nián   ( 2008   ni á n )) (2 0 0 8 nián   ( 2 0 0 8   n i á n )   ( 2 0 0 8   n i á n       (   2 0 0 8       n i   á   n   ) )) (2 0 0 8 nián ( 2 0 0 8 n i á n ) ( 2 0 0 8 n i á n ( 2 0 0 8 n i á n ) ) ( 2 0 0 8 n i á n ( 2 0 0 8 n i á n ) ( 2 0 0 8 n i á n ( 2 0 0 8 n i á n ) ) ))",
-        "C 2009年 (2009 nián) (2009 nián   ( 2009   ni á n )) (2 0 0 9 nián   ( 2 0 0 9   n i á n )   ( 2 0 0 9   n i á n       (   2 0 0 9       n i   á   n   ) )) (2 0 0 9 nián ( 2 0 0 9 n i á n ) ( 2 0 0 9 n i á n ( 2 0 0 9 n i á n ) ) ( 2 0 0 9 n i á n ( 2 0 0 9 n i á n ) ( 2 0 0 9 n i á n ( 2 0 0 9 n i á n ) ) ))"
+        "A 2007年 (2007 nián)",
+        "B 2008年 (2008 nián)",
+        "C 2009年 (2009 nián)"
       ]
     },
     {
@@ -499,7 +499,7 @@ export const examData: ExamDetail = {
       "options": [
         "A 太累了 (tài lèi le)",
         "B 看过了 (kànguo le)",
-        "C 有别的能 (yǒu bié de shì)"
+        "C 有别的事 (yǒu bié de shì)"
       ]
     },
     {
@@ -549,14 +549,14 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "Câu hỏi nghe số 28",
       "answer": "B",
-      "listening_script": "[男:] 这个椅子有点儿贵，但是颜色很不错。\n[女:] 你喜欢？那就买它吧。\n[问:] 男的觉得这个椅子怎么样？",
+      "listening_script": "[男:] 这个椅子有点儿贵，但是颜色很不错。\n[女:] 你喜欢？那就买它吧。\n[问:] 男 de觉得这个椅子怎么样？",
       "board_image": null,
       "explanation": "Trong bài nghe nam nhận xét: 'yánsè hěn bùcuò' (màu sắc rất đẹp), đáp án đúng là B.",
       "listening_pinyin": "Zhège yǐzi yǒudiǎnr guì, dànshì yánsè hěn búcuò. / Nǐ xǐhuan? Nà jiù mǎi tā ba. / Wèn: Nán de juéde zhège yǐzi zěnmeyàng?",
       "options": [
-        "A 很慢 (hěn màn)",
-        "B 颜色很好 (yánsè hěn hǎo)",
-        "C 有点儿小 (yǒudiǎnr xiǎo)"
+        "A 很便宜 (hěn piányi)",
+        "B 颜色好 (yánsè hǎo)",
+        "C 有点儿贵 (yǒudiǎnr guì)"
       ]
     },
     {
@@ -573,9 +573,9 @@ export const examData: ExamDetail = {
       "explanation": "Trong bài nghe nam nói vé máy bay là: 'bāyuè qīhào' (ngày 7 tháng 8), đáp án đúng là B.",
       "listening_pinyin": "Nǐ zhǔnbèi nǎ tiān qù Zhōngguó? / Wǒ mǎi de jīpiào shì Bā yuè qī hào de. / Wèn: Nán de nǎ tiān qù Zhōngguó?",
       "options": [
-        "A 7月8号 (7 yuè 8 hào) (7 yuè 8 hào   ( 7   yu è   8   h à o )) (7 yuè 8 hào   ( 7   y u è   8   h à o )   ( 7   y u è   8   h à o       (   7       y u   è       8       h   à   o   ) )) (7 yuè 8 hào ( 7 y u è 8 h à o ) ( 7 y u è 8 h à o ( 7 y u è 8 h à o ) ) ( 7 y u è 8 h à o ( 7 y u è 8 h à o ) ( 7 y u è 8 h à o ( 7 y u è 8 h à o ) ) ))",
-        "B 8月7号 (8 yuè 7 hào) (8 yuè 7 hào   ( 8   yu è   7   h à o )) (8 yuè 7 hào   ( 8   y u è   7   h à o )   ( 8   y u è   7   h à o       (   8       y u   è       7       h   à   o   ) )) (8 yuè 7 hào ( 8 y u è 7 h à o ) ( 8 y u è 7 h à o ( 8 y u è 7 h à o ) ) ( 8 y u è 7 h à o ( 8 y u è 7 h à o ) ( 8 y u è 7 h à o ( 8 y u è 7 h à o ) ) ))",
-        "C 8月8号 (8 yuè 8 hào) (8 yuè 8 hào   ( 8   yu è   8   h à o )) (8 yuè 8 hào   ( 8   y u è   8   h à o )   ( 8   y u è   8   h à o       (   8       y u   è       8       h   à   o   ) )) (8 yuè 8 hào ( 8 y u è 8 h à o ) ( 8 y u è 8 h à o ( 8 y u è 8 h à o ) ) ( 8 y u è 8 h à o ( 8 y u è 8 h à o ) ( 8 y u è 8 h à o ( 8 y u è 8 h à o ) ) ))"
+        "A 7月8号 (7 yuè 8 hào)",
+        "B 8月7号 (8 yuè 7 hào)",
+        "C 8月8号 (8 yuè 8 hào)"
       ]
     },
     {

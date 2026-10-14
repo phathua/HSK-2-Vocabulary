@@ -9,6 +9,8 @@
   import ExamQuickQuizCard from '#lib/components/exam/ExamQuickQuizCard.svelte';
   import ExamPalette from '#lib/components/exam/ExamPalette.svelte';
   import ExamResultModal from '#lib/components/exam/ExamResultModal.svelte';
+  import ConfirmModal from '#lib/components/ConfirmModal.svelte';
+  import ExamDictTooltip from '#lib/components/exam/ExamDictTooltip.svelte';
   import SettingsModal from '#lib/components/SettingsModal.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import { getExamData } from '#lib/utils/examLoader';
@@ -25,6 +27,8 @@
   import Lightning from 'phosphor-svelte/lib/Lightning';
   import ListNumbers from 'phosphor-svelte/lib/ListNumbers';
   import Clock from 'phosphor-svelte/lib/Clock';
+  import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
+  import ArrowCounterClockwise from 'phosphor-svelte/lib/ArrowCounterClockwise';
   import type { ExamDetail, ExamMode } from '#lib/types/exam';
 
   const examId = $derived(page.params.examId);
@@ -42,6 +46,8 @@
   let showResultModal = $state(false);
   let showExitModal = $state(false);
   let showPaletteModal = $state(false);
+  let showConfirmSubmit = $state(false);
+  let showConfirmRetry = $state(false);
   let isScrolled = $state(false);
   let audioPlayerHeight = $state(56);
   let currentQuestionIndex = $state(
@@ -49,6 +55,12 @@
   );
   let mainScrollEl: HTMLElement | null = null;
   let timerInterval: any = null;
+
+  function formatCountdown(secs: number): string {
+    const mins = Math.floor(secs / 60);
+    const s = secs % 60;
+    return `${mins.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
 
   $effect(() => {
     examRoomState.timeRemainingSeconds = timeRemainingSeconds;
@@ -170,16 +182,21 @@
       showResultModal = true;
       return;
     }
-    const unanswered = (exam?.total_questions ?? 60) - totalAnswered;
-    if (unanswered > 0 && mode === 'exam') {
-      const confirmSubmit = confirm(`Bạn còn ${unanswered} câu chưa điền đáp án. Bạn có chắc chắn muốn nộp bài?`);
-      if (!confirmSubmit) return;
-    }
+    showConfirmSubmit = true;
+  }
+
+  function handleConfirmSubmit() {
+    showConfirmSubmit = false;
     isSubmitted = true;
     showResultModal = true;
   }
 
   function handleRetry() {
+    showConfirmRetry = true;
+  }
+
+  function handleConfirmRetry() {
+    showConfirmRetry = false;
     answers = {};
     flagged = {};
     checkedPractice = {};
@@ -334,6 +351,7 @@
               questionIndex={currentQuestionIndex}
               totalQuestions={exam.total_questions}
               selectedAnswer={answers[currentQ.question_no]}
+              {answers}
               isFlagged={flagged[currentQ.question_no]}
               {timeRemainingSeconds}
               totalCorrect={scoreResults.totalCorrect}
@@ -429,6 +447,7 @@
               <ExamQuestionCard
                 question={q}
                 selectedAnswer={answers[q.question_no]}
+                {answers}
                 isFlagged={flagged[q.question_no]}
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
@@ -456,6 +475,7 @@
               <ExamQuestionCard
                 question={q}
                 selectedAnswer={answers[q.question_no]}
+                {answers}
                 isFlagged={flagged[q.question_no]}
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
@@ -470,21 +490,59 @@
         {/if}
       </div>
 
-      <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) - STICKY KHI CUỘN ĐỘNG THEO AUDIO PLAYER -->
+      <!-- Cột Bản Đồ Câu Hỏi & Thanh Hành Động Thi Thử (4/12 cột trên màn hình lớn) -->
       <div
-        class="lg:col-span-4 hidden lg:block sticky self-start overflow-hidden rounded-2xl shadow-xs"
-        style="top: {audioPlayerHeight + 8}px; max-height: calc(100vh - {audioPlayerHeight + 24}px);"
+        class="lg:col-span-4 hidden lg:flex flex-col sticky self-start overflow-hidden rounded-2xl shadow-xs"
+        style="top: {audioPlayerHeight + 8}px; height: min(540px, calc(100vh - {audioPlayerHeight + 40}px));"
       >
-        <ExamPalette
-          totalQuestions={exam.total_questions}
-          {answers}
-          {flagged}
-          {mode}
-          isExamSubmitted={isSubmitted}
-          correctMap={scoreResults.correctMap}
-          currentQuestionNo={currentQuestionIndex + 1}
-          onScrollTo={handleScrollTo}
-        />
+        <!-- Bảng câu hỏi: Tận dụng chiều cao dài ra (flex-1) -->
+        <div class="flex-1 min-h-0 overflow-hidden">
+          <ExamPalette
+            totalQuestions={exam.total_questions}
+            {answers}
+            {flagged}
+            {mode}
+            isExamSubmitted={isSubmitted}
+            correctMap={scoreResults.correctMap}
+            currentQuestionNo={currentQuestionIndex + 1}
+            onScrollTo={handleScrollTo}
+          />
+        </div>
+
+        {#if mode === 'exam'}
+          <!-- Khối hành động làm bài trên Desktop: Tiến độ, Thời gian, Nút Làm lại & Nộp bài -->
+          <div class="mt-2.5 p-3 rounded-2xl bg-white dark:bg-[#1B1B1B] border border-slate-200/90 dark:border-[#282A2C] shadow-xs flex flex-col gap-2.5 shrink-0 select-none">
+            <div class="flex items-center justify-between text-xs font-bold">
+              <div class="flex items-center gap-1.5 text-slate-600 dark:text-neutral-300">
+                <span class="text-slate-400 dark:text-neutral-500 font-medium">Tiến độ:</span>
+                <span class="font-black text-orange-600 dark:text-orange-400">{totalAnswered}/{exam.total_questions} câu</span>
+              </div>
+              <div class="flex items-center gap-1.5 font-mono font-black px-2 py-0.5 rounded-lg border {timeRemainingSeconds < 300 ? 'bg-red-50 dark:bg-red-950/50 border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 animate-pulse' : 'bg-slate-50 dark:bg-neutral-800/80 border-slate-200 dark:border-neutral-700 text-slate-700 dark:text-slate-300'}">
+                <Clock weight="duotone" class="w-3.5 h-3.5 {timeRemainingSeconds < 300 ? 'text-red-500' : 'text-orange-500'}" />
+                <span>{formatCountdown(timeRemainingSeconds)}</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 pt-1.5 border-t border-slate-100 dark:border-neutral-800">
+              <button
+                type="button"
+                onclick={handleRetry}
+                class="h-9 rounded-xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 active:scale-95 text-slate-700 dark:text-neutral-200 font-bold text-xs flex items-center justify-center gap-1.5 cursor-pointer transition-all border border-slate-200/60 dark:border-neutral-700/60 shadow-2xs"
+              >
+                <ArrowCounterClockwise weight="bold" class="w-3.5 h-3.5" />
+                <span>Làm lại</span>
+              </button>
+              <button
+                type="button"
+                onclick={handleSubmitExam}
+                class="h-9 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-xs cursor-pointer transition-all"
+              >
+                <CheckCircle weight="bold" class="w-4 h-4" />
+                <span>Nộp bài</span>
+              </button>
+            </div>
+          </div>
+        {/if}
       </div>
     </div>
   {/if}
@@ -492,16 +550,18 @@
 </main>
 
 {#if exam && mode === 'exam'}
-  <!-- Sticky Bottom Bar CHỈ HIỂN THỊ Ở CHẾ ĐỘ THI THỬ CHUẨN (Exam Mode) -->
-  <ExamBottomBar
-    {mode}
-    {timeRemainingSeconds}
-    answeredCount={totalAnswered}
-    totalCount={exam.total_questions}
-    onSubmit={handleSubmitExam}
-    onRetry={handleRetry}
-    onTogglePaletteModal={() => (showPaletteModal = true)}
-  />
+  <!-- Sticky Bottom Bar CHỈ HIỂN THỊ TRÊN THIẾT BỊ DI ĐỘNG (Mobile/Tablet) -->
+  <div class="lg:hidden">
+    <ExamBottomBar
+      {mode}
+      {timeRemainingSeconds}
+      answeredCount={totalAnswered}
+      totalCount={exam.total_questions}
+      onSubmit={handleSubmitExam}
+      onRetry={handleRetry}
+      onTogglePaletteModal={() => (showPaletteModal = true)}
+    />
+  </div>
 {/if}
 
 <!-- Modal Bảng Câu Hỏi Trên Thiết Bị Di Động (Mobile Palette Drawer) -->
@@ -590,6 +650,32 @@
     </div>
   </div>
 {/if}
+
+<ConfirmModal
+  open={showConfirmSubmit}
+  title="Nộp bài thi"
+  message={(exam?.total_questions ?? 60) - totalAnswered > 0
+    ? `Bạn còn ${(exam?.total_questions ?? 60) - totalAnswered} câu chưa điền đáp án. Bạn có chắc chắn muốn nộp bài?`
+    : 'Bạn đã hoàn thành tất cả câu hỏi. Bạn có chắc chắn muốn nộp bài thi?'}
+  confirmText="Nộp bài ngay"
+  cancelText="Làm tiếp"
+  variant="warning"
+  onConfirm={handleConfirmSubmit}
+  onCancel={() => (showConfirmSubmit = false)}
+/>
+
+<ConfirmModal
+  open={showConfirmRetry}
+  title="Làm lại bài thi"
+  message="Toàn bộ đáp án và tiến trình hiện tại sẽ được thiết lập lại từ đầu. Bạn có chắc chắn muốn tiếp tục?"
+  confirmText="Làm lại"
+  cancelText="Hủy"
+  variant="danger"
+  onConfirm={handleConfirmRetry}
+  onCancel={() => (showConfirmRetry = false)}
+/>
+
+<ExamDictTooltip />
 
 <LessonFilterModal />
 <SettingsModal />

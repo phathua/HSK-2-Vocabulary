@@ -18,12 +18,15 @@
   import type { QuestionItem } from '#lib/types/exam';
   import { getExamImageUrl } from '#lib/utils/examAssets';
   import { parseOptionItem } from '#lib/utils/examOptionParser';
+  import InteractiveChineseText from './InteractiveChineseText.svelte';
+  import InteractivePinyinText from './InteractivePinyinText.svelte';
 
   interface Props {
     question: QuestionItem;
     questionIndex: number;
     totalQuestions: number;
     selectedAnswer?: string;
+    answers?: Record<number, string>;
     isFlagged?: boolean;
     timeRemainingSeconds?: number;
     totalCorrect?: number;
@@ -41,6 +44,7 @@
     questionIndex,
     totalQuestions,
     selectedAnswer = '',
+    answers = {},
     isFlagged = false,
     timeRemainingSeconds = 3300,
     totalCorrect = 0,
@@ -52,6 +56,29 @@
     onOpenPalette,
     onSubmitExam
   }: Props = $props();
+
+  function getMatchingGroup(qNo: number): [number, number] | null {
+    if (qNo >= 11 && qNo <= 15) return [11, 15];
+    if (qNo >= 16 && qNo <= 20) return [16, 20];
+    if (qNo >= 36 && qNo <= 40) return [36, 40];
+    if (qNo >= 41 && qNo <= 45) return [41, 45];
+    if (qNo >= 51 && qNo <= 55) return [51, 55];
+    if (qNo >= 56 && qNo <= 60) return [56, 60];
+    return null;
+  }
+
+  function isOptionUsedInGroup(optVal: string): boolean {
+    if (!answers) return false;
+    const group = getMatchingGroup(question.question_no);
+    if (!group) return false;
+    const [start, end] = group;
+    for (let q = start; q <= end; q++) {
+      if (q !== question.question_no && answers[q] === optVal) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   let isImageZoomed = $state(false);
   let userForcedView = $state<'list' | 'grid' | null>(null);
@@ -149,17 +176,35 @@
     ];
   });
 
-  // isStackedLayout: True cho Q21-35 (nghe không hình, 3 đáp án) và Q46-50 (đọc đoạn văn True/False)
-  const isStackedLayout = $derived(
-    !hasMedia && (isTrueFalse || isReadingTrueFalse || isListeningDialogue || optionChoices.length <= 3)
-  );
+  // isStackedLayout: Tất cả các câu không có ảnh đều hiển thị 1 cột (Đề bài ở trên, Đáp án ở dưới)
+  const isStackedLayout = $derived(!hasMedia);
 
   const isPureLetters = $derived(
     !isTrueFalse && optionChoices.length > 0 && optionChoices.every((opt) => opt.label === opt.value)
   );
 
+  const isShortOptions = $derived.by(() => {
+    return (
+      optionChoices.length > 3 &&
+      optionChoices.every((opt) => !opt.hanzi || opt.hanzi.length <= 4) &&
+      optionChoices.every((opt) => !opt.label || opt.label.length <= 8)
+    );
+  });
+
   const isLongOptions = $derived.by(() => {
     return optionChoices.some((opt) => (opt.hanzi && opt.hanzi.length > 5) || (opt.label && opt.label.length > 10));
+  });
+
+  const stackedGridClass = $derived.by(() => {
+    if (isTrueFalse || isReadingTrueFalse) return 'grid-cols-2 gap-3 max-w-md';
+    if (isPureLetters) return 'grid-cols-3 sm:grid-cols-6 gap-2.5 max-w-xl';
+    if (optionChoices.length === 6) {
+      if (isShortOptions) return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5 max-w-4xl';
+      return 'grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl';
+    }
+    if (optionChoices.length <= 3) return 'grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-2xl';
+    if (isLongOptions) return 'grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl';
+    return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 max-w-3xl';
   });
 
   const isFullListView = $derived.by(() => {
@@ -191,14 +236,30 @@
       const ctx = parseChunk(contextRaw);
       const stmt = parseChunk(statementRaw);
 
+      let contextPinyin = ctx.pinyin;
+      let statementPinyin = stmt.pinyin;
+
+      if (question.pinyin) {
+        if (question.pinyin.includes('★')) {
+          const pyParts = question.pinyin.split('★');
+          contextPinyin = pyParts[0].trim();
+          statementPinyin = (pyParts[1] || '').trim();
+        } else if (!contextPinyin) {
+          contextPinyin = question.pinyin;
+        }
+      }
+      if (question.statement_pinyin) {
+        statementPinyin = question.statement_pinyin;
+      }
+
       return {
         isTrueFalseStatement: true,
         hanzi: '',
         pinyin: '',
         contextHanzi: ctx.hanzi,
-        contextPinyin: question.pinyin || ctx.pinyin,
+        contextPinyin,
         statementHanzi: stmt.hanzi,
-        statementPinyin: question.statement_pinyin || stmt.pinyin
+        statementPinyin
       };
     }
 
@@ -310,11 +371,11 @@
                 <div>
                   {#if parsedQuestionDisplay.contextPinyin}
                     <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
-                      {parsedQuestionDisplay.contextPinyin}
+                      <InteractivePinyinText pinyin={parsedQuestionDisplay.contextPinyin} />
                     </div>
                   {/if}
                   <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
-                    {parsedQuestionDisplay.contextHanzi}
+                    <InteractiveChineseText text={parsedQuestionDisplay.contextHanzi} />
                   </div>
                 </div>
 
@@ -325,11 +386,11 @@
                   <div class="flex-1">
                     {#if parsedQuestionDisplay.statementPinyin}
                       <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
-                        {parsedQuestionDisplay.statementPinyin}
+                        <InteractivePinyinText pinyin={parsedQuestionDisplay.statementPinyin} />
                       </div>
                     {/if}
                     <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
-                      {parsedQuestionDisplay.statementHanzi}
+                      <InteractiveChineseText text={parsedQuestionDisplay.statementHanzi} />
                     </div>
                   </div>
                 </div>
@@ -339,11 +400,11 @@
               <div class="space-y-1">
                 {#if parsedQuestionDisplay.pinyin}
                   <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
-                    {parsedQuestionDisplay.pinyin}
+                    <InteractivePinyinText pinyin={parsedQuestionDisplay.pinyin} />
                   </div>
                 {/if}
                 <div class="text-lg sm:text-xl font-bold text-slate-900 dark:text-[#E3E3E3] leading-snug font-serif">
-                  {parsedQuestionDisplay.hanzi}
+                  <InteractiveChineseText text={parsedQuestionDisplay.hanzi} />
                 </div>
               </div>
             {/if}
@@ -383,16 +444,19 @@
         {/if}
 
         <!-- Lựa chọn đáp án: Nằm ngay DƯỚI đề bài / đoạn văn -->
-        <div class="w-full grid {isTrueFalse || isReadingTrueFalse ? 'grid-cols-2 gap-3 max-w-md' : 'grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-xl'}">
+        <div class="w-full grid {stackedGridClass} mx-auto">
           {#each optionChoices as opt (opt.value)}
             {@const isSelected = selectedAnswer === opt.value}
             {@const isTarget = opt.value === question.answer}
             {@const isRevealed = isAnswered}
+            {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
 
             <button
               type="button"
               onclick={() => onSelectAnswer(opt.value)}
-              class={`min-h-[52px] p-3 rounded-2xl flex items-center ${isTrueFalse || isReadingTrueFalse ? 'justify-center gap-2' : 'gap-3'} transition-all cursor-pointer border select-none ${
+              class={`min-h-[48px] ${isPureLetters ? 'h-11 sm:h-12' : isShortOptions ? 'p-2 sm:p-2.5' : 'p-3'} rounded-2xl flex items-center ${isTrueFalse || isReadingTrueFalse || isPureLetters ? 'justify-center gap-2' : isShortOptions ? 'justify-center gap-2' : 'gap-3'} transition-all cursor-pointer border select-none ${
+                isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
+              }${
                 !isRevealed
                   ? 'bg-white dark:bg-[#1E1E1E] hover:border-orange-400/70 hover:bg-orange-50/20 dark:hover:bg-neutral-800 border-slate-200/90 dark:border-neutral-800 active:scale-98 shadow-2xs text-slate-800 dark:text-slate-200'
                   : isTarget
@@ -430,12 +494,12 @@
                 <div class="flex-1 min-w-0 flex flex-col items-start leading-snug py-0.5 select-text">
                   {#if opt.pinyin}
                     <span class="text-xs text-slate-400 dark:text-neutral-400 font-sans tracking-wide leading-tight break-words text-left mb-0.5">
-                      {opt.pinyin}
+                      <InteractivePinyinText pinyin={opt.pinyin} />
                     </span>
                   {/if}
                   {#if opt.hanzi}
                     <span class="text-sm sm:text-base font-bold font-serif text-slate-800 dark:text-slate-100 leading-snug break-words text-left">
-                      {opt.hanzi}
+                      <InteractiveChineseText text={opt.hanzi} />
                     </span>
                   {:else}
                     <span class="text-sm font-semibold break-words text-left">
@@ -485,7 +549,7 @@
 
           <!-- Bảng tranh đối chiếu A - F nếu có (Q11 - Q20, Match Part 1/2) -->
           {#if question.board_image}
-            <div class="relative mb-1 sm:mb-1.5 max-w-sm sm:max-w-md w-full flex flex-col items-center justify-center">
+            <div class="relative mb-1 sm:mb-1.5 {isPureLetters ? 'max-w-md sm:max-w-lg md:max-w-xl' : 'max-w-sm sm:max-w-md'} w-full flex flex-col items-center justify-center">
               <div class="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-[#282A2C] shadow-2xs bg-white dark:bg-[#1E1E1E]">
                 <button
                   type="button"
@@ -497,7 +561,7 @@
                   <img
                     src={getExamImageUrl(question.exam_code, question.board_image)}
                     alt="Bảng tranh đối chiếu A - F"
-                    class="max-h-32 xs:max-h-40 sm:max-h-48 md:max-h-56 w-auto max-w-full rounded-xl object-contain mx-auto transition-transform group-hover:scale-[1.01]"
+                    class="{isPureLetters ? 'max-h-60 sm:max-h-80 md:max-h-96' : 'max-h-32 xs:max-h-40 sm:max-h-48 md:max-h-56'} w-auto max-w-full rounded-xl object-contain mx-auto transition-transform group-hover:scale-[1.01]"
                     loading="lazy"
                   />
                 </button>
@@ -520,84 +584,77 @@
             </div>
           {/if}
 
-          <!-- Tiêu đề câu hỏi / Prompt Text -->
-          <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 text-center">
-            {#if question.section.includes('Reading') || question.question_no >= 36}
-              {#if question.part.includes('Part 1') || (question.question_no >= 36 && question.question_no <= 40)}
-                Đọc câu và chọn tranh phù hợp (A – F):
-              {:else if question.part.includes('Part 2') || (question.question_no >= 41 && question.question_no <= 45)}
-                Chọn từ thích hợp điền vào chỗ trống (A – F):
-              {:else if question.part.includes('Part 3') || (question.question_no >= 46 && question.question_no <= 50)}
-                Đọc đoạn văn và phán đoán Đúng / Sai:
+          <!-- Tiêu đề câu hỏi / Prompt Text & Đề bài: Khi isPureLetters trên Desktop thì chuyển sang đầu Cột 2 -->
+          <div class="{isPureLetters ? 'lg:hidden ' : ''}w-full flex flex-col items-center">
+            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 text-center">
+              {#if question.section.includes('Reading') || question.question_no >= 36}
+                {#if question.part.includes('Part 1') || (question.question_no >= 36 && question.question_no <= 40)}
+                  Đọc câu và chọn tranh phù hợp (A – F):
+                {:else if question.part.includes('Part 2') || (question.question_no >= 41 && question.question_no <= 45)}
+                  Chọn từ thích hợp điền vào chỗ trống (A – F):
+                {:else if question.part.includes('Part 3') || (question.question_no >= 46 && question.question_no <= 50)}
+                  Đọc đoạn văn và phán đoán Đúng / Sai:
+                {:else}
+                  Chọn câu đối thoại phù hợp (A – F):
+                {/if}
+              {:else if isTrueFalse}
+                Nghe và phán đoán Đúng hoặc Sai:
+              {:else if question.part.includes('Part 2') || question.type.includes('Match') || (question.question_no >= 11 && question.question_no <= 20)}
+                Nghe và chọn tranh A – F phù hợp:
               {:else}
-                Chọn câu đối thoại phù hợp (A – F):
+                Nghe và chọn đáp án chính xác:
               {/if}
-            {:else if isTrueFalse}
-              Nghe và phán đoán Đúng hoặc Sai:
-            {:else if question.part.includes('Part 2') || question.type.includes('Match') || (question.question_no >= 11 && question.question_no <= 20)}
-              Nghe và chọn tranh A – F phù hợp:
-            {:else}
-              Nghe và chọn đáp án chính xác:
-            {/if}
-          </span>
+            </span>
 
-          <!-- Khối hiển thị đề bài phân tầng: Hàng trên Pinyin, Hàng dưới chữ Hán -->
-          {#if parsedQuestionDisplay}
-            <div class="w-full max-w-sm mb-2 text-center select-text">
-              {#if parsedQuestionDisplay.isTrueFalseStatement}
-                <!-- Part 3: Khối Ngữ cảnh + Khối Nhận định ★ -->
-                <div class="bg-slate-50/70 dark:bg-[#202224]/80 border border-slate-200/80 dark:border-neutral-800 rounded-2xl p-3 text-left space-y-2.5">
-                  <div>
-                    {#if parsedQuestionDisplay.contextPinyin}
-                      <div class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
-                        {parsedQuestionDisplay.contextPinyin}
-                      </div>
-                    {/if}
-                    <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
-                      {parsedQuestionDisplay.contextHanzi}
-                    </div>
-                  </div>
-
-                  <div class="pt-2 border-t border-slate-200/60 dark:border-neutral-700/60 flex items-start gap-2">
-                    <span class="px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-[11px] font-black shrink-0 mt-0.5">
-                      ★ Nhận định
-                    </span>
-                    <div class="flex-1">
-                      {#if parsedQuestionDisplay.statementPinyin}
+            <!-- Khối hiển thị đề bài phân tầng: Hàng trên Pinyin, Hàng dưới chữ Hán -->
+            {#if parsedQuestionDisplay}
+              <div class="w-full max-w-sm mb-2 text-center select-text">
+                {#if parsedQuestionDisplay.isTrueFalseStatement}
+                  <!-- Part 3: Khối Ngữ cảnh + Khối Nhận định ★ -->
+                  <div class="bg-slate-50/70 dark:bg-[#202224]/80 border border-slate-200/80 dark:border-neutral-800 rounded-2xl p-3 text-left space-y-2.5">
+                    <div>
+                      {#if parsedQuestionDisplay.contextPinyin}
                         <div class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
-                          {parsedQuestionDisplay.statementPinyin}
+                          <InteractivePinyinText pinyin={parsedQuestionDisplay.contextPinyin} />
                         </div>
                       {/if}
                       <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
-                        {parsedQuestionDisplay.statementHanzi}
+                        <InteractiveChineseText text={parsedQuestionDisplay.contextHanzi} />
+                      </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-slate-200/60 dark:border-neutral-700/60 flex items-start gap-2">
+                      <span class="px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-[11px] font-black shrink-0 mt-0.5">
+                        ★ Nhận định
+                      </span>
+                      <div class="flex-1">
+                        {#if parsedQuestionDisplay.statementPinyin}
+                          <div class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
+                            <InteractivePinyinText pinyin={parsedQuestionDisplay.statementPinyin} />
+                          </div>
+                        {/if}
+                        <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
+                          <InteractiveChineseText text={parsedQuestionDisplay.statementHanzi} />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              {:else}
-                <!-- Câu thông thường: Hàng trên Pinyin, Hàng dưới Chữ Hán -->
-                <div class="space-y-1">
-                  {#if parsedQuestionDisplay.pinyin}
-                    <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
-                      {parsedQuestionDisplay.pinyin}
-                    </div>
-                  {/if}
-                  <div class="text-lg sm:text-2xl font-black text-slate-900 dark:text-[#E3E3E3] leading-snug font-serif">
-                    {#if parsedQuestionDisplay.hanzi.includes('( )') || parsedQuestionDisplay.hanzi.includes('（ ）')}
-                      {@const parts = parsedQuestionDisplay.hanzi.split(/[\(（]\s*[\)）]/)}
-                      <span>{parts[0]}</span>
-                      <span class="inline-block mx-1.5 px-3 py-0.5 border-b-2 border-orange-500 text-orange-600 dark:text-orange-400 font-mono text-sm bg-orange-50 dark:bg-orange-950/40 rounded">
-                        ( &nbsp;&nbsp;&nbsp;&nbsp; )
-                      </span>
-                      <span>{parts[1] || ''}</span>
-                    {:else}
-                      {parsedQuestionDisplay.hanzi}
+                {:else}
+                  <!-- Câu thông thường: Hàng trên Pinyin, Hàng dưới Chữ Hán -->
+                  <div class="space-y-1">
+                    {#if parsedQuestionDisplay.pinyin}
+                      <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
+                        <InteractivePinyinText pinyin={parsedQuestionDisplay.pinyin} />
+                      </div>
                     {/if}
+                    <div class="text-lg sm:text-2xl font-black text-slate-900 dark:text-[#E3E3E3] leading-snug font-serif">
+                      <InteractiveChineseText text={parsedQuestionDisplay.hanzi} />
+                    </div>
                   </div>
-                </div>
-              {/if}
-            </div>
-          {/if}
+                {/if}
+              </div>
+            {/if}
+          </div>
 
           <!-- Hộp Lời thoại & Giải thích tức thì khi đã trả lời (Chỉ hiển thị trên Mobile/Tablet) -->
           {#if isAnswered}
@@ -634,6 +691,42 @@
 
         <!-- CỘT 2 (Desktop col-span-7): Các đáp án trắc nghiệm trên Desktop (hưởng 100% chiều cao) -->
         <div class="w-full lg:col-span-7 hidden lg:flex flex-col justify-center h-full py-1 lg:pl-4 space-y-2.5 overflow-y-auto scrollbar-thin">
+          {#if isPureLetters}
+            <!-- Trên Desktop: Hiển thị Đề bài ngay phía trên các ô chọn A - F -->
+            <div class="w-full mb-3 text-left select-text">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] mb-1.5 block">
+                {#if question.section.includes('Reading') || question.question_no >= 36}
+                  Đọc câu và chọn tranh phù hợp (A – F):
+                {:else}
+                  Nghe và chọn tranh A – F phù hợp:
+                {/if}
+              </span>
+
+              {#if parsedQuestionDisplay}
+                <div class="space-y-1">
+                  {#if parsedQuestionDisplay.pinyin}
+                    <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
+                      <InteractivePinyinText pinyin={parsedQuestionDisplay.pinyin} />
+                    </div>
+                  {/if}
+                  <div class="text-lg sm:text-2xl font-black text-slate-900 dark:text-[#E3E3E3] leading-snug font-serif">
+                    <InteractiveChineseText text={parsedQuestionDisplay.hanzi} />
+                  </div>
+                </div>
+              {:else if question.text}
+                <div class="space-y-1">
+                  {#if question.pinyin}
+                    <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
+                      <InteractivePinyinText pinyin={question.pinyin} />
+                    </div>
+                  {/if}
+                  <div class="text-lg sm:text-2xl font-black text-slate-900 dark:text-[#E3E3E3] leading-snug font-serif">
+                    <InteractiveChineseText text={question.text} />
+                  </div>
+                </div>
+              {/if}
+            </div>
+          {/if}
           <!-- Hộp Lời thoại & Giải thích tức thì trên Desktop -->
           {#if isAnswered}
             <div class="w-full p-3 rounded-2xl border text-left transition-all animate-in fade-in duration-150 {
@@ -674,11 +767,14 @@
                 {@const isSelected = selectedAnswer === opt.value}
                 {@const isTarget = opt.value === question.answer}
                 {@const isRevealed = isAnswered}
+                {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
 
                 <button
                   type="button"
                   onclick={() => onSelectAnswer(opt.value)}
                   class={`h-12 sm:h-14 rounded-2xl text-base sm:text-lg font-black flex items-center justify-center transition-all cursor-pointer border select-none ${
+                    isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
+                  }${
                     !isRevealed
                       ? 'bg-white dark:bg-[#1E1E1E] hover:border-orange-400/70 hover:bg-orange-50/20 dark:hover:bg-neutral-800 border-slate-200/90 dark:border-neutral-800 active:scale-95 shadow-2xs text-slate-800 dark:text-slate-200'
                       : isTarget
@@ -699,11 +795,14 @@
                 {@const isSelected = selectedAnswer === opt.value}
                 {@const isTarget = opt.value === question.answer}
                 {@const isRevealed = isAnswered}
+                {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
 
                 <button
                   type="button"
                   onclick={() => onSelectAnswer(opt.value)}
                   class={`min-h-[48px] p-2 sm:p-2.5 rounded-2xl text-left flex items-center ${opt.label === opt.value ? 'justify-center' : 'gap-2.5'} transition-all cursor-pointer border relative select-none ${
+                    isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
+                  }${
                     !isRevealed
                       ? 'bg-white dark:bg-[#1E1E1E] hover:border-orange-400/70 hover:bg-orange-50/20 dark:hover:bg-neutral-800 border-slate-200/90 dark:border-neutral-800 active:scale-98 shadow-2xs text-slate-800 dark:text-slate-200'
                       : isTarget
@@ -737,12 +836,12 @@
                     <div class="flex-1 min-w-0 flex flex-col items-start leading-snug py-0.5 select-text">
                       {#if opt.pinyin}
                         <span class="text-xs text-slate-400 dark:text-neutral-400 font-sans tracking-wide leading-tight break-words text-left mb-0.5">
-                          {opt.pinyin}
+                          <InteractivePinyinText pinyin={opt.pinyin} />
                         </span>
                       {/if}
                       {#if opt.hanzi}
                         <span class="text-sm sm:text-base font-bold font-serif text-slate-800 dark:text-slate-100 leading-snug break-words text-left">
-                          {opt.hanzi}
+                          <InteractiveChineseText text={opt.hanzi} />
                         </span>
                       {:else}
                         <span class="text-sm font-semibold break-words text-left">
@@ -793,11 +892,14 @@
           {@const isSelected = selectedAnswer === opt.value}
           {@const isTarget = opt.value === question.answer}
           {@const isRevealed = isAnswered}
+          {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
 
           <button
             type="button"
             onclick={() => onSelectAnswer(opt.value)}
             class={`h-11 sm:h-12 rounded-2xl text-base font-black flex items-center justify-center transition-all cursor-pointer border select-none ${
+              isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
+            }${
               !isRevealed
                 ? 'bg-white dark:bg-[#1E1E1E] hover:bg-slate-50 dark:hover:bg-[#282A2C] border-slate-200 dark:border-[#282A2C] active:scale-95 shadow-2xs text-slate-800 dark:text-slate-200'
                 : isTarget
@@ -818,11 +920,14 @@
           {@const isSelected = selectedAnswer === opt.value}
           {@const isTarget = opt.value === question.answer}
           {@const isRevealed = isAnswered}
+          {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
 
           <button
             type="button"
             onclick={() => onSelectAnswer(opt.value)}
             class={`min-h-[48px] ${isFullListView ? 'p-2.5 sm:p-3' : 'p-2'} rounded-2xl font-bold text-left flex items-center ${opt.label === opt.value ? 'justify-center' : 'gap-2.5'} transition-all cursor-pointer border relative select-none ${
+              isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
+            }${
               !isRevealed
                 ? 'bg-white dark:bg-[#1E1E1E] hover:bg-slate-50 dark:hover:bg-[#282A2C] border-slate-200 dark:border-[#282A2C] active:scale-98 shadow-2xs text-slate-800 dark:text-slate-200'
                 : isTarget
@@ -856,12 +961,12 @@
               <div class="flex-1 min-w-0 flex flex-col items-start leading-tight">
                 {#if opt.pinyin}
                   <span class="text-[11px] text-slate-400 dark:text-neutral-400 font-sans tracking-wide break-words text-left mb-0.5">
-                    {opt.pinyin}
+                    <InteractivePinyinText pinyin={opt.pinyin} />
                   </span>
                 {/if}
                 {#if opt.hanzi}
                   <span class="text-xs sm:text-sm font-bold font-serif text-slate-900 dark:text-slate-100 break-words text-left">
-                    {opt.hanzi}
+                    <InteractiveChineseText text={opt.hanzi} />
                   </span>
                 {:else}
                   <span class="text-xs sm:text-sm font-semibold break-words text-left">
