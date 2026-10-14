@@ -69,6 +69,8 @@
     examRoomState.isScrolled = isScrolled;
   });
 
+  import { requestExamNotificationPermission } from '#lib/utils/examNotification';
+
   onMount(() => {
     examRoomState.isActive = true;
     examRoomState.examCode = examId ?? '';
@@ -76,6 +78,9 @@
     examRoomState.isExamMode = mode === 'exam';
     examRoomState.submitFn = handleSubmitExam;
     examRoomState.retryFn = handleRetry;
+
+    // Yêu cầu quyền thông báo ngay khi bắt đầu vào làm bài thi
+    requestExamNotificationPermission();
 
     // Start timer: Đếm ngược 55 phút cho CẢ 2 CHẾ ĐỘ ('exam' và 'practice')
     timerInterval = setInterval(() => {

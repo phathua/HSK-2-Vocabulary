@@ -46,6 +46,8 @@
 
   import { getExamAudioSources, R2_PUBLIC_BASE_URL } from '#lib/utils/examAssets';
   import { fetchSrt, type SubtitleItem } from '#lib/utils/srtParser';
+  import { portal } from '#lib/actions/portal';
+  import { sendOutTabExamAlert, clearOutTabExamAlert } from '#lib/utils/examNotification';
 
   // 60s preview countdown state
   let previewSeconds = $state(60);
@@ -142,6 +144,13 @@
       clearInterval(previewTimer);
       previewTimer = null;
     }
+    // Nếu tab đang bị ẩn (chuyển tab khác/out-tab), tuyệt đối không tự phát âm thanh ngầm dưới nền!
+    if (typeof document !== 'undefined' && document.hidden) {
+      wasPlayingBeforeBlur = true;
+      isPlaying = false;
+      examRoomState.isPlaying = false;
+      return;
+    }
     isPreviewPhase = false;
     previewSeconds = 0;
     examRoomState.isPreviewPhase = false;
@@ -154,6 +163,7 @@
         isPlaying = true;
         isAutoplayBlocked = false;
         examRoomState.isPlaying = true;
+        broadcastAudioState('PLAYING');
         neutralizeMediaSession();
       }).catch((e) => {
         console.warn('Audio autoplay failed or blocked by browser:', e);
@@ -251,8 +261,46 @@
     }
   }
 
+  let audioBroadcastChannel: BroadcastChannel | null = null;
+
+  function broadcastAudioState(type: string) {
+    try {
+      audioBroadcastChannel?.postMessage({
+        type,
+        examCode,
+        timestamp: Date.now()
+      });
+    } catch {}
+  }
+
+  function startPreviewCountdown() {
+    if (previewTimer) clearInterval(previewTimer);
+    previewTimer = setInterval(() => {
+      // Tuyệt đối không đếm tiếp nếu tab đang ẩn (tránh tự phát audio ngầm dưới nền)
+      if (typeof document !== 'undefined' && document.hidden) {
+        return;
+      }
+      // Ở chế độ thi nhanh: Đang ở phần Đọc hiểu (Q36+), tạm dừng đếm ngược 60s
+      if (!isExamMode && currentQuestionNo >= 36) {
+        return;
+      }
+      if (previewSeconds > 1) {
+        previewSeconds -= 1;
+        examRoomState.previewSeconds = previewSeconds;
+      } else {
+        startAudioPlayback();
+      }
+    }, 1000);
+  }
+
   function handleVisibilityChange() {
     if (document.hidden) {
+      // 1. Tạm dừng ngay bộ đếm 60s
+      if (previewTimer) {
+        clearInterval(previewTimer);
+        previewTimer = null;
+      }
+      // 2. Tạm dừng ngay âm thanh nếu đang phát
       if (isPlaying) {
         wasPlayingBeforeBlur = true;
         if (audioElement) {
@@ -264,13 +312,25 @@
           navigator.mediaSession.playbackState = 'none';
         }
       }
+      // 3. Gửi thông báo native nhắc nhở quay lại làm bài
+      sendOutTabExamAlert(examCode);
     } else {
+      // 4. Xóa thông báo khi người dùng quay lại tab
+      clearOutTabExamAlert();
+
+      // 5. Nếu đang trong giai đoạn 60s xem trước, tiếp tục đếm ngược từ số giây hiện tại
+      if (isPreviewPhase && previewSeconds > 0) {
+        startPreviewCountdown();
+      }
+
+      // 6. Nếu trước đó đang phát dở, tiếp tục phát
       if (wasPlayingBeforeBlur) {
         wasPlayingBeforeBlur = false;
         if (audioElement) {
           audioElement.play().then(() => {
             isPlaying = true;
             examRoomState.isPlaying = true;
+            broadcastAudioState('PLAYING');
             neutralizeMediaSession();
           }).catch(console.warn);
         }
@@ -290,15 +350,24 @@
         navigator.mediaSession.playbackState = 'none';
       }
     }
+    if (previewTimer) {
+      clearInterval(previewTimer);
+      previewTimer = null;
+    }
   }
 
   function handleWindowFocus() {
+    clearOutTabExamAlert();
+    if (isPreviewPhase && previewSeconds > 0 && !previewTimer) {
+      startPreviewCountdown();
+    }
     if (wasPlayingBeforeBlur && !document.hidden) {
       wasPlayingBeforeBlur = false;
       if (audioElement) {
         audioElement.play().then(() => {
           isPlaying = true;
           examRoomState.isPlaying = true;
+          broadcastAudioState('PLAYING');
           neutralizeMediaSession();
         }).catch(console.warn);
       }
@@ -307,6 +376,27 @@
 
   onMount(() => {
     examRoomState.startAudioFn = startAudioPlayback;
+
+    // Thiết lập kênh đồng bộ âm thanh đa tab để đảm bảo chỉ 1 tab active duy nhất được phát
+    if (typeof BroadcastChannel !== 'undefined') {
+      try {
+        audioBroadcastChannel = new BroadcastChannel('hsk_exam_audio_exclusive');
+        audioBroadcastChannel.onmessage = (event) => {
+          if (event.data?.type === 'PLAYING') {
+            // Một tab khác vừa bắt đầu phát âm thanh -> tab này phải dừng phát và dừng timer ngay
+            if (isPlaying && audioElement) {
+              audioElement.pause();
+              isPlaying = false;
+              examRoomState.isPlaying = false;
+            }
+            if (previewTimer) {
+              clearInterval(previewTimer);
+              previewTimer = null;
+            }
+          }
+        };
+      } catch {}
+    }
 
     fetchSrt(examCode, R2_PUBLIC_BASE_URL).then(data => {
       if (data.length > 0) {
@@ -341,18 +431,7 @@
     examRoomState.isPreviewPhase = true;
     examRoomState.previewSeconds = 60;
 
-    previewTimer = setInterval(() => {
-      // Ở chế độ thi nhanh: Đang ở phần Đọc hiểu (Q36+), tạm dừng đếm ngược 60s
-      if (!isExamMode && currentQuestionNo >= 36) {
-        return;
-      }
-      if (previewSeconds > 1) {
-        previewSeconds -= 1;
-        examRoomState.previewSeconds = previewSeconds;
-      } else {
-        startAudioPlayback();
-      }
-    }, 1000);
+    startPreviewCountdown();
 
     // Lắng nghe scroll trên <main> để thu nhỏ card thành thanh mini sticky bar
     mainScrollContainer = cardElement?.closest('main') as HTMLElement | null;
@@ -398,17 +477,31 @@
   onDestroy(() => {
     if (previewTimer) clearInterval(previewTimer);
     examRoomState.startAudioFn = null;
+    audioBroadcastChannel?.close();
+    clearOutTabExamAlert();
   });
+
+  let isManualSeeking = false;
+  let seekTimeout: any = null;
 
   function seekTo(time: number) {
     if (audioElement) {
+      isManualSeeking = true;
+      if (seekTimeout) clearTimeout(seekTimeout);
+      seekTimeout = setTimeout(() => {
+        isManualSeeking = false;
+      }, 1200);
+
       lastKnownGoodTime = time;
       audioElement.currentTime = time;
       currentTime = time;
       if (!isPlaying) {
-         audioElement.play().catch(console.error);
-         isPlaying = true;
-         examRoomState.isPlaying = true;
+        audioElement.play().then(() => {
+          isPlaying = true;
+          examRoomState.isPlaying = true;
+          broadcastAudioState('PLAYING');
+          neutralizeMediaSession();
+        }).catch(console.error);
       }
     }
   }
@@ -452,6 +545,7 @@
   }
 
   function handleSeeking() {
+    if (isManualSeeking) return; // Bỏ qua khi người dùng chủ động click tua từ modal chép lời
     if (isExamMode && audioElement) {
       // Chốt chặn cứng chống gian lận: Nếu người dùng cố tua từ Control Center, Apple Watch, AirPods
       const diff = Math.abs(audioElement.currentTime - lastKnownGoodTime);
@@ -497,7 +591,7 @@
             title="Đang xem trước 60s. Bấm để phát audio ngay!"
             aria-label="Phát audio ngay"
           >
-            <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} translate-x-[1.5px]`} />
+            <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} -translate-x-[0.5px]`} />
           </button>
         {:else if isExamMode && !isPreviewPhase && !isPlaying}
           <!-- Trường hợp hết 60s xem trước nhưng bị iOS chặn tự động phát -->
@@ -508,7 +602,7 @@
             title="Bấm để phát bài thi nghe ngay!"
             aria-label="Bấm phát bài thi nghe"
           >
-            <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} translate-x-[1.5px]`} />
+            <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} -translate-x-[0.5px]`} />
           </button>
         {:else if isExamMode && !isPreviewPhase}
           <div
@@ -527,7 +621,7 @@
             {#if isPlaying}
               <Pause weight="fill" class={isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} />
             {:else}
-              <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} translate-x-[1.5px]`} />
+              <Play weight="fill" class={`${isScrolled ? 'w-3 h-3 sm:w-3.5 sm:h-3.5' : 'w-3.5 h-3.5 sm:w-4 sm:h-4'} -translate-x-[0.5px]`} />
             {/if}
           </button>
         {/if}
@@ -729,6 +823,7 @@
 <!-- Modal Bản Chép Lời (Listening Transcript Modal) -->
 {#if showTranscriptModal}
   <div
+    use:portal
     class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-150"
     role="dialog"
     aria-modal="true"

@@ -34,10 +34,23 @@
   import Signpost from 'phosphor-svelte/lib/Signpost';
   import Trash from 'phosphor-svelte/lib/Trash';
   import CircleNotch from 'phosphor-svelte/lib/CircleNotch';
+  import Bell from 'phosphor-svelte/lib/Bell';
+  import { getNotificationStatus, requestExamNotificationPermission } from '#lib/utils/examNotification';
 
   type SettingsTab = 'appearance' | 'sound' | 'preferences' | 'data';
   let currentTab = $state<SettingsTab>('appearance');
   let isTestingVoice = $state(false);
+  let notifStatus = $state(getNotificationStatus());
+
+  async function handleToggleNotificationPermission() {
+    const perm = await requestExamNotificationPermission();
+    notifStatus = getNotificationStatus();
+    if (perm === 'granted') {
+      toast.success('Đã cấp quyền nhận thông báo bài thi thành công');
+    } else if (perm === 'denied') {
+      toast.error('Trình duyệt đang chặn quyền thông báo. Vui lòng mở lại trong cài đặt trang web.');
+    }
+  }
 
   // Trạng thái hộp thoại xác nhận khi thực hiện hành động nguy hiểm
   let confirmState = $state<{
@@ -501,6 +514,43 @@
           {#if currentTab === 'preferences'}
             <div class="space-y-2.5 animate-in fade-in duration-100">
               
+              <!-- Quyền Thông báo Phòng thi -->
+              <div class="flex items-center justify-between bg-slate-50 dark:bg-[#282A2C]/80 p-3 rounded-2xl border border-slate-200 dark:border-[#37393B]">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0 border border-orange-200/60 dark:border-orange-800/50">
+                    <Bell weight="duotone" class="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span class="font-extrabold text-xs sm:text-sm text-slate-800 dark:text-[#E3E3E3] block leading-tight">Thông báo phòng thi</span>
+                    <span class="text-[11px] text-slate-500 dark:text-[#8E918F] block mt-0.5">
+                      {#if notifStatus.permission === 'granted'}
+                        Đã bật: Nhắc nhở quay lại khi chuyển tab hoặc màn hình tắt
+                      {:else if notifStatus.permission === 'denied'}
+                        Bị chặn: Vui lòng mở quyền trong cài đặt trình duyệt
+                      {:else}
+                        Chưa cấp: Nhắc nhở quay lại khi out tab phòng thi
+                      {/if}
+                    </span>
+                  </div>
+                </div>
+
+                <div>
+                  {#if notifStatus.permission === 'granted'}
+                    <span class="px-2.5 py-1 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold text-xs border border-emerald-300 dark:border-emerald-800">
+                      Đã bật
+                    </span>
+                  {:else}
+                    <button
+                      type="button"
+                      onclick={handleToggleNotificationPermission}
+                      class="px-3 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs transition-colors cursor-pointer active:scale-95 shadow-xs"
+                    >
+                      Cấp quyền
+                    </button>
+                  {/if}
+                </div>
+              </div>
+
               <!-- Tự động phát âm -->
               <div class="flex items-center justify-between bg-slate-50 dark:bg-[#282A2C]/80 p-3 rounded-2xl border border-slate-200 dark:border-[#37393B]">
                 <div class="flex items-center gap-3">
