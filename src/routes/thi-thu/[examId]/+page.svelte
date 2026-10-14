@@ -335,10 +335,10 @@
     {@const audioSource = exam.audio_ogg || exam.audio_mp3 || exam.audio_url}
     {#if audioSource}
       {@const activeQ = exam.questions[currentQuestionIndex]}
-      <!-- Ở chế độ Thi Nhanh (practice) khi làm phần Đọc hiểu (Q36+), ẩn audio player trên mobile để nhường 100% không gian cho đề đọc -->
+      <!-- Ở chế độ Thi Nhanh (practice) khi làm phần Đọc hiểu (Q36+), tự ẩn audio player để nhường 100% không gian cho đề đọc -->
       <div
         bind:clientHeight={audioPlayerHeight}
-        class="sticky top-0 z-30 {mode === 'practice' && activeQ && activeQ.question_no > 35 ? 'hidden md:block' : 'block'}"
+        class="sticky top-0 z-30 {mode === 'practice' && activeQ && activeQ.question_no > 35 ? 'hidden' : 'block'}"
       >
         <ExamAudioPlayer
           audioSrc={audioSource}

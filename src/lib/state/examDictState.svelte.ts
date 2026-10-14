@@ -1,6 +1,7 @@
 import { DICTIONARY_BY_HANZI, DICTIONARY_WORDS } from '#lib/data/dictionaryData';
 import { HSK1_VOCABULARY } from '#lib/data/hsk1Vocabulary';
 import { CHARACTER_DETAIL_MAP } from '#lib/data/characterDetailMap';
+import { SINGLE_CHARACTER_VI_MAP } from '#lib/data/singleCharacterViMap';
 
 export interface ExamDictWord {
   id: string;
@@ -54,17 +55,18 @@ for (const v of HSK1_VOCABULARY) {
   }
 }
 
-// 3. Nạp ký tự đơn lẻ từ CHARACTER_DETAIL_MAP (đảm bảo từng chữ như '天', '晴' đều có nghĩa)
+// 3. Nạp ký tự đơn lẻ từ CHARACTER_DETAIL_MAP và SINGLE_CHARACTER_VI_MAP (đảm bảo từng chữ như '天', '晴', '见' đều có nghĩa tiếng Việt thuần túy)
 for (const [char, detail] of Object.entries(CHARACTER_DETAIL_MAP)) {
+  const viData = SINGLE_CHARACTER_VI_MAP[char];
+  const cleanPy = detail.pinyin.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   if (!unifiedHanziMap.has(char)) {
-    const cleanPy = detail.pinyin.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     const item: ExamDictWord = {
       id: `char-${char}`,
       hanzi: char,
       pinyin: detail.pinyin,
       pinyinClean: cleanPy,
-      hanViet: detail.radicalNameVi || '',
-      viet: detail.etymology || 'Chữ Hán cơ bản',
+      hanViet: viData?.hanViet || detail.radicalNameVi || '',
+      viet: viData?.viet || 'Chữ Hán cơ bản',
       hskLevel: 1,
       partOfSpeech: 'chữ hán'
     };
@@ -72,6 +74,32 @@ for (const [char, detail] of Object.entries(CHARACTER_DETAIL_MAP)) {
     const dLower = detail.pinyin.toLowerCase();
     if (!unifiedPinyinMap.has(dLower)) unifiedPinyinMap.set(dLower, item);
     if (!unifiedPinyinMap.has(cleanPy)) unifiedPinyinMap.set(cleanPy, item);
+  } else {
+    // Nếu từ đã có nhưng thiếu âm Hán-Việt, bổ sung từ SINGLE_CHARACTER_VI_MAP
+    const existing = unifiedHanziMap.get(char)!;
+    if (!existing.hanViet && viData?.hanViet) {
+      existing.hanViet = viData.hanViet;
+    }
+  }
+}
+
+// Bổ sung các chữ còn lại trong SINGLE_CHARACTER_VI_MAP
+for (const [char, viData] of Object.entries(SINGLE_CHARACTER_VI_MAP)) {
+  const existing = unifiedHanziMap.get(char);
+  if (existing) {
+    if (!existing.hanViet && viData.hanViet) {
+      existing.hanViet = viData.hanViet;
+    }
+  } else {
+    unifiedHanziMap.set(char, {
+      id: `char-${char}`,
+      hanzi: char,
+      pinyin: '',
+      hanViet: viData.hanViet,
+      viet: viData.viet,
+      hskLevel: 1,
+      partOfSpeech: 'chữ hán'
+    });
   }
 }
 

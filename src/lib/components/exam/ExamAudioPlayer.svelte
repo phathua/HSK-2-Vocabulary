@@ -138,6 +138,20 @@
     }
   });
 
+  $effect(() => {
+    // Tự động tạm dừng phát âm thanh khi thí sinh ở phần Đọc hiểu (Q36+) trong chế độ thi nhanh
+    if (!isExamMode && currentQuestionNo >= 36) {
+      if (isPlaying && audioElement) {
+        audioElement.pause();
+        isPlaying = false;
+        examRoomState.isPlaying = false;
+        if (typeof navigator !== 'undefined' && 'mediaSession' in navigator) {
+          navigator.mediaSession.playbackState = 'paused';
+        }
+      }
+    }
+  });
+
   let wasPlayingBeforeBlur = false;
   let lastKnownGoodTime = 0;
 
@@ -294,6 +308,10 @@
     examRoomState.previewSeconds = 60;
 
     previewTimer = setInterval(() => {
+      // Ở chế độ thi nhanh: Đang ở phần Đọc hiểu (Q36+), tạm dừng đếm ngược 60s
+      if (!isExamMode && currentQuestionNo >= 36) {
+        return;
+      }
       if (previewSeconds > 1) {
         previewSeconds -= 1;
         examRoomState.previewSeconds = previewSeconds;

@@ -294,6 +294,28 @@
   const isCorrect = $derived(isAnswered && selectedAnswer === question.answer);
   const isLastQuestion = $derived(questionIndex >= totalQuestions - 1);
 
+  const questionPromptTitle = $derived.by(() => {
+    if (question.section?.includes('Reading') || question.part?.includes('Reading') || question.question_no >= 36) {
+      if (question.part?.includes('Part 1') || (question.question_no >= 36 && question.question_no <= 40)) {
+        return 'Đọc câu và chọn tranh phù hợp (A – F):';
+      }
+      if (question.part?.includes('Part 2') || (question.question_no >= 41 && question.question_no <= 45)) {
+        return 'Chọn từ thích hợp điền vào chỗ trống (A – F):';
+      }
+      if (question.part?.includes('Part 3') || (question.question_no >= 46 && question.question_no <= 50)) {
+        return 'Đọc đoạn văn và phán đoán Đúng / Sai:';
+      }
+      return 'Chọn câu đối thoại phù hợp (A – F):';
+    }
+    if (isTrueFalse || (question.question_no >= 1 && question.question_no <= 10)) {
+      return 'Nghe và phán đoán Đúng hoặc Sai:';
+    }
+    if (question.part?.includes('Part 2') || question.type?.includes('Match') || (question.question_no >= 11 && question.question_no <= 20)) {
+      return 'Nghe và chọn tranh A – F phù hợp:';
+    }
+    return 'Nghe và chọn đáp án chính xác:';
+  });
+
   const correctChoiceText = $derived.by(() => {
     if (isTrueFalse || isReadingTrueFalse) {
       return question.answer === '√' ? 'Đúng (√)' : 'Sai (×)';
@@ -341,22 +363,24 @@
   >
     <!-- Thanh Header Thẻ Câu Hỏi: Tách biệt rõ ràng, 100% không trùng đè ảnh -->
     <div class="w-full flex items-center justify-between gap-2 pb-2 sm:pb-3 border-b border-slate-100 dark:border-neutral-800/80 shrink-0 select-none">
-      <button
-        type="button"
-        onclick={() => onOpenPalette && onOpenPalette()}
-        class="inline-flex items-center gap-1.5 h-8 px-2.5 sm:px-3 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-900/50 font-bold text-xs hover:bg-orange-100 dark:hover:bg-orange-900/60 active:scale-95 transition-all cursor-pointer shadow-2xs"
-        title="Bấm để mở danh sách 60 câu hỏi"
-      >
-        <ListNumbers weight="bold" class="w-3.5 h-3.5" />
-        <span class="uppercase tracking-wider">Câu {question.question_no}/{totalQuestions}</span>
-      </button>
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <button
+          type="button"
+          onclick={() => onOpenPalette && onOpenPalette()}
+          class="inline-flex items-center gap-1.5 h-8 px-2.5 sm:px-3 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-900/50 font-bold text-xs hover:bg-orange-100 dark:hover:bg-orange-900/60 active:scale-95 transition-all cursor-pointer shadow-2xs"
+          title="Bấm để mở danh sách 60 câu hỏi"
+        >
+          <ListNumbers weight="bold" class="w-3.5 h-3.5" />
+          <span class="uppercase tracking-wider">Câu {question.question_no}/{totalQuestions}</span>
+        </button>
 
-      <!-- Badge hiển thị phần thi thanh lịch -->
-      <div class="flex items-center gap-1.5 text-[11px] font-semibold text-slate-400 dark:text-neutral-400">
-        <span class="w-1.5 h-1.5 rounded-full {question.question_no <= 35 ? 'bg-sky-500' : 'bg-orange-500'}"></span>
-        <span>{question.question_no <= 35 ? 'Phần Nghe' : 'Phần Đọc'}</span>
-        <span class="hidden sm:inline text-slate-300 dark:text-neutral-600">•</span>
-        <span class="hidden sm:inline lowercase text-[10px]">{question.part}</span>
+        <!-- Badge hiển thị phần thi thanh lịch: Sát bên phải nút chọn câu -->
+        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-slate-400 dark:text-neutral-400">
+          <span class="w-1.5 h-1.5 rounded-full {question.question_no <= 35 ? 'bg-sky-500' : 'bg-orange-500'}"></span>
+          <span>{question.question_no <= 35 ? 'Phần Nghe' : 'Phần Đọc'}</span>
+          <span class="hidden sm:inline text-slate-300 dark:text-neutral-600">•</span>
+          <span class="hidden sm:inline lowercase text-[10px]">{question.part}</span>
+        </div>
       </div>
 
       <!-- Nút Cắm cờ -->
@@ -380,11 +404,7 @@
       <div class="w-full flex-1 flex flex-col items-center justify-center my-auto py-2 min-h-0 max-w-2xl mx-auto overflow-y-auto scrollbar-thin">
         <!-- Tiêu đề câu hỏi / Prompt Text -->
         <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-2 text-center">
-          {#if isTrueFalse || isReadingTrueFalse}
-            Đọc đoạn văn và phán đoán Đúng / Sai:
-          {:else}
-            Nghe và chọn đáp án chính xác:
-          {/if}
+          {questionPromptTitle}
         </span>
 
         <!-- Khối hiển thị đề bài: Đoạn văn + Nhận định (Q46-50) hoặc Câu hỏi (Q21-35) nằm TRÊN -->
@@ -612,23 +632,7 @@
           <!-- Tiêu đề câu hỏi / Prompt Text & Đề bài: Khi isPureLetters trên Desktop thì chuyển sang đầu Cột 2 -->
           <div class="{isPureLetters ? 'lg:hidden ' : ''}w-full flex flex-col items-center">
             <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 text-center">
-              {#if question.section.includes('Reading') || question.question_no >= 36}
-                {#if question.part.includes('Part 1') || (question.question_no >= 36 && question.question_no <= 40)}
-                  Đọc câu và chọn tranh phù hợp (A – F):
-                {:else if question.part.includes('Part 2') || (question.question_no >= 41 && question.question_no <= 45)}
-                  Chọn từ thích hợp điền vào chỗ trống (A – F):
-                {:else if question.part.includes('Part 3') || (question.question_no >= 46 && question.question_no <= 50)}
-                  Đọc đoạn văn và phán đoán Đúng / Sai:
-                {:else}
-                  Chọn câu đối thoại phù hợp (A – F):
-                {/if}
-              {:else if isTrueFalse}
-                Nghe và phán đoán Đúng hoặc Sai:
-              {:else if question.part.includes('Part 2') || question.type.includes('Match') || (question.question_no >= 11 && question.question_no <= 20)}
-                Nghe và chọn tranh A – F phù hợp:
-              {:else}
-                Nghe và chọn đáp án chính xác:
-              {/if}
+              {questionPromptTitle}
             </span>
 
             <!-- Khối hiển thị đề bài phân tầng: Hàng trên Pinyin, Hàng dưới chữ Hán -->
@@ -720,11 +724,7 @@
             <!-- Trên Desktop: Hiển thị Đề bài ngay phía trên các ô chọn A - F -->
             <div class="w-full mb-3 text-left select-text">
               <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] mb-1.5 block">
-                {#if question.section.includes('Reading') || question.question_no >= 36}
-                  Đọc câu và chọn tranh phù hợp (A – F):
-                {:else}
-                  Nghe và chọn tranh A – F phù hợp:
-                {/if}
+                {questionPromptTitle}
               </span>
 
               {#if parsedQuestionDisplay}
