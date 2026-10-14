@@ -201,12 +201,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe miêu tả bức ảnh chụp nhóm người 'bên phải cùng phía sau là tôi' (hòumiàn, zuì yòubian de shì wǒ), tương ứng với tranh F (nhóm bạn nữ chụp ảnh). Do đó đáp án chuẩn là F.",
       "listening_pinyin": "Nǚ: Hòumiàn, zuì yòubian de shì wǒ, zhǎodào le ma?\nNán: Zhǎodào le, nǐ pángbiān nàge nǚ háizi shì shéi?",
       "options": [
-        "A 生日快乐 (shēng rì kuài lè)",
-        "B 几件衣服 (jǐ jiàn yī fu)",
-        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
-        "D 踢足球 (tī zú qiú)",
-        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
-        "F 后面最右边 (hòu miàn zuì yòu biān)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -223,12 +223,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe chúc mừng sinh nhật và tặng hoa/quà 'sinh nhật vui vẻ, đây là quà tôi tặng bạn' (shēngrì kuàilè! Zhè shì wǒ sòng gěi nǐ de), tương ứng với tranh A (đôi tay tặng bó hoa hồng). Do đó đáp án chuẩn là A.",
       "listening_pinyin": "Nán: Shēngrì kuàilè! Zhè shì wǒ sòng gěi nǐ de.\nNǚ: Xièxie nǐ!",
       "options": [
-        "A 生日快乐 (shēng rì kuài lè)",
-        "B 几件衣服 (jǐ jiàn yī fu)",
-        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
-        "D 踢足球 (tī zú qiú)",
-        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
-        "F 后面最右边 (hòu miàn zuì yòu biān)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -245,12 +245,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe hỏi 'ai trả lời câu hỏi này?' (shéi lái huídá zhège wèntí?) và bạn nam giơ tay 'thưa thầy, em!' (lǎoshī, wǒ!), tương ứng với tranh C (cậu bé giơ tay trong lớp). Do đó đáp án chuẩn là C.",
       "listening_pinyin": "Nǚ: Shéi lái huídá zhège wèntí?\nNán: Lǎoshī, wǒ!",
       "options": [
-        "A 生日快乐 (shēng rì kuài lè)",
-        "B 几件衣服 (jǐ jiàn yī fu)",
-        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
-        "D 踢足球 (tī zú qiú)",
-        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
-        "F 后面最右边 (hòu miàn zuì yòu biān)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -267,12 +267,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe mời ăn thêm cơm 'ăn thêm chút cơm nhé, bạn ăn ít quá' (zài lái diǎn mǐfàn ba, nǐ chī de tài shǎo le), tương ứng với tranh E (bát cơm mǐfàn và đôi đũa). Do đó đáp án chuẩn là E.",
       "listening_pinyin": "Nán: Zài lái diǎn mǐfàn ba, nǐ chī de tài shǎo le.\nNǚ: Hǎo de, nǐ yě chī.",
       "options": [
-        "A 生日快乐 (shēng rì kuài lè)",
-        "B 几件衣服 (jǐ jiàn yī fu)",
-        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
-        "D 踢足球 (tī zú qiú)",
-        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
-        "F 后面最右边 (hòu miàn zuì yòu biān)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -289,12 +289,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe nhắc tới thử quần áo 'mấy bộ này thế nào? bạn thử xem' (zhè jǐ jiàn zěnmeyàng? Nǐ shì yí shì?), tương ứng với tranh B (các bộ áo vest jiàn yīfu treo trên giá). Do đó đáp án chuẩn là B.",
       "listening_pinyin": "Nǚ: Zhè jǐ jiàn zěnmeyàng? Nǐ shì yí shì?\nNán: Hǎo, wǒ xǐhuan zhège yánsè de.",
       "options": [
-        "A 生日快乐 (shēng rì kuài lè)",
-        "B 几件衣服 (jǐ jiàn yī fu)",
-        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
-        "D 踢足球 (tī zú qiú)",
-        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
-        "F 后面最右边 (hòu miàn zuì yòu biān)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -311,11 +311,12 @@ export const examData: ExamDetail = {
       "explanation": "Người nữ trong bài nghe nói đang rất bận 'tôi đang rất bận, 5 phút sau bạn gọi lại nhé' (wǒ xiànzài hěn máng, nǐ wǔ fēnzhōng hòu zài dǎ) khi nghe điện thoại, tương ứng với tranh B (cô gái nghe điện thoại dǎ diànhuà). Do đó đáp án chuẩn là B.",
       "listening_pinyin": "Nán: Nǐ nàr yǒu jīntiān de bàozhǐ ma?\nNǚ: Yǒu. Wǒ xiànzài hěn máng, nǐ wǔ fēnzhōng hòu zài dǎ, hǎo ma?",
       "options": [
-        "A 手表慢了 (shǒu biǎo màn le)",
-        "B 打电话 (dǎ diàn huà)",
-        "C 小学老师 (xiǎo xué lǎo shī)",
-        "D 电影票 (diàn yǐng piào)",
-        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -332,11 +333,12 @@ export const examData: ExamDetail = {
       "explanation": "Người nữ hỏi so sánh 'cái nào đẹp nhất?' (nǎge zuì piàoliang?) khi chọn giày, tương ứng với tranh E (cô gái cầm 2 đôi giày xiézi so sánh). Do đó đáp án chuẩn là E.",
       "listening_pinyin": "Nǚ: Gàosu wǒ, nǎge zuì piàoliang?\nNán: Wǒ juéde dōu piàoliang.",
       "options": [
-        "A 手表慢了 (shǒu biǎo màn le)",
-        "B 打电话 (dǎ diàn huà)",
-        "C 小学老师 (xiǎo xué lǎo shī)",
-        "D 电影票 (diàn yǐng piào)",
-        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -353,11 +355,12 @@ export const examData: ExamDetail = {
       "explanation": "Người nữ trả lời nghề nghiệp 'tôi là giáo viên tiểu học' (wǒ shì xiǎoxué lǎoshī), tương ứng với tranh C (cô giáo lǎoshī bên quả địa cầu). Do đó đáp án chuẩn là C.",
       "listening_pinyin": "Nán: Nín zuò shénme gōngzuò?\nNǚ: Wǒ shì xiǎoxué lǎoshī.",
       "options": [
-        "A 手表慢了 (shǒu biǎo màn le)",
-        "B 打电话 (dǎ diàn huà)",
-        "C 小学老师 (xiǎo xué lǎo shī)",
-        "D 电影票 (diàn yǐng piào)",
-        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -374,11 +377,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe nhắc tới thời gian và đồng hồ 'đồng hồ của tôi bị chậm à?' (wǒ de shǒubiǎo màn le?), tương ứng với tranh A (cánh tay xem đồng hồ shǒubiǎo). Do đó đáp án chuẩn là A.",
       "listening_pinyin": "Nǚ: Xiànzài shì bā diǎn, bú shì qī diǎn.\nNán: Zhēn de ma? Wǒ de shǒubiǎo màn le?",
       "options": [
-        "A 手表慢了 (shǒu biǎo màn le)",
-        "B 打电话 (dǎ diàn huà)",
-        "C 小学老师 (xiǎo xué lǎo shī)",
-        "D 电影票 (diàn yǐng piào)",
-        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -395,11 +399,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe nhắc tới nhờ đưa vé xem phim 'đây là vé xem phim của cô Lý' (zhè shì Lǐ xiǎojiě de diànyǐngpiào), tương ứng với tranh D (đưa vé diànyǐngpiào). Do đó đáp án chuẩn là D.",
       "listening_pinyin": "Nán: Zhè shì Lǐ xiǎojiě de diànyǐngpiào, nǐ néng bāng wǒ gěi tā ma?\nNǚ: Méi wèntí.",
       "options": [
-        "A 手表慢了 (shǒu biǎo màn le)",
-        "B 打电话 (dǎ diàn huà)",
-        "C 小学老师 (xiǎo xué lǎo shī)",
-        "D 电影票 (diàn yǐng piào)",
-        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -694,21 +699,21 @@ export const examData: ExamDetail = {
       "question_no": 36,
       "image": null,
       "type": "Sentence Match",
-      "text": "出租车还没来，我们再等几分钟。",
+      "text": "给您介绍一下，这是我们公司的李先生。",
       "answer": "F",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_36.webp",
       "board_image": "images/H20901_board_36_40.webp",
-      "explanation": "Đề bài miêu tả taxi chưa đến, chờ thêm vài phút (chūzūchē hái méi lái, wǒmen zài děng jǐ fēnzhōng), tương ứng với bức tranh F (xe taxi chūzūchē). Đáp án F.",
+      "explanation": "Đề bài nói 'giới thiệu một chút, đây là ông Lý của công ty chúng tôi' (gěi nín jièshào yíxià, zhè shì wǒmen gōngsī de Lǐ xiānsheng), tương ứng với tranh F (hai người đàn ông bắt tay chào hỏi nhau trong công ty). Đáp án đúng là F.",
       "listening_pinyin": null,
-      "pinyin": "Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.",
+      "pinyin": "Gěi nín jièshào yíxià, zhè shì wǒmen gōngsī de Lǐ xiānsheng.",
       "options": [
-        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
-        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
-        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
-        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -718,21 +723,21 @@ export const examData: ExamDetail = {
       "question_no": 37,
       "image": null,
       "type": "Sentence Match",
-      "text": "这件衣服太大了，有小一点儿的吗？",
+      "text": "看书时间长了，眼睛得休息休息。",
       "answer": "E",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_37.webp",
       "board_image": "images/H20901_board_36_40.webp",
-      "explanation": "Đề bài nói bộ quần áo này quá to, có cái nhỏ hơn không (zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?), tương ứng với tranh E (thử áo len rộng yīfu). Đáp án E.",
+      "explanation": "Đề bài nói 'đọc sách thời gian dài rồi, mắt phải nghỉ ngơi một chút' (kàn shū shíjiān cháng le, yǎnjing děi xiūxi xiūxi), tương ứng với tranh E (cô gái đang xoa bóp mắt để mắt được nghỉ ngơi). Đáp án đúng là E.",
       "listening_pinyin": null,
-      "pinyin": "Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?",
+      "pinyin": "Kàn shū shíjiān cháng le, yǎnjing děi xiūxi xiūxi.",
       "options": [
-        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
-        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
-        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
-        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -742,21 +747,21 @@ export const examData: ExamDetail = {
       "question_no": 38,
       "image": null,
       "type": "Sentence Match",
-      "text": "她买了个新手机，可以上网，很好用。",
+      "text": "那是我孩子，她爱跳舞。",
       "answer": "C",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_38.webp",
       "board_image": "images/H20901_board_36_40.webp",
-      "explanation": "Đề bài miêu tả mua điện thoại mới có thể lên mạng, dùng rất thích (mǎi le gè xīn shǒujī, kěyǐ shàngwǎng), tương ứng với tranh C (chiếc điện thoại shǒujī). Đáp án C.",
+      "explanation": "Đề bài nói 'đó là con của tôi, con bé rất thích nhảy múa' (nà shì wǒ háizi, tā ài tiàowǔ), tương ứng với tranh C (cô gái đang đứng uốn dẻo múa ba lê giơ cao chân). Đáp án đúng là C.",
       "listening_pinyin": null,
-      "pinyin": "Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.",
+      "pinyin": "Nà shì wǒ háizi, tā ài tiàowǔ.",
       "options": [
-        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
-        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
-        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
-        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -766,21 +771,21 @@ export const examData: ExamDetail = {
       "question_no": 39,
       "image": null,
       "type": "Sentence Match",
-      "text": "我们公司在饭店的右边。",
+      "text": "今天下雪了，天气很冷。",
       "answer": "B",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_39.webp",
       "board_image": "images/H20901_board_36_40.webp",
-      "explanation": "Đề bài miêu tả công ty nằm bên phải khách sạn (gōngsī zài fàndiàn de yòubian), tương ứng với tranh B (tòa nhà công ty gōngsī). Đáp án B.",
+      "explanation": "Đề bài nói 'hôm nay tuyết rơi rồi, thời tiết rất lạnh' (jīntiān xià xuě le, tiānqì hěn lěng), tương ứng với tranh B (bé gái đội mũ áo len ấm áp giữa trời mùa đông tuyết rơi). Đáp án đúng là B.",
       "listening_pinyin": null,
-      "pinyin": "Wǒmen gōngsī zài fàndiàn de yòubian.",
+      "pinyin": "Jīntiān xià xuě le, tiānqì hěn lěng.",
       "options": [
-        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
-        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
-        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
-        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -790,21 +795,21 @@ export const examData: ExamDetail = {
       "question_no": 40,
       "image": null,
       "type": "Sentence Match",
-      "text": "弟弟在家看电视呢。",
+      "text": "因为我不会游泳，所以，小鱼，你好！",
       "answer": "A",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_40.webp",
       "board_image": "images/H20901_board_36_40.webp",
-      "explanation": "Đề bài miêu tả em trai ở nhà xem tivi (dìdi zài jiā kàn diànshì ne), tương ứng với tranh A (bé trai xem tivi diànshì). Đáp án A.",
+      "explanation": "Đề bài là lời của chú mèo con: 'bởi vì tôi không biết bơi, cho nên, cá nhỏ ơi, chào bạn!' (yīnwèi wǒ bú huì yóuyǒng, suǒyǐ, xiǎoyú, nǐ hǎo!), tương ứng với tranh A (chú mèo đang nhìn vào bình cá vàng). Đáp án đúng là A.",
       "listening_pinyin": null,
-      "pinyin": "Dìdi zài jiā kàn diànshì ne.",
+      "pinyin": "Yīnwèi wǒ bú huì yóuyǒng, suǒyǐ, xiǎoyú, nǐ hǎo!",
       "options": [
-        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
-        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
-        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
-        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

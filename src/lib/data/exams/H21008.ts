@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Xǐxǐ shǒu zhǔnbèi chīfàn. / Wǒ zhèngzài xǐ ne, zěnme méi shuǐ le?",
       "explanation": "Bài nghe nhắc đến việc rửa tay chuẩn bị ăn cơm ('xǐxǐ shǒu zhǔnbèi chīfàn'). Đối chiếu với nhóm tranh A-F, bức tranh C thể hiện người đang rửa tay dưới vòi nước nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǐ zěnmeyàng le? Shēngbìng le? / Méi guānxi, wǒ jiùshì yǒudiǎnr lèi.",
       "explanation": "Bài nghe nói về việc bị mệt ('yǒudiǎnér lèi'). Bức tranh E thể hiện người mệt mỏi nằm trên giường/ghế nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Xièxie nǐ, duōshao qián? / Wǒ kàn yíxià, shì wǔshísān yuán.",
       "explanation": "Bài nghe nói về việc thanh toán tiền ('shì wǔshísān yuán'). Bức tranh B thể hiện việc tính tiền/thanh toán hóa đơn nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǐmen liǎng ge lí diànshì tài jìn le. / Zhīdào le, zhīdào le.",
       "explanation": "Bài nghe nhắc nhở 'lí diànshì tàijìn le' (Ngồi quá gần tivi). Bức tranh F thể hiện hai em bé ngồi xem tivi gần màn hình nên đáp án là F.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Shìbushì bú xià yǔ le? / Bú xià le, tiān qíng le.",
       "explanation": "Bài nghe nói trời hết mưa, hửng nắng ('bùxiàyǔ le，tiānqíng le'). Bức tranh A thể hiện bầu trời nắng đẹp/dù che nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǐ lái kànkan, xiànzài zěnmeyàng? / Yòubian yǒudiǎnr gāo.",
       "explanation": "Bài nghe nói về việc treo khung tranh/chỉnh độ cao ('yòubiān yǒudiǎnér gāo'). Bức tranh D thể hiện hai người đang treo khung tranh lên tường nên đáp án là D.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Shì nǐ de shǒujī ma? / Shì, wǒ zhǎodào tā le!",
       "explanation": "Bài nghe nhắc đến tìm thấy điện thoại ('shì，wǒ zhǎodào tā le！'). Bức tranh B thể hiện người nam giơ cao chiếc điện thoại di động mừng rỡ nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Yào bú yào wǒ bāngzhù nǐ? / Hǎo ba, zhè ge lù zhēn bù hǎo zǒu.",
       "explanation": "Bài nghe nói về việc leo đường khó đi và giúp đỡ ('zhège lùzhēn bùhǎo zǒu'). Bức tranh E thể hiện hai người leo núi giúp đỡ nhau nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǐ ràng wǒ zài shuì shí fēnzhōng ba. / Zài shuì shí fēnzhōng? Nǐ kànkan jǐ diǎn le?",
       "explanation": "Bài nghe nhắc đến việc ngủ thêm 10 phút và xem đồng hồ báo thức ('zài shuì shífēnzhōng'). Bức tranh C thể hiện người nam cầm đồng hồ báo thức bên người nữ đang ngủ nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Zhè shì nín nǚ'ér? Yǐjīng liù suì le! / Shì, shíjiān guò de zhēn kuài.",
       "explanation": "Bài nghe nói về con gái 6 tuổi ('zhè shì nín nǚér？yǐjīng liùsuì le！'). Bức tranh A thể hiện người mẹ ôm con gái nhỏ nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nǐ zhǎo wǒ jiějie ma? Tā jiù zuò zài wǒ pángbiān.",
       "options": [
-        "A 今天是她的生日，大家送她很多东西。 (Jīntiān shì tā de shēngrì, dàjiā sòng tā hěn duō dōngxi.)",
-        "B 喝杯咖啡，休息一下。 (Hē bēi kāfēi, xiūxi yíxià.)",
-        "C 女儿，你今天真是太漂亮了！ (Nǚ'ér, nǐ jīntiān zhēn shì tài piàoliang le!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你找我姐姐吗？她就坐在我旁边。 (Nǐ zhǎo wǒ jiějie ma? Tā jiù zuò zài wǒ pángbiān.)",
-        "F 因为儿子病了，所以他没去上班。 (Yīnwèi érzi bìng le, suǒyǐ tā méi qù shàngbān.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Hē bēi kāfēi, xiūxi yíxià.",
       "options": [
-        "A 今天是她的生日，大家送她很多东西。 (Jīntiān shì tā de shēngrì, dàjiā sòng tā hěn duō dōngxi.)",
-        "B 喝杯咖啡，休息一下。 (Hē bēi kāfēi, xiūxi yíxià.)",
-        "C 女儿，你今天真是太漂亮了！ (Nǚ'ér, nǐ jīntiān zhēn shì tài piàoliang le!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你找我姐姐吗？她就坐在我旁边。 (Nǐ zhǎo wǒ jiějie ma? Tā jiù zuò zài wǒ pángbiān.)",
-        "F 因为儿子病了，所以他没去上班。 (Yīnwèi érzi bìng le, suǒyǐ tā méi qù shàngbān.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yīnwèi érzi bìng le, suǒyǐ tā méi qù shàngbān.",
       "options": [
-        "A 今天是她的生日，大家送她很多东西。 (Jīntiān shì tā de shēngrì, dàjiā sòng tā hěn duō dōngxi.)",
-        "B 喝杯咖啡，休息一下。 (Hē bēi kāfēi, xiūxi yíxià.)",
-        "C 女儿，你今天真是太漂亮了！ (Nǚ'ér, nǐ jīntiān zhēn shì tài piàoliang le!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你找我姐姐吗？她就坐在我旁边。 (Nǐ zhǎo wǒ jiějie ma? Tā jiù zuò zài wǒ pángbiān.)",
-        "F 因为儿子病了，所以他没去上班。 (Yīnwèi érzi bìng le, suǒyǐ tā méi qù shàngbān.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Jīntiān shì tā de shēngrì, dàjiā sòng tā hěn duō dōngxi.",
       "options": [
-        "A 今天是她的生日，大家送她很多东西。 (Jīntiān shì tā de shēngrì, dàjiā sòng tā hěn duō dōngxi.)",
-        "B 喝杯咖啡，休息一下。 (Hē bēi kāfēi, xiūxi yíxià.)",
-        "C 女儿，你今天真是太漂亮了！ (Nǚ'ér, nǐ jīntiān zhēn shì tài piàoliang le!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你找我姐姐吗？她就坐在我旁边。 (Nǐ zhǎo wǒ jiějie ma? Tā jiù zuò zài wǒ pángbiān.)",
-        "F 因为儿子病了，所以他没去上班。 (Yīnwèi érzi bìng le, suǒyǐ tā méi qù shàngbān.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nǚ'ér, nǐ jīntiān zhēn shì tài piàoliang le!",
       "options": [
-        "A 今天是她的生日，大家送她很多东西。 (Jīntiān shì tā de shēngrì, dàjiā sòng tā hěn duō dōngxi.)",
-        "B 喝杯咖啡，休息一下。 (Hē bēi kāfēi, xiūxi yíxià.)",
-        "C 女儿，你今天真是太漂亮了！ (Nǚ'ér, nǐ jīntiān zhēn shì tài piàoliang le!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你找我姐姐吗？她就坐在我旁边。 (Nǐ zhǎo wǒ jiějie ma? Tā jiù zuò zài wǒ pángbiān.)",
-        "F 因为儿子病了，所以他没去上班。 (Yīnwèi érzi bìng le, suǒyǐ tā méi qù shàngbān.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

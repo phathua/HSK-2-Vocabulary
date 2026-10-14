@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Xià yǔ le, wǒmen huíqu ba.\nNǚ: Méi guānxi, yǔ bú dà.",
       "explanation": "Bài nghe nhắc đến từ khóa 'xiàyǔ' (Trời mưa). Bức tranh A thể hiện hai người đang che ô đi trong mưa nên đáp án khớp là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zhège zì shì \"tīng\" hái shì \"chàng\" zì?\nNán: Nǐ zài kànkan, shì zhège zì.",
       "explanation": "Bài nghe nhắc đến việc xem chữ Hán 'tīng' và 'chàng'. Bức tranh F thể hiện hình ảnh tập viết chữ Hán nên chọn F.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ yào qù nǎr? Yí ge yuè hòu cái huílái ma?\nNǚ: Bù, wǒ qù jǐ tiān jiù huílái.",
       "explanation": "Hội thoại đề cập đến việc đi xa vài ngày với hành lý/vali. Bức tranh C mô tả hình ảnh người mang vali đi du lịch/công tác nên chọn C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Bié shuōhuà, nǚ'ér zhèngzài shuìjiào ne.\nNán: Hǎo, nà wǒmen dào wàimiàn qù ba.",
       "explanation": "Từ khóa 'shuìjiào' (Đang ngủ). Bức tranh E thể hiện bé gái đang nằm ngủ trên giường nên chọn đáp án E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ kàn zhège xīguā zěnmeyàng?\nNǚ: Hěn dà, dànshì bù zhīdào tián bù tián.",
       "explanation": "Từ khóa 'xīguā' (Dưa hấu). Bức tranh B thể hiện quả dưa hấu lớn nên chọn đáp án B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Qǐngwèn, Zhāng jīnglǐ zài ma?\nNán: Tā zài kāihuì, qǐng shāo děng.",
       "explanation": "Từ khóa 'kāihuì' (Đang họp). Bức tranh E mô tả khung cảnh cuộc họp văn phòng nên đáp án đúng là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zhè jǐ běn shū nǐ dōu kànguo ma?\nNán: Kànguo, fēicháng yǒu yìsi.",
       "explanation": "Từ khóa 'shū' (Sách). Bức tranh D mô tả giá sách và các cuốn sách nên đáp án đúng là D.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ měitiān zěnme qù shàngbān?\nNǚ: Zuò dìtiě, hěn kuài.",
       "explanation": "Từ khóa 'zuòdìtiě' (Đi tàu điện ngầm). Bức tranh B mô tả tau điện ngầm nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nín chī bǎo le ma? Hái xūyào diǎnr shénme?\nNán: Bú yào le, xièxie.",
       "explanation": "Từ khóa 'chībǎo le' (Ăn no rồi) và phục vụ bàn trong nhà hàng. Bức tranh A thể hiện nhân viên nhà hàng phục vụ món ăn nên chọn A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ xuéguo \"yī\" zì, nà \"èr\" zì zěnme xiě?\nNǚ: Wǒ zhīdào, zhèyàng xiě, duì ma?",
       "explanation": "Hội thoại học viết chữ 'yī' và 'èr'. Bức tranh C mô tả bé gái đang tập viết chữ Hán nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\"",
       "options": [
-        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
-        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
-        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
-        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Xià yǔ le, chūmén yào dài sǎn.",
       "options": [
-        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
-        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
-        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
-        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā měitiān zǎochen dōu qù gōngyuán pǎobù.",
       "options": [
-        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
-        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
-        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
-        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhuōzi shàng yǒu yì bēi rè chá.",
       "options": [
-        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
-        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
-        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
-        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tāmen zhèngzài dǎ diànhuà ne.",
       "options": [
-        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
-        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
-        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
-        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

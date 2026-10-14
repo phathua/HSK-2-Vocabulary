@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ yǒu Xiǎo Zhāng de diànhuà ma?\nNán: Shǒujī shàng yǒu, wǒ zhǎozhao.",
       "explanation": "Bài nghe đề cập đến việc tìm số điện thoại trên điện thoại di động (shǒujī). Bức tranh A thể hiện người đang bấm/tìm số điện thoại nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Zěnme? Bù hǎochī ma?\nNǚ: Shì, wǒ bú ài chī zhège cài.",
       "explanation": "Bài nghe nói về việc không thích ăn món ăn này (bùài chī zhège cài). Bức tranh C thể hiện đĩa thức ăn/món ăn nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zài nǎr ne? Wǒ méi kàndào.\nNán: Yòubian, nà běn Hànyǔ shū zài yòubian.",
       "explanation": "Bài nghe nhắc tới cuốn sách tiếng Hán nằm ở bên phải (hànyǔ shū zài yòubiān). Bức tranh E thể hiện sách vở nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Xièxie nǐ sòng wǒ huílái.\nNǚ: Búkèqi, zàijiàn, míngtiān jiàn.",
       "explanation": "Bài nghe là lời cảm ơn vì đã đưa về nhà và chào tạm biệt (sòng wǒ huílái, zàijiàn). Bức tranh B thể hiện cảnh tiễn biệt/đi đường nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ juéde zhè jiàn zěnmeyàng?\nNán: Hái kěyǐ, huìbuhuì yǒudiǎnr dà?",
       "explanation": "Bài nghe bàn về chiếc quần áo có hơi rộng không (zhèjiàn...yǒudiǎnér dà). Bức tranh F thể hiện người đang thử/xem quần áo nên đáp án là F.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Zhèxiē yīfu nǐ shénme shíhou xǐ de? Wǒ zěnme méi kànjiàn.\nNǚ: Jiùshì zuótiān xiàwǔ.",
       "explanation": "Bài nghe nhắc đến việc giặt quần áo (xǐyīfú). Bức tranh B mô tả hành động phơi/giặt quần áo nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zhège shì gěi wǒ dìdi mǎi de, xià xīngqī shì tā de shēngrì.\nNán: Nǐ mǎi le shénme?",
       "explanation": "Bài nghe nói mua quà sinh nhật cho em trai (gěi dìdi mǎi de...shēngrì). Bức tranh E thể hiện món quà/đồ chơi em trai nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ zhǔnbèi hǎo le méiyǒu?\nNǚ: Wǒ zhǔnbèi hǎo le.",
       "explanation": "Bài nghe hỏi đã chuẩn bị xong chưa (zhǔnbèi hǎo le méiyǒu). Bức tranh C mô tả người chuẩn bị sẵn sàng hành lý/xuất phát nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Bié shuōhuà, érzi zài shuìjiào ne.\nNán: Hǎo de, nà wǒmen qù wàimiàn shuō.",
       "explanation": "Bài nghe nhắc nhở nói nhỏ vì con trai đang ngủ (érzi zài shuìjiào). Bức tranh A mô tả em bé/đứa trẻ đang ngủ nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Xiǎojiě, qǐngwèn nín lái diǎnr shénme?\nNǚ: Zài děng yíxià, wǒ péngyou hái méi dào.",
       "explanation": "Bài nghe là nhân viên nhà hàng hỏi khách dùng gì (qǐngwèn nín lái diǎnér shénme). Bức tranh D mô tả nhân viên phục vụ/nhà hàng nên đáp án là D.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Bú xiàyǔ le, tiān qíng le.",
       "options": [
-        "A 这次考试她考得非常好。 (Zhè cì kǎoshì tā kǎo de fēicháng hǎo.)",
-        "B 错了，左边的是哥哥，右边这个是弟弟。 (Cuò le, zuǒbian de shì gēge, yòubian zhège shì dìdi.)",
-        "C 身体怎么样？什么时候能出院？ (Shēntǐ zěnmeyàng? Shénme shíhou néng chūyuàn?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 为什么她的比我的多？ (Wèishénme tā de bǐ wǒ de duō?)",
-        "F 不下雨了，天晴了。 (Bú xiàyǔ le, tiān qíng le.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè cì kǎoshì tā kǎo de fēicháng hǎo.",
       "options": [
-        "A 这次考试她考得非常好。 (Zhè cì kǎoshì tā kǎo de fēicháng hǎo.)",
-        "B 错了，左边的是哥哥，右边这个是弟弟。 (Cuò le, zuǒbian de shì gēge, yòubian zhège shì dìdi.)",
-        "C 身体怎么样？什么时候能出院？ (Shēntǐ zěnmeyàng? Shénme shíhou néng chūyuàn?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 为什么她的比我的多？ (Wèishénme tā de bǐ wǒ de duō?)",
-        "F 不下雨了，天晴了。 (Bú xiàyǔ le, tiān qíng le.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Shēntǐ zěnmeyàng? Shénme shíhou néng chūyuàn?",
       "options": [
-        "A 这次考试她考得非常好。 (Zhè cì kǎoshì tā kǎo de fēicháng hǎo.)",
-        "B 错了，左边的是哥哥，右边这个是弟弟。 (Cuò le, zuǒbian de shì gēge, yòubian zhège shì dìdi.)",
-        "C 身体怎么样？什么时候能出院？ (Shēntǐ zěnmeyàng? Shénme shíhou néng chūyuàn?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 为什么她的比我的多？ (Wèishénme tā de bǐ wǒ de duō?)",
-        "F 不下雨了，天晴了。 (Bú xiàyǔ le, tiān qíng le.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Cuò le, zuǒbian de shì gēge, yòubian zhège shì dìdi.",
       "options": [
-        "A 这次考试她考得非常好。 (Zhè cì kǎoshì tā kǎo de fēicháng hǎo.)",
-        "B 错了，左边的是哥哥，右边这个是弟弟。 (Cuò le, zuǒbian de shì gēge, yòubian zhège shì dìdi.)",
-        "C 身体怎么样？什么时候能出院？ (Shēntǐ zěnmeyàng? Shénme shíhou néng chūyuàn?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 为什么她的比我的多？ (Wèishénme tā de bǐ wǒ de duō?)",
-        "F 不下雨了，天晴了。 (Bú xiàyǔ le, tiān qíng le.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wèishénme tā de bǐ wǒ de duō?",
       "options": [
-        "A 这次考试她考得非常好。 (Zhè cì kǎoshì tā kǎo de fēicháng hǎo.)",
-        "B 错了，左边的是哥哥，右边这个是弟弟。 (Cuò le, zuǒbian de shì gēge, yòubian zhège shì dìdi.)",
-        "C 身体怎么样？什么时候能出院？ (Shēntǐ zěnmeyàng? Shénme shíhou néng chūyuàn?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 为什么她的比我的多？ (Wèishénme tā de bǐ wǒ de duō?)",
-        "F 不下雨了，天晴了。 (Bú xiàyǔ le, tiān qíng le.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

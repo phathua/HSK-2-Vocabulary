@@ -210,7 +210,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_11.webp",
       "board_image": "images/H20000_board_11_15.webp",
       "explanation": "Đáp án [F]: Lời thoại hội thoại [nán：nǐ lèi le ba？nǚ：shì，wǒyào xiūxī xiūxī。 (Nán: Nǐ lèi le ba? Nǚ: Shì, wǒ yào xiūxi xiūxi.)] khớp với bức hình F.",
-      "listening_pinyin": "Nán: Nǐ lèi le ba? Nǚ: Shì, wǒ yào xiūxi xiūxi."
+      "listening_pinyin": "Nán: Nǐ lèi le ba? Nǚ: Shì, wǒ yào xiūxi xiūxi.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -225,7 +233,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_12.webp",
       "board_image": "images/H20000_board_11_15.webp",
       "explanation": "Đáp án [A]: Lời thoại hội thoại [nán：nǐ háizi duōdà le？nǚ：tā kuài wǔsuì le。 (Nán: Nǐ háizi duō dà le? Nǚ: Tā kuài wǔ suì le.)] khớp với bức hình A.",
-      "listening_pinyin": "Nán: Nǐ háizi duō dà le? Nǚ: Tā kuài wǔ suì le."
+      "listening_pinyin": "Nán: Nǐ háizi duō dà le? Nǚ: Tā kuài wǔ suì le.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -240,7 +256,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_13.webp",
       "board_image": "images/H20000_board_11_15.webp",
       "explanation": "Đáp án [B]: Lời thoại hội thoại [nǚ：zhè běnshū kàn wán le ma？nán：kàn wán le，zhè běnshū hěn bùcuò。 (Nǚ: Zhè běn shū kàn wán le ma? Nán: Kàn wán le, zhè běn shū hěn búcuò.)] khớp với bức hình B.",
-      "listening_pinyin": "Nǚ: Zhè běn shū kàn wán le ma? Nán: Kàn wán le, zhè běn shū hěn búcuò."
+      "listening_pinyin": "Nǚ: Zhè běn shū kàn wán le ma? Nán: Kàn wán le, zhè běn shū hěn búcuò.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -255,7 +279,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_14.webp",
       "board_image": "images/H20000_board_11_15.webp",
       "explanation": "Đáp án [E]: Lời thoại hội thoại [nán：jīntiāntiānqì zěnmeyàng nǚ：xiàxuě le，hěn lěng。 (Nán: Jīntiān tiānqì zěnmeyàng?? Xià xuě le, hěn lěng.)] khớp với bức hình E.",
-      "listening_pinyin": "Nán: Jīntiān tiānqì zěnmeyàng?? Xià xuě le, hěn lěng."
+      "listening_pinyin": "Nán: Jīntiān tiānqì zěnmeyàng?? Xià xuě le, hěn lěng.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -270,7 +302,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_15.webp",
       "board_image": "images/H20000_board_11_15.webp",
       "explanation": "Đáp án [C]: Lời thoại hội thoại [nǚ：nǐ měitiān jǐdiǎn qǐchuáng nán：wǒ měitiān liùdiǎn qǐchuáng。xiànzài kāishǐ dìdàotí： (Nǚ: Nǐ měi tiān jǐ diǎn qǐchuáng?? Wǒ měi tiān liù diǎn qǐchuáng. Xiànzài kāishǐ dì dào tí)] khớp với bức hình C.",
-      "listening_pinyin": "Nǚ: Nǐ měi tiān jǐ diǎn qǐchuáng?? Wǒ měi tiān liù diǎn qǐchuáng. Xiànzài kāishǐ dì dào tí"
+      "listening_pinyin": "Nǚ: Nǐ měi tiān jǐ diǎn qǐchuáng?? Wǒ měi tiān liù diǎn qǐchuáng. Xiànzài kāishǐ dì dào tí",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -285,7 +325,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_16.webp",
       "board_image": "images/H20000_board_16_20.webp",
       "explanation": "Đáp án [D]: Lời thoại hội thoại [nán：zhèlǐ de kāfēi hǎohē ma？nǚ：wǒ juéde hěn hǎohē。 (Nán: Zhèlǐ de kāfēi hǎohē ma? Nǚ: Wǒ juéde hěn hǎohē.)] khớp với bức hình D.",
-      "listening_pinyin": "Nán: Zhèlǐ de kāfēi hǎohē ma? Nǚ: Wǒ juéde hěn hǎohē."
+      "listening_pinyin": "Nán: Zhèlǐ de kāfēi hǎohē ma? Nǚ: Wǒ juéde hěn hǎohē.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -300,7 +348,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_17.webp",
       "board_image": "images/H20000_board_16_20.webp",
       "explanation": "Đáp án [A]: Lời thoại hội thoại [nǚ：nǐ zěnme le？nán：wǒ kěnéng shēngbìng le。 (Nǚ: Nǐ zěnme le? Nán: Wǒ kěnéng shēngbìng le.)] khớp với bức hình A.",
-      "listening_pinyin": "Nǚ: Nǐ zěnme le? Nán: Wǒ kěnéng shēngbìng le."
+      "listening_pinyin": "Nǚ: Nǐ zěnme le? Nán: Wǒ kěnéng shēngbìng le.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -315,7 +371,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_18.webp",
       "board_image": "images/H20000_board_16_20.webp",
       "explanation": "Đáp án [E]: Lời thoại hội thoại [nǚ：zuótiān tāmen liǎnggè tiàodé zuìhǎo nán：wǒ zhīdào。 (Nǚ: Zuótiān tāmen liǎng ge tiào de zuì hǎo. 。 Wǒ zhīdào.)] khớp với bức hình E.",
-      "listening_pinyin": "Nǚ: Zuótiān tāmen liǎng ge tiào de zuì hǎo. 。 Wǒ zhīdào."
+      "listening_pinyin": "Nǚ: Zuótiān tāmen liǎng ge tiào de zuì hǎo. 。 Wǒ zhīdào.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -330,7 +394,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_19.webp",
       "board_image": "images/H20000_board_16_20.webp",
       "explanation": "Đáp án [C]: Lời thoại hội thoại [nán：zhège shāngdiàn de dōngxī hěn piányi。nǚ：shì ma？wǒmen yào búyào mǎi jǐgè xīn de yǐzi？ (Nán: Zhège shāngdiàn de dōngxi hěn piányi. Nǚ: Shì ma? Wǒmen yàobuyào mǎi jǐ ge xīn de yǐzi?)] khớp với bức hình C.",
-      "listening_pinyin": "Nán: Zhège shāngdiàn de dōngxi hěn piányi. Nǚ: Shì ma? Wǒmen yàobuyào mǎi jǐ ge xīn de yǐzi?"
+      "listening_pinyin": "Nán: Zhège shāngdiàn de dōngxi hěn piányi. Nǚ: Shì ma? Wǒmen yàobuyào mǎi jǐ ge xīn de yǐzi?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -345,7 +417,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_20.webp",
       "board_image": "images/H20000_board_16_20.webp",
       "explanation": "Đáp án [B]: Lời thoại hội thoại [nǚ：nǐ xǐhuān chī shénme shuǐguǒ nán：wǒ xǐhuān chī xīguā。dìsān bùfèn yīgòng gètí，měití tīng liǎngcì。lìrú：nán：xiǎowáng，zhèlǐ yǒu jǐgè bēizi，nǎge shì nǐ de？nǚ：zuǒbiān nàge hóngsè de shì wǒ de。wèn：xiǎowáng de bēizi shì shénme yánsè de？xiànzài kāishǐ dìtí： (Nǚ: Nǐ xǐhuan chī shénme shuǐguǒ?? Wǒ xǐhuan chī xīguā. Dìsān bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nán: Xiǎo Wáng, zhèlǐ yǒu jǐ ge bēizi, nǎge shì nǐ de? Nǚ: Zuǒbian nàge hóngsè de shì wǒ de. Wèn: Xiǎo Wáng de bēizi shì shénme yánsè de? Xiànzài kāishǐ dì tí)] khớp với bức hình B.",
-      "listening_pinyin": "Nǚ: Nǐ xǐhuan chī shénme shuǐguǒ?? Wǒ xǐhuan chī xīguā. Dìsān bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nán: Xiǎo Wáng, zhèlǐ yǒu jǐ ge bēizi, nǎge shì nǐ de? Nǚ: Zuǒbian nàge hóngsè de shì wǒ de. Wèn: Xiǎo Wáng de bēizi shì shénme yánsè de? Xiànzài kāishǐ dì tí"
+      "listening_pinyin": "Nǚ: Nǐ xǐhuan chī shénme shuǐguǒ?? Wǒ xǐhuan chī xīguā. Dìsān bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nán: Xiǎo Wáng, zhèlǐ yǒu jǐ ge bēizi, nǎge shì nǐ de? Nǚ: Zuǒbian nàge hóngsè de shì wǒ de. Wèn: Xiǎo Wáng de bēizi shì shénme yánsè de? Xiànzài kāishǐ dì tí",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -678,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǐ kàn, nǚháizi yě xǐhuan tī zúqiú.",
       "pinyin": "Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.",
       "options": [
-        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
-        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
-        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
-        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -702,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Kāfēi lái le, yào bu yào hē yì bēi?",
       "pinyin": "Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.",
       "options": [
-        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
-        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
-        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
-        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -726,12 +806,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Tài hǎo le, wǒ zhǎodào zhè běn shū le.",
       "pinyin": "Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.",
       "options": [
-        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
-        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
-        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
-        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -750,12 +830,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Zhè shì tā gěi qīzi mǎi de yīfu.",
       "pinyin": "Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.",
       "options": [
-        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
-        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
-        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
-        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -774,12 +854,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Tāmen sì gè rén měi tiān dōu yìqǐ chīfàn.",
       "pinyin": "Fúwùyuán wèn: 'Nín xiǎng chī shénme?'",
       "options": [
-        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
-        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
-        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
-        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

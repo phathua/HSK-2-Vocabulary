@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Wǒ gàosu nǐ yī jiàn shì.\nNán: Shénme shì? Nǐ kuài shuō.",
       "explanation": "Lời thoại trao đổi ghé tai nói bí mật 'wǒ gàosù nǐ yījiàn shì'. Bức ảnh F thể hiện một người ghé sát tai người kia nói thầm nên đáp án là F.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Shuǐ shì rè de ma?\nNǚ: Shì rè de, nǐ yě lái xǐ yīxià shǒu ba.",
       "explanation": "Lời thoại rủ rửa tay 'nǐ yě lái xǐ yīxiàshǒu ba'. Bức ảnh C thể hiện đôi bàn tay đang rửa dưới vòi nước xả nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zài nǎr ne? Wǒ méi kàndào.\nNán: Yòubiān, nà běn Hànyǔ shū zài yòubiān.",
       "explanation": "Lời thoại chỉ vị trí cuốn sách trên kệ 'nàběn hànyǔ shū zài yòubiān'. Bức ảnh A thể hiện cô gái vớ lấy cuốn sách trên giá cao nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ jīntiān mǎi de dōngxi zhēn bù shǎo.\nNǚ: Shì, wǒ hái mǎi le yīxiē cài.",
       "explanation": "Lời thoại nhắc đến mua thức ăn/rau củ 'mǎi le yīxiē cài'. Bức ảnh B thể hiện túi giấy đựng đầy đồ ăn rau củ nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Qīshí yuán? Cuò le ba?\nNán: Méi cuò, nín kànkan, zài zhèr xiězhe ne.",
       "explanation": "Lời thoại trao đổi giá tiền/hoá đơn 'qīshí yuán？cuò le ba？'. Bức ảnh E thể hiện nhân vật giao hàng đưa sổ sách/hoá đơn ký nhận nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Wéi, jīntiān nǐ wánr de zěnmeyàng?\nNǚ: Hěn hǎo, hěn gāoxìng.",
       "explanation": "Lời thoại gọi điện hỏi thăm 'wèi，jīntiān nǐ wánér dé zěnmeyàng？'. Bức ảnh B thể hiện cô gái cầm điện thoại trò chuyện vui vẻ nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐmen shéi huì huídá zhège wèntí?\nNán: Lǎoshī, wǒ huì.",
       "explanation": "Lời thoại trong lớp học 'lǎoshī，wǒhuì' (Thưa cô, em biết). Bức ảnh A thể hiện nam sinh giơ cao tay phát biểu nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ de jièshào duì wǒmen bāngzhù hěn dà, xièxie nǐ.\nNǚ: Bú kèqi.",
       "explanation": "Lời thoại cảm ơn phần giới thiệu 'nǐ de jièshào duì wǒmen bāngzhù hěndà'. Bức ảnh E thể hiện hai người phỏng vấn/trao đổi hồ sơ công việc nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zhè liǎng ge mén zhēn dà.\nNán: Shì, wǒmen jìnqù kànkan ba.",
       "explanation": "Lời thoại khen cánh cửa to 'zhè liǎnggè ménzhēndà'. Bức ảnh D thể hiện hai cánh cửa gỗ lớn màu đỏ mở ra nên đáp án là D.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ hǎo, píngguǒ zěnme mài?\nNǚ: Liù kuài qián yī gōngjīn.",
       "explanation": "Lời thoại hỏi giá táo 'píngguǒ zěnme mài？'. Bức ảnh C thể hiện đống táo đỏ tươi nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nín hǎo, nín nǎr bù shūfu?",
       "options": [
-        "A 爸爸，这是我画的苹果。 (Bàba, zhè shì wǒ huà de píngguǒ.)",
-        "B 这个西瓜真甜！ (Zhège xīguā zhēn tián!)",
-        "C 您好，您哪儿不舒服？ (Nín hǎo, nín nǎr bù shūfu?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我太累了，想休息一会儿。 (Wǒ tài lèi le, xiǎng xiūxi yīhuìr.)",
-        "F 这辆自行车是谁的？ (Zhè liàng zìxíngchē shì shéi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒ tài lèi le, xiǎng xiūxi yīhuìr.",
       "options": [
-        "A 爸爸，这是我画的苹果。 (Bàba, zhè shì wǒ huà de píngguǒ.)",
-        "B 这个西瓜真甜！ (Zhège xīguā zhēn tián!)",
-        "C 您好，您哪儿不舒服？ (Nín hǎo, nín nǎr bù shūfu?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我太累了，想休息一会儿。 (Wǒ tài lèi le, xiǎng xiūxi yīhuìr.)",
-        "F 这辆自行车是谁的？ (Zhè liàng zìxíngchē shì shéi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhège xīguā zhēn tián!",
       "options": [
-        "A 爸爸，这是我画的苹果。 (Bàba, zhè shì wǒ huà de píngguǒ.)",
-        "B 这个西瓜真甜！ (Zhège xīguā zhēn tián!)",
-        "C 您好，您哪儿不舒服？ (Nín hǎo, nín nǎr bù shūfu?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我太累了，想休息一会儿。 (Wǒ tài lèi le, xiǎng xiūxi yīhuìr.)",
-        "F 这辆自行车是谁的？ (Zhè liàng zìxíngchē shì shéi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Bàba, zhè shì wǒ huà de píngguǒ.",
       "options": [
-        "A 爸爸，这是我画的苹果。 (Bàba, zhè shì wǒ huà de píngguǒ.)",
-        "B 这个西瓜真甜！ (Zhège xīguā zhēn tián!)",
-        "C 您好，您哪儿不舒服？ (Nín hǎo, nín nǎr bù shūfu?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我太累了，想休息一会儿。 (Wǒ tài lèi le, xiǎng xiūxi yīhuìr.)",
-        "F 这辆自行车是谁的？ (Zhè liàng zìxíngchē shì shéi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè liàng zìxíngchē shì shéi de?",
       "options": [
-        "A 爸爸，这是我画的苹果。 (Bàba, zhè shì wǒ huà de píngguǒ.)",
-        "B 这个西瓜真甜！ (Zhège xīguā zhēn tián!)",
-        "C 您好，您哪儿不舒服？ (Nín hǎo, nín nǎr bù shūfu?)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我太累了，想休息一会儿。 (Wǒ tài lèi le, xiǎng xiūxi yīhuìr.)",
-        "F 这辆自行车是谁的？ (Zhè liàng zìxíngchē shì shéi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

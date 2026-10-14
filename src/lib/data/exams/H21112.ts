@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nǚ:] Nǐ zài xiǎng shénme ne?\n[Nán:] Wǒ zài xiǎng yào bú yào bāngzhù tā.",
       "explanation": "Bài nghe nam băn khoăn 'wǒ zài xiǎngyào búyào bāngzhù tā' (Tôi đang nghĩ xem có nên giúp anh ấy không), khớp với tranh A (suy nghĩ việc giúp đỡ).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nán:] Méi zǒucuò ba? Zěnme hái méi dào ne?\n[Nǚ:] Méicuò, jiù zài qiánmiàn.",
       "explanation": "Bài nghe nữ chỉ đường 'méicuò，jiù zài qiánmiàn' (Không nhầm đâu, ngay phía trước thôi), khớp với tranh F (chỉ đường phía trước).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nǚ:] Zhège mén hǎo le ma?\n[Nán:] Wǒ hái méi zhǎodào shì shénme wèntí.",
       "explanation": "Bài nghe hỏi 'zhège mén hǎolema？' (Cánh cửa này xong chưa?), khớp với tranh B (sửa cánh cửa hỏng).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nán:] Nǐ kàn, zài zhèr, zhè shì wǒ nǚ'ér.\n[Nǚ:] Tā zhēn piàoliang.",
       "explanation": "Bài nghe nam chỉ ảnh 'zhè shì wǒ nǚér' (Đây là con gái tôi), khớp với tranh C (xem hình ảnh con gái).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nǚ:] Wǒ xìng Liú, dàjiā jiào wǒ Xiǎo Liú jiù kěyǐ le.\n[Nán:] Hǎo, huānyíng Xiǎo Liú lái dào wǒmen gōngsī.",
       "explanation": "Bài nghe nam chào đón 'huānyíng xiǎo liú láidào wǒmen gōngsī' (Chào mừng Tiểu Lưu đến công ty), khớp với tranh E (giới thiệu nhân viên mới).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nán:] Zhèxiē bàozhǐ bú yào le?\n[Nǚ:] Shì de, wǒ dōu kànguo le.",
       "explanation": "Bài nghe hỏi 'zhèxiē bàozhǐ búyào le？' (Những tờ báo này không dùng nữa à?), khớp với tranh A (thu dọn chồng báo cũ).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nǚ:] Wéi, nǐ zài zuò shénme? Zài tīng wǒ shuōhuà ma?\n[Nán:] Nǐ shuō ba, wǒ tīngzhe ne.",
       "explanation": "Bài nghe nam nghe điện thoại bên máy tính 'nǐ shuō ba，wǒ tīng zhe ne', khớp với tranh B (vừa làm việc vừa nghe điện thoại).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nán:] Nǐ zěnme le?\n[Nǚ:] Méi guānxi, wǒ yǒudiǎnr lèi.",
       "explanation": "Bài nghe nữ nói 'wǒ yǒudiǎnér lèi' (Tôi hơi mệt), khớp với tranh C (nhức đầu mệt mỏi).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nǚ:] Zhèxiē tí nǐ zuòwán le ma?\n[Nǚ:] Méi ne, dànshì kuài le.",
       "explanation": "Bài nghe hỏi về bài tập 'zhèxiē tí nǐ zuò wán le ma？', khớp với tranh D (hai người cùng thảo luận bài tập).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "[Nán:] Fúwùyuán, nǐmen zhèr shénme cài zuì hǎochī?\n[Nǚ:] Nín kěyǐ lái zhège yángròu, hěn búcuò.",
       "explanation": "Bài nghe nam gọi món 'fúwùyuán，nǐmen zhèér shénme cài zuì hǎochī？', khớp với tranh E (phục vụ nhà hàng tư vấn món ăn).",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā hěn xǐhuan chànggē, dànshì chàng de bú tài hǎo.",
       "options": [
-        "A 别说话，妹妹还在睡觉呢。 (Bié shuōhuà, mèimei hái zài shuìjiào ne.)",
-        "B 多吃些水果，对身体好。 (Duō chī xiē shuǐguǒ, duì shēntǐ hǎo.)",
-        "C 她很喜欢唱歌，但是唱得不太好。 (Tā hěn xǐhuan chànggē, dànshì chàng de bú tài hǎo.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 您的名字，请写在这儿。 (Nín de míngzi, qǐng xiě zài zhèr.)",
-        "F 在那儿，左边是猫，右边是狗。 (Zài nàr, zuǒbian shì māo, yòu bian shì gǒu.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nín de míngzi, qǐng xiě zài zhèr.",
       "options": [
-        "A 别说话，妹妹还在睡觉呢。 (Bié shuōhuà, mèimei hái zài shuìjiào ne.)",
-        "B 多吃些水果，对身体好。 (Duō chī xiē shuǐguǒ, duì shēntǐ hǎo.)",
-        "C 她很喜欢唱歌，但是唱得不太好。 (Tā hěn xǐhuan chànggē, dànshì chàng de bú tài hǎo.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 您的名字，请写在这儿。 (Nín de míngzi, qǐng xiě zài zhèr.)",
-        "F 在那儿，左边是猫，右边是狗。 (Zài nàr, zuǒbian shì māo, yòu bian shì gǒu.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Bié shuōhuà, mèimei hái zài shuìjiào ne.",
       "options": [
-        "A 别说话，妹妹还在睡觉呢。 (Bié shuōhuà, mèimei hái zài shuìjiào ne.)",
-        "B 多吃些水果，对身体好。 (Duō chī xiē shuǐguǒ, duì shēntǐ hǎo.)",
-        "C 她很喜欢唱歌，但是唱得不太好。 (Tā hěn xǐhuan chànggē, dànshì chàng de bú tài hǎo.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 您的名字，请写在这儿。 (Nín de míngzi, qǐng xiě zài zhèr.)",
-        "F 在那儿，左边是猫，右边是狗。 (Zài nàr, zuǒbian shì māo, yòu bian shì gǒu.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Duō chī xiē shuǐguǒ, duì shēntǐ hǎo.",
       "options": [
-        "A 别说话，妹妹还在睡觉呢。 (Bié shuōhuà, mèimei hái zài shuìjiào ne.)",
-        "B 多吃些水果，对身体好。 (Duō chī xiē shuǐguǒ, duì shēntǐ hǎo.)",
-        "C 她很喜欢唱歌，但是唱得不太好。 (Tā hěn xǐhuan chànggē, dànshì chàng de bú tài hǎo.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 您的名字，请写在这儿。 (Nín de míngzi, qǐng xiě zài zhèr.)",
-        "F 在那儿，左边是猫，右边是狗。 (Zài nàr, zuǒbian shì māo, yòu bian shì gǒu.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zài nàr, zuǒbian shì māo, yòu bian shì gǒu.",
       "options": [
-        "A 别说话，妹妹还在睡觉呢。 (Bié shuōhuà, mèimei hái zài shuìjiào ne.)",
-        "B 多吃些水果，对身体好。 (Duō chī xiē shuǐguǒ, duì shēntǐ hǎo.)",
-        "C 她很喜欢唱歌，但是唱得不太好。 (Tā hěn xǐhuan chànggē, dànshì chàng de bú tài hǎo.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 您的名字，请写在这儿。 (Nín de míngzi, qǐng xiě zài zhèr.)",
-        "F 在那儿，左边是猫，右边是狗。 (Zài nàr, zuǒbian shì māo, yòu bian shì gǒu.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

@@ -19,6 +19,8 @@
   import WarningCircle from 'phosphor-svelte/lib/WarningCircle';
   import X from 'phosphor-svelte/lib/X';
   import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
+  import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
+  import Trophy from 'phosphor-svelte/lib/Trophy';
   import Exam from 'phosphor-svelte/lib/Exam';
   import Lightning from 'phosphor-svelte/lib/Lightning';
   import ListNumbers from 'phosphor-svelte/lib/ListNumbers';
@@ -29,7 +31,7 @@
   const exam = $derived(examId ? getExamData(examId) : null);
   const isLoading = $derived(!exam && !examId);
 
-  let mode = $state<ExamMode>('exam');
+  let mode = $state<ExamMode>(page.url.searchParams.get('mode') === 'practice' ? 'practice' : 'exam');
 
   // Exam state
   let answers = $state<Record<number, string>>({});
@@ -41,7 +43,10 @@
   let showExitModal = $state(false);
   let showPaletteModal = $state(false);
   let isScrolled = $state(false);
-  let currentQuestionIndex = $state(0);
+  let audioPlayerHeight = $state(56);
+  let currentQuestionIndex = $state(
+    Number(page.url.searchParams.get('q')) ? Math.max(0, Number(page.url.searchParams.get('q')) - 1) : 0
+  );
   let mainScrollEl: HTMLElement | null = null;
   let timerInterval: any = null;
 
@@ -191,7 +196,14 @@
     }
     const el = document.getElementById(`question-${qNo}`);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Tái căn chỉnh sau 350ms phòng trường hợp ảnh tải muộn làm dãn chiều cao trang
+      setTimeout(() => {
+        const rect = el.getBoundingClientRect();
+        if (Math.abs(rect.top - 80) > 60) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 350);
     }
   }
 </script>
@@ -293,22 +305,30 @@
     <!-- 2. TRÌNH PHÁT AUDIO DÙNG CHUNG DUY NHẤT: Bền vững, không bị gián đoạn hay ngắt âm thanh khi đổi mode -->
     {@const audioSource = exam.audio_ogg || exam.audio_mp3 || exam.audio_url}
     {#if audioSource}
-      <ExamAudioPlayer
-        audioSrc={audioSource}
-        examCode={exam.exam_code ?? examId ?? ''}
-        isExamMode={mode === 'exam'}
-        listeningQuestions={listeningQuestions}
-      />
+      {@const activeQ = exam.questions[currentQuestionIndex]}
+      <!-- Ở chế độ Thi Nhanh (practice) khi làm phần Đọc hiểu (Q36+), ẩn audio player trên mobile để nhường 100% không gian cho đề đọc -->
+      <div
+        bind:clientHeight={audioPlayerHeight}
+        class="sticky top-0 z-30 {mode === 'practice' && activeQ && activeQ.question_no > 35 ? 'hidden md:block' : 'block'}"
+      >
+        <ExamAudioPlayer
+          audioSrc={audioSource}
+          examCode={exam.exam_code ?? examId ?? ''}
+          isExamMode={mode === 'exam'}
+          listeningQuestions={listeningQuestions}
+          currentQuestionNo={activeQ ? activeQ.question_no : 1}
+        />
+      </div>
     {/if}
 
     <!-- 3. NỘI DUNG PHÒNG THI -->
     {#if mode === 'practice'}
       {@const currentQ = exam.questions[currentQuestionIndex]}
       {#if currentQ}
-        <!-- Thẻ Trắc Nghiệm Single View (100% Khớp Không Cuộn Trang) -->
+        <!-- Thẻ Trắc Nghiệm Single View (100% Khớp Không Cuộn Trang, Cột Trái Đề + Cột Phải Bản Đồ & Nút Tiếp Theo) -->
         <div class="flex-1 min-h-0 flex flex-col lg:grid lg:grid-cols-12 lg:gap-5 items-stretch overflow-hidden">
-          <!-- Cột Thẻ Câu Hỏi Hiện Tại (8/12 cột Desktop, 12/12 Mobile) -->
-          <div class="lg:col-span-8 h-full flex flex-col min-h-0 overflow-hidden">
+          <!-- Cột Thẻ Câu Hỏi Hiện Tại (8/12 Desktop, 12/12 Mobile) -->
+          <div class="lg:col-span-8 xl:col-span-8 2xl:col-span-9 h-full flex flex-col min-h-0 overflow-hidden">
             <ExamQuickQuizCard
               question={currentQ}
               questionIndex={currentQuestionIndex}
@@ -335,18 +355,58 @@
             />
           </div>
 
-          <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) -->
-          <div class="lg:col-span-4 hidden lg:block h-full min-h-0 overflow-y-auto">
-            <ExamPalette
-              totalQuestions={exam.total_questions}
-              {answers}
-              {flagged}
-              {mode}
-              isExamSubmitted={isSubmitted}
-              correctMap={scoreResults.correctMap}
-              currentQuestionNo={currentQ.question_no}
-              onScrollTo={handleScrollTo}
-            />
+          <!-- Cột Bản Đồ Câu Hỏi Cố Định & Nút Điều Hướng (4/12 Desktop) -->
+          <div class="lg:col-span-4 xl:col-span-4 2xl:col-span-3 hidden lg:flex flex-col h-full min-h-0 gap-2.5">
+            <!-- Bản Đồ Câu Hỏi: Chiếm trọn phần trên, cuộn duy nhất bên trong 60 ô -->
+            <div class="flex-1 min-h-0 flex flex-col overflow-hidden">
+              <ExamPalette
+                totalQuestions={exam.total_questions}
+                {answers}
+                {flagged}
+                {mode}
+                isExamSubmitted={isSubmitted}
+                correctMap={scoreResults.correctMap}
+                currentQuestionNo={currentQ.question_no}
+                onScrollTo={handleScrollTo}
+              />
+            </div>
+
+            <!-- Nút Điều Hướng "Câu trước" & "Câu tiếp theo" đặt ngay dưới Bản Đồ Câu Hỏi -->
+            <div class="shrink-0 flex items-center gap-2 pt-0.5">
+              <button
+                type="button"
+                onclick={() => {
+                  if (currentQuestionIndex > 0) currentQuestionIndex -= 1;
+                }}
+                disabled={currentQuestionIndex === 0}
+                class="h-11 px-3.5 rounded-2xl border border-slate-200 dark:border-[#282A2C] bg-white dark:bg-[#1B1B1B] text-slate-700 dark:text-slate-300 font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-50 dark:hover:bg-[#282A2C] transition-all flex items-center justify-center cursor-pointer shadow-2xs active:scale-95"
+                title="Câu trước"
+              >
+                <ArrowLeft weight="bold" class="w-4 h-4" />
+              </button>
+
+              {#if currentQuestionIndex >= exam.total_questions - 1}
+                <button
+                  type="button"
+                  onclick={handleSubmitExam}
+                  class="flex-1 h-11 px-4 font-bold text-xs sm:text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white shadow-xs cursor-pointer"
+                >
+                  <Trophy weight="bold" class="w-4 h-4" />
+                  <span>Nộp bài & Xem kết quả</span>
+                </button>
+              {:else}
+                <button
+                  type="button"
+                  onclick={() => {
+                    if (currentQuestionIndex < exam.total_questions - 1) currentQuestionIndex += 1;
+                  }}
+                  class="flex-1 h-11 px-4 font-bold text-xs sm:text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all bg-orange-600 hover:bg-orange-700 active:scale-95 text-white shadow-xs cursor-pointer"
+                >
+                  <span>Câu tiếp theo</span>
+                  <ArrowRight weight="bold" class="w-4 h-4" />
+                </button>
+              {/if}
+            </div>
           </div>
         </div>
       {/if}
@@ -354,7 +414,7 @@
       <!-- Bố Cục Phòng Thi (Split Layout: Cột Câu Hỏi + Palette 60 ô) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start mt-2">
       <!-- Cột Nội Dung Câu Hỏi (8/12 cột trên màn hình lớn) -->
-      <div class="lg:col-span-8 space-y-6">
+      <div class="lg:col-span-8 space-y-6 pb-[75vh]">
         <!-- Phần 1: Nghe -->
         {#if listeningQuestions.length > 0}
           <div class="space-y-3">
@@ -410,8 +470,11 @@
         {/if}
       </div>
 
-      <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) -->
-      <div class="lg:col-span-4 hidden lg:block">
+      <!-- Cột Bản Đồ Câu Hỏi Cố Định (4/12 cột trên màn hình lớn) - STICKY KHI CUỘN ĐỘNG THEO AUDIO PLAYER -->
+      <div
+        class="lg:col-span-4 hidden lg:block sticky self-start overflow-hidden rounded-2xl shadow-xs"
+        style="top: {audioPlayerHeight + 8}px; max-height: calc(100vh - {audioPlayerHeight + 24}px);"
+      >
         <ExamPalette
           totalQuestions={exam.total_questions}
           {answers}

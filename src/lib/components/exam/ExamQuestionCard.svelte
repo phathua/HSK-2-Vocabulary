@@ -49,14 +49,32 @@
 
   const optionChoices = $derived.by((): ChoiceOption[] => {
     // 1. True/False: Luôn ưu tiên hiển thị nút Đúng (Check) và Sai (X) với value √ và ×
-    if (question.type.includes('True/False')) {
+    if (question.type.includes('True/False') || (question.section?.includes('Reading') && question.part?.includes('Part 3'))) {
       return [
         { label: 'Đúng', value: '√', icon: 'check' },
         { label: 'Sai', value: '×', icon: 'x' }
       ];
     }
 
-    // 2. Nếu câu hỏi có cấu hình options riêng (từ JSON Mock Atlas hoặc Chinese Tools)
+    // 2. Tranh A - F: Listening Part 2 (Q11 - Q20) & Reading Part 1 (Q36 - Q40)
+    // Các phần này thí sinh chọn tranh A - F, tuyệt đối KHÔNG hiển thị nhãn text câu văn làm lộ bài thi
+    if (
+      (question.question_no >= 11 && question.question_no <= 20) ||
+      (question.question_no >= 36 && question.question_no <= 40) ||
+      (question.part?.includes('Part 2') && question.section?.includes('Listening')) ||
+      (question.part?.includes('Part 1') && question.section?.includes('Reading'))
+    ) {
+      return [
+        { label: 'A', value: 'A' },
+        { label: 'B', value: 'B' },
+        { label: 'C', value: 'C' },
+        { label: 'D', value: 'D' },
+        { label: 'E', value: 'E' },
+        { label: 'F', value: 'F' }
+      ];
+    }
+
+    // 3. Nếu câu hỏi có cấu hình options riêng (từ JSON Mock Atlas hoặc Chinese Tools)
     if (question.options && question.options.length > 0) {
       return question.options.map((opt) => {
         if (typeof opt === 'string') {
@@ -79,7 +97,7 @@
       });
     }
 
-    // 3. Tranh A - F
+    // 4. Tranh A - F
     if (question.type.includes('Match') || question.part.includes('Part 2')) {
       return [
         { label: 'A', value: 'A' },
@@ -91,7 +109,7 @@
       ];
     }
 
-    // 4. Mặc định A, B, C cho Part 3 & 4
+    // 5. Mặc định A, B, C cho Part 3 & 4
     return [
       { label: 'A', value: 'A' },
       { label: 'B', value: 'B' },
@@ -147,7 +165,7 @@
     };
   });
 
-  const isTrueFalse = $derived(question.type.includes('True/False'));
+  const isTrueFalse = $derived(question.type.includes('True/False') || (question.section?.includes('Reading') && question.part?.includes('Part 3')));
   const hasImageOptions = $derived(optionChoices.some((opt) => !!opt.image));
   const isMultipleChoiceList = $derived(
     !isTrueFalse &&
@@ -192,7 +210,7 @@
 
   <!-- Ảnh bảng tranh lựa chọn (cho Part 2 và Reading Part 1: bảng A, B, C, D, E, F - chỉ hiện ở câu đầu nhóm) -->
   {#if question.board_image && showBoardImage}
-    <div class="relative group my-3 max-w-xl rounded-2xl overflow-hidden border border-slate-200/90 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xs">
+    <div class="relative group my-3 max-w-xl min-h-[180px] rounded-2xl overflow-hidden border border-slate-200/90 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xs">
       <div class="px-3 py-1.5 bg-slate-100 dark:bg-neutral-800 text-[11px] font-bold text-slate-600 dark:text-neutral-300 flex items-center justify-between border-b border-slate-200 dark:border-neutral-700">
         <span>Bảng tranh lựa chọn (A - F):</span>
         <span class="text-[10px] text-slate-400">Bấm để phóng to</span>
@@ -234,7 +252,7 @@
     </div>
   {:else if question.image}
     <!-- Ảnh minh họa câu hỏi đơn lẻ (Q1 - Q10) -->
-    <div class="relative group my-3 max-w-sm rounded-2xl overflow-hidden border border-slate-100 dark:border-neutral-800 bg-slate-50 dark:bg-neutral-900/50">
+    <div class="relative group my-3 max-w-sm min-h-[140px] rounded-2xl overflow-hidden border border-slate-100 dark:border-neutral-800 bg-slate-50 dark:bg-neutral-900/50">
       <button
         type="button"
         onclick={() => (isImageZoomed = true)}
@@ -263,7 +281,7 @@
   <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F] mb-2 select-none">
     {#if question.section.includes('Reading') || question.question_no >= 36}
       {#if question.part.includes('Part 1') || (question.question_no >= 36 && question.question_no <= 40)}
-        Xem tranh và chọn câu phù hợp (A – F):
+        Đọc câu và chọn tranh phù hợp (A – F):
       {:else if question.part.includes('Part 2') || (question.question_no >= 41 && question.question_no <= 45)}
         Chọn từ thích hợp điền vào chỗ trống (A – F):
       {:else if question.part.includes('Part 3') || (question.question_no >= 46 && question.question_no <= 50)}
@@ -273,7 +291,7 @@
       {/if}
     {:else if isTrueFalse}
       Nghe và phán đoán Đúng hoặc Sai:
-    {:else if question.part.includes('Part 2') || question.type.includes('Match')}
+    {:else if question.part.includes('Part 2') || question.type.includes('Match') || (question.question_no >= 11 && question.question_no <= 20)}
       Nghe và chọn tranh A – F phù hợp:
     {:else}
       Nghe và chọn đáp án chính xác:
@@ -482,8 +500,8 @@
       {/each}
     </div>
   {:else}
-    <!-- Dạng ma trận lưới ngắn (Part 2: A - F) -->
-    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 my-3">
+    <!-- Dạng ma trận lưới ô chữ cái A - F thuần túy, không có nhãn văn bản thừa -->
+    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2.5 my-3">
       {#each optionChoices as opt}
         {@const isSelected = selectedAnswer === opt.value}
         {@const isAnswerTarget = shouldReveal && question.answer === opt.value}
@@ -492,26 +510,17 @@
         <button
           type="button"
           onclick={() => onSelectAnswer(opt.value)}
-          class="py-2.5 px-3 rounded-2xl font-black text-xs md:text-sm border transition-all cursor-pointer flex items-center justify-center gap-1.5 {
+          class="h-11 sm:h-12 rounded-2xl font-black text-sm sm:text-base border transition-all cursor-pointer flex items-center justify-center select-none {
             isAnswerTarget
-              ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs'
+              ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs ring-2 ring-emerald-500/20'
               : isWrongSelection
-              ? 'bg-rose-500 text-white border-rose-600 shadow-xs'
+              ? 'bg-rose-500 text-white border-rose-600 shadow-xs ring-2 ring-rose-500/20'
               : isSelected
-              ? 'bg-orange-600 text-white border-orange-600 shadow-xs'
-              : 'bg-slate-50 dark:bg-neutral-800/60 hover:bg-slate-100 dark:hover:bg-neutral-700/60 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-neutral-700'
+              ? 'bg-orange-600 text-white border-orange-600 shadow-xs ring-2 ring-orange-500/20'
+              : 'bg-slate-50 dark:bg-neutral-800/60 hover:bg-slate-100 dark:hover:bg-neutral-700/60 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-neutral-700 active:scale-95'
           }"
         >
-          <span class="w-6 h-6 rounded-full text-[11px] font-black flex items-center justify-center shrink-0 {
-            isSelected || isAnswerTarget || isWrongSelection
-              ? 'bg-white/20 text-white'
-              : 'bg-slate-200 dark:bg-neutral-700 text-slate-700 dark:text-neutral-200'
-          }">
-            {opt.value}
-          </span>
-          {#if opt.label !== opt.value}
-            <span>{opt.label}</span>
-          {/if}
+          <span>{opt.value}</span>
         </button>
       {/each}
     </div>

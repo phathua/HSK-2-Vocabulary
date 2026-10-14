@@ -212,12 +212,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "F 12．E 13．B 14．C 15．A",
       "pinyin": "Nǚ: Nǐ zěnme méi xǐ yīfu?\nNán: Zhōngwǔ qù yóuyǒng le, wǒ xiànzài jiù qù xǐ.",
       "options": [
-        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
-        "B 回答老师问题 (huídá lǎoshī wèntí)",
-        "C 一盒牛奶 (yì hé niúnǎi)",
-        "D 看地图 (kàn dìtú)",
-        "E 打电话 (dǎ diànhuà)",
-        "F 穿大衣 (chuān dàyī)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -235,12 +235,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 2",
       "pinyin": "Nán: Wèi, nǐ xiàbān le ma?\nNǚ: Wǒ hái yǒu diǎnr gōngzuò méi zuò wán, nǐ děng wǒ yíxià.",
       "options": [
-        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
-        "B 回答老师问题 (huídá lǎoshī wèntí)",
-        "C 一盒牛奶 (yì hé niúnǎi)",
-        "D 看地图 (kàn dìtú)",
-        "E 打电话 (dǎ diànhuà)",
-        "F 穿大衣 (chuān dàyī)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -258,12 +258,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "14．",
       "pinyin": "Nǚ: Lǎoshī, zhège wǒ zhīdào.\nNán: Hǎo, nǐ lái gěi dàjiā jièshào jièshào.",
       "options": [
-        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
-        "B 回答老师问题 (huídá lǎoshī wèntí)",
-        "C 一盒牛奶 (yì hé niúnǎi)",
-        "D 看地图 (kàn dìtú)",
-        "E 打电话 (dǎ diànhuà)",
-        "F 穿大衣 (chuān dàyī)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -281,12 +281,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 4",
       "pinyin": "Nán: Dōngxi dōu mǎi hǎo le ma?\nNǚ: Niúnǎi hái méi mǎi.",
       "options": [
-        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
-        "B 回答老师问题 (huídá lǎoshī wèntí)",
-        "C 一盒牛奶 (yì hé niúnǎi)",
-        "D 看地图 (kàn dìtú)",
-        "E 打电话 (dǎ diànhuà)",
-        "F 穿大衣 (chuān dàyī)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -304,12 +304,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "H A B C D E",
       "pinyin": "Nǚ: Nǐ zěnme bù gāoxìng?\nNán: Tiān yīn le, bàba shuō huì xià yǔ, bù ràng wǒ chūqù wánr.",
       "options": [
-        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
-        "B 回答老师问题 (huídá lǎoshī wèntí)",
-        "C 一盒牛奶 (yì hé niúnǎi)",
-        "D 看地图 (kàn dìtú)",
-        "E 打电话 (dǎ diànhuà)",
-        "F 穿大衣 (chuān dàyī)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -327,12 +327,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "B 17．E 18．C 19．D 20．A",
       "pinyin": "Nán: Fúwùyuán, nǐmen fàndiàn shénme cài zuì hǎochī?\nNǚ: Wǒmen diàn de yú búcuò.",
       "options": [
-        "A 生病吃药 (shēngbìng chī yào)",
-        "B 在饭店点菜 (zài fàndiàn diǎncài)",
-        "C 去火车站 (qù huǒchēzhàn)",
-        "D 跑步运动 (pǎobù yùndòng)",
-        "E 喝咖啡 (hē kāfēi)",
-        "F 买票 (mǎi piào)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -350,12 +350,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 7",
       "pinyin": "Nǚ: Wǒmen dào nǎr le?\nNán: Kàn, zài zhèr, zài zǒu jǐ fēnzhōng jiù dào le.",
       "options": [
-        "A 生病吃药 (shēngbìng chī yào)",
-        "B 在饭店点菜 (zài fàndiàn diǎncài)",
-        "C 去火车站 (qù huǒchēzhàn)",
-        "D 跑步运动 (pǎobù yùndòng)",
-        "E 喝咖啡 (hē kāfēi)",
-        "F 买票 (mǎi piào)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -373,12 +373,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "19．",
       "pinyin": "Nán: Nǐ nǚ'ér chàng de zhēn hǎotīng!\nNǚ: Xièxie, tā xǐhuan chànggē.",
       "options": [
-        "A 生病吃药 (shēngbìng chī yào)",
-        "B 在饭店点菜 (zài fàndiàn diǎncài)",
-        "C 去火车站 (qù huǒchēzhàn)",
-        "D 跑步运动 (pǎobù yùndòng)",
-        "E 喝咖啡 (hē kāfēi)",
-        "F 买票 (mǎi piào)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -396,12 +396,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 9",
       "pinyin": "Nǚ: Yǎnjing zěnme le?\nNán: Kàn diànnǎo shíjiān cháng le, yǒudiǎnr lèi.",
       "options": [
-        "A 生病吃药 (shēngbìng chī yào)",
-        "B 在饭店点菜 (zài fàndiàn diǎncài)",
-        "C 去火车站 (qù huǒchēzhàn)",
-        "D 跑步运动 (pǎobù yùndòng)",
-        "E 喝咖啡 (hē kāfēi)",
-        "F 买票 (mǎi piào)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -419,12 +419,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "H21332 - 5",
       "pinyin": "Nán: Nǐ yǒu wǔshí kuài qián ma?\nNǚ: Děng yíxià, wǒ zhǎozhao.",
       "options": [
-        "A 生病吃药 (shēngbìng chī yào)",
-        "B 在饭店点菜 (zài fàndiàn diǎncài)",
-        "C 去火车站 (qù huǒchēzhàn)",
-        "D 跑步运动 (pǎobù yùndòng)",
-        "E 喝咖啡 (hē kāfēi)",
-        "F 买票 (mǎi piào)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -743,12 +743,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Érzi, pǎo màn diǎnr, děngdeng wǒ.",
       "options": [
-        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
-        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
-        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
-        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -767,12 +767,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?",
       "options": [
-        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
-        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
-        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
-        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -791,12 +791,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè jiàn yīfu néngbunéng zài piányi yìxiē?",
       "options": [
-        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
-        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
-        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
-        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -815,12 +815,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.",
       "options": [
-        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
-        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
-        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
-        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -839,12 +839,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhège yào fàn hòu chī, měi tiān chī sān cì.",
       "options": [
-        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
-        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
-        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
-        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

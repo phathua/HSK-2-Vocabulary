@@ -199,7 +199,15 @@ export const examData: ExamDetail = {
       "listening_script": "[女:] 你说的是哪个字？\n[男:] 我写出来你就知道了。",
       "board_image": "images/H21331_board_11_15.webp",
       "explanation": "Lời thoại nhắc đến việc viết chữ (xiě chūlái nǐ jiù zhīdào le). Bức ảnh C thể hiện bàn tay cầm bút viết vào cuốn sổ nên đáp án đúng là C.",
-      "listening_pinyin": "Nǚ: Nǐ shuō de shì nǎge zì?\nNán: Wǒ xiě chūlái nǐ jiù zhīdào le."
+      "listening_pinyin": "Nǚ: Nǐ shuō de shì nǎge zì?\nNán: Wǒ xiě chūlái nǐ jiù zhīdào le.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -213,7 +221,15 @@ export const examData: ExamDetail = {
       "listening_script": "[男:] 孩子睡了？\n[女:] 是，你今天怎么回来得这么晚？",
       "board_image": "images/H21331_board_11_15.webp",
       "explanation": "Lời thoại hỏi em bé đã ngủ chưa (háizi shuì le). Bức ảnh B thể hiện người mẹ đang nhìn em bé nằm ngủ trong cũi nên đáp án đúng là B.",
-      "listening_pinyin": "Nán: Háizi shuì le?\nNǚ: Shì, nǐ jīntiān zěnme huílái de zhème wǎn?"
+      "listening_pinyin": "Nán: Háizi shuì le?\nNǚ: Shì, nǐ jīntiān zěnme huílái de zhème wǎn?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -227,7 +243,15 @@ export const examData: ExamDetail = {
       "listening_script": "[女:] 小狗怎么了？今天都没吃东西。\n[男:] 是不是病了？",
       "board_image": "images/H21331_board_11_15.webp",
       "explanation": "Lời thoại nhắc đến chú chó nhỏ (xiǎogǒu zěnme le). Bức ảnh E thể hiện chú chó nhỏ nằm ngoan trên đệm nên đáp án đúng là E.",
-      "listening_pinyin": "Nǚ: Xiǎogǒu zěnme le? Jīntiān dōu méi chī dōngxi.\nNán: Shìbushì bìng le?"
+      "listening_pinyin": "Nǚ: Xiǎogǒu zěnme le? Jīntiān dōu méi chī dōngxi.\nNán: Shìbushì bìng le?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -241,7 +265,15 @@ export const examData: ExamDetail = {
       "listening_script": "[男:] 女儿呢？去游泳了？\n[女:] 没有，表在房间里看报纸呢。",
       "board_image": "images/H21331_board_11_15.webp",
       "explanation": "Lời thoại nhắc đến con gái đang đọc báo (kàn bàozhǐ ne). Bức ảnh A thể hiện người nữ ngồi đọc tờ báo nên đáp án đúng là A.",
-      "listening_pinyin": "Nán: Nǚ'ér ne? Qù yóuyǒng le?\nNǚ: Méiyǒu, tā zài fángjiān li kàn bàozhǐ ne."
+      "listening_pinyin": "Nán: Nǚ'ér ne? Qù yóuyǒng le?\nNǚ: Méiyǒu, tā zài fángjiān li kàn bàozhǐ ne.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -255,7 +287,15 @@ export const examData: ExamDetail = {
       "listening_script": "[女:] 谁打来的电话？\n[男:] 我也不知道，他说他姓白。",
       "board_image": "images/H21331_board_11_15.webp",
       "explanation": "Lời thoại hỏi về cuộc điện thoại (shuí dǎlái de diànhuà). Bức ảnh F thể hiện hai bàn tay đưa điện thoại cho nhau nên đáp án đúng là F.",
-      "listening_pinyin": "Nǚ: Shéi dǎlái de diànhuà?\nNán: Wǒ yě bù zhīdào, tā shuō tā xìng Bái."
+      "listening_pinyin": "Nǚ: Shéi dǎlái de diànhuà?\nNán: Wǒ yě bù zhīdào, tā shuō tā xìng Bái.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -269,7 +309,15 @@ export const examData: ExamDetail = {
       "listening_script": "[男:] 有时间再来玩儿。\n[女:] 好，别送了，快回去吧，再见！",
       "board_image": "images/H21331_board_16_20.webp",
       "explanation": "Lời thoại chào tạm biệt nhau (biésòng le，kuàihuíqù ba，zàijiàn). Bức ảnh D thể hiện hai người đứng ở lan can/ban công vẫy tay tiễn biệt nên đáp án đúng là D.",
-      "listening_pinyin": "Nán: Yǒu shíjiān zài lái wánr.\nNǚ: Hǎo, bié sòng le, kuài huíqù ba, zàijiàn!"
+      "listening_pinyin": "Nán: Yǒu shíjiān zài lái wánr.\nNǚ: Hǎo, bié sòng le, kuài huíqù ba, zàijiàn!",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -283,7 +331,15 @@ export const examData: ExamDetail = {
       "listening_script": "[女:] 苹果洗好了，吃一个吧？\n[男:] 好的，谢谢！",
       "board_image": "images/H21331_board_16_20.webp",
       "explanation": "Lời thoại mời ăn trái cây/táo đã rửa sạch (píngguǒ xǐhǎo le，chī yígè ba). Bức ảnh B thể hiện cô gái vui vẻ bưng khay trái cây nên đáp án đúng là B.",
-      "listening_pinyin": "Nǚ: Píngguǒ xǐhǎo le, chī yī ge ba?\nNán: Hǎo de, xièxie!"
+      "listening_pinyin": "Nǚ: Píngguǒ xǐhǎo le, chī yī ge ba?\nNán: Hǎo de, xièxie!",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -297,7 +353,15 @@ export const examData: ExamDetail = {
       "listening_script": "[男:] 你爸爸身体怎么样？\n[女:] 非常好，他每天早上都去跑步。",
       "board_image": "images/H21331_board_16_20.webp",
       "explanation": "Lời thoại nhắc đến việc đi chạy bộ mỗi sáng (měitiān zǎoshàng dōu qù pǎobù). Bức ảnh A thể hiện người đàn ông đang chạy bộ thể thao ngoài trời nên đáp án đúng là A.",
-      "listening_pinyin": "Nán: Nǐ bàba shēntǐ zěnmeyàng?\nNǚ: Fēicháng hǎo, tā měi tiān zǎoshang dōu qù pǎobù."
+      "listening_pinyin": "Nán: Nǐ bàba shēntǐ zěnmeyàng?\nNǚ: Fēicháng hǎo, tā měi tiān zǎoshang dōu qù pǎobù.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -311,7 +375,15 @@ export const examData: ExamDetail = {
       "listening_script": "[女:] 还没到九点吗？\n[男:] 你看到了，我的手表快十分钟。",
       "board_image": "images/H21331_board_16_20.webp",
       "explanation": "Lời thoại nhắc đến đồng hồ đeo tay (wǒ de shǒubiǎo kuài shífēnzhōng). Bức ảnh C thể hiện tay giơ xem đồng hồ đeo tay nên đáp án đúng là C.",
-      "listening_pinyin": "Nǚ: Hái méi dào jiǔ diǎn ma?\nNán: Nǐ jiàndào le, wǒ de shǒubiǎo kuài shí fēnzhōng."
+      "listening_pinyin": "Nǚ: Hái méi dào jiǔ diǎn ma?\nNán: Nǐ jiàndào le, wǒ de shǒubiǎo kuài shí fēnzhōng.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -325,7 +397,15 @@ export const examData: ExamDetail = {
       "listening_script": "[男:] 你书都在这里吗？\n[女:] 不，外面还有一些。",
       "board_image": "images/H21331_board_16_20.webp",
       "explanation": "Lời thoại kiểm tra sách vở và đồ đạc (shū dōu zài zhèlǐ ma). Bức ảnh E thể hiện nam nữ trao đổi sách bên các thùng cactông đồ đạc nên đáp án đúng là E.",
-      "listening_pinyin": "Nán: Nǐ de shū dōu zài zhèlǐ ma?\nNǚ: Bù, wàimiàn hái yǒu yīxiē."
+      "listening_pinyin": "Nán: Nǐ de shū dōu zài zhèlǐ ma?\nNǚ: Bù, wàimiàn hái yǒu yīxiē.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H21331",
@@ -628,12 +708,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhōngwǔ wǒ hé gēge qù shāngdiàn mǎile hěn duō cài.",
       "options": [
-        "A 中午我和哥哥去商店买了很多菜。 (Zhōngwǔ wǒ hé gēge qù shāngdiàn mǎile hěn duō cài.)",
-        "B 你家的小猫真好玩儿，它叫什么名字？ (Nǐ jiā de xiǎomāo zhēn hǎowánr, tā jiào shénme míngzi?)",
-        "C 这个题我不会，你帮我看看吧。 (Zhège tí wǒ bú huì, nǐ bāng wǒ kànkan ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我们都爱吃西瓜。 (Wǒmen dōu ài chī xīguā.)",
-        "F 喂，我已经在车上了，一小时后到。 (Wéi, wǒ yǐjīng zài chē shang le, yī xiǎoshí hòu dào.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -652,12 +732,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nǐ jiā de xiǎomāo zhēn hǎowánr, tā jiào shénme míngzi?",
       "options": [
-        "A 中午我和哥哥去商店买了很多菜。 (Zhōngwǔ wǒ hé gēge qù shāngdiàn mǎile hěn duō cài.)",
-        "B 你家的小猫真好玩儿，它叫什么名字？ (Nǐ jiā de xiǎomāo zhēn hǎowánr, tā jiào shénme míngzi?)",
-        "C 这个题我不会，你帮我看看吧。 (Zhège tí wǒ bú huì, nǐ bāng wǒ kànkan ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我们都爱吃西瓜。 (Wǒmen dōu ài chī xīguā.)",
-        "F 喂，我已经在车上了，一小时后到。 (Wéi, wǒ yǐjīng zài chē shang le, yī xiǎoshí hòu dào.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -676,12 +756,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒmen dōu ài chī xīguā.",
       "options": [
-        "A 中午我和哥哥去商店买了很多菜。 (Zhōngwǔ wǒ hé gēge qù shāngdiàn mǎile hěn duō cài.)",
-        "B 你家的小猫真好玩儿，它叫什么名字？ (Nǐ jiā de xiǎomāo zhēn hǎowánr, tā jiào shénme míngzi?)",
-        "C 这个题我不会，你帮我看看吧。 (Zhège tí wǒ bú huì, nǐ bāng wǒ kànkan ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我们都爱吃西瓜。 (Wǒmen dōu ài chī xīguā.)",
-        "F 喂，我已经在车上了，一小时后到。 (Wéi, wǒ yǐjīng zài chē shang le, yī xiǎoshí hòu dào.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -700,12 +780,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhège tí wǒ bú huì, nǐ bāng wǒ kànkan ba.",
       "options": [
-        "A 中午我和哥哥去商店买了很多菜。 (Zhōngwǔ wǒ hé gēge qù shāngdiàn mǎile hěn duō cài.)",
-        "B 你家的小猫真好玩儿，它叫什么名字？ (Nǐ jiā de xiǎomāo zhēn hǎowánr, tā jiào shénme míngzi?)",
-        "C 这个题我不会，你帮我看看吧。 (Zhège tí wǒ bú huì, nǐ bāng wǒ kànkan ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我们都爱吃西瓜。 (Wǒmen dōu ài chī xīguā.)",
-        "F 喂，我已经在车上了，一小时后到。 (Wéi, wǒ yǐjīng zài chē shang le, yī xiǎoshí hòu dào.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -724,12 +804,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wéi, wǒ yǐjīng zài chē shang le, yī xiǎoshí hòu dào.",
       "options": [
-        "A 中午我和哥哥去商店买了很多菜。 (Zhōngwǔ wǒ hé gēge qù shāngdiàn mǎile hěn duō cài.)",
-        "B 你家的小猫真好玩儿，它叫什么名字？ (Nǐ jiā de xiǎomāo zhēn hǎowánr, tā jiào shénme míngzi?)",
-        "C 这个题我不会，你帮我看看吧。 (Zhège tí wǒ bú huì, nǐ bāng wǒ kànkan ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我们都爱吃西瓜。 (Wǒmen dōu ài chī xīguā.)",
-        "F 喂，我已经在车上了，一小时后到。 (Wéi, wǒ yǐjīng zài chē shang le, yī xiǎoshí hòu dào.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

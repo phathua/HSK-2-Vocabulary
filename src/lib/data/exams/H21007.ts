@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Xiǎo Lǐ shì xīn lái de, dàjiā huānyíng.\nNán: Xièxie, hěn gāoxìng rènshi dàjiā.",
       "explanation": "Bài nghe chào mừng nhân viên mới (xiǎo lǐshì xīnlái de，dàjiā huānyíng). Tranh B thể hiện không khí chào đón hợp tác nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Xiǎng hǎo le ma? Zhǔnbèi xiě shénme?\nNǚ: Hái méi ne, ràng wǒ zài xiǎngxiang.",
       "explanation": "Bài nghe hỏi về việc viết bài/suy nghĩ nội dung (zhǔnbèi xiě shénme). Tranh A thể hiện không khí lớp học/viết bài nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Wéi, wǒ yǐjīng dào kāfēiguǎn le.\nNán: Wǒ yě kuài dào le, děng wǒ liǎng fēnzhōng.",
       "explanation": "Bài nghe nhắc đến địa điểm quán cà phê (yǐjīng dào kāfēiguǎn le). Tranh F thể hiện khung cảnh quán cà phê nên đáp án là F.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ hǎo, jīdàn zěnme mài?\nNǚ: Wǔ kuài qián yì jīn.",
       "explanation": "Bài nghe hỏi giá mua trứng gà (jīdàn zěnme mài). Tranh C thể hiện người bán/mua trứng gà nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zhè jiàn yīfu zěnmeyàng?\nNǚ: Yánsè hái búcuò, dànshì wǒ juéde yǒudǐanr guì.",
       "explanation": "Bài nghe bàn về trang phục/áo (zhèjiàn yīfú zěnmeyàng). Tranh E thể hiện người chọn/mặc quần áo đẹp nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ kàn, zhè shì wǒ de xīn shǒujī.\nNǚ: Hēisè de? Zhēn hǎokàn.",
       "explanation": "Bài nghe nhắc tới chiếc điện thoại di động mới (zhè shì wǒ de xīnshǒujī). Tranh C thể hiện chiếc điện thoại di động nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Wǒ xiànzài shì sìshíwǔ gōngjīn.\nNán: Fēicháng hǎo, wǒ yě hé nǐ yìqǐ qù pǎobù.",
       "explanation": "Bài nghe nhắc tới cân nặng và chạy bộ (sìshíwǔ gōngjīn...yìqǐ qù pǎobù). Tranh A thể hiện việc kiểm tra trọng lượng/chạy bộ nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nà wǒ huí jiā le, míngtiān xiàwǔ jiàn.\nNǚ: Zàijiàn. Wàimian lěng, chuān shàng yīfu ba.",
       "explanation": "Bài nghe nói về việc đi về nhà và mặc áo ấm (nà wǒ huíjiā le...chuān shàng yīfú ba). Tranh B thể hiện việc khoác áo tạm biệt nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nín qīzi zài nǎr gōngzuò?\nNán: Yīyuàn, tā shì yīshēng.",
       "explanation": "Bài nghe hỏi địa điểm làm việc là bệnh viện/bác sĩ (yīyuàn，tā shì yīshēng). Tranh E thể hiện bệnh viện/bác sĩ nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Wǒ mǎi píngguǒ le, zài zhuōzi shang ne.\nNǚ: Kànjiàn le. Xǐ le ma?",
       "explanation": "Bài nghe nhắc đến việc mua táo để trên bàn (mǎi píngguǒ le，zài zhuōzi shàng ne). Tranh D thể hiện hoa quả/táo trên bàn nên đáp án là D.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Bié shuōhuà, ràng tā shuì ba.",
       "options": [
-        "A 我想想，这个字怎么读呢？ (Wǒ xiǎngxiang, zhège zì zěnme dú ne?)",
-        "B 房间里太热了，把门打开吧。 (Fángjiān li tài rè le, bǎ mén dǎkāi ba.)",
-        "C 别说话，让她睡吧。 (Bié shuōhuà, ràng tā shuì ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我喜欢这块儿手表，因为是女朋友送的。 (Wǒ xǐhuan zhè kuàir shǒubiǎo, yīnwèi shì nǚpéngyou sòng de.)",
-        "F 她的狗跳得真高。 (Tā de gǒu tiào de zhēn gāo.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒ xiǎngxiang, zhège zì zěnme dú ne?",
       "options": [
-        "A 我想想，这个字怎么读呢？ (Wǒ xiǎngxiang, zhège zì zěnme dú ne?)",
-        "B 房间里太热了，把门打开吧。 (Fángjiān li tài rè le, bǎ mén dǎkāi ba.)",
-        "C 别说话，让她睡吧。 (Bié shuōhuà, ràng tā shuì ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我喜欢这块儿手表，因为是女朋友送的。 (Wǒ xǐhuan zhè kuàir shǒubiǎo, yīnwèi shì nǚpéngyou sòng de.)",
-        "F 她的狗跳得真高。 (Tā de gǒu tiào de zhēn gāo.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā de gǒu tiào de zhēn gāo.",
       "options": [
-        "A 我想想，这个字怎么读呢？ (Wǒ xiǎngxiang, zhège zì zěnme dú ne?)",
-        "B 房间里太热了，把门打开吧。 (Fángjiān li tài rè le, bǎ mén dǎkāi ba.)",
-        "C 别说话，让她睡吧。 (Bié shuōhuà, ràng tā shuì ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我喜欢这块儿手表，因为是女朋友送的。 (Wǒ xǐhuan zhè kuàir shǒubiǎo, yīnwèi shì nǚpéngyou sòng de.)",
-        "F 她的狗跳得真高。 (Tā de gǒu tiào de zhēn gāo.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Fángjiān li tài rè le, bǎ mén dǎkāi ba.",
       "options": [
-        "A 我想想，这个字怎么读呢？ (Wǒ xiǎngxiang, zhège zì zěnme dú ne?)",
-        "B 房间里太热了，把门打开吧。 (Fángjiān li tài rè le, bǎ mén dǎkāi ba.)",
-        "C 别说话，让她睡吧。 (Bié shuōhuà, ràng tā shuì ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我喜欢这块儿手表，因为是女朋友送的。 (Wǒ xǐhuan zhè kuàir shǒubiǎo, yīnwèi shì nǚpéngyou sòng de.)",
-        "F 她的狗跳得真高。 (Tā de gǒu tiào de zhēn gāo.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒ xǐhuan zhè kuàir shǒubiǎo, yīnwèi shì nǚpéngyou sòng de.",
       "options": [
-        "A 我想想，这个字怎么读呢？ (Wǒ xiǎngxiang, zhège zì zěnme dú ne?)",
-        "B 房间里太热了，把门打开吧。 (Fángjiān li tài rè le, bǎ mén dǎkāi ba.)",
-        "C 别说话，让她睡吧。 (Bié shuōhuà, ràng tā shuì ba.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我喜欢这块儿手表，因为是女朋友送的。 (Wǒ xǐhuan zhè kuàir shǒubiǎo, yīnwèi shì nǚpéngyou sòng de.)",
-        "F 她的狗跳得真高。 (Tā de gǒu tiào de zhēn gāo.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

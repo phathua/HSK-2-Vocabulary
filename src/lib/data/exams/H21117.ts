@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Wǒ jièshào yīxià, zhè shì wǒ zhàngfu.\nNán: Rènshi nǐ hěn gāoxìng.",
       "explanation": "Lời thoại giới thiệu chồng \"zhè shì wǒ zhàngfū\". Bức ảnh C thể hiện hình ảnh các bên bắt tay xã giao giới thiệu nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ huì xiě \"bāngzhù\" de \"zhù\" zhège zì ma?\nNǚ: Huì xiě, nǐ kàn, zhèyàng xiě.",
       "explanation": "Lời thoại nhắc đến viết chữ \"nǐ kàn，zhèyàng xiě\". Bức ảnh A thể hiện cô gái viết/chỉ nét chữ trên bảng nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ pángbiān zhège rén shì shéi?\nNán: Qián lǎoshī, wǒ de Hànyǔ lǎoshī.",
       "explanation": "Lời thoại hỏi người bên cạnh \"nǐ pángbiān zhège rén shì shuí？\". Bức ảnh F thể hiện hai người cùng ngồi xem sách/ảnh chỉ người bên cạnh nên đáp án là F.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ de gǒu zhè jǐ tiān zěnmeyàng?\nNǚ: Hǎoduō le, tā yǐjīng kāishǐ chī dōngxi le.",
       "explanation": "Lời thoại nhắc đến chú chó \"nǐ de gǒu zhè jǐtiān zěnmeyàng？\". Bức ảnh E thể hiện người vuốt ve chăm sóc chú chó nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zěnme le? Lèi le?\nNán: Yǒudiǎnr, hěn cháng shíjiān méiyǒu yùndòng le.",
       "explanation": "Lời thoại hỏi về việc mệt mỏi \"zěnme le？lèi le？\". Bức ảnh B thể hiện nam giới cúi người mệt mỏi sau vận động nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Zhèxiē shū nǐ dōu dú le?\nNǚ: Méi ne, zhèxiē dōu shì xīn shū.",
       "explanation": "Lời thoại nhắc đến chồng sách \"zhèxiē shū nǐ dōu dú le？\". Bức ảnh D thể hiện cô gái chống cằm bên các chồng sách nên đáp án là D.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zài nǎr ne?\nNán: Jiù zài yòubiān, nǐ kàndào le ma? Hěn jìn.",
       "explanation": "Lời thoại chỉ hướng bên phải \"jiù zài yòubiān，nǐ kàndào le ma？\". Bức ảnh A thể hiện hai người đứng chỉ tay chỉ đường nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Fúwùyuán, nǐmen zhèr shénme cài zuì hǎochī?\nNǚ: Zhège yú búcuò.",
       "explanation": "Lời thoại hỏi món ăn với phục vụ \"fúwùyuán，nǐmen zhèér shénme cài zuì hǎochī？\". Bức ảnh E thể hiện hai người xem thực đơn chọn món nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǚ'ér jīntiān méi qù shàngkè?\nNán: Tā hé tóngxué chànggē qù le.",
       "explanation": "Lời thoại nhắc con gái đi hát karaoke \"tā hé tóngxué chànggē qù le\". Bức ảnh B thể hiện hai cô gái vui vẻ cầm micro hát hò nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Tiān yīn le, kěnéng yào xià yǔ.\nNǚ: Wàimiàn yǐjīng zài xià yǔ le.",
       "explanation": "Lời thoại nhắc đến trời mưa \"wàimiàn yǐjīng zài xiàyǔ le\". Bức ảnh C thể hiện cô gái giơ ô dưới mưa nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Sān ge jīdàn, shìbushì tài shǎo le?",
       "options": [
-        "A 看我这儿，大家笑一笑，一、二、三。 (Kàn wǒ zhèr, dàjiā xiàoyīxiào, yī, èr, sān.)",
-        "B 三个鸡蛋，是不是太少了？ (Sān ge jīdàn, shìbushì tài shǎo le?)",
-        "C 这件衣服卖 1000，不是 100 元。 (Zhè jiàn yīfu mài 1000, bú shì 100 yuán.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "F 我不会做这个题，你会吗？ (Wǒ bú huì zuò zhège tí, nǐ huì ma?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Kàn wǒ zhèr, dàjiā xiàoyīxiào, yī, èr, sān.",
       "options": [
-        "A 看我这儿，大家笑一笑，一、二、三。 (Kàn wǒ zhèr, dàjiā xiàoyīxiào, yī, èr, sān.)",
-        "B 三个鸡蛋，是不是太少了？ (Sān ge jīdàn, shìbushì tài shǎo le?)",
-        "C 这件衣服卖 1000，不是 100 元。 (Zhè jiàn yīfu mài 1000, bú shì 100 yuán.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "F 我不会做这个题，你会吗？ (Wǒ bú huì zuò zhège tí, nǐ huì ma?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒ bú huì zuò zhège tí, nǐ huì ma?",
       "options": [
-        "A 看我这儿，大家笑一笑，一、二、三。 (Kàn wǒ zhèr, dàjiā xiàoyīxiào, yī, èr, sān.)",
-        "B 三个鸡蛋，是不是太少了？ (Sān ge jīdàn, shìbushì tài shǎo le?)",
-        "C 这件衣服卖 1000，不是 100 元。 (Zhè jiàn yīfu mài 1000, bú shì 100 yuán.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "F 我不会做这个题，你会吗？ (Wǒ bú huì zuò zhège tí, nǐ huì ma?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè jiàn yīfu mài 1000, bú shì 100 yuán.",
       "options": [
-        "A 看我这儿，大家笑一笑，一、二、三。 (Kàn wǒ zhèr, dàjiā xiàoyīxiào, yī, èr, sān.)",
-        "B 三个鸡蛋，是不是太少了？ (Sān ge jīdàn, shìbushì tài shǎo le?)",
-        "C 这件衣服卖 1000，不是 100 元。 (Zhè jiàn yīfu mài 1000, bú shì 100 yuán.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "F 我不会做这个题，你会吗？ (Wǒ bú huì zuò zhège tí, nǐ huì ma?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Mén kāizhe ne, qǐng jìn.",
       "options": [
-        "A 看我这儿，大家笑一笑，一、二、三。 (Kàn wǒ zhèr, dàjiā xiàoyīxiào, yī, èr, sān.)",
-        "B 三个鸡蛋，是不是太少了？ (Sān ge jīdàn, shìbushì tài shǎo le?)",
-        "C 这件衣服卖 1000，不是 100 元。 (Zhè jiàn yīfu mài 1000, bú shì 100 yuán.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "F 我不会做这个题，你会吗？ (Wǒ bú huì zuò zhège tí, nǐ huì ma?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Huíqù ba, zàijiàn.\nNán: Zàijiàn, huānyíng nǐmen xià cì zài lái.",
       "explanation": "Lời thoại chào tiễn khách 'huānyíng nǐmen xiàcì zài lái' (Hoan nghênh lần sau lại đến). Bức ảnh E thể hiện vẫy tay chào tiễn biệt nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Xiǎogǒu méi chī dōngxi?\nNǚ: Shì, tā kěnéng shēngbìng le.",
       "explanation": "Lời thoại nhắc đến 'xiǎogǒu' (chó nhỏ) không ăn vì bị ốm. Bức ảnh F thể hiện chú chó nằm mệt mỏi nên đáp án là F.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ juéde zhè jiàn zěnmeyàng?\nNán: Hái kěyǐ, huì bu huì yǒudiǎnr dà?",
       "explanation": "Lời thoại hỏi ý kiến về quần áo 'zhèjiàn zěnmeyàng' (bộ này thế nào). Bức ảnh B thể hiện ngắm/ướm quần áo nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ jiějie zài zuò shénme ne?\nNǚ: Tā zài nàr kàn shū ne, wǒ qù jiào tā.",
       "explanation": "Lời thoại cho biết chị gái 'zài nàér kànshū ne' (đang đọc sách ở kia). Bức ảnh C thể hiện hoạt động đọc sách nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ mǎi jīdàn le ma?\nNán: Mǎi le, zài zhuōzi shang.",
       "explanation": "Lời thoại hỏi mua trứng gà 'mǎi jīdàn le ma' và đáp 'zài zhuōzi shàng'. Bức ảnh A thể hiện những quả trứng gà để trên bàn nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ jièshào de fēicháng hǎo, duì wǒmen hěn yǒu bāngzhù.\nNǚ: Zhēn de ma? Nà jiù hǎo.",
       "explanation": "Lời thoại khen ngợi 'jièshào dé fēicháng hǎo' (giới thiệu rất tốt). Bức ảnh B thể hiện nam giới giơ ngón tay cái khen ngợi biểu thị giỏi/tốt nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ zěnme le? Yī ge rén zuòzhe xiǎng shénme ne?\nNán: Méi guānxi, wǒ zài xiǎng gōngsī de yīxiē shìqing.",
       "explanation": "Lời thoại hỏi lý do ngồi suy nghĩ 'yígè rén zuò zhuóxiǎng shénme ne'. Bức ảnh E thể hiện người đàn ông ngồi sofa tay chống cằm suy nghĩ nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Xīguā duōshao qián yī jīn?\nNǚ: Yī kuài èr, hěn piányi.",
       "explanation": "Lời thoại hỏi giá dưa hấu 'xīguā duōshǎo qián yījīn'. Bức ảnh A thể hiện đĩa cắt dưa hấu nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Xiàng yòu kāi, zǒu zhèbiān jìn.\nNán: Wǒ zhīdào, dànshì zhèr bú ràng xiàng yòu kāi.",
       "explanation": "Lời thoại nhắc giao thông 'zhèér bùràng xiàng yòukāi' (ở đây không cho rẽ phải). Bức ảnh C thể hiện biển báo cấm rẽ phải nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ de dōngxi jiù zhème diǎnr?\nNǚ: Shì, mén wàimiàn hái yǒu liǎng ge yǐzi.",
       "explanation": "Lời thoại trao đổi việc chuyển đồ 'nǐ de dōngxī jiù zhèmediǎner'. Bức ảnh D thể hiện cô gái ôm thùng các-tông chuyển đồ nên đáp án là D.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒ mèimei jīntiān pǎo le ge dì-yī, tā fēicháng gāoxìng.",
       "options": [
-        "A 比一比，你们三个谁最高？ (Bǐyībǐ, nǐmen sān ge shéi zuì gāo?)",
-        "B 那个小猫在看什么呢？ (Nàge xiǎomāo zài kàn shénme ne?)",
-        "C 妈，这个送给您，生日快乐！ (Mā, zhège sòng gěi nín, shēngrì kuàilè!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我妹妹今天跑了个第一，她非常高兴。 (Wǒ mèimei jīntiān pǎo le ge dì-yī, tā fēicháng gāoxìng.)",
-        "F 这个题我会做，你让我想一想。 (Zhège tí wǒ huì zuò, nǐ ràng wǒ zài xiǎngyīxiǎng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhège tí wǒ huì zuò, nǐ ràng wǒ zài xiǎngyīxiǎng.",
       "options": [
-        "A 比一比，你们三个谁最高？ (Bǐyībǐ, nǐmen sān ge shéi zuì gāo?)",
-        "B 那个小猫在看什么呢？ (Nàge xiǎomāo zài kàn shénme ne?)",
-        "C 妈，这个送给您，生日快乐！ (Mā, zhège sòng gěi nín, shēngrì kuàilè!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我妹妹今天跑了个第一，她非常高兴。 (Wǒ mèimei jīntiān pǎo le ge dì-yī, tā fēicháng gāoxìng.)",
-        "F 这个题我会做，你让我想一想。 (Zhège tí wǒ huì zuò, nǐ ràng wǒ zài xiǎngyīxiǎng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Mā, zhège sòng gěi nín, shēngrì kuàilè!",
       "options": [
-        "A 比一比，你们三个谁最高？ (Bǐyībǐ, nǐmen sān ge shéi zuì gāo?)",
-        "B 那个小猫在看什么呢？ (Nàge xiǎomāo zài kàn shénme ne?)",
-        "C 妈，这个送给您，生日快乐！ (Mā, zhège sòng gěi nín, shēngrì kuàilè!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我妹妹今天跑了个第一，她非常高兴。 (Wǒ mèimei jīntiān pǎo le ge dì-yī, tā fēicháng gāoxìng.)",
-        "F 这个题我会做，你让我想一想。 (Zhège tí wǒ huì zuò, nǐ ràng wǒ zài xiǎngyīxiǎng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nàge xiǎomāo zài kàn shénme ne?",
       "options": [
-        "A 比一比，你们三个谁最高？ (Bǐyībǐ, nǐmen sān ge shéi zuì gāo?)",
-        "B 那个小猫在看什么呢？ (Nàge xiǎomāo zài kàn shénme ne?)",
-        "C 妈，这个送给您，生日快乐！ (Mā, zhège sòng gěi nín, shēngrì kuàilè!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我妹妹今天跑了个第一，她非常高兴。 (Wǒ mèimei jīntiān pǎo le ge dì-yī, tā fēicháng gāoxìng.)",
-        "F 这个题我会做，你让我想一想。 (Zhège tí wǒ huì zuò, nǐ ràng wǒ zài xiǎngyīxiǎng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Bǐyībǐ, nǐmen sān ge shéi zuì gāo?",
       "options": [
-        "A 比一比，你们三个谁最高？ (Bǐyībǐ, nǐmen sān ge shéi zuì gāo?)",
-        "B 那个小猫在看什么呢？ (Nàge xiǎomāo zài kàn shénme ne?)",
-        "C 妈，这个送给您，生日快乐！ (Mā, zhège sòng gěi nín, shēngrì kuàilè!)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 我妹妹今天跑了个第一，她非常高兴。 (Wǒ mèimei jīntiān pǎo le ge dì-yī, tā fēicháng gāoxìng.)",
-        "F 这个题我会做，你让我想一想。 (Zhège tí wǒ huì zuò, nǐ ràng wǒ zài xiǎngyīxiǎng.)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

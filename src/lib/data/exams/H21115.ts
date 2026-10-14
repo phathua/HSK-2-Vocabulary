@@ -202,9 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Bāng wǒ kàn yīxià, xiànzài jǐ diǎn le?\nNán: Xiànzài kuài qī diǎn shí fēn le.",
       "explanation": "Lời thoại hỏi giờ \"xiànzài jǐdiǎn le？\" (Mấy giờ rồi?). Bức ảnh C thể hiện người và mặt đồng hồ lớn nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
@@ -220,9 +223,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Zhège tí nǐ huì zuò ma?\nNǚ: Duìbuqǐ, wǒ bú huì.",
       "explanation": "Lời thoại hỏi về bài tập \"zhège tí nǐ huì zuò ma？\" (Bài này bạn biết làm không?). Bức ảnh B thể hiện hai người ngồi bàn học trao đổi bài nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
@@ -238,9 +244,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Wǒmen qù pángbiān nàge shāngdiàn kànkan.\nNán: Shénme? Nǐ hái yào mǎi shénme?",
       "explanation": "Lời thoại rủ đi cửa hàng mua sắm \"qù pángbiān nàge shāngdiàn kànkàn\" (Đi xem cửa hàng bên cạnh). Bức ảnh E thể hiện người tay xách túi mua sắm nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
@@ -256,9 +265,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Xièxie nǐ sòng wǒ huílái.\nNǚ: Bú kèqi, zàijiàn, míngtiān jiàn.",
       "explanation": "Lời thoại cảm ơn vì tiễn về \"xièxiè nǐ sòng wǒ huílái\" (Cảm ơn bạn đã đưa tôi về). Bức ảnh F thể hiện đứng cạnh ô tô tạm biệt nhau nên đáp án là F.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
@@ -274,9 +286,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Wéi, xīngqīliù zěnmeyàng?\nNán: Bù hǎo, wèi shénme bú shì xīngqīrì ne?",
       "explanation": "Lời thoại gọi điện thoại \"wèi，xīngqīliù zěnmeyàng？\" (Alo, thứ Bảy thì thế nào?). Bức ảnh A thể hiện người nhíu mày nghe điện thoại nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
@@ -292,9 +307,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Zěnme? Bù hǎochī ma?\nNǚ: Shì, wǒ bú ài chī zhège cài.",
       "explanation": "Lời thoại thảo luận về thức ăn \"wǒ bù ài chī zhège cài\" (Tôi không thích ăn món này). Bức ảnh B thể hiện đĩa thức ăn / bữa ăn nên đáp án là B.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
@@ -310,9 +328,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Ràng wǒ xiǎngxiǎng zài huídá hǎo ma?\nNán: Kěyǐ, méi wèntí.",
       "explanation": "Lời thoại cần suy nghĩ \"ràng wǒ xiǎngxiǎng zài huídá\" (Để tôi suy nghĩ rồi trả lời sau). Bức ảnh C thể hiện tư thế chống cằm suy nghĩ nên đáp án là C.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
@@ -328,9 +349,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Hé nǐ yīqǐ chànggē de zhège rén shì shéi?\nNǚ: Shì wǒ de yī ge péngyou.",
       "explanation": "Lời thoại hỏi người cùng hát \"hé nǐ yìqǐ chànggē de zhège rén\" (Người hát cùng bạn). Bức ảnh D thể hiện hai người cùng cầm micro hát nên đáp án là D.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
@@ -346,9 +370,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Wǒ de gǒu zěnme le? Tā yǐjīng liǎng tiān méi chī dōngxi le.\nNán: Ràng wǒ kànkan.",
       "explanation": "Lời thoại hỏi chú chó bị làm sao \"wǒ de gǒu zěnme le？\" (Chú chó của tôi bị làm sao?). Bức ảnh E thể hiện xem/khám chú chó nhỏ nên đáp án là E.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
@@ -364,9 +391,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Wǒ xǐhuan zhè jiàn hēisè de.\nNǚ: Wǒ yě shì, dànshì tā bù piányi.",
       "explanation": "Lời thoại khen bộ quần áo màu đen \"xǐhuān zhèjiàn hēisè de\" (Thích bộ màu đen này). Bức ảnh A thể hiện ngắm/ướm quần áo màu đen nên đáp án là A.",
       "options": [
-        "A ",
-        "B ",
-        "C "
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ],
       "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
@@ -656,12 +686,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhèxiē kuàizi zhēn piàoliang, zài nǎr mǎi de?",
       "options": [
-        "A 大家快来看，这是我们去年拍的照片。 (Dàjiā kuài lái kàn, zhè shì wǒmen qùnián pāi de zhàopiàn.)",
-        "B 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "C 这儿的羊肉很好吃，但是也很贵。 (Zhèr de yángròu hěn hǎochī, dànshì yě hěn guì.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 运动了一上午，累坏了吧？快休息一下。 (Yùndòngle yì shàngwǔ, lèi huài le ba? Kuài xiūxi yīxià.)",
-        "F 这些筷子真漂亮，在哪儿买的？ (Zhèxiē kuàizi zhēn piàoliang, zài nǎr mǎi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -680,12 +710,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Dàjiā kuài lái kàn, zhè shì wǒmen qùnián pāi de zhàopiàn.",
       "options": [
-        "A 大家快来看，这是我们去年拍的照片。 (Dàjiā kuài lái kàn, zhè shì wǒmen qùnián pāi de zhàopiàn.)",
-        "B 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "C 这儿的羊肉很好吃，但是也很贵。 (Zhèr de yángròu hěn hǎochī, dànshì yě hěn guì.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 运动了一上午，累坏了吧？快休息一下。 (Yùndòngle yì shàngwǔ, lèi huài le ba? Kuài xiūxi yīxià.)",
-        "F 这些筷子真漂亮，在哪儿买的？ (Zhèxiē kuàizi zhēn piàoliang, zài nǎr mǎi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -704,12 +734,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yùndòngle yì shàngwǔ, lèi huài le ba? Kuài xiūxi yīxià.",
       "options": [
-        "A 大家快来看，这是我们去年拍的照片。 (Dàjiā kuài lái kàn, zhè shì wǒmen qùnián pāi de zhàopiàn.)",
-        "B 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "C 这儿的羊肉很好吃，但是也很贵。 (Zhèr de yángròu hěn hǎochī, dànshì yě hěn guì.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 运动了一上午，累坏了吧？快休息一下。 (Yùndòngle yì shàngwǔ, lèi huài le ba? Kuài xiūxi yīxià.)",
-        "F 这些筷子真漂亮，在哪儿买的？ (Zhèxiē kuàizi zhēn piàoliang, zài nǎr mǎi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -728,12 +758,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhèr de yángròu hěn hǎochī, dànshì yě hěn guì.",
       "options": [
-        "A 大家快来看，这是我们去年拍的照片。 (Dàjiā kuài lái kàn, zhè shì wǒmen qùnián pāi de zhàopiàn.)",
-        "B 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "C 这儿的羊肉很好吃，但是也很贵。 (Zhèr de yángròu hěn hǎochī, dànshì yě hěn guì.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 运动了一上午，累坏了吧？快休息一下。 (Yùndòngle yì shàngwǔ, lèi huài le ba? Kuài xiūxi yīxià.)",
-        "F 这些筷子真漂亮，在哪儿买的？ (Zhèxiē kuàizi zhēn piàoliang, zài nǎr mǎi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -752,12 +782,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Mén kāizhe ne, qǐng jìn.",
       "options": [
-        "A 大家快来看，这是我们去年拍的照片。 (Dàjiā kuài lái kàn, zhè shì wǒmen qùnián pāi de zhàopiàn.)",
-        "B 门开着呢，请进。 (Mén kāizhe ne, qǐng jìn.)",
-        "C 这儿的羊肉很好吃，但是也很贵。 (Zhèr de yángròu hěn hǎochī, dànshì yě hěn guì.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 运动了一上午，累坏了吧？快休息一下。 (Yùndòngle yì shàngwǔ, lèi huài le ba? Kuài xiūxi yīxià.)",
-        "F 这些筷子真漂亮，在哪儿买的？ (Zhèxiē kuàizi zhēn piàoliang, zài nǎr mǎi de?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

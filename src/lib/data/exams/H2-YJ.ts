@@ -210,7 +210,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_11.webp",
       "board_image": "images/H2-YJ_board_11_15.webp",
       "explanation": "Bài nghe nhắc đến \"xīguā\" (dưa hấu). Đối chiếu với bảng tranh A-F, bức tranh C miêu tả hai miếng dưa hấu nên đáp án là C.",
-      "listening_pinyin": "Nǐ qù xǐxǐ shǒu lái chī xīguā. / Nǐ chī ba, wǒ xiànzài bù xiǎng chī."
+      "listening_pinyin": "Nǐ qù xǐxǐ shǒu lái chī xīguā. / Nǐ chī ba, wǒ xiànzài bù xiǎng chī.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -225,7 +233,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_12.webp",
       "board_image": "images/H2-YJ_board_11_15.webp",
       "explanation": "Bài nghe nhắc đến \"tiàowǔ\" (múa/khiêu vũ). Bức tranh A miêu tả bé gái tập múa ballet nên đáp án là A.",
-      "listening_pinyin": "Háizi xiǎng xué tiàowǔ, gěi tā zhǎo gè xuéxiào ba. / Hǎo, zhǎo gè lí jiā jìn de."
+      "listening_pinyin": "Háizi xiǎng xué tiàowǔ, gěi tā zhǎo gè xuéxiào ba. / Hǎo, zhǎo gè lí jiā jìn de.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -240,7 +256,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_13.webp",
       "board_image": "images/H2-YJ_board_11_15.webp",
       "explanation": "Bài nghe nhắc đến mở hộp ra xem \"dǎkāi kànkàn\". Bức tranh B miêu tả bàn tay đưa một hộp quà buộc nơ nên đáp án là B.",
-      "listening_pinyin": "Zhèlǐ miàn shì shénme? / Nǐ dǎkāi kànkan jiù zhīdào le."
+      "listening_pinyin": "Zhèlǐ miàn shì shénme? / Nǐ dǎkāi kànkan jiù zhīdào le.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -255,7 +279,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_14.webp",
       "board_image": "images/H2-YJ_board_11_15.webp",
       "explanation": "Bài nghe nói \"zhāng xiǎojiě，zhèbiān qǐng\" (Cô Trương, mời đi bên này). Bức tranh E miêu tả nam nhân viên lịch sự giơ tay chỉ hướng đi nên đáp án là E.",
-      "listening_pinyin": "Zhāng xiǎojiě, zhèbiān qǐng. / Xièxie, nǐmen gōngsī zhēn dà."
+      "listening_pinyin": "Zhāng xiǎojiě, zhèbiān qǐng. / Xièxie, nǐmen gōngsī zhēn dà.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -270,7 +302,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_15.webp",
       "board_image": "images/H2-YJ_board_11_15.webp",
       "explanation": "Bài nghe hỏi về phòng thi/lớp học. Bức tranh F miêu tả ba bạn học sinh đeo balo trò chuyện nên đáp án là F.",
-      "listening_pinyin": "Wǒmen míngtiān zài nǎge jiàoshì kǎoshì? / Sān líng èr."
+      "listening_pinyin": "Wǒmen míngtiān zài nǎge jiàoshì kǎoshì? / Sān líng èr.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -285,7 +325,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_16.webp",
       "board_image": "images/H2-YJ_board_16_20.webp",
       "explanation": "Bài nghe nhắc đến \"bàozhǐ\" (tờ báo). Bức tranh C miêu tả tờ báo nên đáp án là C.",
-      "listening_pinyin": "Zhè shì jīntiān de bàozhǐ. / Duì, nǐ kàn le ma?"
+      "listening_pinyin": "Zhè shì jīntiān de bàozhǐ. / Duì, nǐ kàn le ma?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -300,7 +348,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_17.webp",
       "board_image": "images/H2-YJ_board_16_20.webp",
       "explanation": "Bài nghe nhắc đến \"hēshuǐ zài pǎo\" (uống nước rồi chạy tiếp) và nghỉ ngơi. Bức tranh A miêu tả người vận động viên uống nước nên đáp án là A.",
-      "listening_pinyin": "Tài rè le, wǒ hē diǎn shuǐ zài pǎo. / Nà wǒ yě xiūxi yíxià."
+      "listening_pinyin": "Tài rè le, wǒ hē diǎn shuǐ zài pǎo. / Nà wǒ yě xiūxi yíxià.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -315,7 +371,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_18.webp",
       "board_image": "images/H2-YJ_board_16_20.webp",
       "explanation": "Bài nghe nhắc đến \"màndiǎn kāichē\" (lái xe chậm thôi). Bức tranh E liên quan đến ô tô/lái xe đi làm nên đáp án là E.",
-      "listening_pinyin": "Wǒ qù shàngbān le, zàijiàn. / Zàijiàn, nǐ màn diǎn kāichē."
+      "listening_pinyin": "Wǒ qù shàngbān le, zàijiàn. / Zàijiàn, nǐ màn diǎn kāichē.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -330,7 +394,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_19.webp",
       "board_image": "images/H2-YJ_board_16_20.webp",
       "explanation": "Bài nghe nhắc đến \"yào\" (thuốc). Bức tranh D miêu tả lọ thuốc nên đáp án là D.",
-      "listening_pinyin": "Bà, zhège yào yì tiān chī yí cì. / Hǎo de, měitiān shénme shíhou chī?"
+      "listening_pinyin": "Bà, zhège yào yì tiān chī yí cì. / Hǎo de, měitiān shénme shíhou chī?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -345,7 +417,15 @@ export const examData: ExamDetail = {
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_20.webp",
       "board_image": "images/H2-YJ_board_16_20.webp",
       "explanation": "Bài nghe nhắc đến \"bēizi\" (những chiếc ly/cốc). Bức tranh B miêu tả các ly/cốc gốm hoa văn nên đáp án là B.",
-      "listening_pinyin": "Zhèxiē bēizi zhēn piàoliang, nǐ shénme shíhou mǎi de? / Qùnián."
+      "listening_pinyin": "Zhèxiē bēizi zhēn piàoliang, nǐ shénme shíhou mǎi de? / Qùnián.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
     },
     {
       "exam_code": "H2-YJ",
@@ -658,12 +738,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè jiàn yīfu hěn piàoliang, duōshao qián?",
       "options": [
-        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
-        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
-        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
-        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -682,12 +762,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.",
       "options": [
-        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
-        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
-        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
-        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -706,12 +786,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā juéde lǚyóu shì hěn kuàilè de shìqing.",
       "options": [
-        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
-        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
-        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
-        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -730,12 +810,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Fúwùyuán, nǐmen zhèr shénme cài hǎochī?",
       "options": [
-        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
-        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
-        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
-        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {
@@ -754,12 +834,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.",
       "options": [
-        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
-        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
-        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
-        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
-        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
-        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
       ]
     },
     {

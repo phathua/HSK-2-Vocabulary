@@ -20,9 +20,10 @@
     examCode: string;
     isExamMode?: boolean; // In official exam mode: 60s preview -> auto-play non-stoppable
     listeningQuestions?: QuestionItem[];
+    currentQuestionNo?: number;
   }
 
-  let { audioSrc = null, examCode, isExamMode = false, listeningQuestions = [] }: Props = $props();
+  let { audioSrc = null, examCode, isExamMode = false, listeningQuestions = [], currentQuestionNo = 1 }: Props = $props();
 
   let audioElement: HTMLAudioElement | undefined = $state();
   let cardElement: HTMLElement | undefined = $state();
@@ -542,12 +543,12 @@
     {/if}
 
     <!-- Khung Subtitle Overlay gắn liền trực tiếp ngay dưới Audio Player (Word-by-word Karaoke) -->
-    {#if showSubtitleOverlay}
+    {#if showSubtitleOverlay && currentQuestionNo <= 35}
       {#if isPreviewPhase}
         <div
           class="mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-slate-200/80 dark:border-neutral-800/80 flex items-center justify-center gap-1.5 py-0.5 sm:py-1 animate-in fade-in duration-200 text-xs font-bold text-amber-600 dark:text-amber-400"
         >
-          <span class="text-sm animate-pulse">⏳</span>
+          <HourglassMedium class="w-3.5 h-3.5 animate-spin text-amber-600" />
           <span>60s đọc đề bắt đầu... (còn {previewSeconds}s)</span>
           <span class="hidden sm:inline text-[11px] text-slate-500 dark:text-neutral-400 font-normal italic">
             • Thời gian xem trước đề
