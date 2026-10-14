@@ -23,6 +23,7 @@
   import { getExamData } from '#lib/utils/examLoader';
 
   import { goto, preloadData } from '$app/navigation';
+  import { page } from '$app/state';
 
   // Danh sách các mã đề đã được đối chiếu & kiểm duyệt chuẩn 100% với đề thi thật
   const VERIFIED_EXAMS = new Set([
@@ -70,6 +71,19 @@
     previewExam = exam;
     previewTab = 'pdf';
   }
+
+  $effect(() => {
+    const previewCode = page.url.searchParams.get('preview');
+    if (previewCode) {
+      const match = mockExamsData.find(
+        (e) => e.code.toLowerCase() === previewCode.toLowerCase() || e.id.toLowerCase() === previewCode.toLowerCase()
+      );
+      if (match) {
+        previewExam = match;
+        previewTab = 'pdf';
+      }
+    }
+  });
 
   function handleStartExam(exam: MockExamItem) {
     if (enteringExam) return;
@@ -277,33 +291,28 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 select-none"
+    class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 select-none"
     onclick={() => (previewExam = null)}
   >
-    <!-- Modal Card Full Screen / Max-2xl -->
+    <!-- Modal Card: Tối ưu full chiều cao gọn gàng trên mobile, max-2xl trên desktop -->
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
     <div
-      class="bg-white dark:bg-[#1E1E1E] border border-slate-200 dark:border-[#282A2C] rounded-3xl w-full max-w-2xl max-h-[90vh] shadow-2xl flex flex-col overflow-hidden"
+      class="bg-white dark:bg-[#1E1E1E] border border-slate-200 dark:border-[#282A2C] rounded-2xl sm:rounded-3xl w-full max-w-2xl h-[94vh] sm:h-auto sm:max-h-[90vh] shadow-2xl flex flex-col overflow-hidden"
       onclick={(e) => e.stopPropagation()}
     >
-      <!-- Header Modal -->
-      <div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-[#282A2C] shrink-0">
-        <div class="flex items-center gap-2.5 min-w-0 pr-2">
-          <div class="w-9 h-9 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
-            <BookOpen weight="duotone" class="w-5 h-5" />
+      <!-- Header Modal: Gọn gàng, không truncate, icon & tiêu đề tối giản theo Rule 5 -->
+      <div class="flex items-center justify-between px-3.5 py-2.5 sm:px-4 sm:py-3 border-b border-slate-100 dark:border-[#282A2C] shrink-0 gap-2">
+        <div class="flex items-center gap-2 min-w-0">
+          <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
+            <BookOpen weight="duotone" class="w-4.5 h-4.5" />
           </div>
-          <div class="min-w-0">
-            <span class="text-[10px] font-mono font-bold text-orange-600 dark:text-orange-400 tracking-wider uppercase">
-              Xem trước đề thi • {previewExam.code}
-            </span>
-            <h3 class="text-sm font-black text-slate-900 dark:text-[#E3E3E3] truncate">
-              {previewExam.title}
-            </h3>
-          </div>
+          <h3 class="text-xs sm:text-sm font-black text-slate-900 dark:text-[#E3E3E3] leading-snug">
+            {previewExam.title}
+          </h3>
         </div>
 
-        <div class="flex items-center gap-2 shrink-0">
+        <div class="flex items-center gap-1.5 shrink-0">
           <button
             type="button"
             onclick={() => {
@@ -311,10 +320,11 @@
               previewExam = null;
               if (e) handleStartExam(e);
             }}
-            class="px-3 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-black flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
+            class="px-2.5 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white text-xs font-bold flex items-center gap-1 shadow-2xs transition-all cursor-pointer whitespace-nowrap"
+            title="Bắt đầu thi đề này"
           >
             <Play weight="bold" class="w-3.5 h-3.5" />
-            <span class="hidden sm:inline">Vào thi ngay</span>
+            <span>Vào thi</span>
           </button>
           <button
             type="button"
@@ -327,71 +337,61 @@
         </div>
       </div>
 
-      <!-- Quick Metrics Strip & Mode Tabs -->
-      <div class="px-4 py-2 bg-slate-50 dark:bg-[#252525] border-b border-slate-100 dark:border-[#282A2C] flex flex-wrap items-center justify-between gap-2 shrink-0">
-        <!-- Mode Switcher Tabs -->
-        <div class="flex items-center gap-1 bg-slate-200/70 dark:bg-[#1A1A1A] p-0.5 rounded-xl text-xs font-bold">
+      <!-- Mode Tabs: Gọn gàng trên mobile, không bị rớt dòng hay gãy chữ -->
+      <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-slate-50 dark:bg-[#252525] border-b border-slate-100 dark:border-[#282A2C] flex items-center justify-between gap-2 shrink-0">
+        <div class="inline-flex items-center gap-1 bg-slate-200/70 dark:bg-[#1A1A1A] p-0.5 rounded-xl text-xs font-bold">
           <button
             type="button"
             onclick={() => (previewTab = 'pdf')}
-            class="px-3 py-1 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer {previewTab === 'pdf'
+            class="px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer whitespace-nowrap {previewTab === 'pdf'
               ? 'bg-white dark:bg-[#2D2D2D] text-orange-600 dark:text-orange-400 shadow-2xs'
               : 'text-slate-600 dark:text-[#8E918F] hover:text-slate-900 dark:hover:text-white'}"
           >
             <FilePdf weight="bold" class="w-3.5 h-3.5" />
-            <span>Bản scan PDF ({pdfPages} trang)</span>
+            <span>Bản scan ({pdfPages})</span>
           </button>
           <button
             type="button"
             onclick={() => (previewTab = 'questions')}
-            class="px-3 py-1 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer {previewTab === 'questions'
+            class="px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer whitespace-nowrap {previewTab === 'questions'
               ? 'bg-white dark:bg-[#2D2D2D] text-orange-600 dark:text-orange-400 shadow-2xs'
               : 'text-slate-600 dark:text-[#8E918F] hover:text-slate-900 dark:hover:text-white'}"
           >
             <ListBullets weight="bold" class="w-3.5 h-3.5" />
-            <span>Bóc tách câu hỏi (60 câu)</span>
+            <span>Câu hỏi ({previewDetail?.questions?.length || 60})</span>
           </button>
         </div>
 
-        <!-- Metrics Strip -->
-        <div class="flex items-center gap-3 text-[11px] font-bold text-slate-500 dark:text-[#8E918F]">
+        <!-- Metrics trên màn hình lớn hơn -->
+        <div class="hidden sm:flex items-center gap-3 text-[11px] font-bold text-slate-500 dark:text-[#8E918F]">
           <span class="flex items-center gap-1">
             <Clock class="w-3.5 h-3.5 text-orange-500" />
             55 phút
           </span>
           <span class="flex items-center gap-1">
             <SpeakerHigh class="w-3.5 h-3.5 text-sky-500" />
-            35 câu nghe
+            35 nghe
           </span>
           <span class="flex items-center gap-1">
             <BookOpen class="w-3.5 h-3.5 text-blue-500" />
-            25 câu đọc
+            25 đọc
           </span>
         </div>
       </div>
 
-      <!-- Questions Feed Body (Cuộn xem mượt mà từng câu/trang) -->
-      <div class="flex-1 overflow-y-auto p-4 space-y-4">
+      <!-- Feed Body: Cuộn xem mượt mà toàn bộ trang scan gốc full ảnh hoặc bóc tách từng câu -->
+      <div class="flex-1 overflow-y-auto p-2 sm:p-4">
         {#if previewTab === 'pdf'}
           {#if pdfPages > 0}
-            <div class="space-y-4 max-w-xl mx-auto">
+            <!-- Xếp các ảnh full ra theo đúng thứ tự, không kèm chú thích theo yêu cầu -->
+            <div class="flex flex-col gap-2 sm:gap-3 max-w-2xl mx-auto">
               {#each Array.from({ length: pdfPages }, (_, i) => i + 1) as pageNum (pageNum)}
-                <div class="flex flex-col gap-1.5">
-                  <div class="flex items-center justify-between px-1 text-[11px] font-bold text-slate-500 dark:text-[#8E918F]">
-                    <span class="px-2 py-0.5 rounded-full bg-slate-200/80 dark:bg-[#282A2C] font-mono text-[10px]">
-                      Trang {pageNum} / {pdfPages}
-                    </span>
-                    <span class="text-[10px] text-slate-400 font-mono">HSK 2 • {previewExam.code}</span>
-                  </div>
-                  <div class="w-full bg-white dark:bg-[#141414] rounded-2xl border border-slate-200 dark:border-[#282A2C] shadow-sm overflow-hidden flex items-center justify-center p-1 sm:p-2">
-                    <img
-                      src={`/exams/${previewExam.code}/pdf_pages/page_${String(pageNum).padStart(2, '0')}.webp`}
-                      alt={`Trang ${pageNum} đề ${previewExam.code}`}
-                      class="w-full h-auto object-contain rounded-xl select-none"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
+                <img
+                  src={`/exams/${previewExam.code}/pdf_pages/page_${String(pageNum).padStart(2, '0')}.webp`}
+                  alt={`Trang ${pageNum}`}
+                  class="w-full h-auto rounded-xl border border-slate-200/80 dark:border-[#282A2C] shadow-xs bg-white select-none block"
+                  loading="lazy"
+                />
               {/each}
             </div>
           {:else}
@@ -408,104 +408,83 @@
             </div>
           {/if}
         {:else}
-          {#if previewDetail && previewDetail.questions && previewDetail.questions.length > 0}
-            {#each previewDetail.questions as q, idx (idx)}
-              <div class="p-3.5 rounded-2xl bg-slate-50/80 dark:bg-[#202124] border border-slate-100 dark:border-[#282A2C] text-xs">
-                <div class="flex items-center justify-between mb-2">
-                  <span class="font-black text-orange-600 dark:text-orange-400">
-                    Câu {q.question_no || (idx + 1)}
-                  </span>
-                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-200/80 dark:bg-[#282A2C] text-slate-600 dark:text-[#8E918F]">
-                    {q.section || ''} {q.part ? `• ${q.part}` : ''}
-                  </span>
-                </div>
-
-                <!-- Question Image if any -->
-                {#if q.image}
-                  <div class="my-2 flex justify-center">
-                    <img
-                      src={getExamImageUrl(previewExam.code, q.image)}
-                      alt={`Hình câu ${q.question_no}`}
-                      class="max-h-44 sm:max-h-52 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white object-contain shadow-2xs"
-                      loading="lazy"
-                    />
+          <div class="space-y-3 sm:space-y-4">
+            {#if previewDetail && previewDetail.questions && previewDetail.questions.length > 0}
+              {#each previewDetail.questions as q, idx (idx)}
+                <div class="p-3 sm:p-3.5 rounded-2xl bg-slate-50/80 dark:bg-[#202124] border border-slate-100 dark:border-[#282A2C] text-xs">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="font-black text-orange-600 dark:text-orange-400">
+                      Câu {q.question_no || (idx + 1)}
+                    </span>
+                    <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-200/80 dark:bg-[#282A2C] text-slate-600 dark:text-[#8E918F]">
+                      {q.section || ''} {q.part ? `• ${q.part}` : ''}
+                    </span>
                   </div>
-                {/if}
 
-                <!-- Board Image if any -->
-                {#if q.board_image}
-                  <div class="my-2 flex justify-center">
-                    <img
-                      src={getExamImageUrl(previewExam.code, q.board_image)}
-                      alt={`Bảng đáp án câu ${q.question_no}`}
-                      class="max-h-52 sm:max-h-60 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white object-contain shadow-2xs"
-                      loading="lazy"
-                    />
-                  </div>
-                {/if}
+                  <!-- Question Image if any -->
+                  {#if q.image}
+                    <div class="my-2 flex justify-center">
+                      <img
+                        src={getExamImageUrl(previewExam.code, q.image)}
+                        alt={`Hình câu ${q.question_no}`}
+                        class="max-h-44 sm:max-h-52 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white object-contain shadow-2xs"
+                        loading="lazy"
+                      />
+                    </div>
+                  {/if}
 
-                <!-- Question Text or Listening Script -->
-                {#if q.text && !q.text.startsWith('Câu hỏi nghe số')}
-                  <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-sm my-1">
-                    {q.text}
-                  </p>
-                {/if}
+                  <!-- Board Image if any -->
+                  {#if q.board_image}
+                    <div class="my-2 flex justify-center">
+                      <img
+                        src={getExamImageUrl(previewExam.code, q.board_image)}
+                        alt={`Bảng đáp án câu ${q.question_no}`}
+                        class="max-h-52 sm:max-h-60 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white object-contain shadow-2xs"
+                        loading="lazy"
+                      />
+                    </div>
+                  {/if}
 
-                {#if q.listening_script}
-                  <div class="p-2 rounded-xl bg-sky-50/80 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/40 my-1.5">
-                    <span class="text-[10px] uppercase font-bold text-sky-600 dark:text-sky-400 block mb-0.5">Lời thoại bài nghe</span>
-                    <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-xs">
-                      {q.listening_script}
+                  <!-- Question Text or Listening Script -->
+                  {#if q.text && !q.text.startsWith('Câu hỏi nghe số')}
+                    <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-sm my-1">
+                      {q.text}
                     </p>
-                    {#if q.listening_pinyin}
-                      <p class="text-[11px] text-sky-600/80 dark:text-sky-400/80 font-medium">
-                        {q.listening_pinyin}
+                  {/if}
+
+                  {#if q.listening_script}
+                    <div class="p-2 rounded-xl bg-sky-50/80 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/40 my-1.5">
+                      <span class="text-[10px] uppercase font-bold text-sky-600 dark:text-sky-400 block mb-0.5">Lời thoại bài nghe</span>
+                      <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-xs">
+                        {q.listening_script}
                       </p>
-                    {/if}
-                  </div>
-                {/if}
+                      {#if q.listening_pinyin}
+                        <p class="text-[11px] text-sky-600/80 dark:text-sky-400/80 font-medium">
+                          {q.listening_pinyin}
+                        </p>
+                      {/if}
+                    </div>
+                  {/if}
 
-                <!-- Options if any -->
-                {#if q.options && q.options.length > 0}
-                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5 mt-2">
-                    {#each q.options as opt}
-                      <div class="px-2.5 py-1.5 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] font-semibold text-slate-700 dark:text-[#C4C7C5] text-[11px] flex items-center gap-1">
-                        <span>{opt}</span>
-                      </div>
-                    {/each}
-                  </div>
-                {/if}
+                  <!-- Options if any -->
+                  {#if q.options && q.options.length > 0}
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5 mt-2">
+                      {#each q.options as opt}
+                        <div class="px-2.5 py-1.5 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] font-semibold text-slate-700 dark:text-[#C4C7C5] text-[11px] flex items-center gap-1">
+                          <span>{opt}</span>
+                        </div>
+                      {/each}
+                    </div>
+                  {/if}
+                </div>
+              {/each}
+            {:else}
+              <div class="py-12 text-center text-xs text-slate-400">
+                Đang tải dữ liệu câu hỏi của đề thi...
               </div>
-            {/each}
-          {:else}
-            <div class="py-12 text-center text-xs text-slate-400">
-              Đang tải dữ liệu câu hỏi của đề thi...
-            </div>
-          {/if}
+            {/if}
+          </div>
         {/if}
-      </div>
-
-      <!-- Footer Action -->
-      <div class="p-3 border-t border-slate-100 dark:border-[#282A2C] flex items-center justify-between shrink-0 bg-white dark:bg-[#1E1E1E]">
-        <button
-          type="button"
-          onclick={() => (previewExam = null)}
-          class="px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-xs font-bold text-slate-600 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-neutral-800 transition-colors cursor-pointer"
-        >
-          Đóng
-        </button>
-        <button
-          type="button"
-          onclick={() => {
-            const e = previewExam;
-            previewExam = null;
-            if (e) handleStartExam(e);
-          }}
-          class="px-5 py-2 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-black flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
-        >
-          <Play weight="bold" class="w-3.5 h-3.5" />
-          <span>Bắt đầu thi ngay</span>
-        </button>
       </div>
     </div>
   </div>
