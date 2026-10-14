@@ -18,9 +18,16 @@ const STORAGE_KEY = 'hsk2_exam_history_v1';
 class ExamHistoryState {
   records = $state<ExamHistoryRecord[]>([]);
   isHistoryModalOpen = $state(false);
+  filterExamCode = $state<string | null>(null);
 
   get completedExamsCount(): number {
-    return new Set(this.records.map((r) => r.examCode)).size;
+    return new Set(this.records.map((r) => r.examCode.toUpperCase())).size;
+  }
+
+  get filteredRecords(): ExamHistoryRecord[] {
+    if (!this.filterExamCode) return this.records;
+    const target = this.filterExamCode.toUpperCase();
+    return this.records.filter((r) => r.examCode.toUpperCase() === target);
   }
 
   constructor() {
@@ -36,10 +43,22 @@ class ExamHistoryState {
     }
   }
 
+  openHistory(examCode?: string | null) {
+    this.filterExamCode = examCode ? examCode.toUpperCase() : null;
+    this.isHistoryModalOpen = true;
+  }
+
+  closeHistory() {
+    this.isHistoryModalOpen = false;
+    this.filterExamCode = null;
+  }
+
   saveRecord(record: Omit<ExamHistoryRecord, 'id' | 'completedAt'>) {
+    const cleanCode = record.examCode.toUpperCase();
     const newRecord: ExamHistoryRecord = {
       ...record,
-      id: `${record.examCode}-${Date.now()}`,
+      examCode: cleanCode,
+      id: `${cleanCode}-${Date.now()}`,
       completedAt: new Date().toISOString()
     };
 
@@ -55,17 +74,27 @@ class ExamHistoryState {
   }
 
   getBestScore(examCode: string): number | null {
-    const list = this.records.filter((r) => r.examCode === examCode);
+    const target = examCode.toUpperCase();
+    const list = this.records.filter((r) => r.examCode.toUpperCase() === target);
     if (list.length === 0) return null;
     return Math.max(...list.map((r) => r.scoreTotal));
   }
 
+  getLatestScore(examCode: string): number | null {
+    const target = examCode.toUpperCase();
+    const list = this.records.filter((r) => r.examCode.toUpperCase() === target);
+    if (list.length === 0) return null;
+    return list[0].scoreTotal;
+  }
+
   getAttemptsCount(examCode: string): number {
-    return this.records.filter((r) => r.examCode === examCode).length;
+    const target = examCode.toUpperCase();
+    return this.records.filter((r) => r.examCode.toUpperCase() === target).length;
   }
 
   clearHistory() {
     this.records = [];
+    this.filterExamCode = null;
     if (typeof window !== 'undefined') {
       try {
         localStorage.removeItem(STORAGE_KEY);

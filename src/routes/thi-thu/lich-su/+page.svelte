@@ -45,10 +45,7 @@
 
   function handleClearHistory() {
     if (confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử các lần thi thử không?')) {
-      examHistoryState.records = [];
-      if (typeof window !== 'undefined') {
-        localStorage.removeItem('hsk2_exam_history_v1');
-      }
+      examHistoryState.clearHistory();
     }
   }
 </script>

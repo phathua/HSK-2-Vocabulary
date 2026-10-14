@@ -84,7 +84,7 @@
           if (timeRemainingSeconds > 0) {
             timeRemainingSeconds -= 1;
           } else {
-            handleSubmitExam();
+            handleConfirmSubmit();
           }
         }
       }
@@ -144,7 +144,17 @@
 
   // Thống kê kết quả
   const scoreResults = $derived.by(() => {
-    if (!exam) return { totalCorrect: 0, listeningCorrect: 0, readingCorrect: 0, correctMap: {} };
+    if (!exam) {
+      return {
+        totalCorrect: 0,
+        listeningCorrect: 0,
+        readingCorrect: 0,
+        listeningScore: 0,
+        readingScore: 0,
+        totalScore: 0,
+        correctMap: {}
+      };
+    }
     let lCorrect = 0;
     let rCorrect = 0;
     const correctMap: Record<number, boolean> = {};
@@ -201,6 +211,20 @@
     showConfirmSubmit = false;
     isSubmitted = true;
     showResultModal = true;
+
+    if (exam) {
+      examHistoryState.saveRecord({
+        examCode: (exam.exam_code || examId || '').toUpperCase(),
+        title: exam.title || exam.exam_code || examId || 'Đề Thi HSK 2',
+        scoreTotal: scoreResults.totalScore,
+        listeningScore: scoreResults.listeningScore,
+        readingScore: scoreResults.readingScore,
+        listeningCorrect: scoreResults.listeningCorrect,
+        readingCorrect: scoreResults.readingCorrect,
+        totalQuestions: exam.total_questions || 60,
+        isPassed: scoreResults.totalScore >= 120
+      });
+    }
   }
 
   function handleRetry() {

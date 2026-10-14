@@ -4,6 +4,8 @@
   import XCircle from 'phosphor-svelte/lib/XCircle';
   import ArrowsClockwise from 'phosphor-svelte/lib/ArrowsClockwise';
   import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
+  import Clock from 'phosphor-svelte/lib/Clock';
+  import { examHistoryState } from '#lib/state/examHistoryState.svelte';
 
   interface Props {
     title: string;
@@ -105,5 +107,18 @@
         <span>Làm lại đề</span>
       </button>
     </div>
+
+    <!-- Nút xem lịch sử đề này -->
+    <button
+      type="button"
+      onclick={() => {
+        onClose();
+        examHistoryState.openHistory(examCode);
+      }}
+      class="mt-3.5 text-[11px] font-bold text-slate-500 hover:text-slate-800 dark:text-neutral-400 dark:hover:text-neutral-200 hover:underline flex items-center justify-center gap-1.5 mx-auto cursor-pointer transition-colors"
+    >
+      <Clock weight="bold" class="w-3.5 h-3.5" />
+      <span>Xem lịch sử làm bài đề {examCode}</span>
+    </button>
   </div>
 </div>

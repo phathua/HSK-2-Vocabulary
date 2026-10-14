@@ -11,7 +11,7 @@
   import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
 
   function closeModal() {
-    examHistoryState.isHistoryModalOpen = false;
+    examHistoryState.closeHistory();
   }
 
   function handleKeyDown(e: KeyboardEvent) {
@@ -61,46 +61,95 @@
     >
       <!-- Modal Header -->
       <div class="flex items-center justify-between px-5 py-4 border-b border-slate-100 dark:border-[#282A2C] shrink-0">
-        <div class="flex items-center gap-2.5">
+        <div class="flex items-center gap-2.5 min-w-0">
           <div class="w-9 h-9 rounded-xl bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
             <Trophy weight="duotone" class="w-5 h-5" />
           </div>
-          <div>
-            <h2 class="text-sm sm:text-base font-black text-slate-900 dark:text-[#E3E3E3] leading-tight">
-              Lịch sử làm bài thi
-            </h2>
-            <p class="text-[11px] text-slate-500 dark:text-[#8E918F] mt-0.5">
-              Đã hoàn thành {examHistoryState.completedExamsCount}/33 đề thi thử
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <h2 class="text-sm sm:text-base font-black text-slate-900 dark:text-[#E3E3E3] leading-tight">
+                Lịch sử làm bài thi
+              </h2>
+              {#if examHistoryState.filterExamCode}
+                <span class="px-2 py-0.5 rounded-lg bg-orange-100 dark:bg-orange-950/70 text-orange-700 dark:text-orange-300 font-mono text-xs font-bold shrink-0">
+                  {examHistoryState.filterExamCode}
+                </span>
+              {/if}
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-[#8E918F] mt-0.5 truncate">
+              {#if examHistoryState.filterExamCode}
+                Đã thi {examHistoryState.filteredRecords.length} lần
+                {#if examHistoryState.getBestScore(examHistoryState.filterExamCode) !== null}
+                  • Cao nhất: <b class="text-emerald-600 dark:text-emerald-400">{examHistoryState.getBestScore(examHistoryState.filterExamCode)}/200đ</b>
+                {/if}
+              {:else}
+                Đã hoàn thành {examHistoryState.completedExamsCount}/33 đề thi thử ({examHistoryState.records.length} lượt thi)
+              {/if}
             </p>
           </div>
         </div>
 
-        <button
-          type="button"
-          onclick={closeModal}
-          class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5] flex items-center justify-center transition-colors cursor-pointer"
-          aria-label="Đóng"
-        >
-          <X weight="bold" class="w-4 h-4" />
-        </button>
+        <div class="flex items-center gap-1.5 shrink-0">
+          {#if examHistoryState.filterExamCode}
+            <button
+              type="button"
+              onclick={() => (examHistoryState.filterExamCode = null)}
+              class="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] text-[11px] font-bold text-slate-600 dark:text-[#C4C7C5] transition-colors cursor-pointer"
+              title="Xem lịch sử toàn bộ các đề thi"
+            >
+              Xem tất cả
+            </button>
+          {/if}
+
+          <button
+            type="button"
+            onclick={closeModal}
+            class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-[#282A2C] hover:bg-slate-200 dark:hover:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5] flex items-center justify-center transition-colors cursor-pointer"
+            aria-label="Đóng"
+          >
+            <X weight="bold" class="w-4 h-4" />
+          </button>
+        </div>
       </div>
 
       <!-- History List Body -->
       <div class="flex-1 overflow-y-auto p-4 space-y-2.5">
-        {#if examHistoryState.records.length === 0}
+        {#if examHistoryState.filteredRecords.length === 0}
           <div class="py-12 flex flex-col items-center justify-center text-center">
             <div class="w-16 h-16 rounded-2xl bg-orange-50 dark:bg-orange-950/40 text-orange-500 flex items-center justify-center mb-3">
               <Clock weight="duotone" class="w-8 h-8" />
             </div>
             <p class="text-sm font-bold text-slate-800 dark:text-[#E3E3E3]">
-              Chưa có lịch sử làm bài
+              {#if examHistoryState.filterExamCode}
+                Chưa có lịch sử làm bài cho đề {examHistoryState.filterExamCode}
+              {:else}
+                Chưa có lịch sử làm bài
+              {/if}
             </p>
             <p class="text-xs text-slate-400 dark:text-[#8E918F] mt-1 max-w-xs">
-              Hãy chọn một đề thi trong danh sách để bắt đầu làm bài thi thử HSK 2 ngay hôm nay!
+              {#if examHistoryState.filterExamCode}
+                Bạn chưa từng nộp bài cho mã đề này. Hãy bắt đầu luyện tập hoặc thi thử ngay!
+              {:else}
+                Hãy chọn một đề thi trong danh sách để bắt đầu làm bài thi thử HSK 2 ngay hôm nay!
+              {/if}
             </p>
+            {#if examHistoryState.filterExamCode}
+              <button
+                type="button"
+                onclick={() => {
+                  const code = examHistoryState.filterExamCode;
+                  closeModal();
+                  goto(`/thi-thu/${code}`);
+                }}
+                class="mt-4 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center gap-1.5 transition-all cursor-pointer shadow-xs active:scale-95"
+              >
+                <Play weight="bold" class="w-3.5 h-3.5" />
+                <span>Bắt đầu thi đề {examHistoryState.filterExamCode}</span>
+              </button>
+            {/if}
           </div>
         {:else}
-          {#each examHistoryState.records as record (record.id)}
+          {#each examHistoryState.filteredRecords as record (record.id)}
             <div
               class="bg-slate-50 dark:bg-[#202124] border border-slate-200/80 dark:border-[#282A2C] rounded-2xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 transition-colors"
             >

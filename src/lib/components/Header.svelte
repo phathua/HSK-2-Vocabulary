@@ -234,7 +234,7 @@
     {#if isExamListPage}
       <button
         type="button"
-        onclick={() => (examHistoryState.isHistoryModalOpen = true)}
+        onclick={() => examHistoryState.openHistory(null)}
         class="w-9 h-9 rounded-xl border border-orange-200 dark:border-orange-900/60 bg-orange-50 dark:bg-orange-950/40 hover:bg-orange-100 dark:hover:bg-orange-900/60 flex items-center justify-center text-orange-600 dark:text-orange-400 transition-colors cursor-pointer active:scale-95 shadow-2xs"
         title="Lịch sử làm bài thi HSK 2"
         aria-label="Lịch sử làm bài thi"

@@ -244,13 +244,26 @@
 
         <!-- Footer Card: Điểm cao nhất & Các nút Thao tác (Xem trước + Làm đề) -->
         <div class="mt-2.5 pt-2 border-t border-slate-100 dark:border-[#282A2C] flex items-center justify-between gap-2">
-          <div class="text-[11px]">
+          <div class="text-[11px] min-w-0">
             {#if examHistoryState.getBestScore(exam.code) !== null}
-              <span class="font-bold text-emerald-600 dark:text-emerald-400">
-                Đạt: {examHistoryState.getBestScore(exam.code)}/200đ
-              </span>
+              {@const bestScore = examHistoryState.getBestScore(exam.code)!}
+              {@const attempts = examHistoryState.getAttemptsCount(exam.code)}
+              <button
+                type="button"
+                onclick={() => examHistoryState.openHistory(exam.code)}
+                class="inline-flex items-center gap-1.5 font-bold {bestScore >= 120 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'} hover:opacity-80 transition-opacity cursor-pointer select-none text-left"
+                title="Bấm để xem lịch sử làm bài đề {exam.code} ({attempts} lần thi)"
+              >
+                <Clock class="w-3.5 h-3.5 shrink-0" />
+                <span class="hover:underline underline-offset-2">
+                  {bestScore >= 120 ? 'Đạt' : 'Điểm'}: {bestScore}/200đ
+                </span>
+                <span class="text-[10px] px-1.5 py-0.2 rounded-md bg-slate-100 dark:bg-neutral-800 text-slate-500 dark:text-neutral-400 font-semibold no-underline shrink-0">
+                  {attempts} lần
+                </span>
+              </button>
             {:else}
-              <span class="text-slate-400 dark:text-neutral-500">
+              <span class="text-slate-400 dark:text-neutral-500 select-none">
                 Chưa làm
               </span>
             {/if}
