@@ -15,6 +15,7 @@
     question: QuestionItem;
     selectedAnswer?: string;
     answers?: Record<number, string>;
+    correctAnswers?: Record<number, string>;
     isFlagged?: boolean;
     mode: ExamMode;
     isCheckedInPractice?: boolean;
@@ -29,6 +30,7 @@
     question,
     selectedAnswer = '',
     answers = {},
+    correctAnswers = {},
     isFlagged = false,
     mode,
     isCheckedInPractice = false,
@@ -55,8 +57,21 @@
     if (!group) return false;
     const [start, end] = group;
     for (let q = start; q <= end; q++) {
-      if (q !== question.question_no && answers[q] === optVal) {
-        return true;
+      if (q === question.question_no) continue;
+      // Chỉ xét những câu trong nhóm mà thí sinh đã trả lời
+      if (answers[q]) {
+        if (isExamSubmitted) {
+          // Khi đã nộp bài (đã lộ đáp án): xám chữ cái là đáp án ĐÚNG của câu đã làm
+          const correctAns = correctAnswers?.[q];
+          if (correctAns && correctAns === optVal) {
+            return true;
+          }
+        } else {
+          // Khi đang làm bài thi thật (chưa nộp, chưa lộ đáp án): xám chữ cái thí sinh ĐÃ CHỌN ở câu q
+          if (answers[q] === optVal) {
+            return true;
+          }
+        }
       }
     }
     return false;

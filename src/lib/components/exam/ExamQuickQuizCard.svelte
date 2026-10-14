@@ -15,6 +15,8 @@
   import SquaresFour from 'phosphor-svelte/lib/SquaresFour';
   import ListDashes from 'phosphor-svelte/lib/ListDashes';
   import SmartImage from '../SmartImage.svelte';
+  import AnswerFeedbackDrawer from '../AnswerFeedbackDrawer.svelte';
+  import { appState } from '#lib/state/appState.svelte';
   import type { QuestionItem } from '#lib/types/exam';
   import { getExamImageUrl } from '#lib/utils/examAssets';
   import { parseOptionItem } from '#lib/utils/examOptionParser';
@@ -27,6 +29,7 @@
     totalQuestions: number;
     selectedAnswer?: string;
     answers?: Record<number, string>;
+    correctAnswers?: Record<number, string>;
     isFlagged?: boolean;
     timeRemainingSeconds?: number;
     totalCorrect?: number;
@@ -45,6 +48,7 @@
     totalQuestions,
     selectedAnswer = '',
     answers = {},
+    correctAnswers = {},
     isFlagged = false,
     timeRemainingSeconds = 3300,
     totalCorrect = 0,
@@ -73,8 +77,14 @@
     if (!group) return false;
     const [start, end] = group;
     for (let q = start; q <= end; q++) {
-      if (q !== question.question_no && answers[q] === optVal) {
-        return true;
+      if (q === question.question_no) continue;
+      // Ở chế độ thi nhanh: câu q đã trả lời thì đã lộ đáp án,
+      // nên chỉ xám đáp án ĐÚNG của câu q, không xám chữ mà người dùng chọn sai
+      if (answers[q]) {
+        const correctAns = correctAnswers?.[q] || (q === question.question_no ? question.answer : undefined);
+        if (correctAns && correctAns === optVal) {
+          return true;
+        }
       }
     }
     return false;
@@ -284,6 +294,20 @@
   const isCorrect = $derived(isAnswered && selectedAnswer === question.answer);
   const isLastQuestion = $derived(questionIndex >= totalQuestions - 1);
 
+  const correctChoiceText = $derived.by(() => {
+    if (isTrueFalse || isReadingTrueFalse) {
+      return question.answer === '√' ? 'Đúng (√)' : 'Sai (×)';
+    }
+    const opt = optionChoices.find((o) => o.value === question.answer);
+    if (opt) {
+      if (opt.label && opt.label !== opt.value) {
+        return `${opt.value}. ${opt.label}`;
+      }
+      return opt.value;
+    }
+    return question.answer || '';
+  });
+
   function formatTime(secs: number): string {
     const mins = Math.floor(secs / 60);
     const s = secs % 60;
@@ -297,6 +321,7 @@
       return;
     }
     if (isImageZoomed) return;
+    if (appState.enableFeedbackDrawer && isAnswered) return;
     if (e.key === 'ArrowRight' || e.key === 'Enter') {
       if (isLastQuestion) onSubmitExam();
       else onNextQuestion();
@@ -981,13 +1006,24 @@
     {/if}
   {/if}
 
-    <!-- Nút Câu tiếp theo (Mobile): shrink-0 và fixed height để không bao giờ bị dẹp lép -->
-    <div class="shrink-0 h-11 sm:h-12 w-full">
+    <!-- Nút Điều Hướng "Câu trước" & "Câu tiếp theo" (Mobile) -->
+    <div class="shrink-0 h-11 sm:h-12 w-full flex items-center gap-2">
+      <button
+        type="button"
+        onclick={onPrevQuestion}
+        disabled={questionIndex <= 0}
+        class="h-full px-3.5 rounded-2xl border border-slate-200 dark:border-[#282A2C] bg-white dark:bg-[#1B1B1B] text-slate-700 dark:text-slate-300 font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-50 dark:hover:bg-[#282A2C] transition-all flex items-center justify-center cursor-pointer shadow-xs active:scale-95"
+        title="Câu trước"
+        aria-label="Câu trước"
+      >
+        <ArrowLeft weight="bold" class="w-4 h-4" />
+      </button>
+
       {#if isLastQuestion}
         <button
           type="button"
           onclick={onSubmitExam}
-          class="w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white shadow-md cursor-pointer"
+          class="flex-1 h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white shadow-md cursor-pointer"
         >
           <Trophy weight="bold" class="w-4 h-4" />
           <span>Xem kết quả bài thi</span>
@@ -996,7 +1032,7 @@
         <button
           type="button"
           onclick={onNextQuestion}
-          class="w-full h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-orange-600 hover:bg-orange-700 active:scale-95 text-white shadow-md cursor-pointer"
+          class="flex-1 h-full font-black text-sm rounded-2xl flex items-center justify-center gap-1.5 transition-all select-none bg-orange-600 hover:bg-orange-700 active:scale-95 text-white shadow-md cursor-pointer"
         >
           <span>Câu tiếp theo</span>
           <ArrowRight weight="bold" class="w-4 h-4" />
@@ -1026,6 +1062,25 @@
     </div>
   </footer>
 </div>
+
+<!-- Drawer Phản Hồi Đáp Án Mascot Gấu Trúc (khi bật trong Cài Đặt) -->
+{#if appState.enableFeedbackDrawer && isAnswered}
+  <AnswerFeedbackDrawer
+    {isAnswered}
+    {isCorrect}
+    isWrong={isAnswered && !isCorrect}
+    correctAnswerText={correctChoiceText}
+    extraInfoText={question.explanation || ''}
+    onNext={() => {
+      if (isLastQuestion) {
+        onSubmitExam();
+      } else {
+        onNextQuestion();
+      }
+    }}
+    nextButtonText={isLastQuestion ? 'Xem kết quả bài thi' : 'Câu tiếp theo'}
+  />
+{/if}
 
 <!-- Modal Phóng to ảnh (Hỗ trợ cả question.board_image và question.image) -->
 {#if isImageZoomed && (question.board_image || question.image)}

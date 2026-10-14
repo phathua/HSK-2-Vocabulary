@@ -130,6 +130,18 @@
 
   const totalAnswered = $derived(Object.keys(answers).length);
 
+  // Bản đồ đáp án chuẩn của toàn bộ đề thi phục vụ cơ chế xám câu đã dùng
+  const correctAnswersMap = $derived.by(() => {
+    if (!exam?.questions) return {};
+    const map: Record<number, string> = {};
+    for (const q of exam.questions) {
+      if (q.answer) {
+        map[q.question_no] = q.answer;
+      }
+    }
+    return map;
+  });
+
   // Thống kê kết quả
   const scoreResults = $derived.by(() => {
     if (!exam) return { totalCorrect: 0, listeningCorrect: 0, readingCorrect: 0, correctMap: {} };
@@ -352,6 +364,7 @@
               totalQuestions={exam.total_questions}
               selectedAnswer={answers[currentQ.question_no]}
               {answers}
+              correctAnswers={correctAnswersMap}
               isFlagged={flagged[currentQ.question_no]}
               {timeRemainingSeconds}
               totalCorrect={scoreResults.totalCorrect}
@@ -448,6 +461,7 @@
                 question={q}
                 selectedAnswer={answers[q.question_no]}
                 {answers}
+                correctAnswers={correctAnswersMap}
                 isFlagged={flagged[q.question_no]}
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
@@ -476,6 +490,7 @@
                 question={q}
                 selectedAnswer={answers[q.question_no]}
                 {answers}
+                correctAnswers={correctAnswersMap}
                 isFlagged={flagged[q.question_no]}
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}

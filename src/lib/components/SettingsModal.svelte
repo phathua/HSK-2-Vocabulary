@@ -535,7 +535,7 @@
                   </div>
                   <div>
                     <span class="font-extrabold text-xs sm:text-sm text-slate-800 dark:text-[#E3E3E3] block leading-tight">Gấu trúc chúc mừng</span>
-                    <span class="text-[11px] text-slate-500 dark:text-[#8E918F] block mt-0.5">Hiện hoạt hình cổ vũ sau mỗi câu trả lời</span>
+                    <span class="text-[11px] text-slate-500 dark:text-[#8E918F] block mt-0.5">Hiện hoạt hình cổ vũ sau mỗi câu trả lời (Ôn tập & Thi nhanh)</span>
                   </div>
                 </div>
 
