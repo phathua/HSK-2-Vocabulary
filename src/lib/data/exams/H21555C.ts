@@ -25,7 +25,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_01.webp"
+      "image": "images/q_01.webp",
+      "pinyin": "C â u   h ỏ i   s ố   1"
     },
     {
       "exam_code": "H21555C",
@@ -42,7 +43,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_02.webp"
+      "image": "images/q_02.webp",
+      "pinyin": "C â u   h ỏ i   s ố   2"
     },
     {
       "exam_code": "H21555C",
@@ -59,7 +61,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_03.webp"
+      "image": "images/q_03.webp",
+      "pinyin": "C â u   h ỏ i   s ố   3"
     },
     {
       "exam_code": "H21555C",
@@ -76,7 +79,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_04.webp"
+      "image": "images/q_04.webp",
+      "pinyin": "C â u   h ỏ i   s ố   4"
     },
     {
       "exam_code": "H21555C",
@@ -93,7 +97,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_05.webp"
+      "image": "images/q_05.webp",
+      "pinyin": "C â u   h ỏ i   s ố   5"
     },
     {
       "exam_code": "H21555C",
@@ -110,7 +115,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_06.webp"
+      "image": "images/q_06.webp",
+      "pinyin": "C â u   h ỏ i   s ố   6"
     },
     {
       "exam_code": "H21555C",
@@ -127,7 +133,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_07.webp"
+      "image": "images/q_07.webp",
+      "pinyin": "C â u   h ỏ i   s ố   7"
     },
     {
       "exam_code": "H21555C",
@@ -144,7 +151,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_08.webp"
+      "image": "images/q_08.webp",
+      "pinyin": "C â u   h ỏ i   s ố   8"
     },
     {
       "exam_code": "H21555C",
@@ -161,7 +169,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_09.webp"
+      "image": "images/q_09.webp",
+      "pinyin": "C â u   h ỏ i   s ố   9"
     },
     {
       "exam_code": "H21555C",
@@ -178,7 +187,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_10.webp"
+      "image": "images/q_10.webp",
+      "pinyin": "C â u   h ỏ i   s ố   1 0"
     },
     {
       "exam_code": "H21555C",
@@ -192,10 +202,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Xià yǔ le, wǒmen huíqu ba.\nNǚ: Méi guānxi, yǔ bú dà.",
       "explanation": "Bài nghe nhắc đến từ khóa 'xiàyǔ' (Trời mưa). Bức tranh A thể hiện hai người đang che ô đi trong mưa nên đáp án khớp là A.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
     {
       "exam_code": "H21555C",
@@ -209,10 +220,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zhège zì shì \"tīng\" hái shì \"chàng\" zì?\nNán: Nǐ zài kànkan, shì zhège zì.",
       "explanation": "Bài nghe nhắc đến việc xem chữ Hán 'tīng' và 'chàng'. Bức tranh F thể hiện hình ảnh tập viết chữ Hán nên chọn F.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
     {
       "exam_code": "H21555C",
@@ -226,10 +238,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ yào qù nǎr? Yí ge yuè hòu cái huílái ma?\nNǚ: Bù, wǒ qù jǐ tiān jiù huílái.",
       "explanation": "Hội thoại đề cập đến việc đi xa vài ngày với hành lý/vali. Bức tranh C mô tả hình ảnh người mang vali đi du lịch/công tác nên chọn C.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
     {
       "exam_code": "H21555C",
@@ -243,10 +256,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Bié shuōhuà, nǚ'ér zhèngzài shuìjiào ne.\nNán: Hǎo, nà wǒmen dào wàimiàn qù ba.",
       "explanation": "Từ khóa 'shuìjiào' (Đang ngủ). Bức tranh E thể hiện bé gái đang nằm ngủ trên giường nên chọn đáp án E.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
     {
       "exam_code": "H21555C",
@@ -260,10 +274,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ kàn zhège xīguā zěnmeyàng?\nNǚ: Hěn dà, dànshì bù zhīdào tián bù tián.",
       "explanation": "Từ khóa 'xīguā' (Dưa hấu). Bức tranh B thể hiện quả dưa hấu lớn nên chọn đáp án B.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
     {
       "exam_code": "H21555C",
@@ -277,10 +292,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Qǐngwèn, Zhāng jīnglǐ zài ma?\nNán: Tā zài kāihuì, qǐng shāo děng.",
       "explanation": "Từ khóa 'kāihuì' (Đang họp). Bức tranh E mô tả khung cảnh cuộc họp văn phòng nên đáp án đúng là E.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
     {
       "exam_code": "H21555C",
@@ -294,10 +310,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Zhè jǐ běn shū nǐ dōu kànguo ma?\nNán: Kànguo, fēicháng yǒu yìsi.",
       "explanation": "Từ khóa 'shū' (Sách). Bức tranh D mô tả giá sách và các cuốn sách nên đáp án đúng là D.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
     {
       "exam_code": "H21555C",
@@ -311,10 +328,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ měitiān zěnme qù shàngbān?\nNǚ: Zuò dìtiě, hěn kuài.",
       "explanation": "Từ khóa 'zuòdìtiě' (Đi tàu điện ngầm). Bức tranh B mô tả tau điện ngầm nên đáp án là B.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
     {
       "exam_code": "H21555C",
@@ -328,10 +346,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nín chī bǎo le ma? Hái xūyào diǎnr shénme?\nNán: Bú yào le, xièxie.",
       "explanation": "Từ khóa 'chībǎo le' (Ăn no rồi) và phục vụ bàn trong nhà hàng. Bức tranh A thể hiện nhân viên nhà hàng phục vụ món ăn nên chọn A.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
     {
       "exam_code": "H21555C",
@@ -345,10 +364,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ xuéguo \"yī\" zì, nà \"èr\" zì zěnme xiě?\nNǚ: Wǒ zhīdào, zhèyàng xiě, duì ma?",
       "explanation": "Hội thoại học viết chữ 'yī' và 'èr'. Bức tranh C mô tả bé gái đang tập viết chữ Hán nên đáp án là C.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
     {
       "exam_code": "H21555C",
@@ -365,7 +385,8 @@ export const examData: ExamDetail = {
         "A 去年8月 (qùnián bā yuè)",
         "B 今年8月 (jīnnián bā yuè)",
         "C 上个星期 (shàng ge xīngqī)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 1"
     },
     {
       "exam_code": "H21555C",
@@ -382,7 +403,8 @@ export const examData: ExamDetail = {
         "A 茶 (chá)",
         "B 水 (shuǐ)",
         "C 牛奶 (niúnǎi)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 2"
     },
     {
       "exam_code": "H21555C",
@@ -399,7 +421,8 @@ export const examData: ExamDetail = {
         "A 哥哥 (gēge)",
         "B 弟弟 (dìdi)",
         "C 姐姐 (jiějie)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 3"
     },
     {
       "exam_code": "H21555C",
@@ -416,7 +439,8 @@ export const examData: ExamDetail = {
         "A 坐出租车 (zuò chūzūchē)",
         "B 走路 (zǒulù)",
         "C 坐飞机 (zuò fēijī)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 4"
     },
     {
       "exam_code": "H21555C",
@@ -433,7 +457,8 @@ export const examData: ExamDetail = {
         "A 跑步 (pǎobù)",
         "B 洗澡 (xǐzǎo)",
         "C 看电影 (kàn diànyǐng)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 5"
     },
     {
       "exam_code": "H21555C",
@@ -450,7 +475,8 @@ export const examData: ExamDetail = {
         "A 看电视 (kàn diànshì)",
         "B 打球 (dǎ qiú)",
         "C 去旅游 (qù lǚyóu)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 6"
     },
     {
       "exam_code": "H21555C",
@@ -467,7 +493,8 @@ export const examData: ExamDetail = {
         "A 白色的 (báisè de)",
         "B 黑色 (hēisè)",
         "C 红色的 (hóngsè de)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 7"
     },
     {
       "exam_code": "H21555C",
@@ -484,7 +511,8 @@ export const examData: ExamDetail = {
         "A 床上 (chuáng shàng)",
         "B 桌子上 (zhuōzi shàng)",
         "C 椅子上 (yǐzi shàng)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 8"
     },
     {
       "exam_code": "H21555C",
@@ -501,7 +529,8 @@ export const examData: ExamDetail = {
         "A 休息 (xiūxi)",
         "B 吃药 (chī yào)",
         "C 喝水 (hē shuǐ)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 9"
     },
     {
       "exam_code": "H21555C",
@@ -518,7 +547,8 @@ export const examData: ExamDetail = {
         "A 太累了 (tài lèi le)",
         "B 生病了 (shēngbìng le)",
         "C 公司有事 (gōngsī yǒu shì)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 0"
     },
     {
       "exam_code": "H21555C",
@@ -535,7 +565,8 @@ export const examData: ExamDetail = {
         "A 名字 (míngzi)",
         "B 时间 (shíjiān)",
         "C 房间号 (fángjiānhào)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 1"
     },
     {
       "exam_code": "H21555C",
@@ -552,7 +583,8 @@ export const examData: ExamDetail = {
         "A 生病了 (shēngbìng le)",
         "B 没水了 (méi shuǐ le)",
         "C 来晚了 (láiwǎn le)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 2"
     },
     {
       "exam_code": "H21555C",
@@ -569,7 +601,8 @@ export const examData: ExamDetail = {
         "A 椅子 (yǐzi)",
         "B 铅笔 (qiānbǐ)",
         "C 汉语书 (Hànyǔ shū)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 3"
     },
     {
       "exam_code": "H21555C",
@@ -586,7 +619,8 @@ export const examData: ExamDetail = {
         "A 26号 (èrshíliù hào)",
         "B 25号 (èrshíwǔ hào)",
         "C 2号 (èr hào)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 4"
     },
     {
       "exam_code": "H21555C",
@@ -603,7 +637,8 @@ export const examData: ExamDetail = {
         "A 要买报纸 (yào mǎi bàozhǐ)",
         "B 要去上课 (yào qù shàngkè)",
         "C 要去唱歌 (yào qù chànggē)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 5"
     },
     {
       "exam_code": "H21555C",
@@ -621,12 +656,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\"",
       "options": [
-        "A Tranh A",
-        "B Tranh B",
-        "C Tranh C",
-        "D Tranh D",
-        "E Tranh E",
-        "F Tranh F"
+        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
+        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
+        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
+        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
       ]
     },
     {
@@ -645,12 +680,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Xià yǔ le, chūmén yào dài sǎn.",
       "options": [
-        "A Tranh A",
-        "B Tranh B",
-        "C Tranh C",
-        "D Tranh D",
-        "E Tranh E",
-        "F Tranh F"
+        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
+        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
+        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
+        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
       ]
     },
     {
@@ -669,12 +704,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā měitiān zǎochen dōu qù gōngyuán pǎobù.",
       "options": [
-        "A Tranh A",
-        "B Tranh B",
-        "C Tranh C",
-        "D Tranh D",
-        "E Tranh E",
-        "F Tranh F"
+        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
+        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
+        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
+        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
       ]
     },
     {
@@ -693,12 +728,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhuōzi shàng yǒu yì bēi rè chá.",
       "options": [
-        "A Tranh A",
-        "B Tranh B",
-        "C Tranh C",
-        "D Tranh D",
-        "E Tranh E",
-        "F Tranh F"
+        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
+        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
+        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
+        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
       ]
     },
     {
@@ -717,12 +752,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tāmen zhèngzài dǎ diànhuà ne.",
       "options": [
-        "A Tranh A",
-        "B Tranh B",
-        "C Tranh C",
-        "D Tranh D",
-        "E Tranh E",
-        "F Tranh F"
+        "A 他每天早晨都去公园跑步。 (Tā měitiān zǎochen dōu qù gōngyuán pǎobù.)",
+        "B 桌子上有一杯热茶。 (Zhuōzi shàng yǒu yì bēi rè chá.)",
+        "C 他们正在打电话呢。 (Tāmen zhèngzài dǎ diànhuà ne.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 老师笑着说：“请大家把书打开。” (Lǎoshī xiàozhe shuō: \"Qǐng dàjiā bǎ shū dǎkāi.\")",
+        "F 下雨了，出门要带伞。 (Xià yǔ le, chūmén yào dài sǎn.)"
       ]
     },
     {
@@ -962,12 +997,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_51.webp",
       "options": [
-        "A 他很忙，你别去找他。",
-        "B 妻子让他每天早上起床后喝一杯水。",
-        "C 哥，你的电脑太慢了。",
-        "D 这个房间 questionnaires / 怎么样？",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 你准备哪天回家？"
+        "A 他很忙，你别去找他。 (tā hěn máng , nǐ bié qù zhǎo tā)",
+        "B 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "C 哥，你的电脑太慢了。 (gē , nǐ de diàn nǎo tài màn le)",
+        "D 这个房间 questionnaires / 怎么样？ (zhè gè fáng jiān   q u e s t i o n n a i r e s   /   zěn me yàng ？) (zhè gè fáng jiān q u e s t i o n n a i r e s / zěn me yàng ? ( z h è g è f á n g j i ā n q u e s t i o n n a i r e s / z ě n m e y à n g ? ))",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 你准备哪天回家？ (nǐ zhǔn bèi nǎ tiān huí jiā ?)"
       ],
       "board_image": null,
       "explanation": "Câu 'Bác sĩ nói như thế tốt cho sức khỏe' ghép nối logic nhất với phát biểu B 'Vợ bảo anh ấy mỗi sáng thức dậy uống một cốc nước'.",
@@ -986,12 +1021,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_52.webp",
       "options": [
-        "A 他很忙，你别去找他。",
-        "B 妻子让他每天早上起床后喝一杯水。",
-        "C 哥，你的电脑太慢了。",
-        "D 这个房间怎么样？",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 你准备哪天回家？"
+        "A 他很忙，你别去找他。 (tā hěn máng , nǐ bié qù zhǎo tā)",
+        "B 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "C 哥，你的电脑太慢了。 (gē , nǐ de diàn nǎo tài màn le)",
+        "D 这个房间怎么样？ (zhè ge fáng jiān zěn me yàng ?)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 你准备哪天回家？ (nǐ zhǔn bèi nǎ tiān huí jiā ?)"
       ],
       "board_image": null,
       "explanation": "Câu trả lời ngày tháng 'Ngày 10 tháng 8...' ghép nối chuẩn xác với câu hỏi F 'Bạn dự định ngày nào về nhà?'.",
@@ -1010,12 +1045,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_53.webp",
       "options": [
-        "A 他很忙，你别去找他。",
-        "B 妻子让他每天早上起床后喝一杯水。",
-        "C 哥，你的电脑太慢了。",
-        "D 这个房间怎么样？",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 你准备哪天回家？"
+        "A 他很忙，你别去找他。 (tā hěn máng , nǐ bié qù zhǎo tā)",
+        "B 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "C 哥，你的电脑太慢了。 (gē , nǐ de diàn nǎo tài màn le)",
+        "D 这个房间怎么样？ (zhè ge fáng jiān zěn me yàng ?)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 你准备哪天回家？ (nǐ zhǔn bèi nǎ tiān huí jiā ?)"
       ],
       "board_image": null,
       "explanation": "Câu 'Thế này đã nhanh hơn mấy hôm trước nhiều rồi' phản hồi lại câu C 'Anh ơi, máy tính của anh chậm quá'.",
@@ -1034,12 +1069,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_54.webp",
       "options": [
-        "A 他很忙，你别去找他。",
-        "B 妻子让他每天早上起床后喝一杯水。",
-        "C 哥，你的电脑太慢了。",
-        "D 这个房间怎么样？",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 你准备哪天回家？"
+        "A 他很忙，你别去找他。 (tā hěn máng , nǐ bié qù zhǎo tā)",
+        "B 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "C 哥，你的电脑太慢了。 (gē , nǐ de diàn nǎo tài màn le)",
+        "D 这个房间怎么样？ (zhè ge fáng jiān zěn me yàng ?)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 你准备哪天回家？ (nǐ zhǔn bèi nǎ tiān huí jiā ?)"
       ],
       "board_image": null,
       "explanation": "Câu băn khoăn về kích thước căn phòng 'Một mình tôi ở liệu có to quá không?' ghép hợp lý với câu hỏi D 'Căn phòng này thế nào?'.",
@@ -1058,12 +1093,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_55.webp",
       "options": [
-        "A 他很忙，你别去找他。",
-        "B 妻子让他每天早上起床后喝一杯水。",
-        "C 哥，你的电脑太慢了。",
-        "D 这个房间怎么样？",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 你准备哪天回家？"
+        "A 他很忙，你别去找他。 (tā hěn máng , nǐ bié qù zhǎo tā)",
+        "B 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "C 哥，你的电脑太慢了。 (gē , nǐ de diàn nǎo tài màn le)",
+        "D 这个房间怎么样？ (zhè ge fáng jiān zěn me yàng ?)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 你准备哪天回家？ (nǐ zhǔn bèi nǎ tiān huí jiā ?)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi tìm người chị 'Chị gái bạn đâu? Tôi muốn hỏi chị ấy mấy câu' ghép nối logic với câu đáp A 'Chị/Anh ấy bận lắm, bạn đừng đi tìm'.",
@@ -1082,11 +1117,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_56.webp",
       "options": [
-        "A 没有，但是天阴了。",
-        "B 这些事，你别告诉妈妈，好吗？",
-        "C 眼睛好多了吧？",
-        "D 你认识李雪的丈夫？",
-        "E 你弟弟还没找到新的工作？"
+        "A 没有，但是天阴了。 (méi yǒu , dàn shì tiān yīn le)",
+        "B 这些事，你别告诉妈妈，好吗？ (zhè xiē shì , nǐ bié gào sù mā ma , hǎo ma ?)",
+        "C 眼睛好多了吧？ (yǎn jīng hǎo duō le ba ?)",
+        "D 你认识李雪的丈夫？ (nǐ rèn shi lǐ xuě de zhàng fu ?)",
+        "E 你弟弟还没找到新的工作？ (nǐ dì di hái méi zhǎo dào xīn de gōng zuò ?)"
       ],
       "board_image": null,
       "explanation": "Câu trả lời 'Vâng, đã uống thuốc rồi, giờ không sao nữa' tương ứng phản hồi cho câu hỏi C 'Mắt đã đỡ hơn nhiều rồi chứ?'.",
@@ -1105,11 +1140,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_57.webp",
       "options": [
-        "A 没有，但是天阴了。",
-        "B 这些事，你别告诉妈妈，好吗？",
-        "C 眼睛好多了吧？",
-        "D 你认识李雪的丈夫？",
-        "E 你弟弟还没找到新的工作？"
+        "A 没有，但是天阴了。 (méi yǒu , dàn shì tiān yīn le)",
+        "B 这些事，你别告诉妈妈，好吗？ (zhè xiē shì , nǐ bié gào sù mā ma , hǎo ma ?)",
+        "C 眼睛好多了吧？ (yǎn jīng hǎo duō le ba ?)",
+        "D 你认识李雪的丈夫？ (nǐ rèn shi lǐ xuě de zhàng fu ?)",
+        "E 你弟弟还没找到新的工作？ (nǐ dì di hái méi zhǎo dào xīn de gōng zuò ?)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi thời tiết 'Bên ngoài tuyết rơi chưa?' ghép nối chính xác với đáp án A 'Chưa, nhưng trời âm u rồi'.",
@@ -1128,11 +1163,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_58.webp",
       "options": [
-        "A 没有，但是天阴了。",
-        "B 这些事，你别告诉妈妈，好吗？",
-        "C 眼睛好多了吧？",
-        "D 你认识李雪的丈夫？",
-        "E 你弟弟还没找到新的工作？"
+        "A 没有，但是天阴了。 (méi yǒu , dàn shì tiān yīn le)",
+        "B 这些事，你别告诉妈妈，好吗？ (zhè xiē shì , nǐ bié gào sù mā ma , hǎo ma ?)",
+        "C 眼睛好多了吧？ (yǎn jīng hǎo duō le ba ?)",
+        "D 你认识李雪的丈夫？ (nǐ rèn shi lǐ xuě de zhàng fu ?)",
+        "E 你弟弟还没找到新的工作？ (nǐ dì di hái méi zhǎo dào xīn de gōng zuò ?)"
       ],
       "board_image": null,
       "explanation": "Câu 'Tôi nghĩ cô ấy biết từ lâu rồi' phản hồi thích hợp cho B 'Mấy chuyện này bạn đừng nói với mẹ nhé, được không?'.",
@@ -1151,11 +1186,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_59.webp",
       "options": [
-        "A 没有，但是天阴了。",
-        "B 这些事，你别告诉妈妈，好吗？",
-        "C 眼睛好多了吧？",
-        "D 你认识李雪的丈夫？",
-        "E 你弟弟还没找到新的工作？"
+        "A 没有，但是天阴了。 (méi yǒu , dàn shì tiān yīn le)",
+        "B 这些事，你别告诉妈妈，好吗？ (zhè xiē shì , nǐ bié gào sù mā ma , hǎo ma ?)",
+        "C 眼睛好多了吧？ (yǎn jīng hǎo duō le ba ?)",
+        "D 你认识李雪的丈夫？ (nǐ rèn shi lǐ xuě de zhàng fu ?)",
+        "E 你弟弟还没找到新的工作？ (nǐ dì di hái méi zhǎo dào xīn de gōng zuò ?)"
       ],
       "board_image": null,
       "explanation": "Câu trả lời về công việc của em trai 'Nó từ tháng 9 đã bắt đầu đi làm ở sân bay rồi' đáp lại câu E 'Em trai bạn vẫn chưa tìm được công việc mới à?'.",
@@ -1174,11 +1209,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21555C/images/H21555C_img_60.webp",
       "options": [
-        "A 没有，但是天阴了。",
-        "B 这些事，你别告诉妈妈，好吗？",
-        "C 眼睛好多了吧？",
-        "D 你认识李雪的丈夫？",
-        "E 你弟弟还没找到新的工作？"
+        "A 没有，但是天阴了。 (méi yǒu , dàn shì tiān yīn le)",
+        "B 这些事，你别告诉妈妈，好吗？ (zhè xiē shì , nǐ bié gào sù mā ma , hǎo ma ?)",
+        "C 眼睛好多了吧？ (yǎn jīng hǎo duō le ba ?)",
+        "D 你认识李雪的丈夫？ (nǐ rèn shi lǐ xuě de zhàng fu ?)",
+        "E 你弟弟还没找到新的工作？ (nǐ dì di hái méi zhǎo dào xīn de gōng zuò ?)"
       ],
       "board_image": null,
       "explanation": "Câu trả lời 'Đúng vậy, tôi từng chơi bóng rổ với anh ấy vài lần' đáp lại câu hỏi D 'Bạn quen biết chồng của Lý Tuyết à?'.",

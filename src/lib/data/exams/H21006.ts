@@ -418,7 +418,7 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ cóng liù suì jiù kāishǐ xuéxí chànggē le? Nán: Bù, shì sì suì. Wèn: Nán de sì suì kāishǐ xuéxí shénme?",
       "options": [
         "A 写字 (A Xiě zì)",
-        "B 唱歌 (B (chànggē   ( B)",
+        "B 唱歌 (B (chànggē (B)",
         "C hànggē) | C 跳舞 (C Tiàowǔ)"
       ]
     },
@@ -436,7 +436,7 @@ export const examData: ExamDetail = {
       "explanation": "Người nữ nói rõ 'wǒxìng bái' (Tôi họ Bạch/Bái). Đáp án đúng là A.",
       "listening_pinyin": "Nán: Nǐ jiào shénme míngzi? Nǚ: Wǒ xìng Bái, jiào Bái Xuě, nín jiào wǒ Xiǎo Bái jiù kěyǐ le. Wèn: Nǚ de xìng shénme?",
       "options": [
-        "A 白 (A (bái   ( A)",
+        "A 白 (A (bái (A)",
         "B ái) | B 雪 (B Xuě)",
         "C 张 (C Zhāng)"
       ]
@@ -455,9 +455,9 @@ export const examData: ExamDetail = {
       "explanation": "Người nam đến năm 2008, sớm hơn người nữ 1 năm ('bǐnǐzǎo yīnián'), suy ra người nữ đến năm 2009 (2008 + 1 = 2009). Đáp án đúng là C.",
       "listening_pinyin": "Nǚ: Nǐ shì nǎ nián lái Běijīng de? Nán: Èr-líng-líng-bā nián, bǐ nǐ zǎo yì nián. Wèn: Nǚ de shì nǎ nián lái Běijīng de?",
       "options": [
-        "A 2007年 (A 2007 nián) (2007 nián   ( A   2007   ni á n ))",
-        "B 2008年 (B 2008 nián) (2008 nián   ( B   2008   ni á n ))",
-        "C 2009年 (C 2009 nián) (2009 nián   ( C   2009   ni á n ))"
+        "A 2007年 (A 2007 nián) (2007 nián   ( A   2007   ni á n )) (2 0 0 7 nián   ( A   2 0 0 7   n i á n )   ( 2 0 0 7   n i á n       (   A       2 0 0 7       n i   á   n   ) )) (2 0 0 7 nián ( A 2 0 0 7 n i á n ) ( 2 0 0 7 n i á n ( A 2 0 0 7 n i á n ) ) ( 2 0 0 7 n i á n ( A 2 0 0 7 n i á n ) ( 2 0 0 7 n i á n ( A 2 0 0 7 n i á n ) ) ))",
+        "B 2008年 (B 2008 nián) (2008 nián   ( B   2008   ni á n )) (2 0 0 8 nián   ( B   2 0 0 8   n i á n )   ( 2 0 0 8   n i á n       (   B       2 0 0 8       n i   á   n   ) )) (2 0 0 8 nián ( B 2 0 0 8 n i á n ) ( 2 0 0 8 n i á n ( B 2 0 0 8 n i á n ) ) ( 2 0 0 8 n i á n ( B 2 0 0 8 n i á n ) ( 2 0 0 8 n i á n ( B 2 0 0 8 n i á n ) ) ))",
+        "C 2009年 (C 2009 nián) (2009 nián   ( C   2009   ni á n )) (2 0 0 9 nián   ( C   2 0 0 9   n i á n )   ( 2 0 0 9   n i á n       (   C       2 0 0 9       n i   á   n   ) )) (2 0 0 9 nián ( C 2 0 0 9 n i á n ) ( 2 0 0 9 n i á n ( C 2 0 0 9 n i á n ) ) ( 2 0 0 9 n i á n ( C 2 0 0 9 n i á n ) ( 2 0 0 9 n i á n ( C 2 0 0 9 n i á n ) ) ))"
       ]
     },
     {
@@ -474,9 +474,9 @@ export const examData: ExamDetail = {
       "explanation": "Người bán báo giá 'wǔqiānbā' (5800 nhân dân tệ). Đáp án đúng là C.",
       "listening_pinyin": "Nǚ: Zhège diànnǎo zěnme mài? Nán: Wǔ qiān bā. Tā shì mài de zuì hǎo de. Wèn: Zhège diànnǎo mài duōshao qián?",
       "options": [
-        "A 800元 (A 800 yuán) (800 yuán   ( A   800   yu á n ))",
-        "B 5000元 (B 5000 yuán) (5000 yuán   ( B   5000   yu á n ))",
-        "C 5800元 (C 5800 yuán) (5800 yuán   ( C   5800   yu á n ))"
+        "A 800元 (A 800 yuán) (800 yuán   ( A   800   yu á n )) (8 0 0 yuán   ( A   8 0 0   y u á n )   ( 8 0 0   y u á n       (   A       8 0 0       y u   á   n   ) )) (8 0 0 yuán ( A 8 0 0 y u á n ) ( 8 0 0 y u á n ( A 8 0 0 y u á n ) ) ( 8 0 0 y u á n ( A 8 0 0 y u á n ) ( 8 0 0 y u á n ( A 8 0 0 y u á n ) ) ))",
+        "B 5000元 (B 5000 yuán) (5000 yuán   ( B   5000   yu á n )) (5 0 0 0 yuán   ( B   5 0 0 0   y u á n )   ( 5 0 0 0   y u á n       (   B       5 0 0 0       y u   á   n   ) )) (5 0 0 0 yuán ( B 5 0 0 0 y u á n ) ( 5 0 0 0 y u á n ( B 5 0 0 0 y u á n ) ) ( 5 0 0 0 y u á n ( B 5 0 0 0 y u á n ) ( 5 0 0 0 y u á n ( B 5 0 0 0 y u á n ) ) ))",
+        "C 5800元 (C 5800 yuán) (5800 yuán   ( C   5800   yu á n )) (5 8 0 0 yuán   ( C   5 8 0 0   y u á n )   ( 5 8 0 0   y u á n       (   C       5 8 0 0       y u   á   n   ) )) (5 8 0 0 yuán ( C 5 8 0 0 y u á n ) ( 5 8 0 0 y u á n ( C 5 8 0 0 y u á n ) ) ( 5 8 0 0 y u á n ( C 5 8 0 0 y u á n ) ( 5 8 0 0 y u á n ( C 5 8 0 0 y u á n ) ) ))"
       ]
     },
     {
@@ -628,12 +628,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè zhāng bàozhǐ shang yǒu wǒmen gōngsī de jièshào.",
       "options": [
-        "A: Cô gái vẫy tay chào",
-        "B: Cô gái nằm đọc sách",
-        "C: Hỏi nhân viên phục vụ",
-        "D: Giơ bóng rổ",
-        "E: Hai người cùng đọc tờ báo",
-        "F: Nam nữ nhảy múa"
+        "A 明天上午学校见，再见。 (Míngtiān shàngwǔ xuéxiào jiàn, zàijiàn.)",
+        "B 这样看书对眼睛不好。 (Zhèyàng kàn shū duì yǎnjing bù hǎo.)",
+        "C 服务员，你们这儿有什么好吃的内容/菜？ (Fúwùyuán, nǐmen zhèr yǒu shénme hǎochī de cài?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这张报纸上有我们公司的介绍。 (Zhè zhāng bàozhǐ shang yǒu wǒmen gōngsī de jièshào.)",
+        "F 你也爱跳舞？太好了。 (Nǐ yě ài tiàowǔ? Tài hǎo le.)"
       ]
     },
     {
@@ -652,12 +652,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhèyàng kàn shū duì yǎnjing bù hǎo.",
       "options": [
-        "A: Cô gái vẫy tay chào",
-        "B: Cô gái nằm đọc sách",
-        "C: Hỏi nhân viên phục vụ",
-        "D: Giơ bóng rổ",
-        "E: Hai người cùng đọc tờ báo",
-        "F: Nam nữ nhảy múa"
+        "A 明天上午学校见，再见。 (Míngtiān shàngwǔ xuéxiào jiàn, zàijiàn.)",
+        "B 这样看书对眼睛不好。 (Zhèyàng kàn shū duì yǎnjing bù hǎo.)",
+        "C 服务员，你们这儿有什么好吃的内容/菜？ (Fúwùyuán, nǐmen zhèr yǒu shénme hǎochī de cài?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这张报纸上有我们公司的介绍。 (Zhè zhāng bàozhǐ shang yǒu wǒmen gōngsī de jièshào.)",
+        "F 你也爱跳舞？太好了。 (Nǐ yě ài tiàowǔ? Tài hǎo le.)"
       ]
     },
     {
@@ -676,12 +676,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Fúwùyuán, nǐmen zhèr yǒu shénme hǎochī de cài?",
       "options": [
-        "A: Cô gái vẫy tay chào",
-        "B: Cô gái nằm đọc sách",
-        "C: Hỏi nhân viên phục vụ",
-        "D: Giơ bóng rổ",
-        "E: Hai người cùng đọc tờ báo",
-        "F: Nam nữ nhảy múa"
+        "A 明天上午学校见，再见。 (Míngtiān shàngwǔ xuéxiào jiàn, zàijiàn.)",
+        "B 这样看书对眼睛不好。 (Zhèyàng kàn shū duì yǎnjing bù hǎo.)",
+        "C 服务员，你们这儿有什么好吃的内容/菜？ (Fúwùyuán, nǐmen zhèr yǒu shénme hǎochī de cài?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这张报纸上有我们公司的介绍。 (Zhè zhāng bàozhǐ shang yǒu wǒmen gōngsī de jièshào.)",
+        "F 你也爱跳舞？太好了。 (Nǐ yě ài tiàowǔ? Tài hǎo le.)"
       ]
     },
     {
@@ -700,12 +700,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nǐ yě ài tiàowǔ? Tài hǎo le.",
       "options": [
-        "A: Cô gái vẫy tay chào",
-        "B: Cô gái nằm đọc sách",
-        "C: Hỏi nhân viên phục vụ",
-        "D: Giơ bóng rổ",
-        "E: Hai người cùng đọc tờ báo",
-        "F: Nam nữ nhảy múa"
+        "A 明天上午学校见，再见。 (Míngtiān shàngwǔ xuéxiào jiàn, zàijiàn.)",
+        "B 这样看书对眼睛不好。 (Zhèyàng kàn shū duì yǎnjing bù hǎo.)",
+        "C 服务员，你们这儿有什么好吃的内容/菜？ (Fúwùyuán, nǐmen zhèr yǒu shénme hǎochī de cài?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这张报纸上有我们公司的介绍。 (Zhè zhāng bàozhǐ shang yǒu wǒmen gōngsī de jièshào.)",
+        "F 你也爱跳舞？太好了。 (Nǐ yě ài tiàowǔ? Tài hǎo le.)"
       ]
     },
     {
@@ -724,12 +724,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Míngtiān shàngwǔ xuéxiào jiàn, zàijiàn.",
       "options": [
-        "A: Cô gái vẫy tay chào",
-        "B: Cô gái nằm đọc sách",
-        "C: Hỏi nhân viên phục vụ",
-        "D: Giơ bóng rổ",
-        "E: Hai người cùng đọc tờ báo",
-        "F: Nam nữ nhảy múa"
+        "A 明天上午学校见，再见。 (Míngtiān shàngwǔ xuéxiào jiàn, zàijiàn.)",
+        "B 这样看书对眼睛不好。 (Zhèyàng kàn shū duì yǎnjing bù hǎo.)",
+        "C 服务员，你们这儿有什么好吃的内容/菜？ (Fúwùyuán, nǐmen zhèr yǒu shénme hǎochī de cài?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这张报纸上有我们公司的介绍。 (Zhè zhāng bàozhǐ shang yǒu wǒmen gōngsī de jièshào.)",
+        "F 你也爱跳舞？太好了。 (Nǐ yě ài tiàowǔ? Tài hǎo le.)"
       ]
     },
     {
@@ -969,12 +969,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_51.webp",
       "options": [
-        "A 坐公共汽车去，20分钟就能到。",
-        "B 没问题，您有什么事？",
-        "C 没关系，慢慢来。",
-        "D 今天玩儿得很高兴。谢谢。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 那打电话告诉他别去踢足球了，明天再去。"
+        "A 坐公共汽车去，20分钟就能到。 (zuò gōng gòng qì chē qù , 2 0 fēn zhōng jiù néng dào)",
+        "B 没问题，您有什么事？ (méi wèn tí , nín yǒu shén me shì ?)",
+        "C 没关系，慢慢来。 (méi guān xì , màn màn lái)",
+        "D 今天玩儿得很高兴。谢谢。 (jīn tiān wán ér dé hěn gāo xìng xiè xiè)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那打电话告诉他别去踢足球了，明天再去。 (nà dǎ diàn huà gào sù tā bié qù tī zú qiú le , míng tiān zài qù)"
       ],
       "board_image": null,
       "explanation": "Câu gốc chào 'Không có gì, hoan nghênh lần sau lại đến', phản hồi hợp lý nhất là cảm ơn vì hôm nay chơi rất vui ('jīntiān wánér dé hěn gāoxìng。xièxiè。'). Chọn D.",
@@ -993,12 +993,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_52.webp",
       "options": [
-        "A 坐公共汽车去，20分钟就能到。",
-        "B 没问题，您有什么事？",
-        "C 没关系，慢慢来。",
-        "D 今天玩儿得很高兴。谢谢。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 那打电话告诉他别去踢足球了，明天再去。"
+        "A 坐公共汽车去，20分钟就能到。 (zuò gōng gòng qì chē qù , 2 0 fēn zhōng jiù néng dào)",
+        "B 没问题，您有什么事？ (méi wèn tí , nín yǒu shén me shì ?)",
+        "C 没关系，慢慢来。 (méi guān xì , màn màn lái)",
+        "D 今天玩儿得很高兴。谢谢。 (jīn tiān wán ér dé hěn gāo xìng xiè xiè)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那打电话告诉他别去踢足球了，明天再去。 (nà dǎ diàn huà gào sù tā bié qù tī zú qiú le , míng tiān zài qù)"
       ],
       "board_image": null,
       "explanation": "Câu gốc nói em trai học 1 tuần vẫn chưa biết bơi, đáp lại bằng lời an ủi 'Không sao, từ từ rồi sẽ biết' ('méiguānxì，mànmànlái。'). Chọn C.",
@@ -1017,12 +1017,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_53.webp",
       "options": [
-        "A 坐公共汽车去，20分钟就能到。",
-        "B 没问题，您有什么事？",
-        "C 没关系，慢慢来。",
-        "D 今天玩儿得很高兴。谢谢。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 那打电话告诉他别去踢足球了，明天再去。"
+        "A 坐公共汽车去，20分钟就能到。 (zuò gōng gòng qì chē qù , 2 0 fēn zhōng jiù néng dào)",
+        "B 没问题，您有什么事？ (méi wèn tí , nín yǒu shén me shì ?)",
+        "C 没关系，慢慢来。 (méi guān xì , màn màn lái)",
+        "D 今天玩儿得很高兴。谢谢。 (jīn tiān wán ér dé hěn gāo xìng xiè xiè)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那打电话告诉他别去踢足球了，明天再去。 (nà dǎ diàn huà gào sù tā bié qù tī zú qiú le , míng tiān zài qù)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi về khoảng cách đến sân bay có xa không, câu trả lời thích hợp là phương tiện và thời gian di chuyển ('zuò gōnggòngqìchē qù，20fēnzhōng jiù néng dào。'). Chọn A.",
@@ -1041,12 +1041,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_54.webp",
       "options": [
-        "A 坐公共汽车去，20分钟就能到。",
-        "B 没问题，您有什么事？",
-        "C 没关系，慢慢来。",
-        "D 今天玩儿得很高兴。谢谢。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 那打电话告诉他别去踢足球了，明天再去。"
+        "A 坐公共汽车去，20分钟就能到。 (zuò gōng gòng qì chē qù , 2 0 fēn zhōng jiù néng dào)",
+        "B 没问题，您有什么事？ (méi wèn tí , nín yǒu shén me shì ?)",
+        "C 没关系，慢慢来。 (méi guān xì , màn màn lái)",
+        "D 今天玩儿得很高兴。谢谢。 (jīn tiān wán ér dé hěn gāo xìng xiè xiè)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那打电话告诉他别去踢足球了，明天再去。 (nà dǎ diàn huà gào sù tā bié qù tī zú qiú le , míng tiān zài qù)"
       ],
       "board_image": null,
       "explanation": "Câu gốc nói thời tiết không tốt dễ mưa, phản hồi hợp lý là bảo đừng đi đá bóng ngoài trời ('nà dǎdiànhuà gàosù tābié qù tīzúqiú le，míngtiān zài qù。'). Chọn F.",
@@ -1065,12 +1065,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_55.webp",
       "options": [
-        "A 坐公共汽车去，20分钟就能到。",
-        "B 没问题，您有什么事？",
-        "C 没关系，慢慢来。",
-        "D 今天玩儿得很高兴。谢谢。",
-        "E 他在哪儿呢？看见他了吗？",
-        "F 那打电话告诉他别去踢足球了，明天再去。"
+        "A 坐公共汽车去，20分钟就能到。 (zuò gōng gòng qì chē qù , 2 0 fēn zhōng jiù néng dào)",
+        "B 没问题，您有什么事？ (méi wèn tí , nín yǒu shén me shì ?)",
+        "C 没关系，慢慢来。 (méi guān xì , màn màn lái)",
+        "D 今天玩儿得很高兴。谢谢。 (jīn tiān wán ér dé hěn gāo xìng xiè xiè)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那打电话告诉他别去踢足球了，明天再去。 (nà dǎ diàn huà gào sù tā bié qù tī zú qiú le , míng tiān zài qù)"
       ],
       "board_image": null,
       "explanation": "Cuộc gọi hỏi bạn có biết nói tiếng Trung không, câu trả lời lịch sự 'Không vấn đề gì, bạn có chuyện gì vậy?' ('méi wèntí，nín yǒu shénme shì？'). Chọn B.",
@@ -1089,11 +1089,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_56.webp",
       "options": [
-        "A 别睡了，起床，我们去跑步。",
-        "B 天气这么热，我们吃块儿西瓜吧。",
-        "C 那是我丈夫和女儿，我们准备一起去看电影。",
-        "D 这门课什么时候考试？",
-        "E 您是第一次来中国吗？"
+        "A 别睡了，起床，我们去跑步。 (bié shuì le , qǐ chuáng , wǒ men qù pǎo bù)",
+        "B 天气这么热，我们吃块儿西瓜吧。 (tiān qì zhè me rè , wǒ men chī kuài ér xī guā ba)",
+        "C 那是我丈夫和女儿，我们准备一起去看电影。 (nà shì wǒ zhàng fu hé nǚ ér , wǒ men zhǔn bèi yì qǐ qù kàn diàn yǐng)",
+        "D 这门课什么时候考试？ (zhè mén kè shén me shí hòu kǎo shì ?)",
+        "E 您是第一次来中国吗？ (nín shì dì yī cì lái zhōng guó ma ?)"
       ],
       "board_image": null,
       "explanation": "Câu trả lời 'Không, năm ngoái tôi từng đến Bắc Kinh rồi' trả lời cho câu hỏi 'Bác có phải lần đầu tiên đến Trung Quốc không?' ('nín shì dìyīcì lái zhōngguó ma？'). Chọn E.",
@@ -1112,11 +1112,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_57.webp",
       "options": [
-        "A 别睡了，起床，我们去跑步。",
-        "B 天气这么热，我们吃块儿西瓜吧。",
-        "C 那是我丈夫和女儿，我们准备一起去看电影。",
-        "D 这门课什么时候考试？",
-        "E 您是第一次来中国吗？"
+        "A 别睡了，起床，我们去跑步。 (bié shuì le , qǐ chuáng , wǒ men qù pǎo bù)",
+        "B 天气这么热，我们吃块儿西瓜吧。 (tiān qì zhè me rè , wǒ men chī kuài ér xī guā ba)",
+        "C 那是我丈夫和女儿，我们准备一起去看电影。 (nà shì wǒ zhàng fu hé nǚ ér , wǒ men zhǔn bèi yì qǐ qù kàn diàn yǐng)",
+        "D 这门课什么时候考试？ (zhè mén kè shén me shí hòu kǎo shì ?)",
+        "E 您是第一次来中国吗？ (nín shì dì yī cì lái zhōng guó ma ?)"
       ],
       "board_image": null,
       "explanation": "Lý do 'Lạnh quá, để mai tính' phản hồi lại lời rủ rê đi chạy bộ buổi sáng ('biéshuìle，qǐchuáng，wǒmen qù pǎobù。'). Chọn A.",
@@ -1135,11 +1135,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_58.webp",
       "options": [
-        "A 别睡了，起床，我们去跑步。",
-        "B 天气这么热，我们吃块儿西瓜吧。",
-        "C 那是我丈夫和女儿，我们准备一起去看电影。",
-        "D 这门课什么时候考试？",
-        "E 您是第一次来中国吗？"
+        "A 别睡了，起床，我们去跑步。 (bié shuì le , qǐ chuáng , wǒ men qù pǎo bù)",
+        "B 天气这么热，我们吃块儿西瓜吧。 (tiān qì zhè me rè , wǒ men chī kuài ér xī guā ba)",
+        "C 那是我丈夫和女儿，我们准备一起去看电影。 (nà shì wǒ zhàng fu hé nǚ ér , wǒ men zhǔn bèi yì qǐ qù kàn diàn yǐng)",
+        "D 这门课什么时候考试？ (zhè mén kè shén me shí hòu kǎo shì ?)",
+        "E 您是第一次来中国吗？ (nín shì dì yī cì lái zhōng guó ma ?)"
       ],
       "board_image": null,
       "explanation": "Hỏi ngoài cửa có 2 người có phải chờ bạn không, trả lời 'Đó là chồng và con gái tôi...' ('nà shì wǒ zhàngfū hé nǚér，wǒmen zhǔnbèi yìqǐ qù kàn diànyǐng。'). Chọn C.",
@@ -1158,11 +1158,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_59.webp",
       "options": [
-        "A 别睡了，起床，我们去跑步。",
-        "B 天气这么热，我们吃块儿西瓜吧。",
-        "C 那是我丈夫和女儿，我们准备一起去看电影。",
-        "D 这门课什么时候考试？",
-        "E 您是第一次来中国吗？"
+        "A 别睡了，起床，我们去跑步。 (bié shuì le , qǐ chuáng , wǒ men qù pǎo bù)",
+        "B 天气这么热，我们吃块儿西瓜吧。 (tiān qì zhè me rè , wǒ men chī kuài ér xī guā ba)",
+        "C 那是我丈夫和女儿，我们准备一起去看电影。 (nà shì wǒ zhàng fu hé nǚ ér , wǒ men zhǔn bèi yì qǐ qù kàn diàn yǐng)",
+        "D 这门课什么时候考试？ (zhè mén kè shén me shí hòu kǎo shì ?)",
+        "E 您是第一次来中国吗？ (nín shì dì yī cì lái zhōng guó ma ?)"
       ],
       "board_image": null,
       "explanation": "Trả lời thời gian 'Nghe nói ngày 7 tháng 6' đáp lại câu hỏi về lịch thi ('zhèmén kè shénme shíhòu kǎoshì？'). Chọn D.",
@@ -1181,11 +1181,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21006/images/H21006_img_60.webp",
       "options": [
-        "A 别睡了，起床，我们去跑步。",
-        "B 天气这么热，我们吃块儿西瓜吧。",
-        "C 那是我丈夫和女儿，我们准备一起去看电影。",
-        "D 这门课什么时候考试？",
-        "E 您是第一次来中国吗？"
+        "A 别睡了，起床，我们去跑步。 (bié shuì le , qǐ chuáng , wǒ men qù pǎo bù)",
+        "B 天气这么热，我们吃块儿西瓜吧。 (tiān qì zhè me rè , wǒ men chī kuài ér xī guā ba)",
+        "C 那是我丈夫和女儿，我们准备一起去看电影。 (nà shì wǒ zhàng fu hé nǚ ér , wǒ men zhǔn bèi yì qǐ qù kàn diàn yǐng)",
+        "D 这门课什么时候考试？ (zhè mén kè shén me shí hòu kǎo shì ?)",
+        "E 您是第一次来中国吗？ (nín shì dì yī cì lái zhōng guó ma ?)"
       ],
       "board_image": null,
       "explanation": "Hỏi có uống trà không, đáp lại bằng giải pháp giải nhiệt khác 'Trời nóng thế này, ăn dưa hấu đi' ('tiānqì zhème rè，wǒmen chī kuàiér xīguā ba。'). Chọn B.",

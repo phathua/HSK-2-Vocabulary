@@ -202,12 +202,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nǚ ： xiàn zài jǐ diǎn le ？",
       "explanation": "Lời thoại nhắc đến 'shǒubiǎo' (đồng hồ đeo tay). Bức ảnh B thể hiện người giơ tay xem đồng hồ đeo tay nên đáp án là B.",
       "options": [
-        "A Đánh đàn guitar và hát",
-        "B Xem đồng hồ đeo tay",
-        "C Chó nhỏ nằm trên ghế",
-        "D Nữ đá bóng (Ví dụ)",
-        "E Cùng xem sách",
-        "F Bắt tay lịch sự"
+        "A 弹吉他唱歌 (tán jítā chànggē)",
+        "B 看手表 (kàn shǒubiǎo)",
+        "C 椅子上的小狗 (yǐzi shang de xiǎogǒu)",
+        "D 踢足球 (tī zúqiú)",
+        "E 一起看书 (yìqǐ kànshū)",
+        "F 握手 (wòshǒu)"
       ],
       "pinyin": "Nǚ: Xiànzài jǐ diǎn le?\nNán: Wǒ kàn yīxià, wǒ de shǒubiǎo xiànzài shì bā diǎn sìshí.",
       "board_image": "images/H21113_board_11_15.webp"
@@ -224,12 +224,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nán ： yǐ zi shàng de xiǎo gǒu shì nǐ de ？",
       "explanation": "Lời thoại nhắc đến 'yǐzi shang de xiǎo gǒu' (chú chó nhỏ trên ghế). Bức ảnh C thể hiện chú chó nhỏ nằm trên chiếc ghế gỗ nên đáp án là C.",
       "options": [
-        "A Đánh đàn guitar và hát",
-        "B Xem đồng hồ đeo tay",
-        "C Chó nhỏ nằm trên ghế",
-        "D Nữ đá bóng (Ví dụ)",
-        "E Cùng xem sách",
-        "F Bắt tay lịch sự"
+        "A 弹吉他唱歌 (tán jítā chànggē)",
+        "B 看手表 (kàn shǒubiǎo)",
+        "C 椅子上的小狗 (yǐzi shang de xiǎogǒu)",
+        "D 踢足球 (tī zúqiú)",
+        "E 一起看书 (yìqǐ kànshū)",
+        "F 握手 (wòshǒu)"
       ],
       "pinyin": "Nán: Yǐzi shang de xiǎogǒu shì nǐ de?\nNǚ: Bú shì, nà shì wǒ mèimei de gǒu.",
       "board_image": "images/H21113_board_11_15.webp"
@@ -246,12 +246,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nǚ ： nǐ de gē chàng dé bù zěn me yàng 。",
       "explanation": "Lời thoại nhắc đến ca hát 'gē chàng de bù zěnmeyàng' (hát không được hay lắm). Bức ảnh A thể hiện nam nữ cùng chơi đàn guitar và hát nên đáp án là A.",
       "options": [
-        "A Đánh đàn guitar và hát",
-        "B Xem đồng hồ đeo tay",
-        "C Chó nhỏ nằm trên ghế",
-        "D Nữ đá bóng (Ví dụ)",
-        "E Cùng xem sách",
-        "F Bắt tay lịch sự"
+        "A 弹吉他唱歌 (tán jítā chànggē)",
+        "B 看手表 (kàn shǒubiǎo)",
+        "C 椅子上的小狗 (yǐzi shang de xiǎogǒu)",
+        "D 踢足球 (tī zúqiú)",
+        "E 一起看书 (yìqǐ kànshū)",
+        "F 握手 (wòshǒu)"
       ],
       "pinyin": "Nǚ: Nǐ de gē chàng de bù zěnmeyàng.\nNán: Hǎo ba, hǎo ba, nǐ zài tīngting zuìhòu yī ge.",
       "board_image": "images/H21113_board_11_15.webp"
@@ -268,12 +268,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nán ： bái xiǎo jiě ， xiè xiè nín de bāng zhù 。",
       "explanation": "Lời thoại cảm ơn sự giúp đỡ 'xièxie nín de bāngzhù' (cảm ơn sự giúp đỡ của bạn). Bức ảnh F thể hiện hai người bắt tay xã giao lịch sự nên đáp án là F.",
       "options": [
-        "A Đánh đàn guitar và hát",
-        "B Xem đồng hồ đeo tay",
-        "C Chó nhỏ nằm trên ghế",
-        "D Nữ đá bóng (Ví dụ)",
-        "E Cùng xem sách",
-        "F Bắt tay lịch sự"
+        "A 弹吉他唱歌 (tán jítā chànggē)",
+        "B 看手表 (kàn shǒubiǎo)",
+        "C 椅子上的小狗 (yǐzi shang de xiǎogǒu)",
+        "D 踢足球 (tī zúqiú)",
+        "E 一起看书 (yìqǐ kànshū)",
+        "F 握手 (wòshǒu)"
       ],
       "pinyin": "Nán: Bái xiǎojiě, xièxie nín de bāngzhù.\nNǚ: Bú kèqi.",
       "board_image": "images/H21113_board_11_15.webp"
@@ -290,12 +290,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nǚ ： wǒ xiě dé zěn me yàng ？",
       "explanation": "Lời thoại nhắc đến việc xem nét chữ / sách 'xiě de hái búcuò' (viết cũng khá đẹp). Bức ảnh E thể hiện hai người cùng mở quyển sách/tập xem nên đáp án là E.",
       "options": [
-        "A Đánh đàn guitar và hát",
-        "B Xem đồng hồ đeo tay",
-        "C Chó nhỏ nằm trên ghế",
-        "D Nữ đá bóng (Ví dụ)",
-        "E Cùng xem sách",
-        "F Bắt tay lịch sự"
+        "A 弹吉他唱歌 (tán jítā chànggē)",
+        "B 看手表 (kàn shǒubiǎo)",
+        "C 椅子上的小狗 (yǐzi shang de xiǎogǒu)",
+        "D 踢足球 (tī zúqiú)",
+        "E 一起看书 (yìqǐ kànshū)",
+        "F 握手 (wòshǒu)"
       ],
       "pinyin": "Nǚ: Wǒ xiě de zěnmeyàng?\nNán: Zhè shì nǐ xiě de? Méi xiǎngdào nǐ xiě de hái bùcuò.",
       "board_image": "images/H21113_board_11_15.webp"
@@ -312,12 +312,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nán ： gěi nǐ shuǐ ， chī yào le 。",
       "explanation": "Lời thoại đưa nước và dặn 'chī yào le' (uống thuốc đi). Bức ảnh D thể hiện bàn tay cầm ly nước và viên thuốc nên đáp án là D.",
       "options": [
-        "A Các miếng dưa hấu",
-        "B Người phụ nữ nhún vai bối rối",
-        "C Cùng xem đồ/quần áo màu đỏ",
-        "D Tay cầm ly nước và viên thuốc",
-        "E Hai người cùng xem bản đồ tìm đường",
-        "F Tranh dự phòng"
+        "A 几块儿西瓜 (jǐ kuàir xīguā)",
+        "B 不知道 (bù zhīdào)",
+        "C 买衣服 (mǎi yīfu)",
+        "D 吃药 (chī yào)",
+        "E 向右走 (xiàng yòu zǒu)",
+        "F 坐公共汽车 (zuò gōnggòng qìchē)"
       ],
       "pinyin": "Nán: Gěi nǐ shuǐ, chī yào le.\nNǚ: Wǒ yǐjīng chīguò le.",
       "board_image": "images/H21113_board_16_20.webp"
@@ -334,12 +334,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nǚ ： zhǎo dào le ma ？",
       "explanation": "Lời thoại trao đổi tìm đường 'lí zhèr hěn jìn, wǒmen xiàng yòu zǒu' (cách đây rất gần, chúng ta rẽ phải). Bức ảnh E thể hiện hai người mở bản đồ tìm đường nên đáp án là E.",
       "options": [
-        "A Các miếng dưa hấu",
-        "B Người phụ nữ nhún vai bối rối",
-        "C Cùng xem đồ/quần áo màu đỏ",
-        "D Tay cầm ly nước và viên thuốc",
-        "E Hai người cùng xem bản đồ tìm đường",
-        "F Tranh dự phòng"
+        "A 几块儿西瓜 (jǐ kuàir xīguā)",
+        "B 不知道 (bù zhīdào)",
+        "C 买衣服 (mǎi yīfu)",
+        "D 吃药 (chī yào)",
+        "E 向右走 (xiàng yòu zǒu)",
+        "F 坐公共汽车 (zuò gōnggòng qìchē)"
       ],
       "pinyin": "Nǚ: Zhǎodào le ma?\nNán: Zhǎodào le, lí zhèr hěn jìn, wǒmen xiàng yòu zǒu.",
       "board_image": "images/H21113_board_16_20.webp"
@@ -356,12 +356,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nán ： jiě ， jiā lǐ yǒu shén me shuǐ guǒ ？",
       "explanation": "Lời thoại nhắc đến trái cây 'hái yǒu jǐ kuàir xīguā' (còn mấy miếng dưa hấu). Bức ảnh A thể hiện đĩa dưa hấu nên đáp án là A.",
       "options": [
-        "A Các miếng dưa hấu",
-        "B Người phụ nữ nhún vai bối rối",
-        "C Cùng xem đồ/quần áo màu đỏ",
-        "D Tay cầm ly nước và viên thuốc",
-        "E Hai người cùng xem bản đồ tìm đường",
-        "F Tranh dự phòng"
+        "A 几块儿西瓜 (jǐ kuàir xīguā)",
+        "B 不知道 (bù zhīdào)",
+        "C 买衣服 (mǎi yīfu)",
+        "D 吃药 (chī yào)",
+        "E 向右走 (xiàng yòu zǒu)",
+        "F 坐公共汽车 (zuò gōnggòng qìchē)"
       ],
       "pinyin": "Nán: Jiě, jiā li yǒu shénme shuǐguǒ?\nNǚ: Hái yǒu jǐ kuàir xīguā, nǐ chī ma?",
       "board_image": "images/H21113_board_16_20.webp"
@@ -378,12 +378,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nǚ ： zhēn piào liàng ！",
       "explanation": "Lời thoại khen chiếc váy/áo màu đỏ 'chuān hóngsè de fēicháng piàoliang' (mặc màu đỏ rất đẹp). Bức ảnh C thể hiện hai người ngắm/thử quần áo màu đỏ nên đáp án là C.",
       "options": [
-        "A Các miếng dưa hấu",
-        "B Người phụ nữ nhún vai bối rối",
-        "C Cùng xem đồ/quần áo màu đỏ",
-        "D Tay cầm ly nước và viên thuốc",
-        "E Hai người cùng xem bản đồ tìm đường",
-        "F Tranh dự phòng"
+        "A 几块儿西瓜 (jǐ kuàir xīguā)",
+        "B 不知道 (bù zhīdào)",
+        "C 买衣服 (mǎi yīfu)",
+        "D 吃药 (chī yào)",
+        "E 向右走 (xiàng yòu zǒu)",
+        "F 坐公共汽车 (zuò gōnggòng qìchē)"
       ],
       "pinyin": "Nǚ: Zhēn piàoliang!\nNán: Wǒ juéde nǐ chuān hóngsè de fēicháng piàoliang.",
       "board_image": "images/H21113_board_16_20.webp"
@@ -400,12 +400,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "nán ： nà ge rén jiào shén me míng zì ？",
       "explanation": "Lời thoại trả lời không hỏi tên 'méi wèn tā' (chưa hỏi anh ấy). Bức ảnh B thể hiện nữ giới nhún vai bối rối nên đáp án là B.",
       "options": [
-        "A Các miếng dưa hấu",
-        "B Người phụ nữ nhún vai bối rối",
-        "C Cùng xem đồ/quần áo màu đỏ",
-        "D Tay cầm ly nước và viên thuốc",
-        "E Hai người cùng xem bản đồ tìm đường",
-        "F Tranh dự phòng"
+        "A 几块儿西瓜 (jǐ kuàir xīguā)",
+        "B 不知道 (bù zhīdào)",
+        "C 买衣服 (mǎi yīfu)",
+        "D 吃药 (chī yào)",
+        "E 向右走 (xiàng yòu zǒu)",
+        "F 坐公共汽车 (zuò gōnggòng qìchē)"
       ],
       "pinyin": "Nán: Nàge rén jiào shénme míngzi?\nNǚ: Duìbuqǐ, wǒ méi wèn tā.",
       "board_image": "images/H21113_board_16_20.webp"
@@ -694,7 +694,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H21113_board_36_40.webp",
       "explanation": "Trong thư viện/lớp học nhắc mọi người không nói chuyện, khớp với tranh E.",
       "listening_pinyin": null,
-      "pinyin": "Qǐng dàjiā bùyào shuōhuà, xièxie."
+      "pinyin": "Qǐng dàjiā bùyào shuōhuà, xièxie.",
+      "options": [
+        "A 她在饭店工作，她做的菜很好吃。 (Tā zài fàndiàn gōngzuò, tā zuò de cài hěn hǎochī.)",
+        "B 你看，它的眼睛漂亮不？ (Nǐ kàn, tā de yǎnjing piàoliang bu?)",
+        "C 累了吧？休息一下，喝杯咖啡吧。 (Lèi le ba? Xiūxi yíxià, hē bēi kāfēi ba.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 请大家不要说话，谢谢。 (Qǐng dàjiā bùyào shuōhuà, xièxie.)",
+        "F 星期天是我的“洗衣日”。 (Xīngqītiān shì wǒ de “xǐyī rì”.)"
+      ]
     },
     {
       "exam_code": "H21113",
@@ -710,7 +718,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H21113_board_36_40.webp",
       "explanation": "Cô ấy làm ở tiệm cơm và nấu ăn ngon, khớp với tranh A người nấu ăn/đầu bếp.",
       "listening_pinyin": null,
-      "pinyin": "Tā zài fàndiàn gōngzuò, tā zuò de cài hěn hǎochī."
+      "pinyin": "Tā zài fàndiàn gōngzuò, tā zuò de cài hěn hǎochī.",
+      "options": [
+        "A 她在饭店工作，她做的菜很好吃。 (Tā zài fàndiàn gōngzuò, tā zuò de cài hěn hǎochī.)",
+        "B 你看，它的眼睛漂亮不？ (Nǐ kàn, tā de yǎnjing piàoliang bu?)",
+        "C 累了吧？休息一下，喝杯咖啡吧。 (Lèi le ba? Xiūxi yíxià, hē bēi kāfēi ba.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 请大家不要说话，谢谢。 (Qǐng dàjiā bùyào shuōhuà, xièxie.)",
+        "F 星期天是我的“洗衣日”。 (Xīngqītiān shì wǒ de “xǐyī rì”.)"
+      ]
     },
     {
       "exam_code": "H21113",
@@ -726,7 +742,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H21113_board_36_40.webp",
       "explanation": "Chủ nhật là ngày giặt đồ, khớp với tranh F máy giặt/quần áo.",
       "listening_pinyin": null,
-      "pinyin": "Xīngqītiān shì wǒ de “xǐyī rì”."
+      "pinyin": "Xīngqītiān shì wǒ de “xǐyī rì”.",
+      "options": [
+        "A 她在饭店工作，她做的菜很好吃。 (Tā zài fàndiàn gōngzuò, tā zuò de cài hěn hǎochī.)",
+        "B 你看，它的眼睛漂亮不？ (Nǐ kàn, tā de yǎnjing piàoliang bu?)",
+        "C 累了吧？休息一下，喝杯咖啡吧。 (Lèi le ba? Xiūxi yíxià, hē bēi kāfēi ba.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 请大家不要说话，谢谢。 (Qǐng dàjiā bùyào shuōhuà, xièxie.)",
+        "F 星期天是我的“洗衣日”。 (Xīngqītiān shì wǒ de “xǐyī rì”.)"
+      ]
     },
     {
       "exam_code": "H21113",
@@ -742,7 +766,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H21113_board_36_40.webp",
       "explanation": "Mệt rồi nghỉ ngơi uống cà phê, khớp với tranh C ly cà phê.",
       "listening_pinyin": null,
-      "pinyin": "Lèi le ba? Xiūxi yíxià, hē bēi kāfēi ba."
+      "pinyin": "Lèi le ba? Xiūxi yíxià, hē bēi kāfēi ba.",
+      "options": [
+        "A 她在饭店工作，她做的菜很好吃。 (Tā zài fàndiàn gōngzuò, tā zuò de cài hěn hǎochī.)",
+        "B 你看，它的眼睛漂亮不？ (Nǐ kàn, tā de yǎnjing piàoliang bu?)",
+        "C 累了吧？休息一下，喝杯咖啡吧。 (Lèi le ba? Xiūxi yíxià, hē bēi kāfēi ba.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 请大家不要说话，谢谢。 (Qǐng dàjiā bùyào shuōhuà, xièxie.)",
+        "F 星期天是我的“洗衣日”。 (Xīngqītiān shì wǒ de “xǐyī rì”.)"
+      ]
     },
     {
       "exam_code": "H21113",
@@ -758,7 +790,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H21113_board_36_40.webp",
       "explanation": "Nhìn xem mắt nó đẹp không, khớp với tranh B con mèo/chó cưng.",
       "listening_pinyin": null,
-      "pinyin": "Nǐ kàn, tā de yǎnjing piàoliang bu?"
+      "pinyin": "Nǐ kàn, tā de yǎnjing piàoliang bu?",
+      "options": [
+        "A 她在饭店工作，她做的菜很好吃。 (Tā zài fàndiàn gōngzuò, tā zuò de cài hěn hǎochī.)",
+        "B 你看，它的眼睛漂亮不？ (Nǐ kàn, tā de yǎnjing piàoliang bu?)",
+        "C 累了吧？休息一下，喝杯咖啡吧。 (Lèi le ba? Xiūxi yíxià, hē bēi kāfēi ba.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 请大家不要说话，谢谢。 (Qǐng dàjiā bùyào shuōhuà, xièxie.)",
+        "F 星期天是我的“洗衣日”。 (Xīngqītiān shì wǒ de “xǐyī rì”.)"
+      ]
     },
     {
       "exam_code": "H21113",

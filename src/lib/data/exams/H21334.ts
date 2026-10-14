@@ -569,7 +569,7 @@ export const examData: ExamDetail = {
       "explanation": "Người nữ nói 'wǒ cóng qīsuì jiù kāishǐ xuéle' (Tôi học từ lúc 7 tuổi) nên đáp án A.",
       "listening_pinyin": "Nán: Nǐ yóu de zhēn hǎo.\nNǚ: Xièxie, nǐ yóu de yě búcuò.\nNán: Wǒ shàng dàxué shí xué de yóuyǒng, nǐ ne?\nNǚ: Wǒ cóng qī suì jiù kāishǐ xué le.\nWèn: Nǚ de shénme shíhou kāishǐ xué yóuyǒng de?",
       "options": [
-        "A 7岁 (7 suì) (7 suì   ( 7   su ì ))",
+        "A 7岁 (7 suì) (7 suì   ( 7   su ì )) (7 suì   ( 7   s u ì )   ( 7   s u ì       (   7       s u   ì   ) )) (7 suì ( 7 s u ì ) ( 7 s u ì ( 7 s u ì ) ) ( 7 s u ì ( 7 s u ì ) ( 7 s u ì ( 7 s u ì ) ) ))",
         "B 一年前 (yì nián qián)",
         "C 上大学时 (shàng dàxué shí)"
       ]
@@ -628,12 +628,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhège chē yǒu duō cháng shíjiān méi xǐ le?",
       "options": [
-        "A: Bút chì màu trong ống",
-        "B: Uống hộp sữa tươi",
-        "C: Rửa xe ô tô",
-        "D: Đang ném bóng rổ",
-        "E: Hộp quà sinh nhật",
-        "F: Hai người cùng đọc sách"
+        "A 哥，你那儿有黄色的铅笔吗？ (Gē, nǐ nàr yǒu huángsè de qiānbǐ ma?)",
+        "B 牛奶是我昨天中午买的，还能喝吗？ (Niúnǎi shì wǒ zuótiān zhōngwǔ mǎi de, hái néng hē ma?)",
+        "C 这个车有多长时间没洗了？ (Zhège chē yǒu duō cháng shíjiān méi xǐ le?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 生日快乐！希望你喜欢。 (Shēngrì kuàilè! Xīwàng nǐ xǐhuan.)",
+        "F 这本书很有意思，你也看看。 (Zhè běn shū hěn yǒuyìsi, nǐ yě kànkan.)"
       ]
     },
     {
@@ -652,12 +652,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Shēngrì kuàilè! Xīwàng nǐ xǐhuan.",
       "options": [
-        "A: Bút chì màu trong ống",
-        "B: Uống hộp sữa tươi",
-        "C: Rửa xe ô tô",
-        "D: Đang ném bóng rổ",
-        "E: Hộp quà sinh nhật",
-        "F: Hai người cùng đọc sách"
+        "A 哥，你那儿有黄色的铅笔吗？ (Gē, nǐ nàr yǒu huángsè de qiānbǐ ma?)",
+        "B 牛奶是我昨天中午买的，还能喝吗？ (Niúnǎi shì wǒ zuótiān zhōngwǔ mǎi de, hái néng hē ma?)",
+        "C 这个车有多长时间没洗了？ (Zhège chē yǒu duō cháng shíjiān méi xǐ le?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 生日快乐！希望你喜欢。 (Shēngrì kuàilè! Xīwàng nǐ xǐhuan.)",
+        "F 这本书很有意思，你也看看。 (Zhè běn shū hěn yǒuyìsi, nǐ yě kànkan.)"
       ]
     },
     {
@@ -676,12 +676,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè běn shū hěn yǒuyìsi, nǐ yě kànkan.",
       "options": [
-        "A: Bút chì màu trong ống",
-        "B: Uống hộp sữa tươi",
-        "C: Rửa xe ô tô",
-        "D: Đang ném bóng rổ",
-        "E: Hộp quà sinh nhật",
-        "F: Hai người cùng đọc sách"
+        "A 哥，你那儿有黄色的铅笔吗？ (Gē, nǐ nàr yǒu huángsè de qiānbǐ ma?)",
+        "B 牛奶是我昨天中午买的，还能喝吗？ (Niúnǎi shì wǒ zuótiān zhōngwǔ mǎi de, hái néng hē ma?)",
+        "C 这个车有多长时间没洗了？ (Zhège chē yǒu duō cháng shíjiān méi xǐ le?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 生日快乐！希望你喜欢。 (Shēngrì kuàilè! Xīwàng nǐ xǐhuan.)",
+        "F 这本书很有意思，你也看看。 (Zhè běn shū hěn yǒuyìsi, nǐ yě kànkan.)"
       ]
     },
     {
@@ -700,12 +700,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Niúnǎi shì wǒ zuótiān zhōngwǔ mǎi de, hái néng hē ma?",
       "options": [
-        "A: Bút chì màu trong ống",
-        "B: Uống hộp sữa tươi",
-        "C: Rửa xe ô tô",
-        "D: Đang ném bóng rổ",
-        "E: Hộp quà sinh nhật",
-        "F: Hai người cùng đọc sách"
+        "A 哥，你那儿有黄色的铅笔吗？ (Gē, nǐ nàr yǒu huángsè de qiānbǐ ma?)",
+        "B 牛奶是我昨天中午买的，还能喝吗？ (Niúnǎi shì wǒ zuótiān zhōngwǔ mǎi de, hái néng hē ma?)",
+        "C 这个车有多长时间没洗了？ (Zhège chē yǒu duō cháng shíjiān méi xǐ le?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 生日快乐！希望你喜欢。 (Shēngrì kuàilè! Xīwàng nǐ xǐhuan.)",
+        "F 这本书很有意思，你也看看。 (Zhè běn shū hěn yǒuyìsi, nǐ yě kànkan.)"
       ]
     },
     {
@@ -724,12 +724,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Gē, nǐ nàr yǒu huángsè de qiānbǐ ma?",
       "options": [
-        "A: Bút chì màu trong ống",
-        "B: Uống hộp sữa tươi",
-        "C: Rửa xe ô tô",
-        "D: Đang ném bóng rổ",
-        "E: Hộp quà sinh nhật",
-        "F: Hai người cùng đọc sách"
+        "A 哥，你那儿有黄色的铅笔吗？ (Gē, nǐ nàr yǒu huángsè de qiānbǐ ma?)",
+        "B 牛奶是我昨天中午买的，还能喝吗？ (Niúnǎi shì wǒ zuótiān zhōngwǔ mǎi de, hái néng hē ma?)",
+        "C 这个车有多长时间没洗了？ (Zhège chē yǒu duō cháng shíjiān méi xǐ le?)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 生日快乐！希望你喜欢。 (Shēngrì kuàilè! Xīwàng nǐ xǐhuan.)",
+        "F 这本书很有意思，你也看看。 (Zhè běn shū hěn yǒuyìsi, nǐ yě kànkan.)"
       ]
     },
     {
@@ -744,12 +744,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_41.webp",
       "options": [
-        "A: 累 (lèi)",
-        "B: 旁边 (pángbiān)",
-        "C: 介绍 (jièshào)",
-        "D: 已经 (yǐjīng)",
-        "E: 贵 (guì)",
-        "F: 告诉 (gàosu)"
+        "A 累 (lèi)",
+        "B 旁边 (pángbiān)",
+        "C 介绍 (jièshào)",
+        "D 已经 (yǐjīng)",
+        "E 贵 (guì)",
+        "F 告诉 (gàosu)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần phó từ điền trước độngcí 'zhīdào', phó từ 'yǐjīng' (đã) phù hợp nhất thành 'wǒ yǐjīng zhīdào le' (Tôi đã biết rồi).",
@@ -768,12 +768,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_42.webp",
       "options": [
-        "A: 累 (lèi)",
-        "B: 旁边 (pángbiān)",
-        "C: 介绍 (jièshào)",
-        "D: 已经 (yǐjīng)",
-        "E: 贵 (guì)",
-        "F: 告诉 (gàosu)"
+        "A 累 (lèi)",
+        "B 旁边 (pángbiān)",
+        "C 介绍 (jièshào)",
+        "D 已经 (yǐjīng)",
+        "E 贵 (guì)",
+        "F 告诉 (gàosu)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống điền động từ 'jièshào' (Giới thiệu) tạo thành ngữ cảnh 'tôi còn muốn giới thiệu hai người làm quen'.",
@@ -792,12 +792,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_43.webp",
       "options": [
-        "A: 累 (lèi)",
-        "B: 旁边 (pángbiān)",
-        "C: 介绍 (jièshào)",
-        "D: 已经 (yǐjīng)",
-        "E: 贵 (guì)",
-        "F: 告诉 (gàosu)"
+        "A 累 (lèi)",
+        "B 旁边 (pángbiān)",
+        "C 介绍 (jièshào)",
+        "D 已经 (yǐjīng)",
+        "E 贵 (guì)",
+        "F 告诉 (gàosu)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần tính từ miêu tả trạng thái sau khi bận rộn cả ngày, chọn 'lèi' (Mệt).",
@@ -816,12 +816,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_44.webp",
       "options": [
-        "A: 累 (lèi)",
-        "B: 旁边 (pángbiān)",
-        "C: 介绍 (jièshào)",
-        "D: 已经 (yǐjīng)",
-        "E: 贵 (guì)",
-        "F: 告诉 (gàosu)"
+        "A 累 (lèi)",
+        "B 旁边 (pángbiān)",
+        "C 介绍 (jièshào)",
+        "D 已经 (yǐjīng)",
+        "E 贵 (guì)",
+        "F 告诉 (gàosu)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần động từ diễn tả lời dặn của thầy giáo, chọn 'gàosù' (Nói cho/Bảo).",
@@ -840,12 +840,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_45.webp",
       "options": [
-        "A: 累 (lèi)",
-        "B: 旁边 (pángbiān)",
-        "C: 介绍 (jièshào)",
-        "D: 已经 (yǐjīng)",
-        "E: 贵 (guì)",
-        "F: 告诉 (gàosu)"
+        "A 累 (lèi)",
+        "B 旁边 (pángbiān)",
+        "C 介绍 (jièshào)",
+        "D 已经 (yǐjīng)",
+        "E 贵 (guì)",
+        "F 告诉 (gàosu)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống chỉ vị trí sau danh từ 'shāngdiàn', chọn danh từ chỉ phương hướng 'pángbiān' (Bên cạnh).",
@@ -969,12 +969,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_51.webp",
       "options": [
-        "A: 准备好了吗？可以开始了吗？",
-        "B: 不认识，可能是新来的同学吧。",
-        "C: 你妹妹和你们一起住？",
-        "D: 不客气，外面冷，你快进去吧，再见。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 那家饭店鱼做得不错，就是离这儿有点儿远。"
+        "A 准备好了吗？可以开始了吗？ (zhǔn bèi hǎo le ma ? kě yǐ kāi shǐ le ma ?)",
+        "B 不认识，可能是新来的同学吧。 (bú rèn shi , kě néng shì xīn lái de tóng xué ba)",
+        "C 你妹妹和你们一起住？ (nǐ mèi mei hé nǐ men yì qǐ zhù ?)",
+        "D 不客气，外面冷，你快进去吧，再见。 (bú kè qì , wài miàn lěng , nǐ kuài jìn qù ba , zài jiàn)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那家饭店鱼做得不错，就是离这儿有点儿远。 (nà jiā fàn diàn yú zuò dé bú cuò , jiù shì lí zhè ér yǒu diǎn er yuǎn)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi 51 'nǐ mèimèi hé nǐmen yìqǐ zhù？' (Em gái bạn sống cùng các bạn à?) ghép hợp lý nhất với câu trả lời 'méiyǒu，tā mǎifángzi le' (Không có, cô ấy mua nhà rồi), chọn C.",
@@ -993,12 +993,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_52.webp",
       "options": [
-        "A: 准备好了吗？可以开始了吗？",
-        "B: 不认识，可能是新来的同学吧。",
-        "C: 你妹妹和你们一起住？",
-        "D: 不客气，外面冷，你快进去吧，再见。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 那家饭店鱼做得不错，就是离这儿有点儿远。"
+        "A 准备好了吗？可以开始了吗？ (zhǔn bèi hǎo le ma ? kě yǐ kāi shǐ le ma ?)",
+        "B 不认识，可能是新来的同学吧。 (bú rèn shi , kě néng shì xīn lái de tóng xué ba)",
+        "C 你妹妹和你们一起住？ (nǐ mèi mei hé nǐ men yì qǐ zhù ?)",
+        "D 不客气，外面冷，你快进去吧，再见。 (bú kè qì , wài miàn lěng , nǐ kuài jìn qù ba , zài jiàn)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那家饭店鱼做得不错，就是离这儿有点儿远。 (nà jiā fàn diàn yú zuò dé bú cuò , jiù shì lí zhè ér yǒu diǎn er yuǎn)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi A 'zhǔnbèi hǎolema？kěyǐ kāishǐ le ma？' (Đã chuẩn bị xong chưa? Có thể bắt đầu chưa?) ghép với vế đáp 'Děng yíxià...' (Đợi chút, cho tôi 5 phút nữa), chọn A.",
@@ -1017,12 +1017,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_53.webp",
       "options": [
-        "A: 准备好了吗？可以开始了吗？",
-        "B: 不认识，可能是新来的同学吧。",
-        "C: 你妹妹和你们一起住？",
-        "D: 不客气，外面冷，你快进去吧，再见。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 那家饭店鱼做得不错，就是离这儿有点儿远。"
+        "A 准备好了吗？可以开始了吗？ (zhǔn bèi hǎo le ma ? kě yǐ kāi shǐ le ma ?)",
+        "B 不认识，可能是新来的同学吧。 (bú rèn shi , kě néng shì xīn lái de tóng xué ba)",
+        "C 你妹妹和你们一起住？ (nǐ mèi mei hé nǐ men yì qǐ zhù ?)",
+        "D 不客气，外面冷，你快进去吧，再见。 (bú kè qì , wài miàn lěng , nǐ kuài jìn qù ba , zài jiàn)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那家饭店鱼做得不错，就是离这儿有点儿远。 (nà jiā fàn diàn yú zuò dé bú cuò , jiù shì lí zhè ér yǒu diǎn er yuǎn)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi 53 hỏi danh tính người ngồi bên phải '...shì shì shuí？', ghép với câu đáp B 'bù rènshí，kěnéng shì xīnlái de tóngxué ba' (Không quen, chắc là học sinh mới), chọn B.",
@@ -1041,12 +1041,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_54.webp",
       "options": [
-        "A: 准备好了吗？可以开始了吗？",
-        "B: 不认识，可能是新来的同学吧。",
-        "C: 你妹妹和你们一起住？",
-        "D: 不客气，外面冷，你快进去吧，再见。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 那家饭店鱼做得不错，就是离这儿有点儿远。"
+        "A 准备好了吗？可以开始了吗？ (zhǔn bèi hǎo le ma ? kě yǐ kāi shǐ le ma ?)",
+        "B 不认识，可能是新来的同学吧。 (bú rèn shi , kě néng shì xīn lái de tóng xué ba)",
+        "C 你妹妹和你们一起住？ (nǐ mèi mei hé nǐ men yì qǐ zhù ?)",
+        "D 不客气，外面冷，你快进去吧，再见。 (bú kè qì , wài miàn lěng , nǐ kuài jìn qù ba , zài jiàn)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那家饭店鱼做得不错，就是离这儿有点儿远。 (nà jiā fàn diàn yú zuò dé bú cuò , jiù shì lí zhè ér yǒu diǎn er yuǎn)"
       ],
       "board_image": null,
       "explanation": "Câu F phàn nàn 'nà jiā fàndiàn... lí zhèér yǒudiǎnér yuǎn' (Quán ăn đó xa quá), ghép khớp với lời an ủi 'Méiguānxi...zuò chūzūchē qù' (Không sao, bắt taxi đi), chọn F.",
@@ -1065,12 +1065,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_55.webp",
       "options": [
-        "A: 准备好了吗？可以开始了吗？",
-        "B: 不认识，可能是新来的同学吧。",
-        "C: 你妹妹和你们一起住？",
-        "D: 不客气，外面冷，你快进去吧，再见。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 那家饭店鱼做得不错，就是离这儿有点儿远。"
+        "A 准备好了吗？可以开始了吗？ (zhǔn bèi hǎo le ma ? kě yǐ kāi shǐ le ma ?)",
+        "B 不认识，可能是新来的同学吧。 (bú rèn shi , kě néng shì xīn lái de tóng xué ba)",
+        "C 你妹妹和你们一起住？ (nǐ mèi mei hé nǐ men yì qǐ zhù ?)",
+        "D 不客气，外面冷，你快进去吧，再见。 (bú kè qì , wài miàn lěng , nǐ kuài jìn qù ba , zài jiàn)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 那家饭店鱼做得不错，就是离这儿有点儿远。 (nà jiā fàn diàn yú zuò dé bú cuò , jiù shì lí zhè ér yǒu diǎn er yuǎn)"
       ],
       "board_image": null,
       "explanation": "Lời cảm ơn 'xièxiè nǐ sòng wǒ huíjiā' (Cảm ơn bạn đưa tôi về nhà) ghép với lời đáp D 'bù kèqì... zàijiàn' (Không có gì... tạm biệt), chọn D.",
@@ -1089,11 +1089,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_56.webp",
       "options": [
-        "A: 第一天上班，大家给了我很多帮助。",
-        "B: 你们别等我吃饭了。",
-        "C: 这是您的孩子？真漂亮，多大了？",
-        "D: 我电脑出问题了，怎么都打不开。",
-        "E: 先生，您要喝点儿什么？"
+        "A 第一天上班，大家给了我很多帮助。 (dì yī tiān shàng bān , dà jiā gěi le wǒ hěn duō bāng zhù)",
+        "B 你们别等我吃饭了。 (nǐ men bié děng wǒ chī fàn le)",
+        "C 这是您的孩子？真漂亮，多大了？ (zhè shì nín de hái zi ? zhēn piào liang , duō dà le ?)",
+        "D 我电脑出问题了，怎么都打不开。 (wǒ diàn nǎo chū wèn tí le , zěn me dōu dǎ bù kāi)",
+        "E 先生，您要喝点儿什么？ (xiān shēng , nín yào hē diǎn ér shén me ?)"
       ],
       "board_image": null,
       "explanation": "Câu đáp 56 '6suì...' (6 tuổi...) trả lời cho câu hỏi C 'zhè shì nín de háizi？... duōdà le？' (Đây là con bạn à?... Bao nhiêu tuổi rồi?), chọn C.",
@@ -1112,11 +1112,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_57.webp",
       "options": [
-        "A: 第一天上班，大家给了我很多帮助。",
-        "B: 你们别等我吃饭了。",
-        "C: 这是您的孩子？真漂亮，多大了？",
-        "D: 我电脑出问题了，怎么都打不开。",
-        "E: 先生，您要喝点儿什么？"
+        "A 第一天上班，大家给了我很多帮助。 (dì yī tiān shàng bān , dà jiā gěi le wǒ hěn duō bāng zhù)",
+        "B 你们别等我吃饭了。 (nǐ men bié děng wǒ chī fàn le)",
+        "C 这是您的孩子？真漂亮，多大了？ (zhè shì nín de hái zi ? zhēn piào liang , duō dà le ?)",
+        "D 我电脑出问题了，怎么都打不开。 (wǒ diàn nǎo chū wèn tí le , zěn me dōu dǎ bù kāi)",
+        "E 先生，您要喝点儿什么？ (xiān shēng , nín yào hē diǎn ér shén me ?)"
       ],
       "board_image": null,
       "explanation": "Câu 57 'Tôi buổi tối đi xem phim về muộn' ghép khớp với lời dặn B 'nǐmen bié děng wǒ chīfàn le' (Mọi người đừng đợi tôi ăn cơm nhé), chọn B.",
@@ -1135,11 +1135,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_58.webp",
       "options": [
-        "A: 第一天上班，大家给了我很多帮助。",
-        "B: 你们别等我吃饭了。",
-        "C: 这是您的孩子？真漂亮，多大了？",
-        "D: 我电脑出问题了，怎么都打不开。",
-        "E: 先生，您要喝点儿什么？"
+        "A 第一天上班，大家给了我很多帮助。 (dì yī tiān shàng bān , dà jiā gěi le wǒ hěn duō bāng zhù)",
+        "B 你们别等我吃饭了。 (nǐ men bié děng wǒ chī fàn le)",
+        "C 这是您的孩子？真漂亮，多大了？ (zhè shì nín de hái zi ? zhēn piào liang , duō dà le ?)",
+        "D 我电脑出问题了，怎么都打不开。 (wǒ diàn nǎo chū wèn tí le , zěn me dōu dǎ bù kāi)",
+        "E 先生，您要喝点儿什么？ (xiān shēng , nín yào hē diǎn ér shén me ?)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi 58 'Bạn xem giúp tôi được không?' nối tiếp hợp lý sau câu D 'wǒ diànnǎo chū wèntí le，zěnme dōu dǎbùkāi' (Máy tính tôi hỏng rồi, mở không lên), chọn D.",
@@ -1158,11 +1158,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_59.webp",
       "options": [
-        "A: 第一天上班，大家给了我很多帮助。",
-        "B: 你们别等我吃饭了。",
-        "C: 这是您的孩子？真漂亮，多大了？",
-        "D: 我电脑出问题了，怎么都打不开。",
-        "E: 先生，您要喝点儿什么？"
+        "A 第一天上班，大家给了我很多帮助。 (dì yī tiān shàng bān , dà jiā gěi le wǒ hěn duō bāng zhù)",
+        "B 你们别等我吃饭了。 (nǐ men bié děng wǒ chī fàn le)",
+        "C 这是您的孩子？真漂亮，多大了？ (zhè shì nín de hái zi ? zhēn piào liang , duō dà le ?)",
+        "D 我电脑出问题了，怎么都打不开。 (wǒ diàn nǎo chū wèn tí le , zěn me dōu dǎ bù kāi)",
+        "E 先生，您要喝点儿什么？ (xiān shēng , nín yào hē diǎn ér shén me ?)"
       ],
       "board_image": null,
       "explanation": "Câu 59 gọi 'gěi wǒ lái bēi kāfēiba' (Cho tôi cốc cà phê) trả lời cho câu hỏi phục vụ E 'xiānshēng，nín yào hē diǎnér shénme？' (Thưa ông, ông muốn uống gì?), chọn E.",
@@ -1181,11 +1181,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_60.webp",
       "options": [
-        "A: 第一天上班，大家给了我很多帮助。",
-        "B: 你们别等我吃饭了。",
-        "C: 这是您的孩子？真漂亮，多大了？",
-        "D: 我电脑出问题了，怎么都打不开。",
-        "E: 先生，您要喝点儿什么？"
+        "A 第一天上班，大家给了我很多帮助。 (dì yī tiān shàng bān , dà jiā gěi le wǒ hěn duō bāng zhù)",
+        "B 你们别等我吃饭了。 (nǐ men bié děng wǒ chī fàn le)",
+        "C 这是您的孩子？真漂亮，多大了？ (zhè shì nín de hái zi ? zhēn piào liang , duō dà le ?)",
+        "D 我电脑出问题了，怎么都打不开。 (wǒ diàn nǎo chū wèn tí le , zěn me dōu dǎ bù kāi)",
+        "E 先生，您要喝点儿什么？ (xiān shēng , nín yào hē diǎn ér shén me ?)"
       ],
       "board_image": null,
       "explanation": "Câu 60 'Được làm việc ở đây tôi rất vui' liên kết logic với câu A 'dìyītiān shàngbān，dàjiā gěi le wǒ hěnduō bāngzhù' (Ngày đầu đi làm mọi người giúp đỡ tôi nhiều), chọn A.",

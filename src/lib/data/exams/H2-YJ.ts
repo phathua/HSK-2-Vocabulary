@@ -658,12 +658,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè jiàn yīfu hěn piàoliang, duōshao qián?",
       "options": [
-        "A: Cô gái đeo balo đi du lịch",
-        "B: Nữ phục vụ bàn nhận order",
-        "C: Nam giới điều chỉnh khung tranh trên tường",
-        "D: Nam thanh niên chuẩn bị ném bóng rổ",
-        "E: Thầy giáo hướng dẫn bé gái học bài",
-        "F: Người phụ nữ chọn mua quần áo"
+        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
+        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
+        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
+        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
       ]
     },
     {
@@ -682,12 +682,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.",
       "options": [
-        "A: Cô gái đeo balo đi du lịch",
-        "B: Nữ phục vụ bàn nhận order",
-        "C: Nam giới điều chỉnh khung tranh trên tường",
-        "D: Nam thanh niên chuẩn bị ném bóng rổ",
-        "E: Thầy giáo hướng dẫn bé gái học bài",
-        "F: Người phụ nữ chọn mua quần áo"
+        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
+        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
+        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
+        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
       ]
     },
     {
@@ -706,12 +706,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā juéde lǚyóu shì hěn kuàilè de shìqing.",
       "options": [
-        "A: Cô gái đeo balo đi du lịch",
-        "B: Nữ phục vụ bàn nhận order",
-        "C: Nam giới điều chỉnh khung tranh trên tường",
-        "D: Nam thanh niên chuẩn bị ném bóng rổ",
-        "E: Thầy giáo hướng dẫn bé gái học bài",
-        "F: Người phụ nữ chọn mua quần áo"
+        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
+        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
+        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
+        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
       ]
     },
     {
@@ -730,12 +730,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Fúwùyuán, nǐmen zhèr shénme cài hǎochī?",
       "options": [
-        "A: Cô gái đeo balo đi du lịch",
-        "B: Nữ phục vụ bàn nhận order",
-        "C: Nam giới điều chỉnh khung tranh trên tường",
-        "D: Nam thanh niên chuẩn bị ném bóng rổ",
-        "E: Thầy giáo hướng dẫn bé gái học bài",
-        "F: Người phụ nữ chọn mua quần áo"
+        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
+        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
+        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
+        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
       ]
     },
     {
@@ -754,12 +754,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.",
       "options": [
-        "A: Cô gái đeo balo đi du lịch",
-        "B: Nữ phục vụ bàn nhận order",
-        "C: Nam giới điều chỉnh khung tranh trên tường",
-        "D: Nam thanh niên chuẩn bị ném bóng rổ",
-        "E: Thầy giáo hướng dẫn bé gái học bài",
-        "F: Người phụ nữ chọn mua quần áo"
+        "A 她觉得旅游是很快乐的事情。 (Tā juéde lǚyóu shì hěn kuàilè de shìqing.)",
+        "B 服务员，你们这儿什么菜好吃？ (Fúwùyuán, nǐmen zhèr shénme cài hǎochī?)",
+        "C 右边还有点儿高，你往下一些。 (Yòubian hái yǒudiǎnr gāo, nǐ wǎng xià yìxiē.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 第三题错了，我告诉你怎么做。 (Dì-sān tí cuò le, wǒ gàosu nǐ zěnme zuò.)",
+        "F 这件衣服很漂亮，多少钱？ (Zhè jiàn yīfu hěn piàoliang, duōshao qián?)"
       ]
     },
     {
@@ -774,12 +774,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_41.webp",
       "options": [
-        "A: 笑 (xiào)",
-        "B: 意思 (yìsi)",
-        "C: 可以 (kěyǐ)",
-        "D: 课 (kè)",
-        "E: 贵 (guì)",
-        "F: 两 (liǎng)"
+        "A 笑 (xiào)",
+        "B 意思 (yìsi)",
+        "C 可以 (kěyǐ)",
+        "D 课 (kè)",
+        "E 贵 (guì)",
+        "F 两 (liǎng)"
       ],
       "board_image": null,
       "explanation": "Vị trí cần trợ từ/động từ năng nguyện biểu thị khả năng \"kěyǐ\" (có thể), câu hoàn chỉnh: \"tā xīwàng míngnián（kěyǐ）qù běijīng gōngzuò。\"",
@@ -798,12 +798,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_42.webp",
       "options": [
-        "A: 笑 (xiào)",
-        "B: 意思 (yìsi)",
-        "C: 可以 (kěyǐ)",
-        "D: 课 (kè)",
-        "E: 贵 (guì)",
-        "F: 两 (liǎng)"
+        "A 笑 (xiào)",
+        "B 意思 (yìsi)",
+        "C 可以 (kěyǐ)",
+        "D 课 (kè)",
+        "E 贵 (guì)",
+        "F 两 (liǎng)"
       ],
       "board_image": null,
       "explanation": "Vị trí cần động từ hành động \"xiào\" (cười), câu hoàn chỉnh: \"dàjiā zài（xiào）shénme ne？\" (Mọi người đang cười gì thế?).",
@@ -822,12 +822,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_43.webp",
       "options": [
-        "A: 笑 (xiào)",
-        "B: 意思 (yìsi)",
-        "C: 可以 (kěyǐ)",
-        "D: 课 (kè)",
-        "E: 贵 (guì)",
-        "F: 两 (liǎng)"
+        "A 笑 (xiào)",
+        "B 意思 (yìsi)",
+        "C 可以 (kěyǐ)",
+        "D 课 (kè)",
+        "E 贵 (guì)",
+        "F 两 (liǎng)"
       ],
       "board_image": null,
       "explanation": "Vị trí cần số từ chỉ độ tuổi chênh lệch \"liǎng\" (2), câu hoàn chỉnh: \"wǒ zhàngfū32suì，bǐ wǒ dà（liǎng）suì。\"",
@@ -846,12 +846,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_44.webp",
       "options": [
-        "A: 笑 (xiào)",
-        "B: 意思 (yìsi)",
-        "C: 可以 (kěyǐ)",
-        "D: 课 (kè)",
-        "E: 贵 (guì)",
-        "F: 两 (liǎng)"
+        "A 笑 (xiào)",
+        "B 意思 (yìsi)",
+        "C 可以 (kěyǐ)",
+        "D 课 (kè)",
+        "E 贵 (guì)",
+        "F 两 (liǎng)"
       ],
       "board_image": null,
       "explanation": "Vị trí sau \"hěn yǒu\" cần danh từ \"yìsi\", tạo thành cụm \"hěn yǒuyìsi\" (rất thú vị). Câu hoàn chỉnh: \"tā shuōhuà fēicháng yǒu（yìsi）。\"",
@@ -870,12 +870,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_45.webp",
       "options": [
-        "A: 笑 (xiào)",
-        "B: 意思 (yìsi)",
-        "C: 可以 (kěyǐ)",
-        "D: 课 (kè)",
-        "E: 贵 (guì)",
-        "F: 两 (liǎng)"
+        "A 笑 (xiào)",
+        "B 意思 (yìsi)",
+        "C 可以 (kěyǐ)",
+        "D 课 (kè)",
+        "E 贵 (guì)",
+        "F 两 (liǎng)"
       ],
       "board_image": null,
       "explanation": "Cụm từ cố định \"shàngkè\" (lên lớp/đi học). Câu hoàn chỉnh: \"tā qù xuéxiào shàng（kè）le，hái méi huílái。\"",
@@ -999,12 +999,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_51.webp",
       "options": [
-        "A: 你女儿现在在做什么工作？",
-        "B: 我们是朋友，你就别客气了。",
-        "C: 快到9点了，你准备什么时候去机场？",
-        "D: 不知道，他没告诉我。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 儿子怎么这么高兴？"
+        "A 你女儿现在在做什么工作？ (nǐ nǚ ér xiàn zài zài zuò shén me gōng zuò ?)",
+        "B 我们是朋友，你就别客气了。 (wǒ men shì péng yǒu , nǐ jiù bié kè qì le)",
+        "C 快到9点了，你准备什么时候去机场？ (kuài dào 9 diǎn le , nǐ zhǔn bèi shén me shí hòu qù jī chǎng ?)",
+        "D 不知道，他没告诉我。 (bù zhī dào , tā méi gào sù wǒ)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 儿子怎么这么高兴？ (ér zi zěn me zhè me gāo xìng ?)"
       ],
       "board_image": null,
       "explanation": "Câu nói cảm ơn \"xièxiè nǐ duì wǒ de bāngzhù\" đáp lại bằng câu xã giao thân mật B \"wǒmen shì péngyǒu，nǐ jiù bié kèqì le\" (Chúng ta là bạn bè, bạn đừng khách khí).",
@@ -1023,12 +1023,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_52.webp",
       "options": [
-        "A: 你女儿现在在做什么工作？",
-        "B: 我们是朋友，你就别客气了。",
-        "C: 快到9点了，你准备什么时候去机场？",
-        "D: 不知道，他没告诉我。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 儿子怎么这么高兴？"
+        "A 你女儿现在在做什么工作？ (nǐ nǚ ér xiàn zài zài zuò shén me gōng zuò ?)",
+        "B 我们是朋友，你就别客气了。 (wǒ men shì péng yǒu , nǐ jiù bié kè qì le)",
+        "C 快到9点了，你准备什么时候去机场？ (kuài dào 9 diǎn le , nǐ zhǔn bèi shén me shí hòu qù jī chǎng ?)",
+        "D 不知道，他没告诉我。 (bù zhī dào , tā méi gào sù wǒ)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 儿子怎么这么高兴？ (ér zi zěn me zhè me gāo xìng ?)"
       ],
       "board_image": null,
       "explanation": "Câu trả lời nghề nghiệp \"tā shì yígè hànyǔ lǎoshī\" khớp với câu hỏi A \"nǐ nǚér xiànzài zài zuò shénme gōngzuò？\" (Con gái bạn hiện đang làm công việc gì?).",
@@ -1047,12 +1047,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_53.webp",
       "options": [
-        "A: 你女儿现在在做什么工作？",
-        "B: 我们是朋友，你就别客气了。",
-        "C: 快到9点了，你准备什么时候去机场？",
-        "D: 不知道，他没告诉我。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 儿子怎么这么高兴？"
+        "A 你女儿现在在做什么工作？ (nǐ nǚ ér xiàn zài zài zuò shén me gōng zuò ?)",
+        "B 我们是朋友，你就别客气了。 (wǒ men shì péng yǒu , nǐ jiù bié kè qì le)",
+        "C 快到9点了，你准备什么时候去机场？ (kuài dào 9 diǎn le , nǐ zhǔn bèi shén me shí hòu qù jī chǎng ?)",
+        "D 不知道，他没告诉我。 (bù zhī dào , tā méi gào sù wǒ)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 儿子怎么这么高兴？ (ér zi zěn me zhè me gāo xìng ?)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi số điện thoại \"xiǎowáng de shǒujīhào shì duōshǎo？\" khớp với câu trả lời D \"bù zhīdào，tā méi gàosù wǒ。\" (Không biết, anh ấy không nói với tôi).",
@@ -1071,12 +1071,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_54.webp",
       "options": [
-        "A: 你女儿现在在做什么工作？",
-        "B: 我们是朋友，你就别客气了。",
-        "C: 快到9点了，你准备什么时候去机场？",
-        "D: 不知道，他没告诉我。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 儿子怎么这么高兴？"
+        "A 你女儿现在在做什么工作？ (nǐ nǚ ér xiàn zài zài zuò shén me gōng zuò ?)",
+        "B 我们是朋友，你就别客气了。 (wǒ men shì péng yǒu , nǐ jiù bié kè qì le)",
+        "C 快到9点了，你准备什么时候去机场？ (kuài dào 9 diǎn le , nǐ zhǔn bèi shén me shí hòu qù jī chǎng ?)",
+        "D 不知道，他没告诉我。 (bù zhī dào , tā méi gào sù wǒ)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 儿子怎么这么高兴？ (ér zi zěn me zhè me gāo xìng ?)"
       ],
       "board_image": null,
       "explanation": "Câu trả lời thời gian xuất phát \"shífēnzhōng hòu jiù zǒu\" (10 phút nữa sẽ đi) khớp với câu hỏi C \"kuàidào9diǎn le，nǐ zhǔnbèi shénme shíhòu qù jīchǎng？\".",
@@ -1095,12 +1095,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_55.webp",
       "options": [
-        "A: 你女儿现在在做什么工作？",
-        "B: 我们是朋友，你就别客气了。",
-        "C: 快到9点了，你准备什么时候去机场？",
-        "D: 不知道，他没告诉我。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 儿子怎么这么高兴？"
+        "A 你女儿现在在做什么工作？ (nǐ nǚ ér xiàn zài zài zuò shén me gōng zuò ?)",
+        "B 我们是朋友，你就别客气了。 (wǒ men shì péng yǒu , nǐ jiù bié kè qì le)",
+        "C 快到9点了，你准备什么时候去机场？ (kuài dào 9 diǎn le , nǐ zhǔn bèi shén me shí hòu qù jī chǎng ?)",
+        "D 不知道，他没告诉我。 (bù zhī dào , tā méi gào sù wǒ)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 儿子怎么这么高兴？ (ér zi zěn me zhè me gāo xìng ?)"
       ],
       "board_image": null,
       "explanation": "Câu giải thích nguyên nhân \"yīnwèi...\" khớp với câu hỏi F \"érzi zěnme zhème gāoxìng？\" (Sao con trai lại vui thế?).",
@@ -1119,11 +1119,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_56.webp",
       "options": [
-        "A: 这本书你已经看完厂？",
-        "B: 你的眼睛怎么红了？",
-        "C: 你穿得太少了，出去会冷的。",
-        "D: 你好，812号房间是往前走吗？",
-        "E: 你能帮我开一下门吗？"
+        "A 这本书你已经看完厂？ (zhè běn shū nǐ yǐ jīng kàn wán chǎng ?)",
+        "B 你的眼睛怎么红了？ (nǐ de yǎn jīng zěn me hóng le ?)",
+        "C 你穿得太少了，出去会冷的。 (nǐ chuān dé tài shǎo le , chū qù huì lěng de)",
+        "D 你好，812号房间是往前走吗？ (nǐ hǎo , 8 1 2 hào fáng jiān shì wǎng qián zǒu ma ?)",
+        "E 你能帮我开一下门吗？ (nǐ néng bāng wǒ kāi yí xià mén ma ?)"
       ],
       "board_image": null,
       "explanation": "Câu đồng ý hỗ trợ \"hǎo de，méi wèntí\" khớp với lời nhờ vả E \"nǐ néng bāng wǒ kāi yīxià mén ma？\" (Bạn có thể giúp tôi mở cửa một chút không?).",
@@ -1142,11 +1142,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_57.webp",
       "options": [
-        "A: 这本书你已经看完厂？",
-        "B: 你的眼睛怎么红了？",
-        "C: 你穿得太少了，出去会冷的。",
-        "D: 你好，812号房间是往前走吗？",
-        "E: 你能帮我开一下门吗？"
+        "A 这本书你已经看完厂？ (zhè běn shū nǐ yǐ jīng kàn wán chǎng ?)",
+        "B 你的眼睛怎么红了？ (nǐ de yǎn jīng zěn me hóng le ?)",
+        "C 你穿得太少了，出去会冷的。 (nǐ chuān dé tài shǎo le , chū qù huì lěng de)",
+        "D 你好，812号房间是往前走吗？ (nǐ hǎo , 8 1 2 hào fáng jiān shì wǎng qián zǒu ma ?)",
+        "E 你能帮我开一下门吗？ (nǐ néng bāng wǒ kāi yí xià mén ma ?)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi đường/tìm phòng \"nǐhǎo，812hào fángjiān shì wǎngqiánzǒu ma？\" khớp với câu chỉ hướng D \"duì，zuì lǐbiān nàge jiùshì。\" (Đúng rồi, cái ở trong cùng chính là nó).",
@@ -1165,11 +1165,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_58.webp",
       "options": [
-        "A: 这本书你已经看完厂？",
-        "B: 你的眼睛怎么红了？",
-        "C: 你穿得太少了，出去会冷的。",
-        "D: 你好，812号房间是往前走吗？",
-        "E: 你能帮我开一下门吗？"
+        "A 这本书你已经看完厂？ (zhè běn shū nǐ yǐ jīng kàn wán chǎng ?)",
+        "B 你的眼睛怎么红了？ (nǐ de yǎn jīng zěn me hóng le ?)",
+        "C 你穿得太少了，出去会冷的。 (nǐ chuān dé tài shǎo le , chū qù huì lěng de)",
+        "D 你好，812号房间是往前走吗？ (nǐ hǎo , 8 1 2 hào fáng jiān shì wǎng qián zǒu ma ?)",
+        "E 你能帮我开一下门吗？ (nǐ néng bāng wǒ kāi yí xià mén ma ?)"
       ],
       "board_image": null,
       "explanation": "Câu dặn dò giữ ấm \"nǐ chuān dé tàishǎo le，chūqù huì lěng de\" khớp với câu đáp C \"méiguānxì，wǒ hěnkuài jiù huílái。\" (Không sao đâu, tôi sẽ về nhanh thôi).",
@@ -1188,11 +1188,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_59.webp",
       "options": [
-        "A: 这本书你已经看完厂？",
-        "B: 你的眼睛怎么红了？",
-        "C: 你穿得太少了，出去会冷的。",
-        "D: 你好，812号房间是往前走吗？",
-        "E: 你能帮我开一下门吗？"
+        "A 这本书你已经看完厂？ (zhè běn shū nǐ yǐ jīng kàn wán chǎng ?)",
+        "B 你的眼睛怎么红了？ (nǐ de yǎn jīng zěn me hóng le ?)",
+        "C 你穿得太少了，出去会冷的。 (nǐ chuān dé tài shǎo le , chū qù huì lěng de)",
+        "D 你好，812号房间是往前走吗？ (nǐ hǎo , 8 1 2 hào fáng jiān shì wǎng qián zǒu ma ?)",
+        "E 你能帮我开一下门吗？ (nǐ néng bāng wǒ kāi yí xià mén ma ?)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi đọc sách \"zhè běnshū nǐ yǐjīng kàn wán le？\" khớp với câu trả lời A \"hái méiyǒu。shàngmiàn yǒu hěnduō zì wǒ dōu méixuéguò。\" (Vẫn chưa, bên trong có nhiều chữ tôi chưa học).",
@@ -1211,11 +1211,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H2-YJ/images/H2-YJ_img_60.webp",
       "options": [
-        "A: 这本书你已经看完厂？",
-        "B: 你的眼睛怎么红了？",
-        "C: 你穿得太少了，出去会冷的。",
-        "D: 你好，812号房间是往前走吗？",
-        "E: 你能帮我开一下门吗？"
+        "A 这本书你已经看完厂？ (zhè běn shū nǐ yǐ jīng kàn wán chǎng ?)",
+        "B 你的眼睛怎么红了？ (nǐ de yǎn jīng zěn me hóng le ?)",
+        "C 你穿得太少了，出去会冷的。 (nǐ chuān dé tài shǎo le , chū qù huì lěng de)",
+        "D 你好，812号房间是往前走吗？ (nǐ hǎo , 8 1 2 hào fáng jiān shì wǎng qián zǒu ma ?)",
+        "E 你能帮我开一下门吗？ (nǐ néng bāng wǒ kāi yí xià mén ma ?)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi mắt đỏ \"nǐ de yǎnjīng zěnme hóng le？\" khớp với nguyên nhân B \"wǒ zuótiānwǎnshàng máng dào hěn wǎn，méishuì hǎo。\" (Tối qua tôi bận đến rất muộn, ngủ không tốt).",

@@ -7,6 +7,7 @@
   import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import type { QuestionItem, ExamMode } from '#lib/types/exam';
   import { getExamImageUrl } from '#lib/utils/examAssets';
+  import { parseOptionItem } from '#lib/utils/examOptionParser';
 
   interface Props {
     question: QuestionItem;
@@ -40,6 +41,8 @@
   interface ChoiceOption {
     label: string;
     value: string;
+    hanzi?: string;
+    pinyin?: string;
     icon?: 'check' | 'x';
     image?: string | null;
   }
@@ -57,20 +60,20 @@
     if (question.options && question.options.length > 0) {
       return question.options.map((opt) => {
         if (typeof opt === 'string') {
-          const m = opt.match(/^([A-Fa-f])[\s\.．、:：]*(.*)$/);
-          if (m) {
-            const letter = m[1].toUpperCase();
-            const textContent = m[2].trim();
-            return {
-              value: letter,
-              label: textContent || letter
-            };
-          }
-          return { label: opt, value: opt };
+          const parsed = parseOptionItem(opt);
+          return {
+            value: parsed.letter || opt,
+            label: parsed.rawLabel || opt,
+            hanzi: parsed.hanzi,
+            pinyin: parsed.pinyin
+          };
         }
+        const parsed = parseOptionItem(opt.label);
         return {
-          label: opt.label,
+          label: parsed.rawLabel || opt.label,
           value: opt.value,
+          hanzi: parsed.hanzi,
+          pinyin: parsed.pinyin,
           image: opt.image
         };
       });
@@ -277,42 +280,47 @@
     {/if}
   </div>
 
-  <!-- Lời thoại / Câu hỏi dạng text phân tầng có trật tự -->
+  <!-- Lời thoại / Câu hỏi dạng text phân tầng có trật tự: Pinyin ở trên, Chữ Hán ở dưới -->
   {#if parsedQuestionDisplay}
     <div class="my-3 space-y-1.5 select-text">
       {#if parsedQuestionDisplay.isTrueFalseStatement}
         <!-- Part 3: Khối Ngữ cảnh + Khối Nhận định ★ -->
         <div class="bg-slate-50/80 dark:bg-[#202224]/80 border border-slate-200/80 dark:border-neutral-800 rounded-2xl p-3.5 space-y-3">
           <div>
-            <div class="text-base md:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
-              {parsedQuestionDisplay.contextHanzi}
-            </div>
             {#if parsedQuestionDisplay.contextPinyin}
-              <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mt-0.5">
+              <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
                 {parsedQuestionDisplay.contextPinyin}
               </div>
             {/if}
+            <div class="text-base md:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
+              {parsedQuestionDisplay.contextHanzi}
+            </div>
           </div>
 
           <div class="pt-2.5 border-t border-slate-200/60 dark:border-neutral-700/60 flex items-start gap-2.5">
-            <span class="px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-xs font-black shrink-0">
+            <span class="px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-xs font-black shrink-0 mt-0.5">
               ★ Nhận định
             </span>
             <div class="flex-1">
-              <div class="text-base md:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
-                {parsedQuestionDisplay.statementHanzi}
-              </div>
               {#if parsedQuestionDisplay.statementPinyin}
-                <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mt-0.5">
+                <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide mb-1">
                   {parsedQuestionDisplay.statementPinyin}
                 </div>
               {/if}
+              <div class="text-base md:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
+                {parsedQuestionDisplay.statementHanzi}
+              </div>
             </div>
           </div>
         </div>
       {:else}
-        <!-- Câu thông thường: Hàng trên Chữ Hán, Hàng dưới Pinyin -->
+        <!-- Câu thông thường: Hàng trên Pinyin, Hàng dưới Chữ Hán -->
         <div class="space-y-1">
+          {#if parsedQuestionDisplay.pinyin}
+            <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
+              {parsedQuestionDisplay.pinyin}
+            </div>
+          {/if}
           <div class="text-base md:text-xl font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
             {#if parsedQuestionDisplay.hanzi.includes('( )') || parsedQuestionDisplay.hanzi.includes('（ ）')}
               {@const parts = parsedQuestionDisplay.hanzi.split(/[\(（]\s*[\)）]/)}
@@ -325,24 +333,19 @@
               {parsedQuestionDisplay.hanzi}
             {/if}
           </div>
-          {#if parsedQuestionDisplay.pinyin}
-            <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
-              {parsedQuestionDisplay.pinyin}
-            </div>
-          {/if}
         </div>
       {/if}
     </div>
   {:else if question.text}
     <div class="space-y-1 my-2 select-text">
-      <div class="text-base md:text-xl font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
-        {question.text}
-      </div>
       {#if question.pinyin}
         <div class="text-xs md:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
           {question.pinyin}
         </div>
       {/if}
+      <div class="text-base md:text-xl font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-relaxed">
+        {question.text}
+      </div>
     </div>
   {/if}
 
@@ -459,9 +462,22 @@
             {opt.value}
           </span>
 
-          <span class="font-medium text-xs md:text-sm leading-relaxed flex-1 select-text">
-            {opt.label !== opt.value ? opt.label : `Lựa chọn ${opt.value}`}
-          </span>
+          <div class="flex-1 min-w-0 flex flex-col items-start leading-snug py-0.5 select-text">
+            {#if opt.pinyin}
+              <span class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-tight break-words text-left">
+                {opt.pinyin}
+              </span>
+            {/if}
+            {#if opt.hanzi}
+              <span class="text-sm sm:text-base font-bold font-serif text-slate-900 dark:text-[#E3E3E3] leading-snug break-words text-left">
+                {opt.hanzi}
+              </span>
+            {:else}
+              <span class="font-medium text-xs md:text-sm leading-relaxed">
+                {opt.label !== opt.value ? opt.label : `Lựa chọn ${opt.value}`}
+              </span>
+            {/if}
+          </div>
         </button>
       {/each}
     </div>

@@ -365,7 +365,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：xiàxīngqī wǒmen yào qù shànghǎi lǚyóu，nǐ qù ma？nán：tàihǎole！wǒ yě qù。wèn：nán de shì shénme yìsi？ (Nǚ: Xià xīngqī wǒmen yào qù Shànghǎi lǚyóu, nǐ qù ma? Nán: Tài hǎo le! Wǒ yě qù. Wèn: Nán de shì shénme yìsi?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Xià xīngqī wǒmen yào qù Shànghǎi lǚyóu, nǐ qù ma? Nán: Tài hǎo le! Wǒ yě qù. Wèn: Nán de shì shénme yìsi?"
+      "listening_pinyin": "Nǚ: Xià xīngqī wǒmen yào qù Shànghǎi lǚyóu, nǐ qù ma? Nán: Tài hǎo le! Wǒ yě qù. Wèn: Nán de shì shénme yìsi?",
+      "pinyin": "C â u   2 1   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -385,7 +386,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：xiǎozhāng，nǐ nǚpéngyǒu méi lái？nán：méi lái。tā xiàwǔ yào kǎoshì wèn：xiǎozhāng de nǚpéngyǒu wèishénme méi lái？ (Nǚ: Xiǎo Zhāng, Nǐ nǚpéngyou méi lái? Nán: Méi lái. Tā xiàwǔ yào kǎoshì. 。 Xiǎo Zhāng de nǚpéngyou wèi shénme méi lái?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Xiǎo Zhāng, Nǐ nǚpéngyou méi lái? Nán: Méi lái. Tā xiàwǔ yào kǎoshì. 。 Xiǎo Zhāng de nǚpéngyou wèi shénme méi lái?"
+      "listening_pinyin": "Nǚ: Xiǎo Zhāng, Nǐ nǚpéngyou méi lái? Nán: Méi lái. Tā xiàwǔ yào kǎoshì. 。 Xiǎo Zhāng de nǚpéngyou wèi shénme méi lái?",
+      "pinyin": "C â u   2 2   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -405,7 +407,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：nǐ rènshí wánglǎoshī pángbiān nàge rén ma？nán：rènshí，tā jiùshì wánglǎoshī de zhàngfū wèn：wánglǎoshī pángbiān de rén shì shuí？ (Nǚ: Nǐ rènshi Wáng lǎoshī pángbiān nàge rén ma? Nán: Rènshi, tā jiù shì Wáng lǎoshī de zhàngfu. 。 Wáng lǎoshī pángbiān de rén shì shéi?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Nǐ rènshi Wáng lǎoshī pángbiān nàge rén ma? Nán: Rènshi, tā jiù shì Wáng lǎoshī de zhàngfu. 。 Wáng lǎoshī pángbiān de rén shì shéi?"
+      "listening_pinyin": "Nǚ: Nǐ rènshi Wáng lǎoshī pángbiān nàge rén ma? Nán: Rènshi, tā jiù shì Wáng lǎoshī de zhàngfu. 。 Wáng lǎoshī pángbiān de rén shì shéi?",
+      "pinyin": "C â u   2 3   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -425,7 +428,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：míngtiān shì nǐ de shēngrì ma？nán：búshì，wǒ de shēngrì shì qīyuè shíwǔhào wèn：nǎtiān shì tā de shēngrì？ (Nǚ: Míngtiān shì nǐ de shēngrì ma? Nán: Bú shì, wǒ de shēngrì shì qī yuè shíwǔ hào. 。 Nǎ tiān shì tā de shēngrì?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Míngtiān shì nǐ de shēngrì ma? Nán: Bú shì, wǒ de shēngrì shì qī yuè shíwǔ hào. 。 Nǎ tiān shì tā de shēngrì?"
+      "listening_pinyin": "Nǚ: Míngtiān shì nǐ de shēngrì ma? Nán: Bú shì, wǒ de shēngrì shì qī yuè shíwǔ hào. 。 Nǎ tiān shì tā de shēngrì?",
+      "pinyin": "C â u   2 4   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -445,7 +449,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nán：kuài bādiǎn le，wǒyào qù shàngbān le。nǚ：chī le zǎofàn zài qù ba。wèn：nǚ de xiǎng ràng nán de zuò shénme？ (Nán: Kuài bā diǎn le, wǒ yào qù shàngbān le. Nǚ: Chīle zǎofàn zài qù ba. Wèn: Nǚ de xiǎng ràng nán de zuò shénme?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nán: Kuài bā diǎn le, wǒ yào qù shàngbān le. Nǚ: Chīle zǎofàn zài qù ba. Wèn: Nǚ de xiǎng ràng nán de zuò shénme?"
+      "listening_pinyin": "Nán: Kuài bā diǎn le, wǒ yào qù shàngbān le. Nǚ: Chīle zǎofàn zài qù ba. Wèn: Nǚ de xiǎng ràng nán de zuò shénme?",
+      "pinyin": "C â u   2 5   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -465,7 +470,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：dào le。nǐ kàn，zhè jiùshì wǒmen xuéxiào nán：nǐmen xuéxiào zhēn dà。wèn：nán de juéde zhège xuéxiào zěnmeyàng？ (Nǚ: Dào le. Nǐ kàn, zhè jiù shì wǒmen xuéxiào. 。 Nǐmen xuéxiào zhēn dà. Wèn: Nán de juéde zhège xuéxiào zěnmeyàng?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Dào le. Nǐ kàn, zhè jiù shì wǒmen xuéxiào. 。 Nǐmen xuéxiào zhēn dà. Wèn: Nán de juéde zhège xuéxiào zěnmeyàng?"
+      "listening_pinyin": "Nǚ: Dào le. Nǐ kàn, zhè jiù shì wǒmen xuéxiào. 。 Nǐmen xuéxiào zhēn dà. Wèn: Nán de juéde zhège xuéxiào zěnmeyàng?",
+      "pinyin": "C â u   2 6   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -485,7 +491,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nán：wǒ zhù zài sānlíngsì。nǐ zhù zài nǎge fángjiān nǚ：wǒ zhù sān língqī。wèn：nǚ de zhù zài nǎge fángjiān？ (Nán: Wǒ zhù zài sān líng sì. Nǐ zhù zài nǎge fángjiān?? Wǒ zhù sān líng qī. Wèn: Nǚ de zhù zài nǎge fángjiān?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nán: Wǒ zhù zài sān líng sì. Nǐ zhù zài nǎge fángjiān?? Wǒ zhù sān líng qī. Wèn: Nǚ de zhù zài nǎge fángjiān?"
+      "listening_pinyin": "Nán: Wǒ zhù zài sān líng sì. Nǐ zhù zài nǎge fángjiān?? Wǒ zhù sān líng qī. Wèn: Nǚ de zhù zài nǎge fángjiān?",
+      "pinyin": "C â u   2 7   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -505,7 +512,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nán：yīshēng shuō shénme le？nǚ：búshì dà wèntí，chī liǎngtiān yào jiù huì hǎo wèn：nǚ de zěnme le？ (Nán: Yīshēng shuō shénme le? Nǚ: Bú shì dà wèntí, chī liǎng tiān yào jiù huì hǎo. 。 Nǚ de zěnme le?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nán: Yīshēng shuō shénme le? Nǚ: Bú shì dà wèntí, chī liǎng tiān yào jiù huì hǎo. 。 Nǚ de zěnme le?"
+      "listening_pinyin": "Nán: Yīshēng shuō shénme le? Nǚ: Bú shì dà wèntí, chī liǎng tiān yào jiù huì hǎo. 。 Nǚ de zěnme le?",
+      "pinyin": "C â u   2 8   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -525,7 +533,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nán：nínhǎo，qǐngwèn nín qù nǎér？nǚ：wǒ qù jīchǎng，sānshífēnzhōng néng dào ma？wèn：tāmen zuì kěnéng zài nǎér？ (Nán: Nínhǎo, qǐngwèn nín qù nǎr? Nǚ: Wǒ qù jīchǎng, sānshí fēnzhōng néng dào ma? Wèn: Tāmen zuì kěnéng zài nǎr?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nán: Nínhǎo, qǐngwèn nín qù nǎr? Nǚ: Wǒ qù jīchǎng, sānshí fēnzhōng néng dào ma? Wèn: Tāmen zuì kěnéng zài nǎr?"
+      "listening_pinyin": "Nán: Nínhǎo, qǐngwèn nín qù nǎr? Nǚ: Wǒ qù jīchǎng, sānshí fēnzhōng néng dào ma? Wèn: Tāmen zuì kěnéng zài nǎr?",
+      "pinyin": "C â u   2 9   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -545,7 +554,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：yǐjīng qīdiǎn le，diànyǐng zěnme hái méi kāishǐ？nán：háiyǒu shífēnzhōng ne。wèn：diànyǐng shénme shíhòu kāishǐ？dìsì bùfèn yīgòng gètí，měití tīng liǎngcì。lìrú：nǚ：qǐng zài zhèér xiě nín de míngzì nán：shì zhèér ma？nǚ：búshì，shì zhèér。nán：hǎo，xièxiè。wèn：nán de yào xiě shénme？xiànzài kāishǐ dìtí： (Nǚ: Yǐjīng qī diǎn le, diànyǐng zěnme hái méi kāishǐ? Nán: Háiyǒu shí fēnzhōng ne. Wèn: Diànyǐng shénme shíhou kāishǐ? Dìsì bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nǚ: Qǐng zài zhèr xiě nín de míngzi. 。 Shì zhèr ma? Nǚ: Bú shì, shì zhèr. Nán: Hǎo, xièxie. Wèn: Nán de yào xiě shénme? Xiànzài kāishǐ dì tí)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Yǐjīng qī diǎn le, diànyǐng zěnme hái méi kāishǐ? Nán: Háiyǒu shí fēnzhōng ne. Wèn: Diànyǐng shénme shíhou kāishǐ? Dìsì bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nǚ: Qǐng zài zhèr xiě nín de míngzi. 。 Shì zhèr ma? Nǚ: Bú shì, shì zhèr. Nán: Hǎo, xièxie. Wèn: Nán de yào xiě shénme? Xiànzài kāishǐ dì tí"
+      "listening_pinyin": "Nǚ: Yǐjīng qī diǎn le, diànyǐng zěnme hái méi kāishǐ? Nán: Háiyǒu shí fēnzhōng ne. Wèn: Diànyǐng shénme shíhou kāishǐ? Dìsì bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nǚ: Qǐng zài zhèr xiě nín de míngzi. 。 Shì zhèr ma? Nǚ: Bú shì, shì zhèr. Nán: Hǎo, xièxie. Wèn: Nán de yào xiě shénme? Xiànzài kāishǐ dì tí",
+      "pinyin": "C â u   3 0   ( P h ầ n   n g h e   s ố   3 )"
     },
     {
       "exam_code": "H20000",
@@ -565,7 +575,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：píngguǒ zěnme mài？nán：sìkuài qián yījīn。nǚ：wǒ xiǎng mǎi shíjīn，nǐ néng bāng wǒ sòngdào jiālǐ ma？nán：méi wèntí。wèn：nǚ de yào mǎi jǐjīn píngguǒ？ (Nǚ: Píngguǒ zěnme mài? Nán: Sì kuài qián yì jīn. Nǚ: Wǒ xiǎng mǎi shí jīn, nǐ néng bāng wǒ sòng dào jiā li ma? Nán: Méi wèntí. Wèn: Nǚ de yào mǎi jǐ jīn píngguǒ?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Píngguǒ zěnme mài? Nán: Sì kuài qián yì jīn. Nǚ: Wǒ xiǎng mǎi shí jīn, nǐ néng bāng wǒ sòng dào jiā li ma? Nán: Méi wèntí. Wèn: Nǚ de yào mǎi jǐ jīn píngguǒ?"
+      "listening_pinyin": "Nǚ: Píngguǒ zěnme mài? Nán: Sì kuài qián yì jīn. Nǚ: Wǒ xiǎng mǎi shí jīn, nǐ néng bāng wǒ sòng dào jiā li ma? Nán: Méi wèntí. Wèn: Nǚ de yào mǎi jǐ jīn píngguǒ?",
+      "pinyin": "C â u   3 1   ( P h ầ n   n g h e   s ố   4 )"
     },
     {
       "exam_code": "H20000",
@@ -585,7 +596,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nán：wǎnshàng wǒmen qù fànguǎnér chīfàn，zěnmeyàng nǚ：wǒ bùxiǎng qù wàimiàn chī。wǒ xiǎng zàijiā chī。nán：nà nǐ zhǔnbèi zuò shénme hǎochī de？nǚ：nǐ xiǎng chī shénme，wǒ jiù zuò shénme nán：hǎo de。wèn：tāmen wǎnshàng zài nǎér chīfàn？ (Nán: Wǎnshang wǒmen qù fànguǎnr chīfàn, zěnmeyàng?? Wǒ bù xiǎng qù wàimiàn chī. Wǒ xiǎng zài jiā chī. Nán: Nà nǐ zhǔnbèi zuò shénme hǎochī de? Nǚ: Nǐ xiǎng chī shénme, wǒ jiù zuò shénme. 。 Hǎo de. Wèn: Tāmen wǎnshang zài nǎr chīfàn?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nán: Wǎnshang wǒmen qù fànguǎnr chīfàn, zěnmeyàng?? Wǒ bù xiǎng qù wàimiàn chī. Wǒ xiǎng zài jiā chī. Nán: Nà nǐ zhǔnbèi zuò shénme hǎochī de? Nǚ: Nǐ xiǎng chī shénme, wǒ jiù zuò shénme. 。 Hǎo de. Wèn: Tāmen wǎnshang zài nǎr chīfàn?"
+      "listening_pinyin": "Nán: Wǎnshang wǒmen qù fànguǎnr chīfàn, zěnmeyàng?? Wǒ bù xiǎng qù wàimiàn chī. Wǒ xiǎng zài jiā chī. Nán: Nà nǐ zhǔnbèi zuò shénme hǎochī de? Nǚ: Nǐ xiǎng chī shénme, wǒ jiù zuò shénme. 。 Hǎo de. Wèn: Tāmen wǎnshang zài nǎr chīfàn?",
+      "pinyin": "C â u   3 2   ( P h ầ n   n g h e   s ố   4 )"
     },
     {
       "exam_code": "H20000",
@@ -605,7 +617,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：yígè péngyǒu ràng wǒ bāng tā zhǎogè fángzi。nán：tā gōngzuò le ma？nǚ：gōngzuò le。nán：nàyào zhǎo lí gōngsī jìn yīxiē de。wèn：nǚ de yào bāng péngyǒu zhǎo shénme？ (Nǚ: Yí ge péngyou ràng wǒ bāng tā zhǎo ge fángzi. Nán: Tā gōngzuò le ma? Nǚ: Gōngzuò le. Nán: Nà yào zhǎo lí gōngsī jìn yìxiē de. Wèn: Nǚ de yào bāng péngyou zhǎo shénme?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Yí ge péngyou ràng wǒ bāng tā zhǎo ge fángzi. Nán: Tā gōngzuò le ma? Nǚ: Gōngzuò le. Nán: Nà yào zhǎo lí gōngsī jìn yìxiē de. Wèn: Nǚ de yào bāng péngyou zhǎo shénme?"
+      "listening_pinyin": "Nǚ: Yí ge péngyou ràng wǒ bāng tā zhǎo ge fángzi. Nán: Tā gōngzuò le ma? Nǚ: Gōngzuò le. Nán: Nà yào zhǎo lí gōngsī jìn yìxiē de. Wèn: Nǚ de yào bāng péngyou zhǎo shénme?",
+      "pinyin": "C â u   3 3   ( P h ầ n   n g h e   s ố   4 )"
     },
     {
       "exam_code": "H20000",
@@ -625,7 +638,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nán：zhè shì nǐ de shǒubiǎo nǚ：wǒ mǎi de。wǒ xiǎng sònggěi wǒ gēgē。nán：hěnpiàoliàng。duōshǎo qián mǎi de？nǚ：sānqiānduō wèn：shǒubiǎo duōshǎo qián mǎi de？ (Nán: Zhè shì nǐ de shǒubiǎo?? Wǒ mǎi de. Wǒ xiǎng sòng gěi wǒ gēge. Nán: Hěn piàoliang. Duōshao qián mǎi de? Nǚ: Sān qiān duō. 。 Shǒubiǎo duōshao qián mǎi de?)] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nán: Zhè shì nǐ de shǒubiǎo?? Wǒ mǎi de. Wǒ xiǎng sòng gěi wǒ gēge. Nán: Hěn piàoliang. Duōshao qián mǎi de? Nǚ: Sān qiān duō. 。 Shǒubiǎo duōshao qián mǎi de?"
+      "listening_pinyin": "Nán: Zhè shì nǐ de shǒubiǎo?? Wǒ mǎi de. Wǒ xiǎng sòng gěi wǒ gēge. Nán: Hěn piàoliang. Duōshao qián mǎi de? Nǚ: Sān qiān duō. 。 Shǒubiǎo duōshao qián mǎi de?",
+      "pinyin": "C â u   3 4   ( P h ầ n   n g h e   s ố   4 )"
     },
     {
       "exam_code": "H20000",
@@ -645,7 +659,8 @@ export const examData: ExamDetail = {
       ],
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：nǐ tīngdǒng lǎoshī shuō shénme le ma？nán：méiyǒu，tā shuō dé tàikuài nǚ：wǒ yě méi tīngdǒng，tā mànmànshuō，wǒ kěyǐ tīngdǒng nán：wǒmen yìqǐ qù wènwèn tā，hǎo ma？wèn：nán de shì shénme yìsi？ (Nǚ: Nǐ tīng dǒng lǎoshī shuō shénme le ma? Nán: Méiyǒu, tā shuō de tài kuài. 。 Wǒ yě méi tīng dǒng, tā mànmàn shuō, wǒ kěyǐ tīng dǒng. 。 Wǒmen yìqǐ qù wènwen tā, hǎo ma? Wèn: Nán de shì shénme yìsi? )] để chọn đáp án chính xác.",
-      "listening_pinyin": "Nǚ: Nǐ tīng dǒng lǎoshī shuō shénme le ma? Nán: Méiyǒu, tā shuō de tài kuài. 。 Wǒ yě méi tīng dǒng, tā mànmàn shuō, wǒ kěyǐ tīng dǒng. 。 Wǒmen yìqǐ qù wènwen tā, hǎo ma? Wèn: Nán de shì shénme yìsi? "
+      "listening_pinyin": "Nǚ: Nǐ tīng dǒng lǎoshī shuō shénme le ma? Nán: Méiyǒu, tā shuō de tài kuài. 。 Wǒ yě méi tīng dǒng, tā mànmàn shuō, wǒ kěyǐ tīng dǒng. 。 Wǒmen yìqǐ qù wènwen tā, hǎo ma? Wèn: Nán de shì shénme yìsi? ",
+      "pinyin": "C â u   3 5   ( P h ầ n   n g h e   s ố   4 )"
     },
     {
       "exam_code": "H20000",
@@ -661,7 +676,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H20000_board_36_40.webp",
       "explanation": "Câu 36 miêu tả nội dung 'xiǎogǒu shēngbìng le，tā jīntiān shénme dōngxī yě méi chī。'. Bức ảnh B thể hiện chính xác ngữ cảnh này nên đáp án là B.",
       "listening_pinyin": "Nǐ kàn, nǚháizi yě xǐhuan tī zúqiú.",
-      "pinyin": "Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī."
+      "pinyin": "Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.",
+      "options": [
+        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
+        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
+        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
+        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -677,7 +700,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H20000_board_36_40.webp",
       "explanation": "Câu 37 miêu tả nội dung 'nǐ chàng dé zhēn hǎo，zài chàng yígè ba。'. Bức ảnh E thể hiện chính xác ngữ cảnh này nên đáp án là E.",
       "listening_pinyin": "Kāfēi lái le, yào bu yào hē yì bēi?",
-      "pinyin": "Nǐ chàng de zhēn hǎo, zài chàng yí ge ba."
+      "pinyin": "Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.",
+      "options": [
+        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
+        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
+        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
+        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -693,7 +724,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H20000_board_36_40.webp",
       "explanation": "Câu 38 miêu tả nội dung 'bié zǒulù de shíhòu kàn bàozhǐ，duì yǎnjīng bùhǎo。'. Bức ảnh A thể hiện chính xác ngữ cảnh này nên đáp án là A.",
       "listening_pinyin": "Tài hǎo le, wǒ zhǎodào zhè běn shū le.",
-      "pinyin": "Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo."
+      "pinyin": "Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.",
+      "options": [
+        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
+        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
+        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
+        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -709,7 +748,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H20000_board_36_40.webp",
       "explanation": "Câu 39 miêu tả nội dung 'wǒ dào jiā de shíhòu，tā zhèngzài xǐyīfú ne。'. Bức ảnh F thể hiện chính xác ngữ cảnh này nên đáp án là F.",
       "listening_pinyin": "Zhè shì tā gěi qīzi mǎi de yīfu.",
-      "pinyin": "Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne."
+      "pinyin": "Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.",
+      "options": [
+        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
+        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
+        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
+        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -725,7 +772,15 @@ export const examData: ExamDetail = {
       "board_image": "images/H20000_board_36_40.webp",
       "explanation": "Câu 40 miêu tả nội dung 'fúwùyuán wèn：\"nín xiǎng chī shénme？\"'. Bức ảnh C thể hiện chính xác ngữ cảnh này nên đáp án là C.",
       "listening_pinyin": "Tāmen sì gè rén měi tiān dōu yìqǐ chīfàn.",
-      "pinyin": "Fúwùyuán wèn: 'Nín xiǎng chī shénme?'"
+      "pinyin": "Fúwùyuán wèn: 'Nín xiǎng chī shénme?'",
+      "options": [
+        "A 别走路的时候看报纸，对眼睛不好。 (Bié zǒulù de shíhou kàn bàozhǐ, duì yǎnjing bù hǎo.)",
+        "B 小狗生病了，它今天什么东西也没吃。 (Xiǎogǒu shēngbìng le, tā jīntiān shénme dōngxi yě méi chī.)",
+        "C 服务员问：“您想吃什么？” (Fúwùyuán wèn: 'Nín xiǎng chī shénme?')",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 你唱得真好，再唱一个吧。 (Nǐ chàng de zhēn hǎo, zài chàng yí ge ba.)",
+        "F 我到家的时候，她正在洗衣服呢。 (Wǒ dào jiā de shíhou, tā zhèngzài xǐ yīfu ne.)"
+      ]
     },
     {
       "exam_code": "H20000",
@@ -959,12 +1014,12 @@ export const examData: ExamDetail = {
       "listening_script": "外面下雪了，很冷。",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_51.webp",
       "options": [
-        "A 他不在公司...",
-        "B 因为我想换个工作",
-        "C 你学得真不错...",
-        "D 还没有...",
-        "E 他还在教室里学习",
-        "F 没关系..."
+        "A 他不在公司... (tā bú zài gōng sī . . .)",
+        "B 因为我想换个工作 (yīn wèi wǒ xiǎng huàn gè gōng zuò)",
+        "C 你学得真不错... (nǐ xué dé zhēn bú cuò . . .)",
+        "D 还没有... (hái méi yǒu . . .)",
+        "E 他还在教室里学习 (tā hái zài jiào shì lǐ xué xí)",
+        "F 没关系... (méi guān xì . . .)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'dàjiā kànjiàn xiǎo lǐ le ma？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là D.",
@@ -983,12 +1038,12 @@ export const examData: ExamDetail = {
       "listening_script": "他学汉语快两年了，说得很好。",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_52.webp",
       "options": [
-        "A 他不在公司...",
-        "B 因为我想换个工作",
-        "C 你学得真不错...",
-        "D 还没有...",
-        "E 他还在教室里学习",
-        "F 没关系..."
+        "A 他不在公司... (tā bú zài gōng sī . . .)",
+        "B 因为我想换个工作 (yīn wèi wǒ xiǎng huàn gè gōng zuò)",
+        "C 你学得真不错... (nǐ xué dé zhēn bú cuò . . .)",
+        "D 还没有... (hái méi yǒu . . .)",
+        "E 他还在教室里学习 (tā hái zài jiào shì lǐ xué xí)",
+        "F 没关系... (méi guān xì . . .)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'nǐ jīntiān gōngzuò zěnmeyàng？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là B.",
@@ -1007,12 +1062,12 @@ export const examData: ExamDetail = {
       "listening_script": "我们学校有两千多个学生。",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_53.webp",
       "options": [
-        "A 他不在公司...",
-        "B 因为我想换个工作",
-        "C 你学得真不错...",
-        "D 还没有...",
-        "E 他还在教室里学习",
-        "F 没关系..."
+        "A 他不在公司... (tā bú zài gōng sī . . .)",
+        "B 因为我想换个工作 (yīn wèi wǒ xiǎng huàn gè gōng zuò)",
+        "C 你学得真不错... (nǐ xué dé zhēn bú cuò . . .)",
+        "D 还没有... (hái méi yǒu . . .)",
+        "E 他还在教室里学习 (tā hái zài jiào shì lǐ xué xí)",
+        "F 没关系... (méi guān xì . . .)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'wǒ zhēnde bù xǐhuān tā。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là F.",
@@ -1031,12 +1086,12 @@ export const examData: ExamDetail = {
       "listening_script": "请问十四号到北京的车票还有吗？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_54.webp",
       "options": [
-        "A 他不在公司...",
-        "B 因为我想换个工作",
-        "C 你学得真不错...",
-        "D 还没有...",
-        "E 他还在教室里学习",
-        "F 没关系..."
+        "A 他不在公司... (tā bú zài gōng sī . . .)",
+        "B 因为我想换个工作 (yīn wèi wǒ xiǎng huàn gè gōng zuò)",
+        "C 你学得真不错... (nǐ xué dé zhēn bú cuò . . .)",
+        "D 还没有... (hái méi yǒu . . .)",
+        "E 他还在教室里学习 (tā hái zài jiào shì lǐ xué xí)",
+        "F 没关系... (méi guān xì . . .)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'wǒmen yìqǐ qù kàn diànyǐngba。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là C.",
@@ -1055,12 +1110,12 @@ export const examData: ExamDetail = {
       "listening_script": "少吃肉，多吃菜，对身体好。",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_55.webp",
       "options": [
-        "A 他不在公司...",
-        "B 因为我想换个工作",
-        "C 你学得真不错...",
-        "D 还没有...",
-        "E 他还在教室里学习",
-        "F 没关系..."
+        "A 他不在公司... (tā bú zài gōng sī . . .)",
+        "B 因为我想换个工作 (yīn wèi wǒ xiǎng huàn gè gōng zuò)",
+        "C 你学得真不错... (nǐ xué dé zhēn bú cuò . . .)",
+        "D 还没有... (hái méi yǒu . . .)",
+        "E 他还在教室里学习 (tā hái zài jiào shì lǐ xué xí)",
+        "F 没关系... (méi guān xì . . .)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'nǐ kěyǐ bāng wǒ xǐgè yīfú ma？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là A.",
@@ -1079,11 +1134,11 @@ export const examData: ExamDetail = {
       "listening_script": "今天是儿子的生日。",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_56.webp",
       "options": [
-        "A 他在拆公司工作了两个月后去你们公司了。",
-        "B 早上有人给你送来一张机票。",
-        "C 我介绍一下，这是从上海来的李小姐。",
-        "D 她住得很远，我想送她回去。",
-        "E 他去看医生了。"
+        "A 他在拆公司工作了两个月后去你们公司了。 (tā zài chāi gōng sī gōng zuò le liǎng gè yuè hòu qù nǐ men gōng sī le)",
+        "B 早上有人给你送来一张机票。 (zǎo shàng yǒu rén gěi nǐ sòng lái yì zhāng jī piào)",
+        "C 我介绍一下，这是从上海来的李小姐。 (wǒ jiè shào yí xià , zhè shì cóng shàng hǎi lái de lǐ xiǎo jiě)",
+        "D 她住得很远，我想送她回去。 (tā zhù dé hěn yuǎn , wǒ xiǎng sòng tā huí qù)",
+        "E 他去看医生了。 (tā qù kàn yī shēng le)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'huānyíngnín lái wǒmen xuéxiào！'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là C.",
@@ -1102,11 +1157,11 @@ export const examData: ExamDetail = {
       "listening_script": "从我家到学校坐公共汽车二十分钟。",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_57.webp",
       "options": [
-        "A 他在拆公司工作了两个月后去你们公司了。",
-        "B 早上有人给你送来一张机票。",
-        "C 我介绍一下，这是从上海来的李小姐。",
-        "D 她住得很远，我想送她回去。",
-        "E 他去看医生了。"
+        "A 他在拆公司工作了两个月后去你们公司了。 (tā zài chāi gōng sī gōng zuò le liǎng gè yuè hòu qù nǐ men gōng sī le)",
+        "B 早上有人给你送来一张机票。 (zǎo shàng yǒu rén gěi nǐ sòng lái yì zhāng jī piào)",
+        "C 我介绍一下，这是从上海来的李小姐。 (wǒ jiè shào yí xià , zhè shì cóng shàng hǎi lái de lǐ xiǎo jiě)",
+        "D 她住得很远，我想送她回去。 (tā zhù dé hěn yuǎn , wǒ xiǎng sòng tā huí qù)",
+        "E 他去看医生了。 (tā qù kàn yī shēng le)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'nǐ zěnme zhīdào wǒyào qù zhōngguó？'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là B.",
@@ -1124,11 +1179,11 @@ export const examData: ExamDetail = {
       "answer": "E",
       "listening_script": "医生说吃两天药就会好。",
       "options": [
-        "A 他在拆公司工作了两个月后去你们公司了。",
-        "B 早上有人给你送来一张机票。",
-        "C 我介绍一下，这是从上海来的李小姐。",
-        "D 她住得很远，我想送她回去。",
-        "E 他去看医生了。"
+        "A 他在拆公司工作了两个月后去你们公司了。 (tā zài chāi gōng sī gōng zuò le liǎng gè yuè hòu qù nǐ men gōng sī le)",
+        "B 早上有人给你送来一张机票。 (zǎo shàng yǒu rén gěi nǐ sòng lái yì zhāng jī piào)",
+        "C 我介绍一下，这是从上海来的李小姐。 (wǒ jiè shào yí xià , zhè shì cóng shàng hǎi lái de lǐ xiǎo jiě)",
+        "D 她住得很远，我想送她回去。 (tā zhù dé hěn yuǎn , wǒ xiǎng sòng tā huí qù)",
+        "E 他去看医生了。 (tā qù kàn yī shēng le)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'zhèyào yītiān chī sāncì。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là E.",
@@ -1146,11 +1201,11 @@ export const examData: ExamDetail = {
       "answer": "A",
       "listening_script": "我想买几斤苹果带回家。",
       "options": [
-        "A 他在拆公司工作了两个月后去你们公司了。",
-        "B 早上有人给你送来一张机票。",
-        "C 我介绍一下，这是从上海来的李小姐。",
-        "D 她住得很远，我想送她回去。",
-        "E 他去看医生了。"
+        "A 他在拆公司工作了两个月后去你们公司了。 (tā zài chāi gōng sī gōng zuò le liǎng gè yuè hòu qù nǐ men gōng sī le)",
+        "B 早上有人给你送来一张机票。 (zǎo shàng yǒu rén gěi nǐ sòng lái yì zhāng jī piào)",
+        "C 我介绍一下，这是从上海来的李小姐。 (wǒ jiè shào yí xià , zhè shì cóng shàng hǎi lái de lǐ xiǎo jiě)",
+        "D 她住得很远，我想送她回去。 (tā zhù dé hěn yuǎn , wǒ xiǎng sòng tā huí qù)",
+        "E 他去看医生了。 (tā qù kàn yī shēng le)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'wǒ zuò guò hěnduō gōngzuò，dàn zuò de shíjiān dōu bùzhǎng。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là A.",
@@ -1168,11 +1223,11 @@ export const examData: ExamDetail = {
       "answer": "D",
       "listening_script": "明天下午我们一起去图书馆吧。",
       "options": [
-        "A 他在拆公司工作了两个月后去你们公司了。",
-        "B 早上有人给你送来一张机票。",
-        "C 我介绍一下，这是从上海来的李小姐。",
-        "D 她住得很远，我想送她回去。",
-        "E 他去看医生了。"
+        "A 他在拆公司工作了两个月后去你们公司了。 (tā zài chāi gōng sī gōng zuò le liǎng gè yuè hòu qù nǐ men gōng sī le)",
+        "B 早上有人给你送来一张机票。 (zǎo shàng yǒu rén gěi nǐ sòng lái yì zhāng jī piào)",
+        "C 我介绍一下，这是从上海来的李小姐。 (wǒ jiè shào yí xià , zhè shì cóng shàng hǎi lái de lǐ xiǎo jiě)",
+        "D 她住得很远，我想送她回去。 (tā zhù dé hěn yuǎn , wǒ xiǎng sòng tā huí qù)",
+        "E 他去看医生了。 (tā qù kàn yī shēng le)"
       ],
       "board_image": null,
       "explanation": "Câu vế hỏi/mở đầu: 'xièxiè nǐ sòng wǒ huílái，wǒmen míngtiān jiàn。'. Phương án đáp lời phù hợp nhất về mặt ngữ nghĩa và ngữ cảnh đối thoại là D.",

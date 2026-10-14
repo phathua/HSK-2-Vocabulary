@@ -628,12 +628,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒ huì tiàowǔ, dàn tiào de bù zěnmeyàng.",
       "options": [
-        "A: 澡堂/洗澡",
-        "B: 买鱼",
-        "C: 跳舞",
-        "D: 踢足球",
-        "E: 早餐/牛奶鸡蛋",
-        "F: 手表"
+        "A 爸爸正在里面洗澡呢。 (Bàba zhèngzài lǐmiàn xǐzǎo ne.)",
+        "B 你看，我今天买了几条鱼。 (Nǐ kàn, wǒ jīntiān mǎile jǐ tiáo yú.)",
+        "C 我会跳舞，但跳得不怎么样。 (Wǒ huì tiàowǔ, dàn tiào de bù zěnmeyàng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 我给女儿准备了牛奶和鸡蛋。 (Wǒ gěi nǚ'ér zhǔnbèi le niúnǎi hé jīdàn.)",
+        "F 这种手表非常便宜，百多块钱。 (Zhè zhǒng shǒubiǎo fēicháng piányi, bǎi duō kuài qián.)"
       ]
     },
     {
@@ -652,12 +652,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒ gěi nǚ'ér zhǔnbèi le niúnǎi hé jīdàn.",
       "options": [
-        "A: 澡堂/洗澡",
-        "B: 买鱼",
-        "C: 跳舞",
-        "D: 踢足球",
-        "E: 早餐/牛奶鸡蛋",
-        "F: 手表"
+        "A 爸爸正在里面洗澡呢。 (Bàba zhèngzài lǐmiàn xǐzǎo ne.)",
+        "B 你看，我今天买了几条鱼。 (Nǐ kàn, wǒ jīntiān mǎile jǐ tiáo yú.)",
+        "C 我会跳舞，但跳得不怎么样。 (Wǒ huì tiàowǔ, dàn tiào de bù zěnmeyàng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 我给女儿准备了牛奶和鸡蛋。 (Wǒ gěi nǚ'ér zhǔnbèi le niúnǎi hé jīdàn.)",
+        "F 这种手表非常便宜，百多块钱。 (Zhè zhǒng shǒubiǎo fēicháng piányi, bǎi duō kuài qián.)"
       ]
     },
     {
@@ -676,12 +676,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nǐ kàn, wǒ jīntiān mǎile jǐ tiáo yú.",
       "options": [
-        "A: 澡堂/洗澡",
-        "B: 买鱼",
-        "C: 跳舞",
-        "D: 踢足球",
-        "E: 早餐/牛奶鸡蛋",
-        "F: 手表"
+        "A 爸爸正在里面洗澡呢。 (Bàba zhèngzài lǐmiàn xǐzǎo ne.)",
+        "B 你看，我今天买了几条鱼。 (Nǐ kàn, wǒ jīntiān mǎile jǐ tiáo yú.)",
+        "C 我会跳舞，但跳得不怎么样。 (Wǒ huì tiàowǔ, dàn tiào de bù zěnmeyàng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 我给女儿准备了牛奶和鸡蛋。 (Wǒ gěi nǚ'ér zhǔnbèi le niúnǎi hé jīdàn.)",
+        "F 这种手表非常便宜，百多块钱。 (Zhè zhǒng shǒubiǎo fēicháng piányi, bǎi duō kuài qián.)"
       ]
     },
     {
@@ -700,12 +700,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Bàba zhèngzài lǐmiàn xǐzǎo ne.",
       "options": [
-        "A: 澡堂/洗澡",
-        "B: 买鱼",
-        "C: 跳舞",
-        "D: 踢足球",
-        "E: 早餐/牛奶鸡蛋",
-        "F: 手表"
+        "A 爸爸正在里面洗澡呢。 (Bàba zhèngzài lǐmiàn xǐzǎo ne.)",
+        "B 你看，我今天买了几条鱼。 (Nǐ kàn, wǒ jīntiān mǎile jǐ tiáo yú.)",
+        "C 我会跳舞，但跳得不怎么样。 (Wǒ huì tiàowǔ, dàn tiào de bù zěnmeyàng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 我给女儿准备了牛奶和鸡蛋。 (Wǒ gěi nǚ'ér zhǔnbèi le niúnǎi hé jīdàn.)",
+        "F 这种手表非常便宜，百多块钱。 (Zhè zhǒng shǒubiǎo fēicháng piányi, bǎi duō kuài qián.)"
       ]
     },
     {
@@ -724,12 +724,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè zhǒng shǒubiǎo fēicháng piányi, bǎi duō kuài qián.",
       "options": [
-        "A: 澡堂/洗澡",
-        "B: 买鱼",
-        "C: 跳舞",
-        "D: 踢足球",
-        "E: 早餐/牛奶鸡蛋",
-        "F: 手表"
+        "A 爸爸正在里面洗澡呢。 (Bàba zhèngzài lǐmiàn xǐzǎo ne.)",
+        "B 你看，我今天买了几条鱼。 (Nǐ kàn, wǒ jīntiān mǎile jǐ tiáo yú.)",
+        "C 我会跳舞，但跳得不怎么样。 (Wǒ huì tiàowǔ, dàn tiào de bù zěnmeyàng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 我给女儿准备了牛奶和鸡蛋。 (Wǒ gěi nǚ'ér zhǔnbèi le niúnǎi hé jīdàn.)",
+        "F 这种手表非常便宜，百多块钱。 (Zhè zhǒng shǒubiǎo fēicháng piányi, bǎi duō kuài qián.)"
       ]
     },
     {
@@ -744,12 +744,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_41.webp",
       "options": [
-        "A: 认识 (rènshi)",
-        "B: 从 (cóng)",
-        "C: 鱼 (yú)",
-        "D: 为什么 (wèi shénme)",
-        "E: 贵 (guì)",
-        "F: 介绍 (jièshào)"
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
+        "E 贵 (guì)",
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
       "explanation": "Cụm từ 'wèn wèishénme' nghĩa là 'hỏi tại sao'. Động từ 'wèn' kết hợp hợp lý với từ hỏi nguyên nhân 'wèishénme'. Do đó chọn D.",
@@ -768,12 +768,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_42.webp",
       "options": [
-        "A: 认识 (rènshi)",
-        "B: 从 (cóng)",
-        "C: 鱼 (yú)",
-        "D: 为什么 (wèi shénme)",
-        "E: 贵 (guì)",
-        "F: 介绍 (jièshào)"
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
+        "E 贵 (guì)",
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
       "explanation": "Cấu trúc 'bāng wǒ jièshào' nghĩa là 'giới thiệu cho tôi'. Công việc này do bạn bè giới thiệu cho tôi ('bāng wǒ jièshào de'). Do đó chọn F.",
@@ -792,12 +792,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_43.webp",
       "options": [
-        "A: 认识 (rènshi)",
-        "B: 从 (cóng)",
-        "C: 鱼 (yú)",
-        "D: 为什么 (wèi shénme)",
-        "E: 贵 (guì)",
-        "F: 介绍 (jièshào)"
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
+        "E 贵 (guì)",
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
       "explanation": "Cấu trúc 'cóng...chūlái' nghĩa là 'đi ra từ đâu'. Tôi đã đi ra từ trong nhà ('cóng jiālǐ chūlái le'). Do đó chọn B.",
@@ -816,12 +816,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_44.webp",
       "options": [
-        "A: 认识 (rènshi)",
-        "B: 从 (cóng)",
-        "C: 鱼 (yú)",
-        "D: 为什么 (wèi shénme)",
-        "E: 贵 (guì)",
-        "F: 介绍 (jièshào)"
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
+        "E 贵 (guì)",
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
       "explanation": "Nói với mèo con ('xiǎomāo'), món ăn chuẩn bị cho mèo là cá ('yú'). Do đó chọn C.",
@@ -840,12 +840,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_45.webp",
       "options": [
-        "A: 认识 (rènshi)",
-        "B: 从 (cóng)",
-        "C: 鱼 (yú)",
-        "D: 为什么 (wèi shénme)",
-        "E: 贵 (guì)",
-        "F: 介绍 (jièshào)"
+        "A 认识 (rènshi)",
+        "B 从 (cóng)",
+        "C 鱼 (yú)",
+        "D 为什么 (wèi shénme)",
+        "E 贵 (guì)",
+        "F 介绍 (jièshào)"
       ],
       "board_image": null,
       "explanation": "Hỏi có quen biết ai đó không: 'nǐ rènshí ma？' (Bạn có quen biết không?). Do đó chọn A.",
@@ -969,12 +969,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_51.webp",
       "options": [
-        "A: 我是新来的，所以您可能没见过我。",
-        "B: 怎么样？现在可以开始了吗？",
-        "C: 明天要考试，考完试再去看吧。",
-        "D: 这是我第二次来北京。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 这件衣服的颜色，我不喜欢。"
+        "A 我是新来的，所以您可能没见过我。 (wǒ shì xīn lái de , suǒ yǐ nín kě néng méi jiàn guò wǒ)",
+        "B 怎么样？现在可以开始了吗？ (zěn me yàng ? xiàn zài kě yǐ kāi shǐ le ma ?)",
+        "C 明天要考试，考完试再去看吧。 (míng tiān yào kǎo shì , kǎo wán shì zài qù kàn ba)",
+        "D 这是我第二次来北京。 (zhè shì wǒ dì èr cì lái běi jīng)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 这件衣服的颜色，我不喜欢。 (zhè jiàn yī fu de yán sè , wǒ bù xǐ huan)"
       ],
       "board_image": null,
       "explanation": "Một người hỏi 'Thế nào rồi? Bây giờ bắt đầu được chưa?' ('zěnmeyàng？xiànzài kěyǐ kāishǐ le ma？'), người kia xin lỗi bảo chờ vì cô Vương chưa tới ('duìbùqǐ，qǐngděngyíxià...'). Do đó ghép với B.",
@@ -993,12 +993,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_52.webp",
       "options": [
-        "A: 我是新来的，所以您可能没见过我。",
-        "B: 怎么样？现在可以开始了吗？",
-        "C: 明天要考试，考完试再去看吧。",
-        "D: 这是我第二次来北京。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 这件衣服的颜色，我不喜欢。"
+        "A 我是新来的，所以您可能没见过我。 (wǒ shì xīn lái de , suǒ yǐ nín kě néng méi jiàn guò wǒ)",
+        "B 怎么样？现在可以开始了吗？ (zěn me yàng ? xiàn zài kě yǐ kāi shǐ le ma ?)",
+        "C 明天要考试，考完试再去看吧。 (míng tiān yào kǎo shì , kǎo wán shì zài qù kàn ba)",
+        "D 这是我第二次来北京。 (zhè shì wǒ dì èr cì lái běi jīng)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 这件衣服的颜色，我不喜欢。 (zhè jiàn yī fu de yán sè , wǒ bù xǐ huan)"
       ],
       "board_image": null,
       "explanation": "Hỏi 'Bạn có phải nhân viên phục vụ ở đây không?', người kia trả lời 'Tôi là người mới đến nên có lẽ ngài chưa gặp tôi bao giờ' ('wǒ shì xīnlái de，suǒyǐ nín kěnéng méijiàn guò wǒ'). Do đó ghép với A.",
@@ -1017,12 +1017,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_53.webp",
       "options": [
-        "A: 我是新来的，所以您可能没见过我。",
-        "B: 怎么样？现在可以开始了吗？",
-        "C: 明天要考试，考完试再去看吧。",
-        "D: 这是我第二次来北京。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 这件衣服的颜色，我不喜欢。"
+        "A 我是新来的，所以您可能没见过我。 (wǒ shì xīn lái de , suǒ yǐ nín kě néng méi jiàn guò wǒ)",
+        "B 怎么样？现在可以开始了吗？ (zěn me yàng ? xiàn zài kě yǐ kāi shǐ le ma ?)",
+        "C 明天要考试，考完试再去看吧。 (míng tiān yào kǎo shì , kǎo wán shì zài qù kàn ba)",
+        "D 这是我第二次来北京。 (zhè shì wǒ dì èr cì lái běi jīng)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 这件衣服的颜色，我不喜欢。 (zhè jiàn yī fu de yán sè , wǒ bù xǐ huan)"
       ],
       "board_image": null,
       "explanation": "Rủ tối nay đi xem phim không, câu đáp hợp lý là 'Ngày mai thi rồi, thi xong rồi hãy đi xem' ('míngtiān yào kǎoshì，kǎowánshì zài qù kànba'). Do đó ghép với C.",
@@ -1041,12 +1041,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_54.webp",
       "options": [
-        "A: 我是新来的，所以您可能没见过我。",
-        "B: 怎么样？现在可以开始了吗？",
-        "C: 明天要考试，考完试再去看吧。",
-        "D: 这是我第二次来北京。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 这件衣服的颜色，我不喜欢。"
+        "A 我是新来的，所以您可能没见过我。 (wǒ shì xīn lái de , suǒ yǐ nín kě néng méi jiàn guò wǒ)",
+        "B 怎么样？现在可以开始了吗？ (zěn me yàng ? xiàn zài kě yǐ kāi shǐ le ma ?)",
+        "C 明天要考试，考完试再去看吧。 (míng tiān yào kǎo shì , kǎo wán shì zài qù kàn ba)",
+        "D 这是我第二次来北京。 (zhè shì wǒ dì èr cì lái běi jīng)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 这件衣服的颜色，我不喜欢。 (zhè jiàn yī fu de yán sè , wǒ bù xǐ huan)"
       ],
       "board_image": null,
       "explanation": "Bày tỏ 'Hy vọng lần này bạn ở lại đây thêm vài ngày', câu tương ứng hợp cảnh là 'Đây là lần thứ hai tôi đến Bắc Kinh' ('zhè shì wǒ dìèrcì lái běijīng'). Do đó ghép với D.",
@@ -1065,12 +1065,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_55.webp",
       "options": [
-        "A: 我是新来的，所以您可能没见过我。",
-        "B: 怎么样？现在可以开始了吗？",
-        "C: 明天要考试，考完试再去看吧。",
-        "D: 这是我第二次来北京。",
-        "E: 他在哪儿呢？看见他了吗？",
-        "F: 这件衣服的颜色，我不喜欢。"
+        "A 我是新来的，所以您可能没见过我。 (wǒ shì xīn lái de , suǒ yǐ nín kě néng méi jiàn guò wǒ)",
+        "B 怎么样？现在可以开始了吗？ (zěn me yàng ? xiàn zài kě yǐ kāi shǐ le ma ?)",
+        "C 明天要考试，考完试再去看吧。 (míng tiān yào kǎo shì , kǎo wán shì zài qù kàn ba)",
+        "D 这是我第二次来北京。 (zhè shì wǒ dì èr cì lái běi jīng)",
+        "E 他在哪儿呢？看见他了吗？ (tā zài nǎ ér ne ? kàn jiàn tā le ma ?)",
+        "F 这件衣服的颜色，我不喜欢。 (zhè jiàn yī fu de yán sè , wǒ bù xǐ huan)"
       ],
       "board_image": null,
       "explanation": "Nói 'Màu sắc của bộ quần áo này tôi không thích' ('zhèjiàn yīfú de yánsè，wǒ bù xǐhuān'), người kia đáp 'Được, không sao, chúng ta đi cửa hàng khác xem' ('hǎo，méiguānxì，wǒmen zài qù biéde shāngdiàn kànkàn'). Do đó ghép với F.",
@@ -1089,11 +1089,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_56.webp",
       "options": [
-        "A: 我也不知道，你问问小刘吧。",
-        "B: 这儿离火车站不远，很近。",
-        "C: 妻子让他每天早上起床后喝一杯水。",
-        "D: 我们玩儿很高兴，还学会了一些汉语。",
-        "E: 他打我电话时，我正在洗水果。"
+        "A 我也不知道，你问问小刘吧。 (wǒ yě bù zhī dào , nǐ wèn wèn xiǎo liú ba)",
+        "B 这儿离火车站不远，很近。 (zhè ér lí huǒ chē zhàn bù yuǎn , hěn jìn)",
+        "C 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "D 我们玩儿很高兴，还学会了一些汉语。 (wǒ men wán ér hěn gāo xìng , hái xué huì le yì xiē hàn yǔ)",
+        "E 他打我电话时，我正在洗水果。 (tā dǎ wǒ diàn huà shí , wǒ zhèng zài xǐ shuǐ guǒ)"
       ],
       "board_image": null,
       "explanation": "Hỏi 'Hai chữ đó nghĩa là gì vậy?', câu đáp thích hợp là 'Tôi cũng không biết, bạn hỏi tiểu Lưu xem' ('wǒ yě bù zhīdào，nǐ wènwèn xiǎo liú ba'). Do đó chọn A.",
@@ -1112,11 +1112,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_57.webp",
       "options": [
-        "A: 我也不知道，你问问小刘吧。",
-        "B: 这儿离火车站不远，很近。",
-        "C: 妻子让他每天早上起床后喝一杯水。",
-        "D: 我们玩儿很高兴，还学会了一些汉语。",
-        "E: 他打我电话时，我正在洗水果。"
+        "A 我也不知道，你问问小刘吧。 (wǒ yě bù zhī dào , nǐ wèn wèn xiǎo liú ba)",
+        "B 这儿离火车站不远，很近。 (zhè ér lí huǒ chē zhàn bù yuǎn , hěn jìn)",
+        "C 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "D 我们玩儿很高兴，还学会了一些汉语。 (wǒ men wán ér hěn gāo xìng , hái xué huì le yì xiē hàn yǔ)",
+        "E 他打我电话时，我正在洗水果。 (tā dǎ wǒ diàn huà shí , wǒ zhèng zài xǐ shuǐ guǒ)"
       ],
       "board_image": null,
       "explanation": "Nói 'Ở đây cách ga tàu không xa, rất gần' ('zhèér lí huǒchēzhàn bùyuǎn，hěnjìn'), tiếp nối bằng 'Ngay phía trước, đi khoảng 7-8 phút là tới' ('jiù zài qiánmiàn，zǒu qībāfēnzhōng jiù dào le'). Do đó chọn B.",
@@ -1135,11 +1135,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_58.webp",
       "options": [
-        "A: 我也不知道，你问问小刘吧。",
-        "B: 这儿离火车站不远，很近。",
-        "C: 妻子让他每天早上起床后喝一杯水。",
-        "D: 我们玩儿很高兴，还学会了一些汉语。",
-        "E: 他打我电话时，我正在洗水果。"
+        "A 我也不知道，你问问小刘吧。 (wǒ yě bù zhī dào , nǐ wèn wèn xiǎo liú ba)",
+        "B 这儿离火车站不远，很近。 (zhè ér lí huǒ chē zhàn bù yuǎn , hěn jìn)",
+        "C 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "D 我们玩儿很高兴，还学会了一些汉语。 (wǒ men wán ér hěn gāo xìng , hái xué huì le yì xiē hàn yǔ)",
+        "E 他打我电话时，我正在洗水果。 (tā dǎ wǒ diàn huà shí , wǒ zhèng zài xǐ shuǐ guǒ)"
       ],
       "board_image": null,
       "explanation": "Kể 'Tháng 6 năm ngoái tôi cùng chồng đi Trung Quốc du lịch', nối tiếp thích hợp là 'Chúng tôi chơi rất vui, còn học được một ít tiếng Trung' ('wǒmen wánér hěn gāoxìng，hái xuéhuì le yīxiē hànyǔ'). Do đó chọn D.",
@@ -1158,11 +1158,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_59.webp",
       "options": [
-        "A: 我也不知道，你问问小刘吧。",
-        "B: 这儿离火车站不远，很近。",
-        "C: 妻子让他每天早上起床后喝一杯水。",
-        "D: 我们玩儿很高兴，还学会了一些汉语。",
-        "E: 他打我电话时，我正在洗水果。"
+        "A 我也不知道，你问问小刘吧。 (wǒ yě bù zhī dào , nǐ wèn wèn xiǎo liú ba)",
+        "B 这儿离火车站不远，很近。 (zhè ér lí huǒ chē zhàn bù yuǎn , hěn jìn)",
+        "C 妻子让他每天早上起床后喝一杯水。 (qī zǐ ràng tā měi tiān zǎo shàng qǐ chuáng hòu hē yì bēi shuǐ)",
+        "D 我们玩儿很高兴，还学会了一些汉语。 (wǒ men wán ér hěn gāo xìng , hái xué huì le yì xiē hàn yǔ)",
+        "E 他打我电话时，我正在洗水果。 (tā dǎ wǒ diàn huà shí , wǒ zhèng zài xǐ shuǐ guǒ)"
       ],
       "board_image": null,
       "explanation": "Hỏi 'Ngài tìm tôi có việc gì thế?', người kia giải thích lý do không nghe máy trước đó: 'Lúc anh ấy gọi điện cho tôi, tôi đang rửa hoa quả' ('tā dǎ wǒ diànhuà shí，wǒ zhèngzài xǐ shuǐguǒ'). Do đó chọn E.",
@@ -1181,11 +1181,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21005/images/H21005_img_60.webp",
       "options": [
-        "A: 我也不知道，你问问小刘吧。",
-        "B: 这儿离火车站不远，很近。",
-        "C: 妻子让他每天早上起床后喝一杯水。",
-        "D: Chúng tôi chơi rất vui...",
-        "E: 他打我电话时..."
+        "A 我也不知道，你问问小刘吧。 (Wǒ yě bù zhīdào, nǐ wènwen Xiǎo Liú ba.)",
+        "B 这儿离火车站不远，很近。 (Zhèr lí huǒchēzhàn bù yuǎn, hěn jìn.)",
+        "C 妻子让他每天早上起床后喝一杯水。 (Qīzi ràng tā měitiān zǎoshang qǐchuáng hòu hē yì bēi shuǐ.)",
+        "D 我们玩儿很高兴，还学会了一些汉语。 (Wǒmen wánr hěn gāoxìng, hái xuéhuì le yìxiē Hànyǔ.)",
+        "E 他打我电话时，我正在洗水果。 (Tā dǎ wǒ diànhuà shí, wǒ zhèngzài xǐ shuǐguǒ.)"
       ],
       "board_image": null,
       "explanation": "Mô tả thói quen sức khỏe 'Vợ bảo anh ấy mỗi sáng thức dậy uống một ly nước' ('qīzǐ ràng tā měitiān zǎoshàng qǐchuáng hòu hēyībēi shuǐ'), người kia tán thành 'Bác sĩ bảo như vậy tốt cho cơ thể' ('yīshēng shuō zhèyàng duì shēntǐ hǎo'). Do đó chọn C.",

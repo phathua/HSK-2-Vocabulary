@@ -212,12 +212,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "F 12．E 13．B 14．C 15．A",
       "pinyin": "Nǚ: Nǐ zěnme méi xǐ yīfu?\nNán: Zhōngwǔ qù yóuyǒng le, wǒ xiànzài jiù qù xǐ.",
       "options": [
-        "A Trời âm u sắp mưa",
-        "B Giơ tay phát biểu với thầy giáo",
-        "C Bình/hộp sữa tươi",
-        "D Hai người xem bản đồ",
-        "E Gọi điện thoại hỏi công việc",
-        "F Mặc đồ đi bơi"
+        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
+        "B 回答老师问题 (huídá lǎoshī wèntí)",
+        "C 一盒牛奶 (yì hé niúnǎi)",
+        "D 看地图 (kàn dìtú)",
+        "E 打电话 (dǎ diànhuà)",
+        "F 穿大衣 (chuān dàyī)"
       ]
     },
     {
@@ -235,12 +235,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 2",
       "pinyin": "Nán: Wèi, nǐ xiàbān le ma?\nNǚ: Wǒ hái yǒu diǎnr gōngzuò méi zuò wán, nǐ děng wǒ yíxià.",
       "options": [
-        "A Trời âm u sắp mưa",
-        "B Giơ tay phát biểu với thầy giáo",
-        "C Bình/hộp sữa tươi",
-        "D Hai người xem bản đồ",
-        "E Gọi điện thoại hỏi công việc",
-        "F Mặc đồ đi bơi"
+        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
+        "B 回答老师问题 (huídá lǎoshī wèntí)",
+        "C 一盒牛奶 (yì hé niúnǎi)",
+        "D 看地图 (kàn dìtú)",
+        "E 打电话 (dǎ diànhuà)",
+        "F 穿大衣 (chuān dàyī)"
       ]
     },
     {
@@ -258,12 +258,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "14．",
       "pinyin": "Nǚ: Lǎoshī, zhège wǒ zhīdào.\nNán: Hǎo, nǐ lái gěi dàjiā jièshào jièshào.",
       "options": [
-        "A Trời âm u sắp mưa",
-        "B Giơ tay phát biểu với thầy giáo",
-        "C Bình/hộp sữa tươi",
-        "D Hai người xem bản đồ",
-        "E Gọi điện thoại hỏi công việc",
-        "F Mặc đồ đi bơi"
+        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
+        "B 回答老师问题 (huídá lǎoshī wèntí)",
+        "C 一盒牛奶 (yì hé niúnǎi)",
+        "D 看地图 (kàn dìtú)",
+        "E 打电话 (dǎ diànhuà)",
+        "F 穿大衣 (chuān dàyī)"
       ]
     },
     {
@@ -281,12 +281,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 4",
       "pinyin": "Nán: Dōngxi dōu mǎi hǎo le ma?\nNǚ: Niúnǎi hái méi mǎi.",
       "options": [
-        "A Trời âm u sắp mưa",
-        "B Giơ tay phát biểu với thầy giáo",
-        "C Bình/hộp sữa tươi",
-        "D Hai người xem bản đồ",
-        "E Gọi điện thoại hỏi công việc",
-        "F Mặc đồ đi bơi"
+        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
+        "B 回答老师问题 (huídá lǎoshī wèntí)",
+        "C 一盒牛奶 (yì hé niúnǎi)",
+        "D 看地图 (kàn dìtú)",
+        "E 打电话 (dǎ diànhuà)",
+        "F 穿大衣 (chuān dàyī)"
       ]
     },
     {
@@ -304,12 +304,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "H A B C D E",
       "pinyin": "Nǚ: Nǐ zěnme bù gāoxìng?\nNán: Tiān yīn le, bàba shuō huì xià yǔ, bù ràng wǒ chūqù wánr.",
       "options": [
-        "A Trời âm u sắp mưa",
-        "B Giơ tay phát biểu với thầy giáo",
-        "C Bình/hộp sữa tươi",
-        "D Hai người xem bản đồ",
-        "E Gọi điện thoại hỏi công việc",
-        "F Mặc đồ đi bơi"
+        "A 阴天快下雨了 (yīntiān kuài xiàyǔ le)",
+        "B 回答老师问题 (huídá lǎoshī wèntí)",
+        "C 一盒牛奶 (yì hé niúnǎi)",
+        "D 看地图 (kàn dìtú)",
+        "E 打电话 (dǎ diànhuà)",
+        "F 穿大衣 (chuān dàyī)"
       ]
     },
     {
@@ -327,12 +327,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "B 17．E 18．C 19．D 20．A",
       "pinyin": "Nán: Fúwùyuán, nǐmen fàndiàn shénme cài zuì hǎochī?\nNǚ: Wǒmen diàn de yú búcuò.",
       "options": [
-        "A Mở ví lấy tiền",
-        "B Phục vụ nhà hàng / món ăn",
-        "C Bé gái cầm micro hát",
-        "D Dùng tay che/xoa mắt",
-        "E Xem bản đồ chỉ đường",
-        "F Đồ bơi / thể thao"
+        "A 生病吃药 (shēngbìng chī yào)",
+        "B 在饭店点菜 (zài fàndiàn diǎncài)",
+        "C 去火车站 (qù huǒchēzhàn)",
+        "D 跑步运动 (pǎobù yùndòng)",
+        "E 喝咖啡 (hē kāfēi)",
+        "F 买票 (mǎi piào)"
       ]
     },
     {
@@ -350,12 +350,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 7",
       "pinyin": "Nǚ: Wǒmen dào nǎr le?\nNán: Kàn, zài zhèr, zài zǒu jǐ fēnzhōng jiù dào le.",
       "options": [
-        "A Mở ví lấy tiền",
-        "B Phục vụ nhà hàng / món ăn",
-        "C Bé gái cầm micro hát",
-        "D Dùng tay che/xoa mắt",
-        "E Xem bản đồ chỉ đường",
-        "F Đồ bơi / thể thao"
+        "A 生病吃药 (shēngbìng chī yào)",
+        "B 在饭店点菜 (zài fàndiàn diǎncài)",
+        "C 去火车站 (qù huǒchēzhàn)",
+        "D 跑步运动 (pǎobù yùndòng)",
+        "E 喝咖啡 (hē kāfēi)",
+        "F 买票 (mǎi piào)"
       ]
     },
     {
@@ -373,12 +373,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "19．",
       "pinyin": "Nán: Nǐ nǚ'ér chàng de zhēn hǎotīng!\nNǚ: Xièxie, tā xǐhuan chànggē.",
       "options": [
-        "A Mở ví lấy tiền",
-        "B Phục vụ nhà hàng / món ăn",
-        "C Bé gái cầm micro hát",
-        "D Dùng tay che/xoa mắt",
-        "E Xem bản đồ chỉ đường",
-        "F Đồ bơi / thể thao"
+        "A 生病吃药 (shēngbìng chī yào)",
+        "B 在饭店点菜 (zài fàndiàn diǎncài)",
+        "C 去火车站 (qù huǒchēzhàn)",
+        "D 跑步运动 (pǎobù yùndòng)",
+        "E 喝咖啡 (hē kāfēi)",
+        "F 买票 (mǎi piào)"
       ]
     },
     {
@@ -396,12 +396,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 9",
       "pinyin": "Nǚ: Yǎnjing zěnme le?\nNán: Kàn diànnǎo shíjiān cháng le, yǒudiǎnr lèi.",
       "options": [
-        "A Mở ví lấy tiền",
-        "B Phục vụ nhà hàng / món ăn",
-        "C Bé gái cầm micro hát",
-        "D Dùng tay che/xoa mắt",
-        "E Xem bản đồ chỉ đường",
-        "F Đồ bơi / thể thao"
+        "A 生病吃药 (shēngbìng chī yào)",
+        "B 在饭店点菜 (zài fàndiàn diǎncài)",
+        "C 去火车站 (qù huǒchēzhàn)",
+        "D 跑步运动 (pǎobù yùndòng)",
+        "E 喝咖啡 (hē kāfēi)",
+        "F 买票 (mǎi piào)"
       ]
     },
     {
@@ -419,12 +419,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": "H21332 - 5",
       "pinyin": "Nán: Nǐ yǒu wǔshí kuài qián ma?\nNǚ: Děng yíxià, wǒ zhǎozhao.",
       "options": [
-        "A Mở ví lấy tiền",
-        "B Phục vụ nhà hàng / món ăn",
-        "C Bé gái cầm micro hát",
-        "D Dùng tay che/xoa mắt",
-        "E Xem bản đồ chỉ đường",
-        "F Đồ bơi / thể thao"
+        "A 生病吃药 (shēngbìng chī yào)",
+        "B 在饭店点菜 (zài fàndiàn diǎncài)",
+        "C 去火车站 (qù huǒchēzhàn)",
+        "D 跑步运动 (pǎobù yùndòng)",
+        "E 喝咖啡 (hē kāfēi)",
+        "F 买票 (mǎi piào)"
       ]
     },
     {
@@ -743,12 +743,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Érzi, pǎo màn diǎnr, děngdeng wǒ.",
       "options": [
-        "A Cô gái khoanh tay suy tư",
-        "B Hai bố con đang chạy bộ",
-        "C Treo/chỉnh bức tranh trên tường",
-        "D Chơi bóng rổ (Ví dụ)",
-        "E Bác sĩ kê thuốc/dặn bệnh nhân",
-        "F Giơ chiếc áo len lên xem"
+        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
+        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
+        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
+        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
       ]
     },
     {
@@ -767,12 +767,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?",
       "options": [
-        "A Cô gái khoanh tay suy tư",
-        "B Hai bố con đang chạy bộ",
-        "C Treo/chỉnh bức tranh trên tường",
-        "D Chơi bóng rổ (Ví dụ)",
-        "E Bác sĩ kê thuốc/dặn bệnh nhân",
-        "F Giơ chiếc áo len lên xem"
+        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
+        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
+        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
+        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
       ]
     },
     {
@@ -791,12 +791,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè jiàn yīfu néngbunéng zài piányi yìxiē?",
       "options": [
-        "A Cô gái khoanh tay suy tư",
-        "B Hai bố con đang chạy bộ",
-        "C Treo/chỉnh bức tranh trên tường",
-        "D Chơi bóng rổ (Ví dụ)",
-        "E Bác sĩ kê thuốc/dặn bệnh nhân",
-        "F Giơ chiếc áo len lên xem"
+        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
+        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
+        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
+        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
       ]
     },
     {
@@ -815,12 +815,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.",
       "options": [
-        "A Cô gái khoanh tay suy tư",
-        "B Hai bố con đang chạy bộ",
-        "C Treo/chỉnh bức tranh trên tường",
-        "D Chơi bóng rổ (Ví dụ)",
-        "E Bác sĩ kê thuốc/dặn bệnh nhân",
-        "F Giơ chiếc áo len lên xem"
+        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
+        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
+        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
+        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
       ]
     },
     {
@@ -839,12 +839,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhège yào fàn hòu chī, měi tiān chī sān cì.",
       "options": [
-        "A Cô gái khoanh tay suy tư",
-        "B Hai bố con đang chạy bộ",
-        "C Treo/chỉnh bức tranh trên tường",
-        "D Chơi bóng rổ (Ví dụ)",
-        "E Bác sĩ kê thuốc/dặn bệnh nhân",
-        "F Giơ chiếc áo len lên xem"
+        "A 你怎么不进教室？想什么呢？ (Nǐ zěnme bù jìn jiàoshì? Xiǎng shénme ne?)",
+        "B 儿子，跑慢点儿，等等我。 (Érzi, pǎo màn diǎnr, děngdeng wǒ.)",
+        "C 右边高了，妈妈，你那边再往下一点儿。 (Yòubian gāo le, māma, nǐ nàbian zài wǎng xià yìdiǎnr.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这个药饭后吃，每天吃三次。 (Zhège yào fàn hòu chī, měi tiān chī sān cì.)",
+        "F 这件衣服能不能再便宜一些？ (Zhè jiàn yīfu néngbunéng zài piányi yìxiē?)"
       ]
     },
     {
@@ -1079,12 +1079,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_51.webp",
       "options": [
-        "A 你出门要多穿点儿衣服。",
-        "B 苹果洗好了，来吃一个吧。",
-        "C 109块，有红和黑两个颜色。",
-        "D 快起床，你今天还要上去游泳课呢。",
-        "E 他 me在哪儿呢？你看见他了吗？",
-        "F 姐姐在说她旅游时见到的一个非常有意思的人。"
+        "A 你出门要多穿点儿衣服。 (nǐ chū mén yào duō chuān diǎn ér yī fu)",
+        "B 苹果洗好了，来吃一个吧。 (píng guǒ xǐ hǎo le , lái chī yí gè ba)",
+        "C 109块，有红和黑两个颜色。 (1 0 9 kuài , yǒu hóng hé hēi liǎng gè yán sè)",
+        "D 快起床，你今天还要上去游泳课呢。 (kuài qǐ chuáng , nǐ jīn tiān hái yào shàng qù yóu yǒng kè ne)",
+        "E 他 me在哪儿呢？你看见他了吗？ (tā m e zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 姐姐在说她旅游时见到的一个非常有意思的人。 (jiě jie zài shuō tā lǚ yóu shí jiàn dào de yí gè fēi cháng yǒu yì sī de rén)"
       ],
       "board_image": null,
       "explanation": "Mặc dù trời nắng nhưng bên ngoài vẫn rất lạnh -> ghép nối logic với nhở dặn 'A Bạn ra ngoài nên mặc thêm nhiều áo vào'.",
@@ -1103,12 +1103,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_52.webp",
       "options": [
-        "A 你出门要多穿点儿衣服。",
-        "B 苹果洗好了，来吃一个吧。",
-        "C 109块，有红和黑两个颜色。",
-        "D 快起床，你今天还要上去游泳课呢。",
-        "E 他 me在哪儿呢？你看见他了吗？",
-        "F 姐姐在说她旅游时见到的一个非常有意思的人。"
+        "A 你出门要多穿点儿衣服。 (nǐ chū mén yào duō chuān diǎn ér yī fu)",
+        "B 苹果洗好了，来吃一个吧。 (píng guǒ xǐ hǎo le , lái chī yí gè ba)",
+        "C 109块，有红和黑两个颜色。 (1 0 9 kuài , yǒu hóng hé hēi liǎng gè yán sè)",
+        "D 快起床，你今天还要上去游泳课呢。 (kuài qǐ chuáng , nǐ jīn tiān hái yào shàng qù yóu yǒng kè ne)",
+        "E 他 me在哪儿呢？你看见他了吗？ (tā m e zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 姐姐在说她旅游时见到的一个非常有意思的人。 (jiě jie zài shuō tā lǚ yóu shí jiàn dào de yí gè fēi cháng yǒu yì sī de rén)"
       ],
       "board_image": null,
       "explanation": "Câu giục 'D Mau dậy đi, hôm nay bạn còn phải đi học bơi đấy' -> người kia xin ngủ thêm 5 phút.",
@@ -1127,12 +1127,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_53.webp",
       "options": [
-        "A 你出门要多穿点儿衣服。",
-        "B 苹果洗好了，来吃一个吧。",
-        "C 109块，有红和黑两个颜色。",
-        "D 快起床，你今天还要上去游泳课呢。",
-        "E 他 me在哪儿呢？你看见他了吗？",
-        "F 姐姐在说她旅游时见到的一个非常有意思的人。"
+        "A 你出门要多穿点儿衣服。 (nǐ chū mén yào duō chuān diǎn ér yī fu)",
+        "B 苹果洗好了，来吃一个吧。 (píng guǒ xǐ hǎo le , lái chī yí gè ba)",
+        "C 109块，有红和黑两个颜色。 (1 0 9 kuài , yǒu hóng hé hēi liǎng gè yán sè)",
+        "D 快起床，你今天还要上去游泳课呢。 (kuài qǐ chuáng , nǐ jīn tiān hái yào shàng qù yóu yǒng kè ne)",
+        "E 他 me在哪儿呢？你看见他了吗？ (tā m e zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 姐姐在说她旅游时见到的一个非常有意思的人。 (jiě jie zài shuō tā lǚ yóu shí jiàn dào de yí gè fēi cháng yǒu yì sī de rén)"
       ],
       "board_image": null,
       "explanation": "Hỏi giá chiếc ghế bán thế nào -> trả lời 'C 109 tệ, có 2 màu đỏ và đen'.",
@@ -1151,12 +1151,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_54.webp",
       "options": [
-        "A 你出门要多穿点儿衣服。",
-        "B 苹果洗好了，来吃一个吧。",
-        "C 109块，有红和黑两个颜色。",
-        "D 快起床，你今天还要上去游泳课呢。",
-        "E 他 me在哪儿呢？你看见他了吗？",
-        "F 姐姐在说她旅游时见到的一个非常有意思的人。"
+        "A 你出门要多穿点儿衣服。 (nǐ chū mén yào duō chuān diǎn ér yī fu)",
+        "B 苹果洗好了，来吃一个吧。 (píng guǒ xǐ hǎo le , lái chī yí gè ba)",
+        "C 109块，有红和黑两个颜色。 (1 0 9 kuài , yǒu hóng hé hēi liǎng gè yán sè)",
+        "D 快起床，你今天还要上去游泳课呢。 (kuài qǐ chuáng , nǐ jīn tiān hái yào shàng qù yóu yǒng kè ne)",
+        "E 他 me在哪儿呢？你看见他了吗？ (tā m e zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 姐姐在说她旅游时见到的一个非常有意思的人。 (jiě jie zài shuō tā lǚ yóu shí jiàn dào de yí gè fēi cháng yǒu yì sī de rén)"
       ],
       "board_image": null,
       "explanation": "Lời mời 'B Táo rửa xong rồi, lại đây ăn một quả đi' -> Cảm ơn, vậy tôi không khách khí nữa.",
@@ -1175,12 +1175,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_55.webp",
       "options": [
-        "A 你出门要多穿点儿衣服。",
-        "B 苹果洗好了，来吃一个吧。",
-        "C 109块，有红和黑两个颜色。",
-        "D 快起床，你今天还要上去游泳课呢。",
-        "E 他 me在哪儿呢？你看见他了吗？",
-        "F 姐姐在说她旅游时见到的一个非常有意思的人。"
+        "A 你出门要多穿点儿衣服。 (nǐ chū mén yào duō chuān diǎn ér yī fu)",
+        "B 苹果洗好了，来吃一个吧。 (píng guǒ xǐ hǎo le , lái chī yí gè ba)",
+        "C 109块，有红和黑两个颜色。 (1 0 9 kuài , yǒu hóng hé hēi liǎng gè yán sè)",
+        "D 快起床，你今天还要上去游泳课呢。 (kuài qǐ chuáng , nǐ jīn tiān hái yào shàng qù yóu yǒng kè ne)",
+        "E 他 me在哪儿呢？你看见他了吗？ (tā m e zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 姐姐在说她旅游时见到的一个非常有意思的人。 (jiě jie zài shuō tā lǚ yóu shí jiàn dào de yí gè fēi cháng yǒu yì sī de rén)"
       ],
       "board_image": null,
       "explanation": "Hỏi có chuyện gì mà buồn cười thế -> trả lời 'F Chị gái đang kể về một người rất thú vị gặp khi đi du lịch'.",
@@ -1199,11 +1199,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_56.webp",
       "options": [
-        "A 他没说他什么时候回来。",
-        "B 我也不知道，我们去问问张老师吧。",
-        "C 你家离公司远吗？",
-        "D 下次吧，我今天累了，想早些休息。",
-        "E 我们都觉得那儿非常漂亮。"
+        "A 他没说他什么时候回来。 (tā méi shuō tā shén me shí hòu huí lái)",
+        "B 我也不知道，我们去问问张老师吧。 (wǒ yě bù zhī dào , wǒ men qù wèn wèn zhāng lǎo shī ba)",
+        "C 你家离公司远吗？ (nǐ jiā lí gōng sī yuǎn ma ?)",
+        "D 下次吧，我今天累了，想早些休息。 (xià cì ba , wǒ jīn tiān lèi le , xiǎng zǎo xiē xiū xi)",
+        "E 我们都觉得那儿非常漂亮。 (wǒ men dōu jué de nà ér fēi cháng piào liang)"
       ],
       "board_image": null,
       "explanation": "Hỏi chữ này có nghĩa là 'Đại' không -> đáp 'B Tôi cũng không biết, chúng ta đi hỏi thầy Trương xem'.",
@@ -1222,11 +1222,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_57.webp",
       "options": [
-        "A 他没说他什么时候回来。",
-        "B 我也不知道，我们去问问张老师吧。",
-        "C 你家离公司远吗？",
-        "D 下次吧，我今天累了，想早些休息。",
-        "E 我们都觉得那儿非常漂亮。"
+        "A 他没说他什么时候回来。 (tā méi shuō tā shén me shí hòu huí lái)",
+        "B 我也不知道，我们去问问张老师吧。 (wǒ yě bù zhī dào , wǒ men qù wèn wèn zhāng lǎo shī ba)",
+        "C 你家离公司远吗？ (nǐ jiā lí gōng sī yuǎn ma ?)",
+        "D 下次吧，我今天累了，想早些休息。 (xià cì ba , wǒ jīn tiān lèi le , xiǎng zǎo xiē xiū xi)",
+        "E 我们都觉得那儿非常漂亮。 (wǒ men dōu jué de nà ér fēi cháng piào liang)"
       ],
       "board_image": null,
       "explanation": "Xin lỗi, ông Trương có việc đi ra ngoài rồi -> 'A Anh ấy không nói khi nào sẽ quay lại'.",
@@ -1245,11 +1245,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_58.webp",
       "options": [
-        "A 他没说他什么时候回来。",
-        "B 我也不知道，我们去问问张老师吧。",
-        "C 你家离公司远吗？",
-        "D 下次吧，我今天累了，想早些休息。",
-        "E 我们都觉得那儿非常漂亮。"
+        "A 他没说他什么时候回来。 (tā méi shuō tā shén me shí hòu huí lái)",
+        "B 我也不知道，我们去问问张老师吧。 (wǒ yě bù zhī dào , wǒ men qù wèn wèn zhāng lǎo shī ba)",
+        "C 你家离公司远吗？ (nǐ jiā lí gōng sī yuǎn ma ?)",
+        "D 下次吧，我今天累了，想早些休息。 (xià cì ba , wǒ jīn tiān lèi le , xiǎng zǎo xiē xiū xi)",
+        "E 我们都觉得那儿非常漂亮。 (wǒ men dōu jué de nà ér fēi cháng piào liang)"
       ],
       "board_image": null,
       "explanation": "Rủ buổi tối đi khiêu vũ thế nào -> từ chối khéo 'D Để lần sau đi, hôm nay tôi mệt rồi, muốn nghỉ ngơi sớm'.",
@@ -1268,11 +1268,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_59.webp",
       "options": [
-        "A 他没说他什么时候回来。",
-        "B 我也不知道，我们去问问张老师吧。",
-        "C 你家离公司远吗？",
-        "D 下次吧，我今天累了，想早些休息。",
-        "E 我们都觉得那儿非常漂亮。"
+        "A 他没说他什么时候回来。 (tā méi shuō tā shén me shí hòu huí lái)",
+        "B 我也不知道，我们去问问张老师吧。 (wǒ yě bù zhī dào , wǒ men qù wèn wèn zhāng lǎo shī ba)",
+        "C 你家离公司远吗？ (nǐ jiā lí gōng sī yuǎn ma ?)",
+        "D 下次吧，我今天累了，想早些休息。 (xià cì ba , wǒ jīn tiān lèi le , xiǎng zǎo xiē xiū xi)",
+        "E 我们都觉得那儿非常漂亮。 (wǒ men dōu jué de nà ér fēi cháng piào liang)"
       ],
       "board_image": null,
       "explanation": "Kể tôi và chồng từng đi Bắc Kinh 1 lần năm 2008 -> tiếp nối 'E Chúng tôi đều cảm thấy nơi đó rất đẹp'.",
@@ -1291,11 +1291,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21332/images/H21332_img_60.webp",
       "options": [
-        "A 他没说他什么时候回来。",
-        "B 我也不知道，我们去问问张老师吧。",
-        "C 你家离公司远吗？",
-        "D 下次吧，我今天累了，想早些休息。",
-        "E 我们都觉得那儿非常漂亮。"
+        "A 他没说他什么时候回来。 (tā méi shuō tā shén me shí hòu huí lái)",
+        "B 我也不知道，我们去问问张老师吧。 (wǒ yě bù zhī dào , wǒ men qù wèn wèn zhāng lǎo shī ba)",
+        "C 你家离公司远吗？ (nǐ jiā lí gōng sī yuǎn ma ?)",
+        "D 下次吧，我今天累了，想早些休息。 (xià cì ba , wǒ jīn tiān lèi le , xiǎng zǎo xiē xiū xi)",
+        "E 我们都觉得那儿非常漂亮。 (wǒ men dōu jué de nà ér fēi cháng piào liang)"
       ],
       "board_image": null,
       "explanation": "Trả lời Rất gần, hàng ngày tôi đều đi bộ đi làm -> ghép với câu hỏi 'C Nhà bạn cách công ty xa không?'.",

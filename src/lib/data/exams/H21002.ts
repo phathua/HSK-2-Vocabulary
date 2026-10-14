@@ -14,7 +14,7 @@ export const examData: ExamDetail = {
       "question_no": 1,
       "image": "images/H21002_img_01.webp",
       "type": "True/False",
-      "text": "Tā zhèngzài cāochǎng shàng pǎobù.\n他正在操场上跑步。",
+      "text": "他正在操场上跑步。",
       "answer": "√",
       "listening_script": "我每天早上都要去跑步半小时。",
       "image_url": null,
@@ -24,7 +24,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Tā zhèngzài cāochǎng shàng pǎobù."
     },
     {
       "exam_code": "H21002",
@@ -33,7 +34,7 @@ export const examData: ExamDetail = {
       "question_no": 2,
       "image": "images/H21002_img_02.webp",
       "type": "True/False",
-      "text": "Xiǎo Wáng mǎi le yí gè xīn shǒujī.\n小王买了一个新手机。",
+      "text": "小王买了一个新手机。",
       "answer": "×",
       "listening_script": "这个手机是我去年买的。",
       "image_url": null,
@@ -43,7 +44,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Xiǎo Wáng mǎi le yí gè xīn shǒujī."
     },
     {
       "exam_code": "H21002",
@@ -52,7 +54,7 @@ export const examData: ExamDetail = {
       "question_no": 3,
       "image": "images/H21002_img_03.webp",
       "type": "True/False",
-      "text": "Mèimei hěn xǐhuan chī xīguā.\n妹妹很喜欢吃西瓜。",
+      "text": "妹妹很喜欢吃西瓜。",
       "answer": "√",
       "listening_script": "今天买的西瓜又大又甜，妹妹吃了好多。",
       "image_url": null,
@@ -62,7 +64,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Mèimei hěn xǐhuan chī xīguā."
     },
     {
       "exam_code": "H21002",
@@ -71,7 +74,7 @@ export const examData: ExamDetail = {
       "question_no": 4,
       "image": "images/H21002_img_04.webp",
       "type": "True/False",
-      "text": "Tāmen dǎsuàn xià xīngqī qù lǚyóu.\n他们打算下星期去旅游。",
+      "text": "他们打算下星期去旅游。",
       "answer": "×",
       "listening_script": "下星期我们要考试，不能去玩儿了。",
       "image_url": null,
@@ -81,7 +84,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Tāmen dǎsuàn xià xīngqī qù lǚyóu."
     },
     {
       "exam_code": "H21002",
@@ -90,7 +94,7 @@ export const examData: ExamDetail = {
       "question_no": 5,
       "image": "images/H21002_img_05.webp",
       "type": "True/False",
-      "text": "Fúwùyuán sòng lái le yì bēi shuǐ.\n服务员送来了一杯水。",
+      "text": "服务员送来了一杯水。",
       "answer": "√",
       "listening_script": "您好，这是您要的热水。",
       "image_url": null,
@@ -100,7 +104,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Fúwùyuán sòng lái le yì bēi shuǐ."
     },
     {
       "exam_code": "H21002",
@@ -109,7 +114,7 @@ export const examData: ExamDetail = {
       "question_no": 6,
       "image": "images/H21002_img_06.webp",
       "type": "True/False",
-      "text": "Zhè dào tí tài nán le, tā bú huì zuò.\n这道题太难了，他不会做。",
+      "text": "这道题太难了，他不会做。",
       "answer": "×",
       "listening_script": "这道题很简单，我一分钟就做完了。",
       "image_url": null,
@@ -119,7 +124,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Zhè dào tí tài nán le, tā bú huì zuò."
     },
     {
       "exam_code": "H21002",
@@ -128,7 +134,7 @@ export const examData: ExamDetail = {
       "question_no": 7,
       "image": "images/H21002_img_07.webp",
       "type": "True/False",
-      "text": "Tāmen jiā lí xuéxiào hěn jìn.\n他们家离学校很近。",
+      "text": "他们家离学校很近。",
       "answer": "√",
       "listening_script": "从我家走五分钟就能到学校。",
       "image_url": null,
@@ -138,7 +144,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Tāmen jiā lí xuéxiào hěn jìn."
     },
     {
       "exam_code": "H21002",
@@ -147,7 +154,7 @@ export const examData: ExamDetail = {
       "question_no": 8,
       "image": "images/H21002_img_08.webp",
       "type": "True/False",
-      "text": "Bàba zhèngzài kàn bàozhǐ.\n爸爸正在看报纸。",
+      "text": "爸爸正在看报纸。",
       "answer": "×",
       "listening_script": "爸爸在看电视里的足球比赛呢。",
       "image_url": null,
@@ -157,7 +164,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Bàba zhèngzài kàn bàozhǐ."
     },
     {
       "exam_code": "H21002",
@@ -166,7 +174,7 @@ export const examData: ExamDetail = {
       "question_no": 9,
       "image": "images/H21002_img_09.webp",
       "type": "True/False",
-      "text": "Tā mǎi le yì shuāng piàoliang de bái xié.\n她买了一双漂亮的白鞋。",
+      "text": "她买了一双漂亮的白鞋。",
       "answer": "√",
       "listening_script": "这双白色的运动鞋真好看，我就买它了。",
       "image_url": null,
@@ -176,7 +184,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Tā mǎi le yì shuāng piàoliang de bái xié."
     },
     {
       "exam_code": "H21002",
@@ -185,7 +194,7 @@ export const examData: ExamDetail = {
       "question_no": 10,
       "image": "images/H21002_img_10.webp",
       "type": "True/False",
-      "text": "Jīntiān wǎnshang méiyǒu yuèliang.\n今天晚上没有月亮。",
+      "text": "今天晚上没有月亮。",
       "answer": "×",
       "listening_script": "今晚的月亮又大又圆，真漂亮。",
       "image_url": null,
@@ -195,7 +204,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "pinyin": "Jīntiān wǎnshang méiyǒu yuèliang."
     },
     {
       "exam_code": "H21002",
@@ -382,9 +392,9 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe nêu rõ giá đặc giá hôm nay là 45 tệ 'jīntiān tèjià sìshíwǔ kuài'. Do đó đáp án đúng là B (45 kuài).",
       "listening_pinyin": "[Nán:] Qǐngwèn zhè běn cídiǎn duōshao qián?\n[Nǚ:] Yuánjià liùshí, jīntiān tèjià sìshíwǔ kuài.\n[Wèn:] Zhè běn cídiǎn jīntiān mài duōshao qián?",
       "options": [
-        "A 60 块 (60   kuài)",
-        "B 45 块 (45   kuài)",
-        "C 15 块 (15   kuài)"
+        "A 60 块 (60 kuài)",
+        "B 45 块 (45 kuài)",
+        "C 15 块 (15 kuài)"
       ]
     },
     {
@@ -663,11 +673,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wàimiàn xià xuě le, tiānqì zhēn lěng a!",
       "options": [
-        "A: Cảnh tuyết rơi trắng xóa ngoài trời lạnh buốt",
-        "B: Sảnh sân bay có người kéo vali đang nhìn bảng giờ bay",
-        "C: Chú mèo đáng yêu ngồi bên bể cá tròn",
-        "D: Bác sĩ mặc áo blouse trắng đeo ống nghe khám bệnh",
-        "E: Phòng học có bảng đen và học sinh ngồi nghe giảng"
+        "A 外面下雪了，天气真冷啊！ (Wàimiàn xià xuě le, tiānqì zhēn lěng a!)",
+        "B 他正在机场等朋友呢。 (Tā zhèngzài jīchǎng děng péngyou ne.)",
+        "C 这只小猫一直在看着那条鱼。 (Zhè zhī xiǎomāo yìzhí zài kànzhe nà tiáo yú.)",
+        "D 医生说他需要多休息，多喝水。 (Yīshēng shuō tā xūyào duō xiūxi, duō hē shuǐ.)",
+        "E 他们正在教室里认真地上课。 (Tāmen zhèngzài jiàoshì lǐ rènzhēn de shàngkè.)",
+        "F 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)"
       ]
     },
     {
@@ -686,11 +697,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā zhèngzài jīchǎng děng péngyou ne.",
       "options": [
-        "A: Cảnh tuyết rơi trắng xóa ngoài trời lạnh buốt",
-        "B: Sảnh sân bay có người kéo vali đang nhìn bảng giờ bay",
-        "C: Chú mèo đáng yêu ngồi bên bể cá tròn",
-        "D: Bác sĩ mặc áo blouse trắng đeo ống nghe khám bệnh",
-        "E: Phòng học có bảng đen và học sinh ngồi nghe giảng"
+        "A 外面下雪了，天气真冷啊！ (Wàimiàn xià xuě le, tiānqì zhēn lěng a!)",
+        "B 他正在机场等朋友呢。 (Tā zhèngzài jīchǎng děng péngyou ne.)",
+        "C 这只小猫一直在看着那条鱼。 (Zhè zhī xiǎomāo yìzhí zài kànzhe nà tiáo yú.)",
+        "D 医生说他需要多休息，多喝水。 (Yīshēng shuō tā xūyào duō xiūxi, duō hē shuǐ.)",
+        "E 他们正在教室里认真地上课。 (Tāmen zhèngzài jiàoshì lǐ rènzhēn de shàngkè.)",
+        "F 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)"
       ]
     },
     {
@@ -709,11 +721,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè zhī xiǎomāo yìzhí zài kànzhe nà tiáo yú.",
       "options": [
-        "A: Cảnh tuyết rơi trắng xóa ngoài trời lạnh buốt",
-        "B: Sảnh sân bay có người kéo vali đang nhìn bảng giờ bay",
-        "C: Chú mèo đáng yêu ngồi bên bể cá tròn",
-        "D: Bác sĩ mặc áo blouse trắng đeo ống nghe khám bệnh",
-        "E: Phòng học có bảng đen và học sinh ngồi nghe giảng"
+        "A 外面下雪了，天气真冷啊！ (Wàimiàn xià xuě le, tiānqì zhēn lěng a!)",
+        "B 他正在机场等朋友呢。 (Tā zhèngzài jīchǎng děng péngyou ne.)",
+        "C 这只小猫一直在看着那条鱼。 (Zhè zhī xiǎomāo yìzhí zài kànzhe nà tiáo yú.)",
+        "D 医生说他需要多休息，多喝水。 (Yīshēng shuō tā xūyào duō xiūxi, duō hē shuǐ.)",
+        "E 他们正在教室里认真地上课。 (Tāmen zhèngzài jiàoshì lǐ rènzhēn de shàngkè.)",
+        "F 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)"
       ]
     },
     {
@@ -732,11 +745,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yīshēng shuō tā xūyào duō xiūxi, duō hē shuǐ.",
       "options": [
-        "A: Cảnh tuyết rơi trắng xóa ngoài trời lạnh buốt",
-        "B: Sảnh sân bay có người kéo vali đang nhìn bảng giờ bay",
-        "C: Chú mèo đáng yêu ngồi bên bể cá tròn",
-        "D: Bác sĩ mặc áo blouse trắng đeo ống nghe khám bệnh",
-        "E: Phòng học có bảng đen và học sinh ngồi nghe giảng"
+        "A 外面下雪了，天气真冷啊！ (Wàimiàn xià xuě le, tiānqì zhēn lěng a!)",
+        "B 他正在机场等朋友呢。 (Tā zhèngzài jīchǎng děng péngyou ne.)",
+        "C 这只小猫一直在看着那条鱼。 (Zhè zhī xiǎomāo yìzhí zài kànzhe nà tiáo yú.)",
+        "D 医生说他需要多休息，多喝水。 (Yīshēng shuō tā xūyào duō xiūxi, duō hē shuǐ.)",
+        "E 他们正在教室里认真地上课。 (Tāmen zhèngzài jiàoshì lǐ rènzhēn de shàngkè.)",
+        "F 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)"
       ]
     },
     {
@@ -755,11 +769,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tāmen zhèngzài jiàoshì lǐ rènzhēn de shàngkè.",
       "options": [
-        "A: Cảnh tuyết rơi trắng xóa ngoài trời lạnh buốt",
-        "B: Sảnh sân bay có người kéo vali đang nhìn bảng giờ bay",
-        "C: Chú mèo đáng yêu ngồi bên bể cá tròn",
-        "D: Bác sĩ mặc áo blouse trắng đeo ống nghe khám bệnh",
-        "E: Phòng học có bảng đen và học sinh ngồi nghe giảng"
+        "A 外面下雪了，天气真冷啊！ (Wàimiàn xià xuě le, tiānqì zhēn lěng a!)",
+        "B 他正在机场等朋友呢。 (Tā zhèngzài jīchǎng děng péngyou ne.)",
+        "C 这只小猫一直在看着那条鱼。 (Zhè zhī xiǎomāo yìzhí zài kànzhe nà tiáo yú.)",
+        "D 医生说他需要多休息，多喝水。 (Yīshēng shuō tā xūyào duō xiūxi, duō hē shuǐ.)",
+        "E 他们正在教室里认真地上课。 (Tāmen zhèngzài jiàoshì lǐ rènzhēn de shàngkè.)",
+        "F 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)"
       ]
     },
     {
@@ -774,11 +789,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_41.webp",
       "options": [
-        "A: 帮助 (bāngzhù)",
-        "B: 跑步 (pǎobù)",
-        "C: 便宜 (piányi)",
-        "D: 已经 (yǐjīng)",
-        "E: 准备 (zhǔnbèi)"
+        "A 帮助 (bāngzhù)",
+        "B 跑步 (pǎobù)",
+        "C 便宜 (piányi)",
+        "D 已经 (yǐjīng)",
+        "E 准备 (zhǔnbèi)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần động từ chỉ hoạt động thể dục buổi sáng: 'pǎobù' (chạy bộ). Cả câu: 'nǐ měitiān zǎoshàng dōu qù pǎobù ma？'",
@@ -797,11 +812,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_42.webp",
       "options": [
-        "A: 帮助 (bāngzhù)",
-        "B: 跑步 (pǎobù)",
-        "C: 便宜 (piányi)",
-        "D: 已经 (yǐjīng)",
-        "E: 准备 (zhǔnbèi)"
+        "A 帮助 (bāngzhù)",
+        "B 跑步 (pǎobù)",
+        "C 便宜 (piányi)",
+        "D 已经 (yǐjīng)",
+        "E 准备 (zhǔnbèi)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần danh từ chỉ sự giúp đỡ: 'bāngzhù' (sự giúp đỡ). Cả câu: 'xièxiè nǐ de bāngzhù，wǒ de diànnǎo xiūhǎo le。'",
@@ -820,11 +835,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_43.webp",
       "options": [
-        "A: 帮助 (bāngzhù)",
-        "B: 跑步 (pǎobù)",
-        "C: 便宜 (piányi)",
-        "D: 已经 (yǐjīng)",
-        "E: 准备 (zhǔnbèi)"
+        "A 帮助 (bāngzhù)",
+        "B 跑步 (pǎobù)",
+        "C 便宜 (piányi)",
+        "D 已经 (yǐjīng)",
+        "E 准备 (zhǔnbèi)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần tính từ trái nghĩa với 'guì' (đắt): 'piányi' (rẻ). Cả câu: 'zhèjiàn yīfú tàiguì le，yǒuméiyǒu piányi yìdiǎnér de？'",
@@ -843,11 +858,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_44.webp",
       "options": [
-        "A: 帮助 (bāngzhù)",
-        "B: 跑步 (pǎobù)",
-        "C: 便宜 (piányi)",
-        "D: 已经 (yǐjīng)",
-        "E: 准备 (zhǔnbèi)"
+        "A 帮助 (bāngzhù)",
+        "B 跑步 (pǎobù)",
+        "C 便宜 (piányi)",
+        "D 已经 (yǐjīng)",
+        "E 准备 (zhǔnbèi)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần phó từ chỉ trạng thái đã xảy ra: 'yǐjīng' (đã). Cả câu: 'tā yǐjīng huíjiā le，bù zài bàngōngshì。'",
@@ -866,11 +881,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_45.webp",
       "options": [
-        "A: 帮助 (bāngzhù)",
-        "B: 跑步 (pǎobù)",
-        "C: 便宜 (piányi)",
-        "D: 已经 (yǐjīng)",
-        "E: 准备 (zhǔnbèi)"
+        "A 帮助 (bāngzhù)",
+        "B 跑步 (pǎobù)",
+        "C 便宜 (piányi)",
+        "D 已经 (yǐjīng)",
+        "E 准备 (zhǔnbèi)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần động từ kết hợp với kỳ thi: 'zhǔnbèi' (chuẩn bị). Cả câu: 'wǒmen zhèngzài zhǔnbèi míngtiān de kǎoshì ne。'",
@@ -994,11 +1009,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_51.webp",
       "options": [
-        "A: 非常好看，我很喜欢。",
-        "B: 明天下午或者后天上午都可以。",
-        "C: 在商场买的，正好在打折。",
-        "D: 他生病了，去医院看医生了。",
-        "E: 会一些，能做几个简单的小菜。"
+        "A 非常好看，我很喜欢。 (fēi cháng hǎo kàn , wǒ hěn xǐ huan)",
+        "B 明天下午或者后天上午都可以。 (míng tiān xià wǔ huò zhě hòu tiān shàng wǔ dōu kě yǐ)",
+        "C 在商场买的，正好在打折。 (zài shāng chǎng mǎi de , zhèng hǎo zài dǎ zhé)",
+        "D 他生病了，去医院看医生了。 (tā shēng bìng le , qù yī yuàn kàn yī shēng le)",
+        "E 会一些，能做几个简单的小菜。 (huì yì xiē , néng zuò jǐ gè jiǎn dān de xiǎo cài)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi hỏi về thời gian rảnh 'shénme shíhòu yǒu shíjiān？', đáp án B đưa ra mốc thời gian linh hoạt 'míngtiān xiàwǔ huòzhě hòutiān shàngwǔ dōu kěyǐ' (Chiều mai hoặc sáng ngày kia đều được).",
@@ -1017,11 +1032,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_52.webp",
       "options": [
-        "A: 非常好看，我很喜欢。",
-        "B: 明天下午或者后天上午都可以。",
-        "C: 在商场买的，正好在打折。",
-        "D: 他生病了，去医院看医生了。",
-        "E: 会一些，能做几个简单的小菜。"
+        "A 非常好看，我很喜欢。 (fēi cháng hǎo kàn , wǒ hěn xǐ huan)",
+        "B 明天下午或者后天上午都可以。 (míng tiān xià wǔ huò zhě hòu tiān shàng wǔ dōu kě yǐ)",
+        "C 在商场买的，正好在打折。 (zài shāng chǎng mǎi de , zhèng hǎo zài dǎ zhé)",
+        "D 他生病了，去医院看医生了。 (tā shēng bìng le , qù yī yuàn kàn yī shēng le)",
+        "E 会一些，能做几个简单的小菜。 (huì yì xiē , néng zuò jǐ gè jiǎn dān de xiǎo cài)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi hỏi địa điểm mua áo 'zài nǎér mǎi de？', đáp án C trả lời mua ở trung tâm thương mại 'zài shāngchǎng mǎi de'.",
@@ -1040,11 +1055,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_53.webp",
       "options": [
-        "A: 非常好看，我很喜欢。",
-        "B: 明天下午或者后天上午都可以。",
-        "C: 在商场买的，正好在打折。",
-        "D: 他生病了，去医院看医生了。",
-        "E: 会一些，能做几个简单的小菜。"
+        "A 非常好看，我很喜欢。 (fēi cháng hǎo kàn , wǒ hěn xǐ huan)",
+        "B 明天下午或者后天上午都可以。 (míng tiān xià wǔ huò zhě hòu tiān shàng wǔ dōu kě yǐ)",
+        "C 在商场买的，正好在打折。 (zài shāng chǎng mǎi de , zhèng hǎo zài dǎ zhé)",
+        "D 他生病了，去医院看医生了。 (tā shēng bìng le , qù yī yuàn kàn yī shēng le)",
+        "E 会一些，能做几个简单的小菜。 (huì yì xiē , néng zuò jǐ gè jiǎn dān de xiǎo cài)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi đánh giá về bộ phim 'diànyǐng hǎokàn ma？', đáp án A khen phim rất hay 'fēicháng hǎokàn，wǒ hěn xǐhuān'.",
@@ -1063,11 +1078,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_54.webp",
       "options": [
-        "A: 非常好看，我很喜欢。",
-        "B: 明天下午或者后天上午都可以。",
-        "C: 在商场买的，正好在打折。",
-        "D: 他生病了，去医院看医生了。",
-        "E: 会一些，能做几个简单的小菜。"
+        "A 非常好看，我很喜欢。 (fēi cháng hǎo kàn , wǒ hěn xǐ huan)",
+        "B 明天下午或者后天上午都可以。 (míng tiān xià wǔ huò zhě hòu tiān shàng wǔ dōu kě yǐ)",
+        "C 在商场买的，正好在打折。 (zài shāng chǎng mǎi de , zhèng hǎo zài dǎ zhé)",
+        "D 他生病了，去医院看医生了。 (tā shēng bìng le , qù yī yuàn kàn yī shēng le)",
+        "E 会一些，能做几个简单的小菜。 (huì yì xiē , néng zuò jǐ gè jiǎn dān de xiǎo cài)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi hỏi có biết nấu ăn không 'huì zuòfàn ma？', đáp án E trả lời biết làm vài món đơn giản 'huì yīxiē，néng zuò jǐgè jiǎndān de xiǎocài'.",
@@ -1086,11 +1101,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_55.webp",
       "options": [
-        "A: 非常好看，我很喜欢。",
-        "B: 明天下午或者后天上午都可以。",
-        "C: 在商场买的，正好在打折。",
-        "D: 他生病了，去医院看医生了。",
-        "E: 会一些，能做几个简单的小菜。"
+        "A 非常好看，我很喜欢。 (fēi cháng hǎo kàn , wǒ hěn xǐ huan)",
+        "B 明天下午或者后天上午都可以。 (míng tiān xià wǔ huò zhě hòu tiān shàng wǔ dōu kě yǐ)",
+        "C 在商场买的，正好在打折。 (zài shāng chǎng mǎi de , zhèng hǎo zài dǎ zhé)",
+        "D 他生病了，去医院看医生了。 (tā shēng bìng le , qù yī yuàn kàn yī shēng le)",
+        "E 会一些，能做几个简单的小菜。 (huì yì xiē , néng zuò jǐ gè jiǎn dān de xiǎo cài)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi hỏi lý do Tiểu Lý chưa đi làm 'zěnme hái méilái shàngbān？', đáp án D giải thích do bị bệnh đi khám bác sĩ 'tā shēngbìng le，qù yīyuàn kàn yīshēng le'.",
@@ -1109,11 +1124,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_56.webp",
       "options": [
-        "A: 好的，我这就去把窗户关上。",
-        "B: 还不错，下个月就可以参加考试了。",
-        "C: 但是质量非常好，穿起来很舒服。",
-        "D: 我打算和朋友一起去爬山。",
-        "E: 真对不起，我这就帮您换一碗。"
+        "A 好的，我这就去把窗户关上。 (hǎo de , wǒ zhè jiù qù bǎ chuāng hù guān shàng)",
+        "B 还不错，下个月就可以参加考试了。 (hái bú cuò , xià gè yuè jiù kě yǐ cān jiā kǎo shì le)",
+        "C 但是质量非常好，穿起来很舒服。 (dàn shì zhì liàng fēi cháng hǎo , chuān qǐ lái hěn shū fú)",
+        "D 我打算和朋友一起去爬山。 (wǒ dǎ suàn hé péng yǒu yì qǐ qù pá shān)",
+        "E 真对不起，我这就帮您换一碗。 (zhēn duì bù qǐ , wǒ zhè jiù bāng nín huàn yì wǎn)"
       ],
       "board_image": null,
       "explanation": "Câu đề nghị đóng cửa sổ do gió to 'bǎ chuānghù guānshàng ba', đáp án A nhận lời đi đóng cửa 'hǎo de，wǒ zhè jiù qù bǎ chuānghù guānshàng'.",
@@ -1132,11 +1147,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_57.webp",
       "options": [
-        "A: 好的，我这就去把窗户关上。",
-        "B: 还不错，下个月就可以参加考试了。",
-        "C: 但是质量非常好，穿起来很舒服。",
-        "D: 我打算和朋友一起去爬山。",
-        "E: 真对不起，我这就帮您换一碗。"
+        "A 好的，我这就去把窗户关上。 (hǎo de , wǒ zhè jiù qù bǎ chuāng hù guān shàng)",
+        "B 还不错，下个月就可以参加考试了。 (hái bú cuò , xià gè yuè jiù kě yǐ cān jiā kǎo shì le)",
+        "C 但是质量非常好，穿起来很舒服。 (dàn shì zhì liàng fēi cháng hǎo , chuān qǐ lái hěn shū fú)",
+        "D 我打算和朋友一起去爬山。 (wǒ dǎ suàn hé péng yǒu yì qǐ qù pá shān)",
+        "E 真对不起，我这就帮您换一碗。 (zhēn duì bù qǐ , wǒ zhè jiù bāng nín huàn yì wǎn)"
       ],
       "board_image": null,
       "explanation": "Câu nhận xét váy hơi đắt 'yǒudiǎnér guì', đáp án C giải thích chất lượng rất tốt 'dànshì zhìliàng fēicháng hǎo，chuān qǐlái hěn shūfú'.",
@@ -1155,11 +1170,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_58.webp",
       "options": [
-        "A: 好的，我这就去把窗户关上。",
-        "B: 还不错，下个月就可以参加考试了。",
-        "C: 但是质量非常好，穿起来很舒服。",
-        "D: 我打算和朋友一起去爬山。",
-        "E: 真对不起，我这就帮您换一碗。"
+        "A 好的，我这就去把窗户关上。 (hǎo de , wǒ zhè jiù qù bǎ chuāng hù guān shàng)",
+        "B 还不错，下个月就可以参加考试了。 (hái bú cuò , xià gè yuè jiù kě yǐ cān jiā kǎo shì le)",
+        "C 但是质量非常好，穿起来很舒服。 (dàn shì zhì liàng fēi cháng hǎo , chuān qǐ lái hěn shū fú)",
+        "D 我打算和朋友一起去爬山。 (wǒ dǎ suàn hé péng yǒu yì qǐ qù pá shān)",
+        "E 真对不起，我这就帮您换一碗。 (zhēn duì bù qǐ , wǒ zhè jiù bāng nín huàn yì wǎn)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi về tiến độ học lái xe 'xuéchē xuédé zěnmeyàng le？', đáp án B phản hồi khá tốt 'hái bùcuò，xiàgèyuè jiù kěyǐ cānjiākǎoshì le'.",
@@ -1178,11 +1193,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_59.webp",
       "options": [
-        "A: 好的，我这就去把窗户关上。",
-        "B: 还不错，下个月就可以参加考试了。",
-        "C: 但是质量非常好，穿起来很舒服。",
-        "D: 我打算和朋友一起去爬山。",
-        "E: 真对不起，我这就帮您换一碗。"
+        "A 好的，我这就去把窗户关上。 (hǎo de , wǒ zhè jiù qù bǎ chuāng hù guān shàng)",
+        "B 还不错，下个月就可以参加考试了。 (hái bú cuò , xià gè yuè jiù kě yǐ cān jiā kǎo shì le)",
+        "C 但是质量非常好，穿起来很舒服。 (dàn shì zhì liàng fēi cháng hǎo , chuān qǐ lái hěn shū fú)",
+        "D 我打算和朋友一起去爬山。 (wǒ dǎ suàn hé péng yǒu yì qǐ qù pá shān)",
+        "E 真对不起，我这就帮您换一碗。 (zhēn duì bù qǐ , wǒ zhè jiù bāng nín huàn yì wǎn)"
       ],
       "board_image": null,
       "explanation": "Câu phản ánh canh cá bị mặn 'zhèdào yútāng zěnme yǒudiǎnér xián？', đáp án E xin lỗi và đổi bát khác 'zhēnduìbùqǐ，wǒ zhè jiù bāng nín huàn yīwǎn'.",
@@ -1201,11 +1216,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21002/images/H21002_img_60.webp",
       "options": [
-        "A: 好的，我这就去把窗户关上。",
-        "B: 还不错，下个月就可以参加考试了。",
-        "C: 但是质量非常好，穿起来很舒服。",
-        "D: 我打算和朋友一起去爬山。",
-        "E: 真对不起，我这就帮您换一碗。"
+        "A 好的，我这就去把窗户关上。 (hǎo de , wǒ zhè jiù qù bǎ chuāng hù guān shàng)",
+        "B 还不错，下个月就可以参加考试了。 (hái bú cuò , xià gè yuè jiù kě yǐ cān jiā kǎo shì le)",
+        "C 但是质量非常好，穿起来很舒服。 (dàn shì zhì liàng fēi cháng hǎo , chuān qǐ lái hěn shū fú)",
+        "D 我打算和朋友一起去爬山。 (wǒ dǎ suàn hé péng yǒu yì qǐ qù pá shān)",
+        "E 真对不起，我这就帮您换一碗。 (zhēn duì bù qǐ , wǒ zhè jiù bāng nín huàn yì wǎn)"
       ],
       "board_image": null,
       "explanation": "Câu hỏi về kế hoạch đi chơi cuối tuần 'zhōumò dǎsuàn qù nǎér wánér？', đáp án D trả lời dự định đi leo núi 'wǒ dǎsuàn hé péngyǒu yìqǐ qù páshān'.",

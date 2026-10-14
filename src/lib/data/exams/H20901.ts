@@ -201,12 +201,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe miêu tả bức ảnh chụp nhóm người 'bên phải cùng phía sau là tôi' (hòumiàn, zuì yòubian de shì wǒ), tương ứng với tranh F (nhóm bạn nữ chụp ảnh). Do đó đáp án chuẩn là F.",
       "listening_pinyin": "Nǚ: Hòumiàn, zuì yòubian de shì wǒ, zhǎodào le ma?\nNán: Zhǎodào le, nǐ pángbiān nàge nǚ háizi shì shéi?",
       "options": [
-        "A: Tặng hoa sinh nhật / 生日快乐",
-        "B: Hàng quần áo Veston / 几件衣服",
-        "C: Học sinh giơ tay phát biểu / 谁来回答问题",
-        "D: Đá bóng / 踢足球 (Ví dụ)",
-        "E: Bát cơm và đôi đũa / 再来点米饭",
-        "F: Nhóm bạn nữ chụp ảnh / 后面最右边"
+        "A 生日快乐 (shēng rì kuài lè)",
+        "B 几件衣服 (jǐ jiàn yī fu)",
+        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
+        "D 踢足球 (tī zú qiú)",
+        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
+        "F 后面最右边 (hòu miàn zuì yòu biān)"
       ]
     },
     {
@@ -223,12 +223,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe chúc mừng sinh nhật và tặng hoa/quà 'sinh nhật vui vẻ, đây là quà tôi tặng bạn' (shēngrì kuàilè! Zhè shì wǒ sòng gěi nǐ de), tương ứng với tranh A (đôi tay tặng bó hoa hồng). Do đó đáp án chuẩn là A.",
       "listening_pinyin": "Nán: Shēngrì kuàilè! Zhè shì wǒ sòng gěi nǐ de.\nNǚ: Xièxie nǐ!",
       "options": [
-        "A: Tặng hoa sinh nhật / 生日快乐",
-        "B: Hàng quần áo Veston / 几件衣服",
-        "C: Học sinh giơ tay phát biểu / 谁来回答问题",
-        "D: Đá bóng / 踢足球 (Ví dụ)",
-        "E: Bát cơm và đôi đũa / 再来点米饭",
-        "F: Nhóm bạn nữ chụp ảnh / 后面最右边"
+        "A 生日快乐 (shēng rì kuài lè)",
+        "B 几件衣服 (jǐ jiàn yī fu)",
+        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
+        "D 踢足球 (tī zú qiú)",
+        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
+        "F 后面最右边 (hòu miàn zuì yòu biān)"
       ]
     },
     {
@@ -245,12 +245,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe hỏi 'ai trả lời câu hỏi này?' (shéi lái huídá zhège wèntí?) và bạn nam giơ tay 'thưa thầy, em!' (lǎoshī, wǒ!), tương ứng với tranh C (cậu bé giơ tay trong lớp). Do đó đáp án chuẩn là C.",
       "listening_pinyin": "Nǚ: Shéi lái huídá zhège wèntí?\nNán: Lǎoshī, wǒ!",
       "options": [
-        "A: Tặng hoa sinh nhật / 生日快乐",
-        "B: Hàng quần áo Veston / 几件衣服",
-        "C: Học sinh giơ tay phát biểu / 谁来回答问题",
-        "D: Đá bóng / 踢足球 (Ví dụ)",
-        "E: Bát cơm và đôi đũa / 再来点米饭",
-        "F: Nhóm bạn nữ chụp ảnh / 后面最右边"
+        "A 生日快乐 (shēng rì kuài lè)",
+        "B 几件衣服 (jǐ jiàn yī fu)",
+        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
+        "D 踢足球 (tī zú qiú)",
+        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
+        "F 后面最右边 (hòu miàn zuì yòu biān)"
       ]
     },
     {
@@ -267,12 +267,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe mời ăn thêm cơm 'ăn thêm chút cơm nhé, bạn ăn ít quá' (zài lái diǎn mǐfàn ba, nǐ chī de tài shǎo le), tương ứng với tranh E (bát cơm mǐfàn và đôi đũa). Do đó đáp án chuẩn là E.",
       "listening_pinyin": "Nán: Zài lái diǎn mǐfàn ba, nǐ chī de tài shǎo le.\nNǚ: Hǎo de, nǐ yě chī.",
       "options": [
-        "A: Tặng hoa sinh nhật / 生日快乐",
-        "B: Hàng quần áo Veston / 几件衣服",
-        "C: Học sinh giơ tay phát biểu / 谁来回答问题",
-        "D: Đá bóng / 踢足球 (Ví dụ)",
-        "E: Bát cơm và đôi đũa / 再来点米饭",
-        "F: Nhóm bạn nữ chụp ảnh / 后面最右边"
+        "A 生日快乐 (shēng rì kuài lè)",
+        "B 几件衣服 (jǐ jiàn yī fu)",
+        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
+        "D 踢足球 (tī zú qiú)",
+        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
+        "F 后面最右边 (hòu miàn zuì yòu biān)"
       ]
     },
     {
@@ -289,12 +289,12 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe nhắc tới thử quần áo 'mấy bộ này thế nào? bạn thử xem' (zhè jǐ jiàn zěnmeyàng? Nǐ shì yí shì?), tương ứng với tranh B (các bộ áo vest jiàn yīfu treo trên giá). Do đó đáp án chuẩn là B.",
       "listening_pinyin": "Nǚ: Zhè jǐ jiàn zěnmeyàng? Nǐ shì yí shì?\nNán: Hǎo, wǒ xǐhuan zhège yánsè de.",
       "options": [
-        "A: Tặng hoa sinh nhật / 生日快乐",
-        "B: Hàng quần áo Veston / 几件衣服",
-        "C: Học sinh giơ tay phát biểu / 谁来回答问题",
-        "D: Đá bóng / 踢足球 (Ví dụ)",
-        "E: Bát cơm và đôi đũa / 再来点米饭",
-        "F: Nhóm bạn nữ chụp ảnh / 后面最右边"
+        "A 生日快乐 (shēng rì kuài lè)",
+        "B 几件衣服 (jǐ jiàn yī fu)",
+        "C 谁来回答问题 (shuí lái huí dá wèn tí)",
+        "D 踢足球 (tī zú qiú)",
+        "E 再来点米饭 (zài lái diǎn mǐ fàn)",
+        "F 后面最右边 (hòu miàn zuì yòu biān)"
       ]
     },
     {
@@ -311,11 +311,11 @@ export const examData: ExamDetail = {
       "explanation": "Người nữ trong bài nghe nói đang rất bận 'tôi đang rất bận, 5 phút sau bạn gọi lại nhé' (wǒ xiànzài hěn máng, nǐ wǔ fēnzhōng hòu zài dǎ) khi nghe điện thoại, tương ứng với tranh B (cô gái nghe điện thoại dǎ diànhuà). Do đó đáp án chuẩn là B.",
       "listening_pinyin": "Nán: Nǐ nàr yǒu jīntiān de bàozhǐ ma?\nNǚ: Yǒu. Wǒ xiànzài hěn máng, nǐ wǔ fēnzhōng hòu zài dǎ, hǎo ma?",
       "options": [
-        "A: Đồng hồ đeo tay chỉ 8 giờ / 手表慢了",
-        "B: Nữ nhân viên nghe điện thoại bận / 打电话",
-        "C: Cô gái cầm quả địa cầu / 小学老师",
-        "D: Đưa vé xem phim / 电影票",
-        "E: Giơ hai đôi giày cao gót chọn / 哪个最漂亮"
+        "A 手表慢了 (shǒu biǎo màn le)",
+        "B 打电话 (dǎ diàn huà)",
+        "C 小学老师 (xiǎo xué lǎo shī)",
+        "D 电影票 (diàn yǐng piào)",
+        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
       ]
     },
     {
@@ -332,11 +332,11 @@ export const examData: ExamDetail = {
       "explanation": "Người nữ hỏi so sánh 'cái nào đẹp nhất?' (nǎge zuì piàoliang?) khi chọn giày, tương ứng với tranh E (cô gái cầm 2 đôi giày xiézi so sánh). Do đó đáp án chuẩn là E.",
       "listening_pinyin": "Nǚ: Gàosu wǒ, nǎge zuì piàoliang?\nNán: Wǒ juéde dōu piàoliang.",
       "options": [
-        "A: Đồng hồ đeo tay chỉ 8 giờ / 手表慢了",
-        "B: Nữ nhân viên nghe điện thoại bận / 打电话",
-        "C: Cô gái cầm quả địa cầu / 小学老师",
-        "D: Đưa vé xem phim / 电影票",
-        "E: Giơ hai đôi giày cao gót chọn / 哪个最漂亮"
+        "A 手表慢了 (shǒu biǎo màn le)",
+        "B 打电话 (dǎ diàn huà)",
+        "C 小学老师 (xiǎo xué lǎo shī)",
+        "D 电影票 (diàn yǐng piào)",
+        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
       ]
     },
     {
@@ -353,11 +353,11 @@ export const examData: ExamDetail = {
       "explanation": "Người nữ trả lời nghề nghiệp 'tôi là giáo viên tiểu học' (wǒ shì xiǎoxué lǎoshī), tương ứng với tranh C (cô giáo lǎoshī bên quả địa cầu). Do đó đáp án chuẩn là C.",
       "listening_pinyin": "Nán: Nín zuò shénme gōngzuò?\nNǚ: Wǒ shì xiǎoxué lǎoshī.",
       "options": [
-        "A: Đồng hồ đeo tay chỉ 8 giờ / 手表慢了",
-        "B: Nữ nhân viên nghe điện thoại bận / 打电话",
-        "C: Cô gái cầm quả địa cầu / 小学老师",
-        "D: Đưa vé xem phim / 电影票",
-        "E: Giơ hai đôi giày cao gót chọn / 哪个最漂亮"
+        "A 手表慢了 (shǒu biǎo màn le)",
+        "B 打电话 (dǎ diàn huà)",
+        "C 小学老师 (xiǎo xué lǎo shī)",
+        "D 电影票 (diàn yǐng piào)",
+        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
       ]
     },
     {
@@ -374,11 +374,11 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe nhắc tới thời gian và đồng hồ 'đồng hồ của tôi bị chậm à?' (wǒ de shǒubiǎo màn le?), tương ứng với tranh A (cánh tay xem đồng hồ shǒubiǎo). Do đó đáp án chuẩn là A.",
       "listening_pinyin": "Nǚ: Xiànzài shì bā diǎn, bú shì qī diǎn.\nNán: Zhēn de ma? Wǒ de shǒubiǎo màn le?",
       "options": [
-        "A: Đồng hồ đeo tay chỉ 8 giờ / 手表慢了",
-        "B: Nữ nhân viên nghe điện thoại bận / 打电话",
-        "C: Cô gái cầm quả địa cầu / 小学老师",
-        "D: Đưa vé xem phim / 电影票",
-        "E: Giơ hai đôi giày cao gót chọn / 哪个最漂亮"
+        "A 手表慢了 (shǒu biǎo màn le)",
+        "B 打电话 (dǎ diàn huà)",
+        "C 小学老师 (xiǎo xué lǎo shī)",
+        "D 电影票 (diàn yǐng piào)",
+        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
       ]
     },
     {
@@ -395,11 +395,11 @@ export const examData: ExamDetail = {
       "explanation": "Bài nghe nhắc tới nhờ đưa vé xem phim 'đây là vé xem phim của cô Lý' (zhè shì Lǐ xiǎojiě de diànyǐngpiào), tương ứng với tranh D (đưa vé diànyǐngpiào). Do đó đáp án chuẩn là D.",
       "listening_pinyin": "Nán: Zhè shì Lǐ xiǎojiě de diànyǐngpiào, nǐ néng bāng wǒ gěi tā ma?\nNǚ: Méi wèntí.",
       "options": [
-        "A: Đồng hồ đeo tay chỉ 8 giờ / 手表慢了",
-        "B: Nữ nhân viên nghe điện thoại bận / 打电话",
-        "C: Cô gái cầm quả địa cầu / 小学老师",
-        "D: Đưa vé xem phim / 电影票",
-        "E: Giơ hai đôi giày cao gót chọn / 哪个最漂亮"
+        "A 手表慢了 (shǒu biǎo màn le)",
+        "B 打电话 (dǎ diàn huà)",
+        "C 小学老师 (xiǎo xué lǎo shī)",
+        "D 电影票 (diàn yǐng piào)",
+        "E 哪个最漂亮 (nǎ gè zuì piào liang)"
       ]
     },
     {
@@ -703,12 +703,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.",
       "options": [
-        "A: Cậu bé ở nhà xem tivi / 弟弟在家看电视",
-        "B: Công ty ở bên phải khách sạn / 公司在饭店右边",
-        "C: Mua điện thoại mới lên mạng / 买新手机上网",
-        "D: Đánh bóng rổ / 打篮球 (Ví dụ)",
-        "E: Quần áo quá to / 衣服太大",
-        "F: Taxi chưa đến, đợi thêm vài phút / 出租车还没来"
+        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
+        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
+        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
+        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
       ]
     },
     {
@@ -727,12 +727,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?",
       "options": [
-        "A: Cậu bé ở nhà xem tivi / 弟弟在家看电视",
-        "B: Công ty ở bên phải khách sạn / 公司在饭店右边",
-        "C: Mua điện thoại mới lên mạng / 买新手机上网",
-        "D: Đánh bóng rổ / 打篮球 (Ví dụ)",
-        "E: Quần áo quá to / 衣服太大",
-        "F: Taxi chưa đến, đợi thêm vài phút / 出租车还没来"
+        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
+        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
+        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
+        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
       ]
     },
     {
@@ -751,12 +751,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.",
       "options": [
-        "A: Cậu bé ở nhà xem tivi / 弟弟在家看电视",
-        "B: Công ty ở bên phải khách sạn / 公司在饭店右边",
-        "C: Mua điện thoại mới lên mạng / 买新手机上网",
-        "D: Đánh bóng rổ / 打篮球 (Ví dụ)",
-        "E: Quần áo quá to / 衣服太大",
-        "F: Taxi chưa đến, đợi thêm vài phút / 出租车还没来"
+        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
+        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
+        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
+        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
       ]
     },
     {
@@ -775,12 +775,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒmen gōngsī zài fàndiàn de yòubian.",
       "options": [
-        "A: Cậu bé ở nhà xem tivi / 弟弟在家看电视",
-        "B: Công ty ở bên phải khách sạn / 公司在饭店右边",
-        "C: Mua điện thoại mới lên mạng / 买新手机上网",
-        "D: Đánh bóng rổ / 打篮球 (Ví dụ)",
-        "E: Quần áo quá to / 衣服太大",
-        "F: Taxi chưa đến, đợi thêm vài phút / 出租车还没来"
+        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
+        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
+        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
+        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
       ]
     },
     {
@@ -799,12 +799,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Dìdi zài jiā kàn diànshì ne.",
       "options": [
-        "A: Cậu bé ở nhà xem tivi / 弟弟在家看电视",
-        "B: Công ty ở bên phải khách sạn / 公司在饭店右边",
-        "C: Mua điện thoại mới lên mạng / 买新手机上网",
-        "D: Đánh bóng rổ / 打篮球 (Ví dụ)",
-        "E: Quần áo quá to / 衣服太大",
-        "F: Taxi chưa đến, đợi thêm vài phút / 出租车还没来"
+        "A 弟弟在家看电视呢。 (Dìdi zài jiā kàn diànshì ne.)",
+        "B 我们公司在饭店的右边。 (Wǒmen gōngsī zài fàndiàn de yòubian.)",
+        "C 她买了个新手机，可以上网，很好用。 (Tā mǎile ge xīn shǒujī, kěyǐ shàngwǎng, hěn hǎoyòng.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 这件衣服太大了，有小一点儿的吗？ (Zhè jiàn yīfu tài dà le, yǒu xiǎo yìdiǎnr de ma?)",
+        "F 出租车还没来，我们再等几分钟。 (Chūzūchē hái méi lái, wǒmen zài děng fēnzhōng.)"
       ]
     },
     {
@@ -1039,12 +1039,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_51.webp",
       "options": [
-        "A 它不认识你。",
-        "B 很近，从这儿坐出租车，六七分钟就到了。",
-        "C 她三年的时间里，写了4本书。",
-        "D 你比他大一岁。",
-        "E 他在哪儿呢？你看见他了吗？ (Ví dụ)",
-        "F 小刘叫我一起去跑步。"
+        "A 它不认识你。 (tā bú rèn shi nǐ)",
+        "B 很近，从这儿坐出租车，六七分钟就到了。 (hěn jìn , cóng zhè ér zuò chū zū chē , liù qī fēn zhōng jiù dào le)",
+        "C 她三年的时间里，写了4本书。 (tā sān nián de shí jiān lǐ , xiě le 4 běn shū)",
+        "D 你比他大一岁。 (nǐ bǐ tā dà yí suì)",
+        "E 他在哪儿呢？你看见他了吗？ (tā zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 小刘叫我一起去跑步。 (xiǎo liú jiào wǒ yì qǐ qù pǎo bù)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Chúng cháu phải học tập bác!' (Wǒmen yào xiàng nín xuéxí!). Lời khen ngợi ghép với thành tích bác viết được 4 cuốn sách trong 3 năm (tā sān nián de shíjiān lǐ, xiě le sì běn shū). Chọn C.",
@@ -1063,12 +1063,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_52.webp",
       "options": [
-        "A 它不认识你。",
-        "B 很近，从这儿坐出租车，六七分钟就到了。",
-        "C 她三年的时间里，写了4本书。",
-        "D 你比他大一岁。",
-        "E 他在哪儿呢？你看见他了吗？ (Ví dụ)",
-        "F 小刘叫我一起去跑步。"
+        "A 它不认识你。 (tā bú rèn shi nǐ)",
+        "B 很近，从这儿坐出租车，六七分钟就到了。 (hěn jìn , cóng zhè ér zuò chū zū chē , liù qī fēn zhōng jiù dào le)",
+        "C 她三年的时间里，写了4本书。 (tā sān nián de shí jiān lǐ , xiě le 4 běn shū)",
+        "D 你比他大一岁。 (nǐ bǐ tā dà yí suì)",
+        "E 他在哪儿呢？你看见他了吗？ (tā zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 小刘叫我一起去跑步。 (xiǎo liú jiào wǒ yì qǐ qù pǎo bù)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Ga tàu hỏa cách đây xa không?' (Huǒchēzhàn lí zhèr yuǎn ma?). Câu hỏi khoảng cách đi với câu trả lời 'rất gần, đi taxi 6-7 phút là tới' (hěn jìn, cóng zhèr zuò chūzūchē, liù qī fēnzhōng jiù dào le). Chọn B.",
@@ -1087,12 +1087,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_53.webp",
       "options": [
-        "A 它不认识你。",
-        "B 很近，从这儿坐出租车，六七分钟就到了。",
-        "C 她三年的时间里，写了4本书。",
-        "D 你比他大一岁。",
-        "E 他在哪儿呢？你看见他了吗？ (Ví dụ)",
-        "F 小刘叫我一起去跑步。"
+        "A 它不认识你。 (tā bú rèn shi nǐ)",
+        "B 很近，从这儿坐出租车，六七分钟就到了。 (hěn jìn , cóng zhè ér zuò chū zū chē , liù qī fēn zhōng jiù dào le)",
+        "C 她三年的时间里，写了4本书。 (tā sān nián de shí jiān lǐ , xiě le 4 běn shū)",
+        "D 你比他大一岁。 (nǐ bǐ tā dà yí suì)",
+        "E 他在哪儿呢？你看见他了吗？ (tā zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 小刘叫我一起去跑步。 (xiǎo liú jiào wǒ yì qǐ qù pǎo bù)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Đã gần 8 giờ rồi, bạn còn ra ngoài làm gì?' (Yǐjīng kuài bā diǎn le, nǐ hái chūqù zuò shénme?). Câu hỏi lý do đi với lời giải thích 'Tiểu Lưu rủ tôi đi chạy bộ' (Xiǎo Liú jiào wǒ yìqǐ qù pǎobù). Chọn F.",
@@ -1111,12 +1111,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_54.webp",
       "options": [
-        "A 它不认识你。",
-        "B 很近，从这儿坐出租车，六七分钟就到了。",
-        "C 她三年的时间里，写了4本书。",
-        "D 你比他大一岁。",
-        "E 他在哪儿呢？你看见他了吗？ (Ví dụ)",
-        "F 小刘叫我一起去跑步。"
+        "A 它不认识你。 (tā bú rèn shi nǐ)",
+        "B 很近，从这儿坐出租车，六七分钟就到了。 (hěn jìn , cóng zhè ér zuò chū zū chē , liù qī fēn zhōng jiù dào le)",
+        "C 她三年的时间里，写了4本书。 (tā sān nián de shí jiān lǐ , xiě le 4 běn shū)",
+        "D 你比他大一岁。 (nǐ bǐ tā dà yí suì)",
+        "E 他在哪儿呢？你看见他了吗？ (tā zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 小刘叫我一起去跑步。 (xiǎo liú jiào wǒ yì qǐ qù pǎo bù)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Chú cún con bị sao thế? Sao không ăn đồ ăn?' (Xiǎogǒu zěnmeyàng le? Wèishénme bù chī dōngxi?). Hỏi về cún con đi với câu trả lời 'nó chưa quen bạn đấy' (tā bù rènshi nǐ). Chọn A.",
@@ -1135,12 +1135,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_55.webp",
       "options": [
-        "A 它不认识你。",
-        "B 很近，从这儿坐出租车，六七分钟就到了。",
-        "C 她三年的时间里，写了4本书。",
-        "D 你比他大一岁。",
-        "E 他在哪儿呢？你看见他了吗？ (Ví dụ)",
-        "F 小刘叫我一起去跑步。"
+        "A 它不认识你。 (tā bú rèn shi nǐ)",
+        "B 很近，从这儿坐出租车，六七分钟就到了。 (hěn jìn , cóng zhè ér zuò chū zū chē , liù qī fēn zhōng jiù dào le)",
+        "C 她三年的时间里，写了4本书。 (tā sān nián de shí jiān lǐ , xiě le 4 běn shū)",
+        "D 你比他大一岁。 (nǐ bǐ tā dà yí suì)",
+        "E 他在哪儿呢？你看见他了吗？ (tā zài nǎ ér ne ? nǐ kàn jiàn tā le ma ?)",
+        "F 小刘叫我一起去跑步。 (xiǎo liú jiào wǒ yì qǐ qù pǎo bù)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Nhưng bạn biết đấy, bạn không cao bằng cậu ấy' (Dànshì, nǐ zhīdào, nǐ méiyǒu tā gāo). So sánh chiều cao đi ghép với so sánh tuổi tác 'bạn lớn hơn cậu ấy 1 tuổi' (nǐ bǐ tā dà yì suì). Chọn D.",
@@ -1159,11 +1159,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_56.webp",
       "options": [
-        "A 他是我弟弟的中学同学。",
-        "B 谢谢您给我们的帮助！",
-        "C 他现在每天工作10个小时，星期六也不休息。",
-        "D 你们听懂我说的话了吗？",
-        "E 等一下。你怎么回来这么晚？"
+        "A 他是我弟弟的中学同学。 (tā shì wǒ dì di de zhōng xué tóng xué)",
+        "B 谢谢您给我们的帮助！ (xiè xiè nín gěi wǒ men de bāng zhù !)",
+        "C 他现在每天工作10个小时，星期六也不休息。 (tā xiàn zài měi tiān gōng zuò 1 0 gè xiǎo shí , xīng qī liù yě bù xiū xi)",
+        "D 你们听懂我说的话了吗？ (nǐ men tīng dǒng wǒ shuō de huà le ma ?)",
+        "E 等一下。你怎么回来这么晚？ (děng yí xià nǐ zěn me huí lái zhè me wǎn ?)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Chào cả lớp! Tôi họ Vương, là giáo viên tiếng Trung mới' (Dàjiā hǎo! Wǒ xìng Wáng, shì xīn lái de hànyǔ lǎoshī). Lời chào của cô giáo mới ghép với câu hỏi học sinh 'các em đã nghe hiểu lời cô nói chưa?' (nǐmen tīngdǒng wǒ shuō de huà le ma?). Chọn D.",
@@ -1182,11 +1182,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_57.webp",
       "options": [
-        "A 他是我弟弟的中学同学。",
-        "B 谢谢您给我们的帮助！",
-        "C 他现在每天工作10个小时，星期六也不休息。",
-        "D 你们听懂我说的话了吗？",
-        "E 等一下。你怎么回来这么晚？"
+        "A 他是我弟弟的中学同学。 (tā shì wǒ dì di de zhōng xué tóng xué)",
+        "B 谢谢您给我们的帮助！ (xiè xiè nín gěi wǒ men de bāng zhù !)",
+        "C 他现在每天工作10个小时，星期六也不休息。 (tā xiàn zài měi tiān gōng zuò 1 0 gè xiǎo shí , xīng qī liù yě bù xiū xi)",
+        "D 你们听懂我说的话了吗？ (nǐ men tīng dǒng wǒ shuō de huà le ma ?)",
+        "E 等一下。你怎么回来这么晚？ (děng yí xià nǐ zěn me huí lái zhè me wǎn ?)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Tháng này thực sự rất bận' (Zhège yuè zhēnde fēicháng máng). Nói về mức độ bận rộn ghép với thời gian làm việc 'mỗi ngày làm việc 10 tiếng, thứ bảy cũng không nghỉ' (měitiān gōngzuò shí gè xiǎoshí, xīngqīliù yě bù xiūxi). Chọn C.",
@@ -1205,11 +1205,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_58.webp",
       "options": [
-        "A 他是我弟弟的中学同学。",
-        "B 谢谢您给我们的帮助！",
-        "C 他现在每天工作10个小时，星期六也不休息。",
-        "D 你们听懂我说的话了吗？",
-        "E 等一下。你怎么回来这么晚？"
+        "A 他是我弟弟的中学同学。 (tā shì wǒ dì di de zhōng xué tóng xué)",
+        "B 谢谢您给我们的帮助！ (xiè xiè nín gěi wǒ men de bāng zhù !)",
+        "C 他现在每天工作10个小时，星期六也不休息。 (tā xiàn zài měi tiān gōng zuò 1 0 gè xiǎo shí , xīng qī liù yě bù xiū xi)",
+        "D 你们听懂我说的话了吗？ (nǐ men tīng dǒng wǒ shuō de huà le ma ?)",
+        "E 等一下。你怎么回来这么晚？ (děng yí xià nǐ zěn me huí lái zhè me wǎn ?)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Mở cửa, mau mở cửa!' (Kāimén, kuài kāimén!). Lời giục mở cửa ghép với câu trách nhẹ bên trong 'đợi chút, sao bạn về muộn thế?' (děng yíxià. Nǐ zěnme huílái zhème wǎn?). Chọn E.",
@@ -1228,11 +1228,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_59.webp",
       "options": [
-        "A 他是我弟弟的中学同学。",
-        "B 谢谢您给我们的帮助！",
-        "C 他现在每天工作10个小时，星期六也不休息。",
-        "D 你们听懂我说的话了吗？",
-        "E 等一下。你怎么回来这么晚？"
+        "A 他是我弟弟的中学同学。 (tā shì wǒ dì di de zhōng xué tóng xué)",
+        "B 谢谢您给我们的帮助！ (xiè xiè nín gěi wǒ men de bāng zhù !)",
+        "C 他现在每天工作10个小时，星期六也不休息。 (tā xiàn zài měi tiān gōng zuò 1 0 gè xiǎo shí , xīng qī liù yě bù xiū xi)",
+        "D 你们听懂我说的话了吗？ (nǐ men tīng dǒng wǒ shuō de huà le ma ?)",
+        "E 等一下。你怎么回来这么晚？ (děng yí xià nǐ zěn me huí lái zhè me wǎn ?)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Cô ấy cười nói với tôi: \"Không có gì đâu.\"' (Tā xiào zhe duì wǒ shuō: \"Bú kèqi.\"). Lời đáp không có gì (bú kèqi) đi với lời cảm ơn 'cảm ơn sự giúp đỡ của bạn' (xièxie nín gěi wǒmen de bāngzhù!). Chọn B.",
@@ -1251,11 +1251,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20901/images/H20901_img_60.webp",
       "options": [
-        "A 他是我弟弟的中学同学。",
-        "B 谢谢您给我们的帮助！",
-        "C 他现在每天工作10个小时，星期六也不休息。",
-        "D 你们听懂我说的话了吗？",
-        "E 等一下。你怎么回来这么晚？"
+        "A 他是我弟弟的中学同学。 (tā shì wǒ dì di de zhōng xué tóng xué)",
+        "B 谢谢您给我们的帮助！ (xiè xiè nín gěi wǒ men de bāng zhù !)",
+        "C 他现在每天工作10个小时，星期六也不休息。 (tā xiàn zài měi tiān gōng zuò 1 0 gè xiǎo shí , xīng qī liù yě bù xiū xi)",
+        "D 你们听懂我说的话了吗？ (nǐ men tīng dǒng wǒ shuō de huà le ma ?)",
+        "E 等一下。你怎么回来这么晚？ (děng yí xià nǐ zěn me huí lái zhè me wǎn ?)"
       ],
       "board_image": null,
       "explanation": "Câu vế 1: 'Trời ơi! Các bạn quen nhau sao? Sao có thể thế được?' (Wǒ de tiān! Nǐmen rènshi? Zhè zěnme kěnéng?). Câu kinh ngạc quen biết đi với câu giải thích 'cậu ấy là bạn học trung học của em trai tôi' (tā shì wǒ dìdi de zhōngxué tóngxué). Chọn A.",

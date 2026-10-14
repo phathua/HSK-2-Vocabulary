@@ -21,6 +21,7 @@
   import { examHistoryState } from '#lib/state/examHistoryState.svelte';
   import { getExamImageUrl } from '#lib/utils/examAssets';
   import { getExamData } from '#lib/utils/examLoader';
+  import { parseOptionItem } from '#lib/utils/examOptionParser';
 
   import { goto, preloadData } from '$app/navigation';
   import { page } from '$app/state';
@@ -447,31 +448,47 @@
 
                   <!-- Question Text or Listening Script -->
                   {#if q.text && !q.text.startsWith('Câu hỏi nghe số')}
-                    <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-sm my-1">
-                      {q.text}
-                    </p>
+                    <div class="my-1.5 flex flex-col gap-0.5">
+                      {#if q.pinyin}
+                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium">
+                          {q.pinyin}
+                        </p>
+                      {/if}
+                      <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-sm font-serif">
+                        {q.text}
+                      </p>
+                    </div>
                   {/if}
 
                   {#if q.listening_script}
-                    <div class="p-2 rounded-xl bg-sky-50/80 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/40 my-1.5">
-                      <span class="text-[10px] uppercase font-bold text-sky-600 dark:text-sky-400 block mb-0.5">Lời thoại bài nghe</span>
-                      <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-xs">
-                        {q.listening_script}
-                      </p>
+                    <div class="p-2.5 rounded-xl bg-sky-50/80 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/40 my-1.5">
+                      <span class="text-[10px] uppercase font-bold text-sky-600 dark:text-sky-400 block mb-1">Lời thoại bài nghe</span>
                       {#if q.listening_pinyin}
-                        <p class="text-[11px] text-sky-600/80 dark:text-sky-400/80 font-medium">
+                        <p class="text-[11px] text-sky-600/80 dark:text-sky-400/80 font-medium mb-0.5">
                           {q.listening_pinyin}
                         </p>
                       {/if}
+                      <p class="font-bold text-slate-800 dark:text-[#E3E3E3] text-xs font-serif">
+                        {q.listening_script}
+                      </p>
                     </div>
                   {/if}
 
                   <!-- Options if any -->
                   {#if q.options && q.options.length > 0}
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5 mt-2">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2">
                       {#each q.options as opt}
-                        <div class="px-2.5 py-1.5 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] font-semibold text-slate-700 dark:text-[#C4C7C5] text-[11px] flex items-center gap-1">
-                          <span>{opt}</span>
+                        {@const parsed = parseOptionItem(opt)}
+                        <div class="px-2.5 py-1.5 rounded-xl bg-white dark:bg-[#1B1B1B] border border-slate-200 dark:border-[#282A2C] font-semibold text-slate-700 dark:text-[#C4C7C5] text-[11px] flex items-start gap-1.5">
+                          {#if parsed.letter}
+                            <span class="font-bold text-sky-600 dark:text-sky-400 shrink-0 pt-0.5">{parsed.letter}.</span>
+                          {/if}
+                          <div class="flex flex-col min-w-0">
+                            {#if parsed.pinyin}
+                              <span class="text-[10px] text-slate-400 dark:text-[#8E918F] font-normal leading-tight">{parsed.pinyin}</span>
+                            {/if}
+                            <span class="font-bold leading-tight break-words font-serif text-xs text-slate-800 dark:text-[#E3E3E3]">{parsed.hanzi}</span>
+                          </div>
                         </div>
                       {/each}
                     </div>

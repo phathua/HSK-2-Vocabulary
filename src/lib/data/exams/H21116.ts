@@ -25,7 +25,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_01.webp"
+      "image": "images/q_01.webp",
+      "pinyin": "C â u   h ỏ i   s ố   1"
     },
     {
       "exam_code": "H21116",
@@ -42,7 +43,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_02.webp"
+      "image": "images/q_02.webp",
+      "pinyin": "C â u   h ỏ i   s ố   2"
     },
     {
       "exam_code": "H21116",
@@ -59,7 +61,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_03.webp"
+      "image": "images/q_03.webp",
+      "pinyin": "C â u   h ỏ i   s ố   3"
     },
     {
       "exam_code": "H21116",
@@ -76,7 +79,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_04.webp"
+      "image": "images/q_04.webp",
+      "pinyin": "C â u   h ỏ i   s ố   4"
     },
     {
       "exam_code": "H21116",
@@ -93,7 +97,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_05.webp"
+      "image": "images/q_05.webp",
+      "pinyin": "C â u   h ỏ i   s ố   5"
     },
     {
       "exam_code": "H21116",
@@ -110,7 +115,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_06.webp"
+      "image": "images/q_06.webp",
+      "pinyin": "C â u   h ỏ i   s ố   6"
     },
     {
       "exam_code": "H21116",
@@ -127,7 +133,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_07.webp"
+      "image": "images/q_07.webp",
+      "pinyin": "C â u   h ỏ i   s ố   7"
     },
     {
       "exam_code": "H21116",
@@ -144,7 +151,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_08.webp"
+      "image": "images/q_08.webp",
+      "pinyin": "C â u   h ỏ i   s ố   8"
     },
     {
       "exam_code": "H21116",
@@ -161,7 +169,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_09.webp"
+      "image": "images/q_09.webp",
+      "pinyin": "C â u   h ỏ i   s ố   9"
     },
     {
       "exam_code": "H21116",
@@ -178,7 +187,8 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "image": "images/q_10.webp"
+      "image": "images/q_10.webp",
+      "pinyin": "C â u   h ỏ i   s ố   1 0"
     },
     {
       "exam_code": "H21116",
@@ -192,10 +202,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Wǒ shuō de méi cuò ba, xiàng yòu zǒu.\nNán: Hǎo ba, tīng nǐ de.",
       "explanation": "Lời thoại nhắc đến biển/hướng đi 'xiàngyòuzǒu' (đi về bên phải). Bức ảnh A thể hiện biển chỉ đường có mũi tên hướng sang phải nên đáp án là A.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 1"
     },
     {
       "exam_code": "H21116",
@@ -209,10 +220,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Wéi? Nǐ zài nǎr ne? Wǒ zěnme méi kàndào nǐ?\nNǚ: Yīnwèi wǒ qǐ wǎn le, suǒyǐ...",
       "explanation": "Lời thoại hỏi vị trí và nữ trả lời do dậy muộn 'qǐwǎn le'. Bức ảnh C thể hiện cô gái ngồi trên giường nghe điện thoại nên đáp án là C.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 2"
     },
     {
       "exam_code": "H21116",
@@ -226,10 +238,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ kàn zhège zěnmeyàng?\nNán: Kànzhe hái kěyǐ, nǐ xǐhuan jiù mǎi ba.",
       "explanation": "Lời thoại trao đổi mua sắm, xem xét đồ 'nǐ kàn zhège zěnmeyàng'. Bức ảnh F thể hiện nam nữ cùng đứng xem/chọn đồ nên đáp án là F.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 3"
     },
     {
       "exam_code": "H21116",
@@ -243,10 +256,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Qǐng jìn, nǐ yǒu shénme shìqing ma?\nNǚ: Wǒ zhǎo Liú lǎoshī, tā zài ma?",
       "explanation": "Lời thoại mời vào phòng 'qǐng jìn' và tìm cô giáo. Bức ảnh B thể hiện người đứng ở cánh cửa hé mở nghé đầu vào nên đáp án là B.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 4"
     },
     {
       "exam_code": "H21116",
@@ -260,10 +274,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ zuò nàr xiǎng shénme ne?\nNán: Méi xiǎng shénme, wǒ lèi le, xiūxi yīxià.",
       "explanation": "Lời thoại nhắc đến nghỉ ngơi 'wǒlèi le，xiūxī yīxià'. Bức ảnh E thể hiện người nam nằm gác tay sau đầu thư giãn/nghỉ ngơi nên đáp án là E.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 5"
     },
     {
       "exam_code": "H21116",
@@ -277,10 +292,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ yǒu dìdi mèimei ma?\nNǚ: Wǒ yǒu yī ge mèimei, tā bǐ wǒ xiǎo yī suì.",
       "explanation": "Lời thoại nhắc đến em gái 'wǒ yǒu yígè mèimèi'. Bức ảnh A thể hiện hai chị em gái đi bên nhau nên đáp án là A.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 6"
     },
     {
       "exam_code": "H21116",
@@ -294,10 +310,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Gěi nǐ jièshào běn shū, nǐ kàn bù kàn?\nNán: Zhè běn shū? Wǒ yǐjīng kànguò le.",
       "explanation": "Lời thoại giới thiệu cuốn sách 'gěi nǐ jièshào běnshū'. Bức ảnh D thể hiện cuốn sách nên đáp án là D.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 7"
     },
     {
       "exam_code": "H21116",
@@ -311,10 +328,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ ài chī shénme shuǐguǒ?\nNǚ: Xīguā, nǐ ne?",
       "explanation": "Lời thoại hỏi trái cây và nữ trả lời dưa hấu 'xīguā'. Bức ảnh E thể hiện đĩa dưa hấu bổ miếng nên đáp án là E.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 8"
     },
     {
       "exam_code": "H21116",
@@ -328,10 +346,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nǚ: Nǐ zěnme hái méi chūmén, bú qù pǎobù le?\nNán: Qù, wǒ xiànzài qù.",
       "explanation": "Lời thoại hỏi về việc chạy bộ 'bùqù pǎobù le'. Bức ảnh B thể hiện đôi giày thể thao / người chuẩn bị chạy bộ nên đáp án là B.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   1 9"
     },
     {
       "exam_code": "H21116",
@@ -345,10 +364,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Nǐ dào nǎr le?\nNǚ: Wǒ hái zài chūzūchē shang, hěn kuài jiù dào.",
       "explanation": "Lời thoại trả lời đang ở trên xe taxi 'zài chūzūchē shàng'. Bức ảnh C thể hiện chiếc xe taxi nên đáp án là C.",
       "options": [
-        "A",
-        "B",
-        "C"
-      ]
+        "A ",
+        "B ",
+        "C "
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 0"
     },
     {
       "exam_code": "H21116",
@@ -365,7 +385,8 @@ export const examData: ExamDetail = {
         "A 早上 (zǎoshang)",
         "B 中午 (zhōngwǔ)",
         "C 晚上 (wǎnshang)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 1"
     },
     {
       "exam_code": "H21116",
@@ -382,7 +403,8 @@ export const examData: ExamDetail = {
         "A 很好吃 (hěn hǎochī)",
         "B 很便宜 (hěn piányi)",
         "C 非常贵 (fēicháng guì)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 2"
     },
     {
       "exam_code": "H21116",
@@ -399,7 +421,8 @@ export const examData: ExamDetail = {
         "A 笑 (xiào)",
         "B 运动 (yùndòng)",
         "C 唱歌 (chànggē)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 3"
     },
     {
       "exam_code": "H21116",
@@ -416,7 +439,8 @@ export const examData: ExamDetail = {
         "A 报纸 (bàozhǐ)",
         "B 手机 (shǒujī)",
         "C 汉语课本 (Hànyǔ kèběn)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 4"
     },
     {
       "exam_code": "H21116",
@@ -433,7 +457,8 @@ export const examData: ExamDetail = {
         "A 天太热 (tiān tài rè)",
         "B 他不会 (tā bú huì)",
         "C 他太忙了 (tā tài máng le)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 5"
     },
     {
       "exam_code": "H21116",
@@ -450,7 +475,8 @@ export const examData: ExamDetail = {
         "A 她生病了 (tā shēngbìng le)",
         "B 她听说过 (tā tīngshuō guò)",
         "C 她听不懂 (tā tīngbùdǒng)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 6"
     },
     {
       "exam_code": "H21116",
@@ -467,7 +493,8 @@ export const examData: ExamDetail = {
         "A 牛奶 (niúnǎi)",
         "B 红茶 (hóngchá)",
         "C 咖啡 (kāfēi)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 7"
     },
     {
       "exam_code": "H21116",
@@ -484,7 +511,8 @@ export const examData: ExamDetail = {
         "A 教室 (jiàoshì)",
         "B 医院 (yīyuàn)",
         "C 电影院 (diànyǐngyuàn)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 8"
     },
     {
       "exam_code": "H21116",
@@ -501,7 +529,8 @@ export const examData: ExamDetail = {
         "A 晴天 (qíngtiān)",
         "B 阴天 (yīntiān)",
         "C 下雪了 (xià xuě le)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   2 9"
     },
     {
       "exam_code": "H21116",
@@ -515,10 +544,11 @@ export const examData: ExamDetail = {
       "listening_pinyin": "Nán: Zhè jiàn yīfu yībǎi kuài, zhēn piányi.\nNǚ: Nǐ kàncuò le, nà shì yīqiān, nà shì sān ge líng.\nWèn: Nà jiàn yīfu mài duōshao qián?",
       "explanation": "Câu hỏi hỏi bộ quần áo giá bao nhiêu. Nữ sửa lại 'nà shì yīqiān，nà shì sāngè líng' (Đó là 1000, có 3 số 0) nên chọn B (1000yuán).",
       "options": [
-        "A 100元 (100 yuán) (100 yuán   ( 100   yu á n ))",
-        "B 1000元 (1000 yuán) (1000 yuán   ( 1000   yu á n ))",
-        "C 1100元 (1100 yuán) (1100 yuán   ( 1100   yu á n ))"
-      ]
+        "A 100元 (100 yuán) (100 yuán   ( 100   yu á n )) (1 0 0 yuán   ( 1 0 0   y u á n )   ( 1 0 0   y u á n       (   1 0 0       y u   á   n   ) )) (1 0 0 yuán ( 1 0 0 y u á n ) ( 1 0 0 y u á n ( 1 0 0 y u á n ) ) ( 1 0 0 y u á n ( 1 0 0 y u á n ) ( 1 0 0 y u á n ( 1 0 0 y u á n ) ) ))",
+        "B 1000元 (1000 yuán) (1000 yuán   ( 1000   yu á n )) (1 0 0 0 yuán   ( 1 0 0 0   y u á n )   ( 1 0 0 0   y u á n       (   1 0 0 0       y u   á   n   ) )) (1 0 0 0 yuán ( 1 0 0 0 y u á n ) ( 1 0 0 0 y u á n ( 1 0 0 0 y u á n ) ) ( 1 0 0 0 y u á n ( 1 0 0 0 y u á n ) ( 1 0 0 0 y u á n ( 1 0 0 0 y u á n ) ) ))",
+        "C 1100元 (1100 yuán) (1100 yuán   ( 1100   yu á n )) (1 1 0 0 yuán   ( 1 1 0 0   y u á n )   ( 1 1 0 0   y u á n       (   1 1 0 0       y u   á   n   ) )) (1 1 0 0 yuán ( 1 1 0 0 y u á n ) ( 1 1 0 0 y u á n ( 1 1 0 0 y u á n ) ) ( 1 1 0 0 y u á n ( 1 1 0 0 y u á n ) ( 1 1 0 0 y u á n ( 1 1 0 0 y u á n ) ) ))"
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 0"
     },
     {
       "exam_code": "H21116",
@@ -535,7 +565,8 @@ export const examData: ExamDetail = {
         "A 做菜 (zuò cài)",
         "B 做题 (zuò tí)",
         "C 写汉字 (xiě Hànzì)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 1"
     },
     {
       "exam_code": "H21116",
@@ -552,7 +583,8 @@ export const examData: ExamDetail = {
         "A 猫 (māo)",
         "B 狗 (gǒu)",
         "C 鸡蛋 (jīdàn)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 2"
     },
     {
       "exam_code": "H21116",
@@ -569,7 +601,8 @@ export const examData: ExamDetail = {
         "A 两岁 (liǎng suì)",
         "B 4岁 (sì suì)",
         "C 12岁 (shí'èr suì)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 3"
     },
     {
       "exam_code": "H21116",
@@ -586,7 +619,8 @@ export const examData: ExamDetail = {
         "A 他的妻子 (tā de qīzi)",
         "B 他的朋友 (tā de péngyou)",
         "C 他的学生 (tā de xuésheng)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 4"
     },
     {
       "exam_code": "H21116",
@@ -603,7 +637,8 @@ export const examData: ExamDetail = {
         "A 走路 (zǒulù)",
         "B 坐船 (zuò chuán)",
         "C 开车 (kāichē)"
-      ]
+      ],
+      "pinyin": "C â u   h ỏ i   s ố   3 5"
     },
     {
       "exam_code": "H21116",
@@ -621,12 +656,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Nàge fúwùyuán hěn gāoxìng, hěn kuàilè.",
       "options": [
-        "A: Nam đeo kính râm chỉ tay tự tin",
-        "B: Người bị bịt mắt giơ hai tay tìm đường",
-        "C: Con mèo trắng nhìn thẳng",
-        "D: Nam giơ tay ném bóng rổ (Ví dụ)",
-        "E: Nữ nhân viên phục vụ mỉm cười cầm sổ",
-        "F: Hai nam thanh niên sửa xe đạp cùng nhau"
+        "A 已经 10 点 45 了，我要回公司了。 (Yǐjīng 10 diǎn 45 le, wǒ yào huí gōngsī le.)",
+        "B 她现在看不见，缓/缓/我们在哪儿。 (Tā xiànzài kànbújiàn, wǒmen zài nǎr.)",
+        "C 我觉得它的眼睛最漂亮。 (Wǒ juéde tā de yǎnjing zuì piàoliang.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 那个服务员很高兴、很快乐。 (Nàge fúwùyuán hěn gāoxìng, hěn kuàilè.)",
+        "F 我们来看看你的自行车怎么了。 (Wǒmen lái kànkan nǐ de zìxíngchē zěnme le.)"
       ]
     },
     {
@@ -645,12 +680,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒ juéde tā de yǎnjing zuì piàoliang.",
       "options": [
-        "A: Nam đeo kính râm chỉ tay tự tin",
-        "B: Người bị bịt mắt giơ hai tay tìm đường",
-        "C: Con mèo trắng nhìn thẳng",
-        "D: Nam giơ tay ném bóng rổ (Ví dụ)",
-        "E: Nữ nhân viên phục vụ mỉm cười cầm sổ",
-        "F: Hai nam thanh niên sửa xe đạp cùng nhau"
+        "A 已经 10 点 45 了，我要回公司了。 (Yǐjīng 10 diǎn 45 le, wǒ yào huí gōngsī le.)",
+        "B 她现在看不见，缓/缓/我们在哪儿。 (Tā xiànzài kànbújiàn, wǒmen zài nǎr.)",
+        "C 我觉得它的眼睛最漂亮。 (Wǒ juéde tā de yǎnjing zuì piàoliang.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 那个服务员很高兴、很快乐。 (Nàge fúwùyuán hěn gāoxìng, hěn kuàilè.)",
+        "F 我们来看看你的自行车怎么了。 (Wǒmen lái kànkan nǐ de zìxíngchē zěnme le.)"
       ]
     },
     {
@@ -669,12 +704,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā xiànzài kànbújiàn, wǒmen zài nǎr.",
       "options": [
-        "A: Nam đeo kính râm chỉ tay tự tin",
-        "B: Người bị bịt mắt giơ hai tay tìm đường",
-        "C: Con mèo trắng nhìn thẳng",
-        "D: Nam giơ tay ném bóng rổ (Ví dụ)",
-        "E: Nữ nhân viên phục vụ mỉm cười cầm sổ",
-        "F: Hai nam thanh niên sửa xe đạp cùng nhau"
+        "A 已经 10 点 45 了，我要回公司了。 (Yǐjīng 10 diǎn 45 le, wǒ yào huí gōngsī le.)",
+        "B 她现在看不见，缓/缓/我们在哪儿。 (Tā xiànzài kànbújiàn, wǒmen zài nǎr.)",
+        "C 我觉得它的眼睛最漂亮。 (Wǒ juéde tā de yǎnjing zuì piàoliang.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 那个服务员很高兴、很快乐。 (Nàge fúwùyuán hěn gāoxìng, hěn kuàilè.)",
+        "F 我们来看看你的自行车怎么了。 (Wǒmen lái kànkan nǐ de zìxíngchē zěnme le.)"
       ]
     },
     {
@@ -693,12 +728,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yǐjīng 10 diǎn 45 le, wǒ yào huí gōngsī le.",
       "options": [
-        "A: Nam đeo kính râm chỉ tay tự tin",
-        "B: Người bị bịt mắt giơ hai tay tìm đường",
-        "C: Con mèo trắng nhìn thẳng",
-        "D: Nam giơ tay ném bóng rổ (Ví dụ)",
-        "E: Nữ nhân viên phục vụ mỉm cười cầm sổ",
-        "F: Hai nam thanh niên sửa xe đạp cùng nhau"
+        "A 已经 10 点 45 了，我要回公司了。 (Yǐjīng 10 diǎn 45 le, wǒ yào huí gōngsī le.)",
+        "B 她现在看不见，缓/缓/我们在哪儿。 (Tā xiànzài kànbújiàn, wǒmen zài nǎr.)",
+        "C 我觉得它的眼睛最漂亮。 (Wǒ juéde tā de yǎnjing zuì piàoliang.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 那个服务员很高兴、很快乐。 (Nàge fúwùyuán hěn gāoxìng, hěn kuàilè.)",
+        "F 我们来看看你的自行车怎么了。 (Wǒmen lái kànkan nǐ de zìxíngchē zěnme le.)"
       ]
     },
     {
@@ -717,12 +752,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Wǒmen lái kànkan nǐ de zìxíngchē zěnme le.",
       "options": [
-        "A: Nam đeo kính râm chỉ tay tự tin",
-        "B: Người bị bịt mắt giơ hai tay tìm đường",
-        "C: Con mèo trắng nhìn thẳng",
-        "D: Nam giơ tay ném bóng rổ (Ví dụ)",
-        "E: Nữ nhân viên phục vụ mỉm cười cầm sổ",
-        "F: Hai nam thanh niên sửa xe đạp cùng nhau"
+        "A 已经 10 点 45 了，我要回公司了。 (Yǐjīng 10 diǎn 45 le, wǒ yào huí gōngsī le.)",
+        "B 她现在看不见，缓/缓/我们在哪儿。 (Tā xiànzài kànbújiàn, wǒmen zài nǎr.)",
+        "C 我觉得它的眼睛最漂亮。 (Wǒ juéde tā de yǎnjing zuì piàoliang.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 那个服务员很高兴、很快乐。 (Nàge fúwùyuán hěn gāoxìng, hěn kuàilè.)",
+        "F 我们来看看你的自行车怎么了。 (Wǒmen lái kànkan nǐ de zìxíngchē zěnme le.)"
       ]
     },
     {
@@ -737,12 +772,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_41.webp",
       "options": [
-        "A: 可以 (kěyǐ)",
-        "B: 洗 (xǐ)",
-        "C: 找 (zhǎo)",
-        "D: 离 (lí)",
-        "E: 贵 (guì)",
-        "F: 旁边 (pángbiān)"
+        "A 可以 (kěyǐ)",
+        "B 洗 (xǐ)",
+        "C 找 (zhǎo)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 旁边 (pángbiān)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần từ chỉ vị trí đứng sau 'nǐ' -> 'zuò nǐ pángbiān' (ngồi bên cạnh bạn), chọn F (pángbiān).",
@@ -761,12 +796,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_42.webp",
       "options": [
-        "A: 可以 (kěyǐ)",
-        "B: 洗 (xǐ)",
-        "C: 找 (zhǎo)",
-        "D: 离 (lí)",
-        "E: 贵 (guì)",
-        "F: 旁边 (pángbiān)"
+        "A 可以 (kěyǐ)",
+        "B 洗 (xǐ)",
+        "C 找 (zhǎo)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 旁边 (pángbiān)"
       ],
       "board_image": null,
       "explanation": "Cấu trúc so sánh khoảng cách giữa hai địa điểm 'nàér lí zhèér' (ở đó cách ở đây), chọn D (lí).",
@@ -785,12 +820,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_43.webp",
       "options": [
-        "A: 可以 (kěyǐ)",
-        "B: 洗 (xǐ)",
-        "C: 找 (zhǎo)",
-        "D: 离 (lí)",
-        "E: 贵 (guì)",
-        "F: 旁边 (pángbiān)"
+        "A 可以 (kěyǐ)",
+        "B 洗 (xǐ)",
+        "C 找 (zhǎo)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 旁边 (pángbiān)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần độngcí đi với 'yīfú' -> 'xǐyīfú' (giặt quần áo), chọn B (xǐ).",
@@ -809,12 +844,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_44.webp",
       "options": [
-        "A: 可以 (kěyǐ)",
-        "B: 洗 (xǐ)",
-        "C: 找 (zhǎo)",
-        "D: 离 (lí)",
-        "E: 贵 (guì)",
-        "F: 旁边 (pángbiān)"
+        "A 可以 (kěyǐ)",
+        "B 洗 (xǐ)",
+        "C 找 (zhǎo)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 旁边 (pángbiān)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần động từ năng nguyện bày tỏ sự xin phép 'wǒ kěyǐ yòng/wǒ kěyǐ qǐng nǐ' (Tôi có thể mời bạn...), chọn A (kěyǐ).",
@@ -833,12 +868,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_45.webp",
       "options": [
-        "A: 可以 (kěyǐ)",
-        "B: 洗 (xǐ)",
-        "C: 找 (zhǎo)",
-        "D: 离 (lí)",
-        "E: 贵 (guì)",
-        "F: 旁边 (pángbiān)"
+        "A 可以 (kěyǐ)",
+        "B 洗 (xǐ)",
+        "C 找 (zhǎo)",
+        "D 离 (lí)",
+        "E 贵 (guì)",
+        "F 旁边 (pángbiān)"
       ],
       "board_image": null,
       "explanation": "Chỗ trống cần động từ hành động chỉ việc đi tìm người 'wǒ qù zhǎo nǐmen' (Tôi đi tìm các bạn), chọn C (zhǎo).",
@@ -962,12 +997,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_51.webp",
       "options": [
-        "A: 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
-        "B: 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
-        "C: 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
-        "D: 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
-        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?) (Ví dụ)",
-        "F: 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
+        "A 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
+        "B 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
+        "C 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
+        "D 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
+        "E 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
       ],
       "board_image": null,
       "explanation": "Câu 51 báo giá tiền theo cân '7kuàiqián yījīn' ghép logic với câu hỏi mua bán cá A 'nǐhǎo，zhèyú zěnme mài？'. Đáp án là A.",
@@ -986,12 +1021,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_52.webp",
       "options": [
-        "A: 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
-        "B: 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
-        "C: 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
-        "D: 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
-        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?) (Ví dụ)",
-        "F: 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
+        "A 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
+        "B 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
+        "C 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
+        "D 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
+        "E 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
       ],
       "board_image": null,
       "explanation": "Câu 52 giới thiệu nghề nghiệp/việc làm mở nhà hàng ghép logic với câu hỏi về nghề nghiệp B 'nǐ zhàngfū shì zuò shénme de？'. Đáp án là B.",
@@ -1010,12 +1045,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_53.webp",
       "options": [
-        "A: 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
-        "B: 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
-        "C: 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
-        "D: 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
-        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?) (Ví dụ)",
-        "F: 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
+        "A 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
+        "B 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
+        "C 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
+        "D 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
+        "E 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
       ],
       "board_image": null,
       "explanation": "Câu 53 đề nghị đưa ra sân bay 'wǒ sòng nǐ qù jīchǎng' ghép logic với câu từ chối lịch sự C 'nín bié kèqì，wǒ dǎgè chē jiù kěyǐ le'. Đáp án là C.",
@@ -1034,12 +1069,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_54.webp",
       "options": [
-        "A: 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
-        "B: 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
-        "C: 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
-        "D: 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
-        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?) (Ví dụ)",
-        "F: 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
+        "A 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
+        "B 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
+        "C 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
+        "D 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
+        "E 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
       ],
       "board_image": null,
       "explanation": "Câu 54 'hǎo ba，wǒ zhè jiù qù shuìjiào' ghép logic với lời khuyên/nhắc nhở F 'bié kàndiànshì le，míngtiān háiyào kǎoshì ne'. Đáp án là F.",
@@ -1058,12 +1093,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_55.webp",
       "options": [
-        "A: 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
-        "B: 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
-        "C: 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
-        "D: 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
-        "E: 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?) (Ví dụ)",
-        "F: 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
+        "A 你好，这鱼怎么卖？ (Nǐ hǎo, zhè yú zěnme mài?)",
+        "B 你丈夫是做什么的？ (Nǐ zhàngfu shì zuò shénme de?)",
+        "C 您别客气，我打个车就可以了。 (Nín bié kèqi, wǒ dǎ ge chē jiù kěyǐ le.)",
+        "D 颜色还不错，会不会有点儿大？ (Yánsè hái bùcuò, huìbuhuì yǒudiǎnr dà?)",
+        "E 他在哪儿呢？看见他了吗？ (Tā zài nǎr ne? Nǐ kànjiàn tā le ma?)",
+        "F 别看电视了，明天还要考试呢。 (Bié kàn diànshì le, míngtiān hái yào kǎoshì ne.)"
       ],
       "board_image": null,
       "explanation": "Câu 55 hỏi ý kiến về cái bàn 'zhèzhāng zhuōzi zěnmeyàng' ghép logic với câu nhận xét D 'yánsè hái bùcuò，huì búhuì yǒudiǎnér dà？'. Đáp án là D.",
@@ -1082,11 +1117,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_56.webp",
       "options": [
-        "A: 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
-        "B: 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
-        "C: 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
-        "D: 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
-        "E: 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
+        "A 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
+        "B 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
+        "C 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
+        "D 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
+        "E 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
       ],
       "board_image": null,
       "explanation": "Câu 56 nhắc thời tiết lạnh 'wàimiàn tiānqì lěng' ghép logic với câu giải thích đi vận động C 'méiguānxì，wǒ hé jǐgè tóngxué qù dǎlánqiú'. Đáp án là C.",
@@ -1105,11 +1140,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_57.webp",
       "options": [
-        "A: 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
-        "B: 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
-        "C: 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
-        "D: 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
-        "E: 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
+        "A 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
+        "B 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
+        "C 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
+        "D 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
+        "E 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
       ],
       "board_image": null,
       "explanation": "Câu 57 gợi ý mua đồng hồ đeo tay 'mǎi kuàiér shǒubiǎo zěnmeyàng' ghép logic với băn khoăn mua quà tặng E 'xiàgèyuè15hào shì lǎoshī de shēngrì，sòng tā shénme hǎo ne？'. Đáp án là E.",
@@ -1128,11 +1163,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_58.webp",
       "options": [
-        "A: 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
-        "B: 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
-        "C: 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
-        "D: 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
-        "E: 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
+        "A 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
+        "B 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
+        "C 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
+        "D 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
+        "E 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
       ],
       "board_image": null,
       "explanation": "Câu 58 hỏi về chiếc cốc bị thất lạc 'nín kànjiàn wǒ de shuǐbēi le ma' ghép logic với câu chỉ vị trí B 'yǐzi shàng nàge búshì nǐ de ma？'. Đáp án là B.",
@@ -1151,11 +1186,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_59.webp",
       "options": [
-        "A: 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
-        "B: 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
-        "C: 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
-        "D: 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
-        "E: 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
+        "A 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
+        "B 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
+        "C 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
+        "D 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
+        "E 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
       ],
       "board_image": null,
       "explanation": "Câu 59 hỏi về người quen 'nǐ rènshí nàge rén？' ghép logic với câu giới thiệu A 'tā xìng bái，shì wǒ de yígè péngyǒu'. Đáp án là A.",
@@ -1174,11 +1209,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21116/images/H21116_img_60.webp",
       "options": [
-        "A: 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
-        "B: 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
-        "C: 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
-        "D: 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
-        "E: 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
+        "A 他姓白，是我的一个朋友。 (Tā xìng Bái, shì wǒ de yī ge péngyou.)",
+        "B 椅子上那个不是你的吗？ (Yǐzi shang nàge bú shì nǐ de ma?)",
+        "C 没关系，我和几个同学去打篮球。 (Méi guānxi, wǒ hé jǐ ge tóngxué qù dǎ lánqiú.)",
+        "D 坐公共汽车 20 分钟就到了。 (Zuò gōnggòngqìchē 20 fēnzhōng jiù dào le.)",
+        "E 下个月 15 号是老师的生日，送他什么好呢？ (Xià ge yuè 15 hào shì lǎoshī de shēngri, sòng tā shénme hǎo ne?)"
       ],
       "board_image": null,
       "explanation": "Câu 60 hỏi thời gian di chuyển đến ga tàu 'yào duōzhǎngshíjiān' ghép logic với câu trả lời phương tiện D 'zuò gōnggòngqìchē 20 fēnzhōng jiù dào le'. Đáp án là D.",

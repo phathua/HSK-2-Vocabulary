@@ -628,12 +628,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Yǔ bú xià le, tiān qíng le.",
       "options": [
-        "A: Cô gái đang chạy bộ",
-        "B: Người đàn ông cầm máy ảnh chụp",
-        "C: Cô gái giơ chiếc điện thoại",
-        "D: Người đàn ông giơ bóng rổ (Ví dụ)",
-        "E: Nhóm người bắt tay trong công ty",
-        "F: Người phụ nữ cầm ô mỉm cười dưới trời tạnh mưa"
+        "A 每天早上她都要慢跑一小时。 (Měi tiān zǎoshang tā dōu yào mànpǎo yì xiǎoshí.)",
+        "B 准备好了吗？好，笑一笑。 (Zhǔnbèi hǎo le ma? Hǎo, xiào yí xiào.)",
+        "C 他给女朋友买了一个新手机。 (Tā gěi nǚpéngyou mǎile yí ge xīn shǒujī.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 非常欢迎你来我们公司工作！ (Fēicháng huānyíng nǐ lái wǒmen gōngsī gōngzuò!)",
+        "F 雨不下了，天晴了。 (Yǔ bú xià le, tiān qíng le.)"
       ]
     },
     {
@@ -652,12 +652,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Tā gěi nǚpéngyou mǎile yí ge xīn shǒujī.",
       "options": [
-        "A: Cô gái đang chạy bộ",
-        "B: Người đàn ông cầm máy ảnh chụp",
-        "C: Cô gái giơ chiếc điện thoại",
-        "D: Người đàn ông giơ bóng rổ (Ví dụ)",
-        "E: Nhóm người bắt tay trong công ty",
-        "F: Người phụ nữ cầm ô mỉm cười dưới trời tạnh mưa"
+        "A 每天早上她都要慢跑一小时。 (Měi tiān zǎoshang tā dōu yào mànpǎo yì xiǎoshí.)",
+        "B 准备好了吗？好，笑一笑。 (Zhǔnbèi hǎo le ma? Hǎo, xiào yí xiào.)",
+        "C 他给女朋友买了一个新手机。 (Tā gěi nǚpéngyou mǎile yí ge xīn shǒujī.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 非常欢迎你来我们公司工作！ (Fēicháng huānyíng nǐ lái wǒmen gōngsī gōngzuò!)",
+        "F 雨不下了，天晴了。 (Yǔ bú xià le, tiān qíng le.)"
       ]
     },
     {
@@ -676,12 +676,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Zhǔnbèi hǎo le ma? Hǎo, xiào yí xiào.",
       "options": [
-        "A: Cô gái đang chạy bộ",
-        "B: Người đàn ông cầm máy ảnh chụp",
-        "C: Cô gái giơ chiếc điện thoại",
-        "D: Người đàn ông giơ bóng rổ (Ví dụ)",
-        "E: Nhóm người bắt tay trong công ty",
-        "F: Người phụ nữ cầm ô mỉm cười dưới trời tạnh mưa"
+        "A 每天早上她都要慢跑一小时。 (Měi tiān zǎoshang tā dōu yào mànpǎo yì xiǎoshí.)",
+        "B 准备好了吗？好，笑一笑。 (Zhǔnbèi hǎo le ma? Hǎo, xiào yí xiào.)",
+        "C 他给女朋友买了一个新手机。 (Tā gěi nǚpéngyou mǎile yí ge xīn shǒujī.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 非常欢迎你来我们公司工作！ (Fēicháng huānyíng nǐ lái wǒmen gōngsī gōngzuò!)",
+        "F 雨不下了，天晴了。 (Yǔ bú xià le, tiān qíng le.)"
       ]
     },
     {
@@ -700,12 +700,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Fēicháng huānyíng nǐ lái wǒmen gōngsī gōngzuò!",
       "options": [
-        "A: Cô gái đang chạy bộ",
-        "B: Người đàn ông cầm máy ảnh chụp",
-        "C: Cô gái giơ chiếc điện thoại",
-        "D: Người đàn ông giơ bóng rổ (Ví dụ)",
-        "E: Nhóm người bắt tay trong công ty",
-        "F: Người phụ nữ cầm ô mỉm cười dưới trời tạnh mưa"
+        "A 每天早上她都要慢跑一小时。 (Měi tiān zǎoshang tā dōu yào mànpǎo yì xiǎoshí.)",
+        "B 准备好了吗？好，笑一笑。 (Zhǔnbèi hǎo le ma? Hǎo, xiào yí xiào.)",
+        "C 他给女朋友买了一个新手机。 (Tā gěi nǚpéngyou mǎile yí ge xīn shǒujī.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 非常欢迎你来我们公司工作！ (Fēicháng huānyíng nǐ lái wǒmen gōngsī gōngzuò!)",
+        "F 雨不下了，天晴了。 (Yǔ bú xià le, tiān qíng le.)"
       ]
     },
     {
@@ -724,12 +724,12 @@ export const examData: ExamDetail = {
       "listening_pinyin": null,
       "pinyin": "Měi tiān zǎoshang tā dōu yào mànpǎo yì xiǎoshí.",
       "options": [
-        "A: Cô gái đang chạy bộ",
-        "B: Người đàn ông cầm máy ảnh chụp",
-        "C: Cô gái giơ chiếc điện thoại",
-        "D: Người đàn ông giơ bóng rổ (Ví dụ)",
-        "E: Nhóm người bắt tay trong công ty",
-        "F: Người phụ nữ cầm ô mỉm cười dưới trời tạnh mưa"
+        "A 每天早上她都要慢跑一小时。 (Měi tiān zǎoshang tā dōu yào mànpǎo yì xiǎoshí.)",
+        "B 准备好了吗？好，笑一笑。 (Zhǔnbèi hǎo le ma? Hǎo, xiào yí xiào.)",
+        "C 他给女朋友买了一个新手机。 (Tā gěi nǚpéngyou mǎile yí ge xīn shǒujī.)",
+        "D 每个星期六，我都去打篮球。 (Měi ge xīngqīliù, wǒ dōu qù dǎ lánqiú.)",
+        "E 非常欢迎你来我们公司工作！ (Fēicháng huānyíng nǐ lái wǒmen gōngsī gōngzuò!)",
+        "F 雨不下了，天晴了。 (Yǔ bú xià le, tiān qíng le.)"
       ]
     },
     {
@@ -969,12 +969,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_51.webp",
       "options": [
-        "A: 对不起，再给我一天时间？",
-        "B: 王老师，你的电话。",
-        "C: 一个鸡蛋，喝了些牛奶。",
-        "D: 你出去的时候多穿些衣服。",
-        "E: 他还在教室里学习。（Ví dụ）",
-        "F: 这船是从上海开来的。"
+        "A 对不起，再给我一天时间？ (duì bù qǐ , zài gěi wǒ yì tiān shí jiān ?)",
+        "B 王老师，你的电话。 (wáng lǎo shī , nǐ de diàn huà)",
+        "C 一个鸡蛋，喝了些牛奶。 (yí gè jī dàn , hē le xiē niú nǎi)",
+        "D 你出去的时候多穿些衣服。 (nǐ chū qù de shí hòu duō chuān xiē yī fu)",
+        "E 他还在教室里学习。 (tā hái zài jiào shì lǐ xué xí)",
+        "F 这船是从上海开来的。 (zhè chuán shì cóng shàng hǎi kāi lái de)"
       ],
       "board_image": null,
       "explanation": "Miêu tả phương tiện rất lớn chở được ngàn người ('néng zuò yīqiānduō rén') ứng với vế F (chuyến tàu này chạy từ Thượng Hải tới).",
@@ -993,12 +993,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_52.webp",
       "options": [
-        "A: 对不起，再给我一天时间？",
-        "B: 王老师，你的电话。",
-        "C: 一个鸡蛋，喝了些牛奶。",
-        "D: 你出去的时候多穿些衣服。",
-        "E: 他还在教室里学习。（Ví dụ）",
-        "F: 这船是从上海开来的。"
+        "A 对不起，再给我一天时间？ (duì bù qǐ , zài gěi wǒ yì tiān shí jiān ?)",
+        "B 王老师，你的电话。 (wáng lǎo shī , nǐ de diàn huà)",
+        "C 一个鸡蛋，喝了些牛奶。 (yí gè jī dàn , hē le xiē niú nǎi)",
+        "D 你出去的时候多穿些衣服。 (nǐ chū qù de shí hòu duō chuān xiē yī fu)",
+        "E 他还在教室里学习。 (tā hái zài jiào shì lǐ xué xí)",
+        "F 这船是从上海开来的。 (zhè chuán shì cóng shàng hǎi kāi lái de)"
       ],
       "board_image": null,
       "explanation": "Nhận xét trời rất lạnh ('jīntiān zhēnlěng') tương ứng với lời khuyên D (khi ra ngoài nhớ mặc thêm nhiều áo).",
@@ -1017,12 +1017,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_53.webp",
       "options": [
-        "A: 对不起，再给我一天时间？",
-        "B: 王老师，你的电话。",
-        "C: 一个鸡蛋，喝了些牛奶。",
-        "D: 你出去的时候多穿些衣服。",
-        "E: 他还在教室里学习。（Ví dụ）",
-        "F: 这船是从上海开来的。"
+        "A 对不起，再给我一天时间？ (duì bù qǐ , zài gěi wǒ yì tiān shí jiān ?)",
+        "B 王老师，你的电话。 (wáng lǎo shī , nǐ de diàn huà)",
+        "C 一个鸡蛋，喝了些牛奶。 (yí gè jī dàn , hē le xiē niú nǎi)",
+        "D 你出去的时候多穿些衣服。 (nǐ chū qù de shí hòu duō chuān xiē yī fu)",
+        "E 他还在教室里学习。 (tā hái zài jiào shì lǐ xué xí)",
+        "F 这船是从上海开来的。 (zhè chuán shì cóng shàng hǎi kāi lái de)"
       ],
       "board_image": null,
       "explanation": "Hỏi buổi sáng đã ăn gì ('zǎoshàng chī shénme le'), trả lời C (một quả trứng, uống chút sữa).",
@@ -1041,12 +1041,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_54.webp",
       "options": [
-        "A: 对不起，再给我一天时间？",
-        "B: 王老师，你的电话。",
-        "C: 一个鸡蛋，喝了些牛奶。",
-        "D: 你出去的时候多穿些衣服。",
-        "E: 他还在教室里学习。（Ví dụ）",
-        "F: 这船是从上海开来的。"
+        "A 对不起，再给我一天时间？ (duì bù qǐ , zài gěi wǒ yì tiān shí jiān ?)",
+        "B 王老师，你的电话。 (wáng lǎo shī , nǐ de diàn huà)",
+        "C 一个鸡蛋，喝了些牛奶。 (yí gè jī dàn , hē le xiē niú nǎi)",
+        "D 你出去的时候多穿些衣服。 (nǐ chū qù de shí hòu duō chuān xiē yī fu)",
+        "E 他还在教室里学习。 (tā hái zài jiào shì lǐ xué xí)",
+        "F 这船是从上海开来的。 (zhè chuán shì cóng shàng hǎi kāi lái de)"
       ],
       "board_image": null,
       "explanation": "Hỏi đã đọc xong cuốn sách đó chưa, đáp lại A (xin lỗi, cho tôi thêm một ngày nữa nhé).",
@@ -1065,12 +1065,12 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_55.webp",
       "options": [
-        "A: 对不起，再给我一天时间？",
-        "B: 王老师，你的电话。",
-        "C: 一个鸡蛋，喝了些牛奶。",
-        "D: 你出去的时候多穿些衣服。",
-        "E: 他还在教室里学习。（Ví dụ）",
-        "F: 这船是从上海开来的。"
+        "A 对不起，再给我一天时间？ (duì bù qǐ , zài gěi wǒ yì tiān shí jiān ?)",
+        "B 王老师，你的电话。 (wáng lǎo shī , nǐ de diàn huà)",
+        "C 一个鸡蛋，喝了些牛奶。 (yí gè jī dàn , hē le xiē niú nǎi)",
+        "D 你出去的时候多穿些衣服。 (nǐ chū qù de shí hòu duō chuān xiē yī fu)",
+        "E 他还在教室里学习。 (tā hái zài jiào shì lǐ xué xí)",
+        "F 这船是从上海开来的。 (zhè chuán shì cóng shàng hǎi kāi lái de)"
       ],
       "board_image": null,
       "explanation": "Hỏi lời cảm ơn và hỏi là ai gọi, đáp ứng B (Thầy Vương, điện thoại của thầy).",
@@ -1089,11 +1089,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_56.webp",
       "options": [
-        "A: 这个名字很有意思。",
-        "B: 太多了吧？这是药！",
-        "C: 你姐姐真高，这么漂亮，她有男朋友了吗？",
-        "D: 在门后面玩儿呢。",
-        "E: 您看了吗？没什么问题吧？"
+        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì sī)",
+        "B 太多了吧？这是药！ (tài duō le ba ? zhè shì yào !)",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jie zhēn gāo , zhè me piào liang , tā yǒu nán péng yǒu le ma ?)",
+        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne)",
+        "E 您看了吗？没什么问题吧？ (nín kàn le ma ? méi shén me wèn tí ba ?)"
       ],
       "board_image": null,
       "explanation": "Nhắc nhở viết sai chữ Hán tương ứng với câu E (Ngài đã xem qua chưa? Không có vấn đề gì chứ?).",
@@ -1112,11 +1112,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_57.webp",
       "options": [
-        "A: 这个名字很有意思。",
-        "B: 太多了吧？这是药！",
-        "C: 你姐姐真高，这么漂亮，她有男朋友了吗？",
-        "D: 在门后面玩儿呢。",
-        "E: 您看了吗？没什么问题吧？"
+        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì sī)",
+        "B 太多了吧？这是药！ (tài duō le ba ? zhè shì yào !)",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jie zhēn gāo , zhè me piào liang , tā yǒu nán péng yǒu le ma ?)",
+        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne)",
+        "E 您看了吗？没什么问题吧？ (nín kàn le ma ? méi shén me wèn tí ba ?)"
       ],
       "board_image": null,
       "explanation": "Hỏi có muốn giới thiệu cho cô ấy một người không, tương ứng với vế C (chị gái bạn thật cao, xinh đẹp thế, cô ấy có bạn trai chưa?).",
@@ -1135,11 +1135,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_58.webp",
       "options": [
-        "A: 这个名字很有意思。",
-        "B: 太多了吧？这是药！",
-        "C: 你姐姐真高，这么漂亮，她有男朋友了吗？",
-        "D: 在门后面玩儿呢。",
-        "E: 您看了吗？没什么问题吧？"
+        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì sī)",
+        "B 太多了吧？这是药！ (tài duō le ba ? zhè shì yào !)",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jie zhēn gāo , zhè me piào liang , tā yǒu nán péng yǒu le ma ?)",
+        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne)",
+        "E 您看了吗？没什么问题吧？ (nín kàn le ma ? méi shén me wèn tí ba ?)"
       ],
       "board_image": null,
       "explanation": "Hỏi con mèo nhỏ đâu rồi ('wǒ de xiǎomāo ne'), trả lời D (đang chơi ở sau cửa đấy).",
@@ -1158,11 +1158,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_59.webp",
       "options": [
-        "A: 这个名字很有意思。",
-        "B: 太多了吧？这是药！",
-        "C: 你姐姐真高，这么漂亮，她有男朋友了吗？",
-        "D: 在门后面玩儿呢。",
-        "E: 您看了吗？没什么问题吧？"
+        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì sī)",
+        "B 太多了吧？这是药！ (tài duō le ba ? zhè shì yào !)",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jie zhēn gāo , zhè me piào liang , tā yǒu nán péng yǒu le ma ?)",
+        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne)",
+        "E 您看了吗？没什么问题吧？ (nín kàn le ma ? méi shén me wèn tí ba ?)"
       ],
       "board_image": null,
       "explanation": "Giải thích nguồn gốc tên gọi Lưu Dương tương ứng với nhận xét A (cái tên này thật thú vị).",
@@ -1181,11 +1181,11 @@ export const examData: ExamDetail = {
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21003/images/H21003_img_60.webp",
       "options": [
-        "A: 这个名字很有意思。",
-        "B: 太多了吧？这是药！",
-        "C: 你姐姐真高，这么漂亮，她有男朋友了吗？",
-        "D: 在门后面玩儿呢。",
-        "E: 您看了吗？没什么问题吧？"
+        "A 这个名字很有意思。 (zhè ge míng zì hěn yǒu yì sī)",
+        "B 太多了吧？这是药！ (tài duō le ba ? zhè shì yào !)",
+        "C 你姐姐真高，这么漂亮，她有男朋友了吗？ (nǐ jiě jie zhēn gāo , zhè me piào liang , tā yǒu nán péng yǒu le ma ?)",
+        "D 在门后面玩儿呢。 (zài mén hòu miàn wán ér ne)",
+        "E 您看了吗？没什么问题吧？ (nín kàn le ma ? méi shén me wèn tí ba ?)"
       ],
       "board_image": null,
       "explanation": "Nói về liều lượng dùng thuốc theo lời bác sĩ, đáp lại B (nhiều quá nhỉ? Đây là thuốc đấy!).",
