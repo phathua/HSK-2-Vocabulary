@@ -470,10 +470,13 @@
         </span>
 
         {#if isZhToVi}
-          <!-- Chế độ Trung -> Việt: Chỉ hiển thị chữ Hán to rõ (tuyệt đối KHÔNG hiển thị nghĩa tiếng Việt hay Pinyin trước khi phát âm) -->
+          <!-- Chế độ Trung -> Việt: Hiển thị chữ Hán & Pinyin to rõ -->
           <h2 class="text-5xl sm:text-6xl md:text-7xl font-black text-blue-600 dark:text-blue-400 tracking-wide font-sans mt-2 mb-1">
             {appState.currentSpeechItem.hanzi}
           </h2>
+          <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-700 dark:text-[#C4C7C5] mb-1">
+            {appState.currentSpeechItem.pinyin}
+          </div>
         {:else}
           <!-- Chế độ Việt -> Trung: Chỉ hiển thị nghĩa tiếng Việt to rõ (tuyệt đối KHÔNG hiển thị chữ Hán hay Pinyin trước khi phát âm) -->
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-800 dark:text-[#E3E3E3] mt-2 mb-1">

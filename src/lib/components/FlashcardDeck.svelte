@@ -397,10 +397,13 @@
               {nextCardItem.viet}
             </div>
           {:else}
-            <!-- Chiều Trung -> Việt: Mặt trước chỉ hiện Chữ Hán (tuyệt đối không lộ Pinyin và tiếng Việt) -->
-            <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">Chữ Hán</span>
-            <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-2">
+            <!-- Chiều Trung -> Việt: Mặt trước hiện Chữ Hán & Pinyin -->
+            <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1">Chữ Hán & Pinyin</span>
+            <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-1">
               {nextCardItem.hanzi}
+            </div>
+            <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-700 dark:text-[#C4C7C5] mb-2">
+              {nextCardItem.pinyin}
             </div>
           {/if}
         </div>
@@ -482,10 +485,13 @@
                 {appState.currentFlashItem.viet}
               </div>
             {:else}
-              <!-- Chế độ Trung -> Việt: Hiện chữ Hán to rõ, bấm lật mới hiện Pinyin & Nghĩa tiếng Việt -->
-              <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 pointer-events-none">Chữ Hán</span>
-              <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-2 pointer-events-none">
+              <!-- Chế độ Trung -> Việt: Hiện chữ Hán & Pinyin to rõ, bấm lật mới hiện Nghĩa tiếng Việt -->
+              <span class="text-[11px] md:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#8E918F] mb-1 pointer-events-none">Chữ Hán & Pinyin</span>
+              <div class="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-1 pointer-events-none">
                 {appState.currentFlashItem.hanzi}
+              </div>
+              <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-700 dark:text-[#C4C7C5] mb-2 pointer-events-none">
+                {appState.currentFlashItem.pinyin}
               </div>
             {/if}
 
@@ -588,9 +594,12 @@
                 {flyingCard.viet}
               </div>
             {:else}
-              <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Chữ Hán</span>
-              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-2">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Chữ Hán & Pinyin</span>
+              <div class="text-4xl sm:text-5xl font-black text-blue-600 mb-1">
                 {flyingCard.hanzi}
+              </div>
+              <div class="text-xl sm:text-2xl font-black text-slate-700 mb-2">
+                {flyingCard.pinyin}
               </div>
             {/if}
           {/if}
