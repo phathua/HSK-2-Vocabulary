@@ -767,6 +767,25 @@
               <span>Đang phát nhạc dạo đầu bài thi HSK 2...</span>
             </div>
           {:else}
+            <!-- Speaker tag if dialogue -->
+            {#if activeSubtitle.speaker && activeSubtitle.speaker !== 'narrator'}
+              <div class="flex items-center gap-1.5 justify-center sm:justify-start px-0.5">
+                {#if activeSubtitle.speaker === 'female'}
+                  <span class="inline-flex items-center text-[10px] font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
+                    Nữ
+                  </span>
+                {:else if activeSubtitle.speaker === 'male'}
+                  <span class="inline-flex items-center text-[10px] font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">
+                    Nam
+                  </span>
+                {:else if activeSubtitle.speaker === 'question'}
+                  <span class="inline-flex items-center text-[10px] font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                    Hỏi
+                  </span>
+                {/if}
+              </div>
+            {/if}
+
             <div class="flex flex-wrap items-end gap-x-1 sm:gap-x-1.5 gap-y-1 sm:gap-y-1.5 justify-center sm:justify-start px-0.5 py-0.5">
               {#if currentWords.length > 0}
                 {#each currentWords as w}
@@ -808,7 +827,7 @@
             <!-- Bản dịch tiếng Việt của cả câu (nhẹ nhàng, thanh lịch, gọn gàng trên mobile) -->
             {#if activeSubtitle.viet}
               <div class="px-0.5 text-center sm:text-left">
-                <p class="text-[11px] sm:text-xs md:text-sm text-slate-600 dark:text-neutral-300 italic font-medium tracking-wide line-clamp-1 sm:line-clamp-none">
+                <p class="text-[11px] sm:text-xs md:text-sm text-slate-600 dark:text-neutral-300 italic font-medium tracking-wide line-clamp-2 sm:line-clamp-none">
                   {activeSubtitle.viet}
                 </p>
               </div>

@@ -14,6 +14,7 @@ export interface SubtitleItem {
   viet?: string;
   words?: SubtitleWord[];
   isIntro?: boolean;
+  speaker?: 'female' | 'male' | 'question' | 'narrator' | string;
 }
 
 export const EXAM_INTRO_RULES_SUBTITLES: SubtitleItem[] = [
