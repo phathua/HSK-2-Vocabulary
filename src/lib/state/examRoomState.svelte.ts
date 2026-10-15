@@ -25,6 +25,7 @@ class ExamRoomState {
   isScrolled = $state(false);
   isSubmitted = $state(false);
   startAudioFn = $state<(() => void) | null>(null);
+  pauseAudioFn = $state<(() => void) | null>(null);
   submitFn = $state<(() => void) | null>(null);
   retryFn = $state<(() => void) | null>(null);
 
@@ -41,6 +42,7 @@ class ExamRoomState {
     this.isScrolled = false;
     this.isSubmitted = false;
     this.startAudioFn = null;
+    this.pauseAudioFn = null;
     this.submitFn = null;
     this.retryFn = null;
   }
@@ -48,6 +50,12 @@ class ExamRoomState {
   startAudio() {
     if (this.startAudioFn) {
       this.startAudioFn();
+    }
+  }
+
+  pauseAudio() {
+    if (this.pauseAudioFn) {
+      this.pauseAudioFn();
     }
   }
 

@@ -57,8 +57,9 @@ export function speakChinese(text: string, volume: number = 0.7): Promise<void> 
       utt.onend = safeResolve;
       utt.onerror = safeResolve;
 
-      // Timeout dự phòng tránh treo nếu Safari không bắn event onend
-      setTimeout(safeResolve, 4000);
+      // Timeout dự phòng tỷ lệ theo độ dài văn bản tránh Safari ngắt sớm
+      const maxDuration = Math.max(4000, Math.ceil(text.length / 2) * 1000);
+      setTimeout(safeResolve, maxDuration);
 
       window.speechSynthesis.resume();
       window.speechSynthesis.speak(utt);
@@ -228,4 +229,53 @@ export function shuffleArray<T>(arr: T[]): T[] {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+}
+
+// Trích xuất văn bản chữ Hán thuần túy từ đề bài và các lựa chọn (bỏ pinyin, số, ký tự đặc biệt)
+export function getQuestionChineseSpeechText(
+  questionText?: string,
+  options?: Array<string | { label?: string; hanzi?: string; value?: string }>
+): string {
+  if (!questionText) return '';
+
+  // 1. Loại bỏ phiên âm pinyin trong ngoặc đơn (ngoặc tròn ASCII hoặc Unicode)
+  let cleanText = questionText.replace(/[\(（][a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s,\.\?!’'\-—]+[\)）]/g, ' ');
+
+  // 2. Chuyển đổi ký hiệu nhận định ★ thành dấu ngắt nghỉ tự nhiên
+  cleanText = cleanText.replace(/★/g, '，');
+
+  // 3. Loại bỏ toàn bộ ký tự Latin (a-z, A-Z), số thứ tự câu hỏi và các ký hiệu không phải tiếng Trung
+  // Giữ lại: Chữ Hán (\u4e00-\u9fa5) và các dấu câu tiếng Trung (，。？！：)
+  let chineseQuestion = cleanText
+    .replace(/[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ0-9]/g, '')
+    .replace(/[\/\\#\$%\^&\*\+=\[\]\{\}<>~`\|_]/g, '')
+    .trim();
+
+  // 4. Nếu có phương án trả lời bằng tiếng Trung (ví dụ Q41-45, Q51-60)
+  const optionChineseTexts: string[] = [];
+  if (options && options.length > 0) {
+    for (const opt of options) {
+      const textToExtract = typeof opt === 'string' ? opt : (opt.hanzi || opt.label || '');
+      // Lọc lấy chữ Hán trong phương án
+      const hanziOnly = textToExtract
+        .replace(/[\(（][a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s,\.\?!’'\-—]+[\)）]/g, '')
+        .replace(/[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ0-9]/g, '')
+        .replace(/[\/\\#\$%\^&\*\+=\[\]\{\}<>~`\|_\.,]/g, '')
+        .trim();
+      if (hanziOnly && /[\u4e00-\u9fa5]/.test(hanziOnly)) {
+        optionChineseTexts.push(hanziOnly);
+      }
+    }
+  }
+
+  if (optionChineseTexts.length > 0) {
+    chineseQuestion += '。' + optionChineseTexts.join('，');
+  }
+
+  // Chuẩn hóa dấu câu trùng lặp và khoảng trắng
+  return chineseQuestion
+    .replace(/[，,]{2,}/g, '，')
+    .replace(/[。.]{2,}/g, '。')
+    .replace(/\s+/g, ' ')
+    .trim();
 }

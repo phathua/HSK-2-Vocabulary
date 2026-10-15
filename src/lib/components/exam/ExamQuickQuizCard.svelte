@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onDestroy } from 'svelte';
   import Check from 'phosphor-svelte/lib/Check';
   import X from 'phosphor-svelte/lib/X';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
@@ -6,8 +7,8 @@
   import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
   import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
   import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';
-  import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
-  import MagnifyingGlassPlus from 'phosphor-svelte/lib/MagnifyingGlassPlus';
+  import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
+
   import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import Trophy from 'phosphor-svelte/lib/Trophy';
   import ListNumbers from 'phosphor-svelte/lib/ListNumbers';
@@ -17,9 +18,11 @@
   import SmartImage from '../SmartImage.svelte';
   import AnswerFeedbackDrawer from '../AnswerFeedbackDrawer.svelte';
   import { appState } from '#lib/state/appState.svelte';
+  import { examRoomState } from '#lib/state/examRoomState.svelte';
   import type { QuestionItem } from '#lib/types/exam';
   import { getExamImageUrl } from '#lib/utils/examAssets';
   import { parseOptionItem } from '#lib/utils/examOptionParser';
+  import { speakChinese, stopSpeech, getQuestionChineseSpeechText } from '#lib/utils/speech';
   import InteractiveChineseText from './InteractiveChineseText.svelte';
   import InteractivePinyinText from './InteractivePinyinText.svelte';
 
@@ -351,6 +354,39 @@
       onPrevQuestion();
     }
   }
+
+  let isSpeaking = $state(false);
+
+  async function handleToggleSpeech() {
+    if (isSpeaking) {
+      stopSpeech();
+      isSpeaking = false;
+      return;
+    }
+    // Tạm dừng audio phòng thi nếu đang phát
+    examRoomState.pauseAudio();
+
+    const chineseText = getQuestionChineseSpeechText(question.text, optionChoices);
+    if (!chineseText) return;
+
+    isSpeaking = true;
+    try {
+      await speakChinese(chineseText);
+    } finally {
+      isSpeaking = false;
+    }
+  }
+
+  $effect(() => {
+    // Tự động dừng phát âm khi chuyển câu hỏi
+    question.question_no;
+    stopSpeech();
+    isSpeaking = false;
+  });
+
+  onDestroy(() => {
+    stopSpeech();
+  });
 </script>
 
 <svelte:window onkeydown={handleKeydown} />
@@ -383,19 +419,34 @@
         </div>
       </div>
 
-      <!-- Nút Cắm cờ -->
-      <button
-        type="button"
-        onclick={onToggleFlag}
-        class="h-8 w-8 rounded-xl flex items-center justify-center shadow-2xs active:scale-95 transition-all cursor-pointer border {
-          isFlagged
-            ? 'bg-amber-100 dark:bg-amber-950/70 border-amber-300 dark:border-amber-800 text-amber-600'
-            : 'bg-slate-50 dark:bg-[#282A2C] border-slate-200 dark:border-[#37393B] text-slate-400 hover:text-slate-600'
-        }"
-        title="Ghim câu này để xem lại"
-      >
-        <BookmarkSimple weight={isFlagged ? 'fill' : 'bold'} class="w-4 h-4" />
-      </button>
+      <div class="flex items-center gap-1.5 shrink-0">
+        <!-- Nút Đọc phát âm câu hỏi bằng TTS (Chỉ cho câu hỏi phần Đọc: Q36 trở đi) -->
+        {#if question.question_no >= 36}
+          <button
+            type="button"
+            onclick={handleToggleSpeech}
+            class="w-8 h-8 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white flex items-center justify-center shadow-2xs transition-all cursor-pointer {isSpeaking ? 'ring-2 ring-emerald-400 ring-offset-1 ring-offset-white dark:ring-offset-[#1B1B1B] animate-pulse' : ''}"
+            title={isSpeaking ? 'Dừng đọc' : 'Phát âm câu hỏi tiếng Trung'}
+            aria-label="Phát âm câu hỏi tiếng Trung"
+          >
+            <SpeakerHigh weight="bold" class="w-4 h-4" />
+          </button>
+        {/if}
+
+        <!-- Nút Cắm cờ -->
+        <button
+          type="button"
+          onclick={onToggleFlag}
+          class="h-8 w-8 rounded-xl flex items-center justify-center shadow-2xs active:scale-95 transition-all cursor-pointer border {
+            isFlagged
+              ? 'bg-amber-100 dark:bg-amber-950/70 border-amber-300 dark:border-amber-800 text-amber-600'
+              : 'bg-slate-50 dark:bg-[#282A2C] border-slate-200 dark:border-[#37393B] text-slate-400 hover:text-slate-600'
+          }"
+          title="Ghim câu này để xem lại"
+        >
+          <BookmarkSimple weight={isFlagged ? 'fill' : 'bold'} class="w-4 h-4" />
+        </button>
+      </div>
     </div>
 
     <!-- Container Nội Dung: Phân loại theo cấu trúc câu hỏi -->
@@ -580,15 +631,6 @@
                   loading="lazy"
                 />
               </button>
-              <button
-                type="button"
-                onclick={() => (isImageZoomed = true)}
-                class="absolute top-2 right-2 px-2 py-1 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-xs transition-colors cursor-pointer text-[10px] font-bold flex items-center gap-1 shadow-sm"
-                title="Phóng to ảnh"
-              >
-                <MagnifyingGlassPlus weight="bold" class="w-3.5 h-3.5" />
-                <span class="hidden sm:inline">Phóng to</span>
-              </button>
             </div>
           {/if}
 
@@ -610,21 +652,6 @@
                     loading="lazy"
                   />
                 </button>
-                <!-- Nút Phóng to nổi góc trên -->
-                <button
-                  type="button"
-                  onclick={() => (isImageZoomed = true)}
-                  class="absolute top-1.5 right-1.5 px-2 py-0.5 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-xs transition-colors cursor-pointer text-[10px] font-bold flex items-center gap-1 shadow-sm"
-                  title="Phóng to bảng tranh"
-                >
-                  <MagnifyingGlassPlus weight="bold" class="w-3.5 h-3.5" />
-                  <span class="hidden sm:inline">Phóng to</span>
-                </button>
-                <!-- Badge gợi ý chạm phóng to góc dưới (không tốn thêm chiều cao) -->
-                <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-black/55 text-white text-[9px] font-bold backdrop-blur-xs pointer-events-none whitespace-nowrap shadow-xs flex items-center gap-1">
-                  <MagnifyingGlass weight="bold" class="w-2.5 h-2.5" />
-                  <span>Chạm để phóng to A – F</span>
-                </div>
               </div>
             </div>
           {/if}
@@ -1110,12 +1137,58 @@
         </button>
       </div>
 
+      <!-- Question Text in Zoom Modal if available (Hanzi + Pinyin) -->
+      {#if parsedQuestionDisplay}
+        <div class="w-full py-2 px-3 bg-slate-50/80 dark:bg-[#202224]/80 rounded-2xl border border-slate-200/70 dark:border-neutral-800 text-center shrink-0 mb-1 max-w-2xl select-text">
+          {#if parsedQuestionDisplay.isTrueFalseStatement}
+            <div class="space-y-1.5 text-left">
+              <div>
+                {#if parsedQuestionDisplay.contextPinyin}
+                  <div class="text-[11px] text-slate-500 dark:text-neutral-400 font-sans tracking-wide">
+                    <InteractivePinyinText pinyin={parsedQuestionDisplay.contextPinyin} />
+                  </div>
+                {/if}
+                <div class="text-sm sm:text-base font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
+                  <InteractiveChineseText text={parsedQuestionDisplay.contextHanzi} />
+                </div>
+              </div>
+              <div class="pt-1.5 border-t border-slate-200/60 dark:border-neutral-700/60 flex items-start gap-1.5">
+                <span class="px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-[10px] font-black shrink-0 mt-0.5">
+                  ★ Nhận định
+                </span>
+                <div class="flex-1">
+                  {#if parsedQuestionDisplay.statementPinyin}
+                    <div class="text-[11px] text-slate-500 dark:text-neutral-400 font-sans tracking-wide">
+                      <InteractivePinyinText pinyin={parsedQuestionDisplay.statementPinyin} />
+                    </div>
+                  {/if}
+                  <div class="text-sm sm:text-base font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
+                    <InteractiveChineseText text={parsedQuestionDisplay.statementHanzi} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          {:else}
+            <div class="space-y-0.5">
+              {#if parsedQuestionDisplay.pinyin}
+                <div class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide">
+                  <InteractivePinyinText pinyin={parsedQuestionDisplay.pinyin} />
+                </div>
+              {/if}
+              <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
+                <InteractiveChineseText text={parsedQuestionDisplay.hanzi} />
+              </div>
+            </div>
+          {/if}
+        </div>
+      {/if}
+
       <!-- Zoom Image Container -->
       <div class="flex-1 w-full flex items-center justify-center overflow-auto min-h-0 py-1">
         <img
           src={activeZoomSrc}
           alt="Ảnh phóng to chi tiết"
-          class="max-w-full max-h-[68vh] sm:max-h-[75vh] object-contain rounded-xl select-none shadow-xs"
+          class="max-w-full max-h-[56vh] sm:max-h-[64vh] object-contain rounded-xl select-none shadow-xs"
         />
       </div>
 
@@ -1133,9 +1206,17 @@
                   onSelectAnswer(opt.value);
                   isImageZoomed = false;
                 }}
-                class="px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-xl font-black text-xs sm:text-sm bg-slate-100 dark:bg-[#282A2C] hover:bg-orange-500 hover:text-white text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-[#37393B] active:scale-95 transition-all cursor-pointer shadow-xs"
+                class="px-4 sm:px-6 py-2 rounded-xl font-black text-xs sm:text-sm bg-slate-100 dark:bg-[#282A2C] hover:bg-orange-500 hover:text-white text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-[#37393B] active:scale-95 transition-all cursor-pointer shadow-xs flex items-center gap-1.5"
               >
-                {opt.value}
+                {#if opt.value === '√' || opt.icon === 'check'}
+                  <Check weight="bold" class="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                  <span>Đúng</span>
+                {:else if opt.value === '×' || opt.icon === 'x'}
+                  <X weight="bold" class="w-4 h-4 text-rose-600 dark:text-rose-400" />
+                  <span>Sai</span>
+                {:else}
+                  <span>{opt.value}</span>
+                {/if}
               </button>
             {/each}
           </div>

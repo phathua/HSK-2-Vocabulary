@@ -374,8 +374,20 @@
     }
   }
 
+  function pauseAudioPlayback() {
+    if (audioElement && isPlaying) {
+      audioElement.pause();
+      isPlaying = false;
+      examRoomState.isPlaying = false;
+      if (typeof navigator !== 'undefined' && 'mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = 'paused';
+      }
+    }
+  }
+
   onMount(() => {
     examRoomState.startAudioFn = startAudioPlayback;
+    examRoomState.pauseAudioFn = pauseAudioPlayback;
 
     // Thiết lập kênh đồng bộ âm thanh đa tab để đảm bảo chỉ 1 tab active duy nhất được phát
     if (typeof BroadcastChannel !== 'undefined') {
@@ -477,6 +489,7 @@
   onDestroy(() => {
     if (previewTimer) clearInterval(previewTimer);
     examRoomState.startAudioFn = null;
+    examRoomState.pauseAudioFn = null;
     audioBroadcastChannel?.close();
     clearOutTabExamAlert();
   });
