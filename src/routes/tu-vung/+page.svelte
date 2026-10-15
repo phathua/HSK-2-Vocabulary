@@ -31,6 +31,7 @@
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
   import { getCharacterDetail } from '#lib/data/characterDetailMap';
   import SmartImage from '#lib/components/SmartImage.svelte';
+  import { getSmartSuggestions, type SmartSuggestionItem } from '#lib/utils/smartSearch';
 
   // State tìm kiếm & scroll behavior
   let searchQuery = $state('');
@@ -204,6 +205,13 @@
     const rawQ = searchQuery.trim();
     if (!rawQ) return [];
     return searchResults.slice(0, 8);
+  });
+
+  // Gợi ý thông minh khi không có kết quả khớp chính xác
+  let smartSuggestions = $derived.by(() => {
+    const rawQ = searchQuery.trim();
+    if (!rawQ || searchResults.length > 0) return [];
+    return getSmartSuggestions(rawQ, DICTIONARY_WORDS, 9);
   });
 
   // Từ vựng chính đang được chọn hiển thị
@@ -865,13 +873,85 @@
         {/if}
 
       {:else}
-        <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-12 border border-slate-200 dark:border-[#37393B] text-center space-y-3">
-          <MagnifyingGlass weight="duotone" class="w-12 h-12 text-slate-400 mx-auto" />
-          <h3 class="text-lg font-black text-slate-800 dark:text-white">Không tìm thấy từ vựng</h3>
-          <p class="text-sm text-slate-500 dark:text-[#8E918F]">
-            Hãy thử tìm bằng chữ Hán, Pinyin không dấu (ví dụ: nihao, pingguo) hoặc tiếng Việt.
-          </p>
-        </div>
+        {#if smartSuggestions.length > 0}
+          <!-- BẢNG GỢI Ý THÔNG MINH KHI KHÔNG TÌM THẤY TỪ CHÍNH XÁC -->
+          <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-[#37393B] shadow-xs space-y-6 animate-in fade-in duration-200">
+            <div class="flex items-start gap-3.5 pb-4 border-b border-slate-100 dark:border-[#282A2C]">
+              <div class="w-10 h-10 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200/60 dark:border-amber-900/40 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                <Sparkle weight="duotone" class="w-5 h-5" />
+              </div>
+              <div class="space-y-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-2">
+                  <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">
+                    Không tìm thấy từ vựng chính xác cho "{searchQuery.trim()}"
+                  </h3>
+                  <span class="text-[10px] uppercase font-mono font-bold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300">
+                    Đề xuất thông minh
+                  </span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-500 dark:text-[#8E918F]">
+                  Hệ thống phân tích ngữ âm, chữ Hán và ngữ nghĩa tương đồng để gợi ý cho bạn các từ vựng phù hợp nhất:
+                </p>
+              </div>
+            </div>
+
+            <!-- Lưới thẻ từ vựng đề xuất -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              {#each smartSuggestions as sug}
+                <div
+                  role="button"
+                  tabindex="0"
+                  class="p-4 rounded-2xl bg-slate-50/80 dark:bg-[#282A2C]/80 hover:bg-rose-50/50 dark:hover:bg-[#2f3133] border border-slate-200/80 dark:border-[#37393B] hover:border-rose-300 dark:hover:border-rose-900/60 transition-all flex flex-col justify-between gap-3 group text-left cursor-pointer shadow-2xs"
+                  onclick={() => selectWord(sug.word)}
+                  onkeydown={(e) => e.key === 'Enter' && selectWord(sug.word)}
+                >
+                  <div class="space-y-1.5">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="text-2xl font-black text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                          {sug.word.hanzi}
+                        </span>
+                        <span class="text-xs font-bold text-rose-600 dark:text-rose-400">
+                          [{sug.word.pinyin}]
+                        </span>
+                      </div>
+                      <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-white dark:bg-[#1E1F20] border border-slate-200 dark:border-[#37393B] text-slate-600 dark:text-[#C4C7C5]">
+                        HSK {sug.word.hskLevel}
+                      </span>
+                    </div>
+
+                    <p class="text-xs font-semibold text-slate-700 dark:text-[#C4C7C5] line-clamp-2">
+                      {sug.word.vi_meaning_short || sug.word.viet}
+                    </p>
+                  </div>
+
+                  <div class="flex items-center justify-between pt-2 border-t border-slate-200/60 dark:border-[#37393B]">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200/50 dark:border-amber-900/30 truncate max-w-[160px]">
+                      {sug.reason}
+                    </span>
+                    <button
+                      type="button"
+                      onclick={(e) => { e.stopPropagation(); speak(sug.word.hanzi, 0.85); }}
+                      aria-label="Phát âm từ vựng"
+                      class="p-1.5 rounded-xl bg-white dark:bg-[#1E1F20] hover:bg-rose-500 hover:text-white text-slate-500 dark:text-[#8E918F] transition-colors shadow-2xs"
+                      title="Nghe phát âm"
+                    >
+                      <SpeakerHigh weight="bold" class="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              {/each}
+            </div>
+          </div>
+        {:else}
+          <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-12 border border-slate-200 dark:border-[#37393B] text-center space-y-3">
+            <MagnifyingGlass weight="duotone" class="w-12 h-12 text-slate-400 mx-auto" />
+            <h3 class="text-lg font-black text-slate-800 dark:text-white">Không tìm thấy từ vựng</h3>
+            <p class="text-sm text-slate-500 dark:text-[#8E918F]">
+              Hãy thử tìm bằng chữ Hán, Pinyin không dấu (ví dụ: nihao, pingguo) hoặc tiếng Việt.
+            </p>
+          </div>
+        {/if}
       {/if}
 
       <!-- 5. CÁC TỪ VỰNG KHÁC KHỚP VỚI TỪ KHÓA (DẠNG PILL GỌN GÀNG, TIẾT KIỆM KHÔNG GIAN) -->
@@ -901,6 +981,31 @@
                   currentWord?.id === r.id ? 'bg-white/20 text-white' : 'bg-slate-200 dark:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5]'
                 }`}>
                   H{r.hskLevel}
+                </span>
+              </button>
+            {/each}
+          </div>
+        </div>
+      {:else if searchResults.length === 0 && smartSuggestions.length > 0}
+        <div class="bg-white dark:bg-[#1E1F20] rounded-3xl p-4 sm:p-5 border border-slate-200 dark:border-[#37393B] shadow-xs space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#8E918F]">
+              Gợi ý từ vựng liên quan ({smartSuggestions.length})
+            </h4>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-0.5">
+            {#each smartSuggestions as sug}
+              <button
+                onclick={() => selectWord(sug.word)}
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all border shadow-2xs active:scale-95 bg-slate-50 dark:bg-[#282A2C] text-slate-700 dark:text-[#E3E3E3] border-slate-200 dark:border-[#37393B] hover:border-rose-300 dark:hover:border-rose-800"
+                title={`${sug.word.viet} [${sug.word.pinyin}] - ${sug.reason}`}
+              >
+                <span>{sug.word.hanzi}</span>
+                <span class="text-rose-600 dark:text-rose-400 text-[11px]">
+                  [{sug.word.pinyin}]
+                </span>
+                <span class="text-[9px] px-1 py-0.2 rounded-full font-black bg-slate-200 dark:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5]">
+                  H{sug.word.hskLevel}
                 </span>
               </button>
             {/each}

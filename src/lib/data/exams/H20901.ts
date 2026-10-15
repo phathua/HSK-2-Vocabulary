@@ -5,6 +5,7 @@ export const examData: ExamDetail = {
   "title": "Đề thi HSK 2 chính thức H20901 (真题)",
   "total_questions": 60,
   "audio_ogg": "H20901_audio.ogg",
+  "audio_mp3": "H20901_audio.mp3",
   "images_count": 13,
   "questions": [
     {

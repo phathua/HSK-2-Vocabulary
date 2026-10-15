@@ -413,6 +413,11 @@
     fetchSrt(examCode, R2_PUBLIC_BASE_URL).then(data => {
       if (data.length > 0) {
         subtitles = data;
+        const maxSubTime = data[data.length - 1].endTime;
+        if (maxSubTime > 0 && (!Number.isFinite(duration) || duration < maxSubTime)) {
+          duration = maxSubTime;
+          examRoomState.duration = duration;
+        }
       } else {
         // Fallback: extract from questions
         let dummySubtitles: SubtitleItem[] = [
@@ -570,12 +575,35 @@
 
   function handleLoadedMetadata() {
     if (audioElement) {
-      duration = audioElement.duration;
+      const audioDur = audioElement.duration;
+      const maxSubTime = subtitles.length > 0 ? subtitles[subtitles.length - 1].endTime : 0;
+      if (Number.isFinite(audioDur) && audioDur > 0) {
+        duration = maxSubTime > 0 ? Math.max(audioDur, maxSubTime) : audioDur;
+      } else if (maxSubTime > 0) {
+        duration = maxSubTime;
+      }
       examRoomState.duration = duration;
     }
   }
 
   function handleEnded() {
+    const maxSubTime = subtitles.length > 0 ? subtitles[subtitles.length - 1].endTime : 0;
+    // Nếu trình duyệt (đặc biệt là iOS Safari) ngắt sớm bất thường khi bài thi chưa kết thúc
+    if (maxSubTime > 0 && currentTime < maxSubTime - 15) {
+      console.warn(`Audio ended prematurely at ${currentTime}s vs expected ${maxSubTime}s.`);
+      if (!hasFallbackAttempted && audioSources.fallbackUrl && activeAudioSrc !== audioSources.fallbackUrl) {
+        hasFallbackAttempted = true;
+        activeAudioSrc = audioSources.fallbackUrl;
+        if (audioElement) {
+          const resumeTime = currentTime;
+          audioElement.src = audioSources.fallbackUrl;
+          audioElement.load();
+          audioElement.currentTime = resumeTime;
+          audioElement.play().catch(console.warn);
+          return;
+        }
+      }
+    }
     isPlaying = false;
     examRoomState.isPlaying = false;
   }
@@ -843,6 +871,7 @@
       src={activeAudioSrc || audioSources.primaryUrl}
       ontimeupdate={handleTimeUpdate}
       onloadedmetadata={handleLoadedMetadata}
+      ondurationchange={handleLoadedMetadata}
       onseeking={handleSeeking}
       onended={handleEnded}
       onerror={handleAudioError}

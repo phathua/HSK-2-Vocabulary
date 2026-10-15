@@ -755,5 +755,13 @@ export const SINGLE_CHARACTER_VI_MAP: Record<string, { hanViet: string; viet: st
   "感": {
     "hanViet": "CẢM",
     "viet": "cảm thấy, cảm giác, xúc động"
+  },
+  "那": {
+    "hanViet": "NA",
+    "viet": "kia, đó, cái kia"
+  },
+  "些": {
+    "hanViet": "TA / TIÊ",
+    "viet": "vài, một số, một chút"
   }
 };

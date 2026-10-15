@@ -5,13 +5,21 @@ export const R2_PUBLIC_BASE_URL = 'https://pub-23e7b63d639f4a6d822ca9faf60f6a84.
 
 /**
  * Checks whether the current browser can natively decode OGG container audio.
- * Safari / WebKit on iOS strictly returns false, whereas Chrome/Firefox return true.
+ * Safari / WebKit on iOS & macOS strictly returns false to prevent buggy Vorbis duration truncation.
  */
 export function canBrowserPlayOgg(): boolean {
   if (typeof window === 'undefined' || typeof Audio === 'undefined') return false;
+
+  // Apple WebKit (iOS, iPadOS, Safari, macOS Safari) has severe bugs streaming OGG Vorbis,
+  // miscalculating duration (e.g. stopping prematurely at ~18m instead of 26m).
+  // Always enforce MP3 on Apple WebKit.
+  const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
+  const isApple = /iPad|iPhone|iPod|Macintosh/.test(ua) && !/Chrome|CriOS|Android/.test(ua);
+  if (isApple) return false;
+
   try {
     const audio = document.createElement('audio');
-    const canPlay = audio.canPlayType('audio/ogg; codecs="vorbis"') || audio.canPlayType('audio/ogg');
+    const canPlay = audio.canPlayType('audio/ogg; codecs="vorbis"');
     return canPlay === 'probably' || canPlay === 'maybe';
   } catch {
     return false;

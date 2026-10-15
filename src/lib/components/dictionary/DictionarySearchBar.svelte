@@ -84,6 +84,14 @@
     return searchResults.slice(0, 8);
   });
 
+  import { getSmartSuggestions, type SmartSuggestionItem } from '#lib/utils/smartSearch';
+
+  const smartSuggestions = $derived.by(() => {
+    const rawQ = searchQuery.trim();
+    if (!rawQ || searchSuggestions.length > 0) return [];
+    return getSmartSuggestions(rawQ, DICTIONARY_WORDS, 6);
+  });
+
   // Tạo danh sách gợi ý ngẫu nhiên
   function generateRandomSuggestions(count = 9) {
     if (!DICTIONARY_WORDS || DICTIONARY_WORDS.length === 0) return [];
@@ -134,6 +142,8 @@
     if (e.key === 'Enter') {
       if (searchSuggestions.length > 0) {
         handleSelect(searchSuggestions[0]);
+      } else if (smartSuggestions.length > 0) {
+        handleSelect(smartSuggestions[0].word);
       } else if (searchQuery.trim()) {
         isSearchFocused = false;
         goto(`/tu-vung?q=${encodeURIComponent(searchQuery.trim())}`);
@@ -213,40 +223,75 @@
     />
 
     <!-- Dropdown gợi ý kết quả tìm kiếm khi gõ -->
-    {#if isSearchFocused && searchQuery.trim() && searchSuggestions.length > 0}
+    {#if isSearchFocused && searchQuery.trim() && (searchSuggestions.length > 0 || smartSuggestions.length > 0)}
       <div
         class="absolute left-0 right-0 top-full mt-2 bg-white dark:bg-[#1E1F20] rounded-2xl border border-slate-200 dark:border-[#37393B] shadow-xl overflow-hidden z-50 divide-y divide-slate-100 dark:divide-[#282A2C] max-h-72 overflow-y-auto"
       >
-        {#each searchSuggestions as sug}
-          <button
-            type="button"
-            onmousedown={() => handleSelect(sug)}
-            class="w-full px-4 py-2.5 flex items-center justify-between text-left hover:bg-rose-50/70 dark:hover:bg-[#282A2C] transition-colors cursor-pointer group"
-          >
-            <div class="flex items-center gap-3 min-w-0">
-              <span class="text-base font-black text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
-                {sug.hanzi}
-              </span>
-              <span class="text-xs font-bold text-rose-600 dark:text-rose-400">
-                {sug.pinyin}
-              </span>
-              <span class="text-xs text-slate-500 dark:text-[#8E918F] truncate max-w-[200px] sm:max-w-xs">
-                {sug.vi_meaning_short || sug.viet}
-              </span>
-            </div>
-
-            <div class="flex items-center gap-2 shrink-0">
-              {#if sug.hanViet}
-                <span class="text-[10px] font-semibold text-slate-400 dark:text-neutral-500 hidden sm:inline">
-                  [{sug.hanViet}]
+        {#if searchSuggestions.length > 0}
+          {#each searchSuggestions as sug}
+            <button
+              type="button"
+              onmousedown={() => handleSelect(sug)}
+              class="w-full px-4 py-2.5 flex items-center justify-between text-left hover:bg-rose-50/70 dark:hover:bg-[#282A2C] transition-colors cursor-pointer group"
+            >
+              <div class="flex items-center gap-3 min-w-0">
+                <span class="text-base font-black text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                  {sug.hanzi}
                 </span>
-              {/if}
-              <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5]">
-                HSK {sug.hskLevel}
-              </span>
-            </div>
-          </button>
-        {/each}
+                <span class="text-xs font-bold text-rose-600 dark:text-rose-400">
+                  {sug.pinyin}
+                </span>
+                <span class="text-xs text-slate-500 dark:text-[#8E918F] truncate max-w-[200px] sm:max-w-xs">
+                  {sug.vi_meaning_short || sug.viet}
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2 shrink-0">
+                {#if sug.hanViet}
+                  <span class="text-[10px] font-semibold text-slate-400 dark:text-neutral-500 hidden sm:inline">
+                    [{sug.hanViet}]
+                  </span>
+                {/if}
+                <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5]">
+                  HSK {sug.hskLevel}
+                </span>
+              </div>
+            </button>
+          {/each}
+        {:else if smartSuggestions.length > 0}
+          <div class="px-4 py-2 bg-amber-50/60 dark:bg-amber-950/30 text-[11px] font-bold text-amber-700 dark:text-amber-400 flex items-center justify-between">
+            <span>Không có từ khớp chính xác. Gợi ý từ tương tự:</span>
+            <span class="text-[10px] uppercase font-mono px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-900/50">Thông minh</span>
+          </div>
+          {#each smartSuggestions as sug}
+            <button
+              type="button"
+              onmousedown={() => handleSelect(sug.word)}
+              class="w-full px-4 py-2.5 flex items-center justify-between text-left hover:bg-rose-50/70 dark:hover:bg-[#282A2C] transition-colors cursor-pointer group"
+            >
+              <div class="flex items-center gap-3 min-w-0">
+                <span class="text-base font-black text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                  {sug.word.hanzi}
+                </span>
+                <span class="text-xs font-bold text-rose-600 dark:text-rose-400">
+                  {sug.word.pinyin}
+                </span>
+                <span class="text-xs text-slate-500 dark:text-[#8E918F] truncate max-w-[160px] sm:max-w-xs">
+                  {sug.word.vi_meaning_short || sug.word.viet}
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2 shrink-0">
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 border border-rose-200/50 dark:border-rose-900/40">
+                  {sug.reason}
+                </span>
+                <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5]">
+                  HSK {sug.word.hskLevel}
+                </span>
+              </div>
+            </button>
+          {/each}
+        {/if}
       </div>
     {/if}
 
