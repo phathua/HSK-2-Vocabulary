@@ -84,7 +84,7 @@
 
   function handleKeydown(e: KeyboardEvent) {
     if (!isAnswered) return;
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space' || e.key === 'Spacebar') {
       e.preventDefault();
       onNext();
     }
