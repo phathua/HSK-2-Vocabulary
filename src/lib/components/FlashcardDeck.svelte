@@ -715,7 +715,7 @@
         <button
           type="button"
           onclick={() => speakChinese(item.hanzi, appState.volume)}
-          class={`px-3 py-1.5 rounded-xl font-bold text-xs sm:text-sm font-sans transition-all duration-150 border cursor-pointer active:scale-95 flex items-center gap-1.5 ${
+          class={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl font-bold text-xs sm:text-sm font-sans transition-all duration-150 border cursor-pointer active:scale-95 flex items-center gap-1.5 max-w-full ${
             isCurrent
               ? 'bg-blue-600 text-white border-blue-600 shadow-sm ring-2 ring-blue-400/40 font-black scale-105 z-10'
               : isLearned
@@ -724,7 +724,7 @@
               ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 border-rose-300 dark:border-rose-800/60 hover:bg-rose-100 dark:hover:bg-rose-900/50'
               : 'bg-slate-50 dark:bg-[#202124] text-slate-600 dark:text-[#8E918F] border-slate-200 dark:border-[#2C2D2F] hover:bg-slate-100 dark:hover:bg-[#282A2C]'
           }`}
-          title="Nghe phát âm"
+          title={isZhToVi ? 'Nghe phát âm' : item.viet}
         >
           <span class={`w-1.5 h-1.5 rounded-full shrink-0 ${
             isCurrent
@@ -735,7 +735,7 @@
               ? 'bg-rose-500'
               : 'bg-slate-300 dark:bg-[#444746]'
           }`}></span>
-          <span>{item.hanzi}</span>
+          <span class="truncate max-w-[190px]">{isZhToVi ? item.hanzi : item.viet}</span>
         </button>
       {/each}
     </div>
