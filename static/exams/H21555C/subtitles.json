@@ -6,6 +6,7 @@
     "text": "第一部分，一共10个题，每题听两次。",
     "pinyin": "Dì-yī bùfen, yígòng 10 ge tí, měi tí tīng liǎng cì.",
     "viet": "Phần 1, tổng cộng 10 câu, mỗi câu nghe 2 lần.",
+    "speaker": "narrator",
     "words": [
       {
         "word": "第",
@@ -100,6 +101,7 @@
     "text": "现在开始第1题：",
     "pinyin": "Xiànzài kāishǐ dì 1 tí:",
     "viet": "Bây giờ bắt đầu câu 1:",
+    "speaker": "narrator",
     "words": [
       {
         "word": "现",
@@ -152,6 +154,7 @@
     "text": "第二部分，一共10个题，每题听两次。",
     "pinyin": "Dì-èr bùfen, yígòng 10 ge tí, měi tí tīng liǎng cì.",
     "viet": "Phần 2, tổng cộng 10 câu, mỗi câu nghe 2 lần.",
+    "speaker": "narrator",
     "words": [
       {
         "word": "第",
@@ -241,247 +244,42 @@
   },
   {
     "id": 4,
-    "startTime": 349.53,
-    "endTime": 353.67,
-    "text": "第三部分，一共10个题，每题听两次。",
-    "pinyin": "Dì-sān bùfen, yígòng 10 ge tí, měi tí tīng liǎng cì.",
-    "viet": "Phần 3, tổng cộng 10 câu, mỗi câu nghe 2 lần.",
+    "startTime": 217.85,
+    "endTime": 219.41,
+    "text": "问：女的怎么了？",
+    "pinyin": "Wèn: Nǚ de zěnmeyàng le?",
+    "viet": "Hỏi: Người nữ bị làm sao?",
+    "speaker": "question",
     "words": [
       {
-        "word": "第",
-        "pinyin": "dì",
-        "start": 349.53,
-        "end": 349.75
+        "word": "女",
+        "pinyin": "nǚ",
+        "start": 217.85,
+        "end": 218.19
       },
       {
-        "word": "三",
-        "pinyin": "sān",
-        "start": 349.75,
-        "end": 349.95
+        "word": "的",
+        "pinyin": "de",
+        "start": 218.76,
+        "end": 218.94
       },
       {
-        "word": "部",
-        "pinyin": "bù",
-        "start": 349.95,
-        "end": 350.17
+        "word": "怎",
+        "pinyin": "zěn",
+        "start": 218.94,
+        "end": 219.02
       },
       {
-        "word": "分",
-        "pinyin": "fēn",
-        "start": 350.17,
-        "end": 350.41
+        "word": "么",
+        "pinyin": "me",
+        "start": 219.02,
+        "end": 219.12
       },
       {
-        "word": "一",
-        "pinyin": "yī",
-        "start": 351.01,
-        "end": 351.25
-      },
-      {
-        "word": "共",
-        "pinyin": "gòng",
-        "start": 351.25,
-        "end": 351.49
-      },
-      {
-        "word": "十",
-        "pinyin": "shí",
-        "start": 351.51,
-        "end": 351.75
-      },
-      {
-        "word": "个",
-        "pinyin": "gè",
-        "start": 351.77,
-        "end": 351.89
-      },
-      {
-        "word": "题",
-        "pinyin": "tí",
-        "start": 351.89,
-        "end": 352.13
-      },
-      {
-        "word": "每",
-        "pinyin": "měi",
-        "start": 352.55,
-        "end": 352.79
-      },
-      {
-        "word": "题",
-        "pinyin": "tí",
-        "start": 352.85,
-        "end": 353.03
-      },
-      {
-        "word": "听",
-        "pinyin": "tīng",
-        "start": 353.03,
-        "end": 353.21
-      },
-      {
-        "word": "两",
-        "pinyin": "liǎng",
-        "start": 353.21,
-        "end": 353.43
-      },
-      {
-        "word": "次",
-        "pinyin": "cì",
-        "start": 353.43,
-        "end": 353.67
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "startTime": 518.55,
-    "endTime": 522.57,
-    "text": "第四部分，一共5个题，每题听两次。",
-    "pinyin": "Dì-sì bùfen, yígòng 5 ge tí, měi tí tīng liǎng cì.",
-    "viet": "Phần 4, tổng cộng 5 câu, mỗi câu nghe 2 lần.",
-    "words": [
-      {
-        "word": "第",
-        "pinyin": "dì",
-        "start": 518.55,
-        "end": 518.75
-      },
-      {
-        "word": "四",
-        "pinyin": "sì",
-        "start": 518.75,
-        "end": 518.91
-      },
-      {
-        "word": "部",
-        "pinyin": "bù",
-        "start": 518.91,
-        "end": 519.07
-      },
-      {
-        "word": "分",
-        "pinyin": "fēn",
-        "start": 519.07,
-        "end": 519.37
-      },
-      {
-        "word": "一",
-        "pinyin": "yī",
-        "start": 520.05,
-        "end": 520.23
-      },
-      {
-        "word": "共",
-        "pinyin": "gòng",
-        "start": 520.23,
-        "end": 520.37
-      },
-      {
-        "word": "五",
-        "pinyin": "wǔ",
-        "start": 520.37,
-        "end": 520.57
-      },
-      {
-        "word": "个",
-        "pinyin": "gè",
-        "start": 520.57,
-        "end": 520.73
-      },
-      {
-        "word": "题",
-        "pinyin": "tí",
-        "start": 520.73,
-        "end": 521.09
-      },
-      {
-        "word": "每",
-        "pinyin": "měi",
-        "start": 521.52,
-        "end": 521.68
-      },
-      {
-        "word": "题",
-        "pinyin": "tí",
-        "start": 521.68,
-        "end": 521.92
-      },
-      {
-        "word": "听",
-        "pinyin": "tīng",
-        "start": 521.92,
-        "end": 522.06
-      },
-      {
-        "word": "两",
-        "pinyin": "liǎng",
-        "start": 522.06,
-        "end": 522.24
-      },
-      {
-        "word": "次",
-        "pinyin": "cì",
-        "start": 522.24,
-        "end": 522.57
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "startTime": 606.05,
-    "endTime": 607.7,
-    "text": "听力考试现在结束。",
-    "pinyin": "Tīnglì kǎoshì xiànzài jiéshù.",
-    "viet": "Bài thi nghe đến đây là kết thúc.",
-    "words": [
-      {
-        "word": "听",
-        "pinyin": "tīng",
-        "start": 606.05,
-        "end": 606.23
-      },
-      {
-        "word": "力",
-        "pinyin": "lì",
-        "start": 606.23,
-        "end": 606.41
-      },
-      {
-        "word": "考",
-        "pinyin": "kǎo",
-        "start": 606.41,
-        "end": 606.57
-      },
-      {
-        "word": "试",
-        "pinyin": "shì",
-        "start": 606.57,
-        "end": 606.81
-      },
-      {
-        "word": "现",
-        "pinyin": "xiàn",
-        "start": 606.93,
-        "end": 607.09
-      },
-      {
-        "word": "在",
-        "pinyin": "zài",
-        "start": 607.09,
-        "end": 607.21
-      },
-      {
-        "word": "结",
-        "pinyin": "jié",
-        "start": 607.21,
-        "end": 607.37
-      },
-      {
-        "word": "束",
-        "pinyin": "shù",
-        "start": 607.37,
-        "end": 607.7
+        "word": "了",
+        "pinyin": "le",
+        "start": 219.12,
+        "end": 219.41
       }
     ]
   }

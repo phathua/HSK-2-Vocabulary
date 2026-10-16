@@ -981,7 +981,7 @@ export const examData: ExamDetail = {
       "question_no": 48,
       "image": null,
       "type": "True/False",
-      "text": "中国人的名字是姓在前名在后，很多人的姓都是一个字，但也有两个字的。\n★ 中国人的姓 spontaneous/都是一个字的。",
+      "text": "中国人的名字是姓在前名在后，很多人的姓都是一个字，但也有两个字的。\n★ 中国人的姓都是一个字的。",
       "answer": "×",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21330/images/H21330_img_48.webp",
@@ -989,7 +989,7 @@ export const examData: ExamDetail = {
       "explanation": "Đoạn văn ghi 'yě yǒu liǎnggè zì de' (cũng có họ 2 chữ - họ kép), mâu thuẫn với từ khẳng định tuyệt đối 'dōu shì yígè zì de' (đều là 1 chữ) nên phán đoán là Sai (✕).",
       "listening_pinyin": null,
       "pinyin": "Zhōngguórén de míngzi shì xìng zài qián míng zài hòu, hěn duō rén de xìng dōu shì yī ge zì, dàn yě yǒu liǎng ge zì de.\n★ Zhōngguórén de xìng dōu shì yī ge zì de.",
-      "statement_pinyin": "zhōngguó rén de xìng   spontaneous / dōu shì yígè zì de.",
+      "statement_pinyin": "zhōngguó rén de xìng dōu shì yígè zì de.",
       "options": [
         "√ Đúng",
         "× Sai"

@@ -788,42 +788,25 @@
               <span>Đang phát nhạc dạo đầu bài thi HSK 2...</span>
             </div>
           {:else}
-            <!-- Speaker tag if dialogue -->
-            {#if activeSubtitle.speaker && activeSubtitle.speaker !== 'narrator'}
-              <div class="flex items-center gap-1.5 justify-center sm:justify-start px-0.5">
-                {#if activeSubtitle.speaker === 'female'}
-                  <span class="inline-flex items-center text-[10px] font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
-                    Nữ
-                  </span>
-                {:else if activeSubtitle.speaker === 'male'}
-                  <span class="inline-flex items-center text-[10px] font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">
-                    Nam
-                  </span>
-                {:else if activeSubtitle.speaker === 'question'}
-                  <span class="inline-flex items-center text-[10px] font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
-                    Hỏi
-                  </span>
-                {/if}
-              </div>
-            {/if}
-
             <div class="flex flex-wrap items-end gap-x-1 sm:gap-x-1.5 gap-y-1 sm:gap-y-1.5 justify-center sm:justify-start px-0.5 py-0.5">
               {#if currentWords.length > 0}
                 {#each currentWords as w}
                   {@const isWordActive = currentTime >= w.start && currentTime <= w.end}
+                  {@const isMale = activeSubtitle.speaker === 'male'}
+                  {@const isFemale = activeSubtitle.speaker === 'female'}
                   <div
-                    class="inline-flex flex-col items-center justify-end transition-all duration-150 rounded-lg px-1 py-0.5 sm:px-1.5 {isWordActive ? 'bg-orange-100 dark:bg-orange-950/80 ring-2 ring-orange-500/40 scale-105 shadow-xs' : 'bg-transparent'}"
+                    class="inline-flex flex-col items-center justify-end transition-all duration-150 rounded-lg px-1 py-0.5 sm:px-1.5 {isWordActive ? (isMale ? 'bg-sky-100 dark:bg-sky-950/80 ring-2 ring-sky-500/40 scale-105 shadow-xs' : isFemale ? 'bg-rose-100 dark:bg-rose-950/80 ring-2 ring-rose-500/40 scale-105 shadow-xs' : 'bg-orange-100 dark:bg-orange-950/80 ring-2 ring-orange-500/40 scale-105 shadow-xs') : 'bg-transparent'}"
                   >
                     <!-- Chữ Hán ở trên -->
                     <span
-                      class="text-sm sm:text-base md:text-lg font-serif font-bold transition-colors leading-tight {isWordActive ? 'text-orange-600 dark:text-orange-400 font-extrabold' : 'text-slate-800 dark:text-slate-100'}"
+                      class="text-sm sm:text-base md:text-lg font-serif font-bold transition-colors leading-tight {isWordActive ? (isMale ? 'text-sky-600 dark:text-sky-400 font-extrabold' : isFemale ? 'text-rose-600 dark:text-rose-400 font-extrabold' : 'text-orange-600 dark:text-orange-400 font-extrabold') : 'text-slate-800 dark:text-slate-100'}"
                     >
                       {w.word}
                     </span>
                     <!-- Pinyin ở chân -->
                     {#if w.pinyin}
                       <span
-                        class="text-[9px] sm:text-[10px] md:text-xs font-mono transition-colors leading-none {isWordActive ? 'text-amber-700 dark:text-amber-300 font-bold' : 'text-slate-400 dark:text-neutral-400'}"
+                        class="text-[9px] sm:text-[10px] md:text-xs font-mono transition-colors leading-none {isWordActive ? (isMale ? 'text-sky-700 dark:text-sky-300 font-bold' : isFemale ? 'text-rose-700 dark:text-rose-300 font-bold' : 'text-amber-700 dark:text-amber-300 font-bold') : 'text-slate-400 dark:text-neutral-400'}"
                       >
                         {w.pinyin}
                       </span>
@@ -832,12 +815,14 @@
                 {/each}
               {:else}
                 <!-- Fallback hiển thị cả cụm nếu chưa bóc tách word lẻ -->
+                {@const isMale = activeSubtitle.speaker === 'male'}
+                {@const isFemale = activeSubtitle.speaker === 'female'}
                 <div class="flex flex-col items-center sm:items-start">
-                  <span class="text-sm sm:text-base md:text-lg font-serif font-bold text-orange-600 dark:text-orange-400">
+                  <span class="text-sm sm:text-base md:text-lg font-serif font-bold {isMale ? 'text-sky-600 dark:text-sky-400' : isFemale ? 'text-rose-600 dark:text-rose-400' : 'text-orange-600 dark:text-orange-400'}">
                     {activeSubtitle.text}
                   </span>
                   {#if activeSubtitle.pinyin}
-                    <span class="text-[10px] sm:text-xs font-mono text-amber-600 dark:text-amber-400 mt-0.5">
+                    <span class="text-[10px] sm:text-xs font-mono {isMale ? 'text-sky-600 dark:text-sky-400' : isFemale ? 'text-rose-600 dark:text-rose-400' : 'text-amber-600 dark:text-amber-400'} mt-0.5">
                       {activeSubtitle.pinyin}
                     </span>
                   {/if}
