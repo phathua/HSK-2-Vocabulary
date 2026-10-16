@@ -5,6 +5,8 @@
   import Cards from 'phosphor-svelte/lib/Cards';
   import Microphone from 'phosphor-svelte/lib/Microphone';
   import ArrowClockwise from 'phosphor-svelte/lib/ArrowClockwise';
+  import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';
+  import { savedSessionState } from '#lib/state/savedSessionState.svelte';
 
   import { tourState } from '#lib/state/tourState.svelte';
 
@@ -129,6 +131,17 @@
           {/each}
         {/if}
       </div>
+
+      <!-- Nút Lưu tiến độ nhanh trên thanh tiến độ -->
+      <button
+        type="button"
+        onclick={() => savedSessionState.openSaveModal()}
+        class="w-5 h-5 rounded-md flex items-center justify-center text-blue-500 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/40 transition-colors cursor-pointer shrink-0 active:scale-90"
+        title="Lưu tiến độ làm bài hiện tại"
+        aria-label="Lưu tiến độ"
+      >
+        <BookmarkSimple weight="fill" class="w-3.5 h-3.5" />
+      </button>
 
       <!-- Nút Rotate bên phải ngoài cùng của thanh tiến độ -->
       <button
