@@ -80,11 +80,66 @@
     }
   }
 
-  function handleKeyDown(e: KeyboardEvent) {
+  function handleInputKeyDown(e: KeyboardEvent) {
     if (e.key === 'Enter') {
-      appState.checkFillAnswer();
+      if (!appState.fillAnswered) {
+        e.preventDefault();
+        e.stopPropagation();
+        appState.checkFillAnswer();
+      } else {
+        e.preventDefault();
+        e.stopPropagation();
+        appState.nextFillItem();
+      }
+    } else if ((e.key === ' ' || e.code === 'Space' || e.key === 'Spacebar') && appState.fillAnswered) {
+      e.preventDefault();
+      e.stopPropagation();
+      appState.nextFillItem();
     }
   }
+
+  function handleWindowKeyDown(e: KeyboardEvent) {
+    if (
+      appState.filterModalOpen ||
+      appState.settingsModalOpen ||
+      appState.updateModalOpen ||
+      appState.spotlightOpen
+    ) {
+      return;
+    }
+
+    const activeEl = typeof document !== 'undefined' ? document.activeElement : null;
+    if (
+      activeEl instanceof HTMLInputElement &&
+      activeEl !== desktopInputEl &&
+      activeEl !== mobileInputEl
+    ) {
+      return;
+    }
+    if (activeEl instanceof HTMLTextAreaElement) {
+      return;
+    }
+
+    if (appState.fillAnswered && appState.currentFillItem && !showFeedbackDrawer) {
+      if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space' || e.key === 'Spacebar') {
+        e.preventDefault();
+        appState.nextFillItem();
+      }
+    }
+  }
+
+  // Tự động focus ô nhập trên Desktop khi chuyển sang câu hỏi mới
+  $effect(() => {
+    const curId = appState.currentFillItem?.id;
+    const answered = appState.fillAnswered;
+    if (curId && !answered && !isTileMode) {
+      if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+        requestAnimationFrame(() => {
+          desktopInputEl?.focus();
+        });
+      }
+    }
+  });
 
   const isZhToVi = $derived(appState.direction === 'zh_to_vi');
   // Chế độ Chọn từ khả dụng khi học xuôi (gõ/chọn Pinyin)
@@ -196,6 +251,8 @@
     appState.unselectSlot(cIdx, slotId);
   }
 </script>
+
+<svelte:window onkeydown={handleWindowKeyDown} />
 
 <!-- Flying Letter Overlay: Bay mượt mà giữa các ô -->
 {#if flyingLetter}
@@ -473,7 +530,7 @@
                 type="text"
                 value={appState.fillInput}
                 oninput={handleInputChange}
-                onkeydown={handleKeyDown}
+                onkeydown={handleInputKeyDown}
                 disabled={appState.fillAnswered}
                 placeholder={!isZhToVi ? "Gõ Pinyin (vd: ni3hao3)..." : "Gõ nghĩa tiếng Việt..."}
                 class="min-w-0 flex-1 h-12 bg-white dark:bg-[#282A2C] border-2 border-slate-200 dark:border-[#37393B] focus:border-blue-500 dark:focus:border-blue-400 rounded-2xl px-4 text-base font-bold text-slate-900 dark:text-[#E3E3E3] outline-none shadow-2xs transition-colors"
@@ -606,7 +663,7 @@
             type="text"
             value={appState.fillInput}
             oninput={handleInputChange}
-            onkeydown={handleKeyDown}
+            onkeydown={handleInputKeyDown}
             disabled={appState.fillAnswered}
             placeholder={!isZhToVi ? "Gõ Pinyin (vd: ni3hao3)..." : "Gõ nghĩa tiếng Việt..."}
             class="min-w-0 flex-1 h-11 sm:h-12 bg-white dark:bg-[#282A2C] border-2 border-slate-200 dark:border-[#37393B] focus:border-blue-500 dark:focus:border-blue-400 rounded-2xl px-3 sm:px-4 text-sm sm:text-base font-bold text-slate-900 dark:text-[#E3E3E3] outline-none shadow-2xs transition-colors"
@@ -669,6 +726,9 @@
             class="w-full h-11 sm:h-12 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-black text-sm rounded-2xl shadow-2xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
           >
             <span>Tiếp tục từ sau</span>
+            <span class="hidden sm:inline-flex items-center text-[10px] font-bold opacity-80 bg-blue-700/60 px-1.5 py-0.5 rounded-md ml-1">
+              Enter / Space
+            </span>
             <ArrowRight weight="bold" class="w-4 h-4" />
           </button>
         {/if}
