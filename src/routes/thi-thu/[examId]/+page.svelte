@@ -7,6 +7,8 @@
   import ExamAudioPlayer from '#lib/components/exam/ExamAudioPlayer.svelte';
   import ExamQuestionCard from '#lib/components/exam/ExamQuestionCard.svelte';
   import ExamQuickQuizCard from '#lib/components/exam/ExamQuickQuizCard.svelte';
+  import ExamExampleCard from '#lib/components/exam/ExamExampleCard.svelte';
+  import { EXAM_EXAMPLES } from '#lib/data/examExamples';
   import ExamPalette from '#lib/components/exam/ExamPalette.svelte';
   import ExamResultModal from '#lib/components/exam/ExamResultModal.svelte';
   import ConfirmModal from '#lib/components/ConfirmModal.svelte';
@@ -495,6 +497,14 @@
             </div>
 
             {#each listeningQuestions as q (q.question_no)}
+              {#if mode === 'exam' && EXAM_EXAMPLES[q.question_no]}
+                <ExamExampleCard
+                  example={EXAM_EXAMPLES[q.question_no]}
+                  examCode={exam?.code || ''}
+                  boardImage={q.question_no === 11 ? q.board_image : null}
+                />
+              {/if}
+
               <ExamQuestionCard
                 question={q}
                 selectedAnswer={answers[q.question_no]}
@@ -504,7 +514,7 @@
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
                 isExamSubmitted={isSubmitted}
-                showBoardImage={q.question_no === 11 || q.question_no === 16}
+                showBoardImage={q.question_no === 11 ? false : q.question_no === 16}
                 onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
                 onToggleFlag={() => handleToggleFlag(q.question_no)}
                 onCheckPractice={() => handleCheckPractice(q.question_no)}
@@ -524,6 +534,14 @@
             </div>
 
             {#each readingQuestions as q (q.question_no)}
+              {#if mode === 'exam' && EXAM_EXAMPLES[q.question_no]}
+                <ExamExampleCard
+                  example={EXAM_EXAMPLES[q.question_no]}
+                  examCode={exam?.code || ''}
+                  boardImage={q.question_no === 36 ? q.board_image : null}
+                />
+              {/if}
+
               <ExamQuestionCard
                 question={q}
                 selectedAnswer={answers[q.question_no]}
@@ -533,7 +551,7 @@
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
                 isExamSubmitted={isSubmitted}
-                showBoardImage={q.question_no === 36}
+                showBoardImage={false}
                 onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
                 onToggleFlag={() => handleToggleFlag(q.question_no)}
                 onCheckPractice={() => handleCheckPractice(q.question_no)}

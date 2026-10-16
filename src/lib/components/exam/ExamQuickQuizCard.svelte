@@ -6,8 +6,10 @@
   import XCircle from 'phosphor-svelte/lib/XCircle';
   import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
   import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
-  import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';
+  import PushPin from 'phosphor-svelte/lib/PushPin';
+  import PushPinSlash from 'phosphor-svelte/lib/PushPinSlash';
   import SpeakerHigh from 'phosphor-svelte/lib/SpeakerHigh';
+  import Stop from 'phosphor-svelte/lib/Stop';
 
   import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import Trophy from 'phosphor-svelte/lib/Trophy';
@@ -23,6 +25,7 @@
   import { getExamImageUrl } from '#lib/utils/examAssets';
   import { parseOptionItem } from '#lib/utils/examOptionParser';
   import { speakChinese, stopSpeech, getQuestionChineseSpeechText } from '#lib/utils/speech';
+  import { getGroupExampleAnswer } from '#lib/data/examExamples';
   import InteractiveChineseText from './InteractiveChineseText.svelte';
   import InteractivePinyinText from './InteractivePinyinText.svelte';
 
@@ -91,6 +94,12 @@
       }
     }
     return false;
+  }
+
+  const exampleAnswerForThisGroup = $derived(getGroupExampleAnswer(question.exam_code, question.question_no));
+
+  function isExampleOption(optVal: string): boolean {
+    return exampleAnswerForThisGroup !== null && exampleAnswerForThisGroup === optVal;
   }
 
   let isImageZoomed = $state(false);
@@ -425,26 +434,36 @@
           <button
             type="button"
             onclick={handleToggleSpeech}
-            class="w-8 h-8 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white flex items-center justify-center shadow-2xs transition-all cursor-pointer {isSpeaking ? 'ring-2 ring-emerald-400 ring-offset-1 ring-offset-white dark:ring-offset-[#1B1B1B] animate-pulse' : ''}"
+            class="w-8 h-8 rounded-xl {isSpeaking ? 'bg-amber-600 hover:bg-amber-700 ring-2 ring-amber-400 ring-offset-1 ring-offset-white dark:ring-offset-[#1B1B1B]' : 'bg-emerald-500 hover:bg-emerald-600'} active:scale-95 text-white flex items-center justify-center shadow-2xs transition-all cursor-pointer"
             title={isSpeaking ? 'Dừng đọc' : 'Phát âm câu hỏi tiếng Trung'}
-            aria-label="Phát âm câu hỏi tiếng Trung"
+            aria-label={isSpeaking ? 'Dừng đọc' : 'Phát âm câu hỏi tiếng Trung'}
           >
-            <SpeakerHigh weight="bold" class="w-4 h-4" />
+            {#if isSpeaking}
+              <Stop weight="fill" class="w-4 h-4 text-white animate-pulse" />
+            {:else}
+              <SpeakerHigh weight="bold" class="w-4 h-4" />
+            {/if}
           </button>
         {/if}
 
-        <!-- Nút Cắm cờ -->
+        <!-- Nút Cắm cờ / Ghim câu hỏi -->
         <button
           type="button"
           onclick={onToggleFlag}
-          class="h-8 w-8 rounded-xl flex items-center justify-center shadow-2xs active:scale-95 transition-all cursor-pointer border {
+          class="h-8 px-2.5 rounded-xl flex items-center gap-1 shadow-2xs active:scale-95 transition-all cursor-pointer border {
             isFlagged
-              ? 'bg-amber-100 dark:bg-amber-950/70 border-amber-300 dark:border-amber-800 text-amber-600'
-              : 'bg-slate-50 dark:bg-[#282A2C] border-slate-200 dark:border-[#37393B] text-slate-400 hover:text-slate-600'
+              ? 'bg-amber-100 dark:bg-amber-950/70 border-amber-300 dark:border-amber-800 text-amber-700 dark:text-amber-300'
+              : 'bg-slate-50 dark:bg-[#282A2C] border-slate-200 dark:border-[#37393B] text-slate-500 dark:text-neutral-400 hover:text-slate-700'
           }"
-          title="Ghim câu này để xem lại"
+          title={isFlagged ? 'Bỏ ghim câu hỏi này' : 'Ghim câu hỏi để xem lại'}
         >
-          <BookmarkSimple weight={isFlagged ? 'fill' : 'bold'} class="w-4 h-4" />
+          {#if isFlagged}
+            <PushPinSlash weight="bold" class="w-4 h-4 text-amber-600 dark:text-amber-400" />
+            <span class="text-xs font-bold hidden sm:inline">Bỏ ghim</span>
+          {:else}
+            <PushPin weight="bold" class="w-4 h-4" />
+            <span class="text-xs font-bold hidden sm:inline">Ghim</span>
+          {/if}
         </button>
       </div>
     </div>
@@ -542,18 +561,24 @@
         <!-- Lựa chọn đáp án: Nằm ngay DƯỚI đề bài / đoạn văn -->
         <div class="w-full grid {stackedGridClass} mx-auto">
           {#each optionChoices as opt (opt.value)}
-            {@const isSelected = selectedAnswer === opt.value}
+            {@const isExample = isExampleOption(opt.value)}
+            {@const isSelected = !isExample && selectedAnswer === opt.value}
             {@const isTarget = opt.value === question.answer}
             {@const isRevealed = isAnswered}
-            {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
+            {@const isUsedElsewhere = !isRevealed && !isSelected && !isExample && isOptionUsedInGroup(opt.value)}
 
             <button
               type="button"
-              onclick={() => onSelectAnswer(opt.value)}
-              class={`min-h-[48px] ${isPureLetters ? 'h-11 sm:h-12' : isShortOptions ? 'p-2 sm:p-2.5' : 'p-3'} rounded-2xl flex items-center ${isTrueFalse || isReadingTrueFalse || isPureLetters ? 'justify-center gap-2' : isShortOptions ? 'justify-center gap-2' : 'gap-3'} transition-all cursor-pointer border select-none ${
-                isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
-              }${
-                !isRevealed
+              disabled={isExample}
+              onclick={() => !isExample && onSelectAnswer(opt.value)}
+              class={`min-h-[48px] ${isPureLetters ? 'h-11 sm:h-12' : isShortOptions ? 'p-2 sm:p-2.5' : 'p-3'} rounded-2xl flex items-center ${isTrueFalse || isReadingTrueFalse || isPureLetters ? 'justify-center gap-2' : isShortOptions ? 'justify-center gap-2' : 'gap-3'} transition-all border select-none ${
+                isExample
+                  ? 'opacity-35 cursor-not-allowed pointer-events-none border-dashed bg-slate-100/50 dark:bg-neutral-800/30 text-slate-400 dark:text-neutral-500'
+                  : isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity cursor-pointer' : 'cursor-pointer'
+              } ${
+                isExample
+                  ? ''
+                  : !isRevealed
                   ? 'bg-white dark:bg-[#1E1E1E] hover:border-orange-400/70 hover:bg-orange-50/20 dark:hover:bg-neutral-800 border-slate-200/90 dark:border-neutral-800 active:scale-98 shadow-2xs text-slate-800 dark:text-slate-200'
                   : isTarget
                   ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-950 dark:text-emerald-100 shadow-xs ring-1 ring-emerald-500/30'
@@ -564,7 +589,9 @@
             >
               <div
                 class={`w-7 h-7 rounded-xl flex items-center justify-center shrink-0 font-bold text-xs border transition-colors ${
-                  !isRevealed
+                  isExample
+                    ? 'bg-slate-200/70 dark:bg-[#282A2C] text-slate-400 dark:text-neutral-500 line-through border-slate-200 dark:border-[#37393B]'
+                    : !isRevealed
                     ? 'bg-slate-100 dark:bg-[#282A2C] text-slate-700 dark:text-[#C4C7C5] border-slate-200 dark:border-[#37393B]'
                     : isTarget
                     ? 'bg-emerald-500 text-white border-emerald-600'
@@ -816,18 +843,24 @@
             <!-- Bảng 6 ô chữ cái A - F thuần túy, sạch sẽ, không có chữ thừa bên trong -->
             <div class="w-full grid grid-cols-3 sm:grid-cols-6 gap-2.5">
               {#each optionChoices as opt (opt.value)}
-                {@const isSelected = selectedAnswer === opt.value}
+                {@const isExample = isExampleOption(opt.value)}
+                {@const isSelected = !isExample && selectedAnswer === opt.value}
                 {@const isTarget = opt.value === question.answer}
                 {@const isRevealed = isAnswered}
-                {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
+                {@const isUsedElsewhere = !isRevealed && !isSelected && !isExample && isOptionUsedInGroup(opt.value)}
 
                 <button
                   type="button"
-                  onclick={() => onSelectAnswer(opt.value)}
-                  class={`h-12 sm:h-14 rounded-2xl text-base sm:text-lg font-black flex items-center justify-center transition-all cursor-pointer border select-none ${
-                    isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
-                  }${
-                    !isRevealed
+                  disabled={isExample}
+                  onclick={() => !isExample && onSelectAnswer(opt.value)}
+                  class={`h-12 sm:h-14 rounded-2xl text-base sm:text-lg font-black flex flex-col items-center justify-center transition-all border select-none ${
+                    isExample
+                      ? 'opacity-35 cursor-not-allowed pointer-events-none border-dashed bg-slate-100/50 dark:bg-neutral-800/30 text-slate-400 dark:text-neutral-500'
+                      : isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity cursor-pointer' : 'cursor-pointer'
+                  } ${
+                    isExample
+                      ? ''
+                      : !isRevealed
                       ? 'bg-white dark:bg-[#1E1E1E] hover:border-orange-400/70 hover:bg-orange-50/20 dark:hover:bg-neutral-800 border-slate-200/90 dark:border-neutral-800 active:scale-95 shadow-2xs text-slate-800 dark:text-slate-200'
                       : isTarget
                       ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs ring-2 ring-emerald-500/30'
@@ -836,7 +869,10 @@
                       : 'bg-slate-50 dark:bg-[#282A2C]/40 border-slate-200/80 dark:border-[#282A2C] opacity-40 text-slate-400'
                   }`}
                 >
-                  <span>{opt.value}</span>
+                  <span class={isExample ? 'line-through leading-none' : ''}>{opt.value}</span>
+                  {#if isExample}
+                    <span class="text-[9px] font-semibold text-slate-400 dark:text-neutral-500 leading-none mt-0.5">Ví dụ</span>
+                  {/if}
                 </button>
               {/each}
             </div>
@@ -844,18 +880,24 @@
             <!-- Option Grid Desktop: 2 cột rộng rãi, Pinyin trên Hán tự dưới, thoáng đãng không ép chữ -->
             <div class="w-full grid {isTrueFalse ? 'grid-cols-2' : 'grid-cols-2'} gap-2 sm:gap-2.5">
               {#each optionChoices as opt, idx (opt.value)}
-                {@const isSelected = selectedAnswer === opt.value}
+                {@const isExample = isExampleOption(opt.value)}
+                {@const isSelected = !isExample && selectedAnswer === opt.value}
                 {@const isTarget = opt.value === question.answer}
                 {@const isRevealed = isAnswered}
-                {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
+                {@const isUsedElsewhere = !isRevealed && !isSelected && !isExample && isOptionUsedInGroup(opt.value)}
 
                 <button
                   type="button"
-                  onclick={() => onSelectAnswer(opt.value)}
-                  class={`min-h-[48px] p-2 sm:p-2.5 rounded-2xl text-left flex items-center ${opt.label === opt.value ? 'justify-center' : 'gap-2.5'} transition-all cursor-pointer border relative select-none ${
-                    isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
-                  }${
-                    !isRevealed
+                  disabled={isExample}
+                  onclick={() => !isExample && onSelectAnswer(opt.value)}
+                  class={`min-h-[48px] p-2 sm:p-2.5 rounded-2xl text-left flex items-center ${opt.label === opt.value ? 'justify-center' : 'gap-2.5'} transition-all border relative select-none ${
+                    isExample
+                      ? 'opacity-35 cursor-not-allowed pointer-events-none border-dashed bg-slate-100/50 dark:bg-neutral-800/30 text-slate-400 dark:text-neutral-500'
+                      : isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity cursor-pointer' : 'cursor-pointer'
+                  } ${
+                    isExample
+                      ? ''
+                      : !isRevealed
                       ? 'bg-white dark:bg-[#1E1E1E] hover:border-orange-400/70 hover:bg-orange-50/20 dark:hover:bg-neutral-800 border-slate-200/90 dark:border-neutral-800 active:scale-98 shadow-2xs text-slate-800 dark:text-slate-200'
                       : isTarget
                       ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-950 dark:text-emerald-100 shadow-xs ring-1 ring-emerald-500/30'
@@ -866,7 +908,9 @@
                 >
                   <div
                     class={`w-7 h-7 rounded-xl flex items-center justify-center shrink-0 font-bold text-xs border transition-colors ${
-                      !isRevealed
+                      isExample
+                        ? 'bg-slate-200/70 dark:bg-[#282A2C] text-slate-400 dark:text-neutral-500 line-through border-slate-200 dark:border-[#37393B]'
+                        : !isRevealed
                         ? 'bg-slate-100 dark:bg-[#282A2C] text-slate-700 dark:text-[#C4C7C5] border-slate-200 dark:border-[#37393B]'
                         : isTarget
                         ? 'bg-emerald-500 text-white border-emerald-600'
@@ -884,7 +928,9 @@
                     {/if}
                   </div>
 
-                  {#if opt.label !== opt.value}
+                  {#if isExample}
+                    <span class="text-xs font-semibold text-slate-400 dark:text-neutral-500">Ví dụ</span>
+                  {:else if opt.label !== opt.value}
                     <div class="flex-1 min-w-0 flex flex-col items-start leading-snug py-0.5 select-text">
                       {#if opt.pinyin}
                         <span class="text-xs text-slate-400 dark:text-neutral-400 font-sans tracking-wide leading-tight break-words text-left mb-0.5">
@@ -941,18 +987,24 @@
       <!-- Grid 6 ô chữ cái A - F gọn gàng trên 1 hàng ở Mobile -->
       <div class="grid grid-cols-6 gap-1.5 sm:gap-2">
         {#each optionChoices as opt (opt.value)}
-          {@const isSelected = selectedAnswer === opt.value}
+          {@const isExample = isExampleOption(opt.value)}
+          {@const isSelected = !isExample && selectedAnswer === opt.value}
           {@const isTarget = opt.value === question.answer}
           {@const isRevealed = isAnswered}
-          {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
+          {@const isUsedElsewhere = !isRevealed && !isSelected && !isExample && isOptionUsedInGroup(opt.value)}
 
           <button
             type="button"
-            onclick={() => onSelectAnswer(opt.value)}
-            class={`h-11 sm:h-12 rounded-2xl text-base font-black flex items-center justify-center transition-all cursor-pointer border select-none ${
-              isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
-            }${
-              !isRevealed
+            disabled={isExample}
+            onclick={() => !isExample && onSelectAnswer(opt.value)}
+            class={`h-11 sm:h-12 rounded-2xl text-base font-black flex flex-col items-center justify-center transition-all border select-none ${
+              isExample
+                ? 'opacity-35 cursor-not-allowed pointer-events-none border-dashed bg-slate-100/50 dark:bg-neutral-800/30 text-slate-400 dark:text-neutral-500'
+                : isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity cursor-pointer' : 'cursor-pointer'
+            } ${
+              isExample
+                ? ''
+                : !isRevealed
                 ? 'bg-white dark:bg-[#1E1E1E] hover:bg-slate-50 dark:hover:bg-[#282A2C] border-slate-200 dark:border-[#282A2C] active:scale-95 shadow-2xs text-slate-800 dark:text-slate-200'
                 : isTarget
                 ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs ring-2 ring-emerald-500/30'
@@ -961,7 +1013,10 @@
                 : 'bg-slate-50 dark:bg-[#282A2C]/40 border-slate-200/80 dark:border-[#282A2C] opacity-40 text-slate-400'
             }`}
           >
-            <span>{opt.value}</span>
+            <span class={isExample ? 'line-through leading-none' : ''}>{opt.value}</span>
+            {#if isExample}
+              <span class="text-[8px] font-semibold text-slate-400 dark:text-neutral-500 leading-none mt-0.5">Ví dụ</span>
+            {/if}
           </button>
         {/each}
       </div>
@@ -969,18 +1024,24 @@
       <!-- Options Grid/List Mobile: Tự động dạng danh sách 1 cột thông thoáng khi có câu dài -->
       <div class={isFullListView ? 'flex flex-col gap-2 max-h-[44vh] overflow-y-auto pr-0.5 scrollbar-thin' : 'grid grid-cols-2 gap-2'}>
         {#each optionChoices as opt, idx (opt.value)}
-          {@const isSelected = selectedAnswer === opt.value}
+          {@const isExample = isExampleOption(opt.value)}
+          {@const isSelected = !isExample && selectedAnswer === opt.value}
           {@const isTarget = opt.value === question.answer}
           {@const isRevealed = isAnswered}
-          {@const isUsedElsewhere = !isRevealed && !isSelected && isOptionUsedInGroup(opt.value)}
+          {@const isUsedElsewhere = !isRevealed && !isSelected && !isExample && isOptionUsedInGroup(opt.value)}
 
           <button
             type="button"
-            onclick={() => onSelectAnswer(opt.value)}
-            class={`min-h-[48px] ${isFullListView ? 'p-2.5 sm:p-3' : 'p-2'} rounded-2xl font-bold text-left flex items-center ${opt.label === opt.value ? 'justify-center' : 'gap-2.5'} transition-all cursor-pointer border relative select-none ${
-              isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity ' : ''
-            }${
-              !isRevealed
+            disabled={isExample}
+            onclick={() => !isExample && onSelectAnswer(opt.value)}
+            class={`min-h-[48px] ${isFullListView ? 'p-2.5 sm:p-3' : 'p-2'} rounded-2xl font-bold text-left flex items-center ${opt.label === opt.value ? 'justify-center' : 'gap-2.5'} transition-all border relative select-none ${
+              isExample
+                ? 'opacity-35 cursor-not-allowed pointer-events-none border-dashed bg-slate-100/50 dark:bg-neutral-800/30 text-slate-400 dark:text-neutral-500'
+                : isUsedElsewhere ? 'opacity-45 border-dashed hover:opacity-100 transition-opacity cursor-pointer' : 'cursor-pointer'
+            } ${
+              isExample
+                ? ''
+                : !isRevealed
                 ? 'bg-white dark:bg-[#1E1E1E] hover:bg-slate-50 dark:hover:bg-[#282A2C] border-slate-200 dark:border-[#282A2C] active:scale-98 shadow-2xs text-slate-800 dark:text-slate-200'
                 : isTarget
                 ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-950 dark:text-emerald-100 shadow-xs'
@@ -991,7 +1052,9 @@
           >
             <div
               class={`w-6 h-6 sm:w-7 sm:h-7 rounded-xl flex items-center justify-center shrink-0 font-bold text-xs border transition-colors ${
-                !isRevealed
+                isExample
+                  ? 'bg-slate-200/70 dark:bg-[#282A2C] text-slate-400 dark:text-neutral-500 line-through border-slate-200 dark:border-[#37393B]'
+                  : !isRevealed
                   ? 'bg-slate-100 dark:bg-[#282A2C] text-slate-700 dark:text-[#C4C7C5] border-slate-200 dark:border-[#37393B]'
                   : isTarget
                   ? 'bg-emerald-500 text-white border-emerald-600'
@@ -1009,7 +1072,9 @@
               {/if}
             </div>
 
-            {#if opt.label !== opt.value}
+            {#if isExample}
+              <span class="text-xs font-semibold text-slate-400 dark:text-neutral-500">Ví dụ</span>
+            {:else if opt.label !== opt.value}
               <div class="flex-1 min-w-0 flex flex-col items-start leading-tight">
                 {#if opt.pinyin}
                   <span class="text-[11px] text-slate-400 dark:text-neutral-400 font-sans tracking-wide break-words text-left mb-0.5">
