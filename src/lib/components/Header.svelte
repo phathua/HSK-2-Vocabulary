@@ -17,12 +17,13 @@
   import Target from 'phosphor-svelte/lib/Target';
   import Trophy from 'phosphor-svelte/lib/Trophy';
   import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
+  import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
 
   const isHomePage = $derived(page.url.pathname === '/');
   const isGrammarPage = $derived(page.url.pathname.startsWith('/ngu-phap'));
-  const isExamListPage = $derived(page.url.pathname.startsWith('/thi-thu') && !examRoomState.isActive);
+  const isExamListPage = $derived(page.url.pathname.startsWith('/thi-thu') && !examRoomState.isActive && !page.params.examId);
   const isDictionaryPage = $derived(page.url.pathname.startsWith('/tu-vung'));
-  const isExamRoom = $derived(examRoomState.isActive);
+  const isExamRoom = $derived(examRoomState.isActive || Boolean(page.params.examId));
 
   // Cấu hình Icon và Tiêu đề động theo trang đang mở trong SidebarMenu
   const activePageInfo = $derived.by(() => {
@@ -182,9 +183,9 @@
 
   <!-- Right: Actions -->
   <div class="flex items-center gap-1.5 shrink-0">
-    <!-- Trong phòng thi: Bộ đếm thời gian CHỈ HIỆN KHI CUỘN XUỐNG -->
-    {#if isExamRoom && examRoomState.isScrolled}
-      <div class="flex items-center gap-1.5 shrink-0 animate-fade-in">
+    <!-- Trong phòng thi trên Desktop: Bộ đếm thời gian và Nút Nộp bài (Trên mobile đã có thanh sticky dưới đáy) -->
+    {#if isExamRoom}
+      <div class="hidden lg:flex items-center gap-1.5 shrink-0 animate-fade-in">
         {#if examRoomState.isPreviewPhase}
           <button
             type="button"
@@ -203,6 +204,18 @@
             <Clock weight="duotone" class="w-4 h-4 {examRoomState.timeRemainingSeconds < 300 ? 'text-red-500' : 'text-orange-500'}" />
             <span>{formatTime(examRoomState.timeRemainingSeconds)}</span>
           </div>
+        {/if}
+
+        {#if !examRoomState.isSubmitted}
+          <button
+            type="button"
+            onclick={() => examRoomState.submit()}
+            class="h-9 px-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-black text-xs flex items-center gap-1.5 shadow-xs cursor-pointer transition-all shrink-0"
+            title="Nộp bài thi"
+          >
+            <CheckCircle weight="bold" class="w-4 h-4 shrink-0" />
+            <span>Nộp bài</span>
+          </button>
         {/if}
       </div>
     {:else if isHomePage}
@@ -260,8 +273,8 @@
       </button>
     {/if}
 
-    <!-- Nút Tìm kiếm Spotlight: Đứng bên phải nút chuyển zh-to-vi và trước nút cài đặt (Ẩn khi đang ở trang từ điển /tu-vung) -->
-    {#if !isDictionaryPage}
+    <!-- Nút Tìm kiếm Spotlight: Đứng bên phải nút chuyển zh-to-vi và trước nút cài đặt (Ẩn khi đang ở trang từ điển /tu-vung hoặc trong phòng thi) -->
+    {#if !isDictionaryPage && !isExamRoom}
       <button
         type="button"
         onclick={() => (appState.spotlightOpen = true)}

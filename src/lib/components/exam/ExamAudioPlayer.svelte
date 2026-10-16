@@ -57,7 +57,7 @@
   // Subtitle Overlay state (gắn liền thanh audio player)
   let showSubtitleOverlay = $state(true); // Bật mặc định hoặc toggle nhanh
   let showTranscriptModal = $state(false);
-  let activeTranscriptPart = $state('all'); // 'all' | 'Part 1' | 'Part 2' | 'Part 3' | 'Part 4'
+  let activeTranscriptPart = $state('transcript'); // 'transcript' | 'all' | 'Part 1' | 'Part 2' | 'Part 3' | 'Part 4'
 
   let subtitles = $state<SubtitleItem[]>([]);
   let activeSubtitleIndex = $derived.by(() => {
@@ -180,7 +180,7 @@
   let scrollContainer: HTMLElement | null = $state(null);
 
   $effect(() => {
-    if (showTranscriptModal && activeTranscriptPart === 'karaoke' && activeSubtitleIndex !== -1 && scrollContainer) {
+    if (showTranscriptModal && activeTranscriptPart === 'transcript' && activeSubtitleIndex !== -1 && scrollContainer) {
       const activeEl = scrollContainer.querySelector(`#subtitle-${activeSubtitleIndex}`) as HTMLElement;
       if (activeEl) {
          activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -680,15 +680,15 @@
         </div>
       </div>
 
-      <!-- Giữa: Thanh tiến độ trực tiếp hoặc co gọn khi cuộn -->
-      {#if isScrolled}
-        <div class="flex-1 max-w-[120px] sm:max-w-xs h-1 bg-slate-200 dark:bg-neutral-800 rounded-full overflow-hidden">
+      <!-- Giữa: Thanh tiến độ làm gọn ở giữa trên Desktop (màn hình sm trở lên) -->
+      <div class="hidden sm:flex flex-1 max-w-[140px] md:max-w-xs lg:max-w-sm mx-2 sm:mx-4 items-center">
+        <div class="w-full h-1.5 bg-slate-200/80 dark:bg-neutral-800 rounded-full overflow-hidden">
           <div
             class="h-full {isExamMode && isPreviewPhase ? 'bg-amber-500' : 'bg-orange-500'} transition-all duration-150"
             style="width: {isExamMode && isPreviewPhase ? ((60 - previewSeconds) / 60) * 100 : (duration ? (currentTime / duration) * 100 : 0)}%"
           ></div>
         </div>
-      {/if}
+      </div>
 
       <!-- Trạng thái bên phải & Nút Phụ đề (Lời) + Modal Tất cả -->
       <div class="flex items-center gap-1.5 shrink-0">
@@ -697,7 +697,7 @@
           type="button"
           onclick={() => (showSubtitleOverlay = !showSubtitleOverlay)}
           class="flex items-center gap-1 px-2.5 py-1 sm:py-1.5 rounded-xl font-bold text-xs cursor-pointer transition-all border {showSubtitleOverlay ? 'bg-orange-600 text-white border-orange-600 shadow-xs' : 'bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-slate-700 dark:text-neutral-200 border-slate-200 dark:border-neutral-700'}"
-          title={showSubtitleOverlay ? 'Tắt khung phụ đề Karaoke' : 'Bật khung phụ đề Karaoke bên dưới'}
+          title={showSubtitleOverlay ? 'Tắt khung phụ đề lời bài nghe' : 'Bật khung phụ đề lời bài nghe bên dưới'}
           aria-pressed={showSubtitleOverlay}
         >
           <ClosedCaptioning weight={showSubtitleOverlay ? 'fill' : 'bold'} class="w-3.5 h-3.5 {showSubtitleOverlay ? 'text-white' : 'text-orange-600 dark:text-orange-400'}" />
@@ -722,12 +722,7 @@
           </button>
         {/if}
 
-        {#if isPreviewPhase}
-          <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 font-mono font-bold text-xs">
-            <HourglassMedium class="w-3.5 h-3.5 animate-spin text-amber-600" />
-            <span>{previewSeconds}s</span>
-          </div>
-        {:else if isExamMode}
+        {#if !isPreviewPhase && isExamMode}
           <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-100/80 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold text-[11px]">
             <LockSimple class="w-3.5 h-3.5" />
             <span class="hidden sm:inline">Thi thật</span>
@@ -736,22 +731,20 @@
       </div>
     </div>
 
-    <!-- Thanh tiến độ bài nghe khi chưa cuộn -->
-    {#if !isScrolled}
-      <div class="mt-1.5 sm:mt-2 relative w-full h-1 bg-slate-200/80 dark:bg-neutral-800 rounded-full overflow-hidden">
-        {#if isPreviewPhase}
-          <div
-            class="h-full bg-amber-500 transition-all duration-1000 ease-linear"
-            style="width: {((60 - previewSeconds) / 60) * 100}%"
-          ></div>
-        {:else}
-          <div
-            class="h-full bg-orange-500 transition-all duration-150"
-            style="width: {duration ? (currentTime / duration) * 100 : 0}%"
-          ></div>
-        {/if}
-      </div>
-    {/if}
+    <!-- Mobile: Thanh tiến độ trải dài ở dưới giữ nguyên như cũ -->
+    <div class="sm:hidden mt-1.5 relative w-full h-1 bg-slate-200/80 dark:bg-neutral-800 rounded-full overflow-hidden">
+      {#if isPreviewPhase}
+        <div
+          class="h-full bg-amber-500 transition-all duration-1000 ease-linear"
+          style="width: {((60 - previewSeconds) / 60) * 100}%"
+        ></div>
+      {:else}
+        <div
+          class="h-full bg-orange-500 transition-all duration-150"
+          style="width: {duration ? (currentTime / duration) * 100 : 0}%"
+        ></div>
+      {/if}
+    </div>
 
     <!-- Cảnh báo khi bị iOS chặn tự động phát sau 60s xem trước đề -->
     {#if isAutoplayBlocked && !isPlaying}
@@ -772,7 +765,7 @@
       </div>
     {/if}
 
-    <!-- Khung Subtitle Overlay gắn liền trực tiếp ngay dưới Audio Player (Word-by-word Karaoke) -->
+    <!-- Khung Subtitle Overlay gắn liền trực tiếp ngay dưới Audio Player (Word-by-word Subtitle) -->
     {#if showSubtitleOverlay && currentQuestionNo <= 35}
       {#if isPreviewPhase}
         <div
@@ -788,7 +781,7 @@
         <div
           class="mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-slate-200/80 dark:border-neutral-800/80 flex flex-col gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-1 duration-200"
         >
-          <!-- Hàng hiển thị Karaoke Word-by-Word hoặc Thông báo Nhạc dạo -->
+          <!-- Hàng hiển thị Lời chạy từng chữ Word-by-Word hoặc Thông báo Nhạc dạo -->
           {#if activeSubtitle.text.toLowerCase().includes('nhạc dạo') || activeSubtitle.text.toLowerCase().includes('nhạc')}
             <div class="flex items-center justify-center gap-1.5 py-0.5 sm:py-1 text-slate-500 dark:text-neutral-400 font-medium text-xs">
               <MusicNotes weight="fill" class="w-3.5 h-3.5 text-amber-500 animate-bounce" />
@@ -939,7 +932,7 @@
       <!-- Filter Tabs theo Part (Phần 1 - 4) -->
       <div class="flex items-center gap-1.5 p-2.5 sm:px-6 bg-slate-50 dark:bg-[#202020] border-b border-slate-200 dark:border-neutral-800 overflow-x-auto shrink-0">
         {#each [
-          { id: 'karaoke', label: 'Lời chạy trực tiếp (Karaoke)' },
+          { id: 'transcript', label: 'Lời bài nghe' },
           { id: 'all', label: 'Tất cả (35 câu)' },
           { id: 'Part 1', label: 'Phần 1 (1-10)' },
           { id: 'Part 2', label: 'Phần 2 (11-20)' },
@@ -962,10 +955,10 @@
 
       <!-- Nội dung danh sách lời thoại -->
       <div class="flex-1 overflow-y-auto p-3 sm:p-5" bind:this={scrollContainer}>
-        {#if activeTranscriptPart === 'karaoke'}
+        {#if activeTranscriptPart === 'transcript'}
           <div class="space-y-2 max-w-xl mx-auto py-2">
             {#if subtitles.length === 0}
-               <div class="text-center py-8 text-xs text-slate-500">Đang tải lời chạy trực tiếp...</div>
+               <div class="text-center py-8 text-xs text-slate-500">Đang tải lời bài nghe...</div>
             {:else}
                {#each subtitles as sub, i}
                  <button

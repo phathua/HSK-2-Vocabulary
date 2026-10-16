@@ -70,6 +70,7 @@
   });
 
   import { requestExamNotificationPermission } from '#lib/utils/examNotification';
+  import { requestScreenWakeLock, releaseScreenWakeLock } from '#lib/utils/screenWakeLock';
 
   onMount(() => {
     examRoomState.isActive = true;
@@ -81,6 +82,9 @@
 
     // Yêu cầu quyền thông báo ngay khi bắt đầu vào làm bài thi
     requestExamNotificationPermission();
+
+    // Giữ màn hình luôn sáng trên iOS / Mobile trong suốt quá trình làm bài thi
+    requestScreenWakeLock();
 
     // Start timer: Đếm ngược 55 phút cho CẢ 2 CHẾ ĐỘ ('exam' và 'practice')
     timerInterval = setInterval(() => {
@@ -121,6 +125,7 @@
       if (mainScrollEl) {
         mainScrollEl.removeEventListener('scroll', handleScroll);
       }
+      releaseScreenWakeLock();
       examRoomState.reset();
     };
   });
@@ -216,6 +221,7 @@
     showConfirmSubmit = false;
     isSubmitted = true;
     showResultModal = true;
+    releaseScreenWakeLock();
 
     if (exam) {
       examHistoryState.saveRecord({
@@ -245,6 +251,7 @@
     currentQuestionIndex = 0;
     isSubmitted = false;
     showResultModal = false;
+    requestScreenWakeLock();
   }
 
   function handleScrollTo(qNo: number) {
@@ -556,37 +563,22 @@
         </div>
 
         {#if mode === 'exam'}
-          <!-- Khối hành động làm bài trên Desktop: Tiến độ, Thời gian, Nút Làm lại & Nộp bài -->
-          <div class="mt-2.5 p-3 rounded-2xl bg-white dark:bg-[#1B1B1B] border border-slate-200/90 dark:border-[#282A2C] shadow-xs flex flex-col gap-2.5 shrink-0 select-none">
-            <div class="flex items-center justify-between text-xs font-bold">
-              <div class="flex items-center gap-1.5 text-slate-600 dark:text-neutral-300">
-                <span class="text-slate-400 dark:text-neutral-500 font-medium">Tiến độ:</span>
-                <span class="font-black text-orange-600 dark:text-orange-400">{totalAnswered}/{exam.total_questions} câu</span>
-              </div>
-              <div class="flex items-center gap-1.5 font-mono font-black px-2 py-0.5 rounded-lg border {timeRemainingSeconds < 300 ? 'bg-red-50 dark:bg-red-950/50 border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 animate-pulse' : 'bg-slate-50 dark:bg-neutral-800/80 border-slate-200 dark:border-neutral-700 text-slate-700 dark:text-slate-300'}">
-                <Clock weight="duotone" class="w-3.5 h-3.5 {timeRemainingSeconds < 300 ? 'text-red-500' : 'text-orange-500'}" />
-                <span>{formatCountdown(timeRemainingSeconds)}</span>
-              </div>
+          <!-- Khối hành động làm bài trên Desktop: Tiến độ & Nút Làm lại (Nộp bài & Bộ đếm đã chuyển lên Header) -->
+          <div class="mt-2.5 p-2.5 px-3 rounded-2xl bg-white dark:bg-[#1B1B1B] border border-slate-200/90 dark:border-[#282A2C] shadow-xs flex items-center justify-between gap-2 shrink-0 select-none">
+            <div class="flex items-center gap-1.5 text-xs font-bold text-slate-600 dark:text-neutral-300">
+              <span class="text-slate-400 dark:text-neutral-500 font-medium">Tiến độ:</span>
+              <span class="font-black text-orange-600 dark:text-orange-400">{totalAnswered}/{exam.total_questions} câu</span>
             </div>
 
-            <div class="grid grid-cols-2 gap-2 pt-1.5 border-t border-slate-100 dark:border-neutral-800">
-              <button
-                type="button"
-                onclick={handleRetry}
-                class="h-9 rounded-xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 active:scale-95 text-slate-700 dark:text-neutral-200 font-bold text-xs flex items-center justify-center gap-1.5 cursor-pointer transition-all border border-slate-200/60 dark:border-neutral-700/60 shadow-2xs"
-              >
-                <ArrowCounterClockwise weight="bold" class="w-3.5 h-3.5" />
-                <span>Làm lại</span>
-              </button>
-              <button
-                type="button"
-                onclick={handleSubmitExam}
-                class="h-9 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-xs cursor-pointer transition-all"
-              >
-                <CheckCircle weight="bold" class="w-4 h-4" />
-                <span>Nộp bài</span>
-              </button>
-            </div>
+            <button
+              type="button"
+              onclick={handleRetry}
+              class="h-8 px-3 rounded-xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 active:scale-95 text-slate-700 dark:text-neutral-200 font-bold text-xs flex items-center justify-center gap-1.5 cursor-pointer transition-all border border-slate-200/60 dark:border-neutral-700/60 shadow-2xs"
+              title="Làm lại từ đầu"
+            >
+              <ArrowCounterClockwise weight="bold" class="w-3.5 h-3.5" />
+              <span>Làm lại</span>
+            </button>
           </div>
         {/if}
       </div>
