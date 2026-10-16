@@ -17,6 +17,7 @@
   import InteractiveChineseText from './InteractiveChineseText.svelte';
   import InteractivePinyinText from './InteractivePinyinText.svelte';
   import ExamDialogueTranscript from './ExamDialogueTranscript.svelte';
+  import ExamImageZoomModal from './ExamImageZoomModal.svelte';
 
   interface Props {
     question: QuestionItem;
@@ -31,6 +32,7 @@
     onSelectAnswer: (val: string) => void;
     onToggleFlag: () => void;
     onCheckPractice?: () => void;
+    onOpenZoom?: (questionNo: number) => void;
   }
 
   let {
@@ -45,7 +47,8 @@
     showBoardImage = true,
     onSelectAnswer,
     onToggleFlag,
-    onCheckPractice
+    onCheckPractice,
+    onOpenZoom
   }: Props = $props();
 
   function getMatchingGroup(qNo: number): [number, number] | null {
@@ -357,7 +360,7 @@
       </div>
       <button
         type="button"
-        onclick={() => (isImageZoomed = true)}
+        onclick={() => (onOpenZoom ? onOpenZoom(question.question_no) : (isImageZoomed = true))}
         class="w-full text-left cursor-pointer p-1.5 border-0 bg-transparent block"
         aria-label="Phóng to bảng tranh lựa chọn"
       >
@@ -374,7 +377,7 @@
     <div class="my-2 flex items-center gap-2">
       <button
         type="button"
-        onclick={() => (isImageZoomed = true)}
+        onclick={() => (onOpenZoom ? onOpenZoom(question.question_no) : (isImageZoomed = true))}
         class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800 text-xs font-bold hover:bg-orange-100 dark:hover:bg-orange-900/50 transition-colors cursor-pointer shadow-2xs"
         title="Xem bảng tranh A - F của phần thi này"
       >
@@ -386,7 +389,7 @@
     <div class="relative group my-3 max-w-sm min-h-[140px] rounded-2xl overflow-hidden border border-slate-100 dark:border-neutral-800 bg-slate-50 dark:bg-neutral-900/50">
       <button
         type="button"
-        onclick={() => (isImageZoomed = true)}
+        onclick={() => (onOpenZoom ? onOpenZoom(question.question_no) : (isImageZoomed = true))}
         class="w-full text-left cursor-pointer p-0 border-0 bg-transparent block"
         aria-label="Phóng to ảnh câu hỏi"
       >
@@ -756,141 +759,23 @@
   {/if}
 </div>
 
-<!-- Modal xem ảnh phóng to -->
-{#if isImageZoomed && (question.board_image || question.image)}
-  {@const activeZoomSrc = getExamImageUrl(question.exam_code, question.board_image || question.image)}
-  <div class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 animate-in fade-in duration-150">
-    <button
-      type="button"
-      class="fixed inset-0 bg-black/85 backdrop-blur-sm cursor-default w-full h-full border-none"
-      onclick={() => (isImageZoomed = false)}
-      aria-label="Đóng phóng to ảnh"
-    ></button>
-    <div
-      class="relative z-10 max-w-4xl w-full max-h-[94vh] bg-white dark:bg-[#1E1E1E] rounded-3xl p-3 sm:p-4 overflow-hidden shadow-2xl flex flex-col items-center justify-between border border-slate-200 dark:border-[#333]"
-    >
-      <!-- Modal Header -->
-      <div class="w-full flex items-center justify-between pb-2 mb-1 border-b border-slate-100 dark:border-[#282A2C] shrink-0">
-        <span class="text-xs sm:text-sm font-bold text-slate-800 dark:text-neutral-200 flex items-center gap-1.5">
-          {question.board_image ? 'Bảng tranh đối chiếu (A – F)' : `Ảnh câu ${question.question_no}`}
-        </span>
-        <button
-          type="button"
-          onclick={() => (isImageZoomed = false)}
-          class="p-1 rounded-xl hover:bg-slate-100 dark:hover:bg-[#282A2C] text-slate-500 hover:text-slate-800 dark:text-neutral-400 dark:hover:text-white transition-colors cursor-pointer"
-          title="Đóng (ESC)"
-        >
-          <X weight="bold" class="w-5 h-5" />
-        </button>
-      </div>
-
-      <!-- Question Text in Zoom Modal if available (Hanzi + Pinyin) -->
-      {#if parsedQuestionDisplay}
-        <div class="w-full py-2 px-3 bg-slate-50/80 dark:bg-[#202224]/80 rounded-2xl border border-slate-200/70 dark:border-neutral-800 text-center shrink-0 mb-1 max-w-2xl select-text">
-          {#if parsedQuestionDisplay.isTrueFalseStatement}
-            <div class="space-y-1.5 text-left">
-              <div>
-                {#if parsedQuestionDisplay.contextPinyin}
-                  <div class="text-[11px] text-slate-500 dark:text-neutral-400 font-sans tracking-wide">
-                    <InteractivePinyinText pinyin={parsedQuestionDisplay.contextPinyin} />
-                  </div>
-                {/if}
-                <div class="text-sm sm:text-base font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
-                  <InteractiveChineseText text={parsedQuestionDisplay.contextHanzi} />
-                </div>
-              </div>
-              <div class="pt-1.5 border-t border-slate-200/60 dark:border-neutral-700/60 flex items-start gap-1.5">
-                <span class="px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-[10px] font-black shrink-0 mt-0.5">
-                  ★ Nhận định
-                </span>
-                <div class="flex-1">
-                  {#if parsedQuestionDisplay.statementPinyin}
-                    <div class="text-[11px] text-slate-500 dark:text-neutral-400 font-sans tracking-wide">
-                      <InteractivePinyinText pinyin={parsedQuestionDisplay.statementPinyin} />
-                    </div>
-                  {/if}
-                  <div class="text-sm sm:text-base font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
-                    <InteractiveChineseText text={parsedQuestionDisplay.statementHanzi} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          {:else}
-            <div class="space-y-0.5">
-              {#if parsedQuestionDisplay.pinyin}
-                <div class="text-xs text-slate-500 dark:text-neutral-400 font-sans tracking-wide">
-                  <InteractivePinyinText pinyin={parsedQuestionDisplay.pinyin} />
-                </div>
-              {/if}
-              <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-[#E3E3E3] font-serif leading-snug">
-                <InteractiveChineseText text={parsedQuestionDisplay.hanzi} />
-              </div>
-            </div>
-          {/if}
-        </div>
-      {/if}
-
-      <!-- Zoom Image Container -->
-      <div class="flex-1 w-full flex items-center justify-center overflow-auto min-h-0 py-1">
-        <img
-          src={activeZoomSrc}
-          alt="Ảnh phóng to chi tiết"
-          class="max-w-full max-h-[56vh] sm:max-h-[64vh] object-contain rounded-xl select-none shadow-xs"
-        />
-      </div>
-
-      <!-- Quick Answer Bar ngay trong modal: học viên vừa soi tranh A - F vừa bấm chọn đáp án luôn -->
-      {#if !isExamSubmitted && optionChoices.length > 0}
-        <div class="w-full pt-2 mt-1 border-t border-slate-100 dark:border-[#282A2C] shrink-0 flex flex-col items-center gap-1.5">
-          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-neutral-400">
-            Chọn nhanh đáp án Câu {question.question_no}:
-          </span>
-          <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 w-full">
-            {#each optionChoices as opt}
-              {@const isSelected = selectedAnswer === opt.value}
-              {@const isUsedElsewhere = !isSelected && isOptionUsedInGroup(opt.value)}
-              <button
-                type="button"
-                onclick={() => {
-                  onSelectAnswer(opt.value);
-                  isImageZoomed = false;
-                }}
-                class="px-4 sm:px-6 py-2 rounded-xl font-black text-xs sm:text-sm border active:scale-95 transition-all cursor-pointer shadow-xs flex items-center gap-1.5 {
-                  isSelected
-                    ? 'bg-orange-600 text-white border-orange-600'
-                    : isUsedElsewhere
-                    ? 'opacity-40 border-dashed bg-slate-100 dark:bg-[#282A2C] text-slate-400 dark:text-neutral-500'
-                    : 'bg-slate-100 dark:bg-[#282A2C] hover:bg-orange-500 hover:text-white text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-[#37393B]'
-                }"
-              >
-                {#if opt.value === '√' || opt.icon === 'check'}
-                  <Check weight="bold" class="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Đúng</span>
-                {:else if opt.value === '×' || opt.icon === 'x'}
-                  <X weight="bold" class="w-4 h-4 text-rose-600 dark:text-rose-400" />
-                  <span>Sai</span>
-                {:else}
-                  <span>{opt.value}</span>
-                {/if}
-              </button>
-            {/each}
-          </div>
-        </div>
-      {:else}
-        <!-- Modal Footer with Close button -->
-        <div class="w-full pt-2 mt-1 border-t border-slate-100 dark:border-[#282A2C] flex items-center justify-between shrink-0">
-          <span class="text-[11px] text-slate-400 dark:text-neutral-400">
-            Chạm ra ngoài hoặc bấm Đóng
-          </span>
-          <button
-            type="button"
-            onclick={() => (isImageZoomed = false)}
-            class="px-5 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold text-xs cursor-pointer shadow-xs transition-transform"
-          >
-            Đóng
-          </button>
-        </div>
-      {/if}
-    </div>
-  </div>
+<!-- Modal xem ảnh phóng to fallback nếu không có onOpenZoom -->
+{#if isImageZoomed && !onOpenZoom && (question.board_image || question.image)}
+  <ExamImageZoomModal
+    open={isImageZoomed}
+    {question}
+    allQuestions={[question]}
+    selectedAnswer={selectedAnswer}
+    {answers}
+    {correctAnswers}
+    {isExamSubmitted}
+    {mode}
+    onSelectAnswer={(val) => {
+      onSelectAnswer(val);
+      if (mode === 'practice') isImageZoomed = false;
+    }}
+    onNavigateQuestion={() => {}}
+    onClose={() => (isImageZoomed = false)}
+  />
 {/if}
+

@@ -11,6 +11,8 @@
   import { EXAM_EXAMPLES } from '#lib/data/examExamples';
   import ExamPalette from '#lib/components/exam/ExamPalette.svelte';
   import ExamResultModal from '#lib/components/exam/ExamResultModal.svelte';
+  import ExamImageZoomModal from '#lib/components/exam/ExamImageZoomModal.svelte';
+  import { mockExamsData } from '#lib/data/mockExamsList';
   import ConfirmModal from '#lib/components/ConfirmModal.svelte';
   import ExamDictTooltip from '#lib/components/exam/ExamDictTooltip.svelte';
   import SettingsModal from '#lib/components/SettingsModal.svelte';
@@ -55,8 +57,25 @@
   let currentQuestionIndex = $state(
     Number(page.url.searchParams.get('q')) ? Math.max(0, Number(page.url.searchParams.get('q')) - 1) : 0
   );
+  let activeZoomQuestionNo = $state<number | null>(null);
+  let previousExamId = $state(page.params.examId);
   let mainScrollEl: HTMLElement | null = null;
   let timerInterval: any = null;
+
+  $effect(() => {
+    if (examId && examId !== previousExamId) {
+      previousExamId = examId;
+      answers = {};
+      flagged = {};
+      checkedPractice = {};
+      timeRemainingSeconds = 55 * 60;
+      currentQuestionIndex = 0;
+      isSubmitted = false;
+      showResultModal = false;
+      activeZoomQuestionNo = null;
+      requestScreenWakeLock();
+    }
+  });
 
   function formatCountdown(secs: number): string {
     const mins = Math.floor(secs / 60);
@@ -196,6 +215,42 @@
       totalScore: lScore + rScore,
       correctMap
     };
+  });
+
+  const wrongQuestionsList = $derived.by(() => {
+    if (!exam?.questions) return [];
+    const list: Array<{
+      question_no: number;
+      userAnswer?: string;
+      correctAnswer: string;
+      section: string;
+      part?: string;
+    }> = [];
+    for (const q of exam.questions) {
+      const userAns = answers[q.question_no];
+      if (userAns !== q.answer) {
+        list.push({
+          question_no: q.question_no,
+          userAnswer: userAns || '',
+          correctAnswer: q.answer || '',
+          section: q.section || '',
+          part: q.part || ''
+        });
+      }
+    }
+    return list;
+  });
+
+  const nextExamItem = $derived.by(() => {
+    if (!examId) return null;
+    const currentCode = (exam?.exam_code || examId).toUpperCase();
+    const idx = mockExamsData.findIndex(
+      (e) => e.code.toUpperCase() === currentCode || e.id.toUpperCase() === currentCode
+    );
+    if (idx >= 0 && idx < mockExamsData.length - 1) {
+      return mockExamsData[idx + 1];
+    }
+    return null;
   });
 
   function handleSelectAnswer(qNo: number, val: string) {
@@ -423,6 +478,7 @@
               }}
               onOpenPalette={() => (showPaletteModal = true)}
               onSubmitExam={handleSubmitExam}
+              onOpenZoom={(qNo) => (activeZoomQuestionNo = qNo)}
             />
           </div>
 
@@ -517,6 +573,7 @@
                 onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
                 onToggleFlag={() => handleToggleFlag(q.question_no)}
                 onCheckPractice={() => handleCheckPractice(q.question_no)}
+                onOpenZoom={(qNo) => (activeZoomQuestionNo = qNo)}
               />
             {/each}
           </div>
@@ -553,6 +610,7 @@
                 onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
                 onToggleFlag={() => handleToggleFlag(q.question_no)}
                 onCheckPractice={() => handleCheckPractice(q.question_no)}
+                onOpenZoom={(qNo) => (activeZoomQuestionNo = qNo)}
               />
             {/each}
           </div>
@@ -635,6 +693,40 @@
   </div>
 {/if}
 
+<!-- Modal Phóng to Ảnh / Bảng tranh đối chiếu dùng chung với thanh chuyển câu -->
+{#if activeZoomQuestionNo !== null && exam}
+  {@const activeZoomQ = exam.questions.find((q) => q.question_no === activeZoomQuestionNo)}
+  {#if activeZoomQ}
+    <ExamImageZoomModal
+      open={true}
+      question={activeZoomQ}
+      allQuestions={exam.questions}
+      selectedAnswer={answers[activeZoomQ.question_no]}
+      {answers}
+      correctAnswers={correctAnswersMap}
+      isExamSubmitted={isSubmitted}
+      {mode}
+      onSelectAnswer={(val) => {
+        handleSelectAnswer(activeZoomQ.question_no, val);
+        if (mode === 'practice') {
+          activeZoomQuestionNo = null;
+        }
+      }}
+      onNavigateQuestion={(targetNo) => {
+        activeZoomQuestionNo = targetNo;
+        if (mode === 'practice') {
+          currentQuestionIndex = Math.max(0, exam.questions.findIndex((q) => q.question_no === targetNo));
+        } else {
+          handleScrollTo(targetNo);
+        }
+      }}
+      onClose={() => {
+        activeZoomQuestionNo = null;
+      }}
+    />
+  {/if}
+{/if}
+
 <!-- Modal Kết quả Chấm Điểm -->
 {#if showResultModal && exam}
   <ExamResultModal
@@ -644,8 +736,23 @@
     listeningCorrect={scoreResults.listeningCorrect}
     readingCorrect={scoreResults.readingCorrect}
     totalQuestions={exam.total_questions}
+    {mode}
+    wrongQuestions={wrongQuestionsList}
+    nextExam={nextExamItem}
     onRetry={handleRetry}
     onClose={() => (showResultModal = false)}
+    onSelectQuestion={(qNo) => {
+      showResultModal = false;
+      handleScrollTo(qNo);
+    }}
+    onNextExam={() => {
+      if (nextExamItem) {
+        goto(`/thi-thu/${nextExamItem.id || nextExamItem.code}?mode=${mode}`);
+      }
+    }}
+    onBackToList={() => {
+      goto('/thi-thu');
+    }}
   />
 {/if}
 

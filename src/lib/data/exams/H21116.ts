@@ -205,8 +205,8 @@ export const examData: ExamDetail = {
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 11,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 11",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 11",
       "answer": "A",
       "listening_script": "[女:] 我说的没错吧，向右走。\n[男:] 好吧，听你的。",
       "listening_pinyin": "Nǚ: Wǒ shuō de méi cuò ba, xiàng yòu zǒu.\nNán: Hǎo ba, tīng nǐ de.",
@@ -219,16 +219,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 1",
-      "listening_viet": "Nữ: Tôi nói đúng, đi bên phải.\nNam: Vâng, tùy bạn."
+      "listening_viet": "Nữ: Tôi nói đúng, đi bên phải.\nNam: Vâng, tùy bạn.",
+      "board_image": "images/H21116_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 12,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 12",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 12",
       "answer": "C",
       "listening_script": "[男:] 喂？你在哪儿呢？我怎么没看到你？\n[女:] 因为我起晚了，所以……",
       "listening_pinyin": "Nán: Wéi? Nǐ zài nǎr ne? Wǒ zěnme méi kàndào nǐ?\nNǚ: Yīnwèi wǒ qǐ wǎn le, suǒyǐ...",
@@ -241,16 +242,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 2",
-      "listening_viet": "Nam: Xin chào? Bạn ở đâu? Tại sao tôi không nhìn thấy bạn?\nNữ: Vì tôi dậy muộn nên..."
+      "listening_viet": "Nam: Xin chào? Bạn ở đâu? Tại sao tôi không nhìn thấy bạn?\nNữ: Vì tôi dậy muộn nên...",
+      "board_image": "images/H21116_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 13,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 13",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 13",
       "answer": "F",
       "listening_script": "[女:] 你看这个怎么样？\n[男:] 看着还可以，你喜欢就买吧。",
       "listening_pinyin": "Nǚ: Nǐ kàn zhège zěnmeyàng?\nNán: Kànzhe hái kěyǐ, nǐ xǐhuan jiù mǎi ba.",
@@ -263,16 +265,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 3",
-      "listening_viet": "Nữ: Bạn nghĩ gì về điều này?\nNam: Nhìn có vẻ ổn đấy, thích thì mua thôi."
+      "listening_viet": "Nữ: Bạn nghĩ gì về điều này?\nNam: Nhìn có vẻ ổn đấy, thích thì mua thôi.",
+      "board_image": "images/H21116_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 14,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 14",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 14",
       "answer": "B",
       "listening_script": "[男:] 请进，你有什么事情吗？\n[女:] 我找刘老师，她在吗？",
       "listening_pinyin": "Nán: Qǐng jìn, nǐ yǒu shénme shìqing ma?\nNǚ: Wǒ zhǎo Liú lǎoshī, tā zài ma?",
@@ -285,16 +288,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 4",
-      "listening_viet": "Nam: Vào đi, bạn muốn gì?\nNữ: Tôi đang tìm cô Lưu, cô ấy có ở đó không?"
+      "listening_viet": "Nam: Vào đi, bạn muốn gì?\nNữ: Tôi đang tìm cô Lưu, cô ấy có ở đó không?",
+      "board_image": "images/H21116_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 15,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 15",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 15",
       "answer": "E",
       "listening_script": "[女:] 你坐那儿想什么呢？\n[男:] 没想什么，我累了，休息一下。",
       "listening_pinyin": "Nǚ: Nǐ zuò nàr xiǎng shénme ne?\nNán: Méi xiǎng shénme, wǒ lèi le, xiūxi yīxià.",
@@ -307,16 +311,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 5",
-      "listening_viet": "Nữ: Bạn đang nghĩ gì khi ngồi đó?\nNam: Tôi không nghĩ gì cả, tôi mệt và muốn nghỉ ngơi."
+      "listening_viet": "Nữ: Bạn đang nghĩ gì khi ngồi đó?\nNam: Tôi không nghĩ gì cả, tôi mệt và muốn nghỉ ngơi.",
+      "board_image": "images/H21116_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 16,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 16",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 16",
       "answer": "A",
       "listening_script": "[男:] 你有弟弟妹妹吗？\n[女:] 我有一个妹妹，她比我小一岁。",
       "listening_pinyin": "Nán: Nǐ yǒu dìdi mèimei ma?\nNǚ: Wǒ yǒu yī ge mèimei, tā bǐ wǒ xiǎo yī suì.",
@@ -329,16 +334,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 6",
-      "listening_viet": "Nam: Bạn có anh chị em nào không?\nNữ: Tôi có một cô em gái kém tôi một tuổi."
+      "listening_viet": "Nam: Bạn có anh chị em nào không?\nNữ: Tôi có một cô em gái kém tôi một tuổi.",
+      "board_image": "images/H21116_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 17,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 17",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 17",
       "answer": "D",
       "listening_script": "[女:] 给你介绍本书，你看不看？\n[男:] 这本书？我已经看过了。",
       "listening_pinyin": "Nǚ: Gěi nǐ jièshào běn shū, nǐ kàn bù kàn?\nNán: Zhè běn shū? Wǒ yǐjīng kànguò le.",
@@ -351,16 +357,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 7",
-      "listening_viet": "Nữ: Hãy để tôi giới thiệu cuốn sách này cho bạn. Bạn có muốn đọc nó không?\nNam: Cuốn sách này? Tôi đã nhìn thấy nó rồi."
+      "listening_viet": "Nữ: Hãy để tôi giới thiệu cuốn sách này cho bạn. Bạn có muốn đọc nó không?\nNam: Cuốn sách này? Tôi đã nhìn thấy nó rồi.",
+      "board_image": "images/H21116_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 18,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 18",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 18",
       "answer": "E",
       "listening_script": "[男:] 你爱吃什么水果？\n[女:] 西瓜，你呢？",
       "listening_pinyin": "Nán: Nǐ ài chī shénme shuǐguǒ?\nNǚ: Xīguā, nǐ ne?",
@@ -373,16 +380,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 8",
-      "listening_viet": "Nam: Bạn thích ăn trái cây gì?\nNữ: Dưa hấu, còn bạn thì sao?"
+      "listening_viet": "Nam: Bạn thích ăn trái cây gì?\nNữ: Dưa hấu, còn bạn thì sao?",
+      "board_image": "images/H21116_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 19,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 19",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 19",
       "answer": "B",
       "listening_script": "[女:] 你怎么还没出门，不去跑步了？\n[男:] 去，我现在去。",
       "listening_pinyin": "Nǚ: Nǐ zěnme hái méi chūmén, bú qù pǎobù le?\nNán: Qù, wǒ xiànzài qù.",
@@ -395,16 +403,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 9",
-      "listening_viet": "Nữ: Tại sao bạn không ra ngoài và chạy bộ?\nNam: Đi đi, tôi đi đây."
+      "listening_viet": "Nữ: Tại sao bạn không ra ngoài và chạy bộ?\nNam: Đi đi, tôi đi đây.",
+      "board_image": "images/H21116_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 20,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 20",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 20",
       "answer": "C",
       "listening_script": "[男:] 你到哪儿了？\n[女:] 我还在出租车上，很快就到。",
       "listening_pinyin": "Nán: Nǐ dào nǎr le?\nNǚ: Wǒ hái zài chūzūchē shang, hěn kuài jiù dào.",
@@ -417,8 +426,9 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 0",
-      "listening_viet": "Nam: Bạn đã ở đâu thế?\nNữ: Tôi vẫn đang ngồi trên taxi, tôi sẽ đến đó sớm thôi."
+      "listening_viet": "Nam: Bạn đã ở đâu thế?\nNữ: Tôi vẫn đang ngồi trên taxi, tôi sẽ đến đó sớm thôi.",
+      "board_image": "images/H21116_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21116",

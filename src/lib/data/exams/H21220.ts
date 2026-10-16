@@ -205,8 +205,8 @@ export const examData: ExamDetail = {
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 11,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 11",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 11",
       "answer": "F",
       "listening_script": "[女:] 你好，我姓元。\n[男:] 元小姐，你好，很高兴认识你。",
       "listening_pinyin": "Nǚ: Nǐ hǎo, wǒ xìng Yuán.\nNán: Yuán xiǎojiě, nǐ hǎo, hěn gāoxìng rènshi nǐ.",
@@ -219,16 +219,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 1",
-      "listening_viet": "Nữ: Xin chào, tôi họ Nguyên.\nNam: Chào cô Yuan, rất vui được gặp cô."
+      "listening_viet": "Nữ: Xin chào, tôi họ Nguyên.\nNam: Chào cô Yuan, rất vui được gặp cô.",
+      "board_image": "images/H21220_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 12,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 12",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 12",
       "answer": "B",
       "listening_script": "[男:] 你今天中午的药吃了没有？\n[女:] 我正在吃。",
       "listening_pinyin": "Nán: Nǐ jīntiān zhōngwǔ de yào chī le méiyǒu?\nNǚ: Wǒ zhèngzài chī.",
@@ -241,16 +242,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 2",
-      "listening_viet": "Nam: Hôm nay bạn đã uống thuốc ăn trưa chưa?\nNữ: Tôi đang ăn."
+      "listening_viet": "Nam: Hôm nay bạn đã uống thuốc ăn trưa chưa?\nNữ: Tôi đang ăn.",
+      "board_image": "images/H21220_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 13,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 13",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 13",
       "answer": "E",
       "listening_script": "[女:] 你怎么不说话？想什么呢？\n[男:] 我在想怎么帮助他们呢。",
       "listening_pinyin": "Nǚ: Nǐ zěnme bù shuōhuà? Xiǎng shénme ne?\nNán: Wǒ zài xiǎng zěnme bāngzhù tāmen ne.",
@@ -263,16 +265,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 3",
-      "listening_viet": "Nữ: Tại sao bạn không nói? Bạn đang nghĩ về điều gì?\nNam: Tôi đang nghĩ cách giúp họ."
+      "listening_viet": "Nữ: Tại sao bạn không nói? Bạn đang nghĩ về điều gì?\nNam: Tôi đang nghĩ cách giúp họ.",
+      "board_image": "images/H21220_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 14,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 14",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 14",
       "answer": "A",
       "listening_script": "[男:] 给，你开我的车去吧，快去快回。\n[女:] 好的，谢谢你。",
       "listening_pinyin": "Nán: Gěi, nǐ kāi wǒ de chē qù ba, kuài qù kuài huí.\nNǚ: Hǎo de, xièxie nǐ.",
@@ -285,16 +288,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 4",
-      "listening_viet": "Nam: Đây, cậu có thể lái xe của tôi. Đi rồi về nhanh nhé.\nNữ: Được rồi, cảm ơn bạn."
+      "listening_viet": "Nam: Đây, cậu có thể lái xe của tôi. Đi rồi về nhanh nhé.\nNữ: Được rồi, cảm ơn bạn.",
+      "board_image": "images/H21220_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 15,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 15",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 15",
       "answer": "C",
       "listening_script": "[女:] 我说得没错吧？向右走。\n[男:] 等一下，我再看看。",
       "listening_pinyin": "Nǚ: Wǒ shuō de méi cuò ba? Xiàng yòu zǒu.\nNán: Děng yīxià, wǒ zài kànkan.",
@@ -307,16 +311,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 5",
-      "listening_viet": "Nữ: Tôi có đúng không? Đi bên phải.\nNam: Đợi một chút, tôi sẽ xem xét."
+      "listening_viet": "Nữ: Tôi có đúng không? Đi bên phải.\nNam: Đợi một chút, tôi sẽ xem xét.",
+      "board_image": "images/H21220_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 16,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 16",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 16",
       "answer": "B",
       "listening_script": "[男:] 你好，鱼怎么卖？\n[女:] 十六块钱一斤。",
       "listening_pinyin": "Nán: Nǐ hǎo, yú zěnme mài?\nNǚ: Shíliù kuài qián yī jīn.",
@@ -329,16 +334,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 6",
-      "listening_viet": "Nam: Xin chào, làm thế nào để bán cá?\nNữ: Mười sáu tệ một cân."
+      "listening_viet": "Nam: Xin chào, làm thế nào để bán cá?\nNữ: Mười sáu tệ một cân.",
+      "board_image": "images/H21220_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 17,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 17",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 17",
       "answer": "E",
       "listening_script": "[女:] 喂，我到了，你在哪儿呢？\n[男:] 已经出门了，我五分钟就到。",
       "listening_pinyin": "Nǚ: Wéi, wǒ dào le, nǐ zài nǎr ne?\nNán: Yǐjīng chūmén le, wǒ wǔ fēnzhōng jiù dào.",
@@ -351,16 +357,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 7",
-      "listening_viet": "Nữ: Này, tôi ở đây, bạn ở đâu?\nNam: Tôi đã ra ngoài rồi. Tôi sẽ đến đó trong năm phút nữa."
+      "listening_viet": "Nữ: Này, tôi ở đây, bạn ở đâu?\nNam: Tôi đã ra ngoài rồi. Tôi sẽ đến đó trong năm phút nữa.",
+      "board_image": "images/H21220_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 18,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 18",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 18",
       "answer": "C",
       "listening_script": "[男:] 怎么样？看见了吗？\n[女:] 看见了，它在那儿。",
       "listening_pinyin": "Nán: Zěnmeyàng? Kànjiàn le ma?\nNǚ: Kànjiàn le, tā zài nàr.",
@@ -373,16 +380,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 8",
-      "listening_viet": "Nam: Thế còn nó thì sao? Bạn có thấy nó không?\nNữ: Hãy nhìn xem, nó ở đó."
+      "listening_viet": "Nam: Thế còn nó thì sao? Bạn có thấy nó không?\nNữ: Hãy nhìn xem, nó ở đó.",
+      "board_image": "images/H21220_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 19,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 19",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 19",
       "answer": "A",
       "listening_script": "[女:] 你的名字是这个吗？\n[男:] 不是，是旁边这个。",
       "listening_pinyin": "Nǚ: Nǐ de míngzi shì zhège ma?\nNán: Bú shì, shì pángbiān zhège.",
@@ -395,16 +403,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 9",
-      "listening_viet": "Nữ: Đây có phải là tên của bạn?\nNam: Không, là cái bên cạnh."
+      "listening_viet": "Nữ: Đây có phải là tên của bạn?\nNam: Không, là cái bên cạnh.",
+      "board_image": "images/H21220_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 20,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 20",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 20",
       "answer": "D",
       "listening_script": "[男:] 船要开了，你快点上船吧。\n[女:] 好的，再见。",
       "listening_pinyin": "Nán: Chuán yào kāi le, nǐ kuài diǎn shàng chuán ba.\nNǚ: Hǎo de, zàijiàn.",
@@ -417,8 +426,9 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 0",
-      "listening_viet": "Nam: Con tàu sắp rời đi. Xin hãy lên tàu nhanh chóng.\nNữ: Được rồi, tạm biệt."
+      "listening_viet": "Nam: Con tàu sắp rời đi. Xin hãy lên tàu nhanh chóng.\nNữ: Được rồi, tạm biệt.",
+      "board_image": "images/H21220_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21220",

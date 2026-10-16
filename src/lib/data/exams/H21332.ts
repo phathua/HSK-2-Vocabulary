@@ -14,18 +14,18 @@ export const examData: ExamDetail = {
       "question_no": 1,
       "image": "images/H21332_img_01.webp",
       "type": "True/False",
-      "text": "我看见小猫了，它在那儿。",
+      "text": "Câu hỏi nghe số 1",
       "answer": "√",
-      "listening_script": "√ 2．× 3．× 4．√ 5．×",
+      "listening_script": "我看见小猫了，它在那儿。",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nói: 'Wǒ kànjiàn xiǎo māo le, tā zài nàr' (Tôi nhìn thấy con mèo nhỏ rồi, nó ở đằng kia). Bức ảnh thể hiện đúng hình ảnh con mèo nhỏ trong giỏ (xiǎo māo) nên đáp án là Đúng (√).",
-      "listening_pinyin": "√ 2．× 3．× 4．√ 5．×",
+      "listening_pinyin": "Wǒ kànjiàn xiǎomāo le, tā zài nàr.",
       "pinyin": "Wǒ kànjiàn xiǎomāo le, tā zài nàr.",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "√ 2．× 3．× 4．√ 5．×"
+      "listening_viet": "[VIET] Tôi nhìn thấy mèo con rồi, nó ở đằng kia."
     },
     {
       "exam_code": "H21332",
@@ -34,18 +34,18 @@ export const examData: ExamDetail = {
       "question_no": 2,
       "image": "images/H21332_img_02.webp",
       "type": "True/False",
-      "text": "你的字写得真漂亮。",
+      "text": "Câu hỏi nghe số 2",
       "answer": "×",
-      "listening_script": "阅读题，分钟二、听力结束后，有分钟填写答题卡。三、全部考试约分钟含考生填写个人信息时间分钟。中国北京孔子学院总部国家汉办编制一、听力第一部分第题例如：",
+      "listening_script": "你的字写得真漂亮。",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật khen: 'Nǐ de zì xiě de zhēn piàoliang' (Chữ bạn viết đẹp quá). Tuy nhiên bức ảnh lại thể hiện một bé trai đang vẽ tranh (huà huàr) chứ không phải viết chữ (xiě zì) nên đáp án là Sai (×).",
-      "listening_pinyin": "H",
+      "listening_pinyin": "Nǐ de zì xiě de zhēn piàoliang.",
       "pinyin": "Nǐ de zì xiě de zhēn piàoliang.",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "Đọc câu hỏi, phút thứ hai. Sau khi nghe, bạn có một phút để điền vào phiếu trả lời. 3. Thời gian dự kiến ​​cho tất cả các kỳ thi đều bao gồm phút để thí sinh điền thông tin cá nhân. Do Hanban, Trụ sở Viện Khổng Tử tại Bắc Kinh, Trung Quốc biên soạn 1. Câu hỏi Phần 1 Nghe: Ví dụ:"
+      "listening_viet": "[VIET] Chữ của bạn viết đẹp thật đấy."
     },
     {
       "exam_code": "H21332",
@@ -54,18 +54,18 @@ export const examData: ExamDetail = {
       "question_no": 3,
       "image": "images/H21332_img_03.webp",
       "type": "True/False",
-      "text": "再见，路上慢点儿！",
+      "text": "Câu hỏi nghe số 3",
       "answer": "×",
-      "listening_script": "4．",
+      "listening_script": "再见，路上慢点儿！",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật dặn: 'Zàijiàn, lùshang màn diǎnr!' (Tạm biệt, đi đường thong thả nhé!). Bức ảnh người đàn ông giơ ngón tay cái khen ngợi (zhēn bàng) không khớp ngữ cảnh chào tạm biệt dặn đi đường nên đáp án là Sai (×).",
-      "listening_pinyin": "4．",
+      "listening_pinyin": "Zàijiàn, lùshang màn diǎnr!",
       "pinyin": "Zàijiàn, lùshang màn diǎnr!",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "4．"
+      "listening_viet": "[VIET] Tạm biệt, đi đường chậm một chút nhé!"
     },
     {
       "exam_code": "H21332",
@@ -74,18 +74,18 @@ export const examData: ExamDetail = {
       "question_no": 4,
       "image": "images/H21332_img_04.webp",
       "type": "True/False",
-      "text": "来，想喝杯水吗？",
+      "text": "Câu hỏi nghe số 4",
       "answer": "√",
-      "listening_script": "Câu hỏi nghe số 4",
+      "listening_script": "来，想喝杯水吗？",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nói: 'Lái, xiǎng hē bēi shuǐ ma?' (Lại đây, muốn uống cốc nước không?). Bức ảnh thể hiện một ly nước (shuǐ / bēizi) cầm trên tay khớp với câu nói nên đáp án là Đúng (√).",
-      "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   4",
+      "listening_pinyin": "Lái, xiǎng hē bēi shuǐ ma?",
       "pinyin": "Lái, xiǎng hē bēi shuǐ ma?",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "Câu hỏi nghe số 4"
+      "listening_viet": "[VIET] Lại đây, muốn uống cốc nước không?"
     },
     {
       "exam_code": "H21332",
@@ -94,18 +94,18 @@ export const examData: ExamDetail = {
       "question_no": 5,
       "image": "images/H21332_img_05.webp",
       "type": "True/False",
-      "text": "别看电视了，明天要考试呢。",
+      "text": "Câu hỏi nghe số 5",
       "answer": "×",
-      "listening_script": "H21332 - 2",
+      "listening_script": "别看电视了，明天要考试呢。",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nhắc nhở: 'Bié kàn diànshì le, míngtiān yào kǎoshì ne' (Đừng xem tivi nữa, ngày mai thi đấy). Bức ảnh hai người đang đọc sách (kàn shū) chứ không phải xem tivi (kàn diànshì) nên đáp án là Sai (×).",
-      "listening_pinyin": "H21332 - 2",
+      "listening_pinyin": "Bié kàn diànshì le, míngtiān yào kǎoshì ne.",
       "pinyin": "Bié kàn diànshì le, míngtiān yào kǎoshì ne.",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "H21332 - 2"
+      "listening_viet": "[VIET] Đừng xem tivi nữa, ngày mai thi đấy."
     },
     {
       "exam_code": "H21332",
@@ -114,18 +114,18 @@ export const examData: ExamDetail = {
       "question_no": 6,
       "image": "images/H21332_img_06.webp",
       "type": "True/False",
-      "text": "打篮球的那个人是我哥哥。",
+      "text": "Câu hỏi nghe số 6",
       "answer": "×",
-      "listening_script": "× 7．√ 8．√ 9．× 10．√",
+      "listening_script": "打篮球的那个人是我哥哥。",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật hỏi: 'Zhè shì nǐ māma de shǒubiǎo ma?' (Đây là đồng hồ đeo tay của mẹ bạn à?). Bức ảnh chụp người mang giày cao gót (gāogēnxié) chứ không phải đồng hồ đeo tay (shǒubiǎo) nên đáp án là Sai (×).",
-      "listening_pinyin": "× 7．√ 8．√ 9．× 10．√",
+      "listening_pinyin": "Dǎ lánqiú de nàge rén shì wǒ gēge.",
       "pinyin": "Dǎ lánqiú de nàge rén shì wǒ gēge.",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "× 7．√ 8．√ 9．× 10．√"
+      "listening_viet": "[VIET] Người đang chơi bóng rổ đó là anh trai tôi."
     },
     {
       "exam_code": "H21332",
@@ -134,18 +134,18 @@ export const examData: ExamDetail = {
       "question_no": 7,
       "image": "images/H21332_img_07.webp",
       "type": "True/False",
-      "text": "你要哪个？左边的？",
+      "text": "Câu hỏi nghe số 7",
       "answer": "√",
-      "listening_script": "Câu hỏi nghe số 7",
+      "listening_script": "你要哪个？左边的？",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật dặn dò: 'Yīnwèi jīntiān tiānqì tài rè, nǐ duō hē diǎnr shuǐ' (Vì hôm nay trời quá nóng, bạn uống nhiều nước vào nhé). Bức ảnh thể hiện uống nước (hē shuǐ) khớp với lời thoại nên đáp án là Đúng (√).",
-      "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   7",
+      "listening_pinyin": "Nǐ yào nǎge? Zuǒbian de?",
       "pinyin": "Nǐ yào nǎge? Zuǒbian de?",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "Câu hỏi nghe số 7"
+      "listening_viet": "[VIET] Bạn muốn cái nào? Cái bên trái à?"
     },
     {
       "exam_code": "H21332",
@@ -154,18 +154,18 @@ export const examData: ExamDetail = {
       "question_no": 8,
       "image": "images/H21332_img_08.webp",
       "type": "True/False",
-      "text": "我开车来的，我送你。",
+      "text": "Câu hỏi nghe số 8",
       "answer": "√",
-      "listening_script": "9．",
+      "listening_script": "我开车来的，我送你。",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nói: 'Zài lái diǎnr mǐfàn ba, nǐ chī de tài shǎo le' (Ăn thêm chút cơm nhé, bạn ăn ít quá). Bức ảnh bát cơm và đôi đũa (mǐfàn) khớp với lời thoại nên đáp án là Đúng (√).",
-      "listening_pinyin": "9．",
+      "listening_pinyin": "Wǒ kāi chē lái de, wǒ sòng nǐ.",
       "pinyin": "Wǒ kāi chē lái de, wǒ sòng nǐ.",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "9．"
+      "listening_viet": "[VIET] Tôi lái xe đến, tôi đưa bạn về."
     },
     {
       "exam_code": "H21332",
@@ -174,18 +174,18 @@ export const examData: ExamDetail = {
       "question_no": 9,
       "image": "images/H21332_img_09.webp",
       "type": "True/False",
-      "text": "先生，桌子上的手机是您的吗？",
+      "text": "Câu hỏi nghe số 9",
       "answer": "×",
-      "listening_script": "Câu hỏi nghe số 9",
+      "listening_script": "先生，桌子上的手机是您的吗？",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật dặn: 'Yīfu wǒ gěi nǐ xǐ le' (Quần áo tôi đã giặt cho bạn rồi). Bức ảnh người phụ nữ đang giặt quần áo (xǐ yīfu) khớp với lời thoại nên đáp án là Đúng (√).",
-      "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   9",
+      "listening_pinyin": "Xiānsheng, zhuōzi shàng de shǒujī shì nín de ma?",
       "pinyin": "Xiānsheng, zhuōzi shàng de shǒujī shì nín de ma?",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "Câu hỏi nghe số 9"
+      "listening_viet": "[VIET] Thưa ông, điện thoại trên bàn có phải của ông không?"
     },
     {
       "exam_code": "H21332",
@@ -194,18 +194,18 @@ export const examData: ExamDetail = {
       "question_no": 10,
       "image": "images/H21332_img_10.webp",
       "type": "True/False",
-      "text": "他正在睡觉。",
+      "text": "Câu hỏi nghe số 10",
       "answer": "√",
-      "listening_script": "H21332 - 3",
+      "listening_script": "他正在睡觉。",
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nói: 'Nǐ tài lèi le, ràng tā shuì ba' (Bạn mệt quá rồi, để cô ấy ngủ đi). Bức ảnh thể hiện người đang ngủ (shuìjiào) khớp với lời thoại nên đáp án là Đúng (√).",
-      "listening_pinyin": "H21332 - 3",
+      "listening_pinyin": "Tā zhèngzài shuìjiào.",
       "pinyin": "Tā zhèngzài shuìjiào.",
       "options": [
         "√ Đúng",
         "× Sai"
       ],
-      "listening_viet": "H21332 - 3"
+      "listening_viet": "[VIET] Anh ấy đang ngủ."
     },
     {
       "exam_code": "H21332",
@@ -214,13 +214,12 @@ export const examData: ExamDetail = {
       "question_no": 11,
       "image": null,
       "type": "Image Match",
-      "text": "女：你怎么没洗衣服？\n男：中午去游泳了，我现在就去洗。",
+      "text": "Câu hỏi nghe số 11",
       "answer": "F",
-      "listening_script": "F 12．E 13．B 14．C 15．A",
+      "listening_script": "女：你怎么没洗衣服？\n男：中午去游泳了，我现在就去洗。",
       "board_image": "images/H21332_board_11_15.webp",
       "explanation": "Hội thoại nhắc đến đi bơi 'qù yóuyǒng' và giặt quần áo. Tranh F thể hiện đồ bơi / đi bơi nên đáp án là F.",
-      "listening_pinyin": "F 12．E 13．B 14．C 15．A",
-      "pinyin": "Nǚ: Nǐ zěnme méi xǐ yīfu?\nNán: Zhōngwǔ qù yóuyǒng le, wǒ xiànzài jiù qù xǐ.",
+      "listening_pinyin": "Nǚ: Nǐ zěnme méi xǐ yīfu?\nNán: Zhōngwǔ qù yóuyǒng le, wǒ xiànzài jiù qù xǐ.",
       "options": [
         "A",
         "B",
@@ -229,7 +228,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "F 12．E 13．B 14．C 15．A"
+      "listening_viet": "[VIET] Nữ: Sao anh chưa giặt quần áo?\nNam: Buổi trưa đi bơi rồi, giờ anh đi giặt ngay đây."
     },
     {
       "exam_code": "H21332",
@@ -238,13 +237,12 @@ export const examData: ExamDetail = {
       "question_no": 12,
       "image": null,
       "type": "Image Match",
-      "text": "男：喂，你下班了吗？\n女：我还有点儿工作没做完，你等我一下。",
+      "text": "Câu hỏi nghe số 12",
       "answer": "E",
-      "listening_script": "Câu hỏi nghe số 12",
+      "listening_script": "男：喂，你下班了吗？\n女：我还有点儿工作没做完，你等我一下。",
       "board_image": "images/H21332_board_11_15.webp",
       "explanation": "Hội thoại gọi điện hỏi về công việc chưa làm xong 'gōngzuò'. Tranh E thể hiện hình ảnh phù hợp nên đáp án là E.",
-      "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 2",
-      "pinyin": "Nán: Wèi, nǐ xiàbān le ma?\nNǚ: Wǒ hái yǒu diǎnr gōngzuò méi zuò wán, nǐ děng wǒ yíxià.",
+      "listening_pinyin": "Nán: Wèi, nǐ xiàbān le ma?\nNǚ: Wǒ hái yǒu diǎnr gōngzuò méi zuò wán, nǐ děng wǒ yíxià.",
       "options": [
         "A",
         "B",
@@ -253,7 +251,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "Câu hỏi nghe số 12"
+      "listening_viet": "[VIET] Nam: Alo, em tan làm chưa?\nNữ: Em còn chút công việc chưa xong, anh chờ em một chút."
     },
     {
       "exam_code": "H21332",
@@ -262,13 +260,12 @@ export const examData: ExamDetail = {
       "question_no": 13,
       "image": null,
       "type": "Image Match",
-      "text": "女：老师，这个我知道。\n男：好，你来给大家介绍介绍。",
+      "text": "Câu hỏi nghe số 13",
       "answer": "B",
-      "listening_script": "14．",
+      "listening_script": "女：老师，这个我知道。\n男：好，你来给大家介绍介绍。",
       "board_image": "images/H21332_board_11_15.webp",
       "explanation": "Học sinh nói với thầy giáo 'lǎoshī，zhège wǒ zhīdào' (Thầy ơi, cái này em biết). Tranh B thể hiện học sinh giơ tay trước thầy giáo nên đáp án là B.",
-      "listening_pinyin": "14．",
-      "pinyin": "Nǚ: Lǎoshī, zhège wǒ zhīdào.\nNán: Hǎo, nǐ lái gěi dàjiā jièshào jièshào.",
+      "listening_pinyin": "Nǚ: Lǎoshī, zhège wǒ zhīdào.\nNán: Hǎo, nǐ lái gěi dàjiā jièshào jièshào.",
       "options": [
         "A",
         "B",
@@ -277,7 +274,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "14．"
+      "listening_viet": "[VIET] Nữ: Thầy ơi, cái này em biết.\nNam: Tốt, em hãy giới thiệu cho mọi người đi."
     },
     {
       "exam_code": "H21332",
@@ -286,13 +283,12 @@ export const examData: ExamDetail = {
       "question_no": 14,
       "image": null,
       "type": "Image Match",
-      "text": "男：东西都买好了吗？\n女：牛奶还没买。",
+      "text": "Câu hỏi nghe số 14",
       "answer": "C",
-      "listening_script": "Câu hỏi nghe số 14",
+      "listening_script": "男：东西都买好了吗？\n女：牛奶还没买。",
       "board_image": "images/H21332_board_11_15.webp",
       "explanation": "Hội thoại nhắc đến mua sữa tươi 'niúnǎi'. Tranh C thể hiện hộp/bình sữa tươi nên đáp án là C.",
-      "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 4",
-      "pinyin": "Nán: Dōngxi dōu mǎi hǎo le ma?\nNǚ: Niúnǎi hái méi mǎi.",
+      "listening_pinyin": "Nán: Dōngxi dōu mǎi hǎo le ma?\nNǚ: Niúnǎi hái méi mǎi.",
       "options": [
         "A",
         "B",
@@ -301,7 +297,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "Câu hỏi nghe số 14"
+      "listening_viet": "[VIET] Nam: Đồ đạc mua xong hết chưa?\nNữ: Sữa tươi vẫn chưa mua."
     },
     {
       "exam_code": "H21332",
@@ -310,13 +306,12 @@ export const examData: ExamDetail = {
       "question_no": 15,
       "image": null,
       "type": "Image Match",
-      "text": "女：你怎么不高兴？\n男：天阴了，爸爸说会下雨，不让我出去玩儿。",
+      "text": "Câu hỏi nghe số 15",
       "answer": "A",
-      "listening_script": "H21332 - 4 第16-20 题 A B C D E",
+      "listening_script": "女：你怎么不高兴？\n男：天阴了，爸爸说会下雨，不让我出去玩儿。",
       "board_image": "images/H21332_board_11_15.webp",
       "explanation": "Hội thoại nhắc đến trời âm u sắp mưa 'tiānyīn le，huì xiàyǔ'. Tranh A thể hiện nhìn qua cửa sổ thấy trời mưa/âm u nên đáp án là A.",
-      "listening_pinyin": "H A B C D E",
-      "pinyin": "Nǚ: Nǐ zěnme bù gāoxìng?\nNán: Tiān yīn le, bàba shuō huì xià yǔ, bù ràng wǒ chūqù wánr.",
+      "listening_pinyin": "Nǚ: Nǐ zěnme bù gāoxìng?\nNán: Tiān yīn le, bàba shuō huì xià yǔ, bù ràng wǒ chūqù wánr.",
       "options": [
         "A",
         "B",
@@ -325,7 +320,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "H21332 - 4 第16-20 题 A B C D E"
+      "listening_viet": "[VIET] Nữ: Sao em không vui thế?\nNam: Trời u ám rồi, bố nói sắp mưa nên không cho em ra ngoài chơi."
     },
     {
       "exam_code": "H21332",
@@ -334,13 +329,12 @@ export const examData: ExamDetail = {
       "question_no": 16,
       "image": null,
       "type": "Image Match",
-      "text": "男：服务员，你们饭店什么菜最好吃？\n女：我们店的鱼不错。",
+      "text": "Câu hỏi nghe số 16",
       "answer": "B",
-      "listening_script": "B 17．E 18．C 19．D 20．A",
+      "listening_script": "男：服务员，你们饭店什么菜最好吃？\n女：我们店的鱼不错。",
       "board_image": "images/H21332_board_16_20.webp",
       "explanation": "Hội thoại hỏi phục vụ nhà hàng 'fúwùyuán' về món cá 'yú'. Tranh B thể hiện nữ phục vụ nhà hàng nên đáp án là B.",
-      "listening_pinyin": "B 17．E 18．C 19．D 20．A",
-      "pinyin": "Nán: Fúwùyuán, nǐmen fàndiàn shénme cài zuì hǎochī?\nNǚ: Wǒmen diàn de yú búcuò.",
+      "listening_pinyin": "Nán: Fúwùyuán, nǐmen fàndiàn shénme cài zuì hǎochī?\nNǚ: Wǒmen diàn de yú búcuò.",
       "options": [
         "A",
         "B",
@@ -349,7 +343,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "B 17．E 18．C 19．D 20．A"
+      "listening_viet": "[VIET] Nam: Phục vụ ơi, nhà hàng mình món gì ngon nhất?\nNữ: Món cá nhà em rất ngon đấy."
     },
     {
       "exam_code": "H21332",
@@ -358,13 +352,12 @@ export const examData: ExamDetail = {
       "question_no": 17,
       "image": null,
       "type": "Image Match",
-      "text": "女：我们到哪儿了？\n男：看，在这儿，再走几分钟就到了。",
+      "text": "Câu hỏi nghe số 17",
       "answer": "E",
-      "listening_script": "Câu hỏi nghe số 17",
+      "listening_script": "女：我们到哪儿了？\n男：看，在这儿，再走几分钟就到了。",
       "board_image": "images/H21332_board_16_20.webp",
       "explanation": "Hội thoại hỏi đường và xem bản đồ 'kàn，zài zhèér'. Tranh E thể hiện hai người đang xem bản đồ du lịch nên đáp án là E.",
-      "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 7",
-      "pinyin": "Nǚ: Wǒmen dào nǎr le?\nNán: Kàn, zài zhèr, zài zǒu jǐ fēnzhōng jiù dào le.",
+      "listening_pinyin": "Nǚ: Wǒmen dào nǎr le?\nNán: Kàn, zài zhèr, zài zǒu jǐ fēnzhōng jiù dào le.",
       "options": [
         "A",
         "B",
@@ -373,7 +366,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "Câu hỏi nghe số 17"
+      "listening_viet": "[VIET] Nữ: Chúng ta đến đâu rồi?\nNam: Nhìn này, ở đây, đi thêm mấy phút nữa là tới."
     },
     {
       "exam_code": "H21332",
@@ -382,13 +375,12 @@ export const examData: ExamDetail = {
       "question_no": 18,
       "image": null,
       "type": "Image Match",
-      "text": "男：你女儿唱得真好听！\n女：谢谢，她喜欢唱歌。",
+      "text": "Câu hỏi nghe số 18",
       "answer": "C",
-      "listening_script": "19．",
+      "listening_script": "男：你女儿唱得真好听！\n女：谢谢，她喜欢唱歌。",
       "board_image": "images/H21332_board_16_20.webp",
       "explanation": "Hội thoại khen con gái hát hay 'xǐhuān chànggē'. Tranh C thể hiện bé gái cầm micro hát nên đáp án là C.",
-      "listening_pinyin": "19．",
-      "pinyin": "Nán: Nǐ nǚ'ér chàng de zhēn hǎotīng!\nNǚ: Xièxie, tā xǐhuan chànggē.",
+      "listening_pinyin": "Nán: Nǐ nǚ'ér chàng de zhēn hǎotīng!\nNǚ: Xièxie, tā xǐhuan chànggē.",
       "options": [
         "A",
         "B",
@@ -397,7 +389,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "19．"
+      "listening_viet": "[VIET] Nam: Con gái chị hát hay thật đấy!\nNữ: Cảm ơn, cháu nó thích hát lắm."
     },
     {
       "exam_code": "H21332",
@@ -406,13 +398,12 @@ export const examData: ExamDetail = {
       "question_no": 19,
       "image": null,
       "type": "Image Match",
-      "text": "女：眼睛怎么了？\n男：看电脑时间长了，有点儿累。",
+      "text": "Câu hỏi nghe số 19",
       "answer": "D",
-      "listening_script": "Câu hỏi nghe số 19",
+      "listening_script": "女：眼睛怎么了？\n男：看电脑时间长了，有点儿累。",
       "board_image": "images/H21332_board_16_20.webp",
       "explanation": "Hội thoại hỏi về đôi mắt bị mỏi do xem máy tính lâu 'yǎnjīng', 'kàn diànnǎo'. Tranh D thể hiện người lấy tay xoa/che mắt nên đáp án là D.",
-      "listening_pinyin": "C â u   h ỏ i   n g h e   s ố   1 9",
-      "pinyin": "Nǚ: Yǎnjing zěnme le?\nNán: Kàn diànnǎo shíjiān cháng le, yǒudiǎnr lèi.",
+      "listening_pinyin": "Nǚ: Yǎnjing zěnme le?\nNán: Kàn diànnǎo shíjiān cháng le, yǒudiǎnr lèi.",
       "options": [
         "A",
         "B",
@@ -421,7 +412,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "Câu hỏi nghe số 19"
+      "listening_viet": "[VIET] Nữ: Mắt làm sao thế?\nNam: Xem máy tính lâu quá nên hơi mỏi."
     },
     {
       "exam_code": "H21332",
@@ -430,13 +421,12 @@ export const examData: ExamDetail = {
       "question_no": 20,
       "image": null,
       "type": "Image Match",
-      "text": "男：你有五十块钱吗？\n女：等一下，我找找。",
+      "text": "Câu hỏi nghe số 20",
       "answer": "A",
-      "listening_script": "H21332 - 5",
+      "listening_script": "男：你有五十块钱吗？\n女：等一下，我找找。",
       "board_image": "images/H21332_board_16_20.webp",
       "explanation": "Hội thoại hỏi vay 50 tệ tiền mặt 'wǔshíkuài qián'. Tranh A thể hiện mở ví lấy tiền nên đáp án là A.",
-      "listening_pinyin": "H21332 - 5",
-      "pinyin": "Nán: Nǐ yǒu wǔshí kuài qián ma?\nNǚ: Děng yíxià, wǒ zhǎozhao.",
+      "listening_pinyin": "Nán: Nǐ yǒu wǔshí kuài qián ma?\nNǚ: Děng yíxià, wǒ zhǎozhao.",
       "options": [
         "A",
         "B",
@@ -445,7 +435,7 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "listening_viet": "H21332 - 5"
+      "listening_viet": "[VIET] Nam: Em có 50 tệ không?\nNữ: Chờ một chút, để em tìm xem."
     },
     {
       "exam_code": "H21332",
@@ -456,17 +446,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "女：你姐姐呢？叫她来吃西瓜。\n男：她在房间里看报纸，我去叫她。\n问：姐姐在做什么？",
       "answer": "A",
-      "listening_script": "A 22．C 23．A 24．A 25．B",
+      "listening_script": "女：你姐姐呢？叫她来吃西瓜。\n男：她在房间里看报纸，我去叫她。\n问：姐姐在做什么？",
       "board_image": null,
       "explanation": "Người nam trả lời chị gái 'tā zài fángjiān lǐ kàn bàozhǐ' (Chị ấy đang đọc báo trong phòng), đáp án chọn A kàn bàozhǐ.",
-      "listening_pinyin": "A 22．C 23．A 24．A 25．B",
+      "listening_pinyin": "Nǚ: Nǐ jiějie ne? Jiào tā lái chī xīguā.\nNán: Tā zài fángjiān lǐ kàn bàozhǐ, wǒ qù jiào tā.\nWèn: Jiějie zài zuò shénme?",
       "pinyin": "Nǚ: Nǐ jiějie ne? Jiào tā lái chī xīguā.\nNán: Tā zài fángjiān lǐ kàn bàozhǐ, wǒ qù jiào tā.\nWèn: Jiějie zài zuò shénme?",
       "options": [
         "A 看报纸 (kàn bàozhǐ)",
         "B 洗水果 (xǐ shuǐguǒ)",
         "C 玩儿电脑 (wánr diànnǎo)"
       ],
-      "listening_viet": "A 22．C 23．A 24．A 25．B"
+      "listening_viet": "[VIET] Nữ: Chị gái em đâu? Gọi chị ra ăn dưa hấu đi.\nNam: Chị ấy đang đọc báo trong phòng, em đi gọi chị.\nHỏi: Chị gái đang làm gì?"
     },
     {
       "exam_code": "H21332",
@@ -477,17 +467,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "男：这次考试你准备得怎么样了？\n女：我觉得没问题了。\n问：女的是什么意思？",
       "answer": "C",
-      "listening_script": "A bié 别 shuōhuà 说话 B tí 题 hěn 很 shǎo 少 C zhǔnbèihǎo 准备好 le 了",
+      "listening_script": "男：这次考试你准备得怎么样了？\n女：我觉得没问题了。\n问：女的是什么意思？",
       "board_image": null,
       "explanation": "Người nữ trả lời 'wǒ juéde méi wèntí le' (Tôi thấy không có vấn đề gì nữa), biểu thị đã chuẩn bị xong, đáp án C zhǔnbèi hǎo le.",
-      "listening_pinyin": "A bié shuōhuà B tí hěn shǎo C zhǔnbèihǎo le",
+      "listening_pinyin": "Nán: Zhè cì kǎoshì nǐ zhǔnbèi de zěnmeyàng le?\nNǚ: Wǒ juéde méi wèntí le.\nWèn: Nǚ de shì shénme yìsi?",
       "pinyin": "Nán: Zhè cì kǎoshì nǐ zhǔnbèi de zěnmeyàng le?\nNǚ: Wǒ juéde méi wèntí le.\nWèn: Nǚ de shì shénme yìsi?",
       "options": [
         "A 别说话 (bié shuōhuà)",
         "B 题很少 (tí hěn shǎo)",
         "C 准备好了 (zhǔnbèihǎo le)"
       ],
-      "listening_viet": "Đừng nói với tôi rằng các chủ đề hiếm khi được chuẩn bị."
+      "listening_viet": "[VIET] Nam: Kỳ thi lần này cậu chuẩn bị đến đâu rồi?\nNữ: Tớ thấy ổn rồi, không vấn đề gì.\nHỏi: Người nữ có ý gì?"
     },
     {
       "exam_code": "H21332",
@@ -498,17 +488,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "女：为什么你孩子的名字叫乐乐？\n男：因为我希望他能快快乐乐的。\n问：男的希望孩子怎么样？",
       "answer": "A",
-      "listening_script": "A kuàilè 快乐 B shēntǐ 身体 hǎo 好 C ài 爱 dú 读 shū 书",
+      "listening_script": "女：为什么你孩子的名字叫乐乐？\n男：因为我希望他能快快乐乐的。\n问：男的希望孩子怎么样？",
       "board_image": null,
       "explanation": "Người nam giải thích đặt tên con là Nhạc Nhạc 'yīnwèi wǒ xīwàng tā néng kuàikuàilèlè de' (Vì tôi hy vọng con vui vẻ), đáp án A kuàilè.",
-      "listening_pinyin": "A kuàilè B shēntǐ hǎo C ài dú shū",
+      "listening_pinyin": "Nán: Wèishénme nǐ háizi de míngzi jiào Lèlè?\nNán: Yīnwèi wǒ xīwàng tā néng kuàikuàilèlè de.\nWèn: Nán de xīwàng háizi zěnmeyàng?",
       "pinyin": "Nán: Wèishénme nǐ háizi de míngzi jiào Lèlè?\nNán: Yīnwèi wǒ xīwàng tā néng kuàikuàilèlè de.\nWèn: Nán de xīwàng háizi zěnmeyàng?",
       "options": [
         "A 快乐 (kuàilè)",
         "B 身体好 (shēntǐ hǎo)",
         "C 爱读书 (ài dúshū)"
       ],
-      "listening_viet": "Vui vẻ và khỏe mạnh, thích đọc sách"
+      "listening_viet": "[VIET] Nữ: Tại sao tên con anh lại gọi là Nhạc Nhạc (Lạc Lạc)?\nNam: Vì tôi hy vọng cháu luôn vui vẻ hạnh phúc.\nHỏi: Người nam hy vọng con mình thế nào?"
     },
     {
       "exam_code": "H21332",
@@ -519,17 +509,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "男：你认识那个女医生？\n女：是，上次我生病，就是她给我看的。\n问：他们在说谁？",
       "answer": "A",
-      "listening_script": "A nǚ 女 yīshēng 医生 B xiǎoxuéshēng 小学生 C xīn 新 tóngxué 同学",
+      "listening_script": "男：你认识那个女医生？\n女：是，上次我生病，就是她给我看的。\n问：他们在说谁？",
       "board_image": null,
       "explanation": "Hội thoại nhắc đến 'nǚyīshēng' (bác sĩ nữ) khám bệnh cho người nữ, đáp án chọn A nǚyīshēng.",
-      "listening_pinyin": "A nǚ yīshēng B xiǎoxuéshēng C xīn tóngxué",
+      "listening_pinyin": "Nán: Nǐ rènshi nàge nǚ yīshēng?\nNǚ: Shì, shàng cì wǒ shēngbìng, jiùshì tā gěi wǒ kàn de.\nWèn: Tāmen zài shuō shéi?",
       "pinyin": "Nán: Nǐ rènshi nàge nǚ yīshēng?\nNǚ: Shì, shàng cì wǒ shēngbìng, jiùshì tā gěi wǒ kàn de.\nWèn: Tāmen zài shuō shéi?",
       "options": [
         "A 女医生 (nǚ yīshēng)",
         "B 小学生 (xiǎoxuéshēng)",
         "C 新同学 (xīn tóngxué)"
       ],
-      "listening_viet": "Nữ bác sĩ, bạn học mới của học sinh tiểu học"
+      "listening_viet": "[VIET] Nam: Cậu quen nữ bác sĩ đó à?\nNữ: Đúng vậy, lần trước tớ bị ốm chính là cô ấy khám cho.\nHỏi: Họ đang nói về ai?"
     },
     {
       "exam_code": "H21332",
@@ -540,17 +530,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "女：早上怎么没见你出来跑步？\n男：我起晚了就没去。\n问：男的为什么没去跑步？",
       "answer": "B",
-      "listening_script": "A xiàyǔ 下雨 le 了 B qǐwǎn 起晚 le 了 C tiānqì 天气 tài 太 rè 热",
+      "listening_script": "女：早上怎么没见你出来跑步？\n男：我起晚了就没去。\n问：男的为什么没去跑步？",
       "board_image": null,
       "explanation": "Người nam giải thích lý do không đi chạy bộ 'wǒqǐ wǎn le jiù méi qù' (Tôi ngủ dậy muộn nên không đi), chọn B qǐwǎn le.",
-      "listening_pinyin": "A xiàyǔ le B qǐwǎn le C tiānqì tài rè",
+      "listening_pinyin": "Nǚ: Zǎoshang zěnme méi jiàn nǐ chūlái pǎobù?\nNán: Wǒ qǐ wǎn le jiù méi qù.\nWèn: Nán de wèishénme méi qù pǎobù?",
       "pinyin": "Nǚ: Zǎoshang zěnme méi jiàn nǐ chūlái pǎobù?\nNán: Wǒ qǐ wǎn le jiù méi qù.\nWèn: Nán de wèishénme méi qù pǎobù?",
       "options": [
         "A 下雨了 (xià yǔ le)",
         "B 起晚了 (qǐ wǎn le)",
         "C 天气太热 (tiānqì tài rè)"
       ],
-      "listening_viet": "Trời đang mưa và tôi dậy muộn. Thời tiết quá nóng."
+      "listening_viet": "[VIET] Nữ: Sáng nay sao không thấy anh ra chạy bộ?\nNam: Anh dậy muộn nên không đi nữa.\nHỏi: Tại sao người nam không đi chạy bộ?"
     },
     {
       "exam_code": "H21332",
@@ -561,17 +551,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "男：给你妹妹打个电话，让她早点儿回家。\n女：打过了，她说买完东西就回来。\n问：妹妹最可能在哪儿？",
       "answer": "A",
-      "listening_script": "A 27．B 28．B 29．B 30．C",
+      "listening_script": "男：给你妹妹打个电话，让她早点儿回家。\n女：打过了，她说买完东西就回来。\n问：妹妹最可能在哪儿？",
       "board_image": null,
       "explanation": "Người nữ nói em gái 'mǎi wán dōngxī jiù huílái' (mua đồ xong sẽ về), nên em gái đang ở A shāngdiàn (cửa hàng).",
-      "listening_pinyin": "A 27．B 28．B 29．B 30．C",
+      "listening_pinyin": "Nán: Gěi nǐ mèimei dǎ ge diànhuà, ràng tā zǎodiǎnr huí jiā.\nNǚ: Dǎ guò le, tā shuō mǎi wán dōngxi jiù huílái.\nWèn: Mèimei zuì kěnéng zài nǎr?",
       "pinyin": "Nán: Gěi nǐ mèimei dǎ ge diànhuà, ràng tā zǎodiǎnr huí jiā.\nNǚ: Dǎ guò le, tā shuō mǎi wán dōngxi jiù huílái.\nWèn: Mèimei zuì kěnéng zài nǎr?",
       "options": [
         "A 商店 (shāngdiàn)",
         "B 医院 (yīyuàn)",
         "C 火车站 (huǒchēzhàn)"
       ],
-      "listening_viet": "A 27．B 28．B 29．B 30．C"
+      "listening_viet": "[VIET] Nam: Gọi điện cho em gái con, bảo nó về nhà sớm chút.\nNữ: Con gọi rồi, em bảo mua đồ xong sẽ về ngay.\nHỏi: Em gái có khả năng nhất đang ở đâu?"
     },
     {
       "exam_code": "H21332",
@@ -582,17 +572,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "女：这是你的铅笔吗？\n男：是的，你在哪儿找到的？\n问：女的找到了什么？",
       "answer": "B",
-      "listening_script": "A māo 猫 B qiānbǐ 铅笔 C shǒubiǎo 手表",
+      "listening_script": "女：这是你的铅笔吗？\n男：是的，你在哪儿找到的？\n问：女的找到了什么？",
       "board_image": null,
       "explanation": "Người nữ hỏi 'zhè shì nǐ de qiānbǐ ma？' (Đây là bút chì của bạn à?), đáp án B qiānbǐ.",
-      "listening_pinyin": "A māo B qiānbǐ C shǒubiǎo",
+      "listening_pinyin": "Nǚ: Zhè shì nǐ de qiānbǐ ma?\nNán: Shì de, nǐ zài nǎr zhǎodào de?\nWèn: Nǚ de zhǎodào le shénme?",
       "pinyin": "Nǚ: Zhè shì nǐ de qiānbǐ ma?\nNán: Shì de, nǐ zài nǎr zhǎodào de?\nWèn: Nǚ de zhǎodào le shénme?",
       "options": [
         "A 猫 (māo)",
         "B 铅笔 (qiānbǐ)",
         "C 手表 (shǒubiǎo)"
       ],
-      "listening_viet": "đồng hồ bút chì mèo"
+      "listening_viet": "[VIET] Nữ: Đây có phải bút chì của cậu không?\nNam: Đúng rồi, cậu tìm thấy ở đâu thế?\nHỏi: Người nữ đã tìm thấy cái gì?"
     },
     {
       "exam_code": "H21332",
@@ -603,17 +593,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "男：明天上午去北京的火车票还有吗？\n女：上午的卖完了，下午的可以吗？\n问：男的想买哪天的票？",
       "answer": "B",
-      "listening_script": "A jīntiān 今天 B míngtiān 明天 C hòutiān 后天",
+      "listening_script": "男：明天上午去北京的火车票还有吗？\n女：上午的卖完了，下午的可以吗？\n问：男的想买哪天的票？",
       "board_image": null,
       "explanation": "Người nam hỏi mua vé tàu đi Bắc Kinh vào ngày 'míngtiān' (ngày mai), chọn B míngtiān.",
-      "listening_pinyin": "A jīntiān B míngtiān C hòutiān",
+      "listening_pinyin": "Nán: Míngtiān shàngwǔ qù Běijīng de huǒchēpiào hái yǒu ma?\nNǚ: Shàngwǔ de mài wán le, xiàwǔ de kěyǐ ma?\nWèn: Nán de xiǎng mǎi nǎ tiān de piào?",
       "pinyin": "Nán: Míngtiān shàngwǔ qù Běijīng de huǒchēpiào hái yǒu ma?\nNǚ: Shàngwǔ de mài wán le, xiàwǔ de kěyǐ ma?\nWèn: Nán de xiǎng mǎi nǎ tiān de piào?",
       "options": [
         "A 今天 (jīntiān)",
         "B 明天 (míngtiān)",
         "C 后天 (hòutiān)"
       ],
-      "listening_viet": "Hôm nay, ngày mai và ngày kia"
+      "listening_viet": "[VIET] Nam: Vé tàu đi Bắc Kinh sáng mai còn không?\nNữ: Chuyến sáng bán hết rồi, chuyến chiều được không?\nHỏi: Người nam muốn mua vé ngày nào?"
     },
     {
       "exam_code": "H21332",
@@ -624,17 +614,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "女：听说中国有一百多个姓。\n男：比这多多了，《百家姓》这本书里就有五百多个。\n问：那本书里有多少个姓？",
       "answer": "B",
-      "listening_script": "A 56 ge 个 B 500 duō 多 C 1500 duō 多",
+      "listening_script": "女：听说中国有一百多个姓。\n男：比这多多了，《百家姓》这本书里就有五百多个。\n问：那本书里有多少个姓？",
       "board_image": null,
       "explanation": "Người nam nói cuốn sách Bách Gia Tánh có 'wǔbǎiduōgè' (hơn 500 họ), đáp án chọn B 500duō.",
-      "listening_pinyin": "A ge B duō C duō",
+      "listening_pinyin": "Nǚ: Tīngshuō Zhōngguó yǒu yìbǎi duō ge xìng.\nNán: Bǐ zhè duō duō le, 《Bǎijiāxìng》zhè běn shū lǐ jiù yǒu wǔbǎi duō ge.\nWèn: Nà běn shū lǐ yǒu duōshao ge xìng?",
       "pinyin": "Nǚ: Tīngshuō Zhōngguó yǒu yìbǎi duō ge xìng.\nNán: Bǐ zhè duō duō le, 《Bǎijiāxìng》zhè běn shū lǐ jiù yǒu wǔbǎi duō ge.\nWèn: Nà běn shū lǐ yǒu duōshao ge xìng?",
       "options": [
         "A 56个 (56 ge)",
         "B 500多 (500 duō)",
         "C 1500多 (1500 duō)"
       ],
-      "listening_viet": "A 56 ge 个 B 500 duō 多 C 1500 duō 多"
+      "listening_viet": "[VIET] Nữ: Nghe nói Trung Quốc có hơn 100 họ.\nNam: Nhiều hơn thế nhiều, cuốn 'Bách Gia Họ' đã có hơn 500 họ rồi.\nHỏi: Trong cuốn sách đó có bao nhiêu họ?"
     },
     {
       "exam_code": "H21332",
@@ -645,17 +635,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "男：你昨天下午去看电影了？\n女：没有，我去咖啡馆见朋友了。\n问：女的昨天下午去哪儿了？",
       "answer": "C",
-      "listening_script": "A cháguǎnr 茶馆儿 B diànyǐngyuàn 电影院 C kāfēiguǎnr 咖啡馆儿 H21332 - 6",
+      "listening_script": "男：你昨天下午去看电影了？\n女：没有，我去咖啡馆见朋友了。\n问：女的昨天下午去哪儿了？",
       "board_image": null,
       "explanation": "Người nữ đính chính 'wǒ qù kāfēiguǎn jiàn péngyǒu le' (Tôi đi quán cà phê gặp bạn rồi), chọn C kāfēiguǎn ér.",
-      "listening_pinyin": "A cháguǎnr B diànyǐngyuàn C kāfēiguǎnr H",
+      "listening_pinyin": "Nán: Nǐ zuótiān xiàwǔ qù kàn diànyǐng le?\nNǚ: Méiyǒu, wǒ qù kāfēiguǎn jiàn péngyou le.\nWèn: Nǚ de zuótiān xiàwǔ qù nǎr le?",
       "pinyin": "Nán: Nǐ zuótiān xiàwǔ qù kàn diànyǐng le?\nNǚ: Méiyǒu, wǒ qù kāfēiguǎn jiàn péngyou le.\nWèn: Nǚ de zuótiān xiàwǔ qù nǎr le?",
       "options": [
         "A 茶馆儿 (cháguǎnr)",
         "B 电影院 (diànyǐngyuàn)",
         "C 咖啡馆儿 (kāfēiguǎnr)"
       ],
-      "listening_viet": "Quán trà, rạp chiếu phim, quán cà phê"
+      "listening_viet": "[VIET] Nam: Chiều qua em đi xem phim à?\nNữ: Không có, em đi quán cà phê gặp bạn.\nHỏi: Chiều qua người nữ đã đi đâu?"
     },
     {
       "exam_code": "H21332",
@@ -666,17 +656,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "男：你去上汉字课了吗？\n女：去了，这个课非常有意思。\n男：听课的人多不多？\n女：不少，有37人呢。\n问：女的觉得汉字课怎么样？",
       "answer": "C",
-      "listening_script": "C 32．C 33．B 34．A 35．C 二、阅 读 第一部分",
+      "listening_script": "男：你去上汉字课了吗？\n女：去了，这个课非常有意思。\n男：听课的人多不多？\n女：不少，有37人呢。\n问：女的觉得汉字课怎么样？",
       "board_image": null,
       "explanation": "Người nữ đánh giá về lớp học Hán tự 'zhège kè fēicháng yǒuyìsi' (Môn học này rất thú vị), đáp án C hěn yǒuyìsi.",
-      "listening_pinyin": "C C B A C",
+      "listening_pinyin": "Nán: Nǐ qù shàng Hànzì kè le ma?\nNǚ: Qù le, zhège kè fēicháng yǒu yìsi.\nNán: Tīng kè de rén duō bù duō?\nNǚ: Bù shǎo, yǒu 37 rén ne.\nWèn: Nǚ de juéde Hànzì kè zěnmeyàng?",
       "pinyin": "Nán: Nǐ qù shàng Hànzì kè le ma?\nNǚ: Qù le, zhège kè fēicháng yǒu yìsi.\nNán: Tīng kè de rén duō bù duō?\nNǚ: Bù shǎo, yǒu 37 rén ne.\nWèn: Nǚ de juéde Hànzì kè zěnmeyàng?",
       "options": [
         "A 听不懂 (tīngbudǒng)",
         "B 考试多 (kǎoshì duō)",
         "C 很有意思 (hěn yǒu yìsi)"
       ],
-      "listening_viet": "2. Đọc Phần Một"
+      "listening_viet": "[VIET] Nam: Cậu đi học lớp Hán tự chưa?\nNữ: Đi rồi, môn này thú vị lắm.\nNam: Người nghe giảng có đông không?\nNữ: Khá đông, có 37 người cơ.\nHỏi: Người nữ cảm thấy môn Hán tự thế nào?"
     },
     {
       "exam_code": "H21332",
@@ -687,17 +677,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "女：晚上吃什么？\n男：我都可以，你想吃什么？\n女：面条儿，怎么样？\n男：好，那我们就去学校旁边那家面馆儿吧。\n问：他们晚饭吃什么？",
       "answer": "C",
-      "listening_script": "A mǐfàn 米饭 B jīdàn 鸡蛋 C miàntiáor 面条儿",
+      "listening_script": "女：晚上吃什么？\n男：我都可以，你想吃什么？\n女：面条儿，怎么样？\n男：好，那我们就去学校旁边那家面馆儿吧。\n问：他们晚饭吃什么？",
       "board_image": null,
       "explanation": "Hai người đồng ý đi ăn mì ở quán cạnh trường 'miàntiáoér', đáp án chọn C miàntiáoér.",
-      "listening_pinyin": "A mǐfàn B jīdàn C miàntiáor",
+      "listening_pinyin": "Nǚ: Wǎnshang chī shénme?\nNán: Wǒ dōu kěyǐ, nǐ xiǎng chī shénme?\nNǚ: Miàntiáor, zěnmeyàng?\nNán: Hǎo, nà wǒmen jiù qù xuéxiào pángbiān nà jiā miànguǎnr ba.\nWèn: Tāmen wǎnfàn chī shénme?",
       "pinyin": "Nǚ: Wǎnshang chī shénme?\nNán: Wǒ dōu kěyǐ, nǐ xiǎng chī shénme?\nNǚ: Miàntiáor, zěnmeyàng?\nNán: Hǎo, nà wǒmen jiù qù xuéxiào pángbiān nà jiā miànguǎnr ba.\nWèn: Tāmen wǎnfàn chī shénme?",
       "options": [
         "A 米饭 (mǐfàn)",
         "B 鸡蛋 (jīdàn)",
         "C 面条儿 (miàntiáor)"
       ],
-      "listening_viet": "Bún trứng"
+      "listening_viet": "[VIET] Nữ: Tối nay ăn gì?\nNam: Anh ăn gì cũng được, em muốn ăn gì?\nNữ: Mì sợi thì sao?\nNam: Được, vậy chúng mình đến quán mì cạnh trường học nhé.\nHỏi: Bữa tối họ ăn gì?"
     },
     {
       "exam_code": "H21332",
@@ -708,17 +698,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "男：你什么时候生日？\n女：六月二号。\n男：那再有两天不就是你的生日了？\n女：是啊，很快，我就十八岁了。\n问：女的哪天生日？",
       "answer": "B",
-      "listening_script": "A 4 tiān 天 qián 前 B 6 yuè 月2 hào 号 C xià 下 xīngqīrì 星期日",
+      "listening_script": "男：你什么时候生日？\n女：六月二号。\n男：那再有两天不就是你的生日了？\n女：是啊，很快，我就十八岁了。\n问：女的哪天生日？",
       "board_image": null,
       "explanation": "Người nữ nói rõ sinh nhật của mình là ngày 'liùyuè èrhào' (mùng 2 tháng 6), chọn B 6yuè2hào.",
-      "listening_pinyin": "A tiān qián B yuè hào C xià xīngqīrì",
+      "listening_pinyin": "Nán: Nǐ shénme shíhou shēngrì?\nNǚ: Liù yuè èr hào.\nNán: Nà zài yǒu liǎng tiān bú jiùshì nǐ de shēngrì le?\nNǚ: Shì a, hěn kuài, wǒ jiù shíbā suì le.\nWèn: Nǚ de nǎ tiān shēngrì?",
       "pinyin": "Nán: Nǐ shénme shíhou shēngrì?\nNǚ: Liù yuè èr hào.\nNán: Nà zài yǒu liǎng tiān bú jiùshì nǐ de shēngrì le?\nNǚ: Shì a, hěn kuài, wǒ jiù shíbā suì le.\nWèn: Nǚ de nǎ tiān shēngrì?",
       "options": [
         "A 4天前 (4 tiān qián)",
         "B 6月2号 (6 yuè 2 hào)",
         "C 下星期日 (xià xīngqīrì)"
       ],
-      "listening_viet": "Chủ Nhật tiếp theo của tháng trước ngày đó"
+      "listening_viet": "[VIET] Nam: Sinh nhật em khi nào?\nNữ: Mồng 2 tháng 6.\nNam: Thế hai ngày nữa là đến sinh nhật em rồi à?\nNữ: Vâng, nhanh thật, em sắp 18 tuổi rồi.\nHỏi: Sinh nhật người nữ là ngày nào?"
     },
     {
       "exam_code": "H21332",
@@ -729,17 +719,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "女：老王，中午有个叫李天的打电话找你。\n男：李天？ me他是我大学同学，他说找我什么事了吗？\n女：没有，他让你给他回个电话。\n男：好，我知道了，谢谢。\n问：谁给男的打电话了？",
       "answer": "A",
-      "listening_script": "A tā 他 tóngxué 同学 B tā 他 dìdi 弟弟 C tā 他 qīzi 妻子",
+      "listening_script": "女：老王，中午有个叫李天的打电话找你。\n男：李天？ 他是我的大学同学，他说找我什么事了吗？\n女：没有，他让你给他回个电话。\n男：好，我知道了，谢谢。\n问：谁给男的打电话了？",
       "board_image": null,
       "explanation": "Người nam giải thích Lý Thiên là 'wǒ dàxué tóngxué' (bạn học đại học của tôi), đáp án A tā tóngxué.",
-      "listening_pinyin": "A tā tóngxué B tā dìdi C tā qīzi",
+      "listening_pinyin": "Nǚ: Lǎo Wáng, zhōngwǔ yǒu ge jiào Lǐ Tiān de dǎ diànhuà zhǎo nǐ.\nNán: Lǐ Tiān? Tā shì wǒ dàxué tóngxué, tā shuō zhǎo wǒ shénme shì le ma?\nNǚ: Méiyǒu, tā ràng nǐ gěi tā huí ge diànhuà.\nNán: Hǎo, wǒ zhīdào le, xièxie.\nWèn: Shéi gěi nán de dǎ diànhuà le?",
       "pinyin": "Nǚ: Lǎo Wáng, zhōngwǔ yǒu ge jiào Lǐ Tiān de dǎ diànhuà zhǎo nǐ.\nNán: Lǐ Tiān? Tā shì wǒ dàxué tóngxué, tā shuō zhǎo wǒ shénme shì le ma?\nNǚ: Méiyǒu, tā ràng nǐ gěi tā huí ge diànhuà.\nNán: Hǎo, wǒ zhīdào le, xièxie.\nWèn: Shéi gěi nán de dǎ diànhuà le?",
       "options": [
         "A 他同学 (tā tóngxué)",
         "B 他弟弟 (tā dìdi)",
         "C 他妻子 (tā qīzi)"
       ],
-      "listening_viet": "Bạn cùng lớp, anh trai, vợ anh"
+      "listening_viet": "[VIET] Nữ: Lão Vương, buổi trưa có người tên Lý Thiên gọi điện tìm anh đấy.\nNam: Lý Thiên? Cậu ấy là bạn đại học của tôi, cậu ấy có nói tìm tôi có việc gì không?\nNữ: Không có, anh ấy bảo anh gọi lại cho anh ấy.\nNam: Được, tôi biết rồi, cảm ơn nhé.\nHỏi: Ai đã gọi điện cho người nam?"
     },
     {
       "exam_code": "H21332",
@@ -750,17 +740,17 @@ export const examData: ExamDetail = {
       "type": "Multiple Choice",
       "text": "男：现在几点了？\n女：三点多，怎么了？\n男：我要去机场了，高小姐的飞机五点到。\n女：那你快去吧。\n问：高小姐怎么来？",
       "answer": "C",
-      "listening_script": "A zǒulù 走路 B kāi 开 chē 车 C zuò 坐 fēijī 飞机   8 二、阅 读 第一部分 第36-40 题 A B C D E F 例如： Měi 每 ge 个 xīngqīliù， 星期六， wǒ 我 dōu 都 qù 去 dǎ 打 lánqiú． 篮球。 D",
+      "listening_script": "男：现在几点了？\n女：三点多，怎么了？\n男：我要去机场了，高小姐的飞机五点到。\n女：那你快去吧。\n问：高小姐怎么来？",
       "board_image": null,
       "explanation": "Người nam nói đi sân bay đón cô Cao vì chuyến bay đến lúc 5h 'gāo xiǎojiě de fēijī wǔdiǎn dào', đáp án C zuòfēijī.",
-      "listening_pinyin": "A   z ǒ u l ù   zǒu lù   B   k ā i   kāi   c h ē   chē   C   z u ò   zuò   f ē i j ī   fēi jī       8   èr 、 yuè   dú   dì yī bù fen   dì 3 6 - 4 0   tí   A   B   C   D   E   F   lì rú ：   M ě i   měi   g e   gè   x ī n g q ī l i ù ，   xīng qī liù ，   w ǒ   wǒ   d ō u   dōu   q ù   qù   d ǎ   dǎ   l á n q i ú ．   lán qiú 。   D",
+      "listening_pinyin": "Nán: Xiànzài jǐ diǎn le?\nNǚ: Sān diǎn duō, zěnme le?\nNán: Wǒ yào qù jīchǎng le, Gāo xiǎojiě de fēijī wǔ diǎn dào.\nNǚ: Nà nǐ kuài qù ba.\nWèn: Gāo xiǎojiě zěnme lái?",
       "pinyin": "Nán: Xiànzài jǐ diǎn le?\nNǚ: Sān diǎn duō, zěnme le?\nNán: Wǒ yào qù jīchǎng le, Gāo xiǎojiě de fēijī wǔ diǎn dào.\nNǚ: Nà nǐ kuài qù ba.\nWèn: Gāo xiǎojiě zěnme lái?",
       "options": [
         "A 走路 (zǒulù)",
         "B 开车 (kāi chē)",
         "C 坐飞机 (zuò fēijī)"
       ],
-      "listening_viet": "Đi bộ, lái xe, bay. 2. Đọc phần đầu tiên của câu hỏi. Ví dụ: Thứ bảy hàng tuần tôi đi chơi bóng rổ."
+      "listening_viet": "[VIET] Nam: Bây giờ mấy giờ rồi?\nNữ: Hơn 3 giờ, sao thế?\nNam: Anh phải ra sân bay rồi, máy bay của cô Cao 5 giờ tới.\nNữ: Thế anh mau đi đi.\nHỏi: Cô Cao đến bằng phương tiện gì?"
     },
     {
       "exam_code": "H21332",

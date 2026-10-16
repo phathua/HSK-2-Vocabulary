@@ -205,8 +205,8 @@ export const examData: ExamDetail = {
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 11,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 11",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 11",
       "answer": "C",
       "listening_script": "女：洗洗手准备吃饭。 男：我正在洗呢，怎么没水了？",
       "listening_pinyin": "Xǐxǐ shǒu zhǔnbèi chīfàn. / Wǒ zhèngzài xǐ ne, zěnme méi shuǐ le?",
@@ -219,16 +219,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 1",
-      "listening_viet": "Nữ: Rửa tay và chuẩn bị ăn. Người đàn ông: Tôi đang giặt, sao không có nước?"
+      "listening_viet": "Nữ: Rửa tay và chuẩn bị ăn. Người đàn ông: Tôi đang giặt, sao không có nước?",
+      "board_image": "images/H21008_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 12,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 12",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 12",
       "answer": "E",
       "listening_script": "男：你怎么了？生病了？ 女：没关系，我就是有点儿累。",
       "listening_pinyin": "Nǐ zěnmeyàng le? Shēngbìng le? / Méi guānxi, wǒ jiùshì yǒudiǎnr lèi.",
@@ -241,16 +242,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 2",
-      "listening_viet": "Nam: Bạn bị sao vậy? Đau ốm? Người phụ nữ: Không sao đâu, tôi chỉ hơi mệt thôi."
+      "listening_viet": "Nam: Bạn bị sao vậy? Đau ốm? Người phụ nữ: Không sao đâu, tôi chỉ hơi mệt thôi.",
+      "board_image": "images/H21008_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 13,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 13",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 13",
       "answer": "B",
       "listening_script": "女：谢谢你，多少钱？ 男：我看一下，是五十三元。",
       "listening_pinyin": "Xièxie nǐ, duōshao qián? / Wǒ kàn yíxià, shì wǔshísān yuán.",
@@ -263,16 +265,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 3",
-      "listening_viet": "Nữ: Cảm ơn bạn, bao nhiêu tiền? Người đàn ông: Để tôi xem thử. Đó là năm mươi ba nhân dân tệ."
+      "listening_viet": "Nữ: Cảm ơn bạn, bao nhiêu tiền? Người đàn ông: Để tôi xem thử. Đó là năm mươi ba nhân dân tệ.",
+      "board_image": "images/H21008_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 14,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 14",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 14",
       "answer": "F",
       "listening_script": "男：你们两个离电视太近了。 女：知道了，知道了。",
       "listening_pinyin": "Nǐmen liǎng ge lí diànshì tài jìn le. / Zhīdào le, zhīdào le.",
@@ -285,16 +288,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 4",
-      "listening_viet": "Nam: Hai bạn đứng quá gần TV. Người phụ nữ: Hiểu rồi, hiểu rồi."
+      "listening_viet": "Nam: Hai bạn đứng quá gần TV. Người phụ nữ: Hiểu rồi, hiểu rồi.",
+      "board_image": "images/H21008_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 15,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 15",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 15",
       "answer": "A",
       "listening_script": "女：是不是不下雨了？ 男：不下雨了，天晴了。",
       "listening_pinyin": "Shìbushì bú xià yǔ le? / Bú xià le, tiān qíng le.",
@@ -307,16 +311,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 5",
-      "listening_viet": "Nữ: Trời sẽ không mưa nữa phải không? Người đàn ông: Trời không mưa nữa, trời nắng."
+      "listening_viet": "Nữ: Trời sẽ không mưa nữa phải không? Người đàn ông: Trời không mưa nữa, trời nắng.",
+      "board_image": "images/H21008_board_11_15.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 16,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 16",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 16",
       "answer": "D",
       "listening_script": "男：你来看看，现在怎么样？ 女：右边有点儿高。",
       "listening_pinyin": "Nǐ lái kànkan, xiànzài zěnmeyàng? / Yòubian yǒudiǎnr gāo.",
@@ -329,16 +334,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 6",
-      "listening_viet": "Nam: Đến xem, bây giờ thế nào? Người phụ nữ: Bên phải hơi cao."
+      "listening_viet": "Nam: Đến xem, bây giờ thế nào? Người phụ nữ: Bên phải hơi cao.",
+      "board_image": "images/H21008_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 17,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 17",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 17",
       "answer": "B",
       "listening_script": "女：是你的手机吗？ 男：是，我找到它了！",
       "listening_pinyin": "Shì nǐ de shǒujī ma? / Shì, wǒ zhǎodào tā le!",
@@ -351,16 +357,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 7",
-      "listening_viet": "Nữ: Có phải điện thoại di động của bạn không? Người đàn ông: Vâng, tôi đã tìm thấy nó!"
+      "listening_viet": "Nữ: Có phải điện thoại di động của bạn không? Người đàn ông: Vâng, tôi đã tìm thấy nó!",
+      "board_image": "images/H21008_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 18,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 18",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 18",
       "answer": "E",
       "listening_script": "男：要不要我帮助你？ 女：好吧，这个路真不好走。",
       "listening_pinyin": "Yào bú yào wǒ bāngzhù nǐ? / Hǎo ba, zhè ge lù zhēn bù hǎo zǒu.",
@@ -373,16 +380,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 8",
-      "listening_viet": "Nam: Bạn có muốn tôi giúp bạn không? Người phụ nữ: Ồ, con đường này thực sự khó khăn."
+      "listening_viet": "Nam: Bạn có muốn tôi giúp bạn không? Người phụ nữ: Ồ, con đường này thực sự khó khăn.",
+      "board_image": "images/H21008_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 19,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 19",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 19",
       "answer": "C",
       "listening_script": "女：你让我再睡十分钟吧。 男：再睡十分钟？你看看几点了？",
       "listening_pinyin": "Nǐ ràng wǒ zài shuì shí fēnzhōng ba. / Zài shuì shí fēnzhōng? Nǐ kànkan jǐ diǎn le?",
@@ -395,16 +403,17 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 9",
-      "listening_viet": "Nữ: Xin hãy cho tôi ngủ thêm mười phút nữa. Người đàn ông: Ngủ thêm mười phút nữa nhé? Bây giờ là mấy giờ?"
+      "listening_viet": "Nữ: Xin hãy cho tôi ngủ thêm mười phút nữa. Người đàn ông: Ngủ thêm mười phút nữa nhé? Bây giờ là mấy giờ?",
+      "board_image": "images/H21008_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
       "section": "Listening (听力)",
       "part": "Part 2",
       "question_no": 20,
-      "type": "Single Choice",
-      "text": "Câu hỏi số 20",
+      "type": "Image Match",
+      "text": "Câu hỏi nghe số 20",
       "answer": "A",
       "listening_script": "男：这是您女儿？已经六岁了！ 女：是，时间过得真快。",
       "listening_pinyin": "Zhè shì nín nǚ'ér? Yǐjīng liù suì le! / Shì, shíjiān guò de zhēn kuài.",
@@ -417,8 +426,9 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 0",
-      "listening_viet": "Nam: Đây có phải là con gái của bạn? Đã sáu tuổi rồi! Người phụ nữ: Vâng, thời gian trôi nhanh quá."
+      "listening_viet": "Nam: Đây có phải là con gái của bạn? Đã sáu tuổi rồi! Người phụ nữ: Vâng, thời gian trôi nhanh quá.",
+      "board_image": "images/H21008_board_16_20.webp",
+      "image": null
     },
     {
       "exam_code": "H21008",
