@@ -561,26 +561,6 @@
             onScrollTo={handleScrollTo}
           />
         </div>
-
-        {#if mode === 'exam'}
-          <!-- Khối hành động làm bài trên Desktop: Tiến độ & Nút Làm lại (Nộp bài & Bộ đếm đã chuyển lên Header) -->
-          <div class="mt-2.5 p-2.5 px-3 rounded-2xl bg-white dark:bg-[#1B1B1B] border border-slate-200/90 dark:border-[#282A2C] shadow-xs flex items-center justify-between gap-2 shrink-0 select-none">
-            <div class="flex items-center gap-1.5 text-xs font-bold text-slate-600 dark:text-neutral-300">
-              <span class="text-slate-400 dark:text-neutral-500 font-medium">Tiến độ:</span>
-              <span class="font-black text-orange-600 dark:text-orange-400">{totalAnswered}/{exam.total_questions} câu</span>
-            </div>
-
-            <button
-              type="button"
-              onclick={handleRetry}
-              class="h-8 px-3 rounded-xl bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 active:scale-95 text-slate-700 dark:text-neutral-200 font-bold text-xs flex items-center justify-center gap-1.5 cursor-pointer transition-all border border-slate-200/60 dark:border-neutral-700/60 shadow-2xs"
-              title="Làm lại từ đầu"
-            >
-              <ArrowCounterClockwise weight="bold" class="w-3.5 h-3.5" />
-              <span>Làm lại</span>
-            </button>
-          </div>
-        {/if}
       </div>
     </div>
   {/if}

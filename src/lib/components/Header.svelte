@@ -18,6 +18,7 @@
   import Trophy from 'phosphor-svelte/lib/Trophy';
   import MagnifyingGlass from 'phosphor-svelte/lib/MagnifyingGlass';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
+  import ArrowCounterClockwise from 'phosphor-svelte/lib/ArrowCounterClockwise';
 
   const isHomePage = $derived(page.url.pathname === '/');
   const isGrammarPage = $derived(page.url.pathname.startsWith('/ngu-phap'));
@@ -206,14 +207,26 @@
           </div>
         {/if}
 
+        <!-- Nút Làm lại trên Desktop: Hài hòa với các nút xung quanh Header -->
+        <button
+          type="button"
+          onclick={() => examRoomState.retry()}
+          class="h-9 px-2.5 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] text-slate-700 dark:text-[#E3E3E3] font-bold text-xs flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs active:scale-95 shrink-0"
+          title="Làm lại từ đầu"
+          aria-label="Làm lại bài thi"
+        >
+          <ArrowCounterClockwise weight="bold" class="w-3.5 h-3.5" />
+          <span>Làm lại</span>
+        </button>
+
         {#if !examRoomState.isSubmitted}
           <button
             type="button"
             onclick={() => examRoomState.submit()}
-            class="h-9 px-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-black text-xs flex items-center gap-1.5 shadow-xs cursor-pointer transition-all shrink-0"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold text-xs flex items-center gap-1.5 shadow-2xs cursor-pointer transition-all shrink-0"
             title="Nộp bài thi"
           >
-            <CheckCircle weight="bold" class="w-4 h-4 shrink-0" />
+            <CheckCircle weight="bold" class="w-3.5 h-3.5 shrink-0" />
             <span>Nộp bài</span>
           </button>
         {/if}
