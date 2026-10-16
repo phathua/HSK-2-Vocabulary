@@ -854,7 +854,7 @@ export const examData: ExamDetail = {
       "question_no": 41,
       "image": null,
       "type": "Fill Blank",
-      "text": "对不起，让你等了这么长（ C ）。",
+      "text": "对不起，让你等了这么长（ ）。",
       "answer": "C",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_41.webp",
@@ -869,7 +869,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần danh từ chỉ thời gian ghép thành cụm 'zhème zhǎngshíjiān' (thời gian dài như vậy). Từ C (shíjiān) điền vào câu đúng ngữ pháp.",
       "listening_pinyin": null,
-      "pinyin": "Duìbuqǐ, ràng nǐ děng le zhème cháng ( C )."
+      "pinyin": "Duìbuqǐ, ràng nǐ děng le zhème cháng ( )."
     },
     {
       "exam_code": "H21335",
@@ -878,7 +878,7 @@ export const examData: ExamDetail = {
       "question_no": 42,
       "image": null,
       "type": "Fill Blank",
-      "text": "别（ D ）电视太近，对眼睛不好，坐远点儿。",
+      "text": "别（ ）电视太近，对眼睛不好，坐远点儿。",
       "answer": "D",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_42.webp",
@@ -893,7 +893,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần giới từ chỉ khoảng cách 'lí' (cách). Từ D (lí) tạo thành 'biélí diànshì tàijìn' (Đừng ngồi quá gần tivi).",
       "listening_pinyin": null,
-      "pinyin": "Bié ( D ) diànshì tài jìn, duì yǎnjīng bù hǎo, zuò yuǎn diǎnr."
+      "pinyin": "Bié ( ) diànshì tài jìn, duì yǎnjīng bù hǎo, zuò yuǎn diǎnr."
     },
     {
       "exam_code": "H21335",
@@ -902,7 +902,7 @@ export const examData: ExamDetail = {
       "question_no": 43,
       "image": null,
       "type": "Fill Blank",
-      "text": "这个手机还能（ A ）便宜些吗？",
+      "text": "这个手机还能（ ）便宜些吗？",
       "answer": "A",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_43.webp",
@@ -917,7 +917,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần phó từ 'zài' (thêm nữa) tạo thành 'zài piányi xiē' (rẻ hơn chút nữa). Từ chọn là A (zài).",
       "listening_pinyin": null,
-      "pinyin": "Zhège shǒujī hái néng ( A ) piányi xiē ma?"
+      "pinyin": "Zhège shǒujī hái néng ( ) piányi xiē ma?"
     },
     {
       "exam_code": "H21335",
@@ -926,7 +926,7 @@ export const examData: ExamDetail = {
       "question_no": 44,
       "image": null,
       "type": "Fill Blank",
-      "text": "没想到你妻子（ F ）这么好听。",
+      "text": "没想到你妻子（ ）这么好听。",
       "answer": "F",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_44.webp",
@@ -941,7 +941,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần động từ chỉ hành động tạo ra âm thanh 'chànggē' (hát). Từ F (chànggē) tạo thành 'qīzǐ chànggē zhème hǎotīng'.",
       "listening_pinyin": null,
-      "pinyin": "Méi xiǎngdào nǐ qīzi ( F ) zhème hǎotīng."
+      "pinyin": "Méi xiǎngdào nǐ qīzi ( ) zhème hǎotīng."
     },
     {
       "exam_code": "H21335",
@@ -950,7 +950,7 @@ export const examData: ExamDetail = {
       "question_no": 45,
       "image": null,
       "type": "Fill Blank",
-      "text": "女：你每天几点睡觉？\n男：10点，有时候工作（ B ），可能会晚一点儿。",
+      "text": "女：你每天几点睡觉？\n男：10点，有时候工作（ ），可能会晚一点儿。",
       "answer": "B",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21335/images/H21335_img_45.webp",
@@ -965,7 +965,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần tính từ miêu tả trạng thái công việc 'máng' (bận). Từ B (máng) tạo thành 'gōngzuò máng' (công việc bận rộn).",
       "listening_pinyin": null,
-      "pinyin": "Nǚ: Nǐ měi tiān jǐ diǎn shuìjiào?\nNán: 10 diǎn, yǒu shíhou gōngzuò ( B ), kěnéng huì wǎn yìdiǎnr."
+      "pinyin": "Nǚ: Nǐ měi tiān jǐ diǎn shuìjiào?\nNán: 10 diǎn, yǒu shíhou gōngzuò ( ), kěnéng huì wǎn yìdiǎnr."
     },
     {
       "exam_code": "H21335",

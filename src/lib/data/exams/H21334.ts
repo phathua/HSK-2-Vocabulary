@@ -854,7 +854,7 @@ export const examData: ExamDetail = {
       "question_no": 41,
       "image": null,
       "type": "Fill Blank",
-      "text": "她笑着说：“我（ D ）知道了。”",
+      "text": "她笑着说：“我（ ）知道了。”",
       "answer": "D",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_41.webp",
@@ -878,7 +878,7 @@ export const examData: ExamDetail = {
       "question_no": 42,
       "image": null,
       "type": "Fill Blank",
-      "text": "你和他是同学？我还想（ C ）你们认识呢。",
+      "text": "你和他是同学？我还想（ ）你们认识呢。",
       "answer": "C",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_42.webp",
@@ -893,7 +893,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống điền động từ 'jièshào' (Giới thiệu) tạo thành ngữ cảnh 'tôi còn muốn giới thiệu hai người làm quen'.",
       "listening_pinyin": null,
-      "pinyin": "Nǐ hé tā shì tóngxué? Wǒ hái xiǎng ( C ) nǐmen rènshi ne."
+      "pinyin": "Nǐ hé tā shì tóngxué? Wǒ hái xiǎng ( ) nǐmen rènshi ne."
     },
     {
       "exam_code": "H21334",
@@ -902,7 +902,7 @@ export const examData: ExamDetail = {
       "question_no": 43,
       "image": null,
       "type": "Fill Blank",
-      "text": "怎么样？忙了一天（ A ）了吧？",
+      "text": "怎么样？忙了一天（ ）了吧？",
       "answer": "A",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_43.webp",
@@ -917,7 +917,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần tính từ miêu tả trạng thái sau khi bận rộn cả ngày, chọn 'lèi' (Mệt).",
       "listening_pinyin": null,
-      "pinyin": "Zěnmeyàng? Máng le yì tiān ( A ) le ba?"
+      "pinyin": "Zěnmeyàng? Máng le yì tiān ( ) le ba?"
     },
     {
       "exam_code": "H21334",
@@ -926,7 +926,7 @@ export const examData: ExamDetail = {
       "question_no": 44,
       "image": null,
       "type": "Fill Blank",
-      "text": "老师（ F ）我，想要学好汉语，听说读写每一个都不能少。",
+      "text": "老师（ ）我，想要学好汉语，听说读写每一个都不能少。",
       "answer": "F",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_44.webp",
@@ -941,7 +941,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần động từ diễn tả lời dặn của thầy giáo, chọn 'gàosù' (Nói cho/Bảo).",
       "listening_pinyin": null,
-      "pinyin": "Lǎoshī ( F ) wǒ, xiǎng yào xuéhǎo Hànyǔ, tīng shuō dú xiě yí ge dōu bù néng shǎo."
+      "pinyin": "Lǎoshī ( ) wǒ, xiǎng yào xuéhǎo Hànyǔ, tīng shuō dú xiě yí ge dōu bù néng shǎo."
     },
     {
       "exam_code": "H21334",
@@ -950,7 +950,7 @@ export const examData: ExamDetail = {
       "question_no": 45,
       "image": null,
       "type": "Fill Blank",
-      "text": "女：还有多远？\n男：快了，就在前面那个商店（ B ）。",
+      "text": "女：还有多远？\n男：快了，就在前面那个商店（ ）。",
       "answer": "B",
       "listening_script": null,
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H21334/images/H21334_img_45.webp",
@@ -965,7 +965,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống chỉ vị trí sau danh từ 'shāngdiàn', chọn danh từ chỉ phương hướng 'pángbiān' (Bên cạnh).",
       "listening_pinyin": null,
-      "pinyin": "Nǚ: Hái yǒu duō yuǎn?\nNán: Kuài le, jiù zài qiánmiàn nàge shāngdiàn ( B )."
+      "pinyin": "Nǚ: Hái yǒu duō yuǎn?\nNán: Kuài le, jiù zài qiánmiàn nàge shāngdiàn ( )."
     },
     {
       "exam_code": "H21334",

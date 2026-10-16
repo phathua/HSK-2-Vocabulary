@@ -14,7 +14,7 @@ export const examData: ExamDetail = {
       "question_no": 1,
       "image": "images/H21002_img_01.webp",
       "type": "True/False",
-      "text": "他正在操场上跑步。",
+      "text": "Câu hỏi nghe số 1",
       "answer": "√",
       "listening_script": "我每天早上都要去跑步半小时。",
       "image_url": null,
@@ -25,7 +25,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Tā zhèngzài cāochǎng shàng pǎobù.",
+      "pinyin": null,
       "listening_viet": "Tôi chạy bộ nửa tiếng mỗi sáng."
     },
     {
@@ -35,7 +35,7 @@ export const examData: ExamDetail = {
       "question_no": 2,
       "image": "images/H21002_img_02.webp",
       "type": "True/False",
-      "text": "小王买了一个新手机。",
+      "text": "Câu hỏi nghe số 2",
       "answer": "×",
       "listening_script": "这个手机是我去年买的。",
       "image_url": null,
@@ -46,7 +46,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Xiǎo Wáng mǎi le yí gè xīn shǒujī.",
+      "pinyin": null,
       "listening_viet": "Tôi đã mua chiếc điện thoại này vào năm ngoái."
     },
     {
@@ -56,7 +56,7 @@ export const examData: ExamDetail = {
       "question_no": 3,
       "image": "images/H21002_img_03.webp",
       "type": "True/False",
-      "text": "妹妹很喜欢吃西瓜。",
+      "text": "Câu hỏi nghe số 3",
       "answer": "√",
       "listening_script": "今天买的西瓜又大又甜，妹妹吃了好多。",
       "image_url": null,
@@ -67,7 +67,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Mèimei hěn xǐhuan chī xīguā.",
+      "pinyin": null,
       "listening_viet": "Quả dưa hấu tôi mua hôm nay rất to và ngọt, chị tôi đã ăn rất nhiều."
     },
     {
@@ -77,7 +77,7 @@ export const examData: ExamDetail = {
       "question_no": 4,
       "image": "images/H21002_img_04.webp",
       "type": "True/False",
-      "text": "他们打算下星期去旅游。",
+      "text": "Câu hỏi nghe số 4",
       "answer": "×",
       "listening_script": "下星期我们要考试，不能去玩儿了。",
       "image_url": null,
@@ -88,7 +88,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Tāmen dǎsuàn xià xīngqī qù lǚyóu.",
+      "pinyin": null,
       "listening_viet": "Tuần sau chúng ta có bài kiểm tra nên không thể đi chơi được."
     },
     {
@@ -98,7 +98,7 @@ export const examData: ExamDetail = {
       "question_no": 5,
       "image": "images/H21002_img_05.webp",
       "type": "True/False",
-      "text": "服务员送来了一杯水。",
+      "text": "Câu hỏi nghe số 5",
       "answer": "√",
       "listening_script": "您好，这是您要的热水。",
       "image_url": null,
@@ -109,7 +109,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Fúwùyuán sòng lái le yì bēi shuǐ.",
+      "pinyin": null,
       "listening_viet": "Xin chào, đây là nước nóng bạn muốn."
     },
     {
@@ -119,7 +119,7 @@ export const examData: ExamDetail = {
       "question_no": 6,
       "image": "images/H21002_img_06.webp",
       "type": "True/False",
-      "text": "这道题太难了，他不会做。",
+      "text": "Câu hỏi nghe số 6",
       "answer": "×",
       "listening_script": "这道题很简单，我一分钟就做完了。",
       "image_url": null,
@@ -130,7 +130,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Zhè dào tí tài nán le, tā bú huì zuò.",
+      "pinyin": null,
       "listening_viet": "Câu hỏi này rất đơn giản, tôi đã hoàn thành nó trong một phút."
     },
     {
@@ -140,7 +140,7 @@ export const examData: ExamDetail = {
       "question_no": 7,
       "image": "images/H21002_img_07.webp",
       "type": "True/False",
-      "text": "他们家离学校很近。",
+      "text": "Câu hỏi nghe số 7",
       "answer": "√",
       "listening_script": "从我家走五分钟就能到学校。",
       "image_url": null,
@@ -151,7 +151,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Tāmen jiā lí xuéxiào hěn jìn.",
+      "pinyin": null,
       "listening_viet": "Từ nhà tôi đi bộ tới trường mất năm phút."
     },
     {
@@ -161,7 +161,7 @@ export const examData: ExamDetail = {
       "question_no": 8,
       "image": "images/H21002_img_08.webp",
       "type": "True/False",
-      "text": "爸爸正在看报纸。",
+      "text": "Câu hỏi nghe số 8",
       "answer": "×",
       "listening_script": "爸爸在看电视里的足球比赛呢。",
       "image_url": null,
@@ -172,7 +172,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Bàba zhèngzài kàn bàozhǐ.",
+      "pinyin": null,
       "listening_viet": "Bố đang xem trận bóng đá trên TV."
     },
     {
@@ -182,7 +182,7 @@ export const examData: ExamDetail = {
       "question_no": 9,
       "image": "images/H21002_img_09.webp",
       "type": "True/False",
-      "text": "她买了一双漂亮的白鞋。",
+      "text": "Câu hỏi nghe số 9",
       "answer": "√",
       "listening_script": "这双白色的运动鞋真好看，我就买它了。",
       "image_url": null,
@@ -193,7 +193,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Tā mǎi le yì shuāng piàoliang de bái xié.",
+      "pinyin": null,
       "listening_viet": "Đôi giày thể thao màu trắng này đẹp quá, tôi đã mua nó."
     },
     {
@@ -203,7 +203,7 @@ export const examData: ExamDetail = {
       "question_no": 10,
       "image": "images/H21002_img_10.webp",
       "type": "True/False",
-      "text": "今天晚上没有月亮。",
+      "text": "Câu hỏi nghe số 10",
       "answer": "×",
       "listening_script": "今晚的月亮又大又圆，真漂亮。",
       "image_url": null,
@@ -214,7 +214,7 @@ export const examData: ExamDetail = {
         "√ Đúng",
         "× Sai"
       ],
-      "pinyin": "Jīntiān wǎnshang méiyǒu yuèliang.",
+      "pinyin": null,
       "listening_viet": "Trăng đêm nay to và tròn, đẹp quá."
     },
     {

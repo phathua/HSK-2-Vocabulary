@@ -16,7 +16,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 1,
       "type": "True/False",
-      "text": "他不会做这个题，所以有点儿不高兴。",
+      "text": "Câu hỏi nghe số 1",
       "answer": "×",
       "listening_script": "他不会做这个题，所以有点儿不高兴。",
       "listening_pinyin": "tā bú huì zuò zhè ge tí ， suǒ yǐ yǒu diǎn ér bù gāo xìng 。",
@@ -26,7 +26,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_01.webp",
-      "pinyin": "Tā bú huì zuò zhège tí, suǒyǐ yǒudiǎnr bù gāoxìng.",
+      "pinyin": null,
       "listening_viet": "Anh không thể làm được câu hỏi này nên có chút không vui."
     },
     {
@@ -35,7 +35,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 2,
       "type": "True/False",
-      "text": "快起床，和我出去跑步吧。",
+      "text": "Câu hỏi nghe số 2",
       "answer": "√",
       "listening_script": "快起床，和我出去跑步吧。",
       "listening_pinyin": "kuài qǐ chuáng ， hé wǒ chū qù pǎo bù ba 。",
@@ -45,7 +45,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_02.webp",
-      "pinyin": "Kuài qǐchuáng, hé wǒ chūqù pǎobù ba.",
+      "pinyin": null,
       "listening_viet": "Hãy đứng dậy và chạy bộ với tôi."
     },
     {
@@ -54,7 +54,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 3,
       "type": "True/False",
-      "text": "他不会跳舞，正在学习跳舞。",
+      "text": "Câu hỏi nghe số 3",
       "answer": "×",
       "listening_script": "他不会跳舞，正在学习跳舞。",
       "listening_pinyin": "tā bú huì tiào wǔ ， zhèng zài xué xí tiào wǔ 。",
@@ -64,7 +64,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_03.webp",
-      "pinyin": "Tā bú huì tiàowǔ, zhèngzài xuéxí tiàowǔ.",
+      "pinyin": null,
       "listening_viet": "Anh ấy không biết nhảy và đang học nhảy."
     },
     {
@@ -73,7 +73,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 4,
       "type": "True/False",
-      "text": "这个杯子的颜色不好看。",
+      "text": "Câu hỏi nghe số 4",
       "answer": "×",
       "listening_script": "这个杯子的颜色不好看。",
       "listening_pinyin": "zhè ge bēi zi de yán sè bù hǎo kàn 。",
@@ -83,7 +83,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_04.webp",
-      "pinyin": "Zhège bēizi de yánsè bù hǎokàn.",
+      "pinyin": null,
       "listening_viet": "Màu sắc của chiếc cốc này không đẹp."
     },
     {
@@ -92,7 +92,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 5,
       "type": "True/False",
-      "text": "你在想什么事情呢？",
+      "text": "Câu hỏi nghe số 5",
       "answer": "√",
       "listening_script": "你在想什么事情呢？",
       "listening_pinyin": "nǐ zài xiǎng shén me shì qíng ne ？",
@@ -102,7 +102,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_05.webp",
-      "pinyin": "Nǐ zài xiǎng shénme shìqing ne?",
+      "pinyin": null,
       "listening_viet": "Bạn đang nghĩ về điều gì?"
     },
     {
@@ -111,7 +111,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 6,
       "type": "True/False",
-      "text": "他们坐船去中国。",
+      "text": "Câu hỏi nghe số 6",
       "answer": "×",
       "listening_script": "他们坐船去中国。",
       "listening_pinyin": "tā men zuò chuán qù zhōng guó 。",
@@ -121,7 +121,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_06.webp",
-      "pinyin": "Tāmen zuò chuán qù Zhōngguó.",
+      "pinyin": null,
       "listening_viet": "Họ đi thuyền đến Trung Quốc."
     },
     {
@@ -130,7 +130,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 7,
       "type": "True/False",
-      "text": "你觉得我穿哪件好？",
+      "text": "Câu hỏi nghe số 7",
       "answer": "√",
       "listening_script": "你觉得我穿哪件好？",
       "listening_pinyin": "nǐ jué de wǒ chuān nǎ jiàn hǎo ？",
@@ -140,7 +140,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_07.webp",
-      "pinyin": "Nǐ juéde wǒ chuān nǎ jiàn hǎo?",
+      "pinyin": null,
       "listening_viet": "Bạn nghĩ tôi nên mặc cái nào?"
     },
     {
@@ -149,7 +149,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 8,
       "type": "True/False",
-      "text": "我爱吃妈妈做的鱼。",
+      "text": "Câu hỏi nghe số 8",
       "answer": "×",
       "listening_script": "我爱吃妈妈做的鱼。",
       "listening_pinyin": "wǒ ài chī mā mā zuò de yú 。",
@@ -159,7 +159,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_08.webp",
-      "pinyin": "Wǒ ài chī māma zuò de yú.",
+      "pinyin": null,
       "listening_viet": "Tôi rất thích ăn cá do mẹ nấu."
     },
     {
@@ -168,7 +168,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 9,
       "type": "True/False",
-      "text": "再见，欢迎您下次再來。",
+      "text": "Câu hỏi nghe số 9",
       "answer": "√",
       "listening_script": "再见，欢迎您下次再来。",
       "listening_pinyin": "zài jiàn ， huān yíng nín xià cì zài lái 。",
@@ -178,7 +178,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_09.webp",
-      "pinyin": "Zàijiàn, huānyíng nín xià cì zài lái.",
+      "pinyin": null,
       "listening_viet": "Tạm biệt và chào đón bạn lần sau."
     },
     {
@@ -187,7 +187,7 @@ export const examData: ExamDetail = {
       "part": "Part 1",
       "question_no": 10,
       "type": "True/False",
-      "text": "大家都正在笑。",
+      "text": "Câu hỏi nghe số 10",
       "answer": "√",
       "listening_script": "大家都在笑。",
       "listening_pinyin": "dà jiā dōu zài xiào 。",
@@ -197,7 +197,7 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_10.webp",
-      "pinyin": "Dàjiā dōu zhèngzài xiào.",
+      "pinyin": null,
       "listening_viet": "Mọi người đều đang cười."
     },
     {
@@ -436,7 +436,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 21,
       "type": "Single Choice",
-      "text": "[女:] 小张，这是今天的报纸吗？\n[男:] 不是，那是我昨天买的。\n[问:] 那是哪天的报纸？",
+      "text": "Câu hỏi nghe số 21",
       "answer": "B",
       "listening_script": "女：小张，这是今天的报纸吗？",
       "listening_pinyin": "nǚ ： xiǎo zhāng ， zhè shì jīn tiān de bào zhǐ ma ？",
@@ -446,7 +446,7 @@ export const examData: ExamDetail = {
         "B 昨天 (zuótiān)",
         "C 前天 (qiántiān)"
       ],
-      "pinyin": "Nǚ: Xiǎo Zhāng, zhè shì jīntiān de bàozhǐ ma?\nNán: Bú shì, nà shì wǒ zuótiān mǎi de.\nWèn: Nà shì nǎ tiān de bàozhǐ?",
+      "pinyin": null,
       "listening_viet": "Nữ: Tiểu Trương, đây là báo hôm nay phải không?"
     },
     {
@@ -455,7 +455,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 22,
       "type": "Single Choice",
-      "text": "[男:] 后天是我的生日，你准备送我什么？\n[女:] 哥，我给你买个新手机怎么样？\n[问:] 妹妹想送哥哥什么？",
+      "text": "Câu hỏi nghe số 22",
       "answer": "B",
       "listening_script": "男：后天是我的生日，你准备送我什么？",
       "listening_pinyin": "nán ： hòu tiān shì wǒ de shēng rì ， nǐ zhǔn bèi sòng wǒ shén me ？",
@@ -465,7 +465,7 @@ export const examData: ExamDetail = {
         "B 手机 (shǒujī)",
         "C 自行车 (zìxíngchē)"
       ],
-      "pinyin": "Nán: Hòutiān shì wǒ de shēngri, nǐ zhǔnbèi sòng wǒ shénme?\nNǚ: Gē, wǒ gěi nǐ mǎi ge xīn shǒujī zěnmeyàng?\nWèn: Mèimei xiǎng sòng gēge shénme?",
+      "pinyin": null,
       "listening_viet": "Nam: Ngày mốt là sinh nhật tôi, bạn định tặng gì cho tôi?"
     },
     {
@@ -474,7 +474,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 23,
       "type": "Single Choice",
-      "text": "[女:] 你早饭吃什么了？\n[男:] 我吃了两个鸡蛋，喝了一杯牛奶。\n[问:] 男的早饭吃什么了？",
+      "text": "Câu hỏi nghe số 23",
       "answer": "C",
       "listening_script": "女：你早饭吃什么了？",
       "listening_pinyin": "nǚ ： nǐ zǎo fàn chī shén me le ？",
@@ -484,7 +484,7 @@ export const examData: ExamDetail = {
         "B 羊肉 (yángròu)",
         "C 鸡蛋 (jīdàn)"
       ],
-      "pinyin": "Nǚ: Nǐ zǎofàn chī shénme le?\nNán: Wǒ chīle liǎng ge jīdàn, hēle yī bēi niúnǎi.\nWèn: Nán de zǎofàn chī shénme le?",
+      "pinyin": null,
       "listening_viet": "Nữ: Bạn đã ăn gì cho bữa sáng?"
     },
     {
@@ -493,7 +493,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 24,
       "type": "Single Choice",
-      "text": "[男:] 教室现在开门了吗？\n[女:] 现在已经八点零五了，早开门了。\n[问:] 现在几点了？",
+      "text": "Câu hỏi nghe số 24",
       "answer": "A",
       "listening_script": "男：教室现在开门了吗？",
       "listening_pinyin": "nán ： jiào shì xiàn zài kāi mén le ma ？",
@@ -503,7 +503,7 @@ export const examData: ExamDetail = {
         "B 8:15",
         "C 8:50"
       ],
-      "pinyin": "Nán: Jiàoshì xiànzài kāi mén le ma?\nNǚ: Xiànzài yǐjīng bā diǎn líng wǔ le, zǎo kāi mén le.\nWèn: Xiànzài jǐ diǎn le?",
+      "pinyin": null,
       "listening_viet": "Nam: Bây giờ lớp học có mở cửa không?"
     },
     {
@@ -512,7 +512,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 25,
       "type": "Single Choice",
-      "text": "[女:] 我们去旁边那家茶馆喝杯茶吧。\n[男:] 好的，没问题。\n[问:] 他们要做什么？",
+      "text": "Câu hỏi nghe số 25",
       "answer": "A",
       "listening_script": "女：我们去旁边那家茶馆喝杯茶吧。",
       "listening_pinyin": "nǚ ： wǒ men qù páng biān nà jiā chá guǎn hē bēi chá ba 。",
@@ -522,7 +522,7 @@ export const examData: ExamDetail = {
         "B 读书 (dú shū)",
         "C 旅游 (lǚyóu)"
       ],
-      "pinyin": "Nǚ: Wǒmen qù pángbiān nà jiā cháguǎn hē bēi chá ba.\nNán: Hǎo de, méi wèntí.\nWèn: Tāmen yào zuò shénme?",
+      "pinyin": null,
       "listening_viet": "Nữ: Chúng ta sang quán trà bên cạnh uống một tách trà nhé."
     },
     {
@@ -531,7 +531,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 26,
       "type": "Single Choice",
-      "text": "[男:] 服务员，这儿离火车站远吗？\n[女:] 不远，走路十五分钟就能到。\n[问:] 男的想去哪儿？",
+      "text": "Câu hỏi nghe số 26",
       "answer": "C",
       "listening_script": "男：服务员，这儿离火车站远吗？",
       "listening_pinyin": "nán ： fú wù yuán ， zhè ér lí huǒ chē zhàn yuǎn ma ？",
@@ -541,7 +541,7 @@ export const examData: ExamDetail = {
         "B 机场 (jīchǎng)",
         "C 火车站 (huǒchēzhàn)"
       ],
-      "pinyin": "Nán: Fúwùyuán, zhèr lí huǒchēzhàn yuǎn ma?\nNǚ: Bù yuǎn, zǒulù shíwǔ fēnzhōng jiù néng dào.\nWèn: Nán de xiǎng qù nǎr?",
+      "pinyin": null,
       "listening_viet": "Nam: Bồi bàn, chỗ này có xa ga xe lửa không?"
     },
     {
@@ -550,7 +550,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 27,
       "type": "Single Choice",
-      "text": "[女:] 希望明天是个晴天。\n[男:] 是，我明天还想去游泳呢。\n[问:] 他们希望明天怎么样？",
+      "text": "Câu hỏi nghe số 27",
       "answer": "B",
       "listening_script": "女：希望明天是个晴天。",
       "listening_pinyin": "nǚ ： xī wàng míng tiān shì gè qíng tiān 。",
@@ -560,7 +560,7 @@ export const examData: ExamDetail = {
         "B 天气好 (tiānqì hǎo)",
         "C 玩儿得高兴 (wánr de gāoxìng)"
       ],
-      "pinyin": "Nǚ: Xīwàng míngtiān shì ge qíngtiān.\nNán: Shì, wǒ míngtiān hái xiǎng qù yóuyǒng ne.\nWèn: Tāmen xīwàng míngtiān zěnmeyàng?",
+      "pinyin": null,
       "listening_viet": "Nữ: Hy vọng ngày mai trời sẽ nắng."
     },
     {
@@ -569,7 +569,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 28,
       "type": "Single Choice",
-      "text": "[男:] 你中午有时间吗？我想请你吃个饭。\n[女:] 我下午两点还有课，晚上怎么样？\n[问:] 现在最可能是什么时候？",
+      "text": "Câu hỏi nghe số 28",
       "answer": "A",
       "listening_script": "男：你中午有时间吗？我想请你吃个饭。",
       "listening_pinyin": "nán ： nǐ zhōng wǔ yǒu shí jiān ma ？ wǒ xiǎng qǐng nǐ chī gè fàn 。",
@@ -579,7 +579,7 @@ export const examData: ExamDetail = {
         "B 下午 (xiàwǔ)",
         "C 晚上 (wǎnshang)"
       ],
-      "pinyin": "Nán: Nǐ zhōngwǔ yǒu shíjiān ma? Wǒ xiǎng qǐng nǐ chī ge fàn.\nNǚ: Wǒ xiàwǔ liǎng diǎn hái yǒu kè, wǎnshang zěnmeyàng?\nWèn: Xiànzài zuì kěnéng shì shénme shíhou?",
+      "pinyin": null,
       "listening_viet": "Nam: Buổi trưa bạn có thời gian không? Tôi muốn đãi bạn một bữa ăn."
     },
     {
@@ -588,7 +588,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 29,
       "type": "Single Choice",
-      "text": "[女:] 那本书你看完了吗？\n[男:] 我昨天就看完了，那本书很有意思。\n[问:] 那本书怎么样？",
+      "text": "Câu hỏi nghe số 29",
       "answer": "A",
       "listening_script": "女：那本书你看完了吗？",
       "listening_pinyin": "nǚ ： nà běn shū nǐ kàn wán le ma ？",
@@ -598,7 +598,7 @@ export const examData: ExamDetail = {
         "B 不好看 (bù hǎokàn)",
         "C 问题不少 (wèntí bù shǎo)"
       ],
-      "pinyin": "Nǚ: Nà běn shū nǐ kànwán le ma?\nNán: Wǒ zuótiān jiù kànwán le, nà běn shū hěn yǒu yìsi.\nWèn: Nà běn shū zěnmeyàng?",
+      "pinyin": null,
       "listening_viet": "Nữ: Bạn đã đọc xong cuốn sách đó chưa?"
     },
     {
@@ -607,7 +607,7 @@ export const examData: ExamDetail = {
       "part": "Part 3",
       "question_no": 30,
       "type": "Single Choice",
-      "text": "[男:] 你喜欢猫吗？\n[女:] 非常喜欢，和猫在一起，我很快乐。\n[问:] 女的为什么喜欢猫？",
+      "text": "Câu hỏi nghe số 30",
       "answer": "C",
       "listening_script": "男：你喜欢猫吗？",
       "listening_pinyin": "nán ： nǐ xǐ huān māo ma ？",
@@ -617,7 +617,7 @@ export const examData: ExamDetail = {
         "B 猫不听话 (māo bù tīnghuà)",
         "C 猫让她快乐 (māo ràng tā kuàilè)"
       ],
-      "pinyin": "Nán: Nǐ xǐhuan māo ma?\nNǚ: Fēicháng xǐhuan, hé māo zài yīqǐ, wǒ hěn kuàilè.\nWèn: Nǚ de wèi shénme xǐhuan māo?",
+      "pinyin": null,
       "listening_viet": "Nam: Bạn có thích mèo không?"
     },
     {
@@ -626,7 +626,7 @@ export const examData: ExamDetail = {
       "part": "Part 4",
       "question_no": 31,
       "type": "Single Choice",
-      "text": "[男:] 星期六去北京玩儿，你去不去？\n[女:] 我也想去，但是这两天太忙了。\n[男:] 那下次吧。\n[女:] 好，下次一起去。\n[问:] 男的星期六做什么？",
+      "text": "Câu hỏi nghe số 31",
       "answer": "C",
       "listening_script": "男：星期六我们去北京玩儿，你去不去？",
       "listening_pinyin": "nán ： xīng qī liù wǒ men qù běi jīng wán ér ， nǐ qù bù qù ？",
@@ -636,7 +636,7 @@ export const examData: ExamDetail = {
         "B 去打篮球 (qù dǎ lánqiú)",
         "C 去北京玩儿 (qù Běijīng wánr)"
       ],
-      "pinyin": "Nán: Xīngqīliù qù Běijīng wánr, nǐ qù bù qù?\nNǚ: Wǒ yě xiǎng qù, dànshì zhè liǎng tiān tài máng le.\nNán: Nà xià cì ba.\nNǚ: Hǎo, xià cì yīqǐ qù.\nWèn: Nán de xīngqīliù zuò shénme?",
+      "pinyin": null,
       "listening_viet": "Nam: Chúng tôi sẽ đến Bắc Kinh vào thứ bảy, bạn sẽ đi chứ?"
     },
     {
@@ -645,7 +645,7 @@ export const examData: ExamDetail = {
       "part": "Part 4",
       "question_no": 32,
       "type": "Single Choice",
-      "text": "[女:] 喂，您是高先生吗？\n[男:] 不是，你打错了，我不姓高。\n[女:] 对不起，是我打错了。\n[男:] 没关系。\n[问:] 女的要找谁？",
+      "text": "Câu hỏi nghe số 32",
       "answer": "B",
       "listening_script": "女：喂，您是高先生吗？",
       "listening_pinyin": "nǚ ： wèi ， nín shì gāo xiān shēng ma ？",
@@ -655,7 +655,7 @@ export const examData: ExamDetail = {
         "B 高先生 (Gāo xiānsheng)",
         "C 高医生 (Gāo yīshēng)"
       ],
-      "pinyin": "Nǚ: Wéi, nín shì Gāo xiānsheng ma?\nNán: Bú shì, nǐ dǎcuò le, wǒ bù xìng Gāo.\nNǚ: Duìbuqǐ, shì wǒ dǎcuò le.\nNán: Méi guānxi.\nWèn: Nǚ de yào zhǎo shéi?",
+      "pinyin": null,
       "listening_viet": "Nữ: Xin chào, bạn là anh Gao phải không?"
     },
     {
@@ -664,7 +664,7 @@ export const examData: ExamDetail = {
       "part": "Part 4",
       "question_no": 33,
       "type": "Single Choice",
-      "text": "[男:] 你手边有五百块钱吗？\n[女:] 没有，怎么了？\n[男:] 这张桌子要一千两百块。\n[女:] 那明天再来买吧。\n[问:] 那张桌子卖多少钱？",
+      "text": "Câu hỏi nghe số 33",
       "answer": "C",
       "listening_script": "男：你手边有五百块钱吗？",
       "listening_pinyin": "nán ： nǐ shǒu biān yǒu wǔ bǎi kuài qián ma ？",
@@ -674,7 +674,7 @@ export const examData: ExamDetail = {
         "B 1000 元 (1000 yuán)",
         "C 1200 元 (1200 yuán)"
       ],
-      "pinyin": "Nán: Nǐ shǒubiān yǒu wǔbǎi kuài qián ma?\nNǚ: Méi yǒu, zěnme le?\nNán: Zhè zhāng zhuōzi yào yīqiān liǎngbǎi kuài.\nNǚ: Nà míngtiān zài lái mǎi ba.\nWèn: Nà zhāng zhuōzi mài duōshao qián?",
+      "pinyin": null,
       "listening_viet": "Nam: Bạn có năm trăm đô la trong tay không?"
     },
     {
@@ -683,7 +683,7 @@ export const examData: ExamDetail = {
       "part": "Part 4",
       "question_no": 34,
       "type": "Single Choice",
-      "text": "[女:] 坐公共汽车去那儿要多长时间？\n[男:] 一个小时。\n[女:] 太慢了，那坐出租车呢？\n[男:] 坐出租车，二十分钟吧。\n[问:] 坐公共汽车去那儿要多长时间？",
+      "text": "Câu hỏi nghe số 34",
       "answer": "B",
       "listening_script": "女：坐公共汽车去那儿要多长时间？",
       "listening_pinyin": "nǚ ： zuò gōng gòng qì chē qù nà ér yào duō zhǎng shí jiān ？",
@@ -693,7 +693,7 @@ export const examData: ExamDetail = {
         "B 一个小时 (yī ge xiǎoshí)",
         "C 80 分钟 (80 fēnzhōng)"
       ],
-      "pinyin": "Nǚ: Zuò gōnggòngqìchē qù nàr yào duō cháng shíjiān?\nNán: Yī ge xiǎoshí.\nNǚ: Tài màn le, nà zuò chūzūchē ne?\nNán: Zuò chūzūchē, èrshí fēnzhōng ba.\nWèn: Zuò gōnggòngqìchē qù nàr yào duō cháng shíjiān?",
+      "pinyin": null,
       "listening_viet": "Nữ: Mất bao lâu để đến đó bằng xe buýt?"
     },
     {
@@ -702,7 +702,7 @@ export const examData: ExamDetail = {
       "part": "Part 4",
       "question_no": 35,
       "type": "Single Choice",
-      "text": "[男:] 从今天开始，我晚上不吃饭了。\n[女:] 为什么？\n[男:] 我现在都八十五公斤了。\n[女:] 那你多运动，不吃饭对身体不好。\n[问:] 女的让男的怎么做？",
+      "text": "Câu hỏi nghe số 35",
       "answer": "A",
       "listening_script": "男：从今天开始，我晚上不吃饭了。",
       "listening_pinyin": "nán ： cóng jīn tiān kāi shǐ ， wǒ wǎn shàng bù chī fàn le 。",
@@ -712,7 +712,7 @@ export const examData: ExamDetail = {
         "B 多喝水 (duō hē shuǐ)",
         "C 少吃饭 (shǎo chī fàn)"
       ],
-      "pinyin": "Nán: Cóng jīntiān kāishǐ, wǒ wǎnshang bù chī fàn le.\nNǚ: Wèi shénme?\nNán: Wǒ xiànzài dōu bāshíwǔ gōngjīn le.\nNǚ: Nà nǐ yào duō yùndòng, bù chī fàn duì shēntǐ bù hǎo.\nWèn: Nǚ de ràng nán de zěnme zuò?",
+      "pinyin": null,
       "listening_viet": "Nam: Từ hôm nay trở đi tôi sẽ không ăn đêm."
     },
     {

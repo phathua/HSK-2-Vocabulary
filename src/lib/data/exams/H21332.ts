@@ -20,7 +20,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nói: 'Wǒ kànjiàn xiǎo māo le, tā zài nàr' (Tôi nhìn thấy con mèo nhỏ rồi, nó ở đằng kia). Bức ảnh thể hiện đúng hình ảnh con mèo nhỏ trong giỏ (xiǎo māo) nên đáp án là Đúng (√).",
       "listening_pinyin": "Wǒ kànjiàn xiǎomāo le, tā zài nàr.",
-      "pinyin": "Wǒ kànjiàn xiǎomāo le, tā zài nàr.",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -40,7 +40,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật khen: 'Nǐ de zì xiě de zhēn piàoliang' (Chữ bạn viết đẹp quá). Tuy nhiên bức ảnh lại thể hiện một bé trai đang vẽ tranh (huà huàr) chứ không phải viết chữ (xiě zì) nên đáp án là Sai (×).",
       "listening_pinyin": "Nǐ de zì xiě de zhēn piàoliang.",
-      "pinyin": "Nǐ de zì xiě de zhēn piàoliang.",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -60,7 +60,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật dặn: 'Zàijiàn, lùshang màn diǎnr!' (Tạm biệt, đi đường thong thả nhé!). Bức ảnh người đàn ông giơ ngón tay cái khen ngợi (zhēn bàng) không khớp ngữ cảnh chào tạm biệt dặn đi đường nên đáp án là Sai (×).",
       "listening_pinyin": "Zàijiàn, lùshang màn diǎnr!",
-      "pinyin": "Zàijiàn, lùshang màn diǎnr!",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -80,7 +80,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nói: 'Lái, xiǎng hē bēi shuǐ ma?' (Lại đây, muốn uống cốc nước không?). Bức ảnh thể hiện một ly nước (shuǐ / bēizi) cầm trên tay khớp với câu nói nên đáp án là Đúng (√).",
       "listening_pinyin": "Lái, xiǎng hē bēi shuǐ ma?",
-      "pinyin": "Lái, xiǎng hē bēi shuǐ ma?",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -100,7 +100,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nhắc nhở: 'Bié kàn diànshì le, míngtiān yào kǎoshì ne' (Đừng xem tivi nữa, ngày mai thi đấy). Bức ảnh hai người đang đọc sách (kàn shū) chứ không phải xem tivi (kàn diànshì) nên đáp án là Sai (×).",
       "listening_pinyin": "Bié kàn diànshì le, míngtiān yào kǎoshì ne.",
-      "pinyin": "Bié kàn diànshì le, míngtiān yào kǎoshì ne.",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -120,7 +120,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật hỏi: 'Zhè shì nǐ māma de shǒubiǎo ma?' (Đây là đồng hồ đeo tay của mẹ bạn à?). Bức ảnh chụp người mang giày cao gót (gāogēnxié) chứ không phải đồng hồ đeo tay (shǒubiǎo) nên đáp án là Sai (×).",
       "listening_pinyin": "Dǎ lánqiú de nàge rén shì wǒ gēge.",
-      "pinyin": "Dǎ lánqiú de nàge rén shì wǒ gēge.",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -140,7 +140,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật dặn dò: 'Yīnwèi jīntiān tiānqì tài rè, nǐ duō hē diǎnr shuǐ' (Vì hôm nay trời quá nóng, bạn uống nhiều nước vào nhé). Bức ảnh thể hiện uống nước (hē shuǐ) khớp với lời thoại nên đáp án là Đúng (√).",
       "listening_pinyin": "Nǐ yào nǎge? Zuǒbian de?",
-      "pinyin": "Nǐ yào nǎge? Zuǒbian de?",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -160,7 +160,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nói: 'Zài lái diǎnr mǐfàn ba, nǐ chī de tài shǎo le' (Ăn thêm chút cơm nhé, bạn ăn ít quá). Bức ảnh bát cơm và đôi đũa (mǐfàn) khớp với lời thoại nên đáp án là Đúng (√).",
       "listening_pinyin": "Wǒ kāi chē lái de, wǒ sòng nǐ.",
-      "pinyin": "Wǒ kāi chē lái de, wǒ sòng nǐ.",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -180,7 +180,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật dặn: 'Yīfu wǒ gěi nǐ xǐ le' (Quần áo tôi đã giặt cho bạn rồi). Bức ảnh người phụ nữ đang giặt quần áo (xǐ yīfu) khớp với lời thoại nên đáp án là Đúng (√).",
       "listening_pinyin": "Xiānsheng, zhuōzi shàng de shǒujī shì nín de ma?",
-      "pinyin": "Xiānsheng, zhuōzi shàng de shǒujī shì nín de ma?",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -200,7 +200,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Trong bài nghe nhân vật nói: 'Nǐ tài lèi le, ràng tā shuì ba' (Bạn mệt quá rồi, để cô ấy ngủ đi). Bức ảnh thể hiện người đang ngủ (shuìjiào) khớp với lời thoại nên đáp án là Đúng (√).",
       "listening_pinyin": "Tā zhèngzài shuìjiào.",
-      "pinyin": "Tā zhèngzài shuìjiào.",
+      "pinyin": null,
       "options": [
         "√ Đúng",
         "× Sai"
@@ -444,13 +444,13 @@ export const examData: ExamDetail = {
       "question_no": 21,
       "image": null,
       "type": "Multiple Choice",
-      "text": "女：你姐姐呢？叫她来吃西瓜。\n男：她在房间里看报纸，我去叫她。\n问：姐姐在做什么？",
+      "text": "Câu hỏi nghe số 21",
       "answer": "A",
       "listening_script": "女：你姐姐呢？叫她来吃西瓜。\n男：她在房间里看报纸，我去叫她。\n问：姐姐在做什么？",
       "board_image": null,
       "explanation": "Người nam trả lời chị gái 'tā zài fángjiān lǐ kàn bàozhǐ' (Chị ấy đang đọc báo trong phòng), đáp án chọn A kàn bàozhǐ.",
       "listening_pinyin": "Nǚ: Nǐ jiějie ne? Jiào tā lái chī xīguā.\nNán: Tā zài fángjiān lǐ kàn bàozhǐ, wǒ qù jiào tā.\nWèn: Jiějie zài zuò shénme?",
-      "pinyin": "Nǚ: Nǐ jiějie ne? Jiào tā lái chī xīguā.\nNán: Tā zài fángjiān lǐ kàn bàozhǐ, wǒ qù jiào tā.\nWèn: Jiějie zài zuò shénme?",
+      "pinyin": null,
       "options": [
         "A 看报纸 (kàn bàozhǐ)",
         "B 洗水果 (xǐ shuǐguǒ)",
@@ -465,13 +465,13 @@ export const examData: ExamDetail = {
       "question_no": 22,
       "image": null,
       "type": "Multiple Choice",
-      "text": "男：这次考试你准备得怎么样了？\n女：我觉得没问题了。\n问：女的是什么意思？",
+      "text": "Câu hỏi nghe số 22",
       "answer": "C",
       "listening_script": "男：这次考试你准备得怎么样了？\n女：我觉得没问题了。\n问：女的是什么意思？",
       "board_image": null,
       "explanation": "Người nữ trả lời 'wǒ juéde méi wèntí le' (Tôi thấy không có vấn đề gì nữa), biểu thị đã chuẩn bị xong, đáp án C zhǔnbèi hǎo le.",
       "listening_pinyin": "Nán: Zhè cì kǎoshì nǐ zhǔnbèi de zěnmeyàng le?\nNǚ: Wǒ juéde méi wèntí le.\nWèn: Nǚ de shì shénme yìsi?",
-      "pinyin": "Nán: Zhè cì kǎoshì nǐ zhǔnbèi de zěnmeyàng le?\nNǚ: Wǒ juéde méi wèntí le.\nWèn: Nǚ de shì shénme yìsi?",
+      "pinyin": null,
       "options": [
         "A 别说话 (bié shuōhuà)",
         "B 题很少 (tí hěn shǎo)",
@@ -486,13 +486,13 @@ export const examData: ExamDetail = {
       "question_no": 23,
       "image": null,
       "type": "Multiple Choice",
-      "text": "女：为什么你孩子的名字叫乐乐？\n男：因为我希望他能快快乐乐的。\n问：男的希望孩子怎么样？",
+      "text": "Câu hỏi nghe số 23",
       "answer": "A",
       "listening_script": "女：为什么你孩子的名字叫乐乐？\n男：因为我希望他能快快乐乐的。\n问：男的希望孩子怎么样？",
       "board_image": null,
       "explanation": "Người nam giải thích đặt tên con là Nhạc Nhạc 'yīnwèi wǒ xīwàng tā néng kuàikuàilèlè de' (Vì tôi hy vọng con vui vẻ), đáp án A kuàilè.",
       "listening_pinyin": "Nán: Wèishénme nǐ háizi de míngzi jiào Lèlè?\nNán: Yīnwèi wǒ xīwàng tā néng kuàikuàilèlè de.\nWèn: Nán de xīwàng háizi zěnmeyàng?",
-      "pinyin": "Nán: Wèishénme nǐ háizi de míngzi jiào Lèlè?\nNán: Yīnwèi wǒ xīwàng tā néng kuàikuàilèlè de.\nWèn: Nán de xīwàng háizi zěnmeyàng?",
+      "pinyin": null,
       "options": [
         "A 快乐 (kuàilè)",
         "B 身体好 (shēntǐ hǎo)",
@@ -507,13 +507,13 @@ export const examData: ExamDetail = {
       "question_no": 24,
       "image": null,
       "type": "Multiple Choice",
-      "text": "男：你认识那个女医生？\n女：是，上次我生病，就是她给我看的。\n问：他们在说谁？",
+      "text": "Câu hỏi nghe số 24",
       "answer": "A",
       "listening_script": "男：你认识那个女医生？\n女：是，上次我生病，就是她给我看的。\n问：他们在说谁？",
       "board_image": null,
       "explanation": "Hội thoại nhắc đến 'nǚyīshēng' (bác sĩ nữ) khám bệnh cho người nữ, đáp án chọn A nǚyīshēng.",
       "listening_pinyin": "Nán: Nǐ rènshi nàge nǚ yīshēng?\nNǚ: Shì, shàng cì wǒ shēngbìng, jiùshì tā gěi wǒ kàn de.\nWèn: Tāmen zài shuō shéi?",
-      "pinyin": "Nán: Nǐ rènshi nàge nǚ yīshēng?\nNǚ: Shì, shàng cì wǒ shēngbìng, jiùshì tā gěi wǒ kàn de.\nWèn: Tāmen zài shuō shéi?",
+      "pinyin": null,
       "options": [
         "A 女医生 (nǚ yīshēng)",
         "B 小学生 (xiǎoxuéshēng)",
@@ -528,13 +528,13 @@ export const examData: ExamDetail = {
       "question_no": 25,
       "image": null,
       "type": "Multiple Choice",
-      "text": "女：早上怎么没见你出来跑步？\n男：我起晚了就没去。\n问：男的为什么没去跑步？",
+      "text": "Câu hỏi nghe số 25",
       "answer": "B",
       "listening_script": "女：早上怎么没见你出来跑步？\n男：我起晚了就没去。\n问：男的为什么没去跑步？",
       "board_image": null,
       "explanation": "Người nam giải thích lý do không đi chạy bộ 'wǒqǐ wǎn le jiù méi qù' (Tôi ngủ dậy muộn nên không đi), chọn B qǐwǎn le.",
       "listening_pinyin": "Nǚ: Zǎoshang zěnme méi jiàn nǐ chūlái pǎobù?\nNán: Wǒ qǐ wǎn le jiù méi qù.\nWèn: Nán de wèishénme méi qù pǎobù?",
-      "pinyin": "Nǚ: Zǎoshang zěnme méi jiàn nǐ chūlái pǎobù?\nNán: Wǒ qǐ wǎn le jiù méi qù.\nWèn: Nán de wèishénme méi qù pǎobù?",
+      "pinyin": null,
       "options": [
         "A 下雨了 (xià yǔ le)",
         "B 起晚了 (qǐ wǎn le)",
@@ -549,13 +549,13 @@ export const examData: ExamDetail = {
       "question_no": 26,
       "image": null,
       "type": "Multiple Choice",
-      "text": "男：给你妹妹打个电话，让她早点儿回家。\n女：打过了，她说买完东西就回来。\n问：妹妹最可能在哪儿？",
+      "text": "Câu hỏi nghe số 26",
       "answer": "A",
       "listening_script": "男：给你妹妹打个电话，让她早点儿回家。\n女：打过了，她说买完东西就回来。\n问：妹妹最可能在哪儿？",
       "board_image": null,
       "explanation": "Người nữ nói em gái 'mǎi wán dōngxī jiù huílái' (mua đồ xong sẽ về), nên em gái đang ở A shāngdiàn (cửa hàng).",
       "listening_pinyin": "Nán: Gěi nǐ mèimei dǎ ge diànhuà, ràng tā zǎodiǎnr huí jiā.\nNǚ: Dǎ guò le, tā shuō mǎi wán dōngxi jiù huílái.\nWèn: Mèimei zuì kěnéng zài nǎr?",
-      "pinyin": "Nán: Gěi nǐ mèimei dǎ ge diànhuà, ràng tā zǎodiǎnr huí jiā.\nNǚ: Dǎ guò le, tā shuō mǎi wán dōngxi jiù huílái.\nWèn: Mèimei zuì kěnéng zài nǎr?",
+      "pinyin": null,
       "options": [
         "A 商店 (shāngdiàn)",
         "B 医院 (yīyuàn)",
@@ -570,13 +570,13 @@ export const examData: ExamDetail = {
       "question_no": 27,
       "image": null,
       "type": "Multiple Choice",
-      "text": "女：这是你的铅笔吗？\n男：是的，你在哪儿找到的？\n问：女的找到了什么？",
+      "text": "Câu hỏi nghe số 27",
       "answer": "B",
       "listening_script": "女：这是你的铅笔吗？\n男：是的，你在哪儿找到的？\n问：女的找到了什么？",
       "board_image": null,
       "explanation": "Người nữ hỏi 'zhè shì nǐ de qiānbǐ ma？' (Đây là bút chì của bạn à?), đáp án B qiānbǐ.",
       "listening_pinyin": "Nǚ: Zhè shì nǐ de qiānbǐ ma?\nNán: Shì de, nǐ zài nǎr zhǎodào de?\nWèn: Nǚ de zhǎodào le shénme?",
-      "pinyin": "Nǚ: Zhè shì nǐ de qiānbǐ ma?\nNán: Shì de, nǐ zài nǎr zhǎodào de?\nWèn: Nǚ de zhǎodào le shénme?",
+      "pinyin": null,
       "options": [
         "A 猫 (māo)",
         "B 铅笔 (qiānbǐ)",
@@ -591,13 +591,13 @@ export const examData: ExamDetail = {
       "question_no": 28,
       "image": null,
       "type": "Multiple Choice",
-      "text": "男：明天上午去北京的火车票还有吗？\n女：上午的卖完了，下午的可以吗？\n问：男的想买哪天的票？",
+      "text": "Câu hỏi nghe số 28",
       "answer": "B",
       "listening_script": "男：明天上午去北京的火车票还有吗？\n女：上午的卖完了，下午的可以吗？\n问：男的想买哪天的票？",
       "board_image": null,
       "explanation": "Người nam hỏi mua vé tàu đi Bắc Kinh vào ngày 'míngtiān' (ngày mai), chọn B míngtiān.",
       "listening_pinyin": "Nán: Míngtiān shàngwǔ qù Běijīng de huǒchēpiào hái yǒu ma?\nNǚ: Shàngwǔ de mài wán le, xiàwǔ de kěyǐ ma?\nWèn: Nán de xiǎng mǎi nǎ tiān de piào?",
-      "pinyin": "Nán: Míngtiān shàngwǔ qù Běijīng de huǒchēpiào hái yǒu ma?\nNǚ: Shàngwǔ de mài wán le, xiàwǔ de kěyǐ ma?\nWèn: Nán de xiǎng mǎi nǎ tiān de piào?",
+      "pinyin": null,
       "options": [
         "A 今天 (jīntiān)",
         "B 明天 (míngtiān)",
@@ -612,13 +612,13 @@ export const examData: ExamDetail = {
       "question_no": 29,
       "image": null,
       "type": "Multiple Choice",
-      "text": "女：听说中国有一百多个姓。\n男：比这多多了，《百家姓》这本书里就有五百多个。\n问：那本书里有多少个姓？",
+      "text": "Câu hỏi nghe số 29",
       "answer": "B",
       "listening_script": "女：听说中国有一百多个姓。\n男：比这多多了，《百家姓》这本书里就有五百多个。\n问：那本书里有多少个姓？",
       "board_image": null,
       "explanation": "Người nam nói cuốn sách Bách Gia Tánh có 'wǔbǎiduōgè' (hơn 500 họ), đáp án chọn B 500duō.",
       "listening_pinyin": "Nǚ: Tīngshuō Zhōngguó yǒu yìbǎi duō ge xìng.\nNán: Bǐ zhè duō duō le, 《Bǎijiāxìng》zhè běn shū lǐ jiù yǒu wǔbǎi duō ge.\nWèn: Nà běn shū lǐ yǒu duōshao ge xìng?",
-      "pinyin": "Nǚ: Tīngshuō Zhōngguó yǒu yìbǎi duō ge xìng.\nNán: Bǐ zhè duō duō le, 《Bǎijiāxìng》zhè běn shū lǐ jiù yǒu wǔbǎi duō ge.\nWèn: Nà běn shū lǐ yǒu duōshao ge xìng?",
+      "pinyin": null,
       "options": [
         "A 56个 (56 ge)",
         "B 500多 (500 duō)",
@@ -633,13 +633,13 @@ export const examData: ExamDetail = {
       "question_no": 30,
       "image": null,
       "type": "Multiple Choice",
-      "text": "男：你昨天下午去看电影了？\n女：没有，我去咖啡馆见朋友了。\n问：女的昨天下午去哪儿了？",
+      "text": "Câu hỏi nghe số 30",
       "answer": "C",
       "listening_script": "男：你昨天下午去看电影了？\n女：没有，我去咖啡馆见朋友了。\n问：女的昨天下午去哪儿了？",
       "board_image": null,
       "explanation": "Người nữ đính chính 'wǒ qù kāfēiguǎn jiàn péngyǒu le' (Tôi đi quán cà phê gặp bạn rồi), chọn C kāfēiguǎn ér.",
       "listening_pinyin": "Nán: Nǐ zuótiān xiàwǔ qù kàn diànyǐng le?\nNǚ: Méiyǒu, wǒ qù kāfēiguǎn jiàn péngyou le.\nWèn: Nǚ de zuótiān xiàwǔ qù nǎr le?",
-      "pinyin": "Nán: Nǐ zuótiān xiàwǔ qù kàn diànyǐng le?\nNǚ: Méiyǒu, wǒ qù kāfēiguǎn jiàn péngyou le.\nWèn: Nǚ de zuótiān xiàwǔ qù nǎr le?",
+      "pinyin": null,
       "options": [
         "A 茶馆儿 (cháguǎnr)",
         "B 电影院 (diànyǐngyuàn)",
@@ -654,13 +654,13 @@ export const examData: ExamDetail = {
       "question_no": 31,
       "image": null,
       "type": "Multiple Choice",
-      "text": "男：你去上汉字课了吗？\n女：去了，这个课非常有意思。\n男：听课的人多不多？\n女：不少，有37人呢。\n问：女的觉得汉字课怎么样？",
+      "text": "Câu hỏi nghe số 31",
       "answer": "C",
       "listening_script": "男：你去上汉字课了吗？\n女：去了，这个课非常有意思。\n男：听课的人多不多？\n女：不少，有37人呢。\n问：女的觉得汉字课怎么样？",
       "board_image": null,
       "explanation": "Người nữ đánh giá về lớp học Hán tự 'zhège kè fēicháng yǒuyìsi' (Môn học này rất thú vị), đáp án C hěn yǒuyìsi.",
       "listening_pinyin": "Nán: Nǐ qù shàng Hànzì kè le ma?\nNǚ: Qù le, zhège kè fēicháng yǒu yìsi.\nNán: Tīng kè de rén duō bù duō?\nNǚ: Bù shǎo, yǒu 37 rén ne.\nWèn: Nǚ de juéde Hànzì kè zěnmeyàng?",
-      "pinyin": "Nán: Nǐ qù shàng Hànzì kè le ma?\nNǚ: Qù le, zhège kè fēicháng yǒu yìsi.\nNán: Tīng kè de rén duō bù duō?\nNǚ: Bù shǎo, yǒu 37 rén ne.\nWèn: Nǚ de juéde Hànzì kè zěnmeyàng?",
+      "pinyin": null,
       "options": [
         "A 听不懂 (tīngbudǒng)",
         "B 考试多 (kǎoshì duō)",
@@ -675,13 +675,13 @@ export const examData: ExamDetail = {
       "question_no": 32,
       "image": null,
       "type": "Multiple Choice",
-      "text": "女：晚上吃什么？\n男：我都可以，你想吃什么？\n女：面条儿，怎么样？\n男：好，那我们就去学校旁边那家面馆儿吧。\n问：他们晚饭吃什么？",
+      "text": "Câu hỏi nghe số 32",
       "answer": "C",
       "listening_script": "女：晚上吃什么？\n男：我都可以，你想吃什么？\n女：面条儿，怎么样？\n男：好，那我们就去学校旁边那家面馆儿吧。\n问：他们晚饭吃什么？",
       "board_image": null,
       "explanation": "Hai người đồng ý đi ăn mì ở quán cạnh trường 'miàntiáoér', đáp án chọn C miàntiáoér.",
       "listening_pinyin": "Nǚ: Wǎnshang chī shénme?\nNán: Wǒ dōu kěyǐ, nǐ xiǎng chī shénme?\nNǚ: Miàntiáor, zěnmeyàng?\nNán: Hǎo, nà wǒmen jiù qù xuéxiào pángbiān nà jiā miànguǎnr ba.\nWèn: Tāmen wǎnfàn chī shénme?",
-      "pinyin": "Nǚ: Wǎnshang chī shénme?\nNán: Wǒ dōu kěyǐ, nǐ xiǎng chī shénme?\nNǚ: Miàntiáor, zěnmeyàng?\nNán: Hǎo, nà wǒmen jiù qù xuéxiào pángbiān nà jiā miànguǎnr ba.\nWèn: Tāmen wǎnfàn chī shénme?",
+      "pinyin": null,
       "options": [
         "A 米饭 (mǐfàn)",
         "B 鸡蛋 (jīdàn)",
@@ -696,13 +696,13 @@ export const examData: ExamDetail = {
       "question_no": 33,
       "image": null,
       "type": "Multiple Choice",
-      "text": "男：你什么时候生日？\n女：六月二号。\n男：那再有两天不就是你的生日了？\n女：是啊，很快，我就十八岁了。\n问：女的哪天生日？",
+      "text": "Câu hỏi nghe số 33",
       "answer": "B",
       "listening_script": "男：你什么时候生日？\n女：六月二号。\n男：那再有两天不就是你的生日了？\n女：是啊，很快，我就十八岁了。\n问：女的哪天生日？",
       "board_image": null,
       "explanation": "Người nữ nói rõ sinh nhật của mình là ngày 'liùyuè èrhào' (mùng 2 tháng 6), chọn B 6yuè2hào.",
       "listening_pinyin": "Nán: Nǐ shénme shíhou shēngrì?\nNǚ: Liù yuè èr hào.\nNán: Nà zài yǒu liǎng tiān bú jiùshì nǐ de shēngrì le?\nNǚ: Shì a, hěn kuài, wǒ jiù shíbā suì le.\nWèn: Nǚ de nǎ tiān shēngrì?",
-      "pinyin": "Nán: Nǐ shénme shíhou shēngrì?\nNǚ: Liù yuè èr hào.\nNán: Nà zài yǒu liǎng tiān bú jiùshì nǐ de shēngrì le?\nNǚ: Shì a, hěn kuài, wǒ jiù shíbā suì le.\nWèn: Nǚ de nǎ tiān shēngrì?",
+      "pinyin": null,
       "options": [
         "A 4天前 (4 tiān qián)",
         "B 6月2号 (6 yuè 2 hào)",
@@ -717,13 +717,13 @@ export const examData: ExamDetail = {
       "question_no": 34,
       "image": null,
       "type": "Multiple Choice",
-      "text": "女：老王，中午有个叫李天的打电话找你。\n男：李天？ me他是我大学同学，他说找我什么事了吗？\n女：没有，他让你给他回个电话。\n男：好，我知道了，谢谢。\n问：谁给男的打电话了？",
+      "text": "Câu hỏi nghe số 34",
       "answer": "A",
       "listening_script": "女：老王，中午有个叫李天的打电话找你。\n男：李天？ 他是我的大学同学，他说找我什么事了吗？\n女：没有，他让你给他回个电话。\n男：好，我知道了，谢谢。\n问：谁给男的打电话了？",
       "board_image": null,
       "explanation": "Người nam giải thích Lý Thiên là 'wǒ dàxué tóngxué' (bạn học đại học của tôi), đáp án A tā tóngxué.",
       "listening_pinyin": "Nǚ: Lǎo Wáng, zhōngwǔ yǒu ge jiào Lǐ Tiān de dǎ diànhuà zhǎo nǐ.\nNán: Lǐ Tiān? Tā shì wǒ dàxué tóngxué, tā shuō zhǎo wǒ shénme shì le ma?\nNǚ: Méiyǒu, tā ràng nǐ gěi tā huí ge diànhuà.\nNán: Hǎo, wǒ zhīdào le, xièxie.\nWèn: Shéi gěi nán de dǎ diànhuà le?",
-      "pinyin": "Nǚ: Lǎo Wáng, zhōngwǔ yǒu ge jiào Lǐ Tiān de dǎ diànhuà zhǎo nǐ.\nNán: Lǐ Tiān? Tā shì wǒ dàxué tóngxué, tā shuō zhǎo wǒ shénme shì le ma?\nNǚ: Méiyǒu, tā ràng nǐ gěi tā huí ge diànhuà.\nNán: Hǎo, wǒ zhīdào le, xièxie.\nWèn: Shéi gěi nán de dǎ diànhuà le?",
+      "pinyin": null,
       "options": [
         "A 他同学 (tā tóngxué)",
         "B 他弟弟 (tā dìdi)",
@@ -738,13 +738,13 @@ export const examData: ExamDetail = {
       "question_no": 35,
       "image": null,
       "type": "Multiple Choice",
-      "text": "男：现在几点了？\n女：三点多，怎么了？\n男：我要去机场了，高小姐的飞机五点到。\n女：那你快去吧。\n问：高小姐怎么来？",
+      "text": "Câu hỏi nghe số 35",
       "answer": "C",
       "listening_script": "男：现在几点了？\n女：三点多，怎么了？\n男：我要去机场了，高小姐的飞机五点到。\n女：那你快去吧。\n问：高小姐怎么来？",
       "board_image": null,
       "explanation": "Người nam nói đi sân bay đón cô Cao vì chuyến bay đến lúc 5h 'gāo xiǎojiě de fēijī wǔdiǎn dào', đáp án C zuòfēijī.",
       "listening_pinyin": "Nán: Xiànzài jǐ diǎn le?\nNǚ: Sān diǎn duō, zěnme le?\nNán: Wǒ yào qù jīchǎng le, Gāo xiǎojiě de fēijī wǔ diǎn dào.\nNǚ: Nà nǐ kuài qù ba.\nWèn: Gāo xiǎojiě zěnme lái?",
-      "pinyin": "Nán: Xiànzài jǐ diǎn le?\nNǚ: Sān diǎn duō, zěnme le?\nNán: Wǒ yào qù jīchǎng le, Gāo xiǎojiě de fēijī wǔ diǎn dào.\nNǚ: Nà nǐ kuài qù ba.\nWèn: Gāo xiǎojiě zěnme lái?",
+      "pinyin": null,
       "options": [
         "A 走路 (zǒulù)",
         "B 开车 (kāi chē)",
@@ -894,7 +894,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần phó từ chỉ mức độ khen chú chó 'thật là vui/đáng yêu' -> chọn C zhēn.",
       "listening_pinyin": null,
-      "pinyin": "Nǐ kuài kàn, qiánmiàn nàge xiǎogǒu ( zhēn ) hǎowánr."
+      "pinyin": "Nǐ kuài kàn, qiánmiàn nàge xiǎogǒu ( ) hǎowánr."
     },
     {
       "exam_code": "H21332",
@@ -918,7 +918,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống cần động từ 'giúp đỡ' -> chọn A bāngzhù (phải biết ơn người đã giúp đỡ mình).",
       "listening_pinyin": null,
-      "pinyin": "Yào xuéhuì duì ( bāngzhù ) guò nǐ de rén shuō “xièxie”."
+      "pinyin": "Yào xuéhuì duì ( ) guò nǐ de rén shuō “xièxie”."
     },
     {
       "exam_code": "H21332",
@@ -942,7 +942,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống nằm trong cụm 'bù dǒng de wèntí' (vấn đề không hiểu) -> chọn D dǒng.",
       "listening_pinyin": null,
-      "pinyin": "Méi guānxi, yǒu bù ( dǒng ) de wèntí, nǐ kěyǐ zài lái wèn wǒ."
+      "pinyin": "Méi guānxi, yǒu bù ( ) de wèntí, nǐ kěyǐ zài lái wèn wǒ."
     },
     {
       "exam_code": "H21332",
@@ -966,7 +966,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống đứng trước lượng từ 'gè' chỉ khoảng thời gian 'hơn 2 tiếng' -> chọn B liǎng.",
       "listening_pinyin": null,
-      "pinyin": "Cóng wǒmen xuéxiào dào jīchǎng, zuò chūzūchē yào ( liǎng ) ge duō xiǎoshí."
+      "pinyin": "Cóng wǒmen xuéxiào dào jīchǎng, zuò chūzūchē yào ( ) ge duō xiǎoshí."
     },
     {
       "exam_code": "H21332",
@@ -990,7 +990,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Chỗ trống nằm trong cụm từ 'hěn zhǎngshíjiān' (thời gian rất dài) -> chọn F shíjiān.",
       "listening_pinyin": null,
-      "pinyin": "Nǚ: Diànshì shàng shuō nǐ nàr míngtiān kěnéng huì yǒu dàxuě.\nNán: Tài hǎo le! Wǒmen zhèr hěn cháng ( shíjiān ) méiyǒu xiàxuě le."
+      "pinyin": "Nǚ: Diànshì shàng shuō nǐ nàr míngtiān kěnéng huì yǒu dàxuě.\nNán: Tài hǎo le! Wǒmen zhèr hěn cháng ( ) méiyǒu xiàxuě le."
     },
     {
       "exam_code": "H21332",

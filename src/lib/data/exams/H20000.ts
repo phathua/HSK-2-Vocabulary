@@ -454,7 +454,7 @@ export const examData: ExamDetail = {
       "question_no": 21,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 21 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 21",
       "answer": "A",
       "listening_script": "女： Xià 下 xīngqī 星期 wǒmen 我们 yào 要 qù 去 Shànghǎi 上海 lǚyóu， 旅游， nǐ 你 qù 去 ma？ 吗？ 男： Tài 太 hǎo 好 le！ 了！ Wǒ 我 yě 也 qù． 去。 问： Nán 男 de 的 shì 是 shénme 什么 yìsi？ 意思？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_21.webp",
@@ -466,7 +466,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：xiàxīngqī wǒmen yào qù shànghǎi lǚyóu，nǐ qù ma？nán：tàihǎole！wǒ yě qù。wèn：nán de shì shénme yìsi？ (Nǚ: Xià xīngqī wǒmen yào qù Shànghǎi lǚyóu, nǐ qù ma? Nán: Tài hǎo le! Wǒ yě qù. Wèn: Nán de shì shénme yìsi?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Xià xīngqī wǒmen yào qù Shànghǎi lǚyóu, nǐ qù ma? Nán: Tài hǎo le! Wǒ yě qù. Wèn: Nán de shì shénme yìsi?",
-      "pinyin": "C â u   2 1   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nữ: Tuần sau chúng ta sẽ đi Thượng Hải, bạn có đi không? ? Người đàn ông: Tuyệt vời! Hiểu rồi! Tôi cũng sẽ đi. Câu hỏi: Đàn ông là gì? nghĩa là?"
     },
     {
@@ -476,7 +476,7 @@ export const examData: ExamDetail = {
       "question_no": 22,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 22 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 22",
       "answer": "B",
       "listening_script": "女： Xiǎo 小 Zhāng， 张 ， Nǐ 你 nǚpéngyou 女朋友 méi 没 lái？ 来？ 男： Méi 没 lái． 来。 Tā 她 xiàwǔ 下午 yào 要 kǎoshì． 考试 。 问： Xiǎo 小 Zhāng 张 de 的 nǚpéngyou 女朋友 wèi 为 shénme 什么 méi 没 lái？ 来？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_22.webp",
@@ -488,7 +488,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：xiǎozhāng，nǐ nǚpéngyǒu méi lái？nán：méi lái。tā xiàwǔ yào kǎoshì wèn：xiǎozhāng de nǚpéngyǒu wèishénme méi lái？ (Nǚ: Xiǎo Zhāng, Nǐ nǚpéngyou méi lái? Nán: Méi lái. Tā xiàwǔ yào kǎoshì. 。 Xiǎo Zhāng de nǚpéngyou wèi shénme méi lái?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Xiǎo Zhāng, Nǐ nǚpéngyou méi lái? Nán: Méi lái. Tā xiàwǔ yào kǎoshì. 。 Xiǎo Zhāng de nǚpéngyou wèi shénme méi lái?",
-      "pinyin": "C â u   2 2   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nữ: Tiểu Trương, cậu có bạn gái chưa? Đến? Người đàn ông: Không đến. Cô ấy có bài kiểm tra vào buổi chiều. Hỏi: Vì sao Tiểu Trương không có bạn gái? Đến?"
     },
     {
@@ -498,7 +498,7 @@ export const examData: ExamDetail = {
       "question_no": 23,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 23 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 23",
       "answer": "C",
       "listening_script": "女： Nǐ 你 rènshi 认识 Wáng 王 lǎoshī 老师 pángbiān 旁边 nàge 那个 rén 人 ma？ 吗？ 男： Rènshi， 认识 ， tā 他 jiù 就 shì 是 Wáng 王 lǎoshī 老师 de 的 zhàngfu． 丈夫 。 问： Wáng 王 lǎoshī 老师 pángbiān 旁边 de 的 rén 人 shì 是 shéi？ 谁 ？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_23.webp",
@@ -510,7 +510,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：nǐ rènshí wánglǎoshī pángbiān nàge rén ma？nán：rènshí，tā jiùshì wánglǎoshī de zhàngfū wèn：wánglǎoshī pángbiān de rén shì shuí？ (Nǚ: Nǐ rènshi Wáng lǎoshī pángbiān nàge rén ma? Nán: Rènshi, tā jiù shì Wáng lǎoshī de zhàngfu. 。 Wáng lǎoshī pángbiān de rén shì shéi?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Nǐ rènshi Wáng lǎoshī pángbiān nàge rén ma? Nán: Rènshi, tā jiù shì Wáng lǎoshī de zhàngfu. 。 Wáng lǎoshī pángbiān de rén shì shéi?",
-      "pinyin": "C â u   2 3   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nữ: Bạn có biết người bên cạnh thầy Vương không? ? Nam: Vâng, tôi biết anh ấy. Anh ấy là chồng của cô giáo Vương. Câu hỏi: Người bên cạnh thầy Vương là ai? Ai?"
     },
     {
@@ -520,7 +520,7 @@ export const examData: ExamDetail = {
       "question_no": 24,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 24 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 24",
       "answer": "A",
       "listening_script": "女： Míngtiān 明天 shì 是 nǐ 你 de 的 shēngrì 生日 ma？ 吗？ 男： Bú 不 shì， 是， wǒ 我 de 的 shēngrì 生日 shì 是 qī 七 yuè 月 shíwǔ 十五 hào． 号 。 问： Nǎ 哪 tiān 天 shì 是 tā 他 de 的 shēngrì？ 生日 ？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_24.webp",
@@ -532,7 +532,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：míngtiān shì nǐ de shēngrì ma？nán：búshì，wǒ de shēngrì shì qīyuè shíwǔhào wèn：nǎtiān shì tā de shēngrì？ (Nǚ: Míngtiān shì nǐ de shēngrì ma? Nán: Bú shì, wǒ de shēngrì shì qī yuè shíwǔ hào. 。 Nǎ tiān shì tā de shēngrì?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Míngtiān shì nǐ de shēngrì ma? Nán: Bú shì, wǒ de shēngrì shì qī yuè shíwǔ hào. 。 Nǎ tiān shì tā de shēngrì?",
-      "pinyin": "C â u   2 4   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nữ: Ngày mai là sinh nhật của bạn? ? Người đàn ông: Không, vâng, sinh nhật của tôi là ngày 15 tháng 7. Câu hỏi: Ngày nào là ngày của anh ấy? Sinh nhật?"
     },
     {
@@ -542,7 +542,7 @@ export const examData: ExamDetail = {
       "question_no": 25,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 25 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 25",
       "answer": "B",
       "listening_script": "男： Kuài 快 bā 八 diǎn 点 le， 了， wǒ 我 yào 要 qù 去 shàngbān 上班 le． 了。 女： Chīle 吃了 zǎofàn 早饭 zài 再 qù 去 ba． 吧。 问： Nǚ 女 de 的 xiǎng 想 ràng 让 nán 男 de 的 zuò 做 shénme？ 什么 ？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_25.webp",
@@ -554,7 +554,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nán：kuài bādiǎn le，wǒyào qù shàngbān le。nǚ：chī le zǎofàn zài qù ba。wèn：nǚ de xiǎng ràng nán de zuò shénme？ (Nán: Kuài bā diǎn le, wǒ yào qù shàngbān le. Nǚ: Chīle zǎofàn zài qù ba. Wèn: Nǚ de xiǎng ràng nán de zuò shénme?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Kuài bā diǎn le, wǒ yào qù shàngbān le. Nǚ: Chīle zǎofàn zài qù ba. Wèn: Nǚ de xiǎng ràng nán de zuò shénme?",
-      "pinyin": "C â u   2 5   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nam: Đã gần tám giờ rồi, tôi phải đi làm. Người phụ nữ: Ăn sáng xong chúng ta đi nhé. Câu hỏi: Người phụ nữ muốn người đàn ông làm gì? Cái gì?"
     },
     {
@@ -564,7 +564,7 @@ export const examData: ExamDetail = {
       "question_no": 26,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 26 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 26",
       "answer": "A",
       "listening_script": "女： Dào 到 le． 了。 Nǐ 你 kàn， 看 ， zhè 这 jiù 就 shì 是 wǒmen 我们 xuéxiào． 学校 。 男： Nǐmen 你们 xuéxiào 学校 zhēn 真 dà． 大。 问： Nán 男 de 的 juéde 觉得 zhège 这个 xuéxiào 学校 zěnmeyàng？ 怎么样 ？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_26.webp",
@@ -576,7 +576,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：dào le。nǐ kàn，zhè jiùshì wǒmen xuéxiào nán：nǐmen xuéxiào zhēn dà。wèn：nán de juéde zhège xuéxiào zěnmeyàng？ (Nǚ: Dào le. Nǐ kàn, zhè jiù shì wǒmen xuéxiào. 。 Nǐmen xuéxiào zhēn dà. Wèn: Nán de juéde zhège xuéxiào zěnmeyàng?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Dào le. Nǐ kàn, zhè jiù shì wǒmen xuéxiào. 。 Nǐmen xuéxiào zhēn dà. Wèn: Nán de juéde zhège xuéxiào zěnmeyàng?",
-      "pinyin": "C â u   2 6   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nữ: đến. Hãy nhìn xem, đây là trường học của chúng tôi. Nam: Trường của bạn lớn thật đấy. Câu hỏi: Đàn ông nghĩ gì về ngôi trường này? Thế còn nó thì sao?"
     },
     {
@@ -586,7 +586,7 @@ export const examData: ExamDetail = {
       "question_no": 27,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 27 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 27",
       "answer": "B",
       "listening_script": "男： Wǒ 我 zhù 住 zài 在 sān 三 líng 零 sì． 四。 Nǐ 你 zhù 住 zài 在 nǎge 哪个 fángjiān？ 房间 ？ 女： Wǒ 我 zhù 住 sān 三 líng 零 qī． 七。 问： Nǚ 女 de 的 zhù 住 zài 在 nǎge 哪个 fángjiān？ 房间 ？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_27.webp",
@@ -598,7 +598,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nán：wǒ zhù zài sānlíngsì。nǐ zhù zài nǎge fángjiān nǚ：wǒ zhù sān língqī。wèn：nǚ de zhù zài nǎge fángjiān？ (Nán: Wǒ zhù zài sān líng sì. Nǐ zhù zài nǎge fángjiān?? Wǒ zhù sān líng qī. Wèn: Nǚ de zhù zài nǎge fángjiān?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Wǒ zhù zài sān líng sì. Nǐ zhù zài nǎge fángjiān?? Wǒ zhù sān líng qī. Wèn: Nǚ de zhù zài nǎge fángjiān?",
-      "pinyin": "C â u   2 7   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nam: Tôi sống ở phòng 304. Bạn sống ở phòng nào? Phòng? Người phụ nữ: Tôi sống ở phòng 307. Hỏi: Người phụ nữ đó sống ở đâu? Phòng?"
     },
     {
@@ -608,7 +608,7 @@ export const examData: ExamDetail = {
       "question_no": 28,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 28 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 28",
       "answer": "A",
       "listening_script": "男： Yīshēng 医生 shuō 说 shénme 什么 le？ 了？ 女： Bú 不 shì 是 dà 大 wèntí， 问题， chī 吃 liǎng 两 tiān 天 yào 药 jiù 就 huì 会 hǎo． 好 。 问： Nǚ 女 de 的 zěnme 怎么 le？ 了？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_28.webp",
@@ -620,7 +620,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nán：yīshēng shuō shénme le？nǚ：búshì dà wèntí，chī liǎngtiān yào jiù huì hǎo wèn：nǚ de zěnme le？ (Nán: Yīshēng shuō shénme le? Nǚ: Bú shì dà wèntí, chī liǎng tiān yào jiù huì hǎo. 。 Nǚ de zěnme le?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Yīshēng shuō shénme le? Nǚ: Bú shì dà wèntí, chī liǎng tiān yào jiù huì hǎo. 。 Nǚ de zěnme le?",
-      "pinyin": "C â u   2 8   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nam: Bác sĩ đã nói gì? Đã? Nữ: Đó không phải là vấn đề lớn. Tôi sẽ ổn sau khi uống thuốc trong hai ngày. Câu hỏi: Còn phụ nữ thì sao? Đã?"
     },
     {
@@ -630,7 +630,7 @@ export const examData: ExamDetail = {
       "question_no": 29,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 29 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 29",
       "answer": "C",
       "listening_script": "男： Nínhǎo， 您好 ， qǐngwèn 请问 nín 您 qù 去 nǎr？ 哪儿？ 女： Wǒ 我 qù 去 jīchǎng， 机场 ， sānshí 三十 fēnzhōng 分钟 néng 能 dào 到 ma？ 吗？ 问： Tāmen 他们 zuì 最 kěnéng 可能 zài 在 nǎr？ 哪儿？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_29.webp",
@@ -642,7 +642,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nán：nínhǎo，qǐngwèn nín qù nǎér？nǚ：wǒ qù jīchǎng，sānshífēnzhōng néng dào ma？wèn：tāmen zuì kěnéng zài nǎér？ (Nán: Nínhǎo, qǐngwèn nín qù nǎr? Nǚ: Wǒ qù jīchǎng, sānshí fēnzhōng néng dào ma? Wèn: Tāmen zuì kěnéng zài nǎr?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Nínhǎo, qǐngwèn nín qù nǎr? Nǚ: Wǒ qù jīchǎng, sānshí fēnzhōng néng dào ma? Wèn: Tāmen zuì kěnéng zài nǎr?",
-      "pinyin": "C â u   2 9   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nam: , Xin chào, bạn có muốn đi không? Ở đâu? Người phụ nữ: Tôi đang đi đến sân bay. Tôi có thể đến đó trong ba mươi phút được không? ? Hỏi: Họ thường ở đâu nhất? Ở đâu?"
     },
     {
@@ -652,7 +652,7 @@ export const examData: ExamDetail = {
       "question_no": 30,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 30 (Phần nghe số 3)",
+      "text": "Câu hỏi nghe số 30",
       "answer": "C",
       "listening_script": "女： Yǐjīng 已经 qī 七 diǎn 点 le， 了， diànyǐng 电影 zěnme 怎么 hái 还 méi 没 kāishǐ？ 开始？ 男： Háiyǒu 还有 shí 十 fēnzhōng 分钟 ne． 呢。 问： Diànyǐng 电影 shénme 什么 shíhou 时候 kāishǐ？ 开始？ Dì-sì 第四 bùfen 部分 Yígòng 一共5 ge 个 tí， 题， měi 每 tí 题 tīng 听 liǎng 两 cì． 次。 Lìrú : 例如： 女： Qǐng 请 zài 在 zhèr 这儿 xiě 写 nín 您 de 的 míngzi． 名字 。 男： Shì 是 zhèr 这儿 ma？ 吗？ 女： Bú 不 shì， 是， shì 是 zhèr． 这儿。 男： Hǎo， 好 ， xièxie． 谢谢。 问： Nán 男 de 的 yào 要 xiě 写 shénme？ 什么 ？ Xiànzài 现在 kāishǐ 开始 dì 第 31 tí : 题：",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_30.webp",
@@ -664,7 +664,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：yǐjīng qīdiǎn le，diànyǐng zěnme hái méi kāishǐ？nán：háiyǒu shífēnzhōng ne。wèn：diànyǐng shénme shíhòu kāishǐ？dìsì bùfèn yīgòng gètí，měití tīng liǎngcì。lìrú：nǚ：qǐng zài zhèér xiě nín de míngzì nán：shì zhèér ma？nǚ：búshì，shì zhèér。nán：hǎo，xièxiè。wèn：nán de yào xiě shénme？xiànzài kāishǐ dìtí： (Nǚ: Yǐjīng qī diǎn le, diànyǐng zěnme hái méi kāishǐ? Nán: Háiyǒu shí fēnzhōng ne. Wèn: Diànyǐng shénme shíhou kāishǐ? Dìsì bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nǚ: Qǐng zài zhèr xiě nín de míngzi. 。 Shì zhèr ma? Nǚ: Bú shì, shì zhèr. Nán: Hǎo, xièxie. Wèn: Nán de yào xiě shénme? Xiànzài kāishǐ dì tí)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Yǐjīng qī diǎn le, diànyǐng zěnme hái méi kāishǐ? Nán: Háiyǒu shí fēnzhōng ne. Wèn: Diànyǐng shénme shíhou kāishǐ? Dìsì bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nǚ: Qǐng zài zhèr xiě nín de míngzi. 。 Shì zhèr ma? Nǚ: Bú shì, shì zhèr. Nán: Hǎo, xièxie. Wèn: Nán de yào xiě shénme? Xiànzài kāishǐ dì tí",
-      "pinyin": "C â u   3 0   ( P h ầ n   n g h e   s ố   3 )",
+      "pinyin": null,
       "listening_viet": "Nữ: Đã bảy giờ rồi, sao vẫn chưa có phim? bắt đầu? Người đàn ông: Vẫn còn mười phút nữa. Hỏi: Khi nào có phim? bắt đầu? Phần thứ tư có tổng cộng 10 câu hỏi. Nghe mỗi câu hỏi hai lần. Ví dụ: Nữ: Hãy ghi tên bạn vào đây. Người đàn ông: Nó có ở đây không? ? Người phụ nữ: Không, vâng, nó ở đây. Người đàn ông: Được rồi, cảm ơn bạn. Câu hỏi: Con người có nên viết không? Cái gì? Hãy bắt đầu câu hỏi ngay bây giờ:"
     },
     {
@@ -674,7 +674,7 @@ export const examData: ExamDetail = {
       "question_no": 31,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 31 (Phần nghe số 4)",
+      "text": "Câu hỏi nghe số 31",
       "answer": "C",
       "listening_script": "女： Píngguǒ 苹果 zěnme 怎么 mài？ 卖？ 男： Sì 四 kuài 块 qián 钱 yì 一 jīn． 斤。 女： Wǒ 我 xiǎng 想 mǎi 买 shí 十 jīn， 斤， nǐ 你 néng 能 bāng 帮 wǒ 我 sòng 送 dào 到 jiā 家 li 里 ma？ 吗？ 男： Méi 没 wèntí． 问题。 问： Nǚ 女 de 的 yào 要 mǎi 买 jǐ 几 jīn 斤 píngguǒ？ 苹果 ？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_31.webp",
@@ -686,7 +686,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：píngguǒ zěnme mài？nán：sìkuài qián yījīn。nǚ：wǒ xiǎng mǎi shíjīn，nǐ néng bāng wǒ sòngdào jiālǐ ma？nán：méi wèntí。wèn：nǚ de yào mǎi jǐjīn píngguǒ？ (Nǚ: Píngguǒ zěnme mài? Nán: Sì kuài qián yì jīn. Nǚ: Wǒ xiǎng mǎi shí jīn, nǐ néng bāng wǒ sòng dào jiā li ma? Nán: Méi wèntí. Wèn: Nǚ de yào mǎi jǐ jīn píngguǒ?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Píngguǒ zěnme mài? Nán: Sì kuài qián yì jīn. Nǚ: Wǒ xiǎng mǎi shí jīn, nǐ néng bāng wǒ sòng dào jiā li ma? Nán: Méi wèntí. Wèn: Nǚ de yào mǎi jǐ jīn píngguǒ?",
-      "pinyin": "C â u   3 1   ( P h ầ n   n g h e   s ố   4 )",
+      "pinyin": null,
       "listening_viet": "Nữ: Còn Apple thì sao? Bán? Người đàn ông: Bốn nhân dân tệ một bảng. Người phụ nữ: Tôi muốn mua 10 bảng. Bạn có thể giao nó đến nhà tôi được không? ? Người đàn ông: Không vấn đề gì. Câu hỏi: Một người phụ nữ nên mua bao nhiêu cân? quả táo?"
     },
     {
@@ -696,7 +696,7 @@ export const examData: ExamDetail = {
       "question_no": 32,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 32 (Phần nghe số 4)",
+      "text": "Câu hỏi nghe số 32",
       "answer": "A",
       "listening_script": "男： Wǎnshang 晚上 wǒmen 我们 qù 去 fànguǎnr 饭馆儿 chīfàn， 吃饭， zěnmeyàng？ 怎么样 ？ 女： Wǒ 我 bù 不 xiǎng 想 qù 去 wàimiàn 外面 chī． 吃。 Wǒ 我 xiǎng 想 zài 在 jiā 家 chī． 吃。 男： Nà 那 nǐ 你 zhǔnbèi 准备 zuò 做 shénme 什么 hǎochī 好吃 de？ 的？ 女： Nǐ 你 xiǎng 想 chī 吃 shénme， 什么 ， wǒ 我 jiù 就 zuò 做 shénme． 什么 。 男： Hǎo 好 de． 的。 问： Tāmen 他们 wǎnshang 晚上 zài 在 nǎr 哪儿 chīfàn？ 吃饭？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_32.webp",
@@ -708,7 +708,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nán：wǎnshàng wǒmen qù fànguǎnér chīfàn，zěnmeyàng nǚ：wǒ bùxiǎng qù wàimiàn chī。wǒ xiǎng zàijiā chī。nán：nà nǐ zhǔnbèi zuò shénme hǎochī de？nǚ：nǐ xiǎng chī shénme，wǒ jiù zuò shénme nán：hǎo de。wèn：tāmen wǎnshàng zài nǎér chīfàn？ (Nán: Wǎnshang wǒmen qù fànguǎnr chīfàn, zěnmeyàng?? Wǒ bù xiǎng qù wàimiàn chī. Wǒ xiǎng zài jiā chī. Nán: Nà nǐ zhǔnbèi zuò shénme hǎochī de? Nǚ: Nǐ xiǎng chī shénme, wǒ jiù zuò shénme. 。 Hǎo de. Wèn: Tāmen wǎnshang zài nǎr chīfàn?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Wǎnshang wǒmen qù fànguǎnr chīfàn, zěnmeyàng?? Wǒ bù xiǎng qù wàimiàn chī. Wǒ xiǎng zài jiā chī. Nán: Nà nǐ zhǔnbèi zuò shénme hǎochī de? Nǚ: Nǐ xiǎng chī shénme, wǒ jiù zuò shénme. 。 Hǎo de. Wèn: Tāmen wǎnshang zài nǎr chīfàn?",
-      "pinyin": "C â u   3 2   ( P h ầ n   n g h e   s ố   4 )",
+      "pinyin": null,
       "listening_viet": "Nam: Buổi tối chúng ta đi nhà hàng ăn tối nhé? Thế còn nó thì sao? Người phụ nữ: Tôi không muốn ra ngoài ăn. Tôi muốn ăn nó ở nhà. Người đàn ông: Cậu định làm món gì ngon thế? của? Người phụ nữ: Tôi sẽ làm bất cứ thứ gì bạn muốn ăn. Người đàn ông: Được rồi. Hỏi: Họ ở đâu vào ban đêm? Dùng bữa nhé?"
     },
     {
@@ -718,7 +718,7 @@ export const examData: ExamDetail = {
       "question_no": 33,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 33 (Phần nghe số 4)",
+      "text": "Câu hỏi nghe số 33",
       "answer": "B",
       "listening_script": "女： Yí 一 ge 个 péngyou 朋友 ràng 让 wǒ 我 bāng 帮 tā 他 zhǎo 找 ge 个 fángzi． 房子。 男： Tā 他 gōngzuò 工作 le 了 ma？ 吗？ 女： Gōngzuò 工作 le． 了。 男： Nà 那 yào 要 zhǎo 找 lí 离 gōngsī 公司 jìn 近 yìxiē 一些 de． 的。 问： Nǚ 女 de 的 yào 要 bāng 帮 péngyou 朋友 zhǎo 找 shénme？ 什么 ？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_33.webp",
@@ -730,7 +730,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：yígè péngyǒu ràng wǒ bāng tā zhǎogè fángzi。nán：tā gōngzuò le ma？nǚ：gōngzuò le。nán：nàyào zhǎo lí gōngsī jìn yīxiē de。wèn：nǚ de yào bāng péngyǒu zhǎo shénme？ (Nǚ: Yí ge péngyou ràng wǒ bāng tā zhǎo ge fángzi. Nán: Tā gōngzuò le ma? Nǚ: Gōngzuò le. Nán: Nà yào zhǎo lí gōngsī jìn yìxiē de. Wèn: Nǚ de yào bāng péngyou zhǎo shénme?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Yí ge péngyou ràng wǒ bāng tā zhǎo ge fángzi. Nán: Tā gōngzuò le ma? Nǚ: Gōngzuò le. Nán: Nà yào zhǎo lí gōngsī jìn yìxiē de. Wèn: Nǚ de yào bāng péngyou zhǎo shénme?",
-      "pinyin": "C â u   3 3   ( P h ầ n   n g h e   s ố   4 )",
+      "pinyin": null,
       "listening_viet": "Nữ: Một người bạn nhờ tôi giúp anh ấy tìm nhà. Người đàn ông: Anh ấy đang làm việc phải không? ? Người phụ nữ: Đang làm việc. Nam: Vậy thì hãy tìm người ở gần công ty hơn. Câu hỏi: Người phụ nữ muốn giúp bạn mình tìm thấy mình? Cái gì?"
     },
     {
@@ -740,7 +740,7 @@ export const examData: ExamDetail = {
       "question_no": 34,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 34 (Phần nghe số 4)",
+      "text": "Câu hỏi nghe số 34",
       "answer": "C",
       "listening_script": "男： Zhè 这 shì 是 nǐ 你 de 的 shǒubiǎo？ 手表 ？ 女： Wǒ 我 mǎi 买 de． 的。 Wǒ 我 xiǎng 想 sòng 送 gěi 给 wǒ 我 gēge． 哥哥。 男： Hěn 很 piàoliang． 漂亮 。 Duōshao 多少 qián 钱 mǎi 买 de？ 的？ 女： Sān 三 qiān 千 duō． 多 。 问： Shǒubiǎo 手表 duōshao 多少 qián 钱 mǎi 买 de？ 的？",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_34.webp",
@@ -752,7 +752,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nán：zhè shì nǐ de shǒubiǎo nǚ：wǒ mǎi de。wǒ xiǎng sònggěi wǒ gēgē。nán：hěnpiàoliàng。duōshǎo qián mǎi de？nǚ：sānqiānduō wèn：shǒubiǎo duōshǎo qián mǎi de？ (Nán: Zhè shì nǐ de shǒubiǎo?? Wǒ mǎi de. Wǒ xiǎng sòng gěi wǒ gēge. Nán: Hěn piàoliang. Duōshao qián mǎi de? Nǚ: Sān qiān duō. 。 Shǒubiǎo duōshao qián mǎi de?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Zhè shì nǐ de shǒubiǎo?? Wǒ mǎi de. Wǒ xiǎng sòng gěi wǒ gēge. Nán: Hěn piàoliang. Duōshao qián mǎi de? Nǚ: Sān qiān duō. 。 Shǒubiǎo duōshao qián mǎi de?",
-      "pinyin": "C â u   3 4   ( P h ầ n   n g h e   s ố   4 )",
+      "pinyin": null,
       "listening_viet": "Nam: Đây có phải là của bạn không? đồng hồ? Người phụ nữ: Tôi đã mua nó. Tôi muốn đưa nó cho anh trai tôi. Người đàn ông: Rất đẹp. Nó có giá bao nhiêu? của? Nữ: Hơn ba ngàn. Hỏi: Mua một chiếc đồng hồ giá bao nhiêu? của?"
     },
     {
@@ -762,7 +762,7 @@ export const examData: ExamDetail = {
       "question_no": 35,
       "image": null,
       "type": "Multiple Choice",
-      "text": "Câu 35 (Phần nghe số 4)",
+      "text": "Câu hỏi nghe số 35",
       "answer": "B",
       "listening_script": "女： Nǐ 你 tīng 听 dǒng 懂 lǎoshī 老师 shuō 说 shénme 什么 le 了 ma？ 吗？ 男： Méiyǒu， 没有 ， tā 他 shuō 说 de 得 tài 太 kuài． 快 。 女： Wǒ 我 yě 也 méi 没 tīng 听 dǒng， 懂 ， tā 他 mànmàn 慢慢 shuō， 说 ， wǒ 我 kěyǐ 可以 tīng 听 dǒng． 懂 。 男： Wǒmen 我们 yìqǐ 一起 qù 去 wènwen 问问 tā， 他， hǎo 好 ma？ 吗？ 问： Nán 男 de 的 shì 是 shénme 什么 yìsi？ 意思？ ",
       "image_url": "https://pub-23e7b63d639f4a6d822ca9faf60f6a84.r2.dev/H20000/images/H20000_img_35.webp",
@@ -774,7 +774,7 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：nǐ tīngdǒng lǎoshī shuō shénme le ma？nán：méiyǒu，tā shuō dé tàikuài nǚ：wǒ yě méi tīngdǒng，tā mànmànshuō，wǒ kěyǐ tīngdǒng nán：wǒmen yìqǐ qù wènwèn tā，hǎo ma？wèn：nán de shì shénme yìsi？ (Nǚ: Nǐ tīng dǒng lǎoshī shuō shénme le ma? Nán: Méiyǒu, tā shuō de tài kuài. 。 Wǒ yě méi tīng dǒng, tā mànmàn shuō, wǒ kěyǐ tīng dǒng. 。 Wǒmen yìqǐ qù wènwen tā, hǎo ma? Wèn: Nán de shì shénme yìsi? )] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Nǐ tīng dǒng lǎoshī shuō shénme le ma? Nán: Méiyǒu, tā shuō de tài kuài. 。 Wǒ yě méi tīng dǒng, tā mànmàn shuō, wǒ kěyǐ tīng dǒng. 。 Wǒmen yìqǐ qù wènwen tā, hǎo ma? Wèn: Nán de shì shénme yìsi? ",
-      "pinyin": "C â u   3 5   ( P h ầ n   n g h e   s ố   4 )",
+      "pinyin": null,
       "listening_viet": "Nữ: Bạn có hiểu lời thầy nói không? ? Người đàn ông: Không, anh ấy nói quá nhanh. Người phụ nữ: Tôi cũng không hiểu. Anh chậm rãi nói: “Tôi có thể hiểu được.” Người đàn ông: Chúng ta cùng đi hỏi anh ấy nhé? ? Câu hỏi: Đàn ông là gì? nghĩa là?"
     },
     {

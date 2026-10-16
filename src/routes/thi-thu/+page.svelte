@@ -29,7 +29,6 @@
   // Danh sách các mã đề đã được đối chiếu & kiểm duyệt chuẩn 100% với đề thi thật
   const VERIFIED_EXAMS = new Set([
     'H2-YJ',
-    'H20000',
     'H20901',
     'H20902',
     'H21003',
@@ -38,9 +37,7 @@
     'H21006',
     'H21329',
     'H21330',
-    'H21331',
-    'H21334',
-    'H21335'
+    'H21331'
   ]);
 
   let selectedFilter = $state('all');

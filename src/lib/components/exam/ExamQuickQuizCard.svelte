@@ -240,9 +240,33 @@
     return isLongOptions;
   });
 
+  const isListeningQuestion = $derived(
+    Boolean(
+      question.section?.includes('Listening') ||
+      question.part?.includes('Listening') ||
+      question.question_no <= 35 ||
+      (question.text && (question.text.startsWith('Câu hỏi nghe số') || question.text.startsWith('Câu ')))
+    )
+  );
+
+  const sanitizedQuestionText = $derived.by(() => {
+    const raw = question.text || '';
+    return raw.replace(/[（\(]\s*[A-F]\s*[）\)]/g, '（ ）');
+  });
+
+  const sanitizedQuestionPinyin = $derived.by(() => {
+    let py = question.pinyin || '';
+    py = py.replace(/[（\(]\s*[A-F]\s*[）\)]/g, '( )');
+    if (question.question_no >= 41 && question.question_no <= 45) {
+      py = py.replace(/[（\(]\s*[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s]+[）\)]/g, '( )');
+    }
+    return py;
+  });
+
   // Tách câu hỏi thành các tầng hiển thị có trật tự: Hàng chữ Hán ở trên, Pinyin ở dưới
   const parsedQuestionDisplay = $derived.by(() => {
-    const raw = question.text || '';
+    if (isListeningQuestion) return null;
+    let raw = sanitizedQuestionText;
     if (!raw || raw.startsWith('Câu hỏi nghe số')) return null;
 
     // 1. Trường hợp có dấu ★ (True/False Part 3)
@@ -265,13 +289,14 @@
       let contextPinyin = ctx.pinyin;
       let statementPinyin = stmt.pinyin;
 
-      if (question.pinyin) {
-        if (question.pinyin.includes('★')) {
-          const pyParts = question.pinyin.split('★');
+      const pinyinSource = sanitizedQuestionPinyin;
+      if (pinyinSource) {
+        if (pinyinSource.includes('★')) {
+          const pyParts = pinyinSource.split('★');
           contextPinyin = pyParts[0].trim();
           statementPinyin = (pyParts[1] || '').trim();
         } else if (!contextPinyin) {
-          contextPinyin = question.pinyin;
+          contextPinyin = pinyinSource;
         }
       }
       if (question.statement_pinyin) {
@@ -295,14 +320,14 @@
       return {
         isTrueFalseStatement: false,
         hanzi: m[1].trim(),
-        pinyin: question.pinyin || m[2].trim()
+        pinyin: sanitizedQuestionPinyin || m[2].trim()
       };
     }
 
     return {
       isTrueFalseStatement: false,
       hanzi: raw,
-      pinyin: question.pinyin || ''
+      pinyin: sanitizedQuestionPinyin || ''
     };
   });
 
@@ -858,13 +883,13 @@
                 </div>
               {:else if question.text}
                 <div class="space-y-1">
-                  {#if question.pinyin}
+                  {#if !isListeningQuestion && question.pinyin}
                     <div class="text-xs sm:text-sm text-slate-500 dark:text-neutral-400 font-sans tracking-wide leading-relaxed">
-                      <InteractivePinyinText pinyin={question.pinyin} />
+                      <InteractivePinyinText pinyin={sanitizedQuestionPinyin} />
                     </div>
                   {/if}
                   <div class="text-lg sm:text-2xl font-black text-slate-900 dark:text-[#E3E3E3] leading-snug font-serif">
-                    <InteractiveChineseText text={question.text} />
+                    <InteractiveChineseText text={sanitizedQuestionText} />
                   </div>
                 </div>
               {/if}
