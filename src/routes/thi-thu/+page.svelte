@@ -32,35 +32,16 @@
     'H20000',
     'H20901',
     'H20902',
-    'H21002',
     'H21003',
     'H21004',
     'H21005',
     'H21006',
-    'H21007',
-    'H21008',
-    'H21009',
-    'H21112',
-    'H21113',
-    'H21115',
-    'H21116',
-    'H21117',
-    'H21118',
-    'H21119',
-    'H21220',
-    'H21221',
-    'H21222',
-    'H21223',
     'H21329',
     'H21330',
     'H21331',
     'H21332',
-    'H21333',
     'H21334',
-    'H21335',
-    'H21555B',
-    'H21555C',
-    'H21555D'
+    'H21335'
   ]);
 
   let selectedFilter = $state('all');
@@ -100,6 +81,7 @@
       ? mockExamsData
       : mockExamsData.filter((e: MockExamItem) => {
           if (selectedFilter === 'verified') return VERIFIED_EXAMS.has(e.code);
+          if (selectedFilter === 'unverified') return !VERIFIED_EXAMS.has(e.code);
           if (selectedFilter === 'hanban') return e.tag.includes('Đề thi thật') || e.tag.includes('Chính thức');
           if (selectedFilter === 'sample') return e.tag.includes('Đề mẫu');
           if (selectedFilter === 'mock') return e.tag.includes('Mock');
@@ -135,6 +117,16 @@
     >
       <CheckCircle weight="fill" class="w-3.5 h-3.5 text-emerald-300" />
       <span>Đã chuẩn ({mockExamsData.filter((e) => VERIFIED_EXAMS.has(e.code)).length})</span>
+    </button>
+    <button
+      type="button"
+      onclick={() => (selectedFilter = 'unverified')}
+      class="px-3 py-1.5 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-1 {selectedFilter === 'unverified'
+        ? 'bg-amber-600 text-white shadow-2xs'
+        : 'bg-slate-200/70 dark:bg-[#1B1B1B] hover:bg-slate-200 dark:hover:bg-[#282A2C] text-slate-600 dark:text-[#8E918F]'}"
+    >
+      <WarningCircle weight="fill" class="w-3.5 h-3.5 text-amber-300" />
+      <span>Chưa chuẩn ({mockExamsData.filter((e) => !VERIFIED_EXAMS.has(e.code)).length})</span>
     </button>
     <button
       type="button"
@@ -206,6 +198,11 @@
                 <span class="text-[11px] font-mono font-semibold text-slate-400 dark:text-neutral-500 truncate">
                   {exam.code}
                 </span>
+                {#if !VERIFIED_EXAMS.has(exam.code)}
+                  <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                    Chưa chuẩn
+                  </span>
+                {/if}
               </div>
 
               {#if exam.hasAudio}
@@ -216,7 +213,7 @@
               {/if}
             </div>
 
-            <!-- Title kèm dấu tích xanh Meta Verified tinh tế bên cạnh -->
+            <!-- Title kèm dấu tích xanh Meta Verified hoặc cảnh báo chưa chuẩn bên cạnh -->
             <h2 class="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#E3E3E3] group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center gap-1 line-clamp-1">
               <span class="truncate">{exam.title}</span>
               {#if VERIFIED_EXAMS.has(exam.code)}
@@ -225,7 +222,7 @@
                 </span>
               {:else}
                 <span title="Đề chưa chuẩn hóa" class="inline-flex shrink-0">
-                  <CheckCircle weight="bold" class="w-3.5 h-3.5 text-slate-300 dark:text-[#555]" />
+                  <WarningCircle weight="fill" class="w-3.5 h-3.5 text-amber-500" />
                 </span>
               {/if}
             </h2>
@@ -321,8 +318,17 @@
           <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
             <BookOpen weight="duotone" class="w-4.5 h-4.5" />
           </div>
-          <h3 class="text-xs sm:text-sm font-black text-slate-900 dark:text-[#E3E3E3] leading-snug">
-            {previewExam.title}
+          <h3 class="text-xs sm:text-sm font-black text-slate-900 dark:text-[#E3E3E3] leading-snug flex items-center gap-1.5">
+            <span>{previewExam.title}</span>
+            {#if VERIFIED_EXAMS.has(previewExam.code)}
+              <span title="Đề đã kiểm duyệt chuẩn 100%" class="inline-flex shrink-0">
+                <CheckCircle weight="fill" class="w-3.5 h-3.5 text-blue-500" />
+              </span>
+            {:else}
+              <span title="Đề chưa chuẩn hóa" class="inline-flex shrink-0">
+                <WarningCircle weight="fill" class="w-3.5 h-3.5 text-amber-500" />
+              </span>
+            {/if}
           </h3>
         </div>
 
