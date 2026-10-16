@@ -684,7 +684,7 @@
   {/if}
   </div>
 
-  <!-- Desktop Right Column: Danh sách từ vựng trong lượt học -->
+  <!-- Desktop Right Column: Thẻ từ vựng dạng Pill không lộ đáp án -->
   <div class="hidden lg:flex lg:w-72 xl:w-80 flex-col h-full bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-4 overflow-hidden shrink-0">
     <div class="flex items-center justify-between pb-3 mb-2 border-b border-slate-100 dark:border-[#282A2C] shrink-0">
       <div class="flex items-center gap-2">
@@ -693,59 +693,50 @@
           {appState.flashKnown}/{appState.totalFlashCount}
         </span>
       </div>
-      <span class="text-[10px] text-slate-400 dark:text-[#8E918F] font-medium">Bấm loa để nghe</span>
+      <span class="text-[10px] text-slate-400 dark:text-[#8E918F] font-medium">Bấm thẻ nghe âm</span>
     </div>
 
-    <div class="flex-1 overflow-y-auto space-y-1.5 pr-1 text-xs">
+    <!-- Status Legend -->
+    <div class="flex items-center justify-between pb-2.5 px-0.5 text-[10px] font-semibold text-slate-500 dark:text-[#8E918F] shrink-0 border-b border-slate-100/60 dark:border-[#282A2C]/60">
+      <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>Thuộc</span>
+      <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-rose-500"></span>Quên</span>
+      <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-500"></span>Đang học</span>
+      <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-slate-300 dark:bg-[#444746]"></span>Chưa tới</span>
+    </div>
+
+    <!-- Wrap Pill Grid: Không bị clip, cuộn dọc êm ái -->
+    <div class="flex-1 overflow-y-auto content-start flex flex-wrap gap-2 pt-2.5 pr-1">
       {#each appState.flashSessionList as item (item.id)}
         {@const status = appState.flashItemStatus[item.id] || 'unreached'}
         {@const isCurrent = appState.currentFlashItem?.id === item.id}
         {@const isLearned = status === 'correct'}
-        
-        <div
-          class={`flex items-center justify-between p-2 rounded-xl transition-all border ${
-            isLearned
-              ? 'bg-emerald-50/80 dark:bg-emerald-950/30 border-emerald-200/80 dark:border-emerald-900/50 text-emerald-900 dark:text-emerald-300'
-              : isCurrent
-              ? 'bg-blue-50/80 dark:bg-blue-950/30 border-blue-300 dark:border-blue-800 text-slate-900 dark:text-[#E3E3E3] ring-1 ring-blue-400'
-              : 'bg-slate-50/60 dark:bg-[#202124] border-slate-100 dark:border-[#282A2C] text-slate-400 dark:text-[#6E7173] opacity-60'
-          }`}
-        >
-          <div class="flex items-center gap-2 min-w-0">
-            <div
-              class={`w-2 h-2 rounded-full shrink-0 ${
-                isLearned
-                  ? 'bg-emerald-500'
-                  : status === 'wrong'
-                  ? 'bg-rose-400'
-                  : 'bg-slate-300 dark:bg-[#444746]'
-              }`}
-            ></div>
-            <div class="min-w-0 truncate">
-              <span class={`font-black ${isLearned ? 'text-emerald-700 dark:text-emerald-300' : isCurrent ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-[#8E918F]'}`}>
-                {item.hanzi}
-              </span>
-              <span class="text-[11px] text-slate-400 dark:text-[#8E918F] ml-1">
-                {item.pinyin}
-              </span>
-              <span class={`block text-[11px] truncate ${isLearned ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400 dark:text-[#6E7173]'}`}>
-                {item.viet}
-              </span>
-            </div>
-          </div>
+        {@const isWrong = status === 'wrong'}
 
-          <button
-            type="button"
-            onclick={(e) => {
-              e.stopPropagation();
-              speakChinese(item.hanzi, appState.volume);
-            }}
-            class="p-1 rounded-lg hover:bg-white dark:hover:bg-[#282A2C] text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors shrink-0"
-            title="Phát âm"
-          >
-            <SpeakerHigh class="w-3.5 h-3.5" />
-          </button>
-        </div>
+        <button
+          type="button"
+          onclick={() => speakChinese(item.hanzi, appState.volume)}
+          class={`px-3 py-1.5 rounded-xl font-bold text-xs sm:text-sm font-sans transition-all duration-150 border cursor-pointer active:scale-95 flex items-center gap-1.5 ${
+            isCurrent
+              ? 'bg-blue-600 text-white border-blue-600 shadow-sm ring-2 ring-blue-400/40 font-black scale-105 z-10'
+              : isLearned
+              ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/50'
+              : isWrong
+              ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 border-rose-300 dark:border-rose-800/60 hover:bg-rose-100 dark:hover:bg-rose-900/50'
+              : 'bg-slate-50 dark:bg-[#202124] text-slate-600 dark:text-[#8E918F] border-slate-200 dark:border-[#2C2D2F] hover:bg-slate-100 dark:hover:bg-[#282A2C]'
+          }`}
+          title="Nghe phát âm"
+        >
+          <span class={`w-1.5 h-1.5 rounded-full shrink-0 ${
+            isCurrent
+              ? 'bg-white'
+              : isLearned
+              ? 'bg-emerald-500'
+              : isWrong
+              ? 'bg-rose-500'
+              : 'bg-slate-300 dark:bg-[#444746]'
+          }`}></span>
+          <span>{item.hanzi}</span>
+        </button>
       {/each}
     </div>
   </div>

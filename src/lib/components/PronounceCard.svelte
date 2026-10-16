@@ -451,168 +451,192 @@
       <div class="w-20 h-20 rounded-full bg-slate-200 dark:bg-[#282A2C]"></div>
     </div>
   {:else if appState.currentSpeechItem}
-    <div class="flex-1 w-full flex flex-col justify-center items-center py-1 sm:py-2 max-w-md mx-auto my-auto">
-      <!-- Vocabulary Illustration Image -->
-      {#if appState.showQuestionImages && appState.currentSpeechItem.image}
-        <div class="mb-2 md:mb-4 flex items-center justify-center flex-shrink-0">
-          <SmartImage
-            src={appState.currentSpeechItem.image}
-            alt={appState.currentSpeechItem.hanzi}
-            class="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-2xl border border-slate-100 dark:border-[#282A2C] shadow-inner bg-slate-50 dark:bg-[#282A2C]"
-          />
+    <div class="w-full flex-1 flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center justify-center my-auto py-1 max-w-4xl mx-auto">
+      <!-- CỘT 1 (Desktop col-span-5): Hình ảnh minh họa & Từ vựng cần phát âm -->
+      <div
+        data-tour="speech-prompt-area"
+        class="w-full lg:col-span-5 flex flex-col items-center justify-center text-center py-2 lg:border-r lg:border-slate-100 dark:lg:border-[#282A2C] lg:pr-6"
+      >
+        <!-- Vocabulary Illustration Image -->
+        {#if appState.showQuestionImages && appState.currentSpeechItem.image}
+          <div class="mb-2 sm:mb-3 flex items-center justify-center shrink-0">
+            <SmartImage
+              src={appState.currentSpeechItem.image}
+              alt={appState.currentSpeechItem.hanzi}
+              class="w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-2xl border border-slate-100 dark:border-[#282A2C] shadow-inner bg-slate-50 dark:bg-[#282A2C]"
+            />
+          </div>
+        {/if}
+
+        <!-- Prompt Question & Target Character -->
+        <div class="space-y-1">
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400">
+            Hãy phát âm từ vựng
+          </span>
+
+          {#if isZhToVi}
+            <!-- Chế độ Trung -> Việt: Hiển thị chữ Hán & Pinyin to rõ -->
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-blue-600 dark:text-blue-400 tracking-wide font-sans mt-2 mb-1">
+              {appState.currentSpeechItem.hanzi}
+            </h2>
+            <div class="text-xl sm:text-2xl lg:text-3xl font-black text-slate-700 dark:text-[#C4C7C5] mb-1">
+              {appState.currentSpeechItem.pinyin}
+            </div>
+            {#if appState.speechAnswered}
+              <div class="text-sm font-semibold text-slate-600 dark:text-[#A8ABA7] mt-1">
+                {appState.currentSpeechItem.viet}
+              </div>
+            {/if}
+          {:else}
+            <!-- Chế độ Việt -> Trung: Chỉ hiển thị nghĩa tiếng Việt to rõ -->
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-800 dark:text-[#E3E3E3] mt-2 mb-1">
+              {appState.currentSpeechItem.viet}
+            </h2>
+            {#if appState.speechAnswered}
+              <div class="mt-2">
+                <div class="text-3xl sm:text-4xl font-black text-blue-600 dark:text-blue-400 font-sans">
+                  {appState.currentSpeechItem.hanzi}
+                </div>
+                <div class="text-lg sm:text-xl font-bold text-slate-600 dark:text-[#C4C7C5]">
+                  {appState.currentSpeechItem.pinyin}
+                </div>
+              </div>
+            {/if}
+          {/if}
         </div>
-      {/if}
-
-      <!-- Prompt Question & Target Character -->
-      <div data-tour="speech-prompt-area" class="space-y-1 mb-2">
-        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400">
-          Hãy phát âm từ vựng bên dưới
-        </span>
-
-        {#if isZhToVi}
-          <!-- Chế độ Trung -> Việt: Hiển thị chữ Hán & Pinyin to rõ -->
-          <h2 class="text-5xl sm:text-6xl md:text-7xl font-black text-blue-600 dark:text-blue-400 tracking-wide font-sans mt-2 mb-1">
-            {appState.currentSpeechItem.hanzi}
-          </h2>
-          <div class="text-xl sm:text-2xl md:text-3xl font-black text-slate-700 dark:text-[#C4C7C5] mb-1">
-            {appState.currentSpeechItem.pinyin}
-          </div>
-        {:else}
-          <!-- Chế độ Việt -> Trung: Chỉ hiển thị nghĩa tiếng Việt to rõ (tuyệt đối KHÔNG hiển thị chữ Hán hay Pinyin trước khi phát âm) -->
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-800 dark:text-[#E3E3E3] mt-2 mb-1">
-            {appState.currentSpeechItem.viet}
-          </h2>
-        {/if}
       </div>
 
-      <!-- Live Pinyin Speech Recognition Preview Area -->
-      <div class="min-h-[44px] flex flex-col items-center justify-center my-1.5 px-2">
-        {#if isRecording && !livePinyin}
-          <div class="flex items-center gap-2 text-rose-500 text-sm font-semibold animate-pulse">
-            <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
-            Đang lắng nghe giọng bạn... Hãy nói to rõ ràng!
-          </div>
-        {:else if livePinyin}
-          <p
-            class="text-2xl sm:text-3xl md:text-4xl transition-all duration-200 tracking-wide {isRecording
-              ? 'text-slate-400 dark:text-[#8E918F] font-bold opacity-75'
-              : 'text-slate-900 dark:text-[#E3E3E3] font-black'}"
-          >
-            {livePinyin}
-          </p>
-        {:else if errorMessage}
-          <div class="flex items-center gap-1.5 text-xs font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/60 px-3 py-1.5 rounded-xl border border-rose-100 dark:border-rose-900/60 max-w-xs">
-            <WarningCircle size={16} weight="bold" class="flex-shrink-0" />
-            <span>{errorMessage}</span>
-          </div>
-        {:else}
-          <p class="text-xs text-slate-400 dark:text-[#8E918F]">Bấm biểu tượng Mic và phát âm tiếng Trung</p>
-        {/if}
-      </div>
+      <!-- CỘT 2 (Desktop col-span-7): Live recognition preview & Nút ghi âm điều khiển -->
+      <div class="w-full lg:col-span-7 flex flex-col items-center justify-center py-2 lg:pl-4 space-y-4">
+        <!-- Live Pinyin Speech Recognition Preview Area -->
+        <div class="min-h-[52px] w-full max-w-sm flex flex-col items-center justify-center px-4 py-2.5 rounded-2xl bg-slate-50 dark:bg-[#202124] border border-slate-100 dark:border-[#282A2C]">
+          {#if isRecording && !livePinyin}
+            <div class="flex items-center gap-2 text-rose-500 text-xs sm:text-sm font-semibold animate-pulse">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+              Đang lắng nghe... Nói to!
+            </div>
+          {:else if livePinyin}
+            <p
+              class="text-2xl sm:text-3xl lg:text-4xl transition-all duration-200 tracking-wide {isRecording
+                ? 'text-slate-400 dark:text-[#8E918F] font-bold opacity-75'
+                : 'text-slate-900 dark:text-[#E3E3E3] font-black'}"
+            >
+              {livePinyin}
+            </p>
+          {:else if errorMessage}
+            <div class="flex items-center gap-1.5 text-xs font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/60 px-3 py-1.5 rounded-xl border border-rose-100 dark:border-rose-900/60 max-w-xs">
+              <WarningCircle size={16} weight="bold" class="shrink-0" />
+              <span>{errorMessage}</span>
+            </div>
+          {:else}
+            <p class="text-xs text-slate-400 dark:text-[#8E918F]">Bấm Mic phát âm</p>
+          {/if}
+        </div>
 
-      <!-- Interactive Speech Controls Area -->
-      <div class="w-full mt-2 flex flex-col items-center">
-        {#if appState.speechAnswered && appState.speechFeedback?.type === 'correct'}
-          <!-- Khi ĐÚNG: Nút to 'Từ tiếp theo' -->
-          <div class="w-full max-w-xs flex justify-center">
-            <button
-              type="button"
-              onclick={handleNext}
-              class="w-full h-12 sm:h-14 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-extrabold text-base rounded-2xl shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer"
-              title="Sang từ tiếp theo"
-            >
-              <span>Từ tiếp theo</span>
-              <ArrowRight size={22} weight="bold" />
-            </button>
-          </div>
-        {:else if appState.speechAnswered && appState.speechFeedback?.type === 'wrong'}
-          <!-- Khi SAI: Nút Thử lại, Bấm nói lại, hoặc Bỏ qua sang từ tiếp theo -->
-          <div class="flex items-center justify-center gap-4 sm:gap-6">
-            <button
-              type="button"
-              disabled={isBusy}
-              onclick={handleRetry}
-              class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-700 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center shadow-sm cursor-pointer"
-              title="Thử lại"
-            >
-              <ArrowClockwise size={22} weight="bold" />
-            </button>
+        <!-- Interactive Speech Controls Area -->
+        <div class="w-full flex flex-col items-center">
+          {#if appState.speechAnswered && appState.speechFeedback?.type === 'correct'}
+            <!-- Khi ĐÚNG: Nút to 'Từ tiếp theo' -->
+            <div class="w-full max-w-xs flex justify-center">
+              <button
+                type="button"
+                onclick={handleNext}
+                class="w-full h-12 sm:h-14 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-extrabold text-base rounded-2xl shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer"
+                title="Sang từ tiếp theo"
+              >
+                <span>Từ tiếp theo</span>
+                <ArrowRight size={22} weight="bold" />
+              </button>
+            </div>
+          {:else if appState.speechAnswered && appState.speechFeedback?.type === 'wrong'}
+            <!-- Khi SAI: Nút Thử lại, Bấm nói lại, hoặc Bỏ qua sang từ tiếp theo -->
+            <div class="flex items-center justify-center gap-4 sm:gap-6">
+              <button
+                type="button"
+                disabled={isBusy}
+                onclick={handleRetry}
+                class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-700 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center shadow-sm cursor-pointer"
+                title="Thử lại"
+              >
+                <ArrowClockwise size={22} weight="bold" />
+              </button>
 
-            <button
-              type="button"
-              data-tour="speech-mic-btn"
-              disabled={isBusy}
-              onclick={() => { handleRetry(); setTimeout(startRecording, 300); }}
-              class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all bg-gradient-to-tr from-blue-600 to-indigo-600 text-white disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
-              title="Bấm để phát âm lại"
-            >
-              <Microphone size={34} weight="duotone" />
-            </button>
-
-            <button
-              type="button"
-              disabled={isBusy}
-              onclick={handleNext}
-              class="w-12 h-12 rounded-full bg-slate-800 hover:bg-slate-900 active:scale-95 text-white disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center shadow-md cursor-pointer"
-              title="Bỏ qua sang từ tiếp theo"
-            >
-              <ArrowRight size={22} weight="bold" />
-            </button>
-          </div>
-        {:else}
-          <!-- Khi CHƯA NỘP: 3 nút [X Hủy] - [Mic Ghi âm] - [Tick Xác nhận] -->
-          <div data-tour="speech-mic-controls" class="flex items-center justify-center gap-4 sm:gap-6">
-            <!-- Button X: Hủy / xóa bản ghi -->
-            <button
-              type="button"
-              onclick={cancelSpoken}
-              disabled={(!livePinyin && !isRecording) || isBusy}
-              class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-500 disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-sm transition-all cursor-pointer"
-              title="Hủy bỏ / Thử lại"
-            >
-              <X size={22} weight="bold" />
-            </button>
-
-            <!-- Main Big Circular Mic / Stop Button -->
-            <button
-              type="button"
-              data-tour="speech-mic-btn"
-              onclick={toggleRecord}
-              disabled={isBusy}
-              class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all duration-200 cursor-pointer disabled:opacity-75 disabled:pointer-events-none {isRecording
-                ? 'bg-rose-600 text-white shadow-rose-300 ring-4 ring-rose-200 animate-pulse'
-                : 'bg-gradient-to-tr from-blue-600 to-indigo-600 text-white shadow-blue-200 hover:from-blue-700 hover:to-indigo-700'}"
-              title={isRecording ? 'Dừng ghi âm' : 'Bấm để ghi âm phát âm'}
-            >
-              {#if isRecording}
-                <Square size={28} weight="fill" />
-              {:else}
+              <button
+                type="button"
+                data-tour="speech-mic-btn"
+                disabled={isBusy}
+                onclick={() => { handleRetry(); setTimeout(startRecording, 300); }}
+                class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all bg-gradient-to-tr from-blue-600 to-indigo-600 text-white disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
+                title="Bấm để phát âm lại"
+              >
                 <Microphone size={34} weight="duotone" />
-              {/if}
-            </button>
+              </button>
 
-            <!-- Button Tick: Xác nhận nộp đáp án -->
-            <button
-              type="button"
-              onclick={submitAnswer}
-              disabled={!livePinyin || isBusy}
-              class="w-12 h-12 rounded-full border-2 border-emerald-500 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-300 disabled:pointer-events-none flex items-center justify-center shadow-sm transition-all cursor-pointer"
-              title="Gửi xác nhận đáp án"
-            >
-              <Check size={24} weight="bold" />
-            </button>
-          </div>
-        {/if}
+              <button
+                type="button"
+                disabled={isBusy}
+                onclick={handleNext}
+                class="w-12 h-12 rounded-full bg-slate-800 hover:bg-slate-900 active:scale-95 text-white disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center shadow-md cursor-pointer"
+                title="Bỏ qua sang từ tiếp theo"
+              >
+                <ArrowRight size={22} weight="bold" />
+              </button>
+            </div>
+          {:else}
+            <!-- Khi CHƯA NỘP: 3 nút [X Hủy] - [Mic Ghi âm] - [Tick Xác nhận] -->
+            <div data-tour="speech-mic-controls" class="flex items-center justify-center gap-4 sm:gap-6">
+              <!-- Button X: Hủy / xóa bản ghi -->
+              <button
+                type="button"
+                onclick={cancelSpoken}
+                disabled={(!livePinyin && !isRecording) || isBusy}
+                class="w-12 h-12 rounded-full border-2 border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-500 disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-sm transition-all cursor-pointer"
+                title="Hủy bỏ / Thử lại"
+              >
+                <X size={22} weight="bold" />
+              </button>
 
-        <!-- Checkbox: Tự động xác nhận đáp án -->
-        <label data-tour="speech-auto-checkbox" class="mt-3 inline-flex items-center gap-2.5 cursor-pointer select-none text-xs sm:text-sm text-slate-600 dark:text-[#A8ABA7] hover:text-slate-800 dark:hover:text-[#E3E3E3] transition-colors">
-          <input
-            type="checkbox"
-            checked={appState.speechAutoSubmit}
-            onchange={() => appState.toggleSpeechAutoSubmit()}
-          />
-          <span class="font-medium">Tự động xác nhận đáp án sau khi nói</span>
-        </label>
+              <!-- Main Big Circular Mic / Stop Button -->
+              <button
+                type="button"
+                data-tour="speech-mic-btn"
+                onclick={toggleRecord}
+                disabled={isBusy}
+                class="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all duration-200 cursor-pointer disabled:opacity-75 disabled:pointer-events-none {isRecording
+                  ? 'bg-rose-600 text-white shadow-rose-300 ring-4 ring-rose-200 animate-pulse'
+                  : 'bg-gradient-to-tr from-blue-600 to-indigo-600 text-white shadow-blue-200 hover:from-blue-700 hover:to-indigo-700'}"
+                title={isRecording ? 'Dừng ghi âm' : 'Bấm để ghi âm phát âm'}
+              >
+                {#if isRecording}
+                  <Square size={28} weight="fill" />
+                {:else}
+                  <Microphone size={34} weight="duotone" />
+                {/if}
+              </button>
+
+              <!-- Button Tick: Xác nhận nộp đáp án -->
+              <button
+                type="button"
+                onclick={submitAnswer}
+                disabled={!livePinyin || isBusy}
+                class="w-12 h-12 rounded-full border-2 border-emerald-500 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-300 disabled:pointer-events-none flex items-center justify-center shadow-sm transition-all cursor-pointer"
+                title="Gửi xác nhận đáp án"
+              >
+                <Check size={24} weight="bold" />
+              </button>
+            </div>
+          {/if}
+
+          <!-- Checkbox: Tự động xác nhận đáp án -->
+          <label data-tour="speech-auto-checkbox" class="mt-4 inline-flex items-center gap-2.5 cursor-pointer select-none text-xs sm:text-sm text-slate-600 dark:text-[#A8ABA7] hover:text-slate-800 dark:hover:text-[#E3E3E3] transition-colors">
+            <input
+              type="checkbox"
+              checked={appState.speechAutoSubmit}
+              onchange={() => appState.toggleSpeechAutoSubmit()}
+            />
+            <span class="font-medium">Tự động nộp bài</span>
+          </label>
+        </div>
       </div>
     </div>
   {:else}
