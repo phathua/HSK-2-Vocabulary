@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { appState } from '#lib/state/appState.svelte';
+  import { savedSessionState } from '#lib/state/savedSessionState.svelte';
   import Header from '#lib/components/Header.svelte';
   import ModeSwitch from '#lib/components/ModeSwitch.svelte';
   import FillWordCard from '#lib/components/FillWordCard.svelte';
@@ -9,9 +10,12 @@
   import PronounceCard from '#lib/components/PronounceCard.svelte';
   import LessonFilterModal from '#lib/components/LessonFilterModal.svelte';
   import SettingsModal from '#lib/components/SettingsModal.svelte';
+  import SaveSessionModal from '#lib/components/SaveSessionModal.svelte';
+  import SavedSessionsListModal from '#lib/components/SavedSessionsListModal.svelte';
 
   onMount(() => {
     appState.ensureInitialized();
+    savedSessionState.checkAutoResume();
   });
 </script>
 
@@ -30,4 +34,6 @@
 
 <LessonFilterModal />
 <SettingsModal />
+<SaveSessionModal />
+<SavedSessionsListModal />
 

@@ -4,10 +4,12 @@
   import { appState } from '#lib/state/appState.svelte';
   import { examRoomState } from '#lib/state/examRoomState.svelte';
   import { examHistoryState } from '#lib/state/examHistoryState.svelte';
+  import { savedSessionState } from '#lib/state/savedSessionState.svelte';
   import SlidersHorizontal from 'phosphor-svelte/lib/SlidersHorizontal';
   import ArrowsLeftRight from 'phosphor-svelte/lib/ArrowsLeftRight';
   import Clock from 'phosphor-svelte/lib/Clock';
   import ClockCounterClockwise from 'phosphor-svelte/lib/ClockCounterClockwise';
+  import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';
   import HourglassMedium from 'phosphor-svelte/lib/HourglassMedium';
   import List from 'phosphor-svelte/lib/List';
   import GraduationCap from 'phosphor-svelte/lib/GraduationCap';
@@ -227,6 +229,33 @@
             class="w-5 h-5 rounded-full object-cover shrink-0 drop-shadow-2xs"
           />
         {/if}
+      </button>
+
+      <!-- Nút Lịch sử tiến độ đã lưu -->
+      <button
+        type="button"
+        onclick={() => savedSessionState.openListModal()}
+        class="relative w-9 h-9 rounded-xl border border-slate-200 dark:border-[#282A2C] bg-slate-50 dark:bg-[#282A2C] hover:bg-slate-100 dark:hover:bg-[#37393B] flex items-center justify-center text-slate-600 dark:text-[#C4C7C5] transition-colors cursor-pointer active:scale-95 shadow-2xs"
+        title="Danh sách tiến độ đã lưu"
+        aria-label="Tiến độ đã lưu"
+      >
+        <ClockCounterClockwise weight="bold" class="w-4 h-4" />
+        {#if savedSessionState.records.length > 0}
+          <span class="absolute -top-1 -right-1 min-w-4 h-4 px-1 rounded-full bg-blue-600 text-white text-[9px] font-black flex items-center justify-center">
+            {savedSessionState.records.length}
+          </span>
+        {/if}
+      </button>
+
+      <!-- Nút Lưu tiến độ bài học -->
+      <button
+        type="button"
+        onclick={() => savedSessionState.openSaveModal()}
+        class="h-9 px-2.5 rounded-xl border border-blue-200 dark:border-blue-900/60 bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 flex items-center gap-1.5 text-blue-600 dark:text-blue-400 transition-colors cursor-pointer active:scale-95 shadow-2xs font-bold text-xs"
+        title="Lưu tiến độ làm bài để làm tiếp sau"
+      >
+        <BookmarkSimple weight="fill" class="w-4 h-4 text-blue-600 dark:text-blue-400" />
+        <span class="hidden sm:inline font-black">Lưu</span>
       </button>
     {/if}
 
