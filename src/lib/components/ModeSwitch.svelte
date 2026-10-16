@@ -132,12 +132,17 @@
         {/if}
       </div>
 
-      <!-- Nút Lưu tiến độ nhanh trên thanh tiến độ -->
+      <!-- Nút Lưu tiến độ nhanh trên thanh tiến độ: Không sáng khi tiến độ 0% -->
       <button
         type="button"
+        disabled={progressPercent === 0}
         onclick={() => savedSessionState.openSaveModal()}
-        class="w-5 h-5 rounded-md flex items-center justify-center text-slate-400 hover:text-blue-600 dark:text-[#8E918F] dark:hover:text-blue-400 hover:bg-slate-200/70 dark:hover:bg-[#282A2C] transition-colors cursor-pointer shrink-0 active:scale-90"
-        title="Lưu tiến độ làm bài hiện tại"
+        class={`w-5 h-5 rounded-md flex items-center justify-center transition-colors shrink-0 ${
+          progressPercent === 0
+            ? 'text-slate-300 dark:text-zinc-700 cursor-not-allowed opacity-35 pointer-events-none'
+            : 'text-slate-400 hover:text-blue-600 dark:text-[#8E918F] dark:hover:text-blue-400 hover:bg-slate-200/70 dark:hover:bg-[#282A2C] cursor-pointer active:scale-90'
+        }`}
+        title={progressPercent === 0 ? 'Chưa có tiến độ để lưu' : 'Lưu tiến độ làm bài'}
         aria-label="Lưu tiến độ"
       >
         <FloppyDisk weight="regular" class="w-3.5 h-3.5" />
