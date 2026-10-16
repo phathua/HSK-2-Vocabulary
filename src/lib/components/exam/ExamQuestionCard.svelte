@@ -697,26 +697,32 @@
           <span>
             Chính xác! Đáp án đúng:
             {#if question.answer === '√'}
-              Đúng
+              <span class="inline-flex items-center gap-1 font-bold text-emerald-600 dark:text-emerald-400 ml-1">
+                <Check weight="bold" class="w-3.5 h-3.5" /> Đúng
+              </span>
             {:else if question.answer === '×'}
-              Sai
+              <span class="inline-flex items-center gap-1 font-bold text-rose-600 dark:text-rose-400 ml-1">
+                <X weight="bold" class="w-3.5 h-3.5" /> Sai
+              </span>
             {:else}
-              {question.answer}
+              <strong class="ml-1">{question.answer}</strong>
             {/if}
           </span>
         {:else}
           <X weight="bold" class="w-4 h-4 text-rose-600" />
           <span>
             Chưa đúng! Đáp án đúng là:
-            <strong>
-              {#if question.answer === '√'}
-                Đúng
-              {:else if question.answer === '×'}
-                Sai
-              {:else}
-                {question.answer}
-              {/if}
-            </strong>
+            {#if question.answer === '√'}
+              <span class="inline-flex items-center gap-1 font-bold text-emerald-600 dark:text-emerald-400 ml-1">
+                <Check weight="bold" class="w-3.5 h-3.5" /> Đúng
+              </span>
+            {:else if question.answer === '×'}
+              <span class="inline-flex items-center gap-1 font-bold text-rose-600 dark:text-rose-400 ml-1">
+                <X weight="bold" class="w-3.5 h-3.5" /> Sai
+              </span>
+            {:else}
+              <strong class="ml-1">{question.answer}</strong>
+            {/if}
           </span>
         {/if}
       </div>

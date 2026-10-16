@@ -705,7 +705,7 @@
     </div>
 
     <!-- Wrap Pill Grid: Không bị clip, cuộn dọc êm ái -->
-    <div class="flex-1 overflow-y-auto content-start flex flex-wrap gap-2 pt-2.5 pr-1">
+    <div class="flex-1 overflow-y-auto content-start flex flex-wrap gap-2 p-2 scrollbar-thin">
       {#each appState.flashSessionList as item (item.id)}
         {@const status = appState.flashItemStatus[item.id] || 'unreached'}
         {@const isCurrent = appState.currentFlashItem?.id === item.id}
@@ -715,9 +715,9 @@
         <button
           type="button"
           onclick={() => speakChinese(item.hanzi, appState.volume)}
-          class={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl font-bold text-xs sm:text-sm font-sans transition-all duration-150 border cursor-pointer active:scale-95 flex items-center gap-1.5 max-w-full ${
+          class={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl font-bold text-xs sm:text-sm font-sans transition-all duration-150 border cursor-pointer active:scale-95 flex items-center justify-center max-w-full ${
             isCurrent
-              ? 'bg-blue-600 text-white border-blue-600 shadow-sm ring-2 ring-blue-400/40 font-black scale-105 z-10'
+              ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-500/20 ring-2 ring-blue-400/50 font-black z-10'
               : isLearned
               ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/50'
               : isWrong
@@ -726,16 +726,7 @@
           }`}
           title={isZhToVi ? 'Nghe phát âm' : item.viet}
         >
-          <span class={`w-1.5 h-1.5 rounded-full shrink-0 ${
-            isCurrent
-              ? 'bg-white'
-              : isLearned
-              ? 'bg-emerald-500'
-              : isWrong
-              ? 'bg-rose-500'
-              : 'bg-slate-300 dark:bg-[#444746]'
-          }`}></span>
-          <span class="truncate max-w-[190px]">{isZhToVi ? item.hanzi : item.viet}</span>
+          <span class="truncate max-w-[200px]">{isZhToVi ? item.hanzi : item.viet}</span>
         </button>
       {/each}
     </div>

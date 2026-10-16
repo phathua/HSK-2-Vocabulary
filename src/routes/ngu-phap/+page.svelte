@@ -19,6 +19,7 @@
   import Sparkle from 'phosphor-svelte/lib/Sparkle';
   import CaretRight from 'phosphor-svelte/lib/CaretRight';
   import Check from 'phosphor-svelte/lib/Check';
+  import X from 'phosphor-svelte/lib/X';
 
   // State
   let searchQuery = $state('');
@@ -128,7 +129,7 @@
           onclick={() => (searchQuery = '')}
           class="absolute inset-y-0 right-2.5 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer text-xs"
         >
-          ✕
+          <X weight="bold" class="w-3.5 h-3.5" />
         </button>
       {/if}
     </div>

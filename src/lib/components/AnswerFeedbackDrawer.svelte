@@ -2,6 +2,8 @@
   import { fly } from 'svelte/transition';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
   import XCircle from 'phosphor-svelte/lib/XCircle';
+  import Check from 'phosphor-svelte/lib/Check';
+  import X from 'phosphor-svelte/lib/X';
   import FastForward from 'phosphor-svelte/lib/FastForward';
   import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
 
@@ -156,23 +158,56 @@
           <div class="text-xs sm:text-sm font-semibold leading-snug">
             {#if isCorrect}
               <span class="text-emerald-700 dark:text-emerald-300">
-                Chính xác: <strong class="font-black underline font-mono tracking-wide text-xs sm:text-base">{correctAnswerText}</strong>
+                Chính xác:
+                {#if correctAnswerText === '√' || correctAnswerText === 'Đúng' || correctAnswerText === 'Đúng (√)'}
+                  <span class="inline-flex items-center gap-1 font-black underline tracking-wide text-xs sm:text-base">
+                    <Check weight="bold" class="w-4 h-4" /> Đúng
+                  </span>
+                {:else if correctAnswerText === '×' || correctAnswerText === 'Sai' || correctAnswerText === 'Sai (×)'}
+                  <span class="inline-flex items-center gap-1 font-black underline tracking-wide text-xs sm:text-base">
+                    <X weight="bold" class="w-4 h-4" /> Sai
+                  </span>
+                {:else}
+                  <strong class="font-black underline font-mono tracking-wide text-xs sm:text-base">{correctAnswerText}</strong>
+                {/if}
                 {#if extraInfoText}
-                  <span class="opacity-80 font-normal">({extraInfoText})</span>
+                  <span class="opacity-80 font-normal ml-1">({extraInfoText})</span>
                 {/if}
               </span>
             {:else if isWrong}
               <span class="text-rose-700 dark:text-rose-300">
-                Đáp án đúng là: <strong class="font-black underline font-mono tracking-wide text-xs sm:text-base text-rose-900 dark:text-rose-100">{correctAnswerText}</strong>
+                Đáp án đúng là:
+                {#if correctAnswerText === '√' || correctAnswerText === 'Đúng' || correctAnswerText === 'Đúng (√)'}
+                  <span class="inline-flex items-center gap-1 font-black underline tracking-wide text-xs sm:text-base text-rose-900 dark:text-rose-100">
+                    <Check weight="bold" class="w-4 h-4" /> Đúng
+                  </span>
+                {:else if correctAnswerText === '×' || correctAnswerText === 'Sai' || correctAnswerText === 'Sai (×)'}
+                  <span class="inline-flex items-center gap-1 font-black underline tracking-wide text-xs sm:text-base text-rose-900 dark:text-rose-100">
+                    <X weight="bold" class="w-4 h-4" /> Sai
+                  </span>
+                {:else}
+                  <strong class="font-black underline font-mono tracking-wide text-xs sm:text-base text-rose-900 dark:text-rose-100">{correctAnswerText}</strong>
+                {/if}
                 {#if extraInfoText}
-                  <span class="opacity-80 font-normal">({extraInfoText})</span>
+                  <span class="opacity-80 font-normal ml-1">({extraInfoText})</span>
                 {/if}
               </span>
             {:else}
               <span class="text-amber-800 dark:text-amber-300">
-                Đáp án đúng là: <strong class="font-black underline font-mono tracking-wide text-xs sm:text-base text-amber-950 dark:text-amber-100">{correctAnswerText}</strong>
+                Đáp án đúng là:
+                {#if correctAnswerText === '√' || correctAnswerText === 'Đúng' || correctAnswerText === 'Đúng (√)'}
+                  <span class="inline-flex items-center gap-1 font-black underline tracking-wide text-xs sm:text-base text-amber-950 dark:text-amber-100">
+                    <Check weight="bold" class="w-4 h-4" /> Đúng
+                  </span>
+                {:else if correctAnswerText === '×' || correctAnswerText === 'Sai' || correctAnswerText === 'Sai (×)'}
+                  <span class="inline-flex items-center gap-1 font-black underline tracking-wide text-xs sm:text-base text-amber-950 dark:text-amber-100">
+                    <X weight="bold" class="w-4 h-4" /> Sai
+                  </span>
+                {:else}
+                  <strong class="font-black underline font-mono tracking-wide text-xs sm:text-base text-amber-950 dark:text-amber-100">{correctAnswerText}</strong>
+                {/if}
                 {#if extraInfoText}
-                  <span class="opacity-80 font-normal">({extraInfoText})</span>
+                  <span class="opacity-80 font-normal ml-1">({extraInfoText})</span>
                 {/if}
               </span>
             {/if}

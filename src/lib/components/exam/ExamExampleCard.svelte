@@ -1,6 +1,8 @@
 <script lang="ts">
   import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
+  import Check from 'phosphor-svelte/lib/Check';
+  import X from 'phosphor-svelte/lib/X';
   import type { ExamExampleDefinition } from '#lib/data/examExamples';
 
   interface Props {
@@ -34,7 +36,17 @@
 
     <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 font-bold text-xs shrink-0 border border-amber-300/60 dark:border-amber-900/60">
       <span>Đáp án mẫu:</span>
-      <strong class="font-black text-sm text-orange-600 dark:text-orange-400">{correctAnswer}</strong>
+      {#if correctAnswer === '√'}
+        <span class="inline-flex items-center gap-1 font-black text-xs sm:text-sm text-emerald-700 dark:text-emerald-300">
+          <Check weight="bold" class="w-4 h-4" /> Đúng
+        </span>
+      {:else if correctAnswer === '×'}
+        <span class="inline-flex items-center gap-1 font-black text-xs sm:text-sm text-rose-700 dark:text-rose-300">
+          <X weight="bold" class="w-4 h-4" /> Sai
+        </span>
+      {:else}
+        <strong class="font-black text-sm text-orange-600 dark:text-orange-400">{correctAnswer}</strong>
+      {/if}
     </div>
   </div>
 
@@ -142,10 +154,16 @@
               : 'bg-white/60 dark:bg-neutral-800/40 border border-slate-200/60 dark:border-neutral-800 text-slate-400 dark:text-neutral-500 opacity-60'}"
           >
             <div class="flex items-center gap-1 font-bold text-xs sm:text-sm">
-              {#if isThisCorrect}
-                <CheckCircle weight="fill" class="w-3.5 h-3.5 text-white" />
+              {#if opt.letter === '√'}
+                <Check weight="bold" class="w-4 h-4 {isThisCorrect ? 'text-white' : 'text-emerald-500'}" />
+              {:else if opt.letter === '×'}
+                <X weight="bold" class="w-4 h-4 {isThisCorrect ? 'text-white' : 'text-rose-500'}" />
+              {:else}
+                {#if isThisCorrect}
+                  <CheckCircle weight="fill" class="w-3.5 h-3.5 text-white" />
+                {/if}
+                <span>{opt.letter}</span>
               {/if}
-              <span>{opt.letter}</span>
             </div>
             {#if opt.text}
               <span class="text-[11px] font-serif mt-0.5 truncate max-w-full">

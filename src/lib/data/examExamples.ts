@@ -78,7 +78,7 @@ export const EXAM_EXAMPLES: Record<number, ExamExampleDefinition> = {
       { letter: '×', text: 'Sai (Ví dụ 2)' }
     ],
     getAnswer: () => '√',
-    explanation: 'Ví dụ 1 nói gia đình 3 người, khớp với hình ảnh nên Đúng (√). Ví dụ 2 nói đi làm bằng xe buýt, khác với hình đạp xe nên Sai (×).'
+    explanation: 'Ví dụ 1 nói gia đình 3 người, khớp với hình ảnh nên Đúng. Ví dụ 2 nói đi làm bằng xe buýt, khác với hình đạp xe nên Sai.'
   },
 
   // 2. Nghe Part 2 (Q11 - Q15): Khớp tranh A - F
@@ -254,7 +254,7 @@ export const EXAM_EXAMPLES: Record<number, ExamExampleDefinition> = {
       { letter: '×', text: 'Sai' }
     ],
     getAnswer: () => '×',
-    explanation: '10h05 trừ đi 20 phút là bắt đầu lúc 9h45, nhận định bắt đầu lúc 10h là Sai (×).'
+    explanation: '10h05 trừ đi 20 phút là bắt đầu lúc 9h45, nhận định bắt đầu lúc 10h là Sai.'
   },
 
   // 8. Đọc Part 4 (Q51 - Q55): Ghép câu đối thoại A - F

@@ -19,6 +19,24 @@ export function parseOptionItem(optInput: string | { label: string; value?: stri
 
   const raw = (typeof optInput === 'string' ? optInput : (optInput.label || optInput.value || '')).trim();
 
+  // Check for True/False options (√ Đúng, × Sai, √, ×)
+  if (raw === '√' || raw.startsWith('√') || raw.toLowerCase().trim() === 'đúng' || raw.toLowerCase().startsWith('đúng')) {
+    return {
+      letter: '√',
+      hanzi: '',
+      pinyin: '',
+      rawLabel: 'Đúng'
+    };
+  }
+  if (raw === '×' || raw.startsWith('×') || raw.toLowerCase().trim() === 'sai' || raw.toLowerCase().startsWith('sai')) {
+    return {
+      letter: '×',
+      hanzi: '',
+      pinyin: '',
+      rawLabel: 'Sai'
+    };
+  }
+
   // Extract letter prefix (A, B, C, D, E, F)
   const m = raw.match(/^([A-Fa-f])[\s\.．、:：]*(.*)$/);
   const letter = m ? m[1].toUpperCase() : '';

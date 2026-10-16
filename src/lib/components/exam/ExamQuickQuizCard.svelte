@@ -331,7 +331,7 @@
 
   const correctChoiceText = $derived.by(() => {
     if (isTrueFalse || isReadingTrueFalse) {
-      return question.answer === '√' ? 'Đúng (√)' : 'Sai (×)';
+      return question.answer === '√' ? 'Đúng' : 'Sai';
     }
     const opt = optionChoices.find((o) => o.value === question.answer);
     if (opt) {
@@ -537,10 +537,36 @@
             <div class="flex items-center gap-1.5 font-bold text-xs sm:text-sm">
               {#if isCorrect}
                 <CheckCircle weight="fill" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                <span>Chính xác! Đáp án: <strong class="font-mono">{question.answer}</strong></span>
+                <span>
+                  Chính xác! Đáp án:
+                  {#if question.answer === '√'}
+                    <span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-bold ml-1">
+                      <Check weight="bold" class="w-3.5 h-3.5" /> Đúng
+                    </span>
+                  {:else if question.answer === '×'}
+                    <span class="inline-flex items-center gap-1 text-rose-600 dark:text-rose-400 font-bold ml-1">
+                      <X weight="bold" class="w-3.5 h-3.5" /> Sai
+                    </span>
+                  {:else}
+                    <strong class="font-mono ml-1">{question.answer}</strong>
+                  {/if}
+                </span>
               {:else}
                 <XCircle weight="fill" class="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
-                <span>Chưa đúng! Đáp án đúng: <strong class="font-mono text-emerald-600 dark:text-emerald-400">{question.answer}</strong></span>
+                <span>
+                  Chưa đúng! Đáp án đúng:
+                  {#if question.answer === '√'}
+                    <span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-bold ml-1">
+                      <Check weight="bold" class="w-3.5 h-3.5" /> Đúng
+                    </span>
+                  {:else if question.answer === '×'}
+                    <span class="inline-flex items-center gap-1 text-rose-600 dark:text-rose-400 font-bold ml-1">
+                      <X weight="bold" class="w-3.5 h-3.5" /> Sai
+                    </span>
+                  {:else}
+                    <strong class="font-mono text-emerald-600 dark:text-emerald-400 ml-1">{question.answer}</strong>
+                  {/if}
+                </span>
               {/if}
             </div>
 
@@ -754,10 +780,36 @@
               <div class="flex items-center gap-1.5 font-bold text-xs">
                 {#if isCorrect}
                   <CheckCircle weight="fill" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span>Chính xác! Đáp án: <strong class="font-mono">{question.answer}</strong></span>
+                  <span>
+                    Chính xác! Đáp án:
+                    {#if question.answer === '√'}
+                      <span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-bold ml-1">
+                        <Check weight="bold" class="w-3.5 h-3.5" /> Đúng
+                      </span>
+                    {:else if question.answer === '×'}
+                      <span class="inline-flex items-center gap-1 text-rose-600 dark:text-rose-400 font-bold ml-1">
+                        <X weight="bold" class="w-3.5 h-3.5" /> Sai
+                      </span>
+                    {:else}
+                      <strong class="font-mono ml-1">{question.answer}</strong>
+                    {/if}
+                  </span>
                 {:else}
                   <XCircle weight="fill" class="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
-                  <span>Chưa đúng! Đáp án đúng: <strong class="font-mono text-emerald-600 dark:text-emerald-400">{question.answer}</strong></span>
+                  <span>
+                    Chưa đúng! Đáp án đúng:
+                    {#if question.answer === '√'}
+                      <span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-bold ml-1">
+                        <Check weight="bold" class="w-3.5 h-3.5" /> Đúng
+                      </span>
+                    {:else if question.answer === '×'}
+                      <span class="inline-flex items-center gap-1 text-rose-600 dark:text-rose-400 font-bold ml-1">
+                        <X weight="bold" class="w-3.5 h-3.5" /> Sai
+                      </span>
+                    {:else}
+                      <strong class="font-mono text-emerald-600 dark:text-emerald-400 ml-1">{question.answer}</strong>
+                    {/if}
+                  </span>
                 {/if}
               </div>
 
@@ -825,10 +877,36 @@
               <div class="flex items-center gap-1.5 font-bold text-xs sm:text-sm">
                 {#if isCorrect}
                   <CheckCircle weight="fill" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span>Chính xác! Đáp án: <strong class="font-mono">{question.answer}</strong></span>
+                  <span>
+                    Chính xác! Đáp án:
+                    {#if question.answer === '√'}
+                      <span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-bold ml-1">
+                        <Check weight="bold" class="w-3.5 h-3.5" /> Đúng
+                      </span>
+                    {:else if question.answer === '×'}
+                      <span class="inline-flex items-center gap-1 text-rose-600 dark:text-rose-400 font-bold ml-1">
+                        <X weight="bold" class="w-3.5 h-3.5" /> Sai
+                      </span>
+                    {:else}
+                      <strong class="font-mono ml-1">{question.answer}</strong>
+                    {/if}
+                  </span>
                 {:else}
                   <XCircle weight="fill" class="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
-                  <span>Chưa đúng! Đáp án đúng: <strong class="font-mono text-emerald-600 dark:text-emerald-400">{question.answer}</strong></span>
+                  <span>
+                    Chưa đúng! Đáp án đúng:
+                    {#if question.answer === '√'}
+                      <span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-bold ml-1">
+                        <Check weight="bold" class="w-3.5 h-3.5" /> Đúng
+                      </span>
+                    {:else if question.answer === '×'}
+                      <span class="inline-flex items-center gap-1 text-rose-600 dark:text-rose-400 font-bold ml-1">
+                        <X weight="bold" class="w-3.5 h-3.5" /> Sai
+                      </span>
+                    {:else}
+                      <strong class="font-mono text-emerald-600 dark:text-emerald-400 ml-1">{question.answer}</strong>
+                    {/if}
+                  </span>
                 {/if}
               </div>
 
