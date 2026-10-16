@@ -24,7 +24,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Anh ấy đang nghe điện thoại."
     },
     {
       "exam_code": "H20000",
@@ -43,7 +44,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Tôi đã mua một ít trứng vào buổi sáng."
     },
     {
       "exam_code": "H20000",
@@ -62,7 +64,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Sinh nhật! hạnh phúc!"
     },
     {
       "exam_code": "H20000",
@@ -81,7 +84,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Tôi sẽ đợi bạn ngoài cửa."
     },
     {
       "exam_code": "H20000",
@@ -100,7 +104,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Họ lái xe tới Bắc Kinh."
     },
     {
       "exam_code": "H20000",
@@ -119,7 +124,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Đây là điện thoại mới của anh ấy"
     },
     {
       "exam_code": "H20000",
@@ -138,7 +144,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Tôi muốn tặng vợ tôi một chiếc váy thật đẹp."
     },
     {
       "exam_code": "H20000",
@@ -157,7 +164,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Hãy để tôi giới thiệu cho bạn. Tiếp theo là anh Vương."
     },
     {
       "exam_code": "H20000",
@@ -176,7 +184,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Anh ấy chạy bộ mỗi ngày."
     },
     {
       "exam_code": "H20000",
@@ -195,7 +204,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Đã rất muộn và họ vẫn đang làm việc. Phần thứ hai có tổng cộng 10 câu hỏi. Nghe mỗi câu hỏi hai lần. Ví dụ: Người đàn ông: Bạn thích gì? thể thao? Người phụ nữ: Tôi thích chơi bóng đá nhất. Bây giờ chúng ta hãy đi vào chủ đề:"
     },
     {
       "exam_code": "H20000",
@@ -218,7 +228,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Bạn có mệt không? Thanh? Người phụ nữ: Vâng, tôi muốn nghỉ ngơi."
     },
     {
       "exam_code": "H20000",
@@ -241,7 +252,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Con bạn bao nhiêu tuổi? Đã? Người phụ nữ: Cô ấy gần năm tuổi rồi."
     },
     {
       "exam_code": "H20000",
@@ -264,7 +276,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Bạn đã đọc xong cuốn sách này chưa? ? Người đàn ông: Sau khi đọc nó, tôi đã làm xong. Cuốn sách này là rất tốt."
     },
     {
       "exam_code": "H20000",
@@ -287,7 +300,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Thời tiết hôm nay? Thế còn nó thì sao? Người phụ nữ: Tuyết đang rơi. Trời rất lạnh."
     },
     {
       "exam_code": "H20000",
@@ -310,7 +324,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Ngày của bạn là mấy giờ? thức dậy? Người đàn ông: Hàng ngày tôi thức dậy lúc 6 giờ. Bây giờ chúng ta hãy đi vào chủ đề:"
     },
     {
       "exam_code": "H20000",
@@ -333,7 +348,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Cà phê ở đây ngon không? ? Người phụ nữ: Tôi nghĩ nó ngon."
     },
     {
       "exam_code": "H20000",
@@ -356,7 +372,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Bạn có khỏe không? Đã? Người đàn ông: Có lẽ tôi bị ốm."
     },
     {
       "exam_code": "H20000",
@@ -379,7 +396,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Hôm qua hai người họ nhảy đẹp nhất. Người đàn ông: Tôi biết."
     },
     {
       "exam_code": "H20000",
@@ -402,7 +420,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Đồ ở cửa hàng này rất rẻ. Người phụ nữ: Vâng? ? Chúng ta có nên mua một vài cái mới không? Ghế?"
     },
     {
       "exam_code": "H20000",
@@ -425,7 +444,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Bạn thích ăn gì? hoa quả? Người đàn ông: Tôi thích ăn dưa hấu. Phần thứ ba có tổng cộng 10 câu hỏi. Nghe mỗi câu hỏi hai lần. Ví dụ: Nam: Xiao, Wang, ở đây có bao nhiêu cốc, bạn là cốc nào? của? Người phụ nữ: Cái màu đỏ bên trái là của tôi. Câu hỏi: Chiếc cốc của Tiểu Vương có màu gì? của? Hãy bắt đầu câu hỏi ngay bây giờ:"
     },
     {
       "exam_code": "H20000",
@@ -446,7 +466,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：xiàxīngqī wǒmen yào qù shànghǎi lǚyóu，nǐ qù ma？nán：tàihǎole！wǒ yě qù。wèn：nán de shì shénme yìsi？ (Nǚ: Xià xīngqī wǒmen yào qù Shànghǎi lǚyóu, nǐ qù ma? Nán: Tài hǎo le! Wǒ yě qù. Wèn: Nán de shì shénme yìsi?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Xià xīngqī wǒmen yào qù Shànghǎi lǚyóu, nǐ qù ma? Nán: Tài hǎo le! Wǒ yě qù. Wèn: Nán de shì shénme yìsi?",
-      "pinyin": "C â u   2 1   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 1   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nữ: Tuần sau chúng ta sẽ đi Thượng Hải, bạn có đi không? ? Người đàn ông: Tuyệt vời! Hiểu rồi! Tôi cũng sẽ đi. Câu hỏi: Đàn ông là gì? nghĩa là?"
     },
     {
       "exam_code": "H20000",
@@ -467,7 +488,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：xiǎozhāng，nǐ nǚpéngyǒu méi lái？nán：méi lái。tā xiàwǔ yào kǎoshì wèn：xiǎozhāng de nǚpéngyǒu wèishénme méi lái？ (Nǚ: Xiǎo Zhāng, Nǐ nǚpéngyou méi lái? Nán: Méi lái. Tā xiàwǔ yào kǎoshì. 。 Xiǎo Zhāng de nǚpéngyou wèi shénme méi lái?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Xiǎo Zhāng, Nǐ nǚpéngyou méi lái? Nán: Méi lái. Tā xiàwǔ yào kǎoshì. 。 Xiǎo Zhāng de nǚpéngyou wèi shénme méi lái?",
-      "pinyin": "C â u   2 2   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 2   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nữ: Tiểu Trương, cậu có bạn gái chưa? Đến? Người đàn ông: Không đến. Cô ấy có bài kiểm tra vào buổi chiều. Hỏi: Vì sao Tiểu Trương không có bạn gái? Đến?"
     },
     {
       "exam_code": "H20000",
@@ -488,7 +510,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：nǐ rènshí wánglǎoshī pángbiān nàge rén ma？nán：rènshí，tā jiùshì wánglǎoshī de zhàngfū wèn：wánglǎoshī pángbiān de rén shì shuí？ (Nǚ: Nǐ rènshi Wáng lǎoshī pángbiān nàge rén ma? Nán: Rènshi, tā jiù shì Wáng lǎoshī de zhàngfu. 。 Wáng lǎoshī pángbiān de rén shì shéi?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Nǐ rènshi Wáng lǎoshī pángbiān nàge rén ma? Nán: Rènshi, tā jiù shì Wáng lǎoshī de zhàngfu. 。 Wáng lǎoshī pángbiān de rén shì shéi?",
-      "pinyin": "C â u   2 3   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 3   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nữ: Bạn có biết người bên cạnh thầy Vương không? ? Nam: Vâng, tôi biết anh ấy. Anh ấy là chồng của cô giáo Vương. Câu hỏi: Người bên cạnh thầy Vương là ai? Ai?"
     },
     {
       "exam_code": "H20000",
@@ -509,7 +532,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：míngtiān shì nǐ de shēngrì ma？nán：búshì，wǒ de shēngrì shì qīyuè shíwǔhào wèn：nǎtiān shì tā de shēngrì？ (Nǚ: Míngtiān shì nǐ de shēngrì ma? Nán: Bú shì, wǒ de shēngrì shì qī yuè shíwǔ hào. 。 Nǎ tiān shì tā de shēngrì?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Míngtiān shì nǐ de shēngrì ma? Nán: Bú shì, wǒ de shēngrì shì qī yuè shíwǔ hào. 。 Nǎ tiān shì tā de shēngrì?",
-      "pinyin": "C â u   2 4   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 4   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nữ: Ngày mai là sinh nhật của bạn? ? Người đàn ông: Không, vâng, sinh nhật của tôi là ngày 15 tháng 7. Câu hỏi: Ngày nào là ngày của anh ấy? Sinh nhật?"
     },
     {
       "exam_code": "H20000",
@@ -530,7 +554,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nán：kuài bādiǎn le，wǒyào qù shàngbān le。nǚ：chī le zǎofàn zài qù ba。wèn：nǚ de xiǎng ràng nán de zuò shénme？ (Nán: Kuài bā diǎn le, wǒ yào qù shàngbān le. Nǚ: Chīle zǎofàn zài qù ba. Wèn: Nǚ de xiǎng ràng nán de zuò shénme?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Kuài bā diǎn le, wǒ yào qù shàngbān le. Nǚ: Chīle zǎofàn zài qù ba. Wèn: Nǚ de xiǎng ràng nán de zuò shénme?",
-      "pinyin": "C â u   2 5   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 5   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nam: Đã gần tám giờ rồi, tôi phải đi làm. Người phụ nữ: Ăn sáng xong chúng ta đi nhé. Câu hỏi: Người phụ nữ muốn người đàn ông làm gì? Cái gì?"
     },
     {
       "exam_code": "H20000",
@@ -551,7 +576,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nǚ：dào le。nǐ kàn，zhè jiùshì wǒmen xuéxiào nán：nǐmen xuéxiào zhēn dà。wèn：nán de juéde zhège xuéxiào zěnmeyàng？ (Nǚ: Dào le. Nǐ kàn, zhè jiù shì wǒmen xuéxiào. 。 Nǐmen xuéxiào zhēn dà. Wèn: Nán de juéde zhège xuéxiào zěnmeyàng?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Dào le. Nǐ kàn, zhè jiù shì wǒmen xuéxiào. 。 Nǐmen xuéxiào zhēn dà. Wèn: Nán de juéde zhège xuéxiào zěnmeyàng?",
-      "pinyin": "C â u   2 6   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 6   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nữ: đến. Hãy nhìn xem, đây là trường học của chúng tôi. Nam: Trường của bạn lớn thật đấy. Câu hỏi: Đàn ông nghĩ gì về ngôi trường này? Thế còn nó thì sao?"
     },
     {
       "exam_code": "H20000",
@@ -572,7 +598,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nán：wǒ zhù zài sānlíngsì。nǐ zhù zài nǎge fángjiān nǚ：wǒ zhù sān língqī。wèn：nǚ de zhù zài nǎge fángjiān？ (Nán: Wǒ zhù zài sān líng sì. Nǐ zhù zài nǎge fángjiān?? Wǒ zhù sān líng qī. Wèn: Nǚ de zhù zài nǎge fángjiān?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Wǒ zhù zài sān líng sì. Nǐ zhù zài nǎge fángjiān?? Wǒ zhù sān líng qī. Wèn: Nǚ de zhù zài nǎge fángjiān?",
-      "pinyin": "C â u   2 7   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 7   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nam: Tôi sống ở phòng 304. Bạn sống ở phòng nào? Phòng? Người phụ nữ: Tôi sống ở phòng 307. Hỏi: Người phụ nữ đó sống ở đâu? Phòng?"
     },
     {
       "exam_code": "H20000",
@@ -593,7 +620,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nán：yīshēng shuō shénme le？nǚ：búshì dà wèntí，chī liǎngtiān yào jiù huì hǎo wèn：nǚ de zěnme le？ (Nán: Yīshēng shuō shénme le? Nǚ: Bú shì dà wèntí, chī liǎng tiān yào jiù huì hǎo. 。 Nǚ de zěnme le?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Yīshēng shuō shénme le? Nǚ: Bú shì dà wèntí, chī liǎng tiān yào jiù huì hǎo. 。 Nǚ de zěnme le?",
-      "pinyin": "C â u   2 8   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 8   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nam: Bác sĩ đã nói gì? Đã? Nữ: Đó không phải là vấn đề lớn. Tôi sẽ ổn sau khi uống thuốc trong hai ngày. Câu hỏi: Còn phụ nữ thì sao? Đã?"
     },
     {
       "exam_code": "H20000",
@@ -614,7 +642,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nán：nínhǎo，qǐngwèn nín qù nǎér？nǚ：wǒ qù jīchǎng，sānshífēnzhōng néng dào ma？wèn：tāmen zuì kěnéng zài nǎér？ (Nán: Nínhǎo, qǐngwèn nín qù nǎr? Nǚ: Wǒ qù jīchǎng, sānshí fēnzhōng néng dào ma? Wèn: Tāmen zuì kěnéng zài nǎr?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Nínhǎo, qǐngwèn nín qù nǎr? Nǚ: Wǒ qù jīchǎng, sānshí fēnzhōng néng dào ma? Wèn: Tāmen zuì kěnéng zài nǎr?",
-      "pinyin": "C â u   2 9   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   2 9   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nam: , Xin chào, bạn có muốn đi không? Ở đâu? Người phụ nữ: Tôi đang đi đến sân bay. Tôi có thể đến đó trong ba mươi phút được không? ? Hỏi: Họ thường ở đâu nhất? Ở đâu?"
     },
     {
       "exam_code": "H20000",
@@ -635,7 +664,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：yǐjīng qīdiǎn le，diànyǐng zěnme hái méi kāishǐ？nán：háiyǒu shífēnzhōng ne。wèn：diànyǐng shénme shíhòu kāishǐ？dìsì bùfèn yīgòng gètí，měití tīng liǎngcì。lìrú：nǚ：qǐng zài zhèér xiě nín de míngzì nán：shì zhèér ma？nǚ：búshì，shì zhèér。nán：hǎo，xièxiè。wèn：nán de yào xiě shénme？xiànzài kāishǐ dìtí： (Nǚ: Yǐjīng qī diǎn le, diànyǐng zěnme hái méi kāishǐ? Nán: Háiyǒu shí fēnzhōng ne. Wèn: Diànyǐng shénme shíhou kāishǐ? Dìsì bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nǚ: Qǐng zài zhèr xiě nín de míngzi. 。 Shì zhèr ma? Nǚ: Bú shì, shì zhèr. Nán: Hǎo, xièxie. Wèn: Nán de yào xiě shénme? Xiànzài kāishǐ dì tí)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Yǐjīng qī diǎn le, diànyǐng zěnme hái méi kāishǐ? Nán: Háiyǒu shí fēnzhōng ne. Wèn: Diànyǐng shénme shíhou kāishǐ? Dìsì bùfen Yígòng ge tí, měi tí tīng liǎng cì. Lìrú Nǚ: Qǐng zài zhèr xiě nín de míngzi. 。 Shì zhèr ma? Nǚ: Bú shì, shì zhèr. Nán: Hǎo, xièxie. Wèn: Nán de yào xiě shénme? Xiànzài kāishǐ dì tí",
-      "pinyin": "C â u   3 0   ( P h ầ n   n g h e   s ố   3 )"
+      "pinyin": "C â u   3 0   ( P h ầ n   n g h e   s ố   3 )",
+      "listening_viet": "Nữ: Đã bảy giờ rồi, sao vẫn chưa có phim? bắt đầu? Người đàn ông: Vẫn còn mười phút nữa. Hỏi: Khi nào có phim? bắt đầu? Phần thứ tư có tổng cộng 10 câu hỏi. Nghe mỗi câu hỏi hai lần. Ví dụ: Nữ: Hãy ghi tên bạn vào đây. Người đàn ông: Nó có ở đây không? ? Người phụ nữ: Không, vâng, nó ở đây. Người đàn ông: Được rồi, cảm ơn bạn. Câu hỏi: Con người có nên viết không? Cái gì? Hãy bắt đầu câu hỏi ngay bây giờ:"
     },
     {
       "exam_code": "H20000",
@@ -656,7 +686,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nǚ：píngguǒ zěnme mài？nán：sìkuài qián yījīn。nǚ：wǒ xiǎng mǎi shíjīn，nǐ néng bāng wǒ sòngdào jiālǐ ma？nán：méi wèntí。wèn：nǚ de yào mǎi jǐjīn píngguǒ？ (Nǚ: Píngguǒ zěnme mài? Nán: Sì kuài qián yì jīn. Nǚ: Wǒ xiǎng mǎi shí jīn, nǐ néng bāng wǒ sòng dào jiā li ma? Nán: Méi wèntí. Wèn: Nǚ de yào mǎi jǐ jīn píngguǒ?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Píngguǒ zěnme mài? Nán: Sì kuài qián yì jīn. Nǚ: Wǒ xiǎng mǎi shí jīn, nǐ néng bāng wǒ sòng dào jiā li ma? Nán: Méi wèntí. Wèn: Nǚ de yào mǎi jǐ jīn píngguǒ?",
-      "pinyin": "C â u   3 1   ( P h ầ n   n g h e   s ố   4 )"
+      "pinyin": "C â u   3 1   ( P h ầ n   n g h e   s ố   4 )",
+      "listening_viet": "Nữ: Còn Apple thì sao? Bán? Người đàn ông: Bốn nhân dân tệ một bảng. Người phụ nữ: Tôi muốn mua 10 bảng. Bạn có thể giao nó đến nhà tôi được không? ? Người đàn ông: Không vấn đề gì. Câu hỏi: Một người phụ nữ nên mua bao nhiêu cân? quả táo?"
     },
     {
       "exam_code": "H20000",
@@ -677,7 +708,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [A]: Dựa vào bài nghe [nán：wǎnshàng wǒmen qù fànguǎnér chīfàn，zěnmeyàng nǚ：wǒ bùxiǎng qù wàimiàn chī。wǒ xiǎng zàijiā chī。nán：nà nǐ zhǔnbèi zuò shénme hǎochī de？nǚ：nǐ xiǎng chī shénme，wǒ jiù zuò shénme nán：hǎo de。wèn：tāmen wǎnshàng zài nǎér chīfàn？ (Nán: Wǎnshang wǒmen qù fànguǎnr chīfàn, zěnmeyàng?? Wǒ bù xiǎng qù wàimiàn chī. Wǒ xiǎng zài jiā chī. Nán: Nà nǐ zhǔnbèi zuò shénme hǎochī de? Nǚ: Nǐ xiǎng chī shénme, wǒ jiù zuò shénme. 。 Hǎo de. Wèn: Tāmen wǎnshang zài nǎr chīfàn?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Wǎnshang wǒmen qù fànguǎnr chīfàn, zěnmeyàng?? Wǒ bù xiǎng qù wàimiàn chī. Wǒ xiǎng zài jiā chī. Nán: Nà nǐ zhǔnbèi zuò shénme hǎochī de? Nǚ: Nǐ xiǎng chī shénme, wǒ jiù zuò shénme. 。 Hǎo de. Wèn: Tāmen wǎnshang zài nǎr chīfàn?",
-      "pinyin": "C â u   3 2   ( P h ầ n   n g h e   s ố   4 )"
+      "pinyin": "C â u   3 2   ( P h ầ n   n g h e   s ố   4 )",
+      "listening_viet": "Nam: Buổi tối chúng ta đi nhà hàng ăn tối nhé? Thế còn nó thì sao? Người phụ nữ: Tôi không muốn ra ngoài ăn. Tôi muốn ăn nó ở nhà. Người đàn ông: Cậu định làm món gì ngon thế? của? Người phụ nữ: Tôi sẽ làm bất cứ thứ gì bạn muốn ăn. Người đàn ông: Được rồi. Hỏi: Họ ở đâu vào ban đêm? Dùng bữa nhé?"
     },
     {
       "exam_code": "H20000",
@@ -698,7 +730,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：yígè péngyǒu ràng wǒ bāng tā zhǎogè fángzi。nán：tā gōngzuò le ma？nǚ：gōngzuò le。nán：nàyào zhǎo lí gōngsī jìn yīxiē de。wèn：nǚ de yào bāng péngyǒu zhǎo shénme？ (Nǚ: Yí ge péngyou ràng wǒ bāng tā zhǎo ge fángzi. Nán: Tā gōngzuò le ma? Nǚ: Gōngzuò le. Nán: Nà yào zhǎo lí gōngsī jìn yìxiē de. Wèn: Nǚ de yào bāng péngyou zhǎo shénme?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Yí ge péngyou ràng wǒ bāng tā zhǎo ge fángzi. Nán: Tā gōngzuò le ma? Nǚ: Gōngzuò le. Nán: Nà yào zhǎo lí gōngsī jìn yìxiē de. Wèn: Nǚ de yào bāng péngyou zhǎo shénme?",
-      "pinyin": "C â u   3 3   ( P h ầ n   n g h e   s ố   4 )"
+      "pinyin": "C â u   3 3   ( P h ầ n   n g h e   s ố   4 )",
+      "listening_viet": "Nữ: Một người bạn nhờ tôi giúp anh ấy tìm nhà. Người đàn ông: Anh ấy đang làm việc phải không? ? Người phụ nữ: Đang làm việc. Nam: Vậy thì hãy tìm người ở gần công ty hơn. Câu hỏi: Người phụ nữ muốn giúp bạn mình tìm thấy mình? Cái gì?"
     },
     {
       "exam_code": "H20000",
@@ -719,7 +752,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [C]: Dựa vào bài nghe [nán：zhè shì nǐ de shǒubiǎo nǚ：wǒ mǎi de。wǒ xiǎng sònggěi wǒ gēgē。nán：hěnpiàoliàng。duōshǎo qián mǎi de？nǚ：sānqiānduō wèn：shǒubiǎo duōshǎo qián mǎi de？ (Nán: Zhè shì nǐ de shǒubiǎo?? Wǒ mǎi de. Wǒ xiǎng sòng gěi wǒ gēge. Nán: Hěn piàoliang. Duōshao qián mǎi de? Nǚ: Sān qiān duō. 。 Shǒubiǎo duōshao qián mǎi de?)] để chọn đáp án chính xác.",
       "listening_pinyin": "Nán: Zhè shì nǐ de shǒubiǎo?? Wǒ mǎi de. Wǒ xiǎng sòng gěi wǒ gēge. Nán: Hěn piàoliang. Duōshao qián mǎi de? Nǚ: Sān qiān duō. 。 Shǒubiǎo duōshao qián mǎi de?",
-      "pinyin": "C â u   3 4   ( P h ầ n   n g h e   s ố   4 )"
+      "pinyin": "C â u   3 4   ( P h ầ n   n g h e   s ố   4 )",
+      "listening_viet": "Nam: Đây có phải là của bạn không? đồng hồ? Người phụ nữ: Tôi đã mua nó. Tôi muốn đưa nó cho anh trai tôi. Người đàn ông: Rất đẹp. Nó có giá bao nhiêu? của? Nữ: Hơn ba ngàn. Hỏi: Mua một chiếc đồng hồ giá bao nhiêu? của?"
     },
     {
       "exam_code": "H20000",
@@ -740,7 +774,8 @@ export const examData: ExamDetail = {
       "board_image": null,
       "explanation": "Đáp án [B]: Dựa vào bài nghe [nǚ：nǐ tīngdǒng lǎoshī shuō shénme le ma？nán：méiyǒu，tā shuō dé tàikuài nǚ：wǒ yě méi tīngdǒng，tā mànmànshuō，wǒ kěyǐ tīngdǒng nán：wǒmen yìqǐ qù wènwèn tā，hǎo ma？wèn：nán de shì shénme yìsi？ (Nǚ: Nǐ tīng dǒng lǎoshī shuō shénme le ma? Nán: Méiyǒu, tā shuō de tài kuài. 。 Wǒ yě méi tīng dǒng, tā mànmàn shuō, wǒ kěyǐ tīng dǒng. 。 Wǒmen yìqǐ qù wènwen tā, hǎo ma? Wèn: Nán de shì shénme yìsi? )] để chọn đáp án chính xác.",
       "listening_pinyin": "Nǚ: Nǐ tīng dǒng lǎoshī shuō shénme le ma? Nán: Méiyǒu, tā shuō de tài kuài. 。 Wǒ yě méi tīng dǒng, tā mànmàn shuō, wǒ kěyǐ tīng dǒng. 。 Wǒmen yìqǐ qù wènwen tā, hǎo ma? Wèn: Nán de shì shénme yìsi? ",
-      "pinyin": "C â u   3 5   ( P h ầ n   n g h e   s ố   4 )"
+      "pinyin": "C â u   3 5   ( P h ầ n   n g h e   s ố   4 )",
+      "listening_viet": "Nữ: Bạn có hiểu lời thầy nói không? ? Người đàn ông: Không, anh ấy nói quá nhanh. Người phụ nữ: Tôi cũng không hiểu. Anh chậm rãi nói: “Tôi có thể hiểu được.” Người đàn ông: Chúng ta cùng đi hỏi anh ấy nhé? ? Câu hỏi: Đàn ông là gì? nghĩa là?"
     },
     {
       "exam_code": "H20000",

@@ -24,7 +24,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "√ 2．× 3．× 4．√ 5．×"
     },
     {
       "exam_code": "H21332",
@@ -43,7 +44,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Đọc câu hỏi, phút thứ hai. Sau khi nghe, bạn có một phút để điền vào phiếu trả lời. 3. Thời gian dự kiến ​​cho tất cả các kỳ thi đều bao gồm phút để thí sinh điền thông tin cá nhân. Do Hanban, Trụ sở Viện Khổng Tử tại Bắc Kinh, Trung Quốc biên soạn 1. Câu hỏi Phần 1 Nghe: Ví dụ:"
     },
     {
       "exam_code": "H21332",
@@ -62,7 +64,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "4．"
     },
     {
       "exam_code": "H21332",
@@ -81,7 +84,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Câu hỏi nghe số 4"
     },
     {
       "exam_code": "H21332",
@@ -100,7 +104,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "H21332 - 2"
     },
     {
       "exam_code": "H21332",
@@ -119,7 +124,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "× 7．√ 8．√ 9．× 10．√"
     },
     {
       "exam_code": "H21332",
@@ -138,7 +144,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Câu hỏi nghe số 7"
     },
     {
       "exam_code": "H21332",
@@ -157,7 +164,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "9．"
     },
     {
       "exam_code": "H21332",
@@ -176,7 +184,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Câu hỏi nghe số 9"
     },
     {
       "exam_code": "H21332",
@@ -195,7 +204,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "H21332 - 3"
     },
     {
       "exam_code": "H21332",
@@ -218,7 +228,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "F 12．E 13．B 14．C 15．A"
     },
     {
       "exam_code": "H21332",
@@ -241,7 +252,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Câu hỏi nghe số 12"
     },
     {
       "exam_code": "H21332",
@@ -264,7 +276,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "14．"
     },
     {
       "exam_code": "H21332",
@@ -287,7 +300,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Câu hỏi nghe số 14"
     },
     {
       "exam_code": "H21332",
@@ -310,7 +324,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "H21332 - 4 第16-20 题 A B C D E"
     },
     {
       "exam_code": "H21332",
@@ -333,7 +348,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "B 17．E 18．C 19．D 20．A"
     },
     {
       "exam_code": "H21332",
@@ -356,7 +372,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Câu hỏi nghe số 17"
     },
     {
       "exam_code": "H21332",
@@ -379,7 +396,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "19．"
     },
     {
       "exam_code": "H21332",
@@ -402,7 +420,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Câu hỏi nghe số 19"
     },
     {
       "exam_code": "H21332",
@@ -425,7 +444,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "H21332 - 5"
     },
     {
       "exam_code": "H21332",
@@ -445,7 +465,8 @@ export const examData: ExamDetail = {
         "A 看报纸 (kàn bàozhǐ)",
         "B 洗水果 (xǐ shuǐguǒ)",
         "C 玩儿电脑 (wánr diànnǎo)"
-      ]
+      ],
+      "listening_viet": "A 22．C 23．A 24．A 25．B"
     },
     {
       "exam_code": "H21332",
@@ -465,7 +486,8 @@ export const examData: ExamDetail = {
         "A 别说话 (bié shuōhuà)",
         "B 题很少 (tí hěn shǎo)",
         "C 准备好了 (zhǔnbèihǎo le)"
-      ]
+      ],
+      "listening_viet": "Đừng nói với tôi rằng các chủ đề hiếm khi được chuẩn bị."
     },
     {
       "exam_code": "H21332",
@@ -485,7 +507,8 @@ export const examData: ExamDetail = {
         "A 快乐 (kuàilè)",
         "B 身体好 (shēntǐ hǎo)",
         "C 爱读书 (ài dúshū)"
-      ]
+      ],
+      "listening_viet": "Vui vẻ và khỏe mạnh, thích đọc sách"
     },
     {
       "exam_code": "H21332",
@@ -505,7 +528,8 @@ export const examData: ExamDetail = {
         "A 女医生 (nǚ yīshēng)",
         "B 小学生 (xiǎoxuéshēng)",
         "C 新同学 (xīn tóngxué)"
-      ]
+      ],
+      "listening_viet": "Nữ bác sĩ, bạn học mới của học sinh tiểu học"
     },
     {
       "exam_code": "H21332",
@@ -525,7 +549,8 @@ export const examData: ExamDetail = {
         "A 下雨了 (xià yǔ le)",
         "B 起晚了 (qǐ wǎn le)",
         "C 天气太热 (tiānqì tài rè)"
-      ]
+      ],
+      "listening_viet": "Trời đang mưa và tôi dậy muộn. Thời tiết quá nóng."
     },
     {
       "exam_code": "H21332",
@@ -545,7 +570,8 @@ export const examData: ExamDetail = {
         "A 商店 (shāngdiàn)",
         "B 医院 (yīyuàn)",
         "C 火车站 (huǒchēzhàn)"
-      ]
+      ],
+      "listening_viet": "A 27．B 28．B 29．B 30．C"
     },
     {
       "exam_code": "H21332",
@@ -565,7 +591,8 @@ export const examData: ExamDetail = {
         "A 猫 (māo)",
         "B 铅笔 (qiānbǐ)",
         "C 手表 (shǒubiǎo)"
-      ]
+      ],
+      "listening_viet": "đồng hồ bút chì mèo"
     },
     {
       "exam_code": "H21332",
@@ -585,7 +612,8 @@ export const examData: ExamDetail = {
         "A 今天 (jīntiān)",
         "B 明天 (míngtiān)",
         "C 后天 (hòutiān)"
-      ]
+      ],
+      "listening_viet": "Hôm nay, ngày mai và ngày kia"
     },
     {
       "exam_code": "H21332",
@@ -605,7 +633,8 @@ export const examData: ExamDetail = {
         "A 56个 (56 ge)",
         "B 500多 (500 duō)",
         "C 1500多 (1500 duō)"
-      ]
+      ],
+      "listening_viet": "A 56 ge 个 B 500 duō 多 C 1500 duō 多"
     },
     {
       "exam_code": "H21332",
@@ -625,7 +654,8 @@ export const examData: ExamDetail = {
         "A 茶馆儿 (cháguǎnr)",
         "B 电影院 (diànyǐngyuàn)",
         "C 咖啡馆儿 (kāfēiguǎnr)"
-      ]
+      ],
+      "listening_viet": "Quán trà, rạp chiếu phim, quán cà phê"
     },
     {
       "exam_code": "H21332",
@@ -645,7 +675,8 @@ export const examData: ExamDetail = {
         "A 听不懂 (tīngbudǒng)",
         "B 考试多 (kǎoshì duō)",
         "C 很有意思 (hěn yǒu yìsi)"
-      ]
+      ],
+      "listening_viet": "2. Đọc Phần Một"
     },
     {
       "exam_code": "H21332",
@@ -665,7 +696,8 @@ export const examData: ExamDetail = {
         "A 米饭 (mǐfàn)",
         "B 鸡蛋 (jīdàn)",
         "C 面条儿 (miàntiáor)"
-      ]
+      ],
+      "listening_viet": "Bún trứng"
     },
     {
       "exam_code": "H21332",
@@ -685,7 +717,8 @@ export const examData: ExamDetail = {
         "A 4天前 (4 tiān qián)",
         "B 6月2号 (6 yuè 2 hào)",
         "C 下星期日 (xià xīngqīrì)"
-      ]
+      ],
+      "listening_viet": "Chủ Nhật tiếp theo của tháng trước ngày đó"
     },
     {
       "exam_code": "H21332",
@@ -705,7 +738,8 @@ export const examData: ExamDetail = {
         "A 他同学 (tā tóngxué)",
         "B 他弟弟 (tā dìdi)",
         "C 他妻子 (tā qīzi)"
-      ]
+      ],
+      "listening_viet": "Bạn cùng lớp, anh trai, vợ anh"
     },
     {
       "exam_code": "H21332",
@@ -725,7 +759,8 @@ export const examData: ExamDetail = {
         "A 走路 (zǒulù)",
         "B 开车 (kāi chē)",
         "C 坐飞机 (zuò fēijī)"
-      ]
+      ],
+      "listening_viet": "Đi bộ, lái xe, bay. 2. Đọc phần đầu tiên của câu hỏi. Ví dụ: Thứ bảy hàng tuần tôi đi chơi bóng rổ."
     },
     {
       "exam_code": "H21332",

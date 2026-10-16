@@ -23,7 +23,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Báo hôm nay đã tới chưa?"
     },
     {
       "exam_code": "H21006",
@@ -41,7 +42,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Nào, hãy chơi bóng rổ."
     },
     {
       "exam_code": "H21006",
@@ -59,7 +61,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Chị ơi, chị có thấy đồng hồ của em không?"
     },
     {
       "exam_code": "H21006",
@@ -77,7 +80,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Cô ấy vẫn đang ngủ."
     },
     {
       "exam_code": "H21006",
@@ -95,7 +99,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Tôi sẽ rửa táo."
     },
     {
       "exam_code": "H21006",
@@ -113,7 +118,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Có rất nhiều người trên đường."
     },
     {
       "exam_code": "H21006",
@@ -131,7 +137,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Không sao, tôi còn hai cái nữa ở đây."
     },
     {
       "exam_code": "H21006",
@@ -149,7 +156,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Bác sĩ bảo bạn nên ăn nhiều cá hơn."
     },
     {
       "exam_code": "H21006",
@@ -167,7 +175,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Tôi rất hạnh phúc khi tôi đọc."
     },
     {
       "exam_code": "H21006",
@@ -185,7 +194,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Mẹ, cái này là dành cho mẹ, con hy vọng mẹ thích nó."
     },
     {
       "exam_code": "H21006",
@@ -207,7 +217,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Thầy ơi bài này em không làm được Người đàn ông: Nhìn này, làm cái này đi."
     },
     {
       "exam_code": "H21006",
@@ -229,7 +240,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Bạn bị sao vậy? Thật hạnh phúc. Người phụ nữ: Tôi đã mua hai vé cho tối mai!"
     },
     {
       "exam_code": "H21006",
@@ -251,7 +263,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Hôm nay chú mèo con có ngoan ngoãn không? Nam: Nếu nó không vâng lời bạn, nó sẽ đi ra ngoài."
     },
     {
       "exam_code": "H21006",
@@ -273,7 +286,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Đã gần mười giờ rồi, sao con trai tôi vẫn chưa dậy? Người phụ nữ: Có thể anh ấy bị ốm."
     },
     {
       "exam_code": "H21006",
@@ -295,7 +309,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Thưa ngài, ngài nghĩ gì về điều này? Người đàn ông: Không sao đâu. Cái này giá bao nhiêu?"
     },
     {
       "exam_code": "H21006",
@@ -317,7 +332,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Nhà không có nhiều trứng. Người phụ nữ: Vậy sau khi tan sở tôi sẽ mua vài cân."
     },
     {
       "exam_code": "H21006",
@@ -339,7 +355,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Máy giặt của tôi bị lỗi gì đó, bạn có thể giúp tôi được không? Người đàn ông: Được rồi, không vấn đề gì."
     },
     {
       "exam_code": "H21006",
@@ -361,7 +378,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Đây là phòng của bạn, còn bạn thì sao? Người phụ nữ: Rất tốt, cảm ơn bạn!"
     },
     {
       "exam_code": "H21006",
@@ -383,7 +401,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Công việc đã xong và tôi rất mệt mỏi. Người đàn ông: Cậu xong chưa? Buổi chiều nghỉ ngơi thật tốt nhé."
     },
     {
       "exam_code": "H21006",
@@ -405,7 +424,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Cái này hơi nhỏ phải không? Người phụ nữ: Nó không nhỏ đâu, đồ đạc của tôi đều ở trong đó."
     },
     {
       "exam_code": "H21006",
@@ -424,7 +444,8 @@ export const examData: ExamDetail = {
         "A 太贵了 (A Tài guì le)",
         "B 不好吃 (B Bù hǎochī)",
         "C 已经好了 (C Yǐjīng hǎo le)"
-      ]
+      ],
+      "listening_viet": "Nữ: Bố, sáng nay bố đã uống thuốc chưa? Người đàn ông: Tôi không muốn ăn, tôi ổn rồi. Câu hỏi: Tại sao đàn ông không muốn uống thuốc?"
     },
     {
       "exam_code": "H21006",
@@ -443,7 +464,8 @@ export const examData: ExamDetail = {
         "A 找人 (A Zhǎo rén)",
         "B 洗衣服 (B Xǐ yīfu)",
         "C 看电视 (C Kàn diànshì)"
-      ]
+      ],
+      "listening_viet": "Nam: Vào đi, bạn đang tìm ai? Người phụ nữ: Xin chào, cô Gao có ở đây không? Câu hỏi: Người phụ nữ đang làm gì?"
     },
     {
       "exam_code": "H21006",
@@ -462,7 +484,8 @@ export const examData: ExamDetail = {
         "A 阴 (A Yīn)",
         "B 晴 (B Qíng)",
         "C 下雨 (C Xià yǔ)"
-      ]
+      ],
+      "listening_viet": "Nữ: Ngày mai trời sẽ nắng. Tôi và các bạn cùng lớp sẽ đi bơi. Bạn sẽ đi chứ? Người đàn ông: Được rồi, đã lâu rồi tôi không tập thể dục. Q: Thời tiết ngày mai sẽ thế nào?"
     },
     {
       "exam_code": "H21006",
@@ -481,7 +504,8 @@ export const examData: ExamDetail = {
         "A 学生 (A Xuésheng)",
         "B 妈妈 (B Māma)",
         "C 男朋友 (C Nánpéngyou)"
-      ]
+      ],
+      "listening_viet": "Nam: Sao hôm nay bạn ăn mặc đẹp thế? Người phụ nữ: Hôm nay là sinh nhật của tôi và bạn trai tôi sẽ đến ăn tối với tôi. Câu hỏi: Người phụ nữ muốn ăn tối với ai?"
     },
     {
       "exam_code": "H21006",
@@ -500,7 +524,8 @@ export const examData: ExamDetail = {
         "A 写字 (A Xiě zì)",
         "B 唱歌 (B (chànggē (B)",
         "C hànggē) | C 跳舞 (C Tiàowǔ)"
-      ]
+      ],
+      "listening_viet": "Nữ: Bạn bắt đầu học hát khi bạn sáu tuổi? Người đàn ông: Không, nó bốn tuổi. Câu hỏi: Con trai bắt đầu học gì khi lên bốn tuổi?"
     },
     {
       "exam_code": "H21006",
@@ -519,7 +544,8 @@ export const examData: ExamDetail = {
         "A 白 (A (bái (A)",
         "B ái) | B 雪 (B Xuě)",
         "C 张 (C Zhāng)"
-      ]
+      ],
+      "listening_viet": "Nam: Tôi có thể biết tên của bạn được không? Người phụ nữ: Tôi họ Bai, tên tôi là Bai Xue. Cậu có thể gọi tôi là Tiểu Bạch. Câu hỏi: Họ của cô gái là gì?"
     },
     {
       "exam_code": "H21006",
@@ -538,7 +564,8 @@ export const examData: ExamDetail = {
         "A 2007年 (A 2007 nián) (2007 nián   ( A   2007   ni á n )) (2 0 0 7 nián   ( A   2 0 0 7   n i á n )   ( 2 0 0 7   n i á n       (   A       2 0 0 7       n i   á   n   ) )) (2 0 0 7 nián ( A 2 0 0 7 n i á n ) ( 2 0 0 7 n i á n ( A 2 0 0 7 n i á n ) ) ( 2 0 0 7 n i á n ( A 2 0 0 7 n i á n ) ( 2 0 0 7 n i á n ( A 2 0 0 7 n i á n ) ) ))",
         "B 2008年 (B 2008 nián) (2008 nián   ( B   2008   ni á n )) (2 0 0 8 nián   ( B   2 0 0 8   n i á n )   ( 2 0 0 8   n i á n       (   B       2 0 0 8       n i   á   n   ) )) (2 0 0 8 nián ( B 2 0 0 8 n i á n ) ( 2 0 0 8 n i á n ( B 2 0 0 8 n i á n ) ) ( 2 0 0 8 n i á n ( B 2 0 0 8 n i á n ) ( 2 0 0 8 n i á n ( B 2 0 0 8 n i á n ) ) ))",
         "C 2009年 (C 2009 nián) (2009 nián   ( C   2009   ni á n )) (2 0 0 9 nián   ( C   2 0 0 9   n i á n )   ( 2 0 0 9   n i á n       (   C       2 0 0 9       n i   á   n   ) )) (2 0 0 9 nián ( C 2 0 0 9 n i á n ) ( 2 0 0 9 n i á n ( C 2 0 0 9 n i á n ) ) ( 2 0 0 9 n i á n ( C 2 0 0 9 n i á n ) ( 2 0 0 9 n i á n ( C 2 0 0 9 n i á n ) ) ))"
-      ]
+      ],
+      "listening_viet": "Nữ: Bạn đến Bắc Kinh khi nào? Nam: 2008, trước bạn một năm. Câu hỏi: Người phụ nữ đến Bắc Kinh khi nào?"
     },
     {
       "exam_code": "H21006",
@@ -557,7 +584,8 @@ export const examData: ExamDetail = {
         "A 800元 (A 800 yuán) (800 yuán   ( A   800   yu á n )) (8 0 0 yuán   ( A   8 0 0   y u á n )   ( 8 0 0   y u á n       (   A       8 0 0       y u   á   n   ) )) (8 0 0 yuán ( A 8 0 0 y u á n ) ( 8 0 0 y u á n ( A 8 0 0 y u á n ) ) ( 8 0 0 y u á n ( A 8 0 0 y u á n ) ( 8 0 0 y u á n ( A 8 0 0 y u á n ) ) ))",
         "B 5000元 (B 5000 yuán) (5000 yuán   ( B   5000   yu á n )) (5 0 0 0 yuán   ( B   5 0 0 0   y u á n )   ( 5 0 0 0   y u á n       (   B       5 0 0 0       y u   á   n   ) )) (5 0 0 0 yuán ( B 5 0 0 0 y u á n ) ( 5 0 0 0 y u á n ( B 5 0 0 0 y u á n ) ) ( 5 0 0 0 y u á n ( B 5 0 0 0 y u á n ) ( 5 0 0 0 y u á n ( B 5 0 0 0 y u á n ) ) ))",
         "C 5800元 (C 5800 yuán) (5800 yuán   ( C   5800   yu á n )) (5 8 0 0 yuán   ( C   5 8 0 0   y u á n )   ( 5 8 0 0   y u á n       (   C       5 8 0 0       y u   á   n   ) )) (5 8 0 0 yuán ( C 5 8 0 0 y u á n ) ( 5 8 0 0 y u á n ( C 5 8 0 0 y u á n ) ) ( 5 8 0 0 y u á n ( C 5 8 0 0 y u á n ) ( 5 8 0 0 y u á n ( C 5 8 0 0 y u á n ) ) ))"
-      ]
+      ],
+      "listening_viet": "Nữ: Làm thế nào để bán máy tính này? Nam: Năm nghìn tám. Đó là người bán hàng tốt nhất. Câu hỏi: Máy tính này giá bao nhiêu?"
     },
     {
       "exam_code": "H21006",
@@ -576,7 +604,8 @@ export const examData: ExamDetail = {
         "A 坐船 (A Zuò chuán)",
         "B 坐飞机 (B Zuò fēijī)",
         "C 坐出租车 (C Zuò chūzūchē)"
-      ]
+      ],
+      "listening_viet": "Nữ: Tại sao bạn không đi máy bay? Người đàn ông: Tôi chưa bao giờ đi thuyền nên tôi đi thuyền đến đây. Câu hỏi: Người đàn ông từ đâu đến?"
     },
     {
       "exam_code": "H21006",
@@ -595,7 +624,8 @@ export const examData: ExamDetail = {
         "A 医院 (A Yīyuàn)",
         "B 学校 (B Xuéxiào)",
         "C 饭馆儿 (C Fànguǎnr)"
-      ]
+      ],
+      "listening_viet": "Nam: Bạn học lớp nào? Cái này? Người phụ nữ: Không, tôi đang ở phòng học lớn bên phải. Hỏi: Bây giờ họ có nhiều khả năng ở đâu nhất?"
     },
     {
       "exam_code": "H21006",
@@ -614,7 +644,8 @@ export const examData: ExamDetail = {
         "A 椅子上 (A Yǐzi shang)",
         "B 桌子后面 (B Zhuōzi hòumiàn)",
         "C 桌子前面 (C Zhuōzi qiánmiàn)"
-      ]
+      ],
+      "listening_viet": "Nam: Sức khỏe của bạn bây giờ thế nào? Người phụ nữ: Không sao đâu. Bác sĩ bảo tôi nên tập thể dục nhiều hơn. Người đàn ông: Tôi cần tập thể dục nhiều hơn. Con chó con của bạn ở đâu? Người phụ nữ: Ở đây, phía sau bàn làm việc. Hỏi: Con chó con ở đâu?"
     },
     {
       "exam_code": "H21006",
@@ -633,7 +664,8 @@ export const examData: ExamDetail = {
         "A 米饭 (A Mǐfàn)",
         "B 水果 (B Shuǐguǒ)",
         "C 羊肉 (C Yángròu)"
-      ]
+      ],
+      "listening_viet": "Nữ: Bạn có ăn trái cây không? Người đàn ông: Không, bữa trưa tôi ăn rất nhiều cơm. Người phụ nữ: Thế thì uống chút nước đi. Người đàn ông: Được rồi, cảm ơn bạn. Câu hỏi: Bữa trưa người đàn ông ăn gì?"
     },
     {
       "exam_code": "H21006",
@@ -652,7 +684,8 @@ export const examData: ExamDetail = {
         "A 休息 (A Xiūxi)",
         "B 旅游 (B Lǚyóu)",
         "C 去看学生 (C Qù kàn xuésheng)"
-      ]
+      ],
+      "listening_viet": "Nam: Lần này bạn có thể nghỉ ngơi bao nhiêu ngày? Người phụ nữ: Chúng ta hãy đi du lịch một tuần nhé. Người đàn ông: Được rồi, em muốn đi đâu? Người phụ nữ: Tôi vẫn chưa nghĩ về điều đó. Hỏi: Họ muốn làm gì?"
     },
     {
       "exam_code": "H21006",
@@ -671,7 +704,8 @@ export const examData: ExamDetail = {
         "A 哥哥 (A Gēge)",
         "B 妹妹 (B Mèimei)",
         "C 妻子 (C Qīzi)"
-      ]
+      ],
+      "listening_viet": "Nữ: Bạn nhìn sang bên trái của bạn. Người đàn ông: Bạn đang nhìn gì thế? Xe hơi? Người phụ nữ: Ai ở trong xe vậy? Người đàn ông: Anh trai tôi? Anh ấy đã mua một chiếc xe mới? Hỏi: Ai mua một chiếc xe mới?"
     },
     {
       "exam_code": "H21006",
@@ -690,7 +724,8 @@ export const examData: ExamDetail = {
         "A 没意思 (A Méi yìsi)",
         "B 看书太少 (B Kàn shū tài shǎo)",
         "C 别看太快 (C Bié kàn tài kuài)"
-      ]
+      ],
+      "listening_viet": "Nam: Tôi đọc xong cuốn sách đó trong một giờ. Người phụ nữ: Nhanh vậy à? Bạn hiểu không? Nam: Mình không hiểu lắm nên đọc nhanh thôi. Người phụ nữ: Bạn không thể hiểu được vì bạn đọc nhanh phải không? Câu hỏi: Nữ có nghĩa là gì?"
     },
     {
       "exam_code": "H21006",

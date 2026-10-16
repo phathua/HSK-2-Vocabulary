@@ -24,7 +24,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Mèo con thích ăn cá."
     },
     {
       "exam_code": "H2-YJ",
@@ -43,7 +44,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Tập thể dục mỗi ngày rất tốt cho cơ thể bạn."
     },
     {
       "exam_code": "H2-YJ",
@@ -62,7 +64,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Hôm nay trời lạnh thật. Vào buổi chiều trời sẽ có tuyết."
     },
     {
       "exam_code": "H2-YJ",
@@ -81,7 +84,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Anh trai tôi là bác sĩ."
     },
     {
       "exam_code": "H2-YJ",
@@ -100,7 +104,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Thưa ông, họ của ông là gì?"
     },
     {
       "exam_code": "H2-YJ",
@@ -119,7 +124,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Đồng hồ này nhìn có đẹp không?"
     },
     {
       "exam_code": "H2-YJ",
@@ -138,7 +144,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Đừng nói nữa, tôi không muốn nghe."
     },
     {
       "exam_code": "H2-YJ",
@@ -157,7 +164,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Điều gì đã xảy ra với bàn tay của bạn?"
     },
     {
       "exam_code": "H2-YJ",
@@ -176,7 +184,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Còn món mì tôi làm thì sao?"
     },
     {
       "exam_code": "H2-YJ",
@@ -195,7 +204,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Anh ấy đã dậy rồi."
     },
     {
       "exam_code": "H2-YJ",
@@ -218,7 +228,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Bạn đi rửa tay và ăn dưa hấu. [Nam:] Anh ăn đi, bây giờ tôi không muốn ăn."
     },
     {
       "exam_code": "H2-YJ",
@@ -241,7 +252,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Nếu con bạn muốn học khiêu vũ, hãy tìm trường học cho con. [Nam:] Được rồi, tìm một cái gần nhà đi."
     },
     {
       "exam_code": "H2-YJ",
@@ -264,7 +276,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Có gì trong này vậy? [Nam:] Mở ra xem là biết ngay."
     },
     {
       "exam_code": "H2-YJ",
@@ -287,7 +300,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: ] Cô Trương, mời đi lối này. [Nữ:] Cảm ơn bạn, công ty của bạn lớn thật đấy."
     },
     {
       "exam_code": "H2-YJ",
@@ -310,7 +324,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Ngày mai chúng ta sẽ thi ở lớp nào? [Nam:] 302."
     },
     {
       "exam_code": "H2-YJ",
@@ -333,7 +348,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: ] Đây là tờ báo ngày nay. [Nữ:] Vâng, bạn đã thấy chưa?"
     },
     {
       "exam_code": "H2-YJ",
@@ -356,7 +372,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: ] Nóng quá. Tôi sẽ uống một ít nước trước khi chạy. [Nữ:] Vậy tôi cũng nghỉ một lát nhé."
     },
     {
       "exam_code": "H2-YJ",
@@ -379,7 +396,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Tôi đi làm đây, tạm biệt. [Nam:] Tạm biệt, lái xe chậm lại thôi."
     },
     {
       "exam_code": "H2-YJ",
@@ -402,7 +420,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Bố ơi, uống thuốc này mỗi ngày một lần. [Nam:] Được rồi, mỗi ngày cậu ăn khi nào?"
     },
     {
       "exam_code": "H2-YJ",
@@ -425,7 +444,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Những chiếc cốc này đẹp quá. Bạn mua chúng khi nào? [Nam:] Năm ngoái."
     },
     {
       "exam_code": "H2-YJ",
@@ -445,7 +465,8 @@ export const examData: ExamDetail = {
         "A 狗 (gǒu)",
         "B 铅笔 (qiānbǐ)",
         "C 电影票 (diànyǐng piào)"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Tiểu Cao, vào ngồi đi. [Nam:] Không, con chó của tôi mất tích rồi. Tôi phải tìm anh ấy. [Q:] Tiểu Cao đang tìm gì vậy?"
     },
     {
       "exam_code": "H2-YJ",
@@ -465,7 +486,8 @@ export const examData: ExamDetail = {
         "A 病了 (bìng le)",
         "B 起晚了 (qǐwǎn le)",
         "C 太累了 (tài lèi le)"
-      ]
+      ],
+      "listening_viet": "Nam: ] Tại sao hôm qua bạn không đến lớp? [Nữ:] Em ốm, ở nhà nghỉ một ngày đi. [Q:] Tại sao ngày hôm qua người phụ nữ đó không đến lớp?"
     },
     {
       "exam_code": "H2-YJ",
@@ -485,7 +507,8 @@ export const examData: ExamDetail = {
         "A 哥哥 (gēge)",
         "B 妻子 (qīzi)",
         "C 妹妹 (mèimei)"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Tiểu Lý, cậu đang đợi ai à? [Nam:] Vâng, vợ tôi đang đợi cô ấy. [Q:] Người đàn ông đang đợi ai?"
     },
     {
       "exam_code": "H2-YJ",
@@ -505,7 +528,8 @@ export const examData: ExamDetail = {
         "A 书 (shū)",
         "B 椅子 (yǐzi)",
         "C 苹果 (píngguǒ)"
-      ]
+      ],
+      "listening_viet": "Nam: ] Sắp đến sinh nhật của Xiaobai, nhưng tôi vẫn chưa quyết định nên tặng gì cho anh ấy. [Nữ:] Anh ấy thích đọc sách. Bạn có thể tặng anh ấy một cuốn sách. [Q:] Nữ nhân yêu cầu nam nhân tặng cái gì cho Tiểu Bạch?"
     },
     {
       "exam_code": "H2-YJ",
@@ -525,7 +549,8 @@ export const examData: ExamDetail = {
         "A 学校 (xuéxiào)",
         "B 车站 (chēzhàn)",
         "C 商店 (shāngdiàn)"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Tôi đi mua sữa. [Nam:] Ở nhà không có trứng đâu. Tại sao bạn không mua một ít? [Q:] Người phụ nữ đi đâu?"
     },
     {
       "exam_code": "H2-YJ",
@@ -545,7 +570,8 @@ export const examData: ExamDetail = {
         "A 四个星期 (sì gè xīngqī)",
         "B 十个月 (shí gè yuè)",
         "C 十年 (shí nián)"
-      ]
+      ],
+      "listening_viet": "Nam: ] Bạn đã làm việc ở công ty được mười năm. [Nữ:] Vâng, tôi làm ở đây từ năm 24 tuổi. [Q:] Người phụ nữ đã làm việc ở công ty được bao lâu?"
     },
     {
       "exam_code": "H2-YJ",
@@ -565,7 +591,8 @@ export const examData: ExamDetail = {
         "A 家 (jiā)",
         "B 医院 (yīyuàn)",
         "C 公司 (gōngsī)"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Trưa ăn gì? [Nam:] Cùng nấu cơm nhé. Tôi sẽ làm thêm hai món nữa. [Q:] Họ thường ở đâu nhất?"
     },
     {
       "exam_code": "H2-YJ",
@@ -585,7 +612,8 @@ export const examData: ExamDetail = {
         "A 唱歌 (chàng gē)",
         "B 游泳 (yóuyǒng)",
         "C 打球 (dǎ qiú)"
-      ]
+      ],
+      "listening_viet": "Nam: ] Chủ nhật chúng ta cùng nhau đi bơi nhé. [Nữ:] Được rồi, sáng mai đi nhé. Tôi không có thời gian vào buổi chiều. [Q:] Họ sẽ làm gì cùng nhau vào Chủ nhật?"
     },
     {
       "exam_code": "H2-YJ",
@@ -605,7 +633,8 @@ export const examData: ExamDetail = {
         "A 走路 (zǒulù)",
         "B 开车 (kāichē)",
         "C 坐飞机 (zuò fēijī)"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Bạn có đi tàu về trường không? [Nam:] Tàu chạy chậm quá. Tôi sẽ đi máy bay. Nó có thể ở đó trong ba giờ. [Q:] Người đàn ông muốn quay lại trường học như thế nào?"
     },
     {
       "exam_code": "H2-YJ",
@@ -625,7 +654,8 @@ export const examData: ExamDetail = {
         "A 爸爸 (bàba)",
         "B 弟弟 (dìdi)",
         "C 朋友 (péngyou)"
-      ]
+      ],
+      "listening_viet": "Nam: ] Mẹ, con và anh trai đi xem phim. [Nữ:] Được rồi, xem xong hãy về sớm nhé. [Q:] Người đàn ông đi xem phim với ai?"
     },
     {
       "exam_code": "H2-YJ",
@@ -644,7 +674,8 @@ export const examData: ExamDetail = {
         "A 一次 (yí cì)",
         "B 两次 (liǎng cì)",
         "C 七次 (qī cì)"
-      ]
+      ],
+      "listening_viet": "Nam: ] Thế còn cửa hàng trái cây cạnh bệnh viện thì sao? [Nữ:] Trái cây rất rẻ. Tôi đã đến đó một lần. [Nam:] Thật sao? Tôi muốn đến đó và mua một ít trái cây. [Nữ:] Khi nào đi thì gọi cho em nhé, em cũng muốn đi. [Q:] Người phụ nữ đã đến cửa hàng trái cây đó bao nhiêu lần rồi?"
     },
     {
       "exam_code": "H2-YJ",
@@ -663,7 +694,8 @@ export const examData: ExamDetail = {
         "A 学习 (xuéxí)",
         "B 旅游 (lǚyóu)",
         "C 考试 (kǎoshì)"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Sao về muộn thế? [Nam:] Tôi nhìn thấy bạn học đại học Lý Ming trên đường nên tôi đến quán trà với anh ấy. [Nữ:] Anh ấy đi Bắc Kinh phải không? [Nam:] Vâng. [Q:] Lý Minh đang làm gì ở Bắc Kinh?"
     },
     {
       "exam_code": "H2-YJ",
@@ -682,7 +714,8 @@ export const examData: ExamDetail = {
         "A 没听懂 (méi tīngdǒng)",
         "B 不高兴 (bù gāoxìng)",
         "C 打错电话了 (dǎcuò diànhuà le)"
-      ]
+      ],
+      "listening_viet": "Nam: ] Xin chào, xin chào. [Nữ:] Xin chào, cô Trương có ở đây không? Tôi là học trò của anh ấy. [Nam:] Thưa cô, cô gọi nhầm số rồi. [Nữ:] Tôi xin lỗi. [Q:] Người nữ bị làm sao vậy?"
     },
     {
       "exam_code": "H2-YJ",
@@ -701,7 +734,8 @@ export const examData: ExamDetail = {
         "A 宾馆 (bīnguǎn)",
         "B 饭店 (fàndiàn)",
         "C 机场 (jīchǎng)"
-      ]
+      ],
+      "listening_viet": "Nữ: ] Khách sạn cách đây bao xa? [Nam:] Chúng tôi sẽ đến đó sau năm phút đi bộ. Bạn có mệt không? [Nữ:] Không, nhưng tôi thấy muốn ăn. [Nam:] Vậy chúng ta hãy nhanh chóng rời đi thôi. [Nữ:] Được rồi. [Hỏi:] Họ đi đâu vậy?"
     },
     {
       "exam_code": "H2-YJ",
@@ -720,7 +754,8 @@ export const examData: ExamDetail = {
         "A 阴天 (yīntiān)",
         "B 晴天 (qíngtiān)",
         "C 下雨了 (xià yǔ le)"
-      ]
+      ],
+      "listening_viet": "Nam: ] Bên ngoài có mưa to không? [Nữ:] Nó rất lớn. Trời bắt đầu mưa lúc năm, sáu giờ sáng. [Nam:] Tôi vẫn muốn ra ngoài chạy bộ. [Nữ:] Hôm nay đừng đến đó. [Q:] Thời tiết bây giờ thế nào?"
     },
     {
       "exam_code": "H2-YJ",

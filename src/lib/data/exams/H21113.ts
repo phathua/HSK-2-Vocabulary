@@ -26,7 +26,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_01.webp",
-      "pinyin": "Tā bú huì zuò zhège tí, suǒyǐ yǒudiǎnr bù gāoxìng."
+      "pinyin": "Tā bú huì zuò zhège tí, suǒyǐ yǒudiǎnr bù gāoxìng.",
+      "listening_viet": "Anh không thể làm được câu hỏi này nên có chút không vui."
     },
     {
       "exam_code": "H21113",
@@ -44,7 +45,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_02.webp",
-      "pinyin": "Kuài qǐchuáng, hé wǒ chūqù pǎobù ba."
+      "pinyin": "Kuài qǐchuáng, hé wǒ chūqù pǎobù ba.",
+      "listening_viet": "Hãy đứng dậy và chạy bộ với tôi."
     },
     {
       "exam_code": "H21113",
@@ -62,7 +64,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_03.webp",
-      "pinyin": "Tā bú huì tiàowǔ, zhèngzài xuéxí tiàowǔ."
+      "pinyin": "Tā bú huì tiàowǔ, zhèngzài xuéxí tiàowǔ.",
+      "listening_viet": "Anh ấy không biết nhảy và đang học nhảy."
     },
     {
       "exam_code": "H21113",
@@ -80,7 +83,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_04.webp",
-      "pinyin": "Zhège bēizi de yánsè bù hǎokàn."
+      "pinyin": "Zhège bēizi de yánsè bù hǎokàn.",
+      "listening_viet": "Màu sắc của chiếc cốc này không đẹp."
     },
     {
       "exam_code": "H21113",
@@ -98,7 +102,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_05.webp",
-      "pinyin": "Nǐ zài xiǎng shénme shìqing ne?"
+      "pinyin": "Nǐ zài xiǎng shénme shìqing ne?",
+      "listening_viet": "Bạn đang nghĩ về điều gì?"
     },
     {
       "exam_code": "H21113",
@@ -116,7 +121,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_06.webp",
-      "pinyin": "Tāmen zuò chuán qù Zhōngguó."
+      "pinyin": "Tāmen zuò chuán qù Zhōngguó.",
+      "listening_viet": "Họ đi thuyền đến Trung Quốc."
     },
     {
       "exam_code": "H21113",
@@ -134,7 +140,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_07.webp",
-      "pinyin": "Nǐ juéde wǒ chuān nǎ jiàn hǎo?"
+      "pinyin": "Nǐ juéde wǒ chuān nǎ jiàn hǎo?",
+      "listening_viet": "Bạn nghĩ tôi nên mặc cái nào?"
     },
     {
       "exam_code": "H21113",
@@ -152,7 +159,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_08.webp",
-      "pinyin": "Wǒ ài chī māma zuò de yú."
+      "pinyin": "Wǒ ài chī māma zuò de yú.",
+      "listening_viet": "Tôi rất thích ăn cá do mẹ nấu."
     },
     {
       "exam_code": "H21113",
@@ -170,7 +178,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_09.webp",
-      "pinyin": "Zàijiàn, huānyíng nín xià cì zài lái."
+      "pinyin": "Zàijiàn, huānyíng nín xià cì zài lái.",
+      "listening_viet": "Tạm biệt và chào đón bạn lần sau."
     },
     {
       "exam_code": "H21113",
@@ -188,7 +197,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_10.webp",
-      "pinyin": "Dàjiā dōu zhèngzài xiào."
+      "pinyin": "Dàjiā dōu zhèngzài xiào.",
+      "listening_viet": "Mọi người đều đang cười."
     },
     {
       "exam_code": "H21113",
@@ -210,7 +220,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nǚ: Xiànzài jǐ diǎn le?\nNán: Wǒ kàn yīxià, wǒ de shǒubiǎo xiànzài shì bā diǎn sìshí.",
-      "board_image": "images/H21113_board_11_15.webp"
+      "board_image": "images/H21113_board_11_15.webp",
+      "listening_viet": "Nữ: Bây giờ mấy giờ rồi?"
     },
     {
       "exam_code": "H21113",
@@ -232,7 +243,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nán: Yǐzi shang de xiǎogǒu shì nǐ de?\nNǚ: Bú shì, nà shì wǒ mèimei de gǒu.",
-      "board_image": "images/H21113_board_11_15.webp"
+      "board_image": "images/H21113_board_11_15.webp",
+      "listening_viet": "Nam: Con chó con trên ghế có phải là của bạn không?"
     },
     {
       "exam_code": "H21113",
@@ -254,7 +266,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nǚ: Nǐ de gē chàng de bù zěnmeyàng.\nNán: Hǎo ba, hǎo ba, nǐ zài tīngting zuìhòu yī ge.",
-      "board_image": "images/H21113_board_11_15.webp"
+      "board_image": "images/H21113_board_11_15.webp",
+      "listening_viet": "Nữ: Giọng hát của bạn không hay lắm."
     },
     {
       "exam_code": "H21113",
@@ -276,7 +289,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nán: Bái xiǎojiě, xièxie nín de bāngzhù.\nNǚ: Bú kèqi.",
-      "board_image": "images/H21113_board_11_15.webp"
+      "board_image": "images/H21113_board_11_15.webp",
+      "listening_viet": "Nam: Cô Bai, cảm ơn sự giúp đỡ của bạn."
     },
     {
       "exam_code": "H21113",
@@ -298,7 +312,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nǚ: Wǒ xiě de zěnmeyàng?\nNán: Zhè shì nǐ xiě de? Méi xiǎngdào nǐ xiě de hái bùcuò.",
-      "board_image": "images/H21113_board_11_15.webp"
+      "board_image": "images/H21113_board_11_15.webp",
+      "listening_viet": "Nữ: Bài viết của tôi thế nào?"
     },
     {
       "exam_code": "H21113",
@@ -320,7 +335,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nán: Gěi nǐ shuǐ, chī yào le.\nNǚ: Wǒ yǐjīng chīguò le.",
-      "board_image": "images/H21113_board_16_20.webp"
+      "board_image": "images/H21113_board_16_20.webp",
+      "listening_viet": "Nam: Tôi sẽ cho bạn một ít nước và một ít thuốc."
     },
     {
       "exam_code": "H21113",
@@ -342,7 +358,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nǚ: Zhǎodào le ma?\nNán: Zhǎodào le, lí zhèr hěn jìn, wǒmen xiàng yòu zǒu.",
-      "board_image": "images/H21113_board_16_20.webp"
+      "board_image": "images/H21113_board_16_20.webp",
+      "listening_viet": "Nữ: Tìm thấy nó?"
     },
     {
       "exam_code": "H21113",
@@ -364,7 +381,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nán: Jiě, jiā li yǒu shénme shuǐguǒ?\nNǚ: Hái yǒu jǐ kuàir xīguā, nǐ chī ma?",
-      "board_image": "images/H21113_board_16_20.webp"
+      "board_image": "images/H21113_board_16_20.webp",
+      "listening_viet": "Nam: Chị ơi, nhà chị có trái cây gì thế?"
     },
     {
       "exam_code": "H21113",
@@ -386,7 +404,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nǚ: Zhēn piàoliang!\nNán: Wǒ juéde nǐ chuān hóngsè de fēicháng piàoliang.",
-      "board_image": "images/H21113_board_16_20.webp"
+      "board_image": "images/H21113_board_16_20.webp",
+      "listening_viet": "Nữ: nó thật đẹp!"
     },
     {
       "exam_code": "H21113",
@@ -408,7 +427,8 @@ export const examData: ExamDetail = {
         "F"
       ],
       "pinyin": "Nán: Nàge rén jiào shénme míngzi?\nNǚ: Duìbuqǐ, wǒ méi wèn tā.",
-      "board_image": "images/H21113_board_16_20.webp"
+      "board_image": "images/H21113_board_16_20.webp",
+      "listening_viet": "Nam: Tên người đó là gì?"
     },
     {
       "exam_code": "H21113",
@@ -426,7 +446,8 @@ export const examData: ExamDetail = {
         "B 昨天 (zuótiān)",
         "C 前天 (qiántiān)"
       ],
-      "pinyin": "Nǚ: Xiǎo Zhāng, zhè shì jīntiān de bàozhǐ ma?\nNán: Bú shì, nà shì wǒ zuótiān mǎi de.\nWèn: Nà shì nǎ tiān de bàozhǐ?"
+      "pinyin": "Nǚ: Xiǎo Zhāng, zhè shì jīntiān de bàozhǐ ma?\nNán: Bú shì, nà shì wǒ zuótiān mǎi de.\nWèn: Nà shì nǎ tiān de bàozhǐ?",
+      "listening_viet": "Nữ: Tiểu Trương, đây là báo hôm nay phải không?"
     },
     {
       "exam_code": "H21113",
@@ -444,7 +465,8 @@ export const examData: ExamDetail = {
         "B 手机 (shǒujī)",
         "C 自行车 (zìxíngchē)"
       ],
-      "pinyin": "Nán: Hòutiān shì wǒ de shēngri, nǐ zhǔnbèi sòng wǒ shénme?\nNǚ: Gē, wǒ gěi nǐ mǎi ge xīn shǒujī zěnmeyàng?\nWèn: Mèimei xiǎng sòng gēge shénme?"
+      "pinyin": "Nán: Hòutiān shì wǒ de shēngri, nǐ zhǔnbèi sòng wǒ shénme?\nNǚ: Gē, wǒ gěi nǐ mǎi ge xīn shǒujī zěnmeyàng?\nWèn: Mèimei xiǎng sòng gēge shénme?",
+      "listening_viet": "Nam: Ngày mốt là sinh nhật tôi, bạn định tặng gì cho tôi?"
     },
     {
       "exam_code": "H21113",
@@ -462,7 +484,8 @@ export const examData: ExamDetail = {
         "B 羊肉 (yángròu)",
         "C 鸡蛋 (jīdàn)"
       ],
-      "pinyin": "Nǚ: Nǐ zǎofàn chī shénme le?\nNán: Wǒ chīle liǎng ge jīdàn, hēle yī bēi niúnǎi.\nWèn: Nán de zǎofàn chī shénme le?"
+      "pinyin": "Nǚ: Nǐ zǎofàn chī shénme le?\nNán: Wǒ chīle liǎng ge jīdàn, hēle yī bēi niúnǎi.\nWèn: Nán de zǎofàn chī shénme le?",
+      "listening_viet": "Nữ: Bạn đã ăn gì cho bữa sáng?"
     },
     {
       "exam_code": "H21113",
@@ -480,7 +503,8 @@ export const examData: ExamDetail = {
         "B 8:15",
         "C 8:50"
       ],
-      "pinyin": "Nán: Jiàoshì xiànzài kāi mén le ma?\nNǚ: Xiànzài yǐjīng bā diǎn líng wǔ le, zǎo kāi mén le.\nWèn: Xiànzài jǐ diǎn le?"
+      "pinyin": "Nán: Jiàoshì xiànzài kāi mén le ma?\nNǚ: Xiànzài yǐjīng bā diǎn líng wǔ le, zǎo kāi mén le.\nWèn: Xiànzài jǐ diǎn le?",
+      "listening_viet": "Nam: Bây giờ lớp học có mở cửa không?"
     },
     {
       "exam_code": "H21113",
@@ -498,7 +522,8 @@ export const examData: ExamDetail = {
         "B 读书 (dú shū)",
         "C 旅游 (lǚyóu)"
       ],
-      "pinyin": "Nǚ: Wǒmen qù pángbiān nà jiā cháguǎn hē bēi chá ba.\nNán: Hǎo de, méi wèntí.\nWèn: Tāmen yào zuò shénme?"
+      "pinyin": "Nǚ: Wǒmen qù pángbiān nà jiā cháguǎn hē bēi chá ba.\nNán: Hǎo de, méi wèntí.\nWèn: Tāmen yào zuò shénme?",
+      "listening_viet": "Nữ: Chúng ta sang quán trà bên cạnh uống một tách trà nhé."
     },
     {
       "exam_code": "H21113",
@@ -516,7 +541,8 @@ export const examData: ExamDetail = {
         "B 机场 (jīchǎng)",
         "C 火车站 (huǒchēzhàn)"
       ],
-      "pinyin": "Nán: Fúwùyuán, zhèr lí huǒchēzhàn yuǎn ma?\nNǚ: Bù yuǎn, zǒulù shíwǔ fēnzhōng jiù néng dào.\nWèn: Nán de xiǎng qù nǎr?"
+      "pinyin": "Nán: Fúwùyuán, zhèr lí huǒchēzhàn yuǎn ma?\nNǚ: Bù yuǎn, zǒulù shíwǔ fēnzhōng jiù néng dào.\nWèn: Nán de xiǎng qù nǎr?",
+      "listening_viet": "Nam: Bồi bàn, chỗ này có xa ga xe lửa không?"
     },
     {
       "exam_code": "H21113",
@@ -534,7 +560,8 @@ export const examData: ExamDetail = {
         "B 天气好 (tiānqì hǎo)",
         "C 玩儿得高兴 (wánr de gāoxìng)"
       ],
-      "pinyin": "Nǚ: Xīwàng míngtiān shì ge qíngtiān.\nNán: Shì, wǒ míngtiān hái xiǎng qù yóuyǒng ne.\nWèn: Tāmen xīwàng míngtiān zěnmeyàng?"
+      "pinyin": "Nǚ: Xīwàng míngtiān shì ge qíngtiān.\nNán: Shì, wǒ míngtiān hái xiǎng qù yóuyǒng ne.\nWèn: Tāmen xīwàng míngtiān zěnmeyàng?",
+      "listening_viet": "Nữ: Hy vọng ngày mai trời sẽ nắng."
     },
     {
       "exam_code": "H21113",
@@ -552,7 +579,8 @@ export const examData: ExamDetail = {
         "B 下午 (xiàwǔ)",
         "C 晚上 (wǎnshang)"
       ],
-      "pinyin": "Nán: Nǐ zhōngwǔ yǒu shíjiān ma? Wǒ xiǎng qǐng nǐ chī ge fàn.\nNǚ: Wǒ xiàwǔ liǎng diǎn hái yǒu kè, wǎnshang zěnmeyàng?\nWèn: Xiànzài zuì kěnéng shì shénme shíhou?"
+      "pinyin": "Nán: Nǐ zhōngwǔ yǒu shíjiān ma? Wǒ xiǎng qǐng nǐ chī ge fàn.\nNǚ: Wǒ xiàwǔ liǎng diǎn hái yǒu kè, wǎnshang zěnmeyàng?\nWèn: Xiànzài zuì kěnéng shì shénme shíhou?",
+      "listening_viet": "Nam: Buổi trưa bạn có thời gian không? Tôi muốn đãi bạn một bữa ăn."
     },
     {
       "exam_code": "H21113",
@@ -570,7 +598,8 @@ export const examData: ExamDetail = {
         "B 不好看 (bù hǎokàn)",
         "C 问题不少 (wèntí bù shǎo)"
       ],
-      "pinyin": "Nǚ: Nà běn shū nǐ kànwán le ma?\nNán: Wǒ zuótiān jiù kànwán le, nà běn shū hěn yǒu yìsi.\nWèn: Nà běn shū zěnmeyàng?"
+      "pinyin": "Nǚ: Nà běn shū nǐ kànwán le ma?\nNán: Wǒ zuótiān jiù kànwán le, nà běn shū hěn yǒu yìsi.\nWèn: Nà běn shū zěnmeyàng?",
+      "listening_viet": "Nữ: Bạn đã đọc xong cuốn sách đó chưa?"
     },
     {
       "exam_code": "H21113",
@@ -588,7 +617,8 @@ export const examData: ExamDetail = {
         "B 猫不听话 (māo bù tīnghuà)",
         "C 猫让她快乐 (māo ràng tā kuàilè)"
       ],
-      "pinyin": "Nán: Nǐ xǐhuan māo ma?\nNǚ: Fēicháng xǐhuan, hé māo zài yīqǐ, wǒ hěn kuàilè.\nWèn: Nǚ de wèi shénme xǐhuan māo?"
+      "pinyin": "Nán: Nǐ xǐhuan māo ma?\nNǚ: Fēicháng xǐhuan, hé māo zài yīqǐ, wǒ hěn kuàilè.\nWèn: Nǚ de wèi shénme xǐhuan māo?",
+      "listening_viet": "Nam: Bạn có thích mèo không?"
     },
     {
       "exam_code": "H21113",
@@ -606,7 +636,8 @@ export const examData: ExamDetail = {
         "B 去打篮球 (qù dǎ lánqiú)",
         "C 去北京玩儿 (qù Běijīng wánr)"
       ],
-      "pinyin": "Nán: Xīngqīliù qù Běijīng wánr, nǐ qù bù qù?\nNǚ: Wǒ yě xiǎng qù, dànshì zhè liǎng tiān tài máng le.\nNán: Nà xià cì ba.\nNǚ: Hǎo, xià cì yīqǐ qù.\nWèn: Nán de xīngqīliù zuò shénme?"
+      "pinyin": "Nán: Xīngqīliù qù Běijīng wánr, nǐ qù bù qù?\nNǚ: Wǒ yě xiǎng qù, dànshì zhè liǎng tiān tài máng le.\nNán: Nà xià cì ba.\nNǚ: Hǎo, xià cì yīqǐ qù.\nWèn: Nán de xīngqīliù zuò shénme?",
+      "listening_viet": "Nam: Chúng tôi sẽ đến Bắc Kinh vào thứ bảy, bạn sẽ đi chứ?"
     },
     {
       "exam_code": "H21113",
@@ -624,7 +655,8 @@ export const examData: ExamDetail = {
         "B 高先生 (Gāo xiānsheng)",
         "C 高医生 (Gāo yīshēng)"
       ],
-      "pinyin": "Nǚ: Wéi, nín shì Gāo xiānsheng ma?\nNán: Bú shì, nǐ dǎcuò le, wǒ bù xìng Gāo.\nNǚ: Duìbuqǐ, shì wǒ dǎcuò le.\nNán: Méi guānxi.\nWèn: Nǚ de yào zhǎo shéi?"
+      "pinyin": "Nǚ: Wéi, nín shì Gāo xiānsheng ma?\nNán: Bú shì, nǐ dǎcuò le, wǒ bù xìng Gāo.\nNǚ: Duìbuqǐ, shì wǒ dǎcuò le.\nNán: Méi guānxi.\nWèn: Nǚ de yào zhǎo shéi?",
+      "listening_viet": "Nữ: Xin chào, bạn là anh Gao phải không?"
     },
     {
       "exam_code": "H21113",
@@ -642,7 +674,8 @@ export const examData: ExamDetail = {
         "B 1000 元 (1000 yuán)",
         "C 1200 元 (1200 yuán)"
       ],
-      "pinyin": "Nán: Nǐ shǒubiān yǒu wǔbǎi kuài qián ma?\nNǚ: Méi yǒu, zěnme le?\nNán: Zhè zhāng zhuōzi yào yīqiān liǎngbǎi kuài.\nNǚ: Nà míngtiān zài lái mǎi ba.\nWèn: Nà zhāng zhuōzi mài duōshao qián?"
+      "pinyin": "Nán: Nǐ shǒubiān yǒu wǔbǎi kuài qián ma?\nNǚ: Méi yǒu, zěnme le?\nNán: Zhè zhāng zhuōzi yào yīqiān liǎngbǎi kuài.\nNǚ: Nà míngtiān zài lái mǎi ba.\nWèn: Nà zhāng zhuōzi mài duōshao qián?",
+      "listening_viet": "Nam: Bạn có năm trăm đô la trong tay không?"
     },
     {
       "exam_code": "H21113",
@@ -660,7 +693,8 @@ export const examData: ExamDetail = {
         "B 一个小时 (yī ge xiǎoshí)",
         "C 80 分钟 (80 fēnzhōng)"
       ],
-      "pinyin": "Nǚ: Zuò gōnggòngqìchē qù nàr yào duō cháng shíjiān?\nNán: Yī ge xiǎoshí.\nNǚ: Tài màn le, nà zuò chūzūchē ne?\nNán: Zuò chūzūchē, èrshí fēnzhōng ba.\nWèn: Zuò gōnggòngqìchē qù nàr yào duō cháng shíjiān?"
+      "pinyin": "Nǚ: Zuò gōnggòngqìchē qù nàr yào duō cháng shíjiān?\nNán: Yī ge xiǎoshí.\nNǚ: Tài màn le, nà zuò chūzūchē ne?\nNán: Zuò chūzūchē, èrshí fēnzhōng ba.\nWèn: Zuò gōnggòngqìchē qù nàr yào duō cháng shíjiān?",
+      "listening_viet": "Nữ: Mất bao lâu để đến đó bằng xe buýt?"
     },
     {
       "exam_code": "H21113",
@@ -678,7 +712,8 @@ export const examData: ExamDetail = {
         "B 多喝水 (duō hē shuǐ)",
         "C 少吃饭 (shǎo chī fàn)"
       ],
-      "pinyin": "Nán: Cóng jīntiān kāishǐ, wǒ wǎnshang bù chī fàn le.\nNǚ: Wèi shénme?\nNán: Wǒ xiànzài dōu bāshíwǔ gōngjīn le.\nNǚ: Nà nǐ yào duō yùndòng, bù chī fàn duì shēntǐ bù hǎo.\nWèn: Nǚ de ràng nán de zěnme zuò?"
+      "pinyin": "Nán: Cóng jīntiān kāishǐ, wǒ wǎnshang bù chī fàn le.\nNǚ: Wèi shénme?\nNán: Wǒ xiànzài dōu bāshíwǔ gōngjīn le.\nNǚ: Nà nǐ yào duō yùndòng, bù chī fàn duì shēntǐ bù hǎo.\nWèn: Nǚ de ràng nán de zěnme zuò?",
+      "listening_viet": "Nam: Từ hôm nay trở đi tôi sẽ không ăn đêm."
     },
     {
       "exam_code": "H21113",

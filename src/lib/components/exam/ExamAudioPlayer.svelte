@@ -12,6 +12,7 @@
   import X from 'phosphor-svelte/lib/X';
   import MusicNotes from 'phosphor-svelte/lib/MusicNotes';
   import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
+  import ExamDialogueTranscript from './ExamDialogueTranscript.svelte';
   import { examRoomState } from '#lib/state/examRoomState.svelte';
   import type { QuestionItem } from '#lib/types/exam';
 
@@ -994,33 +995,33 @@
                     </span>
                   </div>
 
-                  <!-- Lời thoại tiếng Hán -->
-                  <div class="p-3 rounded-2xl bg-slate-50 dark:bg-neutral-900/60 border border-slate-200/80 dark:border-neutral-800 space-y-2">
-                    <div>
-                      <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">
-                        Hán tự
-                      </div>
-                      <div class="text-sm md:text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed select-text font-serif">
-                        {q.listening_script || q.text || 'Đang cập nhật lời thoại...'}
-                      </div>
-                      {#if q.listening_pinyin}
-                        <div class="text-xs md:text-sm font-medium text-amber-600 dark:text-amber-400/90 font-mono mt-0.5 select-text">
-                          {q.listening_pinyin}
-                        </div>
-                      {/if}
+                  <!-- Lời thoại tiếng Hán, Pinyin & Bản dịch -->
+                  {#if q.listening_script}
+                    <div class="mb-2">
+                      <ExamDialogueTranscript
+                        script={q.listening_script}
+                        pinyin={q.listening_pinyin}
+                        viet={q.listening_viet}
+                      />
                     </div>
-
-                    <!-- Giải thích / Nghĩa tiếng Việt nếu có -->
-                    {#if q.explanation}
-                      <div class="pt-2 border-t border-slate-200/60 dark:border-neutral-800 text-[11px] md:text-xs text-slate-600 dark:text-neutral-300 select-text leading-relaxed">
-                        <span class="font-bold text-amber-600 dark:text-amber-400 inline-flex items-center gap-1">
-                          <Lightbulb weight="fill" class="w-3.5 h-3.5 text-amber-500 shrink-0" />
-                          <span>Giải nghĩa:</span>
-                        </span>
-                        {q.explanation}
+                  {:else}
+                    <div class="p-3 rounded-2xl bg-slate-50 dark:bg-neutral-900/60 border border-slate-200/80 dark:border-neutral-800 mb-2">
+                      <div class="text-sm md:text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed select-text font-serif">
+                        {q.text || 'Đang cập nhật lời thoại...'}
                       </div>
-                    {/if}
-                  </div>
+                    </div>
+                  {/if}
+
+                  <!-- Giải thích nếu có -->
+                  {#if q.explanation}
+                    <div class="p-2.5 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-900/40 text-[11px] md:text-xs text-slate-600 dark:text-neutral-300 select-text leading-relaxed">
+                      <span class="font-bold text-amber-600 dark:text-amber-400 inline-flex items-center gap-1">
+                        <Lightbulb weight="fill" class="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                        <span>Giải nghĩa:</span>
+                      </span>
+                      {q.explanation}
+                    </div>
+                  {/if}
                 </div>
               {/each}
             {/if}

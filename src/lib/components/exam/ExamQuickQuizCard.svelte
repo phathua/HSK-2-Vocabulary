@@ -28,6 +28,7 @@
   import { getGroupExampleAnswer } from '#lib/data/examExamples';
   import InteractiveChineseText from './InteractiveChineseText.svelte';
   import InteractivePinyinText from './InteractivePinyinText.svelte';
+  import ExamDialogueTranscript from './ExamDialogueTranscript.svelte';
 
   interface Props {
     question: QuestionItem;
@@ -544,8 +545,12 @@
             </div>
 
             {#if question.listening_script}
-              <div class="text-xs sm:text-sm font-semibold font-serif mt-1.5 pt-1.5 border-t border-slate-200/50 dark:border-neutral-800 leading-snug">
-                {question.listening_script}
+              <div class="mt-2 pt-2 border-t border-slate-200/50 dark:border-neutral-800">
+                <ExamDialogueTranscript
+                  script={question.listening_script}
+                  pinyin={question.listening_pinyin}
+                  viet={question.listening_viet}
+                />
               </div>
             {/if}
 
@@ -757,8 +762,12 @@
               </div>
 
               {#if question.listening_script}
-                <div class="text-xs font-semibold font-serif mt-1 pt-1 border-t border-slate-200/50 dark:border-neutral-800 leading-snug">
-                  {question.listening_script}
+                <div class="mt-1.5 pt-1.5 border-t border-slate-200/50 dark:border-neutral-800">
+                  <ExamDialogueTranscript
+                    script={question.listening_script}
+                    pinyin={question.listening_pinyin}
+                    viet={question.listening_viet}
+                  />
                 </div>
               {/if}
 
@@ -824,8 +833,12 @@
               </div>
 
               {#if question.listening_script}
-                <div class="text-xs sm:text-sm font-semibold font-serif mt-1.5 pt-1.5 border-t border-slate-200/50 dark:border-neutral-800 leading-snug">
-                  {question.listening_script}
+                <div class="mt-2 pt-2 border-t border-slate-200/50 dark:border-neutral-800">
+                  <ExamDialogueTranscript
+                    script={question.listening_script}
+                    pinyin={question.listening_pinyin}
+                    viet={question.listening_viet}
+                  />
                 </div>
               {/if}
 

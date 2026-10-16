@@ -23,7 +23,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Bạn bị sao vậy? Đau ốm?"
     },
     {
       "exam_code": "H21330",
@@ -41,7 +42,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Anh ấy đang tập thể dục."
     },
     {
       "exam_code": "H21330",
@@ -59,7 +61,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Bố uống một tách cà phê mỗi ngày."
     },
     {
       "exam_code": "H21330",
@@ -77,7 +80,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Chúc mừng sinh nhật! Đây là dành cho bạn."
     },
     {
       "exam_code": "H21330",
@@ -95,7 +99,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Đừng chơi điện thoại nữa và đi chơi bóng rổ với tôi đi."
     },
     {
       "exam_code": "H21330",
@@ -113,7 +118,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Đi rửa tay và ăn táo đi."
     },
     {
       "exam_code": "H21330",
@@ -131,7 +137,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Tôi không muốn nghe những gì bạn nói."
     },
     {
       "exam_code": "H21330",
@@ -149,7 +156,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Nhìn này, bàn ghế mới của tôi."
     },
     {
       "exam_code": "H21330",
@@ -167,7 +175,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Tôi không ngờ bên ngoài lại lạnh đến thế."
     },
     {
       "exam_code": "H21330",
@@ -185,7 +194,8 @@ export const examData: ExamDetail = {
       "options": [
         "√ Đúng",
         "× Sai"
-      ]
+      ],
+      "listening_viet": "Để tôi giới thiệu với bạn, đây là vợ tôi."
     },
     {
       "exam_code": "H21330",
@@ -207,7 +217,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Tôi nghĩ điều này có vẻ tốt với bạn.\nNam: Vâng, tôi nghĩ điều này cũng tốt."
     },
     {
       "exam_code": "H21330",
@@ -229,7 +240,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Tôi không muốn cơm, tôi muốn mì trứng.\nNữ: Được rồi, thưa ông, ông có muốn uống gì không?"
     },
     {
       "exam_code": "H21330",
@@ -251,7 +263,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Bạn đang đi đâu?\nNam: Đi đến lớp. tạm biệt!"
     },
     {
       "exam_code": "H21330",
@@ -273,7 +286,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Xin chào!\nNữ: Xin chào! Có điều gì đó không ổn với chiếc xe của tôi. Bạn có thể tìm ai đó đến và xem xét được không?"
     },
     {
       "exam_code": "H21330",
@@ -295,7 +309,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Mệt? Bạn có muốn nghỉ ngơi không?\nNam: Đừng mệt mỏi, hãy nghỉ ngơi sau khi hoàn thành công việc."
     },
     {
       "exam_code": "H21330",
@@ -317,7 +332,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Bạn đang tìm kiếm gì?\nNữ: Một cuốn sách tiếng Trung, lần trước tôi đã thấy nó ở đây."
     },
     {
       "exam_code": "H21330",
@@ -339,7 +355,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Xa hơn một chút về bên phải.\nNam: Điều này có ổn không?"
     },
     {
       "exam_code": "H21330",
@@ -361,7 +378,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Con chó của bạn đẹp quá. Nó bao nhiêu tuổi?\nNữ: Hai tuổi tám tháng."
     },
     {
       "exam_code": "H21330",
@@ -383,7 +401,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nữ: Tôi không hiểu, sao ở đây lại có chín nghìn?\nNam: Bạn thấy đấy, nó giống như thế này."
     },
     {
       "exam_code": "H21330",
@@ -405,7 +424,8 @@ export const examData: ExamDetail = {
         "D",
         "E",
         "F"
-      ]
+      ],
+      "listening_viet": "Nam: Tại sao bạn lại hạnh phúc như vậy?\nNữ: Tôi đã làm rất tốt trong kỳ thi này."
     },
     {
       "exam_code": "H21330",
@@ -424,7 +444,8 @@ export const examData: ExamDetail = {
         "A 游泳 (yóuyǒng)",
         "B 踢足球 (tī zúqiú)",
         "C 买手表 (mǎi shǒubiǎo)"
-      ]
+      ],
+      "listening_viet": "Nữ: Chiều mai chúng ta sẽ đi hát, bạn có đi không?\nNam: Tôi không đi, tôi đồng ý với học sinh đi bơi.\nHỏi: Ngày mai người đàn ông sẽ làm gì?"
     },
     {
       "exam_code": "H21330",
@@ -443,7 +464,8 @@ export const examData: ExamDetail = {
         "A 看不懂 (kànbudǒng)",
         "B 不爱读 (bù ài dú)",
         "C 太忙了 (tài máng le)"
-      ]
+      ],
+      "listening_viet": "Nam: Bạn chưa đọc cuốn sách này à?\nNữ: Vì dạo này có nhiều chuyện nên tôi không có thời gian đọc.\nHỏi: Tại sao người phụ nữ không đọc xong cuốn sách?"
     },
     {
       "exam_code": "H21330",
@@ -462,7 +484,8 @@ export const examData: ExamDetail = {
         "A 很热 (hěn rè)",
         "B 天阴了 (tiān yīn le)",
         "C 天晴了 (tiān qíng le)"
-      ]
+      ],
+      "listening_viet": "Nữ: Tôi sẽ đi mua thịt cừu.\nNam: Trời nhiều mây và có thể mưa. Đừng đi ra ngoài.\nHỏi: Thời tiết bây giờ thế nào?"
     },
     {
       "exam_code": "H21330",
@@ -481,7 +504,8 @@ export const examData: ExamDetail = {
         "A 妈妈 (māma)",
         "B 孩子 (háizi)",
         "C 同学 (tóngxué)"
-      ]
+      ],
+      "listening_viet": "Nam: Tại sao mấy ngày nay tôi không thấy em?\nNữ: Tôi đã đến Bắc Kinh cùng các con tôi hai ngày trước.\nHỏi: Người phụ nữ đó đến Bắc Kinh với ai?"
     },
     {
       "exam_code": "H21330",
@@ -500,7 +524,8 @@ export const examData: ExamDetail = {
         "A 机场 (jīchǎng)",
         "B 汽车站 (qìchēzhàn)",
         "C 火车站 (huǒchēzhàn)"
-      ]
+      ],
+      "listening_viet": "Nữ: Làm thế nào để đến ga xe lửa?\nNam: Bạn có thể nhìn thấy nó khi bạn bước về phía trước, rất gần.\nHỏi: Người phụ nữ muốn đi đâu?"
     },
     {
       "exam_code": "H21330",
@@ -519,7 +544,8 @@ export const examData: ExamDetail = {
         "A 很大 (hěn dà)",
         "B 很好吃 (hěn hǎochī)",
         "C 颜色不好 (yánsè bù hǎo)"
-      ]
+      ],
+      "listening_viet": "Nam: Tiểu Cao, cá cậu nấu ngon quá.\nNữ: Món đó do chồng tôi nấu, anh ấy nấu ăn ngon hơn tôi.\nHỏi: Đàn ông nghĩ gì về cá?"
     },
     {
       "exam_code": "H21330",
@@ -538,7 +564,8 @@ export const examData: ExamDetail = {
         "A 铅笔 (qiānbǐ)",
         "B 报纸 (bàozhǐ)",
         "C 面条儿 (miàntiáor)"
-      ]
+      ],
+      "listening_viet": "Nữ: Xin chào, báo buổi sáng hôm nay còn không?\nNam: Xin lỗi, họ đã bán hết vào buổi trưa.\nHỏi: Người phụ nữ muốn mua gì?"
     },
     {
       "exam_code": "H21330",
@@ -557,7 +584,8 @@ export const examData: ExamDetail = {
         "A 多休息 (duō xiūxi)",
         "B 少喝茶 (shǎo hē chá)",
         "C 多喝牛奶 (duō hē niúnǎi)"
-      ]
+      ],
+      "listening_viet": "Nam: Sáng nay bạn có đến bệnh viện không? Bác sĩ đã nói gì?\nNữ: Anh ấy nói không sao rồi đưa cho tôi một ít thuốc và yêu cầu tôi uống thêm nước và nghỉ ngơi nhiều hơn.\nHỏi: Bác sĩ yêu cầu một người phụ nữ làm gì?"
     },
     {
       "exam_code": "H21330",
@@ -576,7 +604,8 @@ export const examData: ExamDetail = {
         "A 走路 (zǒulù)",
         "B 开车 (kāi chē)",
         "C 坐出租车 (zuò chūzūchē)"
-      ]
+      ],
+      "listening_viet": "Nữ: Trời tối rồi, chúng ta về nhà nhé?\nNam: Được rồi, hãy đi taxi nhé.\nHỏi: Người đàn ông muốn về nhà bằng cách nào?"
     },
     {
       "exam_code": "H21330",
@@ -595,7 +624,8 @@ export const examData: ExamDetail = {
         "A 手机号 (shǒujīhào)",
         "B 有多少人 (yǒu duōshao rén)",
         "C 几点回家 (jǐ diǎn huí jiā)"
-      ]
+      ],
+      "listening_viet": "Nam: Bạn có thể cho tôi biết số điện thoại di động của Li Hong không?\nNữ: Được rồi, đợi một chút, tôi sẽ tìm nó.\nHỏi: Người đàn ông muốn biết điều gì?"
     },
     {
       "exam_code": "H21330",
@@ -614,7 +644,8 @@ export const examData: ExamDetail = {
         "A 星期一 (xīngqīyī)",
         "B 星期六 (xīngqīliù)",
         "C 星期日 (xīngqīrì)"
-      ]
+      ],
+      "listening_viet": "Nam: Tôi nghe nói bạn sắp đi nước ngoài?\nNữ: Vâng, chủ nhật này sẽ khởi hành.\nNam: Mọi thứ đã sẵn sàng chưa?\nNữ: Được rồi, tôi không có nhiều.\nHỏi: Khi nào người phụ nữ sẽ đi nước ngoài?"
     },
     {
       "exam_code": "H21330",
@@ -633,7 +664,8 @@ export const examData: ExamDetail = {
         "A 宾馆 (bīnguǎn)",
         "B 商店 (shāngdiàn)",
         "C 教室 (jiàoshì)"
-      ]
+      ],
+      "listening_viet": "Nữ: Người phục vụ, cửa phòng tôi không thể mở được.\nNam: Bạn ở phòng nào?\nNữ: 301.\nNam: Được rồi, tôi sẽ nhờ người tới xem.\nHỏi: Họ có khả năng ở đâu nhất?"
     },
     {
       "exam_code": "H21330",
@@ -652,7 +684,8 @@ export const examData: ExamDetail = {
         "A 太小了 (tài xiǎo le)",
         "B 很不错 (hěn bùcuò)",
         "C 东西贵 (dōngxi guì)"
-      ]
+      ],
+      "listening_viet": "Nam: Váy của bạn đẹp quá! Bạn mua nó khi nào?\nNữ: Tối qua tôi đã ở cửa hàng cạnh công ty.\nNam: Tôi biết cửa hàng đó và đồ đạc trong cửa hàng đó đều tốt.\nHỏi: Họ nghĩ gì về cửa hàng?"
     },
     {
       "exam_code": "H21330",
@@ -671,7 +704,8 @@ export const examData: ExamDetail = {
         "A 弟弟 (dìdi)",
         "B 女儿 (nǚ'ér)",
         "C 白老师 (Bái lǎoshī)"
-      ]
+      ],
+      "listening_viet": "Nữ: Vào đi, bạn đang tìm ai?\nNam: Xin chào! Thầy Bạch có ở đây không?\nNữ: Anh ấy sẽ kết thúc buổi học trong vài phút nữa. Bạn có thể ngồi đây và đợi anh ấy.\nNam: Được rồi, cảm ơn!\nHỏi: Người đàn ông đang tìm kiếm ai?"
     },
     {
       "exam_code": "H21330",
@@ -690,7 +724,8 @@ export const examData: ExamDetail = {
         "A 跳舞 (tiàowǔ)",
         "B 听歌 (tīng gē)",
         "C 打电话 (dǎ diànhuà)"
-      ]
+      ],
+      "listening_viet": "Nam: Nhìn kìa, cô gái đó nhảy rất đẹp!\nNữ: Bạn đang nói về Li Xi? Cô bắt đầu học nhảy khi còn rất trẻ.\nNam: Cô ấy tên là Lý Hi?\nNữ: Vâng, hy vọng.\nHỏi: Lý Hi đang làm gì vậy?"
     },
     {
       "exam_code": "H21330",

@@ -26,7 +26,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_01.webp",
-      "pinyin": "C â u   h ỏ i   s ố   1"
+      "pinyin": "C â u   h ỏ i   s ố   1",
+      "listening_viet": "Bạn đã nói gì? Tôi không thể nghe thấy nó."
     },
     {
       "exam_code": "H21555C",
@@ -44,7 +45,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_02.webp",
-      "pinyin": "C â u   h ỏ i   s ố   2"
+      "pinyin": "C â u   h ỏ i   s ố   2",
+      "listening_viet": "Người về nhất là số 5."
     },
     {
       "exam_code": "H21555C",
@@ -62,7 +64,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_03.webp",
-      "pinyin": "C â u   h ỏ i   s ố   3"
+      "pinyin": "C â u   h ỏ i   s ố   3",
+      "listening_viet": "Anh ấy vẫn đang ngủ."
     },
     {
       "exam_code": "H21555C",
@@ -80,7 +83,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_04.webp",
-      "pinyin": "C â u   h ỏ i   s ố   4"
+      "pinyin": "C â u   h ỏ i   s ố   4",
+      "listening_viet": "Nhìn xem, con chó con đang chơi với cái gì?"
     },
     {
       "exam_code": "H21555C",
@@ -98,7 +102,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_05.webp",
-      "pinyin": "C â u   h ỏ i   s ố   5"
+      "pinyin": "C â u   h ỏ i   s ố   5",
+      "listening_viet": "Anh ấy đang đặt câu hỏi."
     },
     {
       "exam_code": "H21555C",
@@ -116,7 +121,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_06.webp",
-      "pinyin": "C â u   h ỏ i   s ố   6"
+      "pinyin": "C â u   h ỏ i   s ố   6",
+      "listening_viet": "Anh ấy đang đặt câu hỏi."
     },
     {
       "exam_code": "H21555C",
@@ -134,7 +140,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_07.webp",
-      "pinyin": "C â u   h ỏ i   s ố   7"
+      "pinyin": "C â u   h ỏ i   s ố   7",
+      "listening_viet": "Điều gì khiến bạn hạnh phúc đến vậy? Nói cho tôi nhanh đi."
     },
     {
       "exam_code": "H21555C",
@@ -152,7 +159,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_08.webp",
-      "pinyin": "C â u   h ỏ i   s ố   8"
+      "pinyin": "C â u   h ỏ i   s ố   8",
+      "listening_viet": "Anh ấy đã mua năm quả trứng."
     },
     {
       "exam_code": "H21555C",
@@ -170,7 +178,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_09.webp",
-      "pinyin": "C â u   h ỏ i   s ố   9"
+      "pinyin": "C â u   h ỏ i   s ố   9",
+      "listening_viet": "Đừng nói nữa, phim sắp bắt đầu rồi."
     },
     {
       "exam_code": "H21555C",
@@ -188,7 +197,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_10.webp",
-      "pinyin": "C â u   h ỏ i   s ố   1 0"
+      "pinyin": "C â u   h ỏ i   s ố   1 0",
+      "listening_viet": "Học cách nhảy chậm."
     },
     {
       "exam_code": "H21555C",
@@ -209,7 +219,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 1"
+      "pinyin": "C â u   h ỏ i   s ố   1 1",
+      "listening_viet": "Nữ: Trời sẽ không mưa nữa phải không?"
     },
     {
       "exam_code": "H21555C",
@@ -230,7 +241,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 2"
+      "pinyin": "C â u   h ỏ i   s ố   1 2",
+      "listening_viet": "Nam: Bạn có thể viết từ \"help\" thay cho \"help\" được không?"
     },
     {
       "exam_code": "H21555C",
@@ -251,7 +263,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 3"
+      "pinyin": "C â u   h ỏ i   s ố   1 3",
+      "listening_viet": "Nữ: Bạn bị sao vậy? Một người nghĩ gì khi ngồi một mình?"
     },
     {
       "exam_code": "H21555C",
@@ -272,7 +285,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 4"
+      "pinyin": "C â u   h ỏ i   s ố   1 4",
+      "listening_viet": "Nam: Đến xem, bây giờ thế nào?"
     },
     {
       "exam_code": "H21555C",
@@ -293,7 +307,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 5"
+      "pinyin": "C â u   h ỏ i   s ố   1 5",
+      "listening_viet": "Nữ: Sao bạn mua nhiều rau thế?"
     },
     {
       "exam_code": "H21555C",
@@ -314,7 +329,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 6"
+      "pinyin": "C â u   h ỏ i   s ố   1 6",
+      "listening_viet": "Nam: Đây là phòng của bạn, còn bạn thì sao?"
     },
     {
       "exam_code": "H21555C",
@@ -335,7 +351,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 7"
+      "pinyin": "C â u   h ỏ i   s ố   1 7",
+      "listening_viet": "Nữ: Bạn nghĩ gì về điều này?"
     },
     {
       "exam_code": "H21555C",
@@ -356,7 +373,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 8"
+      "pinyin": "C â u   h ỏ i   s ố   1 8",
+      "listening_viet": "Nam: Bây giờ bạn có ra sân bay không?"
     },
     {
       "exam_code": "H21555C",
@@ -377,7 +395,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 9"
+      "pinyin": "C â u   h ỏ i   s ố   1 9",
+      "listening_viet": "Nữ: Chúc mừng sinh nhật, hy vọng bạn thích nó."
     },
     {
       "exam_code": "H21555C",
@@ -398,7 +417,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 0"
+      "pinyin": "C â u   h ỏ i   s ố   2 0",
+      "listening_viet": "Nam: Tôi nói \"một, hai, ba\" và chúng ta cùng cười nhé?"
     },
     {
       "exam_code": "H21555C",
@@ -416,7 +436,8 @@ export const examData: ExamDetail = {
         "B 今年8月 (jīnnián bā yuè)",
         "C 上个星期 (shàng ge xīngqī)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 1"
+      "pinyin": "C â u   h ỏ i   s ố   2 1",
+      "listening_viet": "Nữ: Bạn đã tới Bắc Kinh chưa?"
     },
     {
       "exam_code": "H21555C",
@@ -434,7 +455,8 @@ export const examData: ExamDetail = {
         "B 水 (shuǐ)",
         "C 牛奶 (niúnǎi)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 2"
+      "pinyin": "C â u   h ỏ i   s ố   2 2",
+      "listening_viet": "Nam: Tại sao tôi không thấy bạn vào bữa trưa?"
     },
     {
       "exam_code": "H21555C",
@@ -452,7 +474,8 @@ export const examData: ExamDetail = {
         "B 弟弟 (dìdi)",
         "C 姐姐 (jiějie)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 3"
+      "pinyin": "C â u   h ỏ i   s ố   2 3",
+      "listening_viet": "Nữ: Tại sao Tiểu Minh không đến lớp?"
     },
     {
       "exam_code": "H21555C",
@@ -470,7 +493,8 @@ export const examData: ExamDetail = {
         "B 走路 (zǒulù)",
         "C 坐飞机 (zuò fēijī)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 4"
+      "pinyin": "C â u   h ỏ i   s ố   2 4",
+      "listening_viet": "Nam: Vào đi, bạn đang tìm ai?"
     },
     {
       "exam_code": "H21555C",
@@ -488,7 +512,8 @@ export const examData: ExamDetail = {
         "B 洗澡 (xǐzǎo)",
         "C 看电影 (kàn diànyǐng)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 5"
+      "pinyin": "C â u   h ỏ i   s ố   2 5",
+      "listening_viet": "Nữ: Tiểu Trương, đây là báo hôm nay phải không?"
     },
     {
       "exam_code": "H21555C",
@@ -506,7 +531,8 @@ export const examData: ExamDetail = {
         "B 打球 (dǎ qiú)",
         "C 去旅游 (qù lǚyóu)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 6"
+      "pinyin": "C â u   h ỏ i   s ố   2 6",
+      "listening_viet": "Nam: Buổi chiều em gái bạn sẽ đến lúc mấy giờ?"
     },
     {
       "exam_code": "H21555C",
@@ -524,7 +550,8 @@ export const examData: ExamDetail = {
         "B 黑色 (hēisè)",
         "C 红色的 (hóngsè de)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 7"
+      "pinyin": "C â u   h ỏ i   s ố   2 7",
+      "listening_viet": "Nữ: Tôi đã mua một số trái cây trên đường đi. Bạn sẽ rửa bao nhiêu?"
     },
     {
       "exam_code": "H21555C",
@@ -542,7 +569,8 @@ export const examData: ExamDetail = {
         "B 桌子上 (zhuōzi shàng)",
         "C 椅子上 (yǐzi shàng)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 8"
+      "pinyin": "C â u   h ỏ i   s ố   2 8",
+      "listening_viet": "Nam: Cuốn sách trên bàn đó có phải là của bạn không?"
     },
     {
       "exam_code": "H21555C",
@@ -560,7 +588,8 @@ export const examData: ExamDetail = {
         "B 吃药 (chī yào)",
         "C 喝水 (hē shuǐ)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 9"
+      "pinyin": "C â u   h ỏ i   s ố   2 9",
+      "listening_viet": "Nữ: Tôi nghe nói con trai anh làm việc ở bệnh viện?"
     },
     {
       "exam_code": "H21555C",
@@ -578,7 +607,8 @@ export const examData: ExamDetail = {
         "B 生病了 (shēngbìng le)",
         "C 公司有事 (gōngsī yǒu shì)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 0"
+      "pinyin": "C â u   h ỏ i   s ố   3 0",
+      "listening_viet": "Nam: Con bạn có thể nói được không?"
     },
     {
       "exam_code": "H21555C",
@@ -596,7 +626,8 @@ export const examData: ExamDetail = {
         "B 时间 (shíjiān)",
         "C 房间号 (fángjiānhào)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 1"
+      "pinyin": "C â u   h ỏ i   s ố   3 1",
+      "listening_viet": "Nam: Xin lỗi, tôi đến muộn."
     },
     {
       "exam_code": "H21555C",
@@ -614,7 +645,8 @@ export const examData: ExamDetail = {
         "B 没水了 (méi shuǐ le)",
         "C 来晚了 (láiwǎn le)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 2"
+      "pinyin": "C â u   h ỏ i   s ố   3 2",
+      "listening_viet": "Nữ: Tiểu Lý, em có sách tiếng Trung của anh không?"
     },
     {
       "exam_code": "H21555C",
@@ -632,7 +664,8 @@ export const examData: ExamDetail = {
         "B 铅笔 (qiānbǐ)",
         "C 汉语书 (Hànyǔ shū)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 3"
+      "pinyin": "C â u   h ỏ i   s ố   3 3",
+      "listening_viet": "Nam: Xin lỗi, có vé nào cho buổi sáng nay không?"
     },
     {
       "exam_code": "H21555C",
@@ -650,7 +683,8 @@ export const examData: ExamDetail = {
         "B 25号 (èrshíwǔ hào)",
         "C 2号 (èr hào)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 4"
+      "pinyin": "C â u   h ỏ i   s ố   3 4",
+      "listening_viet": "Nữ: bạn đã ở đâu thế?"
     },
     {
       "exam_code": "H21555C",
@@ -668,7 +702,8 @@ export const examData: ExamDetail = {
         "B 要去上课 (yào qù shàngkè)",
         "C 要去唱歌 (yào qù chànggē)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 5"
+      "pinyin": "C â u   h ỏ i   s ố   3 5",
+      "listening_viet": "Nam: Ngày mai bạn có đi không?"
     },
     {
       "exam_code": "H21555C",

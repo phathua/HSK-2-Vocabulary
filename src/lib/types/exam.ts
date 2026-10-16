@@ -16,6 +16,7 @@ export interface QuestionItem {
   answer?: string; // '√', '×', 'A', 'B', 'C', 'D', 'E', 'F'
   listening_script?: string | null;
   listening_pinyin?: string | null;
+  listening_viet?: string | null;
   explanation?: string | null;
   explanation_pinyin?: string | null;
   text?: string;

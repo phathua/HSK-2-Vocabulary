@@ -16,6 +16,7 @@
   import { getGroupExampleAnswer } from '#lib/data/examExamples';
   import InteractiveChineseText from './InteractiveChineseText.svelte';
   import InteractivePinyinText from './InteractivePinyinText.svelte';
+  import ExamDialogueTranscript from './ExamDialogueTranscript.svelte';
 
   interface Props {
     question: QuestionItem;
@@ -722,13 +723,15 @@
 
       {#if question.listening_script}
         <div class="mt-2.5 pt-2.5 border-t border-current/15 text-slate-700 dark:text-neutral-300">
-          <span class="font-bold flex items-center gap-1.5 mb-1">
+          <span class="font-bold flex items-center gap-1.5 mb-2">
             <Headphones weight="fill" class="w-4 h-4 text-sky-600 dark:text-sky-400 shrink-0" />
             <span>Lời thoại nghe (Transcript):</span>
           </span>
-          <p class="font-mono text-[11px] md:text-xs leading-relaxed select-text bg-white/60 dark:bg-black/20 p-2.5 rounded-xl border border-current/10">
-            {question.listening_script}
-          </p>
+          <ExamDialogueTranscript
+            script={question.listening_script}
+            pinyin={question.listening_pinyin}
+            viet={question.listening_viet}
+          />
         </div>
       {/if}
 

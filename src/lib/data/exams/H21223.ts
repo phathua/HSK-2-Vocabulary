@@ -26,7 +26,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_01.webp",
-      "pinyin": "C â u   h ỏ i   s ố   1"
+      "pinyin": "C â u   h ỏ i   s ố   1",
+      "listening_viet": "Món ăn hôm nay rất ngon."
     },
     {
       "exam_code": "H21223",
@@ -44,7 +45,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_02.webp",
-      "pinyin": "C â u   h ỏ i   s ố   2"
+      "pinyin": "C â u   h ỏ i   s ố   2",
+      "listening_viet": "Hãy ngừng nói chuyện và bắt đầu bài kiểm tra ngay bây giờ."
     },
     {
       "exam_code": "H21223",
@@ -62,7 +64,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_03.webp",
-      "pinyin": "C â u   h ỏ i   s ố   3"
+      "pinyin": "C â u   h ỏ i   s ố   3",
+      "listening_viet": "Xin chào hân hạnh được gặp bạn!"
     },
     {
       "exam_code": "H21223",
@@ -80,7 +83,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_04.webp",
-      "pinyin": "C â u   h ỏ i   s ố   4"
+      "pinyin": "C â u   h ỏ i   s ố   4",
+      "listening_viet": "Điều này có đúng không? Không thể nào?"
     },
     {
       "exam_code": "H21223",
@@ -98,7 +102,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_05.webp",
-      "pinyin": "C â u   h ỏ i   s ố   5"
+      "pinyin": "C â u   h ỏ i   s ố   5",
+      "listening_viet": "Tôi đã thấy em họ tôi nhảy múa."
     },
     {
       "exam_code": "H21223",
@@ -116,7 +121,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_06.webp",
-      "pinyin": "C â u   h ỏ i   s ố   6"
+      "pinyin": "C â u   h ỏ i   s ố   6",
+      "listening_viet": "Hôm nay là ngày thứ ba mươi mốt."
     },
     {
       "exam_code": "H21223",
@@ -134,7 +140,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_07.webp",
-      "pinyin": "C â u   h ỏ i   s ố   7"
+      "pinyin": "C â u   h ỏ i   s ố   7",
+      "listening_viet": "Chiều hôm qua anh ấy đã mua một cái bàn."
     },
     {
       "exam_code": "H21223",
@@ -152,7 +159,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_08.webp",
-      "pinyin": "C â u   h ỏ i   s ố   8"
+      "pinyin": "C â u   h ỏ i   s ố   8",
+      "listening_viet": "Chiếc điện thoại này được tặng cho bạn, tôi hy vọng bạn thích nó."
     },
     {
       "exam_code": "H21223",
@@ -170,7 +178,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_09.webp",
-      "pinyin": "C â u   h ỏ i   s ố   9"
+      "pinyin": "C â u   h ỏ i   s ố   9",
+      "listening_viet": "Bên ngoài trời lạnh lắm, hãy mặc quần áo trước khi ra ngoài."
     },
     {
       "exam_code": "H21223",
@@ -188,7 +197,8 @@ export const examData: ExamDetail = {
         "× Sai"
       ],
       "image": "images/q_10.webp",
-      "pinyin": "C â u   h ỏ i   s ố   1 0"
+      "pinyin": "C â u   h ỏ i   s ố   1 0",
+      "listening_viet": "Mắt bạn bị sao vậy?"
     },
     {
       "exam_code": "H21223",
@@ -209,7 +219,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 1"
+      "pinyin": "C â u   h ỏ i   s ố   1 1",
+      "listening_viet": "Nữ: Quay lại đi, tạm biệt.\nNam: Tạm biệt và chào mừng quay trở lại lần sau."
     },
     {
       "exam_code": "H21223",
@@ -230,7 +241,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 2"
+      "pinyin": "C â u   h ỏ i   s ố   1 2",
+      "listening_viet": "Nam: Con chó con chưa ăn à?\nNữ: Vâng, nó có thể bị bệnh."
     },
     {
       "exam_code": "H21223",
@@ -251,7 +263,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 3"
+      "pinyin": "C â u   h ỏ i   s ố   1 3",
+      "listening_viet": "Nữ: Bạn nghĩ gì về điều này?\nNam: Không sao đâu, nó hơi to phải không?"
     },
     {
       "exam_code": "H21223",
@@ -272,7 +285,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 4"
+      "pinyin": "C â u   h ỏ i   s ố   1 4",
+      "listening_viet": "Nam: Em gái bạn đang làm gì?\nNữ: Cô ấy đang đọc ở đó. Tôi sẽ gọi cho cô ấy."
     },
     {
       "exam_code": "H21223",
@@ -293,7 +307,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 5"
+      "pinyin": "C â u   h ỏ i   s ố   1 5",
+      "listening_viet": "Nữ: Bạn đã mua trứng chưa?\nNam: Đã mua, trên bàn."
     },
     {
       "exam_code": "H21223",
@@ -314,7 +329,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 6"
+      "pinyin": "C â u   h ỏ i   s ố   1 6",
+      "listening_viet": "Nam: Lời giới thiệu của bạn rất hay và rất hữu ích cho chúng tôi.\nNữ: Thật sự? Tốt đấy."
     },
     {
       "exam_code": "H21223",
@@ -335,7 +351,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 7"
+      "pinyin": "C â u   h ỏ i   s ố   1 7",
+      "listening_viet": "Nữ: Bạn bị sao vậy? Một người nghĩ gì khi ngồi một mình?\nNam: Không sao đâu, tôi đang nghĩ về điều gì đó về công ty."
     },
     {
       "exam_code": "H21223",
@@ -356,7 +373,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 8"
+      "pinyin": "C â u   h ỏ i   s ố   1 8",
+      "listening_viet": "Nam: Dưa hấu giá bao nhiêu một cân?\nNữ: Một đô la và hai đô la, rất rẻ."
     },
     {
       "exam_code": "H21223",
@@ -377,7 +395,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   1 9"
+      "pinyin": "C â u   h ỏ i   s ố   1 9",
+      "listening_viet": "Nữ: Rẽ phải và đi theo hướng này.\nNam: Tôi biết, nhưng ở đây bạn không được phép lái xe về phía bên phải."
     },
     {
       "exam_code": "H21223",
@@ -398,7 +417,8 @@ export const examData: ExamDetail = {
         "E",
         "F"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 0"
+      "pinyin": "C â u   h ỏ i   s ố   2 0",
+      "listening_viet": "Nam: Đây là tất cả đồ đạc của bạn à?\nNữ: Vâng, có hai chiếc ghế ngoài cửa."
     },
     {
       "exam_code": "H21223",
@@ -416,7 +436,8 @@ export const examData: ExamDetail = {
         "B 明天下午 (míngtiān xiàwǔ)",
         "C 后天下午 (hòutiān xiàwǔ)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 1"
+      "pinyin": "C â u   h ỏ i   s ố   2 1",
+      "listening_viet": "Nữ: Bạn sắp đến Trung Quốc phải không? Chuyến bay vào ngày nào?\nNam: Đó là buổi chiều nay.\nHỏi: Khi nào người đàn ông sẽ đi đến Trung Quốc?"
     },
     {
       "exam_code": "H21223",
@@ -434,7 +455,8 @@ export const examData: ExamDetail = {
         "B 医生 (yīshēng)",
         "C 朋友 (péngyou)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 2"
+      "pinyin": "C â u   h ỏ i   s ố   2 2",
+      "listening_viet": "Nam: Thuyền sẽ khởi hành trong mười phút nữa. Tại sao bạn của bạn vẫn chưa đến?\nNữ: Tôi cũng không biết, tôi sẽ gọi cho anh ấy và hỏi.\nHỏi: Người phụ nữ nên gọi ai?"
     },
     {
       "exam_code": "H21223",
@@ -452,7 +474,8 @@ export const examData: ExamDetail = {
         "B 牛奶 (niúnǎi)",
         "C 咖啡 (kāfēi)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 3"
+      "pinyin": "C â u   h ỏ i   s ố   2 3",
+      "listening_viet": "Nữ: Bạn có thích uống cà phê không?\nNam: Không hẳn, tôi thích trà.\nHỏi: Đàn ông thích uống gì?"
     },
     {
       "exam_code": "H21223",
@@ -470,7 +493,8 @@ export const examData: ExamDetail = {
         "B 学校 (xuéxiào)",
         "C 商店 (shāngdiàn)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 4"
+      "pinyin": "C â u   h ỏ i   s ố   2 4",
+      "listening_viet": "Nam: Thầy Bai, thầy đến trường này được bao nhiêu năm rồi?\nNữ: Tôi đến trường này năm hai mươi bốn tuổi, tính đến nay đã hơn ba mươi năm.\nHỏi: Phụ nữ làm việc ở đâu?"
     },
     {
       "exam_code": "H21223",
@@ -488,7 +512,8 @@ export const examData: ExamDetail = {
         "B 上个月 (shàng ge yuè)",
         "C 去年 (qùnián)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 5"
+      "pinyin": "C â u   h ỏ i   s ố   2 5",
+      "listening_viet": "Nữ: Bạn đã tìm thấy đồng hồ của mình chưa?\nNam: Không, tôi đã mua cái mới này ngày hôm qua.\nHỏi: Bạn mua chiếc đồng hồ mới đó khi nào?"
     },
     {
       "exam_code": "H21223",
@@ -506,7 +531,8 @@ export const examData: ExamDetail = {
         "B 很好笑 (hěn hǎoxiào)",
         "C 很好听 (hěn hǎotīng)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 6"
+      "pinyin": "C â u   h ỏ i   s ố   2 6",
+      "listening_viet": "Nam: Có đúng không? Điều đó thật thú vị.\nNữ: Đúng đấy, tôi nghĩ cũng buồn cười.\nHỏi: Họ nghĩ gì?"
     },
     {
       "exam_code": "H21223",
@@ -524,7 +550,8 @@ export const examData: ExamDetail = {
         "B 天阴了 (tiān yīn le)",
         "C 天气太热 (tiānqì tài rè)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 7"
+      "pinyin": "C â u   h ỏ i   s ố   2 7",
+      "listening_viet": "Nữ: Tại sao bạn lại quay lại? Không đi chơi bóng đá à?\nNam: Thời tiết quá nóng nên mọi người đã về.\nHỏi: Tại sao người đàn ông lại quay lại?"
     },
     {
       "exam_code": "H21223",
@@ -542,7 +569,8 @@ export const examData: ExamDetail = {
         "B 飞机上 (fēijī shang)",
         "C 出租车上 (chūzūchē shang)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 8"
+      "pinyin": "C â u   h ỏ i   s ố   2 8",
+      "listening_viet": "Nam: Bạn đã ở đâu thế?\nNữ: Tôi đang ở trên taxi, tôi sẽ đến đó trong 5 phút nữa.\nHỏi: Người phụ nữ bây giờ ở đâu?"
     },
     {
       "exam_code": "H21223",
@@ -560,7 +588,8 @@ export const examData: ExamDetail = {
         "B 桌子 (zhuōzi)",
         "C 自行车 (zìxíngchē)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   2 9"
+      "pinyin": "C â u   h ỏ i   s ố   2 9",
+      "listening_viet": "Nữ: Bố ơi, chiếc xe đạp này thế nào?\nNam: Đẹp quá, bạn có thích không?\nHỏi: Họ đang nhìn cái gì vậy?"
     },
     {
       "exam_code": "H21223",
@@ -578,7 +607,8 @@ export const examData: ExamDetail = {
         "B 羊肉 (yángròu)",
         "C 米饭 (mǐfàn)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 0"
+      "pinyin": "C â u   h ỏ i   s ố   3 0",
+      "listening_viet": "Nam: Bạn đã uống thuốc chưa?\nNữ: Chưa, tôi sẽ ăn nó một giờ sau khi ăn xong.\nHỏi: Đàn ông mời phụ nữ ăn gì?"
     },
     {
       "exam_code": "H21223",
@@ -596,7 +626,8 @@ export const examData: ExamDetail = {
         "B 下雪了 (xià xuě le)",
         "C 天晴了 (tiān qíng le)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 1"
+      "pinyin": "C â u   h ỏ i   s ố   3 1",
+      "listening_viet": "Nam: Trời nắng quá, chúng ta ra ngoài đi dạo nhé.\nNữ: Tôi muốn xem TV ở nhà.\nNam: Hãy quay lại và xem lại?\nNữ: Được rồi, đợi tôi và tôi sẽ mặc quần áo vào.\nHỏi: Thời tiết bên ngoài thế nào?"
     },
     {
       "exam_code": "H21223",
@@ -614,7 +645,8 @@ export const examData: ExamDetail = {
         "B 饭店里 (fàndiàn li)",
         "C 妹妹家 (mèimei jiā)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 2"
+      "pinyin": "C â u   h ỏ i   s ố   3 2",
+      "listening_viet": "Nữ: Chúng ta đã đặt hàng bao nhiêu người?\nNam: Để tôi xem, bây giờ có bảy.\nNữ: Được rồi, chỉ một con cá nữa thôi, cảm ơn bạn.\nNam: Không có gì.\nHỏi: Họ có khả năng ở đâu nhất?"
     },
     {
       "exam_code": "H21223",
@@ -632,7 +664,8 @@ export const examData: ExamDetail = {
         "B 服务员 (fúwùyuán)",
         "C 汉语老师 (Hànyǔ lǎoshī)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 3"
+      "pinyin": "C â u   h ỏ i   s ố   3 3",
+      "listening_viet": "Nam: Bạn nghĩ gì về chiếc đồng hồ đó? Liệu anh trai tôi có thích nó không?\nNữ: Rất đẹp, nhưng quá đắt.\nNam: Hai trăm tệ, không đắt đâu.\nNữ: Hãy nhìn lại, đó là hai nghìn và bạn đã bỏ lỡ một số không.\nHỏi: Người đàn ông muốn mua đồng hồ cho ai?"
     },
     {
       "exam_code": "H21223",
@@ -650,7 +683,8 @@ export const examData: ExamDetail = {
         "B 起床 (qǐchuáng)",
         "C 打篮球 (dǎ lánqiú)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 4"
+      "pinyin": "C â u   h ỏ i   s ố   3 4",
+      "listening_viet": "Nữ: Đã tám giờ rồi, sao bạn vẫn chưa dậy?\nNam: Hãy để tôi ngủ thêm hai mươi phút nữa.\nNữ: Hai mươi giờ? Bạn sẽ không đi làm à?\nNam: Hôm nay là thứ bảy.\nHỏi: Người phụ nữ muốn người đàn ông làm gì?"
     },
     {
       "exam_code": "H21223",
@@ -668,7 +702,8 @@ export const examData: ExamDetail = {
         "B 要去上课 (yào qù shàngkè)",
         "C 要去唱歌 (yào qù chànggē)"
       ],
-      "pinyin": "C â u   h ỏ i   s ố   3 5"
+      "pinyin": "C â u   h ỏ i   s ố   3 5",
+      "listening_viet": "Nam: Ngày mai bạn có đi không?\nNữ: Không, sáng mai tôi có lớp.\nNam: Ngày mai là chủ nhật, tại sao lại có lớp học?\nNữ: Đó là học lái xe.\nHỏi: Tại sao ngày mai người phụ nữ không thể đi?"
     },
     {
       "exam_code": "H21223",
