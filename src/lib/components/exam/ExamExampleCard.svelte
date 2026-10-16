@@ -1,30 +1,17 @@
 <script lang="ts">
   import Lightbulb from 'phosphor-svelte/lib/Lightbulb';
   import CheckCircle from 'phosphor-svelte/lib/CheckCircle';
-  import MagnifyingGlassPlus from 'phosphor-svelte/lib/MagnifyingGlassPlus';
-  import X from 'phosphor-svelte/lib/X';
   import type { ExamExampleDefinition } from '#lib/data/examExamples';
-  import { getExamImageUrl } from '#lib/utils/examAssets';
 
   interface Props {
     example: ExamExampleDefinition;
     examCode: string;
-    boardImage?: string | null;
   }
 
-  let { example, examCode, boardImage = null }: Props = $props();
+  let { example, examCode }: Props = $props();
 
   const correctAnswer = $derived(example.getAnswer(examCode));
-  let isImageZoomed = $state(false);
-
-  function handleKeydown(e: KeyboardEvent) {
-    if (e.key === 'Escape' && isImageZoomed) {
-      isImageZoomed = false;
-    }
-  }
 </script>
-
-<svelte:window onkeydown={handleKeydown} />
 
 <div
   class="bg-amber-50/40 dark:bg-[#1E1E1E] border-2 border-dashed border-amber-300/80 dark:border-amber-700/60 rounded-3xl p-4 sm:p-5 shadow-xs mb-4 select-none relative overflow-hidden"
@@ -56,35 +43,7 @@
     {example.instruction}
   </p>
 
-  <!-- Bảng tranh A - F nếu phần thi này có tranh bảng -->
-  {#if boardImage}
-    <div class="my-3 max-w-xl rounded-2xl overflow-hidden border border-amber-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xs">
-      <div class="px-3 py-1.5 bg-amber-100/60 dark:bg-neutral-800 text-[11px] font-bold text-amber-900 dark:text-amber-300 flex items-center justify-between border-b border-amber-200 dark:border-neutral-700">
-        <span>Bảng tranh lựa chọn (A – F):</span>
-        <button
-          type="button"
-          onclick={() => (isImageZoomed = true)}
-          class="flex items-center gap-1 text-[10px] text-amber-700 dark:text-amber-400 hover:underline cursor-pointer"
-        >
-          <MagnifyingGlassPlus weight="bold" class="w-3.5 h-3.5" />
-          <span>Phóng to</span>
-        </button>
-      </div>
-      <button
-        type="button"
-        onclick={() => (isImageZoomed = true)}
-        class="w-full text-left cursor-pointer p-1.5 block bg-transparent border-0"
-        aria-label="Phóng to bảng tranh"
-      >
-        <img
-          src={getExamImageUrl(examCode, boardImage)}
-          alt="Bảng tranh câu ví dụ"
-          class="w-full h-auto max-h-72 object-contain rounded-xl"
-          loading="lazy"
-        />
-      </button>
-    </div>
-  {/if}
+
 
   <!-- Nội dung câu mẫu -->
   <div class="p-3 sm:p-4 rounded-2xl bg-white/80 dark:bg-neutral-900/80 border border-amber-200/80 dark:border-neutral-800 space-y-3 mb-3.5">
@@ -210,39 +169,3 @@
     <span>{example.explanation}</span>
   </div>
 </div>
-
-<!-- Modal Phóng To Bảng Tranh (nếu có) -->
-{#if isImageZoomed && boardImage}
-  <div class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-150">
-    <button
-      type="button"
-      class="fixed inset-0 bg-black/80 backdrop-blur-xs cursor-default w-full h-full border-none"
-      onclick={() => (isImageZoomed = false)}
-      aria-label="Đóng bảng tranh"
-    ></button>
-    <div
-      class="relative z-10 max-w-4xl max-h-[90vh] bg-white dark:bg-[#1B1B1B] rounded-3xl p-3 sm:p-4 shadow-2xl overflow-hidden flex flex-col"
-    >
-      <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-200 dark:border-neutral-800">
-        <h3 class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
-          Bảng tranh câu ví dụ ({examCode})
-        </h3>
-        <button
-          type="button"
-          onclick={() => (isImageZoomed = false)}
-          class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 text-slate-600 dark:text-neutral-300 flex items-center justify-center cursor-pointer"
-          aria-label="Đóng bảng tranh"
-        >
-          <X weight="bold" class="w-4 h-4" />
-        </button>
-      </div>
-      <div class="flex-1 overflow-auto flex items-center justify-center">
-        <img
-          src={getExamImageUrl(examCode, boardImage)}
-          alt="Bảng tranh câu ví dụ phóng to"
-          class="max-w-full max-h-[80vh] object-contain rounded-xl"
-        />
-      </div>
-    </div>
-  </div>
-{/if}

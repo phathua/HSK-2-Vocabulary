@@ -500,8 +500,7 @@
               {#if mode === 'exam' && EXAM_EXAMPLES[q.question_no]}
                 <ExamExampleCard
                   example={EXAM_EXAMPLES[q.question_no]}
-                  examCode={exam?.code || ''}
-                  boardImage={q.question_no === 11 ? q.board_image : null}
+                  examCode={exam?.exam_code || ''}
                 />
               {/if}
 
@@ -514,7 +513,7 @@
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
                 isExamSubmitted={isSubmitted}
-                showBoardImage={q.question_no === 11 ? false : q.question_no === 16}
+                showBoardImage={q.question_no === 11 || q.question_no === 16}
                 onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
                 onToggleFlag={() => handleToggleFlag(q.question_no)}
                 onCheckPractice={() => handleCheckPractice(q.question_no)}
@@ -537,8 +536,7 @@
               {#if mode === 'exam' && EXAM_EXAMPLES[q.question_no]}
                 <ExamExampleCard
                   example={EXAM_EXAMPLES[q.question_no]}
-                  examCode={exam?.code || ''}
-                  boardImage={q.question_no === 36 ? q.board_image : null}
+                  examCode={exam?.exam_code || ''}
                 />
               {/if}
 
@@ -551,7 +549,7 @@
                 {mode}
                 isCheckedInPractice={checkedPractice[q.question_no]}
                 isExamSubmitted={isSubmitted}
-                showBoardImage={false}
+                showBoardImage={q.question_no === 36}
                 onSelectAnswer={(val) => handleSelectAnswer(q.question_no, val)}
                 onToggleFlag={() => handleToggleFlag(q.question_no)}
                 onCheckPractice={() => handleCheckPractice(q.question_no)}
