@@ -6,7 +6,7 @@
   import Trash from 'phosphor-svelte/lib/Trash';
   import X from 'phosphor-svelte/lib/X';
   import BookOpen from 'phosphor-svelte/lib/BookOpen';
-  import Plus from 'phosphor-svelte/lib/Plus';
+  import FloppyDisk from 'phosphor-svelte/lib/FloppyDisk';
 
   function formatDateTime(iso: string): string {
     try {
@@ -54,40 +54,42 @@
       onclick={(e) => e.stopPropagation()}
     >
       <!-- Header -->
-      <div class="flex items-center justify-between mb-4 shrink-0">
-        <div class="flex items-center gap-2.5">
+      <div class="flex items-start sm:items-center justify-between gap-3 mb-4 shrink-0">
+        <div class="flex items-center gap-2.5 min-w-0 flex-1">
           <div class="w-10 h-10 rounded-2xl bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800/50 flex items-center justify-center shrink-0">
             <ClockCounterClockwise weight="bold" class="w-5 h-5" />
           </div>
-          <div>
-            <h2 class="text-base font-black text-slate-900 dark:text-[#E3E3E3]">
+          <div class="min-w-0 flex-1">
+            <h2 class="text-base font-black text-slate-900 dark:text-[#E3E3E3] truncate">
               Lịch sử tiến độ đã lưu
             </h2>
-            <p class="text-xs font-bold text-slate-500 dark:text-[#8E918F]">
+            <p class="text-xs font-bold text-slate-500 dark:text-[#8E918F] truncate">
               Chọn phiên để làm tiếp từ chỗ đang dở ({savedSessionState.records.length} phiên)
             </p>
           </div>
         </div>
 
-        <div class="flex items-center gap-1.5">
+        <div class="flex items-center gap-1.5 shrink-0">
           <button
             type="button"
             onclick={() => {
               savedSessionState.closeListModal();
               savedSessionState.openSaveModal();
             }}
-            class="h-8 px-2.5 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/50 text-blue-600 dark:text-blue-400 font-bold text-xs flex items-center gap-1 transition-colors cursor-pointer"
+            class="h-8 px-2.5 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/50 text-blue-600 dark:text-blue-400 font-bold text-xs flex items-center gap-1 transition-colors cursor-pointer shrink-0 whitespace-nowrap active:scale-95"
             title="Lưu tiến độ phiên hiện tại"
           >
-            <Plus weight="bold" class="w-3.5 h-3.5" />
-            <span>Lưu phiên này</span>
+            <FloppyDisk weight="regular" class="w-3.5 h-3.5 shrink-0" />
+            <span class="hidden sm:inline">Lưu phiên này</span>
+            <span class="sm:hidden">Lưu</span>
           </button>
 
           <button
             type="button"
             onclick={() => savedSessionState.closeListModal()}
-            class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-[#282A2C] text-slate-500 hover:text-slate-900 dark:text-[#8E918F] dark:hover:text-[#E3E3E3] flex items-center justify-center transition-colors cursor-pointer"
+            class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-[#282A2C] text-slate-500 hover:text-slate-900 dark:text-[#8E918F] dark:hover:text-[#E3E3E3] flex items-center justify-center transition-colors cursor-pointer shrink-0 active:scale-95"
             title="Đóng"
+            aria-label="Đóng modal"
           >
             <X weight="bold" class="w-4 h-4" />
           </button>
@@ -102,7 +104,7 @@
               <BookOpen weight="duotone" class="w-6 h-6" />
             </div>
             <p class="text-xs font-bold text-slate-500 dark:text-[#8E918F] max-w-xs">
-              Chưa có phiên học nào được lưu. Bấm nút <strong>Lưu</strong> ở thanh trên cùng để lưu lại bài học đang làm dở nhé!
+              Chưa có phiên học nào được lưu. Bấm nút <strong>Lưu</strong> (biểu tượng đĩa mềm) bên cạnh thanh tiến độ để lưu lại bài học đang làm dở nhé!
             </p>
           </div>
         {:else}
@@ -116,15 +118,15 @@
             >
               <!-- Info -->
               <div class="min-w-0 flex-1">
-                <div class="flex items-center gap-2 mb-1 flex-wrap">
-                  <span class="font-black text-sm text-slate-900 dark:text-[#E3E3E3] truncate">
+                <div class="flex items-center gap-2 mb-1 flex-wrap min-w-0">
+                  <span class="font-black text-sm text-slate-900 dark:text-[#E3E3E3] truncate max-w-full" title={session.name}>
                     {session.name}
                   </span>
-                  <span class="px-1.5 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
+                  <span class="px-1.5 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 shrink-0">
                     {getTabLabel(session.activeTab)}
                   </span>
                   {#if savedSessionState.activeResumeId === session.id}
-                    <span class="px-1.5 py-0.5 rounded-md text-[10px] font-black bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400">
+                    <span class="px-1.5 py-0.5 rounded-md text-[10px] font-black bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 shrink-0">
                       Đang mở
                     </span>
                   {/if}

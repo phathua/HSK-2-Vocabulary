@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fade, fly } from 'svelte/transition';
   import { savedSessionState } from '#lib/state/savedSessionState.svelte';
-  import BookmarkSimple from 'phosphor-svelte/lib/BookmarkSimple';
+  import FloppyDisk from 'phosphor-svelte/lib/FloppyDisk';
   import Check from 'phosphor-svelte/lib/Check';
   import X from 'phosphor-svelte/lib/X';
   import PencilLine from 'phosphor-svelte/lib/PencilLine';
@@ -51,7 +51,7 @@
       <div class="flex items-center justify-between mb-4">
         <div class="flex items-center gap-2.5">
           <div class="w-10 h-10 rounded-2xl bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800/50 flex items-center justify-center shrink-0">
-            <BookmarkSimple weight="fill" class="w-5 h-5" />
+            <FloppyDisk weight="regular" class="w-5 h-5" />
           </div>
           <div>
             <h2 class="text-base font-black text-slate-900 dark:text-[#E3E3E3]">
