@@ -252,9 +252,15 @@
                     [{sug.hanViet}]
                   </span>
                 {/if}
-                <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5]">
-                  HSK {sug.hskLevel}
-                </span>
+                {#if sug.isHsk3Format}
+                  <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200/50 dark:border-amber-900/40">
+                    HSK 3.0
+                  </span>
+                {:else}
+                  <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#282A2C] text-slate-600 dark:text-[#C4C7C5]">
+                    HSK {sug.hskLevel}
+                  </span>
+                {/if}
               </div>
             </button>
           {/each}
