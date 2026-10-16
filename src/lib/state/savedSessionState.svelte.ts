@@ -46,8 +46,6 @@ export interface SavedSessionRecord {
     currentFlashItemId: string | null;
     flashKnown: number;
     flashUnknown: number;
-    flashSkipCount: number;
-    flashDoneCount: number;
   };
 
   speechState?: {
@@ -176,9 +174,7 @@ class SavedSessionState {
         flashItemStatus: { ...appState.flashItemStatus },
         currentFlashItemId: appState.currentFlashItem?.id || null,
         flashKnown: appState.flashKnown,
-        flashUnknown: appState.flashUnknown,
-        flashSkipCount: appState.flashSkipCount,
-        flashDoneCount: appState.flashDoneCount
+        flashUnknown: appState.flashUnknown
       };
     } else if (appState.activeTab === 'speech') {
       record.speechState = {
@@ -243,8 +239,6 @@ class SavedSessionState {
       appState.flashItemStatus = { ...record.flashState.flashItemStatus };
       appState.flashKnown = record.flashState.flashKnown;
       appState.flashUnknown = record.flashState.flashUnknown;
-      appState.flashSkipCount = record.flashState.flashSkipCount;
-      appState.flashDoneCount = record.flashState.flashDoneCount;
       appState.currentFlashItem = (record.flashState.currentFlashItemId && itemMap.get(record.flashState.currentFlashItemId)) || appState.flashDeck[appState.flashDeck.length - 1] || null;
       appState.flashRevealed = false;
     } else if (record.activeTab === 'speech' && record.speechState) {
