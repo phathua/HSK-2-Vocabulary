@@ -109,11 +109,20 @@
 
     if (question.options && question.options.length > 0) {
       return question.options.map((opt) => {
-        const parsed = parseOptionItem(opt.text || opt.label || '');
+        if (typeof opt === 'string') {
+          const parsed = parseOptionItem(opt);
+          return {
+            value: parsed.letter || opt,
+            label: parsed.rawLabel || opt,
+            hanzi: parsed.hanzi,
+            pinyin: parsed.pinyin
+          };
+        }
+        const parsed = parseOptionItem(opt.label);
         return {
-          label: opt.label,
-          value: opt.label,
-          hanzi: parsed.hanzi || opt.text,
+          label: parsed.rawLabel || opt.label,
+          value: opt.value,
+          hanzi: parsed.hanzi,
           pinyin: parsed.pinyin,
           image: opt.image
         };
