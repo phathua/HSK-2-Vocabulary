@@ -23,13 +23,38 @@
   let mobileInputEl: HTMLInputElement | null = $state(null);
 
   function getActiveInput(): HTMLInputElement | null {
-    if (document.activeElement instanceof HTMLInputElement) {
-      return document.activeElement;
+    if (document.activeElement === desktopInputEl || document.activeElement === mobileInputEl) {
+      return document.activeElement as HTMLInputElement;
+    }
+    if (desktopInputEl && desktopInputEl.offsetParent !== null) {
+      return desktopInputEl;
+    }
+    if (mobileInputEl && mobileInputEl.offsetParent !== null) {
+      return mobileInputEl;
     }
     if (typeof window !== 'undefined' && window.innerWidth < 1024) {
       return mobileInputEl || desktopInputEl;
     }
     return desktopInputEl || mobileInputEl;
+  }
+
+  function focusActiveInput() {
+    if (typeof window === 'undefined' || appState.fillAnswered || isTileMode) return;
+    requestAnimationFrame(() => {
+      const el = getActiveInput();
+      if (el && document.activeElement !== el) {
+        el.focus({ preventScroll: true });
+      }
+    });
+  }
+
+  function handleContainerPointerDown(e: PointerEvent) {
+    if (appState.fillAnswered || isTileMode) return;
+    const target = e.target as HTMLElement | null;
+    if (!target) return;
+    if (target.closest('button, a, input, [role="button"]')) return;
+    e.preventDefault();
+    focusActiveInput();
   }
 
   // Quản lý active flying animation
@@ -120,24 +145,54 @@
       return;
     }
 
+    // 1. Khi đã trả lời xong: Enter hoặc Space chuyển sang từ mới
     if (appState.fillAnswered && appState.currentFillItem && !showFeedbackDrawer) {
       if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space' || e.key === 'Spacebar') {
         e.preventDefault();
         appState.nextFillItem();
+        return;
+      }
+    }
+
+    // 2. Khi đang ở chế độ gõ từ (chưa trả lời xong): Cho phép gõ chữ trực tiếp vào ô mà không cần phải click vào ô đó
+    if (!appState.fillAnswered && !isTileMode && appState.currentFillItem) {
+      const targetInput = getActiveInput();
+      if (targetInput && activeEl !== targetInput) {
+        if (!e.ctrlKey && !e.altKey && !e.metaKey) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            appState.checkFillAnswer();
+            return;
+          }
+          if (e.key === 'Backspace') {
+            e.preventDefault();
+            targetInput.focus({ preventScroll: true });
+            if (appState.fillInput.length > 0) {
+              appState.fillInput = appState.fillInput.slice(0, -1);
+            }
+            return;
+          }
+          if (e.key.length === 1) {
+            targetInput.focus({ preventScroll: true });
+            if (appState.direction === 'vi_to_zh') {
+              appState.fillInput = convertTelexToPinyin(appState.fillInput + e.key);
+            } else {
+              appState.fillInput += e.key;
+            }
+            e.preventDefault();
+            return;
+          }
+        }
       }
     }
   }
 
-  // Tự động focus ô nhập trên Desktop khi chuyển sang câu hỏi mới
+  // Tự động focus ô nhập khi sang từ mới hoặc khi khởi tạo
   $effect(() => {
     const curId = appState.currentFillItem?.id;
     const answered = appState.fillAnswered;
     if (curId && !answered && !isTileMode) {
-      if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
-        requestAnimationFrame(() => {
-          desktopInputEl?.focus();
-        });
-      }
+      focusActiveInput();
     }
   });
 
@@ -273,7 +328,7 @@
 {/if}
 
 <!-- Main Fill Word Card: Đồng nhất padding và max-width với các tab khác -->
-<div class="relative flex-1 min-h-0 flex flex-col w-full h-full">
+<div class="relative flex-1 min-h-0 flex flex-col w-full h-full" onpointerdown={handleContainerPointerDown}>
   <main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-between text-center relative overflow-hidden transition-colors">
   <!-- Top Bar: Nút Bài bên trái, Nút đổi chế độ bên phải -->
   <div class="w-full flex items-center justify-between shrink-0 mb-2 z-10">
