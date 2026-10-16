@@ -328,6 +328,7 @@
 {/if}
 
 <!-- Main Fill Word Card: Đồng nhất padding và max-width với các tab khác -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div class="relative flex-1 min-h-0 flex flex-col w-full h-full" onpointerdown={handleContainerPointerDown}>
   <main class="flex-1 min-h-0 bg-white dark:bg-[#1B1B1B] rounded-3xl border border-slate-200 dark:border-[#282A2C] shadow-sm p-3.5 sm:p-4 md:p-6 flex flex-col justify-between text-center relative overflow-hidden transition-colors">
   <!-- Top Bar: Nút Bài bên trái, Nút đổi chế độ bên phải -->

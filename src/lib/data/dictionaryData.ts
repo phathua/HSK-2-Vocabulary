@@ -53,6 +53,7 @@ export interface DictWord {
   confusableWords?: DictConfusable | string;
   subDefinitions?: DictSubDefinition[];
   sentences: DictSentence[];
+  isHsk3Format?: boolean;
 }
 
 export const DICTIONARY_WORDS: DictWord[] = [
@@ -16676,6 +16677,26611 @@ export const DICTIONARY_WORDS: DictWord[] = [
         "tag": "Dự báo thời tiết"
       }
     ]
+  }
+,
+  {
+    "id": "hsk2-0-1",
+    "hanzi": "啊",
+    "traditional": "啊",
+    "pinyin": "a",
+    "pinyinClean": "a",
+    "hanViet": "A",
+    "radical": "口",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "trợ từ",
+    "viet": "à, này, nhé (trợ tử ngữ khí)",
+    "vi_meaning_full": "Trợ từ: à, này, nhé (trợ tử ngữ khí)",
+    "vi_meaning_short": "à, này, nhé",
+    "enMeaning": "ah (modal particle)",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说啊",
+      "用啊"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，啊是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, a shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 啊 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-2",
+    "hanzi": "爱情",
+    "traditional": "愛情",
+    "pinyin": "ài qíng",
+    "pinyinClean": "aiqing",
+    "hanViet": "ÁI TÌNH",
+    "radical": "爪",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tình yêu",
+    "vi_meaning_full": "Danh từ: tình yêu",
+    "vi_meaning_short": "tình yêu",
+    "enMeaning": "love; affection",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个爱情",
+      "新爱情",
+      "好爱情"
+    ],
+    "compounds": [
+      "爱",
+      "情"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的爱情。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de ài qíng.",
+        "vi": "Trên bàn có đặt một chiếc tình yêu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-3",
+    "hanzi": "爱人",
+    "traditional": "愛人",
+    "pinyin": "àiren",
+    "pinyinClean": "airen",
+    "hanViet": "ÁI NHÂN",
+    "radical": "爪",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "người yêu, vợ hoặc chồng",
+    "vi_meaning_full": "Danh từ: người yêu, vợ hoặc chồng",
+    "vi_meaning_short": "người yêu, vợ ho",
+    "enMeaning": "spouse; husband or wife",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个爱人",
+      "新爱人",
+      "好爱人"
+    ],
+    "compounds": [
+      "爱",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的爱人。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de ài rén.",
+        "vi": "Trên bàn có đặt một chiếc người yêu, vợ hoặc chồng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-4",
+    "hanzi": "安静",
+    "traditional": "安靜",
+    "pinyin": "ān jìng",
+    "pinyinClean": "anjing",
+    "hanViet": "AN TĨNH",
+    "radical": "宀",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "yên tĩnh, yên lặng / im lặng lại, yên ổn lại",
+    "vi_meaning_full": "Động từ: yên tĩnh, yên lặng / im lặng lại, yên ổn lại",
+    "vi_meaning_short": "yên tĩnh, yên lặ",
+    "enMeaning": "quiet; peaceful",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备安静",
+      "开始安静",
+      "喜欢安静"
+    ],
+    "compounds": [
+      "安",
+      "静"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去安静。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù ān jìng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi yên tĩnh, yên lặng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-5",
+    "hanzi": "安全",
+    "traditional": "安全",
+    "pinyin": "ān quán",
+    "pinyinClean": "anquan",
+    "hanViet": "AN TOÀN",
+    "radical": "宀",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "an toàn / sự an toàn",
+    "vi_meaning_full": "Danh từ: an toàn / sự an toàn",
+    "vi_meaning_short": "an toàn",
+    "enMeaning": "safe; safety",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个安全",
+      "新安全",
+      "好安全"
+    ],
+    "compounds": [
+      "安",
+      "全"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的安全。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de ān quán.",
+        "vi": "Trên bàn có đặt một chiếc an toàn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-7",
+    "hanzi": "班长",
+    "traditional": "班長",
+    "pinyin": "bān zhǎng",
+    "pinyinClean": "banzhang",
+    "hanViet": "BAN TRƯỞNG",
+    "radical": "王",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lớp trường",
+    "vi_meaning_full": "Danh từ: lớp trường",
+    "vi_meaning_short": "lớp trường",
+    "enMeaning": "class monitor",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个班长",
+      "新班长",
+      "好班长"
+    ],
+    "compounds": [
+      "班",
+      "长"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的班长。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de bān zhǎng.",
+        "vi": "Trên bàn có đặt một chiếc lớp trường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-8",
+    "hanzi": "办",
+    "traditional": "辦",
+    "pinyin": "bàn",
+    "pinyinClean": "ban",
+    "hanViet": "BIỆN",
+    "radical": "力",
+    "strokeCount": 4,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "làm, xử lý",
+    "vi_meaning_full": "Động từ: làm, xử lý",
+    "vi_meaning_short": "làm, xử lý",
+    "enMeaning": "to do; to handle",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备办",
+      "开始办",
+      "喜欢办"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去办。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù bàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi làm, xử lý.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-9",
+    "hanzi": "办法",
+    "traditional": "辦法",
+    "pinyin": "bàn fǎ",
+    "pinyinClean": "banfa",
+    "hanViet": "BIỆN PHÁP",
+    "radical": "力",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "biện pháp, cách làm",
+    "vi_meaning_full": "Danh từ: biện pháp, cách làm",
+    "vi_meaning_short": "biện pháp, cách",
+    "enMeaning": "method; way",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个办法",
+      "新办法",
+      "好办法"
+    ],
+    "compounds": [
+      "办",
+      "法"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的办法。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de bàn fǎ.",
+        "vi": "Trên bàn có đặt một chiếc biện pháp, cách làm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-10",
+    "hanzi": "办公室",
+    "traditional": "辦公室",
+    "pinyin": "bàn gōng shì",
+    "pinyinClean": "bangongshi",
+    "hanViet": "BIỆN CÔNG THẤT",
+    "radical": "力",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "văn phòng",
+    "vi_meaning_full": "Danh từ: văn phòng",
+    "vi_meaning_short": "văn phòng",
+    "enMeaning": "office",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个办公室",
+      "新办公室",
+      "好办公室"
+    ],
+    "compounds": [
+      "办",
+      "公室"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的办公室。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de bàn gōng shì.",
+        "vi": "Trên bàn có đặt một chiếc văn phòng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-11",
+    "hanzi": "半夜",
+    "traditional": "半夜",
+    "pinyin": "bàn yè",
+    "pinyinClean": "banye",
+    "hanViet": "BÁN DẠ",
+    "radical": "十",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nửa đêm",
+    "vi_meaning_full": "Danh từ: nửa đêm",
+    "vi_meaning_short": "nửa đêm",
+    "enMeaning": "midnight",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个半夜",
+      "新半夜",
+      "好半夜"
+    ],
+    "compounds": [
+      "半",
+      "夜"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的半夜。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de bàn yè.",
+        "vi": "Trên bàn có đặt một chiếc nửa đêm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-13",
+    "hanzi": "饱",
+    "traditional": "飽",
+    "pinyin": "bǎo",
+    "pinyinClean": "bao",
+    "hanViet": "BẢO",
+    "radical": "食",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "no",
+    "vi_meaning_full": "Tính từ: no",
+    "vi_meaning_short": "no",
+    "enMeaning": "full (from eating)",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常饱",
+      "很饱",
+      "真饱"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真饱，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn bǎo, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật no, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-14",
+    "hanzi": "报名",
+    "traditional": "報名",
+    "pinyin": "bào // míng",
+    "pinyinClean": "baoming",
+    "hanViet": "BÁO DANH",
+    "radical": "手",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đăng ký",
+    "vi_meaning_full": "Động từ: đăng ký",
+    "vi_meaning_short": "đăng ký",
+    "enMeaning": "to sign up; to register",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备报名",
+      "开始报名",
+      "喜欢报名"
+    ],
+    "compounds": [
+      "报",
+      "名"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去报名。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù bào míng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đăng ký.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-16",
+    "hanzi": "北方",
+    "traditional": "北方",
+    "pinyin": "bě i fāng",
+    "pinyinClean": "beifang",
+    "hanViet": "BẮC PHƯƠNG",
+    "radical": "匕",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "miền Bắc",
+    "vi_meaning_full": "Danh từ: miền Bắc",
+    "vi_meaning_short": "miền Bắc",
+    "enMeaning": "north; northern region",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个北方",
+      "新北方",
+      "好北方"
+    ],
+    "compounds": [
+      "北",
+      "方"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的北方。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de běi fāng.",
+        "vi": "Trên bàn có đặt một chiếc miền Bắc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-17",
+    "hanzi": "背",
+    "traditional": "背",
+    "pinyin": "bèi",
+    "pinyinClean": "bei",
+    "hanViet": "BỐI",
+    "radical": "月",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "ghi nhớ, học thuộc / cộng",
+    "vi_meaning_full": "Động từ: ghi nhớ, học thuộc / cộng",
+    "vi_meaning_short": "ghi nhớ, học thu",
+    "enMeaning": "to memorize; to carry on back",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备背",
+      "开始背",
+      "喜欢背"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去背。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù bèi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ghi nhớ, học thuộc.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-18",
+    "hanzi": "比如",
+    "traditional": "比如",
+    "pinyin": "bǐ rú",
+    "pinyinClean": "biru",
+    "hanViet": "BỈ NHƯ",
+    "radical": "比",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "ví dụ",
+    "vi_meaning_full": "Động từ: ví dụ",
+    "vi_meaning_short": "ví dụ",
+    "enMeaning": "for example",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备比如",
+      "开始比如",
+      "喜欢比如"
+    ],
+    "compounds": [
+      "比",
+      "如"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去比如。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù bǐ rú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ví dụ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-19",
+    "hanzi": "比如说",
+    "traditional": "比如說",
+    "pinyin": "bǐrú shuō",
+    "pinyinClean": "birushuo",
+    "hanViet": "BỈ NHƯ THUYẾT",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "cụm từ",
+    "viet": "ví dụ như",
+    "vi_meaning_full": "Cụm từ: ví dụ như",
+    "vi_meaning_short": "ví dụ như",
+    "enMeaning": "for example, such as",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "比如说这个",
+      "比如说中国菜"
+    ],
+    "compounds": [
+      "比如",
+      "说明"
+    ],
+    "synonyms": [
+      "例如",
+      "譬如"
+    ],
+    "antonyms": [],
+    "confusableWords": "比如",
+    "sentences": [
+      {
+        "zh": "我喜欢很多运动，比如说游泳和跑步。",
+        "pinyin": "Wǒ xǐhuan hěn duō yùndòng, bǐrú shuō yóuyǒng hé pǎobù.",
+        "vi": "Tôi thích rất nhiều môn thể thao, ví dụ như bơi lội và chạy bộ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-20",
+    "hanzi": "笔",
+    "traditional": "筆",
+    "pinyin": "bǐ",
+    "pinyinClean": "bi",
+    "hanViet": "BÚT",
+    "radical": "竹",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cái bút / khoản, món",
+    "vi_meaning_full": "Danh từ: cái bút / khoản, món",
+    "vi_meaning_short": "cái bút",
+    "enMeaning": "pen; writing instrument",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个笔",
+      "新笔",
+      "好笔"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的笔。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de bǐ.",
+        "vi": "Trên bàn có đặt một chiếc cái bút mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-21",
+    "hanzi": "笔记",
+    "traditional": "筆記",
+    "pinyin": "bǐ jì",
+    "pinyinClean": "biji",
+    "hanViet": "BÚT KÝ",
+    "radical": "竹",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ghi chép",
+    "vi_meaning_full": "Danh từ: ghi chép",
+    "vi_meaning_short": "ghi chép",
+    "enMeaning": "notes",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个笔记",
+      "新笔记",
+      "好笔记"
+    ],
+    "compounds": [
+      "笔",
+      "记"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的笔记。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de bǐ jì.",
+        "vi": "Trên bàn có đặt một chiếc ghi chép mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-22",
+    "hanzi": "笔记本",
+    "traditional": "筆記本",
+    "pinyin": "bǐ jì běn",
+    "pinyinClean": "bijiben",
+    "hanViet": "BÚT KÝ BẢN",
+    "radical": "竹",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "số ghi chép",
+    "vi_meaning_full": "Danh từ: số ghi chép",
+    "vi_meaning_short": "số ghi chép",
+    "enMeaning": "notebook; laptop",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个笔记本",
+      "新笔记本",
+      "好笔记本"
+    ],
+    "compounds": [
+      "笔",
+      "记本"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的笔记本。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de bǐ jì běn.",
+        "vi": "Trên bàn có đặt một chiếc số ghi chép mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-23",
+    "hanzi": "必须",
+    "traditional": "必須",
+    "pinyin": "bì xū",
+    "pinyinClean": "bixu",
+    "hanViet": "TẤT TU",
+    "radical": "心",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "phải, bắt buộc",
+    "vi_meaning_full": "Phó từ: phải, bắt buộc",
+    "vi_meaning_short": "phải, bắt buộc",
+    "enMeaning": "must; have to",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "必须好",
+      "必须去",
+      "必须看"
+    ],
+    "compounds": [
+      "必",
+      "须"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家必须准备好了，随时可以出发。",
+        "pinyin": "Dà jiā bì xū zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người phải, bắt buộc chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-24",
+    "hanzi": "边",
+    "traditional": "邊",
+    "pinyin": "biān",
+    "pinyinClean": "bian",
+    "hanViet": "BIÊN",
+    "radical": "辶",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bên, cạnh",
+    "vi_meaning_full": "Danh từ: bên, cạnh",
+    "vi_meaning_short": "bên, cạnh",
+    "enMeaning": "side; edge",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个边",
+      "新边",
+      "好边"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的边。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de biān.",
+        "vi": "Trên bàn có đặt một chiếc bên, cạnh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-25",
+    "hanzi": "变",
+    "traditional": "變",
+    "pinyin": "biàn",
+    "pinyinClean": "bian",
+    "hanViet": "BIẾN",
+    "radical": "又",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thay đổi",
+    "vi_meaning_full": "Động từ: thay đổi",
+    "vi_meaning_short": "thay đổi",
+    "enMeaning": "to change; to become",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备变",
+      "开始变",
+      "喜欢变"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去变。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù biàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thay đổi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-26",
+    "hanzi": "变成",
+    "traditional": "變成",
+    "pinyin": "biàn chéng",
+    "pinyinClean": "biancheng",
+    "hanViet": "BIẾN THÀNH",
+    "radical": "又",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "trở thành",
+    "vi_meaning_full": "Lượng từ: trở thành",
+    "vi_meaning_short": "trở thành",
+    "enMeaning": "to turn into; to become",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一变成",
+      "两变成",
+      "这变成"
+    ],
+    "compounds": [
+      "变",
+      "成"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一变成这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī biàn chéng zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một trở thành nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-27",
+    "hanzi": "遍",
+    "traditional": "遍",
+    "pinyin": "biàn",
+    "pinyinClean": "bian",
+    "hanViet": "BIẾN",
+    "radical": "辶",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "lần (từ chỉ số lần)",
+    "vi_meaning_full": "Lượng từ: lần (từ chỉ số lần)",
+    "vi_meaning_short": "lần",
+    "enMeaning": "time (number of times)",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一遍",
+      "两遍",
+      "这遍"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一遍这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī biàn zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một lần nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-28",
+    "hanzi": "表",
+    "traditional": "表",
+    "pinyin": "biǎo",
+    "pinyinClean": "biao",
+    "hanViet": "BIỂU",
+    "radical": "衣",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đồng hồ / bảng biểu",
+    "vi_meaning_full": "Danh từ: đồng hồ / bảng biểu",
+    "vi_meaning_short": "đồng hồ",
+    "enMeaning": "watch; chart; table",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个表",
+      "新表",
+      "好表"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的表。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de biǎo.",
+        "vi": "Trên bàn có đặt một chiếc đồng hồ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-29",
+    "hanzi": "表示",
+    "traditional": "表示",
+    "pinyin": "biǎoshì",
+    "pinyinClean": "biaoshi",
+    "hanViet": "BIỂU THỊ",
+    "radical": "衣",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "dấu hiệu, biểu hiện / biểu thị, thể hiện, bày tỏ",
+    "vi_meaning_full": "Danh từ / động từ: dấu hiệu, biểu hiện / biểu thị, thể hiện, bày tỏ",
+    "vi_meaning_short": "dấu hiệu, biểu h",
+    "enMeaning": "to show; to express",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备表示",
+      "开始表示",
+      "喜欢表示"
+    ],
+    "compounds": [
+      "表",
+      "示"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去表示。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù biǎo shì.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi dấu hiệu, biểu hiện.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-31",
+    "hanzi": "不但",
+    "traditional": "不但",
+    "pinyin": "bú dàn",
+    "pinyinClean": "budan",
+    "hanViet": "BẤT ĐÃN",
+    "radical": "一",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "không những",
+    "vi_meaning_full": "Liên từ: không những",
+    "vi_meaning_short": "không những",
+    "enMeaning": "not only",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不但...而且...",
+      "虽然...不但..."
+    ],
+    "compounds": [
+      "不",
+      "但"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他不但会说英语，还会说汉语。",
+        "pinyin": "Tā bù dàn huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy không những biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-32",
+    "hanzi": "不够",
+    "traditional": "不夠",
+    "pinyin": "búgòu",
+    "pinyinClean": "bugou",
+    "hanViet": "BẤT CẤU",
+    "radical": "一",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "không đủ, thiếu / chưa đủ, chưa đạt mức",
+    "vi_meaning_full": "Động từ: không đủ, thiếu / chưa đủ, chưa đạt mức",
+    "vi_meaning_short": "không đủ, thiếu",
+    "enMeaning": "not enough",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备不够",
+      "开始不够",
+      "喜欢不够"
+    ],
+    "compounds": [
+      "不",
+      "够"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去不够。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù bù gòu.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi không đủ, thiếu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-33",
+    "hanzi": "不过",
+    "traditional": "不過",
+    "pinyin": "búguò",
+    "pinyinClean": "buguo",
+    "hanViet": "BẤT QUÁ",
+    "radical": "一",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "nhưng, tuy nhiên",
+    "vi_meaning_full": "Liên từ: nhưng, tuy nhiên",
+    "vi_meaning_short": "nhưng, tuy nhiên",
+    "enMeaning": "however; but",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不过...而且...",
+      "虽然...不过..."
+    ],
+    "compounds": [
+      "不",
+      "过"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他不过会说英语，还会说汉语。",
+        "pinyin": "Tā bù guò huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy nhưng, tuy nhiên biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-34",
+    "hanzi": "不太",
+    "traditional": "不太",
+    "pinyin": "bú tài",
+    "pinyinClean": "butai",
+    "hanViet": "BẤT THÁI",
+    "radical": "一",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "không... lắm",
+    "vi_meaning_full": "Phó từ: không... lắm",
+    "vi_meaning_short": "không... lắm",
+    "enMeaning": "not very, not too",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不太好",
+      "不太懂",
+      "不太清楚"
+    ],
+    "compounds": [
+      "不太",
+      "太阳"
+    ],
+    "synonyms": [
+      "不大"
+    ],
+    "antonyms": [
+      "很",
+      "非常"
+    ],
+    "confusableWords": "很不",
+    "sentences": [
+      {
+        "zh": "今天天气不太好，我们不出去了。",
+        "pinyin": "Jīntiān tiānqì bú tài hǎo, wǒmen bù chūqù le.",
+        "vi": "Thời tiết hôm nay không tốt lắm, chúng ta không ra ngoài nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-35",
+    "hanzi": "不要",
+    "traditional": "不要",
+    "pinyin": "búyào",
+    "pinyinClean": "buyao",
+    "hanViet": "BẤT YẾU",
+    "radical": "一",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "đừng, không được",
+    "vi_meaning_full": "Phó từ: đừng, không được",
+    "vi_meaning_short": "đừng, không được",
+    "enMeaning": "do not; don't",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不要好",
+      "不要去",
+      "不要看"
+    ],
+    "compounds": [
+      "不",
+      "要"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家不要准备好了，随时可以出发。",
+        "pinyin": "Dà jiā bú yào zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người đừng, không được chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-36",
+    "hanzi": "不好意思",
+    "traditional": "不好意思",
+    "pinyin": "bù hǎoyìsi",
+    "pinyinClean": "buhaoyisi",
+    "hanViet": "BẤT HẢO Ý TƯ",
+    "radical": "一",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "ngại, áy náy, xin lỗi",
+    "vi_meaning_full": "Tính từ: ngại, áy náy, xin lỗi",
+    "vi_meaning_short": "ngại, áy náy, xi",
+    "enMeaning": "embarrassed, to feel embarrassed, excuse me",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "真不好意思",
+      "有点儿不好意思"
+    ],
+    "compounds": [
+      "意思",
+      "好意"
+    ],
+    "synonyms": [
+      "抱歉",
+      "对不起"
+    ],
+    "antonyms": [
+      "大方"
+    ],
+    "confusableWords": "对不起",
+    "sentences": [
+      {
+        "zh": "真不好意思，让您久等了。",
+        "pinyin": "Zhēn bù hǎoyìsi, ràng nín jiǔ děng le.",
+        "vi": "Thật ngại quá, để bác phải đợi lâu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-37",
+    "hanzi": "不久",
+    "traditional": "不久",
+    "pinyin": "bùjiǔ",
+    "pinyinClean": "bujiu",
+    "hanViet": "BẤT CỬU",
+    "radical": "一",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "không lâu, chẳng bao lâu",
+    "vi_meaning_full": "Tính từ: không lâu, chẳng bao lâu",
+    "vi_meaning_short": "không lâu, chẳng",
+    "enMeaning": "not long after; soon",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常不久",
+      "很不久",
+      "真不久"
+    ],
+    "compounds": [
+      "不",
+      "久"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真不久，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn bù jiǔ, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật không lâu, chẳng bao lâu, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-38",
+    "hanzi": "不满",
+    "traditional": "不滿",
+    "pinyin": "bùmǎn",
+    "pinyinClean": "buman",
+    "hanViet": "BẤT MÃN",
+    "radical": "一",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "bất măn, không hài lòng",
+    "vi_meaning_full": "Tính từ: bất măn, không hài lòng",
+    "vi_meaning_short": "bất măn, không h",
+    "enMeaning": "dissatisfied",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常不满",
+      "很不满",
+      "真不满"
+    ],
+    "compounds": [
+      "不",
+      "满"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真不满，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn bù mǎn, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật bất măn, không hài lòng, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-39",
+    "hanzi": "不如",
+    "traditional": "不如",
+    "pinyin": "bùrú",
+    "pinyinClean": "buru",
+    "hanViet": "BẤT NHƯ",
+    "radical": "一",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "không bằng",
+    "vi_meaning_full": "Động từ: không bằng",
+    "vi_meaning_short": "không bằng",
+    "enMeaning": "inferior to; not as good as",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备不如",
+      "开始不如",
+      "喜欢不如"
+    ],
+    "compounds": [
+      "不",
+      "如"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去不如。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù bù rú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi không bằng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-40",
+    "hanzi": "不少",
+    "traditional": "不少",
+    "pinyin": "bù shǎo",
+    "pinyinClean": "bushao",
+    "hanViet": "BẤT THIỂU",
+    "radical": "一",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "không ít, nhiều",
+    "vi_meaning_full": "Tính từ: không ít, nhiều",
+    "vi_meaning_short": "không ít, nhiều",
+    "enMeaning": "not a few, quite a lot, many",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不少人",
+      "不少钱",
+      "有不少"
+    ],
+    "compounds": [
+      "多少",
+      "很少"
+    ],
+    "synonyms": [
+      "很多",
+      "许多"
+    ],
+    "antonyms": [
+      "很少",
+      "极少"
+    ],
+    "confusableWords": "不多",
+    "sentences": [
+      {
+        "zh": "今天来参加活动的人不少。",
+        "pinyin": "Jīntiān lái cānjiā huódòng de rén bù shǎo.",
+        "vi": "Hôm nay số người đến tham gia hoạt động không ít.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-41",
+    "hanzi": "不同",
+    "traditional": "不同",
+    "pinyin": "bù tóng",
+    "pinyinClean": "butong",
+    "hanViet": "BẤT ĐỒNG",
+    "radical": "一",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "khác nhau",
+    "vi_meaning_full": "Tính từ: khác nhau",
+    "vi_meaning_short": "khác nhau",
+    "enMeaning": "different, distinct",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不同地方",
+      "不同意见",
+      "完全不同"
+    ],
+    "compounds": [
+      "同学",
+      "共同"
+    ],
+    "synonyms": [
+      "不一样",
+      "有别"
+    ],
+    "antonyms": [
+      "相同",
+      "一样"
+    ],
+    "confusableWords": "不通",
+    "sentences": [
+      {
+        "zh": "我们俩的想法完全不同。",
+        "pinyin": "Wǒmen liǎ de xiǎngfǎ wánquán bù tóng.",
+        "vi": "Ý nghĩ của hai chúng tôi hoàn toàn khác nhau.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-42",
+    "hanzi": "不行",
+    "traditional": "不行",
+    "pinyin": "bùxíng",
+    "pinyinClean": "buxing",
+    "hanViet": "BẤT HÀNH",
+    "radical": "一",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "không được, không cho phép / không tốt, không đạt yêu cầu",
+    "vi_meaning_full": "Động từ: không được, không cho phép / không tốt, không đạt yêu cầu",
+    "vi_meaning_short": "không được, khôn",
+    "enMeaning": "not allowed; won't do",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备不行",
+      "开始不行",
+      "喜欢不行"
+    ],
+    "compounds": [
+      "不",
+      "行"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去不行。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù bù xíng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi không được, không cho phép.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-43",
+    "hanzi": "不一定",
+    "traditional": "不一定",
+    "pinyin": "bùyídìng",
+    "pinyinClean": "buyiding",
+    "hanViet": "BẤT 一 ĐỊNH",
+    "radical": "一",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "chưa chắc, không nhất định",
+    "vi_meaning_full": "Phó từ: chưa chắc, không nhất định",
+    "vi_meaning_short": "chưa chắc, không",
+    "enMeaning": "not necessarily",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不一定好",
+      "不一定去",
+      "不一定看"
+    ],
+    "compounds": [
+      "不",
+      "一定"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家不一定准备好了，随时可以出发。",
+        "pinyin": "Dà jiā bù yí dìng zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người chưa chắc, không nhất định chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-44",
+    "hanzi": "不一会儿",
+    "traditional": "不一會兒",
+    "pinyin": "bù yíhuìr",
+    "pinyinClean": "buyihuir",
+    "hanViet": "BẤT NHẤT HỘI NHI",
+    "radical": "一",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "chẳng bao lâu, một lát sau",
+    "vi_meaning_full": "Phó từ: chẳng bao lâu, một lát sau",
+    "vi_meaning_short": "chẳng bao lâu, m",
+    "enMeaning": "in a moment, soon, before long",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不一会儿就",
+      "等不一会儿"
+    ],
+    "compounds": [
+      "一会儿",
+      "开会"
+    ],
+    "synonyms": [
+      "不久",
+      "很快"
+    ],
+    "antonyms": [
+      "很久"
+    ],
+    "confusableWords": "一会儿",
+    "sentences": [
+      {
+        "zh": "天晴了，不一会儿太阳就出来了。",
+        "pinyin": "Tiān qíng le, bù yíhuìr tàiyáng jiù chūlái le.",
+        "vi": "Trời hửng nắng, chẳng mấy chốc mặt trời đã ló dạng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-45",
+    "hanzi": "部分",
+    "traditional": "部分",
+    "pinyin": "bùfen",
+    "pinyinClean": "bufen",
+    "hanViet": "BỘ PHÂN",
+    "radical": "阝",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bộ phận, phần",
+    "vi_meaning_full": "Danh từ: bộ phận, phần",
+    "vi_meaning_short": "bộ phận, phần",
+    "enMeaning": "part; section",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个部分",
+      "新部分",
+      "好部分"
+    ],
+    "compounds": [
+      "部",
+      "分"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的部分。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de bù fèn.",
+        "vi": "Trên bàn có đặt một chiếc bộ phận, phần mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-46",
+    "hanzi": "才",
+    "traditional": "才",
+    "pinyin": "cái",
+    "pinyinClean": "cai",
+    "hanViet": "TÀI",
+    "radical": "手",
+    "strokeCount": 3,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "mới, vừa",
+    "vi_meaning_full": "Phó từ: mới, vừa",
+    "vi_meaning_short": "mới, vừa",
+    "enMeaning": "only then; just",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "才好",
+      "才去",
+      "才看"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家才准备好了，随时可以出发。",
+        "pinyin": "Dà jiā cái zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người mới, vừa chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-47",
+    "hanzi": "菜单",
+    "traditional": "菜單",
+    "pinyin": "càidān",
+    "pinyinClean": "caidan",
+    "hanViet": "THÁI ĐƠN",
+    "radical": "艹",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thực đơn",
+    "vi_meaning_full": "Danh từ: thực đơn",
+    "vi_meaning_short": "thực đơn",
+    "enMeaning": "menu",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个菜单",
+      "新菜单",
+      "好菜单"
+    ],
+    "compounds": [
+      "菜",
+      "单"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的菜单。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de cài dān.",
+        "vi": "Trên bàn có đặt một chiếc thực đơn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-48",
+    "hanzi": "参观",
+    "traditional": "參觀",
+    "pinyin": "cānguān",
+    "pinyinClean": "canguan",
+    "hanViet": "THAM QUAN",
+    "radical": "厶",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tham quan",
+    "vi_meaning_full": "Động từ: tham quan",
+    "vi_meaning_short": "tham quan",
+    "enMeaning": "to visit; to tour",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备参观",
+      "开始参观",
+      "喜欢参观"
+    ],
+    "compounds": [
+      "参",
+      "观"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去参观。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù cān guān.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tham quan.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-49",
+    "hanzi": "参加",
+    "traditional": "參加",
+    "pinyin": "cānjiā",
+    "pinyinClean": "canjia",
+    "hanViet": "THAM GIA",
+    "radical": "厶",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tham gia",
+    "vi_meaning_full": "Động từ: tham gia",
+    "vi_meaning_short": "tham gia",
+    "enMeaning": "to participate; to join",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备参加",
+      "开始参加",
+      "喜欢参加"
+    ],
+    "compounds": [
+      "参",
+      "加"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去参加。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù cān jiā.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tham gia.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-50",
+    "hanzi": "草",
+    "traditional": "草",
+    "pinyin": "cǎo",
+    "pinyinClean": "cao",
+    "hanViet": "THẢO",
+    "radical": "艹",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cò",
+    "vi_meaning_full": "Danh từ: cò",
+    "vi_meaning_short": "cò",
+    "enMeaning": "grass",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个草",
+      "新草",
+      "好草"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的草。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de cǎo.",
+        "vi": "Trên bàn có đặt một chiếc cò mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-51",
+    "hanzi": "草地",
+    "traditional": "草地",
+    "pinyin": "cǎodì",
+    "pinyinClean": "caodi",
+    "hanViet": "THẢO ĐỊA",
+    "radical": "艹",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bãi có",
+    "vi_meaning_full": "Danh từ: bãi có",
+    "vi_meaning_short": "bãi có",
+    "enMeaning": "lawn; grassland",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个草地",
+      "新草地",
+      "好草地"
+    ],
+    "compounds": [
+      "草",
+      "地"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的草地。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de cǎo dì.",
+        "vi": "Trên bàn có đặt một chiếc bãi có mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-52",
+    "hanzi": "层",
+    "traditional": "層",
+    "pinyin": "céng",
+    "pinyinClean": "ceng",
+    "hanViet": "TẦNG",
+    "radical": "尸",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "tầng, lớp",
+    "vi_meaning_full": "Lượng từ: tầng, lớp",
+    "vi_meaning_short": "tầng, lớp",
+    "enMeaning": "layer; floor",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一层",
+      "两层",
+      "这层"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一层这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī céng zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một tầng, lớp nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-53",
+    "hanzi": "查",
+    "traditional": "查",
+    "pinyin": "chá",
+    "pinyinClean": "cha",
+    "hanViet": "TRA",
+    "radical": "木",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tra, kiểm tra",
+    "vi_meaning_full": "Động từ: tra, kiểm tra",
+    "vi_meaning_short": "tra, kiểm tra",
+    "enMeaning": "to check; to look up",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备查",
+      "开始查",
+      "喜欢查"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去查。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chá.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tra, kiểm tra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-54",
+    "hanzi": "差不多",
+    "traditional": "差不多",
+    "pinyin": "chàbuduō",
+    "pinyinClean": "chabuduo",
+    "hanViet": "SA BẤT ĐA",
+    "radical": "工",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "gần như giống nhau, xấp xỉ / gần như, hầu như, suýt",
+    "vi_meaning_full": "Tính từ: gần như giống nhau, xấp xỉ / gần như, hầu như, suýt",
+    "vi_meaning_short": "gần như giống nh",
+    "enMeaning": "almost; nearly",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常差不多",
+      "很差不多",
+      "真差不多"
+    ],
+    "compounds": [
+      "差",
+      "不多"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真差不多，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn chà bu duō, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật gần như giống nhau, xấp xỉ, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-56",
+    "hanzi": "常见",
+    "traditional": "常見",
+    "pinyin": "cháng jiàn",
+    "pinyinClean": "changjian",
+    "hanViet": "THƯỜNG KIẾN",
+    "radical": "巾",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "thường gặp, phổ biến",
+    "vi_meaning_full": "Tính từ: thường gặp, phổ biến",
+    "vi_meaning_short": "thường gặp, phổ",
+    "enMeaning": "common, frequently seen",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "常见病",
+      "常见问题",
+      "很常见"
+    ],
+    "compounds": [
+      "经常",
+      "看见"
+    ],
+    "synonyms": [
+      "普通",
+      "普遍"
+    ],
+    "antonyms": [
+      "少见",
+      "罕见"
+    ],
+    "confusableWords": "常常",
+    "sentences": [
+      {
+        "zh": "感冒是冬天很常见的一种病。",
+        "pinyin": "Gǎnmào shì dōngtiān hěn chángjiàn de yì zhǒng bìng.",
+        "vi": "Cảm cúm là một bệnh rất thường gặp vào mùa đông.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-57",
+    "hanzi": "常用",
+    "traditional": "常用",
+    "pinyin": "cháng yòng",
+    "pinyinClean": "changyong",
+    "hanViet": "THƯỜNG DỤNG",
+    "radical": "巾",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "thường dùng, hay dùng",
+    "vi_meaning_full": "Tính từ: thường dùng, hay dùng",
+    "vi_meaning_short": "thường dùng, hay",
+    "enMeaning": "in common use, frequently used",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "常用词",
+      "常用电话",
+      "常用功能"
+    ],
+    "compounds": [
+      "常常",
+      "用法"
+    ],
+    "synonyms": [
+      "惯用"
+    ],
+    "antonyms": [
+      "生僻",
+      "少用"
+    ],
+    "confusableWords": "日常",
+    "sentences": [
+      {
+        "zh": "这是汉语中最常用的一百个生词。",
+        "pinyin": "Zhè shì Hànyǔ zhōng zuì chángyòng de yìbǎi gè shēngcí.",
+        "vi": "Đây là 100 từ mới thường dùng nhất trong tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-58",
+    "hanzi": "场",
+    "traditional": "場",
+    "pinyin": "chǎng",
+    "pinyinClean": "chang",
+    "hanViet": "TRƯỜNG",
+    "radical": "土",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "trận, cuộc",
+    "vi_meaning_full": "Lượng từ: trận, cuộc",
+    "vi_meaning_short": "trận, cuộc",
+    "enMeaning": "field; court (measure word)",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一场",
+      "两场",
+      "这场"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一场这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī cháng zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một trận, cuộc nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-59",
+    "hanzi": "超过",
+    "traditional": "超過",
+    "pinyin": "chāoguò",
+    "pinyinClean": "chaoguo",
+    "hanViet": "SIÊU QUÁ",
+    "radical": "走",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "vượt quá",
+    "vi_meaning_full": "Động từ: vượt quá",
+    "vi_meaning_short": "vượt quá",
+    "enMeaning": "to exceed; to surpass",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备超过",
+      "开始超过",
+      "喜欢超过"
+    ],
+    "compounds": [
+      "超",
+      "过"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去超过。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chāo guò.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi vượt quá.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-60",
+    "hanzi": "超市",
+    "traditional": "超市",
+    "pinyin": "chāoshì",
+    "pinyinClean": "chaoshi",
+    "hanViet": "SIÊU THỊ",
+    "radical": "走",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "siêu thị",
+    "vi_meaning_full": "Danh từ: siêu thị",
+    "vi_meaning_short": "siêu thị",
+    "enMeaning": "supermarket",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个超市",
+      "新超市",
+      "好超市"
+    ],
+    "compounds": [
+      "超",
+      "市"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的超市。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de chāo shì.",
+        "vi": "Trên bàn có đặt một chiếc siêu thị mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-61",
+    "hanzi": "车辆",
+    "traditional": "車輛",
+    "pinyin": "chēliàng",
+    "pinyinClean": "cheliang",
+    "hanViet": "XA LƯỠNG",
+    "radical": "车",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "xe cộ",
+    "vi_meaning_full": "Danh từ: xe cộ",
+    "vi_meaning_short": "xe cộ",
+    "enMeaning": "vehicles",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个车辆",
+      "新车辆",
+      "好车辆"
+    ],
+    "compounds": [
+      "车",
+      "辆"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的车辆。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de chē liàng.",
+        "vi": "Trên bàn có đặt một chiếc xe cộ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-62",
+    "hanzi": "称（称一称）",
+    "traditional": "稱（稱一稱）",
+    "pinyin": "chēng",
+    "pinyinClean": "cheng",
+    "hanViet": "XƯNG （ XƯNG 一 XƯNG ）",
+    "radical": "禾",
+    "strokeCount": 43,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cân / gọi là",
+    "vi_meaning_full": "Động từ: cân / gọi là",
+    "vi_meaning_short": "cân",
+    "enMeaning": "to weigh",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备称（称一称）",
+      "开始称（称一称）",
+      "喜欢称（称一称）"
+    ],
+    "compounds": [
+      "称",
+      "（称一称）"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去称（称一称）。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chēng （ chēng yī chēng ）.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cân.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-63",
+    "hanzi": "成",
+    "traditional": "成",
+    "pinyin": "chéng",
+    "pinyinClean": "cheng",
+    "hanViet": "THÀNH",
+    "radical": "戈",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "trở thành / thành công",
+    "vi_meaning_full": "Động từ: trở thành / thành công",
+    "vi_meaning_short": "trở thành",
+    "enMeaning": "to become; to succeed",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备成",
+      "开始成",
+      "喜欢成"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去成。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chéng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi trở thành.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-64",
+    "hanzi": "成绩",
+    "traditional": "成績",
+    "pinyin": "chéngjì",
+    "pinyinClean": "chengji",
+    "hanViet": "THÀNH TÍCH",
+    "radical": "戈",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thành tích, điểm số",
+    "vi_meaning_full": "Danh từ: thành tích, điểm số",
+    "vi_meaning_short": "thành tích, điểm",
+    "enMeaning": "result; score; grade",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个成绩",
+      "新成绩",
+      "好成绩"
+    ],
+    "compounds": [
+      "成",
+      "绩"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的成绩。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de chéng jì.",
+        "vi": "Trên bàn có đặt một chiếc thành tích, điểm số mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-65",
+    "hanzi": "成为",
+    "traditional": "成爲",
+    "pinyin": "chéngwéi",
+    "pinyinClean": "chengwei",
+    "hanViet": "THÀNH VI",
+    "radical": "戈",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "trở thành",
+    "vi_meaning_full": "Động từ: trở thành",
+    "vi_meaning_short": "trở thành",
+    "enMeaning": "to become; to turn into",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备成为",
+      "开始成为",
+      "喜欢成为"
+    ],
+    "compounds": [
+      "成",
+      "为"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去成为。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chéng wéi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi trở thành.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-66",
+    "hanzi": "重复",
+    "traditional": "重複",
+    "pinyin": "chóngfù",
+    "pinyinClean": "chongfu",
+    "hanViet": "TRỌNG PHỤC",
+    "radical": "里",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "lặp lại",
+    "vi_meaning_full": "Động từ: lặp lại",
+    "vi_meaning_short": "lặp lại",
+    "enMeaning": "to repeat",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备重复",
+      "开始重复",
+      "喜欢重复"
+    ],
+    "compounds": [
+      "重",
+      "复"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去重复。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chóng fù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi lặp lại.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-67",
+    "hanzi": "重新",
+    "traditional": "重新",
+    "pinyin": "chóngxīn",
+    "pinyinClean": "chongxin",
+    "hanViet": "TRỌNG TÂN",
+    "radical": "里",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "làm lại từ đầu",
+    "vi_meaning_full": "Phó từ: làm lại từ đầu",
+    "vi_meaning_short": "làm lại từ đầu",
+    "enMeaning": "afresh; again",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "重新好",
+      "重新去",
+      "重新看"
+    ],
+    "compounds": [
+      "重",
+      "新"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家重新准备好了，随时可以出发。",
+        "pinyin": "Dà jiā chóng xīn zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người làm lại từ đầu chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-68",
+    "hanzi": "出发",
+    "traditional": "出發",
+    "pinyin": "chūfā",
+    "pinyinClean": "chufa",
+    "hanViet": "XUẤT PHÁT",
+    "radical": "凵",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "xuất phát",
+    "vi_meaning_full": "Động từ: xuất phát",
+    "vi_meaning_short": "xuất phát",
+    "enMeaning": "to set out; to depart",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备出发",
+      "开始出发",
+      "喜欢出发"
+    ],
+    "compounds": [
+      "出",
+      "发"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去出发。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chū fā.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-69",
+    "hanzi": "出国",
+    "traditional": "出國",
+    "pinyin": "chū//guó",
+    "pinyinClean": "chuguo",
+    "hanViet": "XUẤT QUỐC",
+    "radical": "凵",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "từ ngữ",
+    "viet": "ra nước ngoài",
+    "vi_meaning_full": "Từ ngữ: ra nước ngoài",
+    "vi_meaning_short": "ra nước ngoài",
+    "enMeaning": "to go abroad",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说出国",
+      "用出国"
+    ],
+    "compounds": [
+      "出",
+      "国"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，出国是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, chū guó shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 出国 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-70",
+    "hanzi": "出口",
+    "traditional": "出口",
+    "pinyin": "chūkǒu",
+    "pinyinClean": "chukou",
+    "hanViet": "XUẤT KHẨU",
+    "radical": "凵",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "xuất khẩu",
+    "vi_meaning_full": "Danh từ: xuất khẩu",
+    "vi_meaning_short": "xuất khẩu",
+    "enMeaning": "exit; export",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个出口",
+      "新出口",
+      "好出口"
+    ],
+    "compounds": [
+      "出",
+      "口"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的出口。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de chū kǒu.",
+        "vi": "Trên bàn có đặt một chiếc xuất khẩu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-71",
+    "hanzi": "出门",
+    "traditional": "出門",
+    "pinyin": "chū//mén",
+    "pinyinClean": "chumen",
+    "hanViet": "XUẤT MÔN",
+    "radical": "凵",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "từ ngữ",
+    "viet": "ra ngoài",
+    "vi_meaning_full": "Từ ngữ: ra ngoài",
+    "vi_meaning_short": "ra ngoài",
+    "enMeaning": "to go out",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说出门",
+      "用出门"
+    ],
+    "compounds": [
+      "出",
+      "门"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，出门是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, chū mén shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 出门 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-72",
+    "hanzi": "出生",
+    "traditional": "出生",
+    "pinyin": "chūshēng",
+    "pinyinClean": "chusheng",
+    "hanViet": "XUẤT SANH",
+    "radical": "凵",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "sinh ra",
+    "vi_meaning_full": "Động từ: sinh ra",
+    "vi_meaning_short": "sinh ra",
+    "enMeaning": "to be born",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备出生",
+      "开始出生",
+      "喜欢出生"
+    ],
+    "compounds": [
+      "出",
+      "生"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去出生。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chū shēng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi sinh ra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-73",
+    "hanzi": "出现",
+    "traditional": "出現",
+    "pinyin": "chūxiàn",
+    "pinyinClean": "chuxian",
+    "hanViet": "XUẤT HIỆN",
+    "radical": "凵",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "xuất hiện",
+    "vi_meaning_full": "Động từ: xuất hiện",
+    "vi_meaning_short": "xuất hiện",
+    "enMeaning": "to appear; to emerge",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备出现",
+      "开始出现",
+      "喜欢出现"
+    ],
+    "compounds": [
+      "出",
+      "现"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去出现。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chū xiàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi xuất hiện.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-75",
+    "hanzi": "出租",
+    "traditional": "出租",
+    "pinyin": "chūzū",
+    "pinyinClean": "chuzu",
+    "hanViet": "XUẤT TÔ",
+    "radical": "凵",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cho thuê",
+    "vi_meaning_full": "Động từ: cho thuê",
+    "vi_meaning_short": "cho thuê",
+    "enMeaning": "to rent out; lease",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备出租",
+      "开始出租",
+      "喜欢出租"
+    ],
+    "compounds": [
+      "出",
+      "租"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去出租。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chū zū.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cho thuê.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-77",
+    "hanzi": "船",
+    "traditional": "船",
+    "pinyin": "chuán",
+    "pinyinClean": "chuan",
+    "hanViet": "THUYỀN",
+    "radical": "舟",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thuyền, tàu",
+    "vi_meaning_full": "Danh từ: thuyền, tàu",
+    "vi_meaning_short": "thuyền, tàu",
+    "enMeaning": "boat; ship",
+    "image": "https://images.pexels.com/photos/13081817/pexels-photo-13081817.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个船",
+      "新船",
+      "好船"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的船。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de chuán.",
+        "vi": "Trên bàn có đặt một chiếc thuyền, tàu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-78",
+    "hanzi": "吹",
+    "traditional": "吹",
+    "pinyin": "chuī",
+    "pinyinClean": "chui",
+    "hanViet": "XUÝ",
+    "radical": "口",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thổi",
+    "vi_meaning_full": "Động từ: thổi",
+    "vi_meaning_short": "thổi",
+    "enMeaning": "to blow",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备吹",
+      "开始吹",
+      "喜欢吹"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去吹。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù chuī.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thổi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-79",
+    "hanzi": "春节",
+    "traditional": "春節",
+    "pinyin": "Chūnjié",
+    "pinyinClean": "chunjie",
+    "hanViet": "XUÂN TIẾT",
+    "radical": "日",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "Tết Nguyên Đán",
+    "vi_meaning_full": "Danh từ: Tết Nguyên Đán",
+    "vi_meaning_short": "Tết Nguyên Đán",
+    "enMeaning": "Spring Festival",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个春节",
+      "新春节",
+      "好春节"
+    ],
+    "compounds": [
+      "春",
+      "节"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的春节。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de chūn jié.",
+        "vi": "Trên bàn có đặt một chiếc Tết Nguyên Đán mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-80",
+    "hanzi": "春天",
+    "traditional": "春天",
+    "pinyin": "chūntiān",
+    "pinyinClean": "chuntian",
+    "hanViet": "XUÂN THIÊN",
+    "radical": "日",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mùa xuân",
+    "vi_meaning_full": "Danh từ: mùa xuân",
+    "vi_meaning_short": "mùa xuân",
+    "enMeaning": "spring (season)",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个春天",
+      "新春天",
+      "好春天"
+    ],
+    "compounds": [
+      "春",
+      "天"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的春天。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de chūn tiān.",
+        "vi": "Trên bàn có đặt một chiếc mùa xuân mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-81",
+    "hanzi": "词",
+    "traditional": "詞",
+    "pinyin": "cí",
+    "pinyinClean": "ci",
+    "hanViet": "TỪ",
+    "radical": "言",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "từ",
+    "vi_meaning_full": "Danh từ: từ",
+    "vi_meaning_short": "từ",
+    "enMeaning": "word",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个词",
+      "新词",
+      "好词"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的词。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de cí.",
+        "vi": "Trên bàn có đặt một chiếc từ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-82",
+    "hanzi": "词典",
+    "traditional": "詞典",
+    "pinyin": "cídiǎn",
+    "pinyinClean": "cidian",
+    "hanViet": "TỪ ĐIỂN",
+    "radical": "言",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "từ điển",
+    "vi_meaning_full": "Danh từ: từ điển",
+    "vi_meaning_short": "từ điển",
+    "enMeaning": "dictionary",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个词典",
+      "新词典",
+      "好词典"
+    ],
+    "compounds": [
+      "词",
+      "典"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的词典。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de cí diǎn.",
+        "vi": "Trên bàn có đặt một chiếc từ điển mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-83",
+    "hanzi": "词语",
+    "traditional": "詞語",
+    "pinyin": "cíyǔ",
+    "pinyinClean": "ciyu",
+    "hanViet": "TỪ NGỮ",
+    "radical": "言",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "từ ngữ",
+    "vi_meaning_full": "Danh từ: từ ngữ",
+    "vi_meaning_short": "từ ngữ",
+    "enMeaning": "vocabulary; words",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个词语",
+      "新词语",
+      "好词语"
+    ],
+    "compounds": [
+      "词",
+      "语"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的词语。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de cí yǔ.",
+        "vi": "Trên bàn có đặt một chiếc từ ngữ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-84",
+    "hanzi": "从小",
+    "traditional": "從小",
+    "pinyin": "cóngxiǎo",
+    "pinyinClean": "congxiao",
+    "hanViet": "TỪ TIỂU",
+    "radical": "人",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "từ nhỏ",
+    "vi_meaning_full": "Phó từ: từ nhỏ",
+    "vi_meaning_short": "từ nhỏ",
+    "enMeaning": "from childhood",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "从小好",
+      "从小去",
+      "从小看"
+    ],
+    "compounds": [
+      "从",
+      "小"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家从小准备好了，随时可以出发。",
+        "pinyin": "Dà jiā cóng xiǎo zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người từ nhỏ chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-85",
+    "hanzi": "答应",
+    "traditional": "答應",
+    "pinyin": "dāying",
+    "pinyinClean": "daying",
+    "hanViet": "ĐÁP ỨNG",
+    "radical": "竹",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đồng ý",
+    "vi_meaning_full": "Động từ: đồng ý",
+    "vi_meaning_short": "đồng ý",
+    "enMeaning": "to agree; to promise",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备答应",
+      "开始答应",
+      "喜欢答应"
+    ],
+    "compounds": [
+      "答",
+      "应"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去答应。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dā yìng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đồng ý.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-86",
+    "hanzi": "打工",
+    "traditional": "打工",
+    "pinyin": "dǎ//gōng",
+    "pinyinClean": "dagong",
+    "hanViet": "ĐẢ CÔNG",
+    "radical": "手",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "từ ngữ",
+    "viet": "làm thuê, làm thêm",
+    "vi_meaning_full": "Từ ngữ: làm thuê, làm thêm",
+    "vi_meaning_short": "làm thuê, làm th",
+    "enMeaning": "to work part-time",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说打工",
+      "用打工"
+    ],
+    "compounds": [
+      "打",
+      "工"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，打工是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, dǎ gōng shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 打工 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-87",
+    "hanzi": "打算",
+    "traditional": "打算",
+    "pinyin": "dǎ∙suàn",
+    "pinyinClean": "dasuan",
+    "hanViet": "ĐẢ TOÁN",
+    "radical": "手",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "(động) dự định, tính làm gì đó",
+    "vi_meaning_full": "Động từ: (động) dự định, tính làm gì đó",
+    "vi_meaning_short": "",
+    "enMeaning": "to plan; intention",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备打算",
+      "开始打算",
+      "喜欢打算"
+    ],
+    "compounds": [
+      "打",
+      "算"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去打算。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dǎ suàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi .",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-88",
+    "hanzi": "打印",
+    "traditional": "打印",
+    "pinyin": "dǎyìn",
+    "pinyinClean": "dayin",
+    "hanViet": "ĐẢ ẤN",
+    "radical": "手",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "in",
+    "vi_meaning_full": "Động từ: in",
+    "vi_meaning_short": "in",
+    "enMeaning": "to print",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备打印",
+      "开始打印",
+      "喜欢打印"
+    ],
+    "compounds": [
+      "打",
+      "印"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去打印。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dǎ yìn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi in.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-89",
+    "hanzi": "大部分",
+    "traditional": "大部分",
+    "pinyin": "dàbùfen",
+    "pinyinClean": "dabufen",
+    "hanViet": "ĐẠI BỘ PHÂN",
+    "radical": "大",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "từ ngữ",
+    "viet": "phần lớn",
+    "vi_meaning_full": "Từ ngữ: phần lớn",
+    "vi_meaning_short": "phần lớn",
+    "enMeaning": "most; majority",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说大部分",
+      "用大部分"
+    ],
+    "compounds": [
+      "大",
+      "部分"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，大部分是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, dà bù fèn shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 大部分 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-90",
+    "hanzi": "大大",
+    "traditional": "大大",
+    "pinyin": "dàdà",
+    "pinyinClean": "dada",
+    "hanViet": "ĐẠI ĐẠI",
+    "radical": "大",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "rất, cực kỳ",
+    "vi_meaning_full": "Phó từ: rất, cực kỳ",
+    "vi_meaning_short": "rất, cực kỳ",
+    "enMeaning": "greatly",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "大大好",
+      "大大去",
+      "大大看"
+    ],
+    "compounds": [
+      "大",
+      "大"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家大大准备好了，随时可以出发。",
+        "pinyin": "Dà jiā dà dà zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người rất, cực kỳ chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-91",
+    "hanzi": "大多数",
+    "traditional": "大多數",
+    "pinyin": "dàduōshù",
+    "pinyinClean": "daduoshu",
+    "hanViet": "ĐẠI ĐA 数",
+    "radical": "大",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đa số",
+    "vi_meaning_full": "Danh từ: đa số",
+    "vi_meaning_short": "đa số",
+    "enMeaning": "majority",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个大多数",
+      "新大多数",
+      "好大多数"
+    ],
+    "compounds": [
+      "大",
+      "多数"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的大多数。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dà duō shù.",
+        "vi": "Trên bàn có đặt một chiếc đa số mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-92",
+    "hanzi": "大海",
+    "traditional": "大海",
+    "pinyin": "dàhǎi",
+    "pinyinClean": "dahai",
+    "hanViet": "ĐẠI HẢI",
+    "radical": "大",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "biển lớn",
+    "vi_meaning_full": "Danh từ: biển lớn",
+    "vi_meaning_short": "biển lớn",
+    "enMeaning": "ocean; sea",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个大海",
+      "新大海",
+      "好大海"
+    ],
+    "compounds": [
+      "大",
+      "海"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的大海。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dà hǎi.",
+        "vi": "Trên bàn có đặt một chiếc biển lớn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-94",
+    "hanzi": "大量",
+    "traditional": "大量",
+    "pinyin": "dàliàng",
+    "pinyinClean": "daliang",
+    "hanViet": "ĐẠI LƯỢNG",
+    "radical": "大",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "số lượng lớn / rộng lượng",
+    "vi_meaning_full": "Tính từ: số lượng lớn / rộng lượng",
+    "vi_meaning_short": "số lượng lớn",
+    "enMeaning": "large amount",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常大量",
+      "很大量",
+      "真大量"
+    ],
+    "compounds": [
+      "大",
+      "量"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真大量，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn dà liàng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật số lượng lớn, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-95",
+    "hanzi": "大门",
+    "traditional": "大門",
+    "pinyin": "dàmén",
+    "pinyinClean": "damen",
+    "hanViet": "ĐẠI MÔN",
+    "radical": "大",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cổng lớn",
+    "vi_meaning_full": "Danh từ: cổng lớn",
+    "vi_meaning_short": "cổng lớn",
+    "enMeaning": "main gate",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个大门",
+      "新大门",
+      "好大门"
+    ],
+    "compounds": [
+      "大",
+      "门"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的大门。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dà mén.",
+        "vi": "Trên bàn có đặt một chiếc cổng lớn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-96",
+    "hanzi": "大人",
+    "traditional": "大人",
+    "pinyin": "dàren",
+    "pinyinClean": "daren",
+    "hanViet": "ĐẠI NHÂN",
+    "radical": "大",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "người lớn",
+    "vi_meaning_full": "Danh từ: người lớn",
+    "vi_meaning_short": "người lớn",
+    "enMeaning": "adult",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个大人",
+      "新大人",
+      "好大人"
+    ],
+    "compounds": [
+      "大",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的大人。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dà rén.",
+        "vi": "Trên bàn có đặt một chiếc người lớn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-97",
+    "hanzi": "大声",
+    "traditional": "大聲",
+    "pinyin": "dà shēng",
+    "pinyinClean": "dasheng",
+    "hanViet": "ĐẠI THANH",
+    "radical": "大",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "tiếng to, lớn tiếng",
+    "vi_meaning_full": "Phó từ: tiếng to, lớn tiếng",
+    "vi_meaning_short": "tiếng to, lớn ti",
+    "enMeaning": "loudly, loud voice",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "大声说话",
+      "大声念",
+      "大声喊"
+    ],
+    "compounds": [
+      "声音",
+      "大叫"
+    ],
+    "synonyms": [
+      "高声"
+    ],
+    "antonyms": [
+      "小声",
+      "轻声"
+    ],
+    "confusableWords": "小声",
+    "sentences": [
+      {
+        "zh": "请你大声读一下这段话。",
+        "pinyin": "Qǐng nǐ dà shēng dú yíxià zhè duàn huà.",
+        "vi": "Xin mời bạn đọc to đoạn này lên một chút.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-98",
+    "hanzi": "大小",
+    "traditional": "大小",
+    "pinyin": "dà xiǎo",
+    "pinyinClean": "daxiao",
+    "hanViet": "ĐẠI TIỂU",
+    "radical": "大",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "kích thước",
+    "vi_meaning_full": "Danh từ: kích thước",
+    "vi_meaning_short": "kích thước",
+    "enMeaning": "size",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个大小",
+      "新大小",
+      "好大小"
+    ],
+    "compounds": [
+      "大",
+      "小"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的大小。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dà xiǎo.",
+        "vi": "Trên bàn có đặt một chiếc kích thước mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-99",
+    "hanzi": "大衣",
+    "traditional": "大衣",
+    "pinyin": "dày tī",
+    "pinyinClean": "dayti",
+    "hanViet": "ĐẠI Y",
+    "radical": "大",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "áo khoác",
+    "vi_meaning_full": "Danh từ: áo khoác",
+    "vi_meaning_short": "áo khoác",
+    "enMeaning": "coat; overcoat",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个大衣",
+      "新大衣",
+      "好大衣"
+    ],
+    "compounds": [
+      "大",
+      "衣"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的大衣。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dà yī.",
+        "vi": "Trên bàn có đặt một chiếc áo khoác mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-100",
+    "hanzi": "大自然",
+    "traditional": "大自然",
+    "pinyin": "dà zì rán",
+    "pinyinClean": "daziran",
+    "hanViet": "ĐẠI TỰ NHIÊN",
+    "radical": "大",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thiên nhiên",
+    "vi_meaning_full": "Danh từ: thiên nhiên",
+    "vi_meaning_short": "thiên nhiên",
+    "enMeaning": "nature",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个大自然",
+      "新大自然",
+      "好大自然"
+    ],
+    "compounds": [
+      "大",
+      "自然"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的大自然。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dà zì rán.",
+        "vi": "Trên bàn có đặt một chiếc thiên nhiên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-101",
+    "hanzi": "带",
+    "traditional": "帶",
+    "pinyin": "dài",
+    "pinyinClean": "dai",
+    "hanViet": "ĐỚI",
+    "radical": "巾",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "mang, đem theo",
+    "vi_meaning_full": "Động từ: mang, đem theo",
+    "vi_meaning_short": "mang, đem theo",
+    "enMeaning": "to bring; to take",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备带",
+      "开始带",
+      "喜欢带"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去带。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dài.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi mang, đem theo.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-102",
+    "hanzi": "带来",
+    "traditional": "帶來",
+    "pinyin": "dài lái",
+    "pinyinClean": "dailai",
+    "hanViet": "ĐỚI LAI",
+    "radical": "巾",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "mang đến, mang lại",
+    "vi_meaning_full": "Động từ: mang đến, mang lại",
+    "vi_meaning_short": "mang đến, mang l",
+    "enMeaning": "to bring, to bring about",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "带来快乐",
+      "带来希望",
+      "带来好处"
+    ],
+    "compounds": [
+      "皮带",
+      "来去"
+    ],
+    "synonyms": [
+      "送来",
+      "致使"
+    ],
+    "antonyms": [
+      "带走"
+    ],
+    "confusableWords": "带着",
+    "sentences": [
+      {
+        "zh": "这本书给我带来了很多启发。",
+        "pinyin": "Zhè běn shū gěi wǒ dàilái le hěn duō qǐfā.",
+        "vi": "Cuốn sách này đã mang lại cho tôi rất nhiều gợi mở.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-103",
+    "hanzi": "单位",
+    "traditional": "單位",
+    "pinyin": "dān wèi",
+    "pinyinClean": "danwei",
+    "hanViet": "ĐƠN VỊ",
+    "radical": "十",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đơn vị",
+    "vi_meaning_full": "Danh từ: đơn vị",
+    "vi_meaning_short": "đơn vị",
+    "enMeaning": "unit; organization",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个单位",
+      "新单位",
+      "好单位"
+    ],
+    "compounds": [
+      "单",
+      "位"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的单位。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dān wèi.",
+        "vi": "Trên bàn có đặt một chiếc đơn vị mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-104",
+    "hanzi": "但",
+    "traditional": "但",
+    "pinyin": "dàn",
+    "pinyinClean": "dan",
+    "hanViet": "ĐÃN",
+    "radical": "人",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "nhưng",
+    "vi_meaning_full": "Liên từ: nhưng",
+    "vi_meaning_short": "nhưng",
+    "enMeaning": "but",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "但...而且...",
+      "虽然...但..."
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他但会说英语，还会说汉语。",
+        "pinyin": "Tā dàn huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy nhưng biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-106",
+    "hanzi": "蛋",
+    "traditional": "蛋",
+    "pinyin": "dàn",
+    "pinyinClean": "dan",
+    "hanViet": "蛋",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trứng",
+    "vi_meaning_full": "Danh từ: trứng",
+    "vi_meaning_short": "trứng",
+    "enMeaning": "egg",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个蛋",
+      "新蛋",
+      "好蛋"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的蛋。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dàn.",
+        "vi": "Trên bàn có đặt một chiếc trứng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-107",
+    "hanzi": "当",
+    "traditional": "當",
+    "pinyin": "dāng",
+    "pinyinClean": "dang",
+    "hanViet": "ĐƯƠNG",
+    "radical": "小",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "(động) làm, đảm nhiệm, trở thành",
+    "vi_meaning_full": "Động từ: (động) làm, đảm nhiệm, trở thành",
+    "vi_meaning_short": "",
+    "enMeaning": "to serve as; when",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备当",
+      "开始当",
+      "喜欢当"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去当。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dāng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi .",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-108",
+    "hanzi": "当时",
+    "traditional": "當時",
+    "pinyin": "dāng shí",
+    "pinyinClean": "dangshi",
+    "hanViet": "ĐƯƠNG THỜI",
+    "radical": "小",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lúc đó",
+    "vi_meaning_full": "Danh từ: lúc đó",
+    "vi_meaning_short": "lúc đó",
+    "enMeaning": "at that time",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个当时",
+      "新当时",
+      "好当时"
+    ],
+    "compounds": [
+      "当",
+      "时"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的当时。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi dí dàng shí.",
+        "vi": "Trên bàn có đặt một chiếc lúc đó mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-109",
+    "hanzi": "倒",
+    "traditional": "倒",
+    "pinyin": "dǎo",
+    "pinyinClean": "dao",
+    "hanViet": "ĐẢO",
+    "radical": "人",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "ngã, đổ / rót / đào ngược",
+    "vi_meaning_full": "Động từ: ngã, đổ / rót / đào ngược",
+    "vi_meaning_short": "ngã, đổ",
+    "enMeaning": "to fall / to pour",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备倒",
+      "开始倒",
+      "喜欢倒"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去倒。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ngã, đổ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-110",
+    "hanzi": "到处",
+    "traditional": "到處",
+    "pinyin": "dà ochù",
+    "pinyinClean": "daochu",
+    "hanViet": "到 XỨ",
+    "radical": "口",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "khắp nơi",
+    "vi_meaning_full": "Phó từ: khắp nơi",
+    "vi_meaning_short": "khắp nơi",
+    "enMeaning": "everywhere",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "到处好",
+      "到处去",
+      "到处看"
+    ],
+    "compounds": [
+      "到",
+      "处"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家到处准备好了，随时可以出发。",
+        "pinyin": "Dà jiā dào chù zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người khắp nơi chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-112",
+    "hanzi": "道",
+    "traditional": "道",
+    "pinyin": "dào",
+    "pinyinClean": "dao",
+    "hanViet": "ĐẠO",
+    "radical": "辶",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "món (lượng từ của món ăn)",
+    "vi_meaning_full": "Lượng từ: món (lượng từ của món ăn)",
+    "vi_meaning_short": "món",
+    "enMeaning": "way; method; road",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一道",
+      "两道",
+      "这道"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一道这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī dào zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một món nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-113",
+    "hanzi": "道理",
+    "traditional": "道理",
+    "pinyin": "dào lǐ",
+    "pinyinClean": "daoli",
+    "hanViet": "ĐẠO LÝ",
+    "radical": "辶",
+    "strokeCount": 23,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đạo lý, lý lẽ",
+    "vi_meaning_full": "Danh từ: đạo lý, lý lẽ",
+    "vi_meaning_short": "đạo lý, lý lẽ",
+    "enMeaning": "reason, argument, principle",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "讲道理",
+      "有道理",
+      "明白道理"
+    ],
+    "compounds": [
+      "知道",
+      "理解"
+    ],
+    "synonyms": [
+      "理智",
+      "情理"
+    ],
+    "antonyms": [
+      "歪理"
+    ],
+    "confusableWords": "道德",
+    "sentences": [
+      {
+        "zh": "他说的话很有道理。",
+        "pinyin": "Tā shuō de huà hěn yǒu dàolǐ.",
+        "vi": "Lời anh ấy nói rất có lý lẽ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-114",
+    "hanzi": "道路",
+    "traditional": "道路",
+    "pinyin": "dà olù",
+    "pinyinClean": "daolu",
+    "hanViet": "ĐẠO LỘ",
+    "radical": "辶",
+    "strokeCount": 25,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "con đường",
+    "vi_meaning_full": "Danh từ: con đường",
+    "vi_meaning_short": "con đường",
+    "enMeaning": "road; path",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个道路",
+      "新道路",
+      "好道路"
+    ],
+    "compounds": [
+      "道",
+      "路"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的道路。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dào lù.",
+        "vi": "Trên bàn có đặt một chiếc con đường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-116",
+    "hanzi": "得出",
+    "traditional": "得出",
+    "pinyin": "dé chū",
+    "pinyinClean": "dechu",
+    "hanViet": "ĐẮC XUẤT",
+    "radical": "彳",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "rút ra (kết luận)",
+    "vi_meaning_full": "Động từ: rút ra (kết luận)",
+    "vi_meaning_short": "rút ra",
+    "enMeaning": "to obtain (results)",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备得出",
+      "开始得出",
+      "喜欢得出"
+    ],
+    "compounds": [
+      "得",
+      "出"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去得出。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dé chū.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi rút ra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-117",
+    "hanzi": "的话",
+    "traditional": "的話",
+    "pinyin": "de huà",
+    "pinyinClean": "dehua",
+    "hanViet": "的 THOẠI",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "trợ từ",
+    "viet": "nếu...",
+    "vi_meaning_full": "Trợ từ: nếu...",
+    "vi_meaning_short": "nếu...",
+    "enMeaning": "if (after clause)",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说的话",
+      "用的话"
+    ],
+    "compounds": [
+      "的",
+      "话"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，的话是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, de huà shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 的话 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-119",
+    "hanzi": "灯",
+    "traditional": "燈",
+    "pinyin": "dēng",
+    "pinyinClean": "deng",
+    "hanViet": "ĐĂNG",
+    "radical": "火",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đèn",
+    "vi_meaning_full": "Danh từ: đèn",
+    "vi_meaning_short": "đèn",
+    "enMeaning": "lamp; light",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个灯",
+      "新灯",
+      "好灯"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的灯。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dēng.",
+        "vi": "Trên bàn có đặt một chiếc đèn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-121",
+    "hanzi": "等到",
+    "traditional": "等到",
+    "pinyin": "děng dào",
+    "pinyinClean": "dengdao",
+    "hanViet": "ĐẲNG 到",
+    "radical": "竹",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "giới từ",
+    "viet": "cho đến khi",
+    "vi_meaning_full": "Giới từ: cho đến khi",
+    "vi_meaning_short": "cho đến khi",
+    "enMeaning": "until; by the time",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说等到",
+      "用等到"
+    ],
+    "compounds": [
+      "等",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，等到是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, děng dào shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 等到 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-122",
+    "hanzi": "等于",
+    "traditional": "等於",
+    "pinyin": "děng yú",
+    "pinyinClean": "dengyu",
+    "hanViet": "ĐẲNG Ư",
+    "radical": "竹",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "bằng, tương ương",
+    "vi_meaning_full": "Động từ: bằng, tương ương",
+    "vi_meaning_short": "bằng, tương ương",
+    "enMeaning": "equal to",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备等于",
+      "开始等于",
+      "喜欢等于"
+    ],
+    "compounds": [
+      "等",
+      "于"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去等于。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù děng yú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi bằng, tương ương.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-123",
+    "hanzi": "低",
+    "traditional": "低",
+    "pinyin": "dī",
+    "pinyinClean": "di",
+    "hanViet": "ĐÊ",
+    "radical": "人",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thấp / cúi xuống, hạ xuống",
+    "vi_meaning_full": "Động từ: thấp / cúi xuống, hạ xuống",
+    "vi_meaning_short": "thấp",
+    "enMeaning": "low; to lower",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备低",
+      "开始低",
+      "喜欢低"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去低。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dī.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thấp.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-124",
+    "hanzi": "地球",
+    "traditional": "地球",
+    "pinyin": "dì qiú",
+    "pinyinClean": "diqiu",
+    "hanViet": "ĐỊA CẦU",
+    "radical": "土",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trái đất",
+    "vi_meaning_full": "Danh từ: trái đất",
+    "vi_meaning_short": "trái đất",
+    "enMeaning": "Earth",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个地球",
+      "新地球",
+      "好地球"
+    ],
+    "compounds": [
+      "地",
+      "球"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的地球。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dì qiú.",
+        "vi": "Trên bàn có đặt một chiếc trái đất mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-125",
+    "hanzi": "地铁",
+    "traditional": "地鐵",
+    "pinyin": "dì tiě",
+    "pinyinClean": "ditie",
+    "hanViet": "ĐỊA THIẾT",
+    "radical": "土",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tàu điện ngầm",
+    "vi_meaning_full": "Danh từ: tàu điện ngầm",
+    "vi_meaning_short": "tàu điện ngầm",
+    "enMeaning": "subway",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个地铁",
+      "新地铁",
+      "好地铁"
+    ],
+    "compounds": [
+      "地",
+      "铁"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的地铁。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dì tiě.",
+        "vi": "Trên bàn có đặt một chiếc tàu điện ngầm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-126",
+    "hanzi": "地铁站",
+    "traditional": "地鐵站",
+    "pinyin": "dì tiě zhàn",
+    "pinyinClean": "ditiezhan",
+    "hanViet": "ĐỊA THIẾT TRẠM",
+    "radical": "土",
+    "strokeCount": 26,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ga tàu điện ngầm",
+    "vi_meaning_full": "Danh từ: ga tàu điện ngầm",
+    "vi_meaning_short": "ga tàu điện ngầm",
+    "enMeaning": "subway station",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个地铁站",
+      "新地铁站",
+      "好地铁站"
+    ],
+    "compounds": [
+      "地",
+      "铁站"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的地铁站。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dì tiě zhàn.",
+        "vi": "Trên bàn có đặt một chiếc ga tàu điện ngầm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-127",
+    "hanzi": "点头",
+    "traditional": "點頭",
+    "pinyin": "diǎn // tóu",
+    "pinyinClean": "diantou",
+    "hanViet": "ĐIỂM ĐẦU",
+    "radical": "火",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "gất đầu",
+    "vi_meaning_full": "Danh từ: gất đầu",
+    "vi_meaning_short": "gất đầu",
+    "enMeaning": "to nod",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个点头",
+      "新点头",
+      "好点头"
+    ],
+    "compounds": [
+      "点",
+      "头"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的点头。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de diǎn tóu.",
+        "vi": "Trên bàn có đặt một chiếc gất đầu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-128",
+    "hanzi": "店",
+    "traditional": "店",
+    "pinyin": "diàn",
+    "pinyinClean": "dian",
+    "hanViet": "ĐIẾM",
+    "radical": "广",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cửa hàng",
+    "vi_meaning_full": "Danh từ: cửa hàng",
+    "vi_meaning_short": "cửa hàng",
+    "enMeaning": "shop; store",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个店",
+      "新店",
+      "好店"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的店。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de diàn.",
+        "vi": "Trên bàn có đặt một chiếc cửa hàng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-129",
+    "hanzi": "掉",
+    "traditional": "掉",
+    "pinyin": "diào",
+    "pinyinClean": "diao",
+    "hanViet": "TRÁO",
+    "radical": "手",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "rơi, mất",
+    "vi_meaning_full": "Động từ: rơi, mất",
+    "vi_meaning_short": "rơi, mất",
+    "enMeaning": "to fall; to lose",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备掉",
+      "开始掉",
+      "喜欢掉"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去掉。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù diào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi rơi, mất.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-130",
+    "hanzi": "东北",
+    "traditional": "東北",
+    "pinyin": "dōngběi",
+    "pinyinClean": "dongbei",
+    "hanViet": "ĐÔNG BẮC",
+    "radical": "木",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "động bắc, hướng động bắc",
+    "vi_meaning_full": "Danh từ: động bắc, hướng động bắc",
+    "vi_meaning_short": "động bắc, hướng",
+    "enMeaning": "northeast",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个东北",
+      "新东北",
+      "好东北"
+    ],
+    "compounds": [
+      "东",
+      "北"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的东北。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dōng běi.",
+        "vi": "Trên bàn có đặt một chiếc động bắc, hướng động bắc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-131",
+    "hanzi": "东方",
+    "traditional": "東方",
+    "pinyin": "dōngfāng",
+    "pinyinClean": "dongfang",
+    "hanViet": "ĐÔNG PHƯƠNG",
+    "radical": "木",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phía đông, phương đông",
+    "vi_meaning_full": "Danh từ: phía đông, phương đông",
+    "vi_meaning_short": "phía đông, phươn",
+    "enMeaning": "east; the East",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个东方",
+      "新东方",
+      "好东方"
+    ],
+    "compounds": [
+      "东",
+      "方"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的东方。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dōng fāng.",
+        "vi": "Trên bàn có đặt một chiếc phía đông, phương đông mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-132",
+    "hanzi": "东南",
+    "traditional": "東南",
+    "pinyin": "dōngnán",
+    "pinyinClean": "dongnan",
+    "hanViet": "ĐÔNG NAM",
+    "radical": "木",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đông nam, hướng động nam",
+    "vi_meaning_full": "Danh từ: đông nam, hướng động nam",
+    "vi_meaning_short": "đông nam, hướng",
+    "enMeaning": "southeast",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个东南",
+      "新东南",
+      "好东南"
+    ],
+    "compounds": [
+      "东",
+      "南"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的东南。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dōng nán.",
+        "vi": "Trên bàn có đặt một chiếc đông nam, hướng động nam mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-133",
+    "hanzi": "冬天",
+    "traditional": "冬天",
+    "pinyin": "dōngtiān",
+    "pinyinClean": "dongtian",
+    "hanViet": "ĐÔNG THIÊN",
+    "radical": "冫",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mùa đông",
+    "vi_meaning_full": "Danh từ: mùa đông",
+    "vi_meaning_short": "mùa đông",
+    "enMeaning": "winter",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个冬天",
+      "新冬天",
+      "好冬天"
+    ],
+    "compounds": [
+      "冬",
+      "天"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的冬天。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dōng tiān.",
+        "vi": "Trên bàn có đặt một chiếc mùa đông mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-135",
+    "hanzi": "懂得",
+    "traditional": "懂得",
+    "pinyin": "dǒngde",
+    "pinyinClean": "dongde",
+    "hanViet": "ĐỔNG ĐẮC",
+    "radical": "心",
+    "strokeCount": 26,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "biết, hiểu được",
+    "vi_meaning_full": "Động từ: biết, hiểu được",
+    "vi_meaning_short": "biết, hiểu được",
+    "enMeaning": "to understand; know",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备懂得",
+      "开始懂得",
+      "喜欢懂得"
+    ],
+    "compounds": [
+      "懂",
+      "得"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去懂得。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù dǒng de.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi biết, hiểu được.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-136",
+    "hanzi": "动物",
+    "traditional": "動物",
+    "pinyin": "dòngwù",
+    "pinyinClean": "dongwu",
+    "hanViet": "ĐỘNG VẬT",
+    "radical": "力",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "động vật",
+    "vi_meaning_full": "Danh từ: động vật",
+    "vi_meaning_short": "động vật",
+    "enMeaning": "animal",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个动物",
+      "新动物",
+      "好动物"
+    ],
+    "compounds": [
+      "动",
+      "物"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的动物。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dòng wù.",
+        "vi": "Trên bàn có đặt một chiếc động vật mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-137",
+    "hanzi": "动物园",
+    "traditional": "動物園",
+    "pinyin": "dòngwùyuán",
+    "pinyinClean": "dongwuyuan",
+    "hanViet": "ĐỘNG VẬT VIÊN",
+    "radical": "力",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "sở thú",
+    "vi_meaning_full": "Danh từ: sở thú",
+    "vi_meaning_short": "sở thú",
+    "enMeaning": "zoo",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个动物园",
+      "新动物园",
+      "好动物园"
+    ],
+    "compounds": [
+      "动",
+      "物园"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的动物园。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dòng wù yuán.",
+        "vi": "Trên bàn có đặt một chiếc sở thú mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-138",
+    "hanzi": "读音",
+    "traditional": "讀音",
+    "pinyin": "dúyīn",
+    "pinyinClean": "duyin",
+    "hanViet": "ĐỘC ÂM",
+    "radical": "言",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cách đọc",
+    "vi_meaning_full": "Danh từ: cách đọc",
+    "vi_meaning_short": "cách đọc",
+    "enMeaning": "pronunciation",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个读音",
+      "新读音",
+      "好读音"
+    ],
+    "compounds": [
+      "读",
+      "音"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的读音。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de dú yīn.",
+        "vi": "Trên bàn có đặt một chiếc cách đọc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-140",
+    "hanzi": "短",
+    "traditional": "短",
+    "pinyin": "duǎn",
+    "pinyinClean": "duan",
+    "hanViet": "ĐOẢN",
+    "radical": "矢",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "ngắn",
+    "vi_meaning_full": "Tính từ: ngắn",
+    "vi_meaning_short": "ngắn",
+    "enMeaning": "short",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常短",
+      "很短",
+      "真短"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真短，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn duǎn, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật ngắn, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-141",
+    "hanzi": "短信",
+    "traditional": "短信",
+    "pinyin": "duǎnxìn",
+    "pinyinClean": "duanxin",
+    "hanViet": "ĐOẢN TÍN",
+    "radical": "矢",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tin nhắn",
+    "vi_meaning_full": "Danh từ: tin nhắn",
+    "vi_meaning_short": "tin nhắn",
+    "enMeaning": "SMS; text message",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个短信",
+      "新短信",
+      "好短信"
+    ],
+    "compounds": [
+      "短",
+      "信"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的短信。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de duǎn xìn.",
+        "vi": "Trên bàn có đặt một chiếc tin nhắn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-142",
+    "hanzi": "段",
+    "traditional": "段",
+    "pinyin": "duàn",
+    "pinyinClean": "duan",
+    "hanViet": "ĐOẠN",
+    "radical": "殳",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "đoạn, khúc",
+    "vi_meaning_full": "Lượng từ: đoạn, khúc",
+    "vi_meaning_short": "đoạn, khúc",
+    "enMeaning": "section; paragraph",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一段",
+      "两段",
+      "这段"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一段这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī duàn zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một đoạn, khúc nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-143",
+    "hanzi": "队",
+    "traditional": "隊",
+    "pinyin": "duì",
+    "pinyinClean": "dui",
+    "hanViet": "ĐỘI",
+    "radical": "阝",
+    "strokeCount": 4,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đội",
+    "vi_meaning_full": "Danh từ: đội",
+    "vi_meaning_short": "đội",
+    "enMeaning": "team",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个队",
+      "新队",
+      "好队"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的队。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de duì.",
+        "vi": "Trên bàn có đặt một chiếc đội mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-144",
+    "hanzi": "队长",
+    "traditional": "隊長",
+    "pinyin": "duìzhǎng",
+    "pinyinClean": "duizhang",
+    "hanViet": "ĐỘI TRƯỞNG",
+    "radical": "阝",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đội trưởng",
+    "vi_meaning_full": "Danh từ: đội trưởng",
+    "vi_meaning_short": "đội trưởng",
+    "enMeaning": "team captain",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个队长",
+      "新队长",
+      "好队长"
+    ],
+    "compounds": [
+      "队",
+      "长"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的队长。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de duì zhǎng.",
+        "vi": "Trên bàn có đặt một chiếc đội trưởng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-146",
+    "hanzi": "对话",
+    "traditional": "對話",
+    "pinyin": "duìhuà",
+    "pinyinClean": "duihua",
+    "hanViet": "ĐỐI THOẠI",
+    "radical": "寸",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "đối thoại, trò chuyện cuộc đổi thoại, đoạn hội thoại",
+    "vi_meaning_full": "Danh từ / động từ: đối thoại, trò chuyện cuộc đổi thoại, đoạn hội thoại",
+    "vi_meaning_short": "đối thoại, trò c",
+    "enMeaning": "dialogue; conversation",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备对话",
+      "开始对话",
+      "喜欢对话"
+    ],
+    "compounds": [
+      "对",
+      "话"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去对话。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù duì huà.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đối thoại, trò chuyện cuộc đổi thoại, đoạn hội thoại.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-147",
+    "hanzi": "对面",
+    "traditional": "對面",
+    "pinyin": "duìmiàn",
+    "pinyinClean": "duimian",
+    "hanViet": "ĐỐI DIỆN",
+    "radical": "寸",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đối diện",
+    "vi_meaning_full": "Danh từ: đối diện",
+    "vi_meaning_short": "đối diện",
+    "enMeaning": "opposite side",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个对面",
+      "新对面",
+      "好对面"
+    ],
+    "compounds": [
+      "对",
+      "面"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的对面。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de duì miàn.",
+        "vi": "Trên bàn có đặt một chiếc đối diện mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-149",
+    "hanzi": "多久",
+    "traditional": "多久",
+    "pinyin": "duōjiǔ",
+    "pinyinClean": "duojiu",
+    "hanViet": "ĐA CỬU",
+    "radical": "夕",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "bao lâu",
+    "vi_meaning_full": "Đại từ: bao lâu",
+    "vi_meaning_short": "bao lâu",
+    "enMeaning": "how long",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说多久",
+      "用多久"
+    ],
+    "compounds": [
+      "多",
+      "久"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，多久是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, duō jiǔ shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 多久 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-150",
+    "hanzi": "多么",
+    "traditional": "多麼",
+    "pinyin": "duōme",
+    "pinyinClean": "duome",
+    "hanViet": "ĐA 么",
+    "radical": "夕",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "biết bao, đến mức nào",
+    "vi_meaning_full": "Phó từ: biết bao, đến mức nào",
+    "vi_meaning_short": "biết bao, đến mứ",
+    "enMeaning": "how (wonderful, etc.)",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "多么好",
+      "多么去",
+      "多么看"
+    ],
+    "compounds": [
+      "多",
+      "么"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家多么准备好了，随时可以出发。",
+        "pinyin": "Dà jiā duō me zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người biết bao, đến mức nào chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-151",
+    "hanzi": "多数",
+    "traditional": "多數",
+    "pinyin": "duōshù",
+    "pinyinClean": "duoshu",
+    "hanViet": "ĐA 数",
+    "radical": "夕",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đa số",
+    "vi_meaning_full": "Danh từ: đa số",
+    "vi_meaning_short": "đa số",
+    "enMeaning": "majority",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个多数",
+      "新多数",
+      "好多数"
+    ],
+    "compounds": [
+      "多",
+      "数"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的多数。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de duō shù.",
+        "vi": "Trên bàn có đặt một chiếc đa số mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-152",
+    "hanzi": "多云",
+    "traditional": "多雲",
+    "pinyin": "duōyún",
+    "pinyinClean": "duoyun",
+    "hanViet": "ĐA 云",
+    "radical": "夕",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nhiều mây",
+    "vi_meaning_full": "Danh từ: nhiều mây",
+    "vi_meaning_short": "nhiều mây",
+    "enMeaning": "cloudy",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个多云",
+      "新多云",
+      "好多云"
+    ],
+    "compounds": [
+      "多",
+      "云"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的多云。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de duō yún.",
+        "vi": "Trên bàn có đặt một chiếc nhiều mây mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-153",
+    "hanzi": "而且",
+    "traditional": "而且",
+    "pinyin": "érqiě",
+    "pinyinClean": "erqie",
+    "hanViet": "NHI THẢ",
+    "radical": "而",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "hơn nữa",
+    "vi_meaning_full": "Liên từ: hơn nữa",
+    "vi_meaning_short": "hơn nữa",
+    "enMeaning": "and also; moreover",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "而且...而且...",
+      "虽然...而且..."
+    ],
+    "compounds": [
+      "而",
+      "且"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他而且会说英语，还会说汉语。",
+        "pinyin": "Tā ér qiě huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy hơn nữa biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-154",
+    "hanzi": "发",
+    "traditional": "發",
+    "pinyin": "fā",
+    "pinyinClean": "fa",
+    "hanViet": "PHÁT",
+    "radical": "又",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "phát ra, gửi",
+    "vi_meaning_full": "Động từ: phát ra, gửi",
+    "vi_meaning_short": "phát ra, gửi",
+    "enMeaning": "to send out",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备发",
+      "开始发",
+      "喜欢发"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去发。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù fā.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi phát ra, gửi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-155",
+    "hanzi": "发现",
+    "traditional": "發現",
+    "pinyin": "fāxiàn",
+    "pinyinClean": "faxian",
+    "hanViet": "PHÁT HIỆN",
+    "radical": "又",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phát hiện, nhận ra sự phát hiện",
+    "vi_meaning_full": "Danh từ: phát hiện, nhận ra sự phát hiện",
+    "vi_meaning_short": "phát hiện, nhận",
+    "enMeaning": "to discover; find",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个发现",
+      "新发现",
+      "好发现"
+    ],
+    "compounds": [
+      "发",
+      "现"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的发现。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de fā xiàn.",
+        "vi": "Trên bàn có đặt một chiếc phát hiện, nhận ra sự phát hiện mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-156",
+    "hanzi": "饭馆",
+    "traditional": "飯館",
+    "pinyin": "fànguǎn",
+    "pinyinClean": "fanguan",
+    "hanViet": "PHẠN QUÁN",
+    "radical": "食",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "quán ăn",
+    "vi_meaning_full": "Danh từ: quán ăn",
+    "vi_meaning_short": "quán ăn",
+    "enMeaning": "restaurant",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个饭馆",
+      "新饭馆",
+      "好饭馆"
+    ],
+    "compounds": [
+      "饭",
+      "馆"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的饭馆。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de fàn guǎn.",
+        "vi": "Trên bàn có đặt một chiếc quán ăn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-157",
+    "hanzi": "方便",
+    "traditional": "方便",
+    "pinyin": "fāngbiàn",
+    "pinyinClean": "fangbian",
+    "hanViet": "PHƯƠNG TIỆN",
+    "radical": "方",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "tiện lợi",
+    "vi_meaning_full": "Tính từ: tiện lợi",
+    "vi_meaning_short": "tiện lợi",
+    "enMeaning": "convenient",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常方便",
+      "很方便",
+      "真方便"
+    ],
+    "compounds": [
+      "方",
+      "便"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真方便，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn fāng biàn, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật tiện lợi, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-158",
+    "hanzi": "方便面",
+    "traditional": "方便麪",
+    "pinyin": "fāngbiànmiàn",
+    "pinyinClean": "fangbianmian",
+    "hanViet": "PHƯƠNG TIỆN DIỆN",
+    "radical": "方",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mì ăn liền",
+    "vi_meaning_full": "Danh từ: mì ăn liền",
+    "vi_meaning_short": "mì ăn liền",
+    "enMeaning": "instant noodles",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个方便面",
+      "新方便面",
+      "好方便面"
+    ],
+    "compounds": [
+      "方",
+      "便面"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的方便面。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de fāng biàn miàn.",
+        "vi": "Trên bàn có đặt một chiếc mì ăn liền mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-159",
+    "hanzi": "方法",
+    "traditional": "方法",
+    "pinyin": "fāngfǎ",
+    "pinyinClean": "fangfa",
+    "hanViet": "PHƯƠNG PHÁP",
+    "radical": "方",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phương pháp",
+    "vi_meaning_full": "Danh từ: phương pháp",
+    "vi_meaning_short": "phương pháp",
+    "enMeaning": "method; way",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个方法",
+      "新方法",
+      "好方法"
+    ],
+    "compounds": [
+      "方",
+      "法"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的方法。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de fāng fǎ.",
+        "vi": "Trên bàn có đặt một chiếc phương pháp mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-160",
+    "hanzi": "方面",
+    "traditional": "方面",
+    "pinyin": "fāngmiàn",
+    "pinyinClean": "fangmian",
+    "hanViet": "PHƯƠNG DIỆN",
+    "radical": "方",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phương diện",
+    "vi_meaning_full": "Danh từ: phương diện",
+    "vi_meaning_short": "phương diện",
+    "enMeaning": "aspect; side",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个方面",
+      "新方面",
+      "好方面"
+    ],
+    "compounds": [
+      "方",
+      "面"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的方面。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de fāng miàn.",
+        "vi": "Trên bàn có đặt một chiếc phương diện mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-161",
+    "hanzi": "方向",
+    "traditional": "方向",
+    "pinyin": "fāngxiàng",
+    "pinyinClean": "fangxiang",
+    "hanViet": "PHƯƠNG 向",
+    "radical": "方",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phương hướng",
+    "vi_meaning_full": "Danh từ: phương hướng",
+    "vi_meaning_short": "phương hướng",
+    "enMeaning": "direction",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个方向",
+      "新方向",
+      "好方向"
+    ],
+    "compounds": [
+      "方",
+      "向"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的方向。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de fāng xiàng.",
+        "vi": "Trên bàn có đặt một chiếc phương hướng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-162",
+    "hanzi": "放下",
+    "traditional": "放下",
+    "pinyin": "fàngxia",
+    "pinyinClean": "fangxia",
+    "hanViet": "放 下",
+    "radical": "口",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đặt xuống, buông xuống",
+    "vi_meaning_full": "Động từ: đặt xuống, buông xuống",
+    "vi_meaning_short": "đặt xuống, buông",
+    "enMeaning": "to put down",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备放下",
+      "开始放下",
+      "喜欢放下"
+    ],
+    "compounds": [
+      "放",
+      "下"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去放下。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù fàng xià.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đặt xuống, buông xuống.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-163",
+    "hanzi": "放心",
+    "traditional": "放心",
+    "pinyin": "fàng//xīn",
+    "pinyinClean": "fangxin",
+    "hanViet": "放 TÂM",
+    "radical": "口",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "yên tâm",
+    "vi_meaning_full": "Động từ: yên tâm",
+    "vi_meaning_short": "yên tâm",
+    "enMeaning": "to rest assured",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备放心",
+      "开始放心",
+      "喜欢放心"
+    ],
+    "compounds": [
+      "放",
+      "心"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去放心。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù fàng xīn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi yên tâm.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-165",
+    "hanzi": "分开",
+    "traditional": "分開",
+    "pinyin": "fēn//kāi",
+    "pinyinClean": "fenkai",
+    "hanViet": "PHÂN KHAI",
+    "radical": "刀",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tách ra, chia ra",
+    "vi_meaning_full": "Động từ: tách ra, chia ra",
+    "vi_meaning_short": "tách ra, chia ra",
+    "enMeaning": "to separate",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备分开",
+      "开始分开",
+      "喜欢分开"
+    ],
+    "compounds": [
+      "分",
+      "开"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去分开。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù fēn kāi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tách ra, chia ra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-166",
+    "hanzi": "分数",
+    "traditional": "分數",
+    "pinyin": "fēnshù",
+    "pinyinClean": "fenshu",
+    "hanViet": "PHÂN 数",
+    "radical": "刀",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "điểm số, phân số",
+    "vi_meaning_full": "Danh từ: điểm số, phân số",
+    "vi_meaning_short": "điểm số, phân số",
+    "enMeaning": "score; grade",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个分数",
+      "新分数",
+      "好分数"
+    ],
+    "compounds": [
+      "分",
+      "数"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的分数。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de fēn shù.",
+        "vi": "Trên bàn có đặt một chiếc điểm số, phân số mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-168",
+    "hanzi": "份",
+    "traditional": "份",
+    "pinyin": "fèn",
+    "pinyinClean": "fen",
+    "hanViet": "份",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "suất, phần",
+    "vi_meaning_full": "Lượng từ: suất, phần",
+    "vi_meaning_short": "suất, phần",
+    "enMeaning": "portion; share",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一份",
+      "两份",
+      "这份"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一份这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī fèn zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một suất, phần nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-169",
+    "hanzi": "封",
+    "traditional": "封",
+    "pinyin": "fēng",
+    "pinyinClean": "feng",
+    "hanViet": "封",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "lá (thư)",
+    "vi_meaning_full": "Lượng từ: lá (thư)",
+    "vi_meaning_short": "lá",
+    "enMeaning": "measure word for letters",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一封",
+      "两封",
+      "这封"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一封这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī fēng zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một lá nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-170",
+    "hanzi": "服务",
+    "traditional": "服務",
+    "pinyin": "fúwù",
+    "pinyinClean": "fuwu",
+    "hanViet": "服 务",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "phục vụ / dịch vụ, sự phục vụ",
+    "vi_meaning_full": "Danh từ / động từ: phục vụ / dịch vụ, sự phục vụ",
+    "vi_meaning_short": "phục vụ",
+    "enMeaning": "service; to serve",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备服务",
+      "开始服务",
+      "喜欢服务"
+    ],
+    "compounds": [
+      "服",
+      "务"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去服务。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù fú wù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi phục vụ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-171",
+    "hanzi": "复习",
+    "traditional": "複習",
+    "pinyin": "fùxí",
+    "pinyinClean": "fuxi",
+    "hanViet": "PHỤC 习",
+    "radical": "夂",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "ôn tập",
+    "vi_meaning_full": "Động từ: ôn tập",
+    "vi_meaning_short": "ôn tập",
+    "enMeaning": "to review",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备复习",
+      "开始复习",
+      "喜欢复习"
+    ],
+    "compounds": [
+      "复",
+      "习"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去复习。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù fù xí.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ôn tập.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-172",
+    "hanzi": "该",
+    "traditional": "該",
+    "pinyin": "gāi",
+    "pinyinClean": "gai",
+    "hanViet": "该",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nên",
+    "vi_meaning_full": "Động từ: nên",
+    "vi_meaning_short": "nên",
+    "enMeaning": "should; ought to",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备该",
+      "开始该",
+      "喜欢该"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去该。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gāi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nên.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-173",
+    "hanzi": "改",
+    "traditional": "改",
+    "pinyin": "gǎi",
+    "pinyinClean": "gai",
+    "hanViet": "CẢI",
+    "radical": "攵",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "sửa, thay đổi",
+    "vi_meaning_full": "Động từ: sửa, thay đổi",
+    "vi_meaning_short": "sửa, thay đổi",
+    "enMeaning": "to change; correct",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备改",
+      "开始改",
+      "喜欢改"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去改。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gǎi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi sửa, thay đổi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-174",
+    "hanzi": "改变",
+    "traditional": "改變",
+    "pinyin": "gǎibiàn",
+    "pinyinClean": "gaibian",
+    "hanViet": "CẢI BIẾN",
+    "radical": "攵",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "thay đổi, biến đổi / sự thay đổi, sự biến đổi",
+    "vi_meaning_full": "Danh từ / động từ: thay đổi, biến đổi / sự thay đổi, sự biến đổi",
+    "vi_meaning_short": "thay đổi, biến đ",
+    "enMeaning": "to alter; change",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备改变",
+      "开始改变",
+      "喜欢改变"
+    ],
+    "compounds": [
+      "改",
+      "变"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去改变。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gǎi biàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thay đổi, biến đổi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-175",
+    "hanzi": "干杯",
+    "traditional": "乾杯",
+    "pinyin": "gān//bēi",
+    "pinyinClean": "ganbei",
+    "hanViet": "CAN BÔI",
+    "radical": "干",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cạn ly",
+    "vi_meaning_full": "Động từ: cạn ly",
+    "vi_meaning_short": "cạn ly",
+    "enMeaning": "cheers; toast",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备干杯",
+      "开始干杯",
+      "喜欢干杯"
+    ],
+    "compounds": [
+      "干",
+      "杯"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去干杯。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gān bēi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cạn ly.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-176",
+    "hanzi": "感到",
+    "traditional": "感到",
+    "pinyin": "gǎndào",
+    "pinyinClean": "gandao",
+    "hanViet": "CẢM 到",
+    "radical": "心",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cảm thấy",
+    "vi_meaning_full": "Động từ: cảm thấy",
+    "vi_meaning_short": "cảm thấy",
+    "enMeaning": "to feel; sense",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备感到",
+      "开始感到",
+      "喜欢感到"
+    ],
+    "compounds": [
+      "感",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去感到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gǎn dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cảm thấy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-177",
+    "hanzi": "感动",
+    "traditional": "感動",
+    "pinyin": "gǎndòng",
+    "pinyinClean": "gandong",
+    "hanViet": "CẢM ĐỘNG",
+    "radical": "心",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cảm động, xúc động / làm cho cảm động",
+    "vi_meaning_full": "Động từ: cảm động, xúc động / làm cho cảm động",
+    "vi_meaning_short": "cảm động, xúc độ",
+    "enMeaning": "moved; touched",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备感动",
+      "开始感动",
+      "喜欢感动"
+    ],
+    "compounds": [
+      "感",
+      "动"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去感动。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gǎn dòng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cảm động, xúc động.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-178",
+    "hanzi": "感觉",
+    "traditional": "感覺",
+    "pinyin": "gǎnjué",
+    "pinyinClean": "ganjue",
+    "hanViet": "CẢM 觉",
+    "radical": "心",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "cảm thấy / cảm giác",
+    "vi_meaning_full": "Danh từ / động từ: cảm thấy / cảm giác",
+    "vi_meaning_short": "cảm thấy",
+    "enMeaning": "feeling; sensation",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备感觉",
+      "开始感觉",
+      "喜欢感觉"
+    ],
+    "compounds": [
+      "感",
+      "觉"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去感觉。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gǎn jué.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cảm thấy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-179",
+    "hanzi": "感谢",
+    "traditional": "感謝",
+    "pinyin": "gǎnxiè",
+    "pinyinClean": "ganxie",
+    "hanViet": "CẢM 谢",
+    "radical": "心",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cảm ơn",
+    "vi_meaning_full": "Động từ: cảm ơn",
+    "vi_meaning_short": "cảm ơn",
+    "enMeaning": "thankful; gratitude",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备感谢",
+      "开始感谢",
+      "喜欢感谢"
+    ],
+    "compounds": [
+      "感",
+      "谢"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去感谢。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gǎn xiè.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cảm ơn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-180",
+    "hanzi": "干活儿",
+    "traditional": "幹活兒",
+    "pinyin": "gàn//huór",
+    "pinyinClean": "ganhuor",
+    "hanViet": "CAN HOẠT NHI",
+    "radical": "干",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "làm việc",
+    "vi_meaning_full": "Động từ: làm việc",
+    "vi_meaning_short": "làm việc",
+    "enMeaning": "to work; do labor",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备干活儿",
+      "开始干活儿",
+      "喜欢干活儿"
+    ],
+    "compounds": [
+      "干",
+      "活儿"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去干活儿。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gàn huó ér.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi làm việc.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-181",
+    "hanzi": "刚",
+    "traditional": "剛",
+    "pinyin": "gāng",
+    "pinyinClean": "gang",
+    "hanViet": "CANG",
+    "radical": "刀",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "vừa, mới",
+    "vi_meaning_full": "Phó từ: vừa, mới",
+    "vi_meaning_short": "vừa, mới",
+    "enMeaning": "just now",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "刚好",
+      "刚去",
+      "刚看"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家刚准备好了，随时可以出发。",
+        "pinyin": "Dà jiā gāng zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người vừa, mới chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-182",
+    "hanzi": "刚才",
+    "traditional": "剛纔",
+    "pinyin": "gāngcái",
+    "pinyinClean": "gangcai",
+    "hanViet": "CANG TÀI",
+    "radical": "刀",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "vừa nảy",
+    "vi_meaning_full": "Danh từ: vừa nảy",
+    "vi_meaning_short": "vừa nảy",
+    "enMeaning": "just a moment ago",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个刚才",
+      "新刚才",
+      "好刚才"
+    ],
+    "compounds": [
+      "刚",
+      "才"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的刚才。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de gāng cái.",
+        "vi": "Trên bàn có đặt một chiếc vừa nảy mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-183",
+    "hanzi": "刚刚",
+    "traditional": "剛剛",
+    "pinyin": "gānggāng",
+    "pinyinClean": "ganggang",
+    "hanViet": "CANG CANG",
+    "radical": "刀",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "vừa mới, mới xong",
+    "vi_meaning_full": "Phó từ: vừa mới, mới xong",
+    "vi_meaning_short": "vừa mới, mới xon",
+    "enMeaning": "just now",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "刚刚好",
+      "刚刚去",
+      "刚刚看"
+    ],
+    "compounds": [
+      "刚",
+      "刚"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家刚刚准备好了，随时可以出发。",
+        "pinyin": "Dà jiā gāng gāng zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người vừa mới, mới xong chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-184",
+    "hanzi": "高级",
+    "traditional": "高級",
+    "pinyin": "gāojí",
+    "pinyinClean": "gaoji",
+    "hanViet": "CAO CẤP",
+    "radical": "高",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "cao cấp",
+    "vi_meaning_full": "Tính từ: cao cấp",
+    "vi_meaning_short": "cao cấp",
+    "enMeaning": "high grade; advanced",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常高级",
+      "很高级",
+      "真高级"
+    ],
+    "compounds": [
+      "高",
+      "级"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真高级，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn gāo jí, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật cao cấp, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-185",
+    "hanzi": "高中",
+    "traditional": "高中",
+    "pinyin": "gāozhōng",
+    "pinyinClean": "gaozhong",
+    "hanViet": "CAO TRUNG",
+    "radical": "高",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trung học phổ thông",
+    "vi_meaning_full": "Danh từ: trung học phổ thông",
+    "vi_meaning_short": "trung học phổ th",
+    "enMeaning": "high school",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个高中",
+      "新高中",
+      "好高中"
+    ],
+    "compounds": [
+      "高",
+      "中"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的高中。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de gāo zhōng.",
+        "vi": "Trên bàn có đặt một chiếc trung học phổ thông mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-186",
+    "hanzi": "个子",
+    "traditional": "個子",
+    "pinyin": "gèzi",
+    "pinyinClean": "gezi",
+    "hanViet": "CÁ TỬ",
+    "radical": "人",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chiều cao",
+    "vi_meaning_full": "Danh từ: chiều cao",
+    "vi_meaning_short": "chiều cao",
+    "enMeaning": "height; stature",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个个子",
+      "新个子",
+      "好个子"
+    ],
+    "compounds": [
+      "个",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的个子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de gè zi.",
+        "vi": "Trên bàn có đặt một chiếc chiều cao mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-189",
+    "hanzi": "公交车",
+    "traditional": "公交車",
+    "pinyin": "gōngjiāochē",
+    "pinyinClean": "gongjiaoche",
+    "hanViet": "CÔNG GIAO XA",
+    "radical": "八",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "xe buýt công cộng",
+    "vi_meaning_full": "Danh từ: xe buýt công cộng",
+    "vi_meaning_short": "xe buýt công cộn",
+    "enMeaning": "public bus",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个公交车",
+      "新公交车",
+      "好公交车"
+    ],
+    "compounds": [
+      "公",
+      "交车"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的公交车。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de gōng jiāo chē.",
+        "vi": "Trên bàn có đặt một chiếc xe buýt công cộng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-191",
+    "hanzi": "公里",
+    "traditional": "公里",
+    "pinyin": "gōnglǐ",
+    "pinyinClean": "gongli",
+    "hanViet": "CÔNG 里",
+    "radical": "八",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "kilômét",
+    "vi_meaning_full": "Lượng từ: kilômét",
+    "vi_meaning_short": "kilômét",
+    "enMeaning": "kilometer",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一公里",
+      "两公里",
+      "这公里"
+    ],
+    "compounds": [
+      "公",
+      "里"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一公里这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī gōng lǐ zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một kilômét nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-192",
+    "hanzi": "公路",
+    "traditional": "公路",
+    "pinyin": "gōnglù",
+    "pinyinClean": "gonglu",
+    "hanViet": "CÔNG LỘ",
+    "radical": "八",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đường bộ",
+    "vi_meaning_full": "Danh từ: đường bộ",
+    "vi_meaning_short": "đường bộ",
+    "enMeaning": "highway; road",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个公路",
+      "新公路",
+      "好公路"
+    ],
+    "compounds": [
+      "公",
+      "路"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的公路。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de gōng lù.",
+        "vi": "Trên bàn có đặt một chiếc đường bộ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-193",
+    "hanzi": "公平",
+    "traditional": "公平",
+    "pinyin": "gōngpíng",
+    "pinyinClean": "gongping",
+    "hanViet": "CÔNG BÌNH",
+    "radical": "八",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "công bằng",
+    "vi_meaning_full": "Tính từ: công bằng",
+    "vi_meaning_short": "công bằng",
+    "enMeaning": "fair; impartial",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常公平",
+      "很公平",
+      "真公平"
+    ],
+    "compounds": [
+      "公",
+      "平"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真公平，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn gōng píng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật công bằng, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-195",
+    "hanzi": "公园",
+    "traditional": "公園",
+    "pinyin": "gōngyuán",
+    "pinyinClean": "gongyuan",
+    "hanViet": "CÔNG VIÊN",
+    "radical": "八",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "công viên",
+    "vi_meaning_full": "Danh từ: công viên",
+    "vi_meaning_short": "công viên",
+    "enMeaning": "park",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个公园",
+      "新公园",
+      "好公园"
+    ],
+    "compounds": [
+      "公",
+      "园"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的公园。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de gōng yuán.",
+        "vi": "Trên bàn có đặt một chiếc công viên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-197",
+    "hanzi": "够",
+    "traditional": "夠",
+    "pinyin": "gòu",
+    "pinyinClean": "gou",
+    "hanViet": "CẤU",
+    "radical": "夕",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đủ, đạt đến mức / đủ ... (nhấn mạnh mức độ)",
+    "vi_meaning_full": "Động từ: đủ, đạt đến mức / đủ ... (nhấn mạnh mức độ)",
+    "vi_meaning_short": "đủ, đạt đến mức",
+    "enMeaning": "enough",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备够",
+      "开始够",
+      "喜欢够"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去够。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù gòu.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đủ, đạt đến mức.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-198",
+    "hanzi": "故事",
+    "traditional": "故事",
+    "pinyin": "gùshi",
+    "pinyinClean": "gushi",
+    "hanViet": "CỐ 事",
+    "radical": "攵",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "câu chuyện",
+    "vi_meaning_full": "Danh từ: câu chuyện",
+    "vi_meaning_short": "câu chuyện",
+    "enMeaning": "story",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个故事",
+      "新故事",
+      "好故事"
+    ],
+    "compounds": [
+      "故",
+      "事"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的故事。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de gù shì.",
+        "vi": "Trên bàn có đặt một chiếc câu chuyện mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-199",
+    "hanzi": "故意",
+    "traditional": "故意",
+    "pinyin": "gùyì",
+    "pinyinClean": "guyi",
+    "hanViet": "CỐ Ý",
+    "radical": "攵",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "cố ý",
+    "vi_meaning_full": "Phó từ: cố ý",
+    "vi_meaning_short": "cố ý",
+    "enMeaning": "intentionally; on purpose",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "故意好",
+      "故意去",
+      "故意看"
+    ],
+    "compounds": [
+      "故",
+      "意"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家故意准备好了，随时可以出发。",
+        "pinyin": "Dà jiā gù yì zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người cố ý chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-200",
+    "hanzi": "顾客",
+    "traditional": "顧客",
+    "pinyin": "gùkè",
+    "pinyinClean": "guke",
+    "hanViet": "顾 KHÁCH",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khách hàng",
+    "vi_meaning_full": "Danh từ: khách hàng",
+    "vi_meaning_short": "khách hàng",
+    "enMeaning": "customer; client",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个顾客",
+      "新顾客",
+      "好顾客"
+    ],
+    "compounds": [
+      "顾",
+      "客"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的顾客。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de gù kè.",
+        "vi": "Trên bàn có đặt một chiếc khách hàng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-201",
+    "hanzi": "关机",
+    "traditional": "關機",
+    "pinyin": "guān//jī",
+    "pinyinClean": "guanji",
+    "hanViet": "QUAN CƠ",
+    "radical": "八",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tất máy, tất nguồn",
+    "vi_meaning_full": "Động từ: tất máy, tất nguồn",
+    "vi_meaning_short": "tất máy, tất ngu",
+    "enMeaning": "to turn off phone",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备关机",
+      "开始关机",
+      "喜欢关机"
+    ],
+    "compounds": [
+      "关",
+      "机"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去关机。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù guān jī.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tất máy, tất nguồn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-202",
+    "hanzi": "关心",
+    "traditional": "關心",
+    "pinyin": "guānxīn",
+    "pinyinClean": "guanxin",
+    "hanViet": "QUAN TÂM",
+    "radical": "八",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "quan tâm",
+    "vi_meaning_full": "Động từ: quan tâm",
+    "vi_meaning_short": "quan tâm",
+    "enMeaning": "to care for",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备关心",
+      "开始关心",
+      "喜欢关心"
+    ],
+    "compounds": [
+      "关",
+      "心"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去关心。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù guān xīn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi quan tâm.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-203",
+    "hanzi": "观点",
+    "traditional": "觀點",
+    "pinyin": "guāndiǎn",
+    "pinyinClean": "guandian",
+    "hanViet": "QUAN ĐIỂM",
+    "radical": "见",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "quan điểm",
+    "vi_meaning_full": "Danh từ: quan điểm",
+    "vi_meaning_short": "quan điểm",
+    "enMeaning": "viewpoint; opinion",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个观点",
+      "新观点",
+      "好观点"
+    ],
+    "compounds": [
+      "观",
+      "点"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的观点。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de guān diǎn.",
+        "vi": "Trên bàn có đặt một chiếc quan điểm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-204",
+    "hanzi": "广场",
+    "traditional": "廣場",
+    "pinyin": "guǎngchǎng",
+    "pinyinClean": "guangchang",
+    "hanViet": "QUẢNG TRƯỜNG",
+    "radical": "广",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "quảng trường",
+    "vi_meaning_full": "Danh từ: quảng trường",
+    "vi_meaning_short": "quảng trường",
+    "enMeaning": "plaza; square",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个广场",
+      "新广场",
+      "好广场"
+    ],
+    "compounds": [
+      "广",
+      "场"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的广场。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de guǎng chǎng.",
+        "vi": "Trên bàn có đặt một chiếc quảng trường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-205",
+    "hanzi": "广告",
+    "traditional": "廣告",
+    "pinyin": "guǎnggào",
+    "pinyinClean": "guanggao",
+    "hanViet": "QUẢNG CÁO",
+    "radical": "广",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "quảng cáo",
+    "vi_meaning_full": "Danh từ: quảng cáo",
+    "vi_meaning_short": "quảng cáo",
+    "enMeaning": "advertisement",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个广告",
+      "新广告",
+      "好广告"
+    ],
+    "compounds": [
+      "广",
+      "告"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的广告。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de guǎng gào.",
+        "vi": "Trên bàn có đặt một chiếc quảng cáo mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-206",
+    "hanzi": "国际",
+    "traditional": "國際",
+    "pinyin": "guójì",
+    "pinyinClean": "guoji",
+    "hanViet": "QUỐC TẾ",
+    "radical": "囗",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "quốc tế",
+    "vi_meaning_full": "Danh từ: quốc tế",
+    "vi_meaning_short": "quốc tế",
+    "enMeaning": "international",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个国际",
+      "新国际",
+      "好国际"
+    ],
+    "compounds": [
+      "国",
+      "际"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的国际。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de guó jì.",
+        "vi": "Trên bàn có đặt một chiếc quốc tế mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-207",
+    "hanzi": "过来",
+    "traditional": "過來",
+    "pinyin": "guò·lái",
+    "pinyinClean": "guolai",
+    "hanViet": "QUÁ LAI",
+    "radical": "辶",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đi tới",
+    "vi_meaning_full": "Động từ: đi tới",
+    "vi_meaning_short": "đi tới",
+    "enMeaning": "to come over",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备过来",
+      "开始过来",
+      "喜欢过来"
+    ],
+    "compounds": [
+      "过",
+      "来"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去过来。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù guò lái.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đi tới.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-208",
+    "hanzi": "过年",
+    "traditional": "過年",
+    "pinyin": "guò//nián",
+    "pinyinClean": "guonian",
+    "hanViet": "QUÁ 年",
+    "radical": "辶",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "ăn Tết",
+    "vi_meaning_full": "Động từ: ăn Tết",
+    "vi_meaning_short": "ăn Tết",
+    "enMeaning": "celebrate New Year",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备过年",
+      "开始过年",
+      "喜欢过年"
+    ],
+    "compounds": [
+      "过",
+      "年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去过年。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù guò nián.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ăn Tết.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-209",
+    "hanzi": "过去",
+    "traditional": "過去",
+    "pinyin": "guò·qù",
+    "pinyinClean": "guoqu",
+    "hanViet": "QUÁ 去",
+    "radical": "辶",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đi qua, đã qua",
+    "vi_meaning_full": "Động từ: đi qua, đã qua",
+    "vi_meaning_short": "đi qua, đã qua",
+    "enMeaning": "past; go over",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备过去",
+      "开始过去",
+      "喜欢过去"
+    ],
+    "compounds": [
+      "过",
+      "去"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去过去。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù guò qù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đi qua, đã qua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-211",
+    "hanzi": "海",
+    "traditional": "海",
+    "pinyin": "hǎi",
+    "pinyinClean": "hai",
+    "hanViet": "HẢI",
+    "radical": "水",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "biền",
+    "vi_meaning_full": "Danh từ: biền",
+    "vi_meaning_short": "biền",
+    "enMeaning": "sea; ocean",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个海",
+      "新海",
+      "好海"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的海。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hǎi.",
+        "vi": "Trên bàn có đặt một chiếc biền mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-212",
+    "hanzi": "海边",
+    "traditional": "海邊",
+    "pinyin": "hǎi biān",
+    "pinyinClean": "haibian",
+    "hanViet": "HẢI BIÊN",
+    "radical": "氵",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bờ biển, bãi biển",
+    "vi_meaning_full": "Danh từ: bờ biển, bãi biển",
+    "vi_meaning_short": "bờ biển, bãi biể",
+    "enMeaning": "seaside, beach",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "去海边",
+      "在海边散步",
+      "海边日出"
+    ],
+    "compounds": [
+      "大海",
+      "旁边"
+    ],
+    "synonyms": [
+      "海滩",
+      "海滨"
+    ],
+    "antonyms": [
+      "山区",
+      "陆地"
+    ],
+    "confusableWords": "河边",
+    "sentences": [
+      {
+        "zh": "夏天我们一家人经常去海边度假。",
+        "pinyin": "Xiàtiān wǒmen yì jiā rén chángcháng qù hǎibiān dùjià.",
+        "vi": "Mùa hè cả nhà chúng tôi thường đi bờ biển nghỉ dưỡng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-213",
+    "hanzi": "喊",
+    "traditional": "喊",
+    "pinyin": "hǎn",
+    "pinyinClean": "han",
+    "hanViet": "HẢM",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "gọi, hết",
+    "vi_meaning_full": "Động từ: gọi, hết",
+    "vi_meaning_short": "gọi, hết",
+    "enMeaning": "to shout; call",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备喊",
+      "开始喊",
+      "喜欢喊"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去喊。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù hǎn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi gọi, hết.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-215",
+    "hanzi": "好处",
+    "traditional": "好處",
+    "pinyin": "hǎochù",
+    "pinyinClean": "haochu",
+    "hanViet": "HẢO XỨ",
+    "radical": "女",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lợi ích",
+    "vi_meaning_full": "Danh từ: lợi ích",
+    "vi_meaning_short": "lợi ích",
+    "enMeaning": "benefit; advantage",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个好处",
+      "新好处",
+      "好好处"
+    ],
+    "compounds": [
+      "好",
+      "处"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的好处。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hǎo chù.",
+        "vi": "Trên bàn có đặt một chiếc lợi ích mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-216",
+    "hanzi": "好多",
+    "traditional": "好多",
+    "pinyin": "hǎoduō",
+    "pinyinClean": "haoduo",
+    "hanViet": "HẢO ĐA",
+    "radical": "女",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "số từ",
+    "viet": "rất nhiều",
+    "vi_meaning_full": "Số từ: rất nhiều",
+    "vi_meaning_short": "rất nhiều",
+    "enMeaning": "a lot of",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说好多",
+      "用好多"
+    ],
+    "compounds": [
+      "好",
+      "多"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，好多是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, hǎo duō shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 好多 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-217",
+    "hanzi": "好久",
+    "traditional": "好久",
+    "pinyin": "hǎojiǔ",
+    "pinyinClean": "haojiu",
+    "hanViet": "HẢO CỬU",
+    "radical": "女",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "lâu lắm",
+    "vi_meaning_full": "Tính từ: lâu lắm",
+    "vi_meaning_short": "lâu lắm",
+    "enMeaning": "a long time",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常好久",
+      "很好久",
+      "真好久"
+    ],
+    "compounds": [
+      "好",
+      "久"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真好久，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn hǎo jiǔ, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật lâu lắm, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-218",
+    "hanzi": "好人",
+    "traditional": "好人",
+    "pinyin": "hǎorén",
+    "pinyinClean": "haoren",
+    "hanViet": "HẢO NHÂN",
+    "radical": "女",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "người tốt",
+    "vi_meaning_full": "Danh từ: người tốt",
+    "vi_meaning_short": "người tốt",
+    "enMeaning": "good person",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个好人",
+      "新好人",
+      "好好人"
+    ],
+    "compounds": [
+      "好",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的好人。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hǎo rén.",
+        "vi": "Trên bàn có đặt một chiếc người tốt mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-219",
+    "hanzi": "好事",
+    "traditional": "好事",
+    "pinyin": "hǎoshì",
+    "pinyinClean": "haoshi",
+    "hanViet": "HẢO 事",
+    "radical": "女",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "việc tốt",
+    "vi_meaning_full": "Danh từ: việc tốt",
+    "vi_meaning_short": "việc tốt",
+    "enMeaning": "good deed",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个好事",
+      "新好事",
+      "好好事"
+    ],
+    "compounds": [
+      "好",
+      "事"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的好事。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hǎo shì.",
+        "vi": "Trên bàn có đặt một chiếc việc tốt mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-220",
+    "hanzi": "好像",
+    "traditional": "好像",
+    "pinyin": "hǎoxiàng",
+    "pinyinClean": "haoxiang",
+    "hanViet": "HẢO 像",
+    "radical": "女",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "hình như",
+    "vi_meaning_full": "Tính từ: hình như",
+    "vi_meaning_short": "hình như",
+    "enMeaning": "seems like",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常好像",
+      "很好像",
+      "真好像"
+    ],
+    "compounds": [
+      "好",
+      "像"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真好像，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn hǎo xiàng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật hình như, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-221",
+    "hanzi": "合适",
+    "traditional": "合適",
+    "pinyin": "héshì",
+    "pinyinClean": "heshi",
+    "hanViet": "合 适",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "phù hợp",
+    "vi_meaning_full": "Tính từ: phù hợp",
+    "vi_meaning_short": "phù hợp",
+    "enMeaning": "suitable; appropriate",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常合适",
+      "很合适",
+      "真合适"
+    ],
+    "compounds": [
+      "合",
+      "适"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真合适，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn hé shì, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật phù hợp, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-222",
+    "hanzi": "河",
+    "traditional": "河",
+    "pinyin": "hé",
+    "pinyinClean": "he",
+    "hanViet": "HÀ",
+    "radical": "水",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "sông",
+    "vi_meaning_full": "Danh từ: sông",
+    "vi_meaning_short": "sông",
+    "enMeaning": "river",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个河",
+      "新河",
+      "好河"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的河。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hé.",
+        "vi": "Trên bàn có đặt một chiếc sông mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-224",
+    "hanzi": "黑板",
+    "traditional": "黑板",
+    "pinyin": "hēibǎn",
+    "pinyinClean": "heiban",
+    "hanViet": "HẮC BẢN",
+    "radical": "黑",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bảng đen",
+    "vi_meaning_full": "Danh từ: bảng đen",
+    "vi_meaning_short": "bảng đen",
+    "enMeaning": "blackboard",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个黑板",
+      "新黑板",
+      "好黑板"
+    ],
+    "compounds": [
+      "黑",
+      "板"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的黑板。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hēi bǎn.",
+        "vi": "Trên bàn có đặt một chiếc bảng đen mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-228",
+    "hanzi": "后来",
+    "traditional": "後來",
+    "pinyin": "hòulái",
+    "pinyinClean": "houlai",
+    "hanViet": "HẬU LAI",
+    "radical": "口",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "về sau",
+    "vi_meaning_full": "Danh từ: về sau",
+    "vi_meaning_short": "về sau",
+    "enMeaning": "afterwards; later",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个后来",
+      "新后来",
+      "好后来"
+    ],
+    "compounds": [
+      "后",
+      "来"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的后来。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hòu lái.",
+        "vi": "Trên bàn có đặt một chiếc về sau mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-229",
+    "hanzi": "忽然",
+    "traditional": "忽然",
+    "pinyin": "hūrán",
+    "pinyinClean": "huran",
+    "hanViet": "HỐT NHIÊN",
+    "radical": "心",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "đột nhiên",
+    "vi_meaning_full": "Phó từ: đột nhiên",
+    "vi_meaning_short": "đột nhiên",
+    "enMeaning": "suddenly",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "忽然好",
+      "忽然去",
+      "忽然看"
+    ],
+    "compounds": [
+      "忽",
+      "然"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家忽然准备好了，随时可以出发。",
+        "pinyin": "Dà jiā hū rán zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người đột nhiên chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-230",
+    "hanzi": "湖",
+    "traditional": "湖",
+    "pinyin": "hú",
+    "pinyinClean": "hu",
+    "hanViet": "HỒ",
+    "radical": "水",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "hồ",
+    "vi_meaning_full": "Danh từ: hồ",
+    "vi_meaning_short": "hồ",
+    "enMeaning": "lake",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个湖",
+      "新湖",
+      "好湖"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的湖。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hú.",
+        "vi": "Trên bàn có đặt một chiếc hồ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-231",
+    "hanzi": "护照",
+    "traditional": "護照",
+    "pinyin": "hùzhào",
+    "pinyinClean": "huzhao",
+    "hanViet": "HỘ CHIẾU",
+    "radical": "手",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "hộ chiếu",
+    "vi_meaning_full": "Danh từ: hộ chiếu",
+    "vi_meaning_short": "hộ chiếu",
+    "enMeaning": "passport",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个护照",
+      "新护照",
+      "好护照"
+    ],
+    "compounds": [
+      "护",
+      "照"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的护照。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de hù zhào.",
+        "vi": "Trên bàn có đặt một chiếc hộ chiếu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-232",
+    "hanzi": "花",
+    "traditional": "花",
+    "pinyin": "huā",
+    "pinyinClean": "hua",
+    "hanViet": "HOA",
+    "radical": "艹",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tiêu, dùng (tiền, thời gian)",
+    "vi_meaning_full": "Động từ: tiêu, dùng (tiền, thời gian)",
+    "vi_meaning_short": "tiêu, dùng",
+    "enMeaning": "flower; to spend",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备花",
+      "开始花",
+      "喜欢花"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去花。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù huā.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tiêu, dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-233",
+    "hanzi": "花园",
+    "traditional": "花園",
+    "pinyin": "huāyuán",
+    "pinyinClean": "huayuan",
+    "hanViet": "HOA VIÊN",
+    "radical": "艹",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "vườn hoa",
+    "vi_meaning_full": "Danh từ: vườn hoa",
+    "vi_meaning_short": "vườn hoa",
+    "enMeaning": "garden",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个花园",
+      "新花园",
+      "好花园"
+    ],
+    "compounds": [
+      "花",
+      "园"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的花园。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de huā yuán.",
+        "vi": "Trên bàn có đặt một chiếc vườn hoa mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-234",
+    "hanzi": "画",
+    "traditional": "畫",
+    "pinyin": "huà",
+    "pinyinClean": "hua",
+    "hanViet": "HỌA",
+    "radical": "田",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "vẽ",
+    "vi_meaning_full": "Động từ: vẽ",
+    "vi_meaning_short": "vẽ",
+    "enMeaning": "to draw; painting",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备画",
+      "开始画",
+      "喜欢画"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去画。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù huà.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi vẽ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-235",
+    "hanzi": "画家",
+    "traditional": "畫家",
+    "pinyin": "huàjiā",
+    "pinyinClean": "huajia",
+    "hanViet": "HỌA GIA",
+    "radical": "田",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "họa sĩ",
+    "vi_meaning_full": "Danh từ: họa sĩ",
+    "vi_meaning_short": "họa sĩ",
+    "enMeaning": "painter; artist",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个画家",
+      "新画家",
+      "好画家"
+    ],
+    "compounds": [
+      "画",
+      "家"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的画家。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de huà jiā.",
+        "vi": "Trên bàn có đặt một chiếc họa sĩ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-236",
+    "hanzi": "画儿",
+    "traditional": "畫兒",
+    "pinyin": "huàr",
+    "pinyinClean": "huar",
+    "hanViet": "HỌA NHI",
+    "radical": "田",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tranh vẽ",
+    "vi_meaning_full": "Danh từ: tranh vẽ",
+    "vi_meaning_short": "tranh vẽ",
+    "enMeaning": "picture; drawing",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个画儿",
+      "新画儿",
+      "好画儿"
+    ],
+    "compounds": [
+      "画",
+      "儿"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的画儿。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de huà ér.",
+        "vi": "Trên bàn có đặt một chiếc tranh vẽ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-237",
+    "hanzi": "坏处",
+    "traditional": "壞處",
+    "pinyin": "huàichù",
+    "pinyinClean": "huaichu",
+    "hanViet": "HOẠI XỨ",
+    "radical": "土",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "điều xấu, điều có hại",
+    "vi_meaning_full": "Danh từ: điều xấu, điều có hại",
+    "vi_meaning_short": "điều xấu, điều c",
+    "enMeaning": "disadvantage; harm",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个坏处",
+      "新坏处",
+      "好坏处"
+    ],
+    "compounds": [
+      "坏",
+      "处"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的坏处。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de huài chù.",
+        "vi": "Trên bàn có đặt một chiếc điều xấu, điều có hại mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-238",
+    "hanzi": "坏人",
+    "traditional": "壞人",
+    "pinyin": "huàirén",
+    "pinyinClean": "huairen",
+    "hanViet": "HOẠI NHÂN",
+    "radical": "土",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "người xấu",
+    "vi_meaning_full": "Danh từ: người xấu",
+    "vi_meaning_short": "người xấu",
+    "enMeaning": "bad person",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个坏人",
+      "新坏人",
+      "好坏人"
+    ],
+    "compounds": [
+      "坏",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的坏人。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de huài rén.",
+        "vi": "Trên bàn có đặt một chiếc người xấu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-240",
+    "hanzi": "换",
+    "traditional": "換",
+    "pinyin": "huàn",
+    "pinyinClean": "huan",
+    "hanViet": "HOÁN",
+    "radical": "手",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đối",
+    "vi_meaning_full": "Động từ: đối",
+    "vi_meaning_short": "đối",
+    "enMeaning": "to exchange; change",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备换",
+      "开始换",
+      "喜欢换"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去换。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù huàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đối.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-241",
+    "hanzi": "黄",
+    "traditional": "黃",
+    "pinyin": "huáng",
+    "pinyinClean": "huang",
+    "hanViet": "HOÀNG",
+    "radical": "黄",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "vàng",
+    "vi_meaning_full": "Tính từ: vàng",
+    "vi_meaning_short": "vàng",
+    "enMeaning": "yellow",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常黄",
+      "很黄",
+      "真黄"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真黄，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn huáng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật vàng, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-242",
+    "hanzi": "黄色",
+    "traditional": "黃色",
+    "pinyin": "huángsè",
+    "pinyinClean": "huangse",
+    "hanViet": "HOÀNG SẮC",
+    "radical": "黄",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "màu vàng",
+    "vi_meaning_full": "Danh từ: màu vàng",
+    "vi_meaning_short": "màu vàng",
+    "enMeaning": "yellow color",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个黄色",
+      "新黄色",
+      "好黄色"
+    ],
+    "compounds": [
+      "黄",
+      "色"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的黄色。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de huáng sè.",
+        "vi": "Trên bàn có đặt một chiếc màu vàng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-244",
+    "hanzi": "回国",
+    "traditional": "回國",
+    "pinyin": "huí guó",
+    "pinyinClean": "huiguo",
+    "hanViet": "HỒI QUỐC",
+    "radical": "囗",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "về nước",
+    "vi_meaning_full": "Động từ: về nước",
+    "vi_meaning_short": "về nước",
+    "enMeaning": "to return to one's home country",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备回国",
+      "回国探亲",
+      "打算回国"
+    ],
+    "compounds": [
+      "回去",
+      "国家"
+    ],
+    "synonyms": [
+      "归国"
+    ],
+    "antonyms": [
+      "出国",
+      "出国留学"
+    ],
+    "confusableWords": "回家",
+    "sentences": [
+      {
+        "zh": "他大学毕业后打算马上回国工作。",
+        "pinyin": "Tā dàxué bìyè hòu dǎsuàn mǎshàng huíguó gōngzuò.",
+        "vi": "Sau khi tốt nghiệp đại học, anh ấy dự định về nước làm việc ngay.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-246",
+    "hanzi": "活动",
+    "traditional": "活動",
+    "pinyin": "huódòng",
+    "pinyinClean": "huodong",
+    "hanViet": "HOẠT ĐỘNG",
+    "radical": "水",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "hoạt động",
+    "vi_meaning_full": "Danh từ / động từ: hoạt động",
+    "vi_meaning_short": "hoạt động",
+    "enMeaning": "activity; exercise",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备活动",
+      "开始活动",
+      "喜欢活动"
+    ],
+    "compounds": [
+      "活",
+      "动"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去活动。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù huó dòng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi hoạt động.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-247",
+    "hanzi": "或",
+    "traditional": "或",
+    "pinyin": "huò",
+    "pinyinClean": "huo",
+    "hanViet": "HOẶC",
+    "radical": "戈",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "hoặc",
+    "vi_meaning_full": "Liên từ: hoặc",
+    "vi_meaning_short": "hoặc",
+    "enMeaning": "or",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "或...而且...",
+      "虽然...或..."
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他或会说英语，还会说汉语。",
+        "pinyin": "Tā huò huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy hoặc biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-248",
+    "hanzi": "或者",
+    "traditional": "或者",
+    "pinyin": "huòzhě",
+    "pinyinClean": "huozhe",
+    "hanViet": "HOẶC GIẢ",
+    "radical": "戈",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "hoặc là",
+    "vi_meaning_full": "Liên từ: hoặc là",
+    "vi_meaning_short": "hoặc là",
+    "enMeaning": "or (in statement)",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "或者...而且...",
+      "虽然...或者..."
+    ],
+    "compounds": [
+      "或",
+      "者"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他或者会说英语，还会说汉语。",
+        "pinyin": "Tā huò zhě huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy hoặc là biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-249",
+    "hanzi": "机会",
+    "traditional": "機會",
+    "pinyin": "jī·huì",
+    "pinyinClean": "jihui",
+    "hanViet": "CƠ HỘI",
+    "radical": "木",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cơ hội",
+    "vi_meaning_full": "Danh từ: cơ hội",
+    "vi_meaning_short": "cơ hội",
+    "enMeaning": "opportunity; chance",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个机会",
+      "新机会",
+      "好机会"
+    ],
+    "compounds": [
+      "机",
+      "会"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的机会。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jī huì.",
+        "vi": "Trên bàn có đặt một chiếc cơ hội mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-250",
+    "hanzi": "鸡",
+    "traditional": "雞",
+    "pinyin": "jī",
+    "pinyinClean": "ji",
+    "hanViet": "KÊ",
+    "radical": "鸟",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "gà",
+    "vi_meaning_full": "Danh từ: gà",
+    "vi_meaning_short": "gà",
+    "enMeaning": "chicken",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个鸡",
+      "新鸡",
+      "好鸡"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的鸡。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jī.",
+        "vi": "Trên bàn có đặt một chiếc gà mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-251",
+    "hanzi": "级",
+    "traditional": "級",
+    "pinyin": "jí",
+    "pinyinClean": "ji",
+    "hanViet": "CẤP",
+    "radical": "纟",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cấp, bậc",
+    "vi_meaning_full": "Danh từ: cấp, bậc",
+    "vi_meaning_short": "cấp, bậc",
+    "enMeaning": "level; grade",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个级",
+      "新级",
+      "好级"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的级。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jí.",
+        "vi": "Trên bàn có đặt một chiếc cấp, bậc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-252",
+    "hanzi": "急",
+    "traditional": "急",
+    "pinyin": "jí",
+    "pinyinClean": "ji",
+    "hanViet": "CẤP",
+    "radical": "心",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "gấp, vội",
+    "vi_meaning_full": "Tính từ: gấp, vội",
+    "vi_meaning_short": "gấp, vội",
+    "enMeaning": "anxious; urgent",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常急",
+      "很急",
+      "真急"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真急，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn jí, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật gấp, vội, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-253",
+    "hanzi": "计划",
+    "traditional": "計劃",
+    "pinyin": "jìhuà",
+    "pinyinClean": "jihua",
+    "hanViet": "KẾ HOẠCH",
+    "radical": "言",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "kế hoạch / lên kế hoạch, dự định",
+    "vi_meaning_full": "Danh từ / động từ: kế hoạch / lên kế hoạch, dự định",
+    "vi_meaning_short": "kế hoạch",
+    "enMeaning": "plan; project",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备计划",
+      "开始计划",
+      "喜欢计划"
+    ],
+    "compounds": [
+      "计",
+      "划"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去计划。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jì huà.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi kế hoạch.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-254",
+    "hanzi": "计算机",
+    "traditional": "計算機",
+    "pinyin": "jìsuànjī",
+    "pinyinClean": "jisuanji",
+    "hanViet": "KẾ TOÁN CƠ",
+    "radical": "言",
+    "strokeCount": 24,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "máy tính",
+    "vi_meaning_full": "Danh từ: máy tính",
+    "vi_meaning_short": "máy tính",
+    "enMeaning": "computer",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个计算机",
+      "新计算机",
+      "好计算机"
+    ],
+    "compounds": [
+      "计",
+      "算机"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的计算机。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jì suàn jī.",
+        "vi": "Trên bàn có đặt một chiếc máy tính mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-255",
+    "hanzi": "加",
+    "traditional": "加",
+    "pinyin": "jiā",
+    "pinyinClean": "jia",
+    "hanViet": "GIA",
+    "radical": "力",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thêm",
+    "vi_meaning_full": "Động từ: thêm",
+    "vi_meaning_short": "thêm",
+    "enMeaning": "to add; plus",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备加",
+      "开始加",
+      "喜欢加"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去加。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiā.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thêm.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-256",
+    "hanzi": "加油",
+    "traditional": "加油",
+    "pinyin": "jiā//yóu",
+    "pinyinClean": "jiayou",
+    "hanViet": "GIA DU",
+    "radical": "力",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cố lên / đổ xăng",
+    "vi_meaning_full": "Động từ: cố lên / đổ xăng",
+    "vi_meaning_short": "cố lên",
+    "enMeaning": "make an extra effort; refuel",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备加油",
+      "开始加油",
+      "喜欢加油"
+    ],
+    "compounds": [
+      "加",
+      "油"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去加油。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiā yóu.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cố lên.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-257",
+    "hanzi": "家（科学家）",
+    "traditional": "家（科學家）",
+    "pinyin": "jiā(kēxuéjiā)",
+    "pinyinClean": "jiakexuejia",
+    "hanViet": "GIA （ KHOA HỌC GIA ）",
+    "radical": "宀",
+    "strokeCount": 49,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "từ ngữ",
+    "viet": "nhà (nhà khoa học)",
+    "vi_meaning_full": "Từ ngữ: nhà (nhà khoa học)",
+    "vi_meaning_short": "nhà",
+    "enMeaning": "specialist suffix (e.g. scientist)",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说家（科学家）",
+      "用家（科学家）"
+    ],
+    "compounds": [
+      "家",
+      "（科学家）"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，家（科学家）是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, jiā （ kē xué jiā ） shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 家（科学家） là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-258",
+    "hanzi": "家庭",
+    "traditional": "家庭",
+    "pinyin": "jiātíng",
+    "pinyinClean": "jiating",
+    "hanViet": "GIA ĐÌNH",
+    "radical": "宀",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "gia đình",
+    "vi_meaning_full": "Danh từ: gia đình",
+    "vi_meaning_short": "gia đình",
+    "enMeaning": "family; household",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个家庭",
+      "新家庭",
+      "好家庭"
+    ],
+    "compounds": [
+      "家",
+      "庭"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的家庭。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiā tíng.",
+        "vi": "Trên bàn có đặt một chiếc gia đình mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-259",
+    "hanzi": "家长",
+    "traditional": "家長",
+    "pinyin": "jiāzhǎng",
+    "pinyinClean": "jiazhang",
+    "hanViet": "GIA TRƯỞNG",
+    "radical": "宀",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phụ huynh",
+    "vi_meaning_full": "Danh từ: phụ huynh",
+    "vi_meaning_short": "phụ huynh",
+    "enMeaning": "parents; guardian",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个家长",
+      "新家长",
+      "好家长"
+    ],
+    "compounds": [
+      "家",
+      "长"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的家长。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiā zhǎng.",
+        "vi": "Trên bàn có đặt một chiếc phụ huynh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-260",
+    "hanzi": "假",
+    "traditional": "假",
+    "pinyin": "jià",
+    "pinyinClean": "jia",
+    "hanViet": "GIẢ",
+    "radical": "人",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "già",
+    "vi_meaning_full": "Tính từ: già",
+    "vi_meaning_short": "già",
+    "enMeaning": "fake; false",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常假",
+      "很假",
+      "真假"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真假，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn jiǎ, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật già, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-261",
+    "hanzi": "假期",
+    "traditional": "假期",
+    "pinyin": "jiàqī",
+    "pinyinClean": "jiaqi",
+    "hanViet": "GIẢ KỲ",
+    "radical": "人",
+    "strokeCount": 23,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "kỳ nghĩ",
+    "vi_meaning_full": "Danh từ: kỳ nghĩ",
+    "vi_meaning_short": "kỳ nghĩ",
+    "enMeaning": "vacation; holiday",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个假期",
+      "新假期",
+      "好假期"
+    ],
+    "compounds": [
+      "假",
+      "期"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的假期。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jià qī.",
+        "vi": "Trên bàn có đặt một chiếc kỳ nghĩ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-262",
+    "hanzi": "检查",
+    "traditional": "檢查",
+    "pinyin": "jiǎnchá",
+    "pinyinClean": "jiancha",
+    "hanViet": "KIỂM TRA",
+    "radical": "木",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "kiểm tra",
+    "vi_meaning_full": "Danh từ / động từ: kiểm tra",
+    "vi_meaning_short": "kiểm tra",
+    "enMeaning": "to inspect; check",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备检查",
+      "开始检查",
+      "喜欢检查"
+    ],
+    "compounds": [
+      "检",
+      "查"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去检查。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiǎn chá.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi kiểm tra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-263",
+    "hanzi": "见到",
+    "traditional": "見到",
+    "pinyin": "jiàndào",
+    "pinyinClean": "jiandao",
+    "hanViet": "KIẾN 到",
+    "radical": "见",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "gặp, nhìn thấy",
+    "vi_meaning_full": "Động từ: gặp, nhìn thấy",
+    "vi_meaning_short": "gặp, nhìn thấy",
+    "enMeaning": "to see; meet",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备见到",
+      "开始见到",
+      "喜欢见到"
+    ],
+    "compounds": [
+      "见",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去见到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiàn dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi gặp, nhìn thấy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-264",
+    "hanzi": "见过",
+    "traditional": "見過",
+    "pinyin": "jiànguo",
+    "pinyinClean": "jianguo",
+    "hanViet": "KIẾN QUÁ",
+    "radical": "见",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "gặp qua, từng thấy",
+    "vi_meaning_full": "Động từ: gặp qua, từng thấy",
+    "vi_meaning_short": "gặp qua, từng th",
+    "enMeaning": "have seen before",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备见过",
+      "开始见过",
+      "喜欢见过"
+    ],
+    "compounds": [
+      "见",
+      "过"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去见过。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiàn guò.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi gặp qua, từng thấy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-266",
+    "hanzi": "健康",
+    "traditional": "健康",
+    "pinyin": "jiànkāng",
+    "pinyinClean": "jiankang",
+    "hanViet": "KIỆN KHANG",
+    "radical": "人",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khỏe mạnh, lành mạnh / sức khỏe",
+    "vi_meaning_full": "Danh từ: khỏe mạnh, lành mạnh / sức khỏe",
+    "vi_meaning_short": "khỏe mạnh, lành",
+    "enMeaning": "healthy; health",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个健康",
+      "新健康",
+      "好健康"
+    ],
+    "compounds": [
+      "健",
+      "康"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的健康。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiàn kāng.",
+        "vi": "Trên bàn có đặt một chiếc khỏe mạnh, lành mạnh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-267",
+    "hanzi": "讲",
+    "traditional": "講",
+    "pinyin": "jiǎng",
+    "pinyinClean": "jiang",
+    "hanViet": "GIẢNG",
+    "radical": "言",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nói",
+    "vi_meaning_full": "Động từ: nói",
+    "vi_meaning_short": "nói",
+    "enMeaning": "to speak; explain",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备讲",
+      "开始讲",
+      "喜欢讲"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去讲。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiǎng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nói.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-268",
+    "hanzi": "讲话",
+    "traditional": "講話",
+    "pinyin": "jiǎng//huà",
+    "pinyinClean": "jianghua",
+    "hanViet": "GIẢNG THOẠI",
+    "radical": "言",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "phát biểu",
+    "vi_meaning_full": "Động từ: phát biểu",
+    "vi_meaning_short": "phát biểu",
+    "enMeaning": "to give a speech",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备讲话",
+      "开始讲话",
+      "喜欢讲话"
+    ],
+    "compounds": [
+      "讲",
+      "话"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去讲话。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiǎng huà.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi phát biểu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-269",
+    "hanzi": "交",
+    "traditional": "交",
+    "pinyin": "jiāo",
+    "pinyinClean": "jiao",
+    "hanViet": "GIAO",
+    "radical": "亠",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "giao, trao",
+    "vi_meaning_full": "Động từ: giao, trao",
+    "vi_meaning_short": "giao, trao",
+    "enMeaning": "to hand over; pay",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备交",
+      "开始交",
+      "喜欢交"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去交。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiāo.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi giao, trao.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-270",
+    "hanzi": "交给",
+    "traditional": "交給",
+    "pinyin": "jiāo gěi",
+    "pinyinClean": "jiaogei",
+    "hanViet": "GIAO CẤP",
+    "radical": "亠",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "giao cho, đưa cho",
+    "vi_meaning_full": "Động từ: giao cho, đưa cho",
+    "vi_meaning_short": "giao cho, đưa ch",
+    "enMeaning": "to hand over to, to give to",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "交给老师",
+      "交给我",
+      "交给任务"
+    ],
+    "compounds": [
+      "交通",
+      "送给"
+    ],
+    "synonyms": [
+      "递给",
+      "交予"
+    ],
+    "antonyms": [
+      "收回",
+      "收下"
+    ],
+    "confusableWords": "送给",
+    "sentences": [
+      {
+        "zh": "请把写好的作业交给班长。",
+        "pinyin": "Qǐng bǎ xiě hǎo de zuòyè jiāogěi bānzhǎng.",
+        "vi": "Xin hãy nộp bài tập đã làm xong cho lớp trưởng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-271",
+    "hanzi": "交朋友",
+    "traditional": "交朋友",
+    "pinyin": "jiāo péngyou",
+    "pinyinClean": "jiaopengyou",
+    "hanViet": "GIAO BẰNG HỮU",
+    "radical": "亠",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "cụm từ",
+    "viet": "kết bạn",
+    "vi_meaning_full": "Cụm từ: kết bạn",
+    "vi_meaning_short": "kết bạn",
+    "enMeaning": "to make friends",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "想交朋友",
+      "喜欢交朋友",
+      "跟谁交朋友"
+    ],
+    "compounds": [
+      "朋友",
+      "交情"
+    ],
+    "synonyms": [
+      "结交朋友",
+      "做朋友"
+    ],
+    "antonyms": [
+      "绝交"
+    ],
+    "confusableWords": "找朋友",
+    "sentences": [
+      {
+        "zh": "他性格开朗，很容易和别人交朋友。",
+        "pinyin": "Tā xìnggé kāilǎng, hěn róngyì hé biérén jiāo péngyou.",
+        "vi": "Tính tình anh ấy cởi mở, rất dễ kết bạn với người khác.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-272",
+    "hanzi": "交通",
+    "traditional": "交通",
+    "pinyin": "jiāotōng",
+    "pinyinClean": "jiaotong",
+    "hanViet": "GIAO THÔNG",
+    "radical": "亠",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "giao thông",
+    "vi_meaning_full": "Danh từ: giao thông",
+    "vi_meaning_short": "giao thông",
+    "enMeaning": "traffic; transportation",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个交通",
+      "新交通",
+      "好交通"
+    ],
+    "compounds": [
+      "交",
+      "通"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的交通。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiāo tōng.",
+        "vi": "Trên bàn có đặt một chiếc giao thông mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-273",
+    "hanzi": "角",
+    "traditional": "角",
+    "pinyin": "jiǎo",
+    "pinyinClean": "jiao",
+    "hanViet": "GIÁC",
+    "radical": "角",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "miếng, góc (chi một phần từ), hào (đơn vị / góc, vai, sừng",
+    "vi_meaning_full": "Danh từ: miếng, góc (chi một phần từ), hào (đơn vị / góc, vai, sừng",
+    "vi_meaning_short": "miếng, góc",
+    "enMeaning": "horn; corner; 0.1 yuan",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个角",
+      "新角",
+      "好角"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的角。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiǎo.",
+        "vi": "Trên bàn có đặt một chiếc miếng, góc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-274",
+    "hanzi": "角度",
+    "traditional": "角度",
+    "pinyin": "jiǎodù",
+    "pinyinClean": "jiaodu",
+    "hanViet": "GIÁC ĐỘ",
+    "radical": "角",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "góc độ",
+    "vi_meaning_full": "Danh từ: góc độ",
+    "vi_meaning_short": "góc độ",
+    "enMeaning": "angle; perspective",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个角度",
+      "新角度",
+      "好角度"
+    ],
+    "compounds": [
+      "角",
+      "度"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的角度。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiǎo dù.",
+        "vi": "Trên bàn có đặt một chiếc góc độ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-275",
+    "hanzi": "饺子",
+    "traditional": "餃子",
+    "pinyin": "jiǎozi",
+    "pinyinClean": "jiaozi",
+    "hanViet": "GIẢO TỬ",
+    "radical": "食",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "há cáo",
+    "vi_meaning_full": "Danh từ: há cáo",
+    "vi_meaning_short": "há cáo",
+    "enMeaning": "dumpling",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个饺子",
+      "新饺子",
+      "好饺子"
+    ],
+    "compounds": [
+      "饺",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的饺子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiǎo zi.",
+        "vi": "Trên bàn có đặt một chiếc há cáo mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-276",
+    "hanzi": "脚",
+    "traditional": "腳",
+    "pinyin": "jiǎo",
+    "pinyinClean": "jiao",
+    "hanViet": "CƯỚC",
+    "radical": "月",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chân",
+    "vi_meaning_full": "Danh từ: chân",
+    "vi_meaning_short": "chân",
+    "enMeaning": "foot",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个脚",
+      "新脚",
+      "好脚"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的脚。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiǎo.",
+        "vi": "Trên bàn có đặt một chiếc chân mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-277",
+    "hanzi": "叫作",
+    "traditional": "叫作",
+    "pinyin": "jiàozuò",
+    "pinyinClean": "jiaozuo",
+    "hanViet": "KHIẾU TÁC",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "gọi là",
+    "vi_meaning_full": "Động từ: gọi là",
+    "vi_meaning_short": "gọi là",
+    "enMeaning": "to be called",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备叫作",
+      "开始叫作",
+      "喜欢叫作"
+    ],
+    "compounds": [
+      "叫",
+      "作"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去叫作。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiào zuò.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi gọi là.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-278",
+    "hanzi": "教师",
+    "traditional": "教師",
+    "pinyin": "jiàoshī",
+    "pinyinClean": "jiaoshi",
+    "hanViet": "GIÁO SƯ",
+    "radical": "攵",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "giáo viên",
+    "vi_meaning_full": "Danh từ: giáo viên",
+    "vi_meaning_short": "giáo viên",
+    "enMeaning": "teacher",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个教师",
+      "新教师",
+      "好教师"
+    ],
+    "compounds": [
+      "教",
+      "师"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的教师。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiào shī.",
+        "vi": "Trên bàn có đặt một chiếc giáo viên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-280",
+    "hanzi": "教学",
+    "traditional": "教學",
+    "pinyin": "jiàoxué",
+    "pinyinClean": "jiaoxue",
+    "hanViet": "GIÁO HỌC",
+    "radical": "攵",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "việc giảng dạy, hoạt động dạy học / giảng dạy, dạy học",
+    "vi_meaning_full": "Danh từ / động từ: việc giảng dạy, hoạt động dạy học / giảng dạy, dạy học",
+    "vi_meaning_short": "việc giảng dạy,",
+    "enMeaning": "teaching; instruction",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备教学",
+      "开始教学",
+      "喜欢教学"
+    ],
+    "compounds": [
+      "教",
+      "学"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去教学。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiào xué.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi việc giảng dạy, hoạt động dạy học.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-281",
+    "hanzi": "教育",
+    "traditional": "教育",
+    "pinyin": "jiàoyù",
+    "pinyinClean": "jiaoyu",
+    "hanViet": "GIÁO DỤC",
+    "radical": "攵",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "giáo dục, dạy dỗ, uốn nắn",
+    "vi_meaning_full": "Danh từ / động từ: giáo dục, dạy dỗ, uốn nắn",
+    "vi_meaning_short": "giáo dục, dạy dỗ",
+    "enMeaning": "education; to educate",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备教育",
+      "开始教育",
+      "喜欢教育"
+    ],
+    "compounds": [
+      "教",
+      "育"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去教育。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiào yù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi giáo dục, dạy dỗ, uốn nắn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-283",
+    "hanzi": "接到",
+    "traditional": "接到",
+    "pinyin": "jiēdào",
+    "pinyinClean": "jiedao",
+    "hanViet": "TIẾP 到",
+    "radical": "手",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nhận được",
+    "vi_meaning_full": "Động từ: nhận được",
+    "vi_meaning_short": "nhận được",
+    "enMeaning": "to receive (letter, etc.)",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备接到",
+      "开始接到",
+      "喜欢接到"
+    ],
+    "compounds": [
+      "接",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去接到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiē dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nhận được.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-284",
+    "hanzi": "接受",
+    "traditional": "接受",
+    "pinyin": "jiēshòu",
+    "pinyinClean": "jieshou",
+    "hanViet": "TIẾP 受",
+    "radical": "手",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tiếp nhận",
+    "vi_meaning_full": "Động từ: tiếp nhận",
+    "vi_meaning_short": "tiếp nhận",
+    "enMeaning": "to accept",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备接受",
+      "开始接受",
+      "喜欢接受"
+    ],
+    "compounds": [
+      "接",
+      "受"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去接受。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiē shòu.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tiếp nhận.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-285",
+    "hanzi": "接下来",
+    "traditional": "接下來",
+    "pinyin": "jiēxià·lái",
+    "pinyinClean": "jiexialai",
+    "hanViet": "TIẾP 下 LAI",
+    "radical": "手",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "tiếp theo",
+    "vi_meaning_full": "Phó từ: tiếp theo",
+    "vi_meaning_short": "tiếp theo",
+    "enMeaning": "next; following",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "接下来好",
+      "接下来去",
+      "接下来看"
+    ],
+    "compounds": [
+      "接",
+      "下来"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家接下来准备好了，随时可以出发。",
+        "pinyin": "Dà jiā jiē xià lái zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người tiếp theo chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-286",
+    "hanzi": "接着",
+    "traditional": "接着",
+    "pinyin": "jiēzhe",
+    "pinyinClean": "jiezhe",
+    "hanViet": "TIẾP 着",
+    "radical": "手",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tiếp nhận, nối, cảm lấy / tiếp theo, sau đó, ngay sau",
+    "vi_meaning_full": "Động từ: tiếp nhận, nối, cảm lấy / tiếp theo, sau đó, ngay sau",
+    "vi_meaning_short": "tiếp nhận, nối,",
+    "enMeaning": "then; next",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备接着",
+      "开始接着",
+      "喜欢接着"
+    ],
+    "compounds": [
+      "接",
+      "着"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去接着。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiē zhe.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tiếp nhận, nối, cảm lấy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-287",
+    "hanzi": "街",
+    "traditional": "街",
+    "pinyin": "jiē",
+    "pinyinClean": "jie",
+    "hanViet": "NHAI",
+    "radical": "行",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đường phố",
+    "vi_meaning_full": "Danh từ: đường phố",
+    "vi_meaning_short": "đường phố",
+    "enMeaning": "street",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个街",
+      "新街",
+      "好街"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的街。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiē.",
+        "vi": "Trên bàn có đặt một chiếc đường phố mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-288",
+    "hanzi": "节",
+    "traditional": "節",
+    "pinyin": "jié",
+    "pinyinClean": "jie",
+    "hanViet": "TIẾT",
+    "radical": "艹",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lễ, ngày lễ / tiết, đoạn",
+    "vi_meaning_full": "Danh từ: lễ, ngày lễ / tiết, đoạn",
+    "vi_meaning_short": "lễ, ngày lễ",
+    "enMeaning": "festival; segment",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个节",
+      "新节",
+      "好节"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的节。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jié.",
+        "vi": "Trên bàn có đặt một chiếc lễ, ngày lễ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-289",
+    "hanzi": "节目",
+    "traditional": "節目",
+    "pinyin": "jiémù",
+    "pinyinClean": "jiemu",
+    "hanViet": "TIẾT 目",
+    "radical": "艹",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chương trình",
+    "vi_meaning_full": "Danh từ: chương trình",
+    "vi_meaning_short": "chương trình",
+    "enMeaning": "program; show",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个节目",
+      "新节目",
+      "好节目"
+    ],
+    "compounds": [
+      "节",
+      "目"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的节目。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jié mù.",
+        "vi": "Trên bàn có đặt một chiếc chương trình mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-290",
+    "hanzi": "节日",
+    "traditional": "節日",
+    "pinyin": "jiérì",
+    "pinyinClean": "jieri",
+    "hanViet": "TIẾT 日",
+    "radical": "艹",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngày lễ",
+    "vi_meaning_full": "Danh từ: ngày lễ",
+    "vi_meaning_short": "ngày lễ",
+    "enMeaning": "holiday; festival",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个节日",
+      "新节日",
+      "好节日"
+    ],
+    "compounds": [
+      "节",
+      "日"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的节日。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jié rì.",
+        "vi": "Trên bàn có đặt một chiếc ngày lễ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-291",
+    "hanzi": "结果",
+    "traditional": "結果",
+    "pinyin": "jiéguǒ",
+    "pinyinClean": "jieguo",
+    "hanViet": "结 果",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "kết quả / kết quả là",
+    "vi_meaning_full": "Danh từ: kết quả / kết quả là",
+    "vi_meaning_short": "kết quả",
+    "enMeaning": "result; outcome",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个结果",
+      "新结果",
+      "好结果"
+    ],
+    "compounds": [
+      "结",
+      "果"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的结果。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jié guǒ.",
+        "vi": "Trên bàn có đặt một chiếc kết quả mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-292",
+    "hanzi": "借",
+    "traditional": "借",
+    "pinyin": "jiè",
+    "pinyinClean": "jie",
+    "hanViet": "TÁ",
+    "radical": "人",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "mượn",
+    "vi_meaning_full": "Động từ: mượn",
+    "vi_meaning_short": "mượn",
+    "enMeaning": "to borrow; lend",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备借",
+      "开始借",
+      "喜欢借"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去借。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jiè.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi mượn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-293",
+    "hanzi": "斤",
+    "traditional": "斤",
+    "pinyin": "jīn",
+    "pinyinClean": "jin",
+    "hanViet": "CÂN",
+    "radical": "斤",
+    "strokeCount": 4,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "cân (0.5kg)",
+    "vi_meaning_full": "Lượng từ: cân (0.5kg)",
+    "vi_meaning_short": "cân",
+    "enMeaning": "jin (0.5 kg)",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一斤",
+      "两斤",
+      "这斤"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一斤这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī jīn zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một cân nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-294",
+    "hanzi": "今后",
+    "traditional": "今後",
+    "pinyin": "jīnhòu",
+    "pinyinClean": "jinhou",
+    "hanViet": "今 HẬU",
+    "radical": "人",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "từ nay về sau",
+    "vi_meaning_full": "Phó từ: từ nay về sau",
+    "vi_meaning_short": "từ nay về sau",
+    "enMeaning": "from now on",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "今后好",
+      "今后去",
+      "今后看"
+    ],
+    "compounds": [
+      "今",
+      "后"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家今后准备好了，随时可以出发。",
+        "pinyin": "Dà jiā jīn hòu zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người từ nay về sau chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-295",
+    "hanzi": "进入",
+    "traditional": "進入",
+    "pinyin": "jìn rù",
+    "pinyinClean": "jinru",
+    "hanViet": "进 入",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tiến vào",
+    "vi_meaning_full": "Động từ: tiến vào",
+    "vi_meaning_short": "tiến vào",
+    "enMeaning": "to enter",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备进入",
+      "开始进入",
+      "喜欢进入"
+    ],
+    "compounds": [
+      "进",
+      "入"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去进入。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jìn rù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tiến vào.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-296",
+    "hanzi": "进行",
+    "traditional": "進行",
+    "pinyin": "jìn xíng",
+    "pinyinClean": "jinxing",
+    "hanViet": "进 HÀNH",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tiến hành",
+    "vi_meaning_full": "Động từ: tiến hành",
+    "vi_meaning_short": "tiến hành",
+    "enMeaning": "to conduct; carry out",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备进行",
+      "开始进行",
+      "喜欢进行"
+    ],
+    "compounds": [
+      "进",
+      "行"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去进行。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jìn xíng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tiến hành.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-299",
+    "hanzi": "经过",
+    "traditional": "經過",
+    "pinyin": "jīng guò",
+    "pinyinClean": "jingguo",
+    "hanViet": "经 QUÁ",
+    "radical": "纟",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "đi qua, trải qua / quá trình, diễn biến",
+    "vi_meaning_full": "Danh từ / động từ: đi qua, trải qua / quá trình, diễn biến",
+    "vi_meaning_short": "đi qua, trải qua",
+    "enMeaning": "to pass by; process",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备经过",
+      "开始经过",
+      "喜欢经过"
+    ],
+    "compounds": [
+      "经",
+      "过"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去经过。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jīng guò.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đi qua, trải qua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-300",
+    "hanzi": "经理",
+    "traditional": "經理",
+    "pinyin": "jīng lǐ",
+    "pinyinClean": "jingli",
+    "hanViet": "经 LÝ",
+    "radical": "纟",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "giám đốc, quản lý",
+    "vi_meaning_full": "Danh từ: giám đốc, quản lý",
+    "vi_meaning_short": "giám đốc, quản l",
+    "enMeaning": "manager",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个经理",
+      "新经理",
+      "好经理"
+    ],
+    "compounds": [
+      "经",
+      "理"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的经理。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jīng lǐ.",
+        "vi": "Trên bàn có đặt một chiếc giám đốc, quản lý mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-301",
+    "hanzi": "酒",
+    "traditional": "酒",
+    "pinyin": "jiǔ",
+    "pinyinClean": "jiu",
+    "hanViet": "酒",
+    "radical": "酉",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "rượu",
+    "vi_meaning_full": "Danh từ: rượu",
+    "vi_meaning_short": "rượu",
+    "enMeaning": "alcohol; wine",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个酒",
+      "新酒",
+      "好酒"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的酒。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiǔ.",
+        "vi": "Trên bàn có đặt một chiếc rượu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-302",
+    "hanzi": "酒店",
+    "traditional": "酒店",
+    "pinyin": "jiǔ diàn",
+    "pinyinClean": "jiudian",
+    "hanViet": "酒 ĐIẾM",
+    "radical": "酉",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khách sạn",
+    "vi_meaning_full": "Danh từ: khách sạn",
+    "vi_meaning_short": "khách sạn",
+    "enMeaning": "hotel",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个酒店",
+      "新酒店",
+      "好酒店"
+    ],
+    "compounds": [
+      "酒",
+      "店"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的酒店。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jiǔ diàn.",
+        "vi": "Trên bàn có đặt một chiếc khách sạn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-303",
+    "hanzi": "就要",
+    "traditional": "就要",
+    "pinyin": "jiù yào",
+    "pinyinClean": "jiuyao",
+    "hanViet": "就 YẾU",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "sắp",
+    "vi_meaning_full": "Phó từ: sắp",
+    "vi_meaning_short": "sắp",
+    "enMeaning": "about to; soon",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "就要好",
+      "就要去",
+      "就要看"
+    ],
+    "compounds": [
+      "就",
+      "要"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家就要准备好了，随时可以出发。",
+        "pinyin": "Dà jiā jiù yào zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người sắp chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-304",
+    "hanzi": "举",
+    "traditional": "舉",
+    "pinyin": "jǔ",
+    "pinyinClean": "ju",
+    "hanViet": "举",
+    "radical": "丶",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "giơ lên",
+    "vi_meaning_full": "Động từ: giơ lên",
+    "vi_meaning_short": "giơ lên",
+    "enMeaning": "to lift; raise",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备举",
+      "开始举",
+      "喜欢举"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去举。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jǔ.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi giơ lên.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-305",
+    "hanzi": "举手",
+    "traditional": "舉手",
+    "pinyin": "jǔ shǒu",
+    "pinyinClean": "jushou",
+    "hanViet": "举 手",
+    "radical": "丶",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "giơ tay",
+    "vi_meaning_full": "Động từ: giơ tay",
+    "vi_meaning_short": "giơ tay",
+    "enMeaning": "raise hand",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备举手",
+      "开始举手",
+      "喜欢举手"
+    ],
+    "compounds": [
+      "举",
+      "手"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去举手。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jǔ shǒu.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi giơ tay.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-306",
+    "hanzi": "举行",
+    "traditional": "舉行",
+    "pinyin": "jǔ xíng",
+    "pinyinClean": "juxing",
+    "hanViet": "举 HÀNH",
+    "radical": "丶",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tổ chức",
+    "vi_meaning_full": "Động từ: tổ chức",
+    "vi_meaning_short": "tổ chức",
+    "enMeaning": "to hold (event)",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备举行",
+      "开始举行",
+      "喜欢举行"
+    ],
+    "compounds": [
+      "举",
+      "行"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去举行。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù jǔ xíng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tổ chức.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-307",
+    "hanzi": "句",
+    "traditional": "句",
+    "pinyin": "jù",
+    "pinyinClean": "ju",
+    "hanViet": "句",
+    "radical": "口",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "câu",
+    "vi_meaning_full": "Lượng từ: câu",
+    "vi_meaning_short": "câu",
+    "enMeaning": "measure word for sentences",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一句",
+      "两句",
+      "这句"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一句这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī jù zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một câu nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-308",
+    "hanzi": "句子",
+    "traditional": "句子",
+    "pinyin": "jù zi",
+    "pinyinClean": "juzi",
+    "hanViet": "句 TỬ",
+    "radical": "口",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "câu văn",
+    "vi_meaning_full": "Danh từ: câu văn",
+    "vi_meaning_short": "câu văn",
+    "enMeaning": "sentence",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个句子",
+      "新句子",
+      "好句子"
+    ],
+    "compounds": [
+      "句",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的句子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de jù zi.",
+        "vi": "Trên bàn có đặt một chiếc câu văn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-309",
+    "hanzi": "卡",
+    "traditional": "卡",
+    "pinyin": "kǎ",
+    "pinyinClean": "ka",
+    "hanViet": "卡",
+    "radical": "卜",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thẻ, card",
+    "vi_meaning_full": "Danh từ: thẻ, card",
+    "vi_meaning_short": "thẻ, card",
+    "enMeaning": "card",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个卡",
+      "新卡",
+      "好卡"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的卡。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kǎ.",
+        "vi": "Trên bàn có đặt một chiếc thẻ, card mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-310",
+    "hanzi": "开机",
+    "traditional": "開機",
+    "pinyin": "kāi//jī",
+    "pinyinClean": "kaiji",
+    "hanViet": "KHAI CƠ",
+    "radical": "廾",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "khởi động máy",
+    "vi_meaning_full": "Động từ: khởi động máy",
+    "vi_meaning_short": "khởi động máy",
+    "enMeaning": "turn on machine",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备开机",
+      "开始开机",
+      "喜欢开机"
+    ],
+    "compounds": [
+      "开",
+      "机"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去开机。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù kāi jī.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi khởi động máy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-311",
+    "hanzi": "开心",
+    "traditional": "開心",
+    "pinyin": "kāixīn",
+    "pinyinClean": "kaixin",
+    "hanViet": "KHAI TÂM",
+    "radical": "廾",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "làm cho vui, khiến (ai đó) vui / vui vẻ, vui, hạnh phúc",
+    "vi_meaning_full": "Động từ: làm cho vui, khiến (ai đó) vui / vui vẻ, vui, hạnh phúc",
+    "vi_meaning_short": "làm cho vui, khi",
+    "enMeaning": "happy; joyful",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备开心",
+      "开始开心",
+      "喜欢开心"
+    ],
+    "compounds": [
+      "开",
+      "心"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去开心。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù kāi xīn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi làm cho vui, khiến.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-312",
+    "hanzi": "开学",
+    "traditional": "開學",
+    "pinyin": "kāi//xué",
+    "pinyinClean": "kaixue",
+    "hanViet": "KHAI HỌC",
+    "radical": "廾",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "khai giảng",
+    "vi_meaning_full": "Động từ: khai giảng",
+    "vi_meaning_short": "khai giảng",
+    "enMeaning": "school starts",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备开学",
+      "开始开学",
+      "喜欢开学"
+    ],
+    "compounds": [
+      "开",
+      "学"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去开学。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù kāi xué.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi khai giảng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-313",
+    "hanzi": "看法",
+    "traditional": "看法",
+    "pinyin": "kàn-fǎ",
+    "pinyinClean": "kanfa",
+    "hanViet": "看 PHÁP",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "quan điểm",
+    "vi_meaning_full": "Danh từ: quan điểm",
+    "vi_meaning_short": "quan điểm",
+    "enMeaning": "view; opinion",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个看法",
+      "新看法",
+      "好看法"
+    ],
+    "compounds": [
+      "看",
+      "法"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的看法。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kàn fǎ.",
+        "vi": "Trên bàn có đặt một chiếc quan điểm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-314",
+    "hanzi": "考生",
+    "traditional": "考生",
+    "pinyin": "kǎoshēng",
+    "pinyinClean": "kaosheng",
+    "hanViet": "考 SANH",
+    "radical": "口",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thí sinh",
+    "vi_meaning_full": "Danh từ: thí sinh",
+    "vi_meaning_short": "thí sinh",
+    "enMeaning": "examinee; candidate",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个考生",
+      "新考生",
+      "好考生"
+    ],
+    "compounds": [
+      "考",
+      "生"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的考生。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kǎo shēng.",
+        "vi": "Trên bàn có đặt một chiếc thí sinh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-315",
+    "hanzi": "靠",
+    "traditional": "靠",
+    "pinyin": "kào",
+    "pinyinClean": "kao",
+    "hanViet": "靠",
+    "radical": "非",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "dựa vào",
+    "vi_meaning_full": "Động từ: dựa vào",
+    "vi_meaning_short": "dựa vào",
+    "enMeaning": "to lean on; rely on",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备靠",
+      "开始靠",
+      "喜欢靠"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去靠。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù kào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi dựa vào.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-316",
+    "hanzi": "科",
+    "traditional": "科",
+    "pinyin": "kē",
+    "pinyinClean": "ke",
+    "hanViet": "KHOA",
+    "radical": "禾",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "môn, khoa",
+    "vi_meaning_full": "Danh từ: môn, khoa",
+    "vi_meaning_short": "môn, khoa",
+    "enMeaning": "branch; subject",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个科",
+      "新科",
+      "好科"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的科。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kē.",
+        "vi": "Trên bàn có đặt một chiếc môn, khoa mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-317",
+    "hanzi": "科学",
+    "traditional": "科學",
+    "pinyin": "kēxué",
+    "pinyinClean": "kexue",
+    "hanViet": "KHOA HỌC",
+    "radical": "禾",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khoa học / khoa học, có tính khoa học, có kỹ thuật",
+    "vi_meaning_full": "Danh từ: khoa học / khoa học, có tính khoa học, có kỹ thuật",
+    "vi_meaning_short": "khoa học",
+    "enMeaning": "science; scientific",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个科学",
+      "新科学",
+      "好科学"
+    ],
+    "compounds": [
+      "科",
+      "学"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的科学。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kē xué.",
+        "vi": "Trên bàn có đặt một chiếc khoa học mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-318",
+    "hanzi": "可爱",
+    "traditional": "可愛",
+    "pinyin": "kě'ài",
+    "pinyinClean": "keai",
+    "hanViet": "可 ÁI",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "dễ thương",
+    "vi_meaning_full": "Tính từ: dễ thương",
+    "vi_meaning_short": "dễ thương",
+    "enMeaning": "cute; lovely",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常可爱",
+      "很可爱",
+      "真可爱"
+    ],
+    "compounds": [
+      "可",
+      "爱"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真可爱，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn kě ài, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật dễ thương, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-320",
+    "hanzi": "可怕",
+    "traditional": "可怕",
+    "pinyin": "kěpà",
+    "pinyinClean": "kepa",
+    "hanViet": "可 怕",
+    "radical": "口",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "đáng sợ",
+    "vi_meaning_full": "Tính từ: đáng sợ",
+    "vi_meaning_short": "đáng sợ",
+    "enMeaning": "fearful; terrible",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常可怕",
+      "很可怕",
+      "真可怕"
+    ],
+    "compounds": [
+      "可",
+      "怕"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真可怕，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn kě pà, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật đáng sợ, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-321",
+    "hanzi": "可是",
+    "traditional": "可是",
+    "pinyin": "kěshì",
+    "pinyinClean": "keshi",
+    "hanViet": "可 是",
+    "radical": "口",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "nhưng mà",
+    "vi_meaning_full": "Liên từ: nhưng mà",
+    "vi_meaning_short": "nhưng mà",
+    "enMeaning": "but; however",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "可是...而且...",
+      "虽然...可是..."
+    ],
+    "compounds": [
+      "可",
+      "是"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他可是会说英语，还会说汉语。",
+        "pinyin": "Tā kě shì huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy nhưng mà biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-323",
+    "hanzi": "克",
+    "traditional": "克",
+    "pinyin": "kè",
+    "pinyinClean": "ke",
+    "hanViet": "克",
+    "radical": "儿",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "gram",
+    "vi_meaning_full": "Lượng từ: gram",
+    "vi_meaning_short": "gram",
+    "enMeaning": "gram",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一克",
+      "两克",
+      "这克"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一克这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī kè zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một gram nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-324",
+    "hanzi": "刻",
+    "traditional": "刻",
+    "pinyin": "kè",
+    "pinyinClean": "ke",
+    "hanViet": "刻",
+    "radical": "刀",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "khắc, 15 phút",
+    "vi_meaning_full": "Lượng từ: khắc, 15 phút",
+    "vi_meaning_short": "khắc, 15 phút",
+    "enMeaning": "quarter of hour; carve",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一刻",
+      "两刻",
+      "这刻"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一刻这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī kè zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một khắc, 15 phút nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-325",
+    "hanzi": "客人",
+    "traditional": "客人",
+    "pinyin": "kè•rén",
+    "pinyinClean": "keren",
+    "hanViet": "KHÁCH NHÂN",
+    "radical": "宀",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khách",
+    "vi_meaning_full": "Danh từ: khách",
+    "vi_meaning_short": "khách",
+    "enMeaning": "guest; visitor",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个客人",
+      "新客人",
+      "好客人"
+    ],
+    "compounds": [
+      "客",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的客人。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kè rén.",
+        "vi": "Trên bàn có đặt một chiếc khách mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-326",
+    "hanzi": "课堂",
+    "traditional": "課堂",
+    "pinyin": "kètáng",
+    "pinyinClean": "ketang",
+    "hanViet": "课 堂",
+    "radical": "言",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lớp học",
+    "vi_meaning_full": "Danh từ: lớp học",
+    "vi_meaning_short": "lớp học",
+    "enMeaning": "classroom",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个课堂",
+      "新课堂",
+      "好课堂"
+    ],
+    "compounds": [
+      "课",
+      "堂"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的课堂。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kè táng.",
+        "vi": "Trên bàn có đặt một chiếc lớp học mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-327",
+    "hanzi": "空气",
+    "traditional": "空氣",
+    "pinyin": "kōngqì",
+    "pinyinClean": "kongqi",
+    "hanViet": "空 气",
+    "radical": "穴",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "không khí",
+    "vi_meaning_full": "Danh từ: không khí",
+    "vi_meaning_short": "không khí",
+    "enMeaning": "air",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个空气",
+      "新空气",
+      "好空气"
+    ],
+    "compounds": [
+      "空",
+      "气"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的空气。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kōng qì.",
+        "vi": "Trên bàn có đặt một chiếc không khí mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-328",
+    "hanzi": "哭",
+    "traditional": "哭",
+    "pinyin": "kū",
+    "pinyinClean": "ku",
+    "hanViet": "哭",
+    "radical": "口",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "khóc",
+    "vi_meaning_full": "Động từ: khóc",
+    "vi_meaning_short": "khóc",
+    "enMeaning": "to cry; weep",
+    "image": "https://images.pexels.com/photos/7717318/pexels-photo-7717318.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备哭",
+      "开始哭",
+      "喜欢哭"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去哭。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù kū.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi khóc.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-329",
+    "hanzi": "快餐",
+    "traditional": "快餐",
+    "pinyin": "kuàicān",
+    "pinyinClean": "kuaican",
+    "hanViet": "快 餐",
+    "radical": "心",
+    "strokeCount": 23,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đồ ăn nhanh",
+    "vi_meaning_full": "Danh từ: đồ ăn nhanh",
+    "vi_meaning_short": "đồ ăn nhanh",
+    "enMeaning": "fast food",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个快餐",
+      "新快餐",
+      "好快餐"
+    ],
+    "compounds": [
+      "快",
+      "餐"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的快餐。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kuài cān.",
+        "vi": "Trên bàn có đặt một chiếc đồ ăn nhanh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-330",
+    "hanzi": "快点儿",
+    "traditional": "快點兒",
+    "pinyin": "kuài diǎnr",
+    "pinyinClean": "kuaidianr",
+    "hanViet": "KHOÁI ĐIỂM NHI",
+    "radical": "忄",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "nhanh lên, nhanh một chút",
+    "vi_meaning_full": "Phó từ: nhanh lên, nhanh một chút",
+    "vi_meaning_short": "nhanh lên, nhanh",
+    "enMeaning": "hurry up, faster",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "快点儿走",
+      "快点儿吃",
+      "动作快点儿"
+    ],
+    "compounds": [
+      "快乐",
+      "一点儿"
+    ],
+    "synonyms": [
+      "抓紧",
+      "赶快"
+    ],
+    "antonyms": [
+      "慢点儿",
+      "慢慢来"
+    ],
+    "confusableWords": "慢慢",
+    "sentences": [
+      {
+        "zh": "车马上要开了，你快点儿！",
+        "pinyin": "Chē mǎshàng yào kāi le, nǐ kuài diǎnr!",
+        "vi": "Xe sắp chạy rồi, bạn nhanh lên một chút!",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-332",
+    "hanzi": "快要",
+    "traditional": "快要",
+    "pinyin": "kuàiyào",
+    "pinyinClean": "kuaiyao",
+    "hanViet": "快 YẾU",
+    "radical": "心",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "sắp",
+    "vi_meaning_full": "Phó từ: sắp",
+    "vi_meaning_short": "sắp",
+    "enMeaning": "about to",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "快要好",
+      "快要去",
+      "快要看"
+    ],
+    "compounds": [
+      "快",
+      "要"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家快要准备好了，随时可以出发。",
+        "pinyin": "Dà jiā kuài yào zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người sắp chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-333",
+    "hanzi": "筷子",
+    "traditional": "筷子",
+    "pinyin": "kuàizi",
+    "pinyinClean": "kuaizi",
+    "hanViet": "筷 TỬ",
+    "radical": "竹",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đũa",
+    "vi_meaning_full": "Danh từ: đũa",
+    "vi_meaning_short": "đũa",
+    "enMeaning": "chopsticks",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个筷子",
+      "新筷子",
+      "好筷子"
+    ],
+    "compounds": [
+      "筷",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的筷子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de kuài zi.",
+        "vi": "Trên bàn có đặt một chiếc đũa mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-334",
+    "hanzi": "拉",
+    "traditional": "拉",
+    "pinyin": "lā",
+    "pinyinClean": "la",
+    "hanViet": "拉",
+    "radical": "手",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "kéo",
+    "vi_meaning_full": "Động từ: kéo",
+    "vi_meaning_short": "kéo",
+    "enMeaning": "to pull",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备拉",
+      "开始拉",
+      "喜欢拉"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去拉。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù lā.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi kéo.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-335",
+    "hanzi": "来自",
+    "traditional": "來自",
+    "pinyin": "láizi",
+    "pinyinClean": "laizi",
+    "hanViet": "LAI TỰ",
+    "radical": "木",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đến từ",
+    "vi_meaning_full": "Động từ: đến từ",
+    "vi_meaning_short": "đến từ",
+    "enMeaning": "come from",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备来自",
+      "开始来自",
+      "喜欢来自"
+    ],
+    "compounds": [
+      "来",
+      "自"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去来自。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù lái zì.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đến từ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-336",
+    "hanzi": "蓝",
+    "traditional": "藍",
+    "pinyin": "lán",
+    "pinyinClean": "lan",
+    "hanViet": "蓝",
+    "radical": "艹",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "xanh biển",
+    "vi_meaning_full": "Tính từ: xanh biển",
+    "vi_meaning_short": "xanh biển",
+    "enMeaning": "blue",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常蓝",
+      "很蓝",
+      "真蓝"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真蓝，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn lán, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật xanh biển, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-337",
+    "hanzi": "蓝色",
+    "traditional": "藍色",
+    "pinyin": "lánsè",
+    "pinyinClean": "lanse",
+    "hanViet": "蓝 SẮC",
+    "radical": "艹",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "màu xanh biển",
+    "vi_meaning_full": "Danh từ: màu xanh biển",
+    "vi_meaning_short": "màu xanh biển",
+    "enMeaning": "blue color",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个蓝色",
+      "新蓝色",
+      "好蓝色"
+    ],
+    "compounds": [
+      "蓝",
+      "色"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的蓝色。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lán sè.",
+        "vi": "Trên bàn có đặt một chiếc màu xanh biển mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-338",
+    "hanzi": "篮球",
+    "traditional": "籃球",
+    "pinyin": "lánqiú",
+    "pinyinClean": "lanqiu",
+    "hanViet": "篮 CẦU",
+    "radical": "口",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bóng rồ",
+    "vi_meaning_full": "Danh từ: bóng rồ",
+    "vi_meaning_short": "bóng rồ",
+    "enMeaning": "basketball",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个篮球",
+      "新篮球",
+      "好篮球"
+    ],
+    "compounds": [
+      "篮",
+      "球"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的篮球。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lán qiú.",
+        "vi": "Trên bàn có đặt một chiếc bóng rồ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-339",
+    "hanzi": "老",
+    "traditional": "老",
+    "pinyin": "lǎo",
+    "pinyinClean": "lao",
+    "hanViet": "老",
+    "radical": "老",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "già",
+    "vi_meaning_full": "Phó từ: già",
+    "vi_meaning_short": "già",
+    "enMeaning": "old",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "老好",
+      "老去",
+      "老看"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家老准备好了，随时可以出发。",
+        "pinyin": "Dà jiā lǎo zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người già chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-340",
+    "hanzi": "老",
+    "traditional": "老",
+    "pinyin": "lǎo",
+    "pinyinClean": "lao",
+    "hanViet": "LÃO",
+    "radical": "耂",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "ông (lão Vương), già",
+    "vi_meaning_full": "Tính từ: ông (lão Vương), già",
+    "vi_meaning_short": "ông",
+    "enMeaning": "old, aged, senior (used before surname)",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "老王",
+      "老张",
+      "老人",
+      "变老"
+    ],
+    "compounds": [
+      "老师",
+      "老年"
+    ],
+    "synonyms": [
+      "年老",
+      "年长"
+    ],
+    "antonyms": [
+      "少",
+      "年幼",
+      "年轻"
+    ],
+    "confusableWords": "小",
+    "sentences": [
+      {
+        "zh": "老王是我们办公室经验最丰富的工程师。",
+        "pinyin": "Lǎo Wáng shì wǒmen bàngōngshì jīngyàn zuì fēngfù de gōngchéngshī.",
+        "vi": "Bác Vương là kỹ sư có nhiều kinh nghiệm nhất trong văn phòng chúng tôi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-341",
+    "hanzi": "老年",
+    "traditional": "老年",
+    "pinyin": "lǎonián",
+    "pinyinClean": "laonian",
+    "hanViet": "老 年",
+    "radical": "老",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tuổi già",
+    "vi_meaning_full": "Danh từ: tuổi già",
+    "vi_meaning_short": "tuổi già",
+    "enMeaning": "old age",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个老年",
+      "新老年",
+      "好老年"
+    ],
+    "compounds": [
+      "老",
+      "年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的老年。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lǎo nián.",
+        "vi": "Trên bàn có đặt một chiếc tuổi già mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-342",
+    "hanzi": "老朋友",
+    "traditional": "老朋友",
+    "pinyin": "lǎo péngyou",
+    "pinyinClean": "laopengyou",
+    "hanViet": "LÃO BẰNG HỮU",
+    "radical": "耂",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bạn cũ, bạn lâu năm",
+    "vi_meaning_full": "Danh từ: bạn cũ, bạn lâu năm",
+    "vi_meaning_short": "bạn cũ, bạn lâu",
+    "enMeaning": "old friend",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "见老朋友",
+      "多年老朋友",
+      "拜访老朋友"
+    ],
+    "compounds": [
+      "老人",
+      "好友"
+    ],
+    "synonyms": [
+      "故友",
+      "旧识"
+    ],
+    "antonyms": [
+      "新朋友"
+    ],
+    "confusableWords": "新朋友",
+    "sentences": [
+      {
+        "zh": "昨天我在超市偶遇了一位多年没见的老朋友。",
+        "pinyin": "Zuótiān wǒ zài chāoshì ǒuyù le yí wèi duō nián méi jiàn de lǎo péngyou.",
+        "vi": "Hôm qua tôi tình cờ gặp lại một người bạn cũ nhiều năm không gặp ở siêu thị.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-343",
+    "hanzi": "老是",
+    "traditional": "老是",
+    "pinyin": "lǎo shì",
+    "pinyinClean": "laoshi",
+    "hanViet": "老 是",
+    "radical": "老",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "luôn luôn",
+    "vi_meaning_full": "Phó từ: luôn luôn",
+    "vi_meaning_short": "luôn luôn",
+    "enMeaning": "always; constantly",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "老是好",
+      "老是去",
+      "老是看"
+    ],
+    "compounds": [
+      "老",
+      "是"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家老是准备好了，随时可以出发。",
+        "pinyin": "Dà jiā lǎo shì zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người luôn luôn chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-345",
+    "hanzi": "离开",
+    "traditional": "離開",
+    "pinyin": "lí//kāi",
+    "pinyinClean": "likai",
+    "hanViet": "离 KHAI",
+    "radical": "禸",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "rời khỏi",
+    "vi_meaning_full": "Động từ: rời khỏi",
+    "vi_meaning_short": "rời khỏi",
+    "enMeaning": "to leave; depart",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备离开",
+      "开始离开",
+      "喜欢离开"
+    ],
+    "compounds": [
+      "离",
+      "开"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去离开。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù lí kāi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi rời khỏi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-346",
+    "hanzi": "礼物",
+    "traditional": "禮物",
+    "pinyin": "lĩwù",
+    "pinyinClean": "liwu",
+    "hanViet": "礼 VẬT",
+    "radical": "示",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "quà",
+    "vi_meaning_full": "Danh từ: quà",
+    "vi_meaning_short": "quà",
+    "enMeaning": "gift; present",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个礼物",
+      "新礼物",
+      "好礼物"
+    ],
+    "compounds": [
+      "礼",
+      "物"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的礼物。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lǐ wù.",
+        "vi": "Trên bàn có đặt một chiếc quà mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-347",
+    "hanzi": "里头",
+    "traditional": "裏頭",
+    "pinyin": "lĩtou",
+    "pinyinClean": "litou",
+    "hanViet": "里 ĐẦU",
+    "radical": "口",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bên trong",
+    "vi_meaning_full": "Danh từ: bên trong",
+    "vi_meaning_short": "bên trong",
+    "enMeaning": "inside",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个里头",
+      "新里头",
+      "好里头"
+    ],
+    "compounds": [
+      "里",
+      "头"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的里头。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lǐ tou.",
+        "vi": "Trên bàn có đặt một chiếc bên trong mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-348",
+    "hanzi": "理想",
+    "traditional": "理想",
+    "pinyin": "lỠxiǎng",
+    "pinyinClean": "loxiang",
+    "hanViet": "LÝ 想",
+    "radical": "王",
+    "strokeCount": 24,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lý tưởng",
+    "vi_meaning_full": "Danh từ: lý tưởng",
+    "vi_meaning_short": "lý tưởng",
+    "enMeaning": "ideal; dream",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个理想",
+      "新理想",
+      "好理想"
+    ],
+    "compounds": [
+      "理",
+      "想"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的理想。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lǐ xiǎng.",
+        "vi": "Trên bàn có đặt một chiếc lý tưởng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-349",
+    "hanzi": "例如",
+    "traditional": "例如",
+    "pinyin": "lìrú",
+    "pinyinClean": "liru",
+    "hanViet": "例 NHƯ",
+    "radical": "人",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "ví dụ",
+    "vi_meaning_full": "Động từ: ví dụ",
+    "vi_meaning_short": "ví dụ",
+    "enMeaning": "for example",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备例如",
+      "开始例如",
+      "喜欢例如"
+    ],
+    "compounds": [
+      "例",
+      "如"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去例如。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù lì rú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ví dụ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-350",
+    "hanzi": "例子",
+    "traditional": "例子",
+    "pinyin": "lìzi",
+    "pinyinClean": "lizi",
+    "hanViet": "例 TỬ",
+    "radical": "人",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ví dụ",
+    "vi_meaning_full": "Danh từ: ví dụ",
+    "vi_meaning_short": "ví dụ",
+    "enMeaning": "example",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个例子",
+      "新例子",
+      "好例子"
+    ],
+    "compounds": [
+      "例",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的例子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lì zi.",
+        "vi": "Trên bàn có đặt một chiếc ví dụ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-351",
+    "hanzi": "脸",
+    "traditional": "臉",
+    "pinyin": "liǎn",
+    "pinyinClean": "lian",
+    "hanViet": "脸",
+    "radical": "月",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khuôn mặt",
+    "vi_meaning_full": "Danh từ: khuôn mặt",
+    "vi_meaning_short": "khuôn mặt",
+    "enMeaning": "face",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个脸",
+      "新脸",
+      "好脸"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的脸。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de liǎn.",
+        "vi": "Trên bàn có đặt một chiếc khuôn mặt mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-352",
+    "hanzi": "练",
+    "traditional": "練",
+    "pinyin": "liàn",
+    "pinyinClean": "lian",
+    "hanViet": "练",
+    "radical": "纟",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "luyện",
+    "vi_meaning_full": "Động từ: luyện",
+    "vi_meaning_short": "luyện",
+    "enMeaning": "to practice",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备练",
+      "开始练",
+      "喜欢练"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去练。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù liàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi luyện.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-353",
+    "hanzi": "练习",
+    "traditional": "練習",
+    "pinyin": "liànxí",
+    "pinyinClean": "lianxi",
+    "hanViet": "练 习",
+    "radical": "纟",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "luyện tập, thực hành / bài tập, sự luyện tập",
+    "vi_meaning_full": "Danh từ / động từ: luyện tập, thực hành / bài tập, sự luyện tập",
+    "vi_meaning_short": "luyện tập, thực",
+    "enMeaning": "exercise; practice",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备练习",
+      "开始练习",
+      "喜欢练习"
+    ],
+    "compounds": [
+      "练",
+      "习"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去练习。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù liàn xí.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi luyện tập, thực hành.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-354",
+    "hanzi": "凉",
+    "traditional": "涼",
+    "pinyin": "liáng",
+    "pinyinClean": "liang",
+    "hanViet": "凉",
+    "radical": "冫",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "mát",
+    "vi_meaning_full": "Tính từ: mát",
+    "vi_meaning_short": "mát",
+    "enMeaning": "cool",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常凉",
+      "很凉",
+      "真凉"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真凉，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn liáng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật mát, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-355",
+    "hanzi": "凉快",
+    "traditional": "涼快",
+    "pinyin": "liángkuai",
+    "pinyinClean": "liangkuai",
+    "hanViet": "凉 快",
+    "radical": "冫",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "mát mè",
+    "vi_meaning_full": "Tính từ: mát mè",
+    "vi_meaning_short": "mát mè",
+    "enMeaning": "pleasantly cool",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常凉快",
+      "很凉快",
+      "真凉快"
+    ],
+    "compounds": [
+      "凉",
+      "快"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真凉快，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn liáng kuài, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật mát mè, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-357",
+    "hanzi": "亮",
+    "traditional": "亮",
+    "pinyin": "liàng",
+    "pinyinClean": "liang",
+    "hanViet": "亮",
+    "radical": "亠",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "sáng, sáng sủa / phát sáng / bày tỏ",
+    "vi_meaning_full": "Động từ: sáng, sáng sủa / phát sáng / bày tỏ",
+    "vi_meaning_short": "sáng, sáng sủa",
+    "enMeaning": "bright; shine",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备亮",
+      "开始亮",
+      "喜欢亮"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去亮。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù liàng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi sáng, sáng sủa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-358",
+    "hanzi": "辆",
+    "traditional": "輛",
+    "pinyin": "liàng",
+    "pinyinClean": "liang",
+    "hanViet": "LƯỠNG",
+    "radical": "车",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "chiếc (xe)",
+    "vi_meaning_full": "Lượng từ: chiếc (xe)",
+    "vi_meaning_short": "chiếc",
+    "enMeaning": "measure word for vehicles",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一辆",
+      "两辆",
+      "这辆"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一辆这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī liàng zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một chiếc nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-359",
+    "hanzi": "零下",
+    "traditional": "零下",
+    "pinyin": "líng xià",
+    "pinyinClean": "lingxia",
+    "hanViet": "LINH HẠ",
+    "radical": "雨",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "dưới 0 độ, âm độ",
+    "vi_meaning_full": "Danh từ: dưới 0 độ, âm độ",
+    "vi_meaning_short": "dưới 0 độ, âm độ",
+    "enMeaning": "below zero (temperature)",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "零下十度",
+      "零下气温",
+      "温度零下"
+    ],
+    "compounds": [
+      "零钱",
+      "下面"
+    ],
+    "synonyms": [
+      "负温"
+    ],
+    "antonyms": [
+      "零上"
+    ],
+    "confusableWords": "零上",
+    "sentences": [
+      {
+        "zh": "冬天北方很冷，气温经常在零下十度左右。",
+        "pinyin": "Dōngtiān běifāng hěn lěng, qìwēn chángcháng zài língxià shí dù zuǒyòu.",
+        "vi": "Mùa đông miền Bắc rất lạnh, nhiệt độ thường vào khoảng âm 10 độ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-360",
+    "hanzi": "留",
+    "traditional": "留",
+    "pinyin": "liú",
+    "pinyinClean": "liu",
+    "hanViet": "留",
+    "radical": "田",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "ở lại",
+    "vi_meaning_full": "Động từ: ở lại",
+    "vi_meaning_short": "ở lại",
+    "enMeaning": "to remain; stay",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备留",
+      "开始留",
+      "喜欢留"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去留。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù liú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ở lại.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-361",
+    "hanzi": "留下",
+    "traditional": "留下",
+    "pinyin": "liúxia",
+    "pinyinClean": "liuxia",
+    "hanViet": "留 下",
+    "radical": "田",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "để lại",
+    "vi_meaning_full": "Động từ: để lại",
+    "vi_meaning_short": "để lại",
+    "enMeaning": "to leave behind",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备留下",
+      "开始留下",
+      "喜欢留下"
+    ],
+    "compounds": [
+      "留",
+      "下"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去留下。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù liú xià.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi để lại.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-362",
+    "hanzi": "留学生",
+    "traditional": "留學生",
+    "pinyin": "liúxuéshēng",
+    "pinyinClean": "liuxuesheng",
+    "hanViet": "留 HỌC SANH",
+    "radical": "田",
+    "strokeCount": 23,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "du học sinh",
+    "vi_meaning_full": "Danh từ: du học sinh",
+    "vi_meaning_short": "du học sinh",
+    "enMeaning": "foreign student",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个留学生",
+      "新留学生",
+      "好留学生"
+    ],
+    "compounds": [
+      "留",
+      "学生"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的留学生。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de liú xué shēng.",
+        "vi": "Trên bàn có đặt một chiếc du học sinh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-363",
+    "hanzi": "流",
+    "traditional": "流",
+    "pinyin": "liú",
+    "pinyinClean": "liu",
+    "hanViet": "流",
+    "radical": "水",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "chảy",
+    "vi_meaning_full": "Động từ: chảy",
+    "vi_meaning_short": "chảy",
+    "enMeaning": "to flow",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备流",
+      "开始流",
+      "喜欢流"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去流。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù liú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi chảy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-364",
+    "hanzi": "流利",
+    "traditional": "流利",
+    "pinyin": "liúlì",
+    "pinyinClean": "liuli",
+    "hanViet": "流 利",
+    "radical": "水",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "trôi chảy",
+    "vi_meaning_full": "Tính từ: trôi chảy",
+    "vi_meaning_short": "trôi chảy",
+    "enMeaning": "fluent",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常流利",
+      "很流利",
+      "真流利"
+    ],
+    "compounds": [
+      "流",
+      "利"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真流利，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn liú lì, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật trôi chảy, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-365",
+    "hanzi": "流行",
+    "traditional": "流行",
+    "pinyin": "liúxíng",
+    "pinyinClean": "liuxing",
+    "hanViet": "流 HÀNH",
+    "radical": "水",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thịnh hành, lan truyền, trở nên phổ biến / phổ biến, hợp mốt, thịnh hành",
+    "vi_meaning_full": "Động từ: thịnh hành, lan truyền, trở nên phổ biến / phổ biến, hợp mốt, thịnh hành",
+    "vi_meaning_short": "thịnh hành, lan",
+    "enMeaning": "popular; trendy",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备流行",
+      "开始流行",
+      "喜欢流行"
+    ],
+    "compounds": [
+      "流",
+      "行"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去流行。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù liú xíng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thịnh hành, lan truyền, trở nên phổ biến.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-366",
+    "hanzi": "路边",
+    "traditional": "路邊",
+    "pinyin": "lù biān",
+    "pinyinClean": "lubian",
+    "hanViet": "LỘ BIÊN",
+    "radical": "足",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ven đường, bên đường",
+    "vi_meaning_full": "Danh từ: ven đường, bên đường",
+    "vi_meaning_short": "ven đường, bên đ",
+    "enMeaning": "roadside, curb",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "停在路边",
+      "路边的树",
+      "路边摊"
+    ],
+    "compounds": [
+      "马路",
+      "旁边"
+    ],
+    "synonyms": [
+      "道旁",
+      "路旁"
+    ],
+    "antonyms": [
+      "路中",
+      "路中央"
+    ],
+    "confusableWords": "路上",
+    "sentences": [
+      {
+        "zh": "请把汽车停在路边，不要挡住大门。",
+        "pinyin": "Qǐng bǎ qìchē tíng zài lùbiān, bú yào dǎngzhù dàmén.",
+        "vi": "Xin hãy đỗ ô tô ở ven đường, đừng chắn cổng lớn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-367",
+    "hanzi": "旅客",
+    "traditional": "旅客",
+    "pinyin": "lǚkè",
+    "pinyinClean": "luke",
+    "hanViet": "旅 KHÁCH",
+    "radical": "方",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "hành khách",
+    "vi_meaning_full": "Danh từ: hành khách",
+    "vi_meaning_short": "hành khách",
+    "enMeaning": "passenger; traveler",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个旅客",
+      "新旅客",
+      "好旅客"
+    ],
+    "compounds": [
+      "旅",
+      "客"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的旅客。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lǚ kè.",
+        "vi": "Trên bàn có đặt một chiếc hành khách mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-368",
+    "hanzi": "旅行",
+    "traditional": "旅行",
+    "pinyin": "lǚxíng",
+    "pinyinClean": "luxing",
+    "hanViet": "旅 HÀNH",
+    "radical": "方",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "du lịch",
+    "vi_meaning_full": "Động từ: du lịch",
+    "vi_meaning_short": "du lịch",
+    "enMeaning": "travel; journey",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备旅行",
+      "开始旅行",
+      "喜欢旅行"
+    ],
+    "compounds": [
+      "旅",
+      "行"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去旅行。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù lǚ xíng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi du lịch.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-370",
+    "hanzi": "绿",
+    "traditional": "綠",
+    "pinyin": "lù",
+    "pinyinClean": "lu",
+    "hanViet": "绿",
+    "radical": "纟",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "xanh lá cây",
+    "vi_meaning_full": "Tính từ: xanh lá cây",
+    "vi_meaning_short": "xanh lá cây",
+    "enMeaning": "green",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常绿",
+      "很绿",
+      "真绿"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真绿，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn lǜ, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật xanh lá cây, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-371",
+    "hanzi": "绿色",
+    "traditional": "綠色",
+    "pinyin": "lùsè",
+    "pinyinClean": "luse",
+    "hanViet": "绿 SẮC",
+    "radical": "纟",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "màu xanh lá",
+    "vi_meaning_full": "Danh từ: màu xanh lá",
+    "vi_meaning_short": "màu xanh lá",
+    "enMeaning": "green color",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个绿色",
+      "新绿色",
+      "好绿色"
+    ],
+    "compounds": [
+      "绿",
+      "色"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的绿色。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de lǜ sè.",
+        "vi": "Trên bàn có đặt một chiếc màu xanh lá mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-372",
+    "hanzi": "卖",
+    "traditional": "賣",
+    "pinyin": "mài",
+    "pinyinClean": "mai",
+    "hanViet": "卖",
+    "radical": "十",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "bán",
+    "vi_meaning_full": "Động từ: bán",
+    "vi_meaning_short": "bán",
+    "enMeaning": "to sell",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备卖",
+      "开始卖",
+      "喜欢卖"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去卖。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù mài.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi bán.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-373",
+    "hanzi": "满",
+    "traditional": "滿",
+    "pinyin": "mǎn",
+    "pinyinClean": "man",
+    "hanViet": "MÃN",
+    "radical": "水",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "đây",
+    "vi_meaning_full": "Tính từ: đây",
+    "vi_meaning_short": "đây",
+    "enMeaning": "full; satisfied",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常满",
+      "很满",
+      "真满"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真满，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn mǎn, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật đây, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-374",
+    "hanzi": "满意",
+    "traditional": "滿意",
+    "pinyin": "mǎnyì",
+    "pinyinClean": "manyi",
+    "hanViet": "MÃN Ý",
+    "radical": "水",
+    "strokeCount": 26,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "hài lòng",
+    "vi_meaning_full": "Động từ: hài lòng",
+    "vi_meaning_short": "hài lòng",
+    "enMeaning": "satisfied; pleased",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备满意",
+      "开始满意",
+      "喜欢满意"
+    ],
+    "compounds": [
+      "满",
+      "意"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去满意。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù mǎn yì.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi hài lòng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-377",
+    "hanzi": "面1（见面）",
+    "traditional": "面1（見面）",
+    "pinyin": "miàn",
+    "pinyinClean": "mian",
+    "hanViet": "DIỆN 1 （ KIẾN DIỆN ）",
+    "radical": "面",
+    "strokeCount": 40,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mặt, khuôn mặt / cái, chiếc",
+    "vi_meaning_full": "Danh từ: mặt, khuôn mặt / cái, chiếc",
+    "vi_meaning_short": "mặt, khuôn mặt",
+    "enMeaning": "face; to meet",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个面1（见面）",
+      "新面1（见面）",
+      "好面1（见面）"
+    ],
+    "compounds": [
+      "面",
+      "1（见面）"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的面1（见面）。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de miàn 1（ jiàn miàn ）.",
+        "vi": "Trên bàn có đặt một chiếc mặt, khuôn mặt mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-378",
+    "hanzi": "面2（面条儿）",
+    "traditional": "面2（麪條兒）",
+    "pinyin": "miàn",
+    "pinyinClean": "mian",
+    "hanViet": "DIỆN 2 （ DIỆN 条 NHI ）",
+    "radical": "面",
+    "strokeCount": 45,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mì",
+    "vi_meaning_full": "Danh từ: mì",
+    "vi_meaning_short": "mì",
+    "enMeaning": "noodle",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个面2（面条儿）",
+      "新面2（面条儿）",
+      "好面2（面条儿）"
+    ],
+    "compounds": [
+      "面",
+      "2（面条儿）"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的面2（面条儿）。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de miàn 2（ miàn tiáo ér ）.",
+        "vi": "Trên bàn có đặt một chiếc mì mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-379",
+    "hanzi": "面前",
+    "traditional": "面前",
+    "pinyin": "miànqián",
+    "pinyinClean": "mianqian",
+    "hanViet": "DIỆN 前",
+    "radical": "面",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trước mặt",
+    "vi_meaning_full": "Danh từ: trước mặt",
+    "vi_meaning_short": "trước mặt",
+    "enMeaning": "in front of",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个面前",
+      "新面前",
+      "好面前"
+    ],
+    "compounds": [
+      "面",
+      "前"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的面前。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de miàn qián.",
+        "vi": "Trên bàn có đặt một chiếc trước mặt mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-380",
+    "hanzi": "名",
+    "traditional": "名",
+    "pinyin": "míng",
+    "pinyinClean": "ming",
+    "hanViet": "DANH",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tên, danh tiếng / dùng cho người (tôn trọng)",
+    "vi_meaning_full": "Danh từ: tên, danh tiếng / dùng cho người (tôn trọng)",
+    "vi_meaning_short": "tên, danh tiếng",
+    "enMeaning": "name; fame",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个名",
+      "新名",
+      "好名"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的名。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de míng.",
+        "vi": "Trên bàn có đặt một chiếc tên, danh tiếng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-381",
+    "hanzi": "名称",
+    "traditional": "名稱",
+    "pinyin": "míngchēng",
+    "pinyinClean": "mingcheng",
+    "hanViet": "DANH XƯNG",
+    "radical": "口",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tên gọi",
+    "vi_meaning_full": "Danh từ: tên gọi",
+    "vi_meaning_short": "tên gọi",
+    "enMeaning": "name; designation",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个名称",
+      "新名称",
+      "好名称"
+    ],
+    "compounds": [
+      "名",
+      "称"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的名称。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de míng chēng.",
+        "vi": "Trên bàn có đặt một chiếc tên gọi mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-382",
+    "hanzi": "名单",
+    "traditional": "名單",
+    "pinyin": "míngdān",
+    "pinyinClean": "mingdan",
+    "hanViet": "DANH ĐƠN",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "danh sách",
+    "vi_meaning_full": "Danh từ: danh sách",
+    "vi_meaning_short": "danh sách",
+    "enMeaning": "name list; roster",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个名单",
+      "新名单",
+      "好名单"
+    ],
+    "compounds": [
+      "名",
+      "单"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的名单。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de míng dān.",
+        "vi": "Trên bàn có đặt một chiếc danh sách mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-383",
+    "hanzi": "明星",
+    "traditional": "明星",
+    "pinyin": "míngxīng",
+    "pinyinClean": "mingxing",
+    "hanViet": "明 星",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngôi sao",
+    "vi_meaning_full": "Danh từ: ngôi sao",
+    "vi_meaning_short": "ngôi sao",
+    "enMeaning": "star; celebrity",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个明星",
+      "新明星",
+      "好明星"
+    ],
+    "compounds": [
+      "明",
+      "星"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的明星。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de míng xīng.",
+        "vi": "Trên bàn có đặt một chiếc ngôi sao mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-384",
+    "hanzi": "目的",
+    "traditional": "目的",
+    "pinyin": "mùdì",
+    "pinyinClean": "mudi",
+    "hanViet": "目 的",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mục đích",
+    "vi_meaning_full": "Danh từ: mục đích",
+    "vi_meaning_short": "mục đích",
+    "enMeaning": "purpose; goal",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个目的",
+      "新目的",
+      "好目的"
+    ],
+    "compounds": [
+      "目",
+      "的"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的目的。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de mù dì.",
+        "vi": "Trên bàn có đặt một chiếc mục đích mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-385",
+    "hanzi": "拿出",
+    "traditional": "拿出",
+    "pinyin": "náchū",
+    "pinyinClean": "nachu",
+    "hanViet": "拿 XUẤT",
+    "radical": "手",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "lấy ra",
+    "vi_meaning_full": "Động từ: lấy ra",
+    "vi_meaning_short": "lấy ra",
+    "enMeaning": "take out",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备拿出",
+      "开始拿出",
+      "喜欢拿出"
+    ],
+    "compounds": [
+      "拿",
+      "出"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去拿出。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù ná chū.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi lấy ra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-386",
+    "hanzi": "拿到",
+    "traditional": "拿到",
+    "pinyin": "nádào",
+    "pinyinClean": "nadao",
+    "hanViet": "拿 到",
+    "radical": "手",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "lấy được",
+    "vi_meaning_full": "Động từ: lấy được",
+    "vi_meaning_short": "lấy được",
+    "enMeaning": "obtain; get hold of",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备拿到",
+      "开始拿到",
+      "喜欢拿到"
+    ],
+    "compounds": [
+      "拿",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去拿到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù ná dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi lấy được.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-388",
+    "hanzi": "那会儿",
+    "traditional": "那會兒",
+    "pinyin": "nàhuìr",
+    "pinyinClean": "nahuir",
+    "hanViet": "那 HỘI NHI",
+    "radical": "阝",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "lúc đó",
+    "vi_meaning_full": "Đại từ: lúc đó",
+    "vi_meaning_short": "lúc đó",
+    "enMeaning": "at that time",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说那会儿",
+      "用那会儿"
+    ],
+    "compounds": [
+      "那",
+      "会儿"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，那会儿是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, nà huì er shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 那会儿 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-389",
+    "hanzi": "那么",
+    "traditional": "那麼",
+    "pinyin": "nàme",
+    "pinyinClean": "name",
+    "hanViet": "那 么",
+    "radical": "阝",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "như vậy, như thế",
+    "vi_meaning_full": "Đại từ: như vậy, như thế",
+    "vi_meaning_short": "như vậy, như thế",
+    "enMeaning": "so; in that case",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说那么",
+      "用那么"
+    ],
+    "compounds": [
+      "那",
+      "么"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，那么是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, nà me shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 那么 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-390",
+    "hanzi": "那时候",
+    "traditional": "那時候",
+    "pinyin": "nà shíhou",
+    "pinyinClean": "nashihou",
+    "hanViet": "NA THỜI HẬU",
+    "radical": "阝",
+    "strokeCount": 26,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lúc đó, khi đó, hồi ấy",
+    "vi_meaning_full": "Danh từ: lúc đó, khi đó, hồi ấy",
+    "vi_meaning_short": "lúc đó, khi đó,",
+    "enMeaning": "at that time, back then",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "在那时候",
+      "那时候的事情",
+      "到那时候"
+    ],
+    "compounds": [
+      "那个",
+      "时间"
+    ],
+    "synonyms": [
+      "当时",
+      "彼时"
+    ],
+    "antonyms": [
+      "这时候",
+      "现在"
+    ],
+    "confusableWords": "这时候",
+    "sentences": [
+      {
+        "zh": "那时候我还在上小学，什么都不懂。",
+        "pinyin": "Nà shíhou wǒ hái zài shàng xiǎoxué, shénme dōu bù dǒng.",
+        "vi": "Hồi ấy tôi vẫn còn đang học tiểu học, chưa hiểu biết gì cả.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-391",
+    "hanzi": "那样",
+    "traditional": "那樣",
+    "pinyin": "nàyàng",
+    "pinyinClean": "nayang",
+    "hanViet": "那 样",
+    "radical": "阝",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "như vậy, như thế, kiểu đó",
+    "vi_meaning_full": "Đại từ: như vậy, như thế, kiểu đó",
+    "vi_meaning_short": "như vậy, như thế",
+    "enMeaning": "like that; such",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说那样",
+      "用那样"
+    ],
+    "compounds": [
+      "那",
+      "样"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，那样是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, nà yàng shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 那样 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-392",
+    "hanzi": "南方",
+    "traditional": "南方",
+    "pinyin": "nánfāng",
+    "pinyinClean": "nanfang",
+    "hanViet": "NAM PHƯƠNG",
+    "radical": "十",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phía nam, miền nam",
+    "vi_meaning_full": "Danh từ: phía nam, miền nam",
+    "vi_meaning_short": "phía nam, miền n",
+    "enMeaning": "south; Southern part",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个南方",
+      "新南方",
+      "好南方"
+    ],
+    "compounds": [
+      "南",
+      "方"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的南方。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de nán fāng.",
+        "vi": "Trên bàn có đặt một chiếc phía nam, miền nam mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-393",
+    "hanzi": "难过",
+    "traditional": "難過",
+    "pinyin": "nánguò",
+    "pinyinClean": "nanguo",
+    "hanViet": "难 QUÁ",
+    "radical": "隹",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "buồn, khó chịu",
+    "vi_meaning_full": "Tính từ: buồn, khó chịu",
+    "vi_meaning_short": "buồn, khó chịu",
+    "enMeaning": "sad; feel sorry",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常难过",
+      "很难过",
+      "真难过"
+    ],
+    "compounds": [
+      "难",
+      "过"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真难过，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn nán guò, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật buồn, khó chịu, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-394",
+    "hanzi": "难看",
+    "traditional": "難看",
+    "pinyin": "nánkàn",
+    "pinyinClean": "nankan",
+    "hanViet": "难 看",
+    "radical": "隹",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "xấu",
+    "vi_meaning_full": "Tính từ: xấu",
+    "vi_meaning_short": "xấu",
+    "enMeaning": "ugly; bad-looking",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常难看",
+      "很难看",
+      "真难看"
+    ],
+    "compounds": [
+      "难",
+      "看"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真难看，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn nán kàn, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật xấu, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-395",
+    "hanzi": "难受",
+    "traditional": "難受",
+    "pinyin": "nánshòu",
+    "pinyinClean": "nanshou",
+    "hanViet": "难 受",
+    "radical": "隹",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "khó chịu",
+    "vi_meaning_full": "Tính từ: khó chịu",
+    "vi_meaning_short": "khó chịu",
+    "enMeaning": "uncomfortable; painful",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常难受",
+      "很难受",
+      "真难受"
+    ],
+    "compounds": [
+      "难",
+      "受"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真难受，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn nán shòu, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật khó chịu, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-396",
+    "hanzi": "难题",
+    "traditional": "難題",
+    "pinyin": "nántí",
+    "pinyinClean": "nanti",
+    "hanViet": "难 题",
+    "radical": "隹",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "vấn đề khó",
+    "vi_meaning_full": "Danh từ: vấn đề khó",
+    "vi_meaning_short": "vấn đề khó",
+    "enMeaning": "difficult problem",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个难题",
+      "新难题",
+      "好难题"
+    ],
+    "compounds": [
+      "难",
+      "题"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的难题。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de nán tí.",
+        "vi": "Trên bàn có đặt một chiếc vấn đề khó mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-397",
+    "hanzi": "难听",
+    "traditional": "難聽",
+    "pinyin": "nántīng",
+    "pinyinClean": "nanting",
+    "hanViet": "难 听",
+    "radical": "隹",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "khó nghe",
+    "vi_meaning_full": "Tính từ: khó nghe",
+    "vi_meaning_short": "khó nghe",
+    "enMeaning": "unpleasant to hear",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常难听",
+      "很难听",
+      "真难听"
+    ],
+    "compounds": [
+      "难",
+      "听"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真难听，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn nán tīng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật khó nghe, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-398",
+    "hanzi": "能够",
+    "traditional": "能夠",
+    "pinyin": "nénggòu",
+    "pinyinClean": "nenggou",
+    "hanViet": "能 CẤU",
+    "radical": "月",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "có thể",
+    "vi_meaning_full": "Động từ: có thể",
+    "vi_meaning_short": "có thể",
+    "enMeaning": "be able to; can",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备能够",
+      "开始能够",
+      "喜欢能够"
+    ],
+    "compounds": [
+      "能",
+      "够"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去能够。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù néng gòu.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi có thể.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-399",
+    "hanzi": "年级",
+    "traditional": "年級",
+    "pinyin": "niánjí",
+    "pinyinClean": "nianji",
+    "hanViet": "年 CẤP",
+    "radical": "干",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khối lớp",
+    "vi_meaning_full": "Danh từ: khối lớp",
+    "vi_meaning_short": "khối lớp",
+    "enMeaning": "grade; year in school",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个年级",
+      "新年级",
+      "好年级"
+    ],
+    "compounds": [
+      "年",
+      "级"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的年级。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de nián jí.",
+        "vi": "Trên bàn có đặt một chiếc khối lớp mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-400",
+    "hanzi": "年轻",
+    "traditional": "年輕",
+    "pinyin": "niánqīng",
+    "pinyinClean": "nianqing",
+    "hanViet": "年 轻",
+    "radical": "干",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "trẻ",
+    "vi_meaning_full": "Tính từ: trẻ",
+    "vi_meaning_short": "trẻ",
+    "enMeaning": "young",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常年轻",
+      "很年轻",
+      "真年轻"
+    ],
+    "compounds": [
+      "年",
+      "轻"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真年轻，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn nián qīng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật trẻ, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-401",
+    "hanzi": "鸟",
+    "traditional": "鳥",
+    "pinyin": "niǎo",
+    "pinyinClean": "niao",
+    "hanViet": "鸟",
+    "radical": "鸟",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chim",
+    "vi_meaning_full": "Danh từ: chim",
+    "vi_meaning_short": "chim",
+    "enMeaning": "bird",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个鸟",
+      "新鸟",
+      "好鸟"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的鸟。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de niǎo.",
+        "vi": "Trên bàn có đặt một chiếc chim mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-402",
+    "hanzi": "弄",
+    "traditional": "弄",
+    "pinyin": "nòng",
+    "pinyinClean": "nong",
+    "hanViet": "弄",
+    "radical": "王",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "làm, khiến",
+    "vi_meaning_full": "Động từ: làm, khiến",
+    "vi_meaning_short": "làm, khiến",
+    "enMeaning": "to do; make",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备弄",
+      "开始弄",
+      "喜欢弄"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去弄。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù nòng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi làm, khiến.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-403",
+    "hanzi": "努力",
+    "traditional": "努力",
+    "pinyin": "nǚlì",
+    "pinyinClean": "nuli",
+    "hanViet": "努 力",
+    "radical": "力",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "nỗ lực",
+    "vi_meaning_full": "Tính từ: nỗ lực",
+    "vi_meaning_short": "nỗ lực",
+    "enMeaning": "hardworking; effort",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常努力",
+      "很努力",
+      "真努力"
+    ],
+    "compounds": [
+      "努",
+      "力"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真努力，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn nǔ lì, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật nỗ lực, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-404",
+    "hanzi": "爬",
+    "traditional": "爬",
+    "pinyin": "pá",
+    "pinyinClean": "pa",
+    "hanViet": "爬",
+    "radical": "爪",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "trèo",
+    "vi_meaning_full": "Động từ: trèo",
+    "vi_meaning_short": "trèo",
+    "enMeaning": "to climb; crawl",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备爬",
+      "开始爬",
+      "喜欢爬"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去爬。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù pá.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi trèo.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-405",
+    "hanzi": "爬山",
+    "traditional": "爬山",
+    "pinyin": "pá shān",
+    "pinyinClean": "pashan",
+    "hanViet": "BÀ SƠN",
+    "radical": "爪",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "leo núi",
+    "vi_meaning_full": "Động từ: leo núi",
+    "vi_meaning_short": "leo núi",
+    "enMeaning": "to climb a mountain, hiking",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "去爬山",
+      "喜欢爬山",
+      "爬山锻炼"
+    ],
+    "compounds": [
+      "高山",
+      "爬行"
+    ],
+    "synonyms": [
+      "登山"
+    ],
+    "antonyms": [
+      "下山"
+    ],
+    "confusableWords": "游泳",
+    "sentences": [
+      {
+        "zh": "这个周末天气晴朗，我们一起去爬山吧。",
+        "pinyin": "Zhège zhōumò tiānqì qínglǎng, wǒmen yìqǐ qù páshān ba.",
+        "vi": "Cuối tuần này trời nắng ráo, chúng mình cùng nhau đi leo núi đi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-406",
+    "hanzi": "怕",
+    "traditional": "怕",
+    "pinyin": "pà",
+    "pinyinClean": "pa",
+    "hanViet": "怕",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "sợ",
+    "vi_meaning_full": "Động từ: sợ",
+    "vi_meaning_short": "sợ",
+    "enMeaning": "to fear; afraid",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备怕",
+      "开始怕",
+      "喜欢怕"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去怕。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù pà.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi sợ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-407",
+    "hanzi": "排",
+    "traditional": "排",
+    "pinyin": "pái",
+    "pinyinClean": "pai",
+    "hanViet": "排",
+    "radical": "手",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "hàng / hàng, dãy",
+    "vi_meaning_full": "Danh từ: hàng / hàng, dãy",
+    "vi_meaning_short": "hàng",
+    "enMeaning": "row; line; to arrange",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个排",
+      "新排",
+      "好排"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的排。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de pái.",
+        "vi": "Trên bàn có đặt một chiếc hàng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-408",
+    "hanzi": "排队",
+    "traditional": "排隊",
+    "pinyin": "pái//duì",
+    "pinyinClean": "paidui",
+    "hanViet": "排 ĐỘI",
+    "radical": "手",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "xếp hàng",
+    "vi_meaning_full": "Động từ: xếp hàng",
+    "vi_meaning_short": "xếp hàng",
+    "enMeaning": "queue up; stand in line",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备排队",
+      "开始排队",
+      "喜欢排队"
+    ],
+    "compounds": [
+      "排",
+      "队"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去排队。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù pái duì.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi xếp hàng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-409",
+    "hanzi": "排球",
+    "traditional": "排球",
+    "pinyin": "páiqiú",
+    "pinyinClean": "paiqiu",
+    "hanViet": "排 CẦU",
+    "radical": "手",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bóng chuyền",
+    "vi_meaning_full": "Danh từ: bóng chuyền",
+    "vi_meaning_short": "bóng chuyền",
+    "enMeaning": "volleyball",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个排球",
+      "新排球",
+      "好排球"
+    ],
+    "compounds": [
+      "排",
+      "球"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的排球。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de pái qiú.",
+        "vi": "Trên bàn có đặt một chiếc bóng chuyền mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-410",
+    "hanzi": "碰",
+    "traditional": "碰",
+    "pinyin": "pèng",
+    "pinyinClean": "peng",
+    "hanViet": "碰",
+    "radical": "石",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "chạm vào",
+    "vi_meaning_full": "Động từ: chạm vào",
+    "vi_meaning_short": "chạm vào",
+    "enMeaning": "to touch; bump into",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备碰",
+      "开始碰",
+      "喜欢碰"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去碰。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù pèng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi chạm vào.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-411",
+    "hanzi": "碰到",
+    "traditional": "碰到",
+    "pinyin": "pèngdào",
+    "pinyinClean": "pengdao",
+    "hanViet": "碰 到",
+    "radical": "石",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đụng phải",
+    "vi_meaning_full": "Động từ: đụng phải",
+    "vi_meaning_short": "đụng phải",
+    "enMeaning": "run into; meet",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备碰到",
+      "开始碰到",
+      "喜欢碰到"
+    ],
+    "compounds": [
+      "碰",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去碰到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù pèng dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đụng phải.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-412",
+    "hanzi": "碰见",
+    "traditional": "碰見",
+    "pinyin": "pèng//jiàn",
+    "pinyinClean": "pengjian",
+    "hanViet": "碰 KIẾN",
+    "radical": "石",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "gặp phải",
+    "vi_meaning_full": "Động từ: gặp phải",
+    "vi_meaning_short": "gặp phải",
+    "enMeaning": "meet unexpectedly",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备碰见",
+      "开始碰见",
+      "喜欢碰见"
+    ],
+    "compounds": [
+      "碰",
+      "见"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去碰见。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù pèng jiàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi gặp phải.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-413",
+    "hanzi": "篇",
+    "traditional": "篇",
+    "pinyin": "piān",
+    "pinyinClean": "pian",
+    "hanViet": "篇",
+    "radical": "竹",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "bài, mẫu",
+    "vi_meaning_full": "Lượng từ: bài, mẫu",
+    "vi_meaning_short": "bài, mẫu",
+    "enMeaning": "measure word for articles",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一篇",
+      "两篇",
+      "这篇"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一篇这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī piān zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một bài, mẫu nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-415",
+    "hanzi": "片",
+    "traditional": "片",
+    "pinyin": "piàn",
+    "pinyinClean": "pian",
+    "hanViet": "片",
+    "radical": "片",
+    "strokeCount": 4,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "miếng, tấm",
+    "vi_meaning_full": "Lượng từ: miếng, tấm",
+    "vi_meaning_short": "miếng, tấm",
+    "enMeaning": "slice; piece",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一片",
+      "两片",
+      "这片"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一片这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī piàn zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một miếng, tấm nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-417",
+    "hanzi": "平",
+    "traditional": "平",
+    "pinyin": "píng",
+    "pinyinClean": "ping",
+    "hanViet": "BÌNH",
+    "radical": "干",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "bằng phẳng",
+    "vi_meaning_full": "Tính từ: bằng phẳng",
+    "vi_meaning_short": "bằng phẳng",
+    "enMeaning": "flat; calm",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常平",
+      "很平",
+      "真平"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真平，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn píng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật bằng phẳng, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-418",
+    "hanzi": "平安",
+    "traditional": "平安",
+    "pinyin": "píng'ān",
+    "pinyinClean": "pingan",
+    "hanViet": "BÌNH AN",
+    "radical": "干",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "bình an",
+    "vi_meaning_full": "Tính từ: bình an",
+    "vi_meaning_short": "bình an",
+    "enMeaning": "safe and sound",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常平安",
+      "很平安",
+      "真平安"
+    ],
+    "compounds": [
+      "平",
+      "安"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真平安，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn píng ān, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật bình an, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-419",
+    "hanzi": "平常",
+    "traditional": "平常",
+    "pinyin": "píngcháng",
+    "pinyinClean": "pingchang",
+    "hanViet": "BÌNH THƯỜNG",
+    "radical": "干",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngày thường, lúc bình thường / bình thường, không có gì đặc biệt",
+    "vi_meaning_full": "Danh từ: ngày thường, lúc bình thường / bình thường, không có gì đặc biệt",
+    "vi_meaning_short": "ngày thường, lúc",
+    "enMeaning": "ordinary; usually",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个平常",
+      "新平常",
+      "好平常"
+    ],
+    "compounds": [
+      "平",
+      "常"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的平常。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de píng cháng.",
+        "vi": "Trên bàn có đặt một chiếc ngày thường, lúc bình thường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-420",
+    "hanzi": "平等",
+    "traditional": "平等",
+    "pinyin": "píngděng",
+    "pinyinClean": "pingdeng",
+    "hanViet": "BÌNH ĐẲNG",
+    "radical": "干",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "bình đẳng",
+    "vi_meaning_full": "Tính từ: bình đẳng",
+    "vi_meaning_short": "bình đẳng",
+    "enMeaning": "equal; equality",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常平等",
+      "很平等",
+      "真平等"
+    ],
+    "compounds": [
+      "平",
+      "等"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真平等，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn píng děng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật bình đẳng, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-421",
+    "hanzi": "平时",
+    "traditional": "平時",
+    "pinyin": "píngshí",
+    "pinyinClean": "pingshi",
+    "hanViet": "BÌNH THỜI",
+    "radical": "干",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lúc bình thường",
+    "vi_meaning_full": "Danh từ: lúc bình thường",
+    "vi_meaning_short": "lúc bình thường",
+    "enMeaning": "usually; ordinarily",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个平时",
+      "新平时",
+      "好平时"
+    ],
+    "compounds": [
+      "平",
+      "时"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的平时。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de píng shí.",
+        "vi": "Trên bàn có đặt một chiếc lúc bình thường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-422",
+    "hanzi": "瓶",
+    "traditional": "瓶",
+    "pinyin": "píng",
+    "pinyinClean": "ping",
+    "hanViet": "瓶",
+    "radical": "瓦",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chai, lọ / bình, lọ, chai, hộp",
+    "vi_meaning_full": "Danh từ: chai, lọ / bình, lọ, chai, hộp",
+    "vi_meaning_short": "chai, lọ",
+    "enMeaning": "bottle",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个瓶",
+      "新瓶",
+      "好瓶"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的瓶。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de píng.",
+        "vi": "Trên bàn có đặt một chiếc chai, lọ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-423",
+    "hanzi": "瓶子",
+    "traditional": "瓶子",
+    "pinyin": "píngzi",
+    "pinyinClean": "pingzi",
+    "hanViet": "瓶 TỬ",
+    "radical": "瓦",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cái chai",
+    "vi_meaning_full": "Danh từ: cái chai",
+    "vi_meaning_short": "cái chai",
+    "enMeaning": "bottle; vase",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个瓶子",
+      "新瓶子",
+      "好瓶子"
+    ],
+    "compounds": [
+      "瓶",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的瓶子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de píng zi.",
+        "vi": "Trên bàn có đặt một chiếc cái chai mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-424",
+    "hanzi": "普通",
+    "traditional": "普通",
+    "pinyin": "pǔtōng",
+    "pinyinClean": "putong",
+    "hanViet": "普 THÔNG",
+    "radical": "日",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "phổ thông",
+    "vi_meaning_full": "Tính từ: phổ thông",
+    "vi_meaning_short": "phổ thông",
+    "enMeaning": "ordinary; common",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常普通",
+      "很普通",
+      "真普通"
+    ],
+    "compounds": [
+      "普",
+      "通"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真普通，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn pǔ tōng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật phổ thông, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-425",
+    "hanzi": "普通话",
+    "traditional": "普通話",
+    "pinyin": "pǔtōnghuà",
+    "pinyinClean": "putonghua",
+    "hanViet": "普 THÔNG THOẠI",
+    "radical": "日",
+    "strokeCount": 30,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tiếng Phổ Thông",
+    "vi_meaning_full": "Danh từ: tiếng Phổ Thông",
+    "vi_meaning_short": "tiếng Phổ Thông",
+    "enMeaning": "Mandarin Chinese",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个普通话",
+      "新普通话",
+      "好普通话"
+    ],
+    "compounds": [
+      "普",
+      "通话"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的普通话。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de pǔ tōng huà.",
+        "vi": "Trên bàn có đặt một chiếc tiếng Phổ Thông mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-426",
+    "hanzi": "其他",
+    "traditional": "其他",
+    "pinyin": "qítā",
+    "pinyinClean": "qita",
+    "hanViet": "其 他",
+    "radical": "八",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "khác",
+    "vi_meaning_full": "Đại từ: khác",
+    "vi_meaning_short": "khác",
+    "enMeaning": "other; else",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说其他",
+      "用其他"
+    ],
+    "compounds": [
+      "其",
+      "他"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，其他是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, qí tā shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 其他 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-427",
+    "hanzi": "其中",
+    "traditional": "其中",
+    "pinyin": "qízhōng",
+    "pinyinClean": "qizhong",
+    "hanViet": "其 TRUNG",
+    "radical": "八",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trong đó",
+    "vi_meaning_full": "Danh từ: trong đó",
+    "vi_meaning_short": "trong đó",
+    "enMeaning": "among them",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个其中",
+      "新其中",
+      "好其中"
+    ],
+    "compounds": [
+      "其",
+      "中"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的其中。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qí zhōng.",
+        "vi": "Trên bàn có đặt một chiếc trong đó mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-428",
+    "hanzi": "骑",
+    "traditional": "騎",
+    "pinyin": "qí",
+    "pinyinClean": "qi",
+    "hanViet": "骑",
+    "radical": "马",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cưỡi",
+    "vi_meaning_full": "Động từ: cưỡi",
+    "vi_meaning_short": "cưỡi",
+    "enMeaning": "to ride (bike/horse)",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备骑",
+      "开始骑",
+      "喜欢骑"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去骑。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù qí.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cưỡi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-429",
+    "hanzi": "骑车",
+    "traditional": "騎車",
+    "pinyin": "qí chē",
+    "pinyinClean": "qiche",
+    "hanViet": "KỴ XA",
+    "radical": "马",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đi xe đạp, đi xe máy",
+    "vi_meaning_full": "Động từ: đi xe đạp, đi xe máy",
+    "vi_meaning_short": "đi xe đạp, đi xe",
+    "enMeaning": "to ride a bicycle/motorcycle",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "骑车上班",
+      "骑车去学校",
+      "学会骑车"
+    ],
+    "compounds": [
+      "骑马",
+      "汽车"
+    ],
+    "synonyms": [
+      "骑自行车"
+    ],
+    "antonyms": [
+      "开车",
+      "走路"
+    ],
+    "confusableWords": "开车",
+    "sentences": [
+      {
+        "zh": "我每天骑车去公司，既健康又环保。",
+        "pinyin": "Wǒ měitiān qí chē qù gōngsī, jì jiànkāng yòu huánbǎo.",
+        "vi": "Mỗi ngày tôi đều đạp xe đến công ty, vừa khỏe mạnh vừa bảo vệ môi trường.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-430",
+    "hanzi": "起飞",
+    "traditional": "起飛",
+    "pinyin": "qǐfēi",
+    "pinyinClean": "qifei",
+    "hanViet": "起 飞",
+    "radical": "走",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cất cánh",
+    "vi_meaning_full": "Động từ: cất cánh",
+    "vi_meaning_short": "cất cánh",
+    "enMeaning": "to take off (airplane)",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备起飞",
+      "开始起飞",
+      "喜欢起飞"
+    ],
+    "compounds": [
+      "起",
+      "飞"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去起飞。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù qǐ fēi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cất cánh.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-431",
+    "hanzi": "气",
+    "traditional": "氣",
+    "pinyin": "qì",
+    "pinyinClean": "qi",
+    "hanViet": "气",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "làm cho tức giận / khí, hơi, không khí",
+    "vi_meaning_full": "Danh từ / động từ: làm cho tức giận / khí, hơi, không khí",
+    "vi_meaning_short": "làm cho tức giận",
+    "enMeaning": "gas; breath; anger",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备气",
+      "开始气",
+      "喜欢气"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去气。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù qì.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi làm cho tức giận.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-432",
+    "hanzi": "气温",
+    "traditional": "氣溫",
+    "pinyin": "qìwēn",
+    "pinyinClean": "qiwen",
+    "hanViet": "气 温",
+    "radical": "口",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nhiệt độ không khí",
+    "vi_meaning_full": "Danh từ: nhiệt độ không khí",
+    "vi_meaning_short": "nhiệt độ không k",
+    "enMeaning": "air temperature",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个气温",
+      "新气温",
+      "好气温"
+    ],
+    "compounds": [
+      "气",
+      "温"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的气温。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qì wēn.",
+        "vi": "Trên bàn có đặt một chiếc nhiệt độ không khí mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-434",
+    "hanzi": "千克",
+    "traditional": "千克",
+    "pinyin": "qiānkè",
+    "pinyinClean": "qianke",
+    "hanViet": "千 克",
+    "radical": "十",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "kilogram",
+    "vi_meaning_full": "Lượng từ: kilogram",
+    "vi_meaning_short": "kilogram",
+    "enMeaning": "kilogram",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一千克",
+      "两千克",
+      "这千克"
+    ],
+    "compounds": [
+      "千",
+      "克"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一千克这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī qiān kè zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một kilogram nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-435",
+    "hanzi": "前年",
+    "traditional": "前年",
+    "pinyin": "qiánnián",
+    "pinyinClean": "qiannian",
+    "hanViet": "前 年",
+    "radical": "刀",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "năm kia",
+    "vi_meaning_full": "Danh từ: năm kia",
+    "vi_meaning_short": "năm kia",
+    "enMeaning": "year before last",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个前年",
+      "新前年",
+      "好前年"
+    ],
+    "compounds": [
+      "前",
+      "年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的前年。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qián nián.",
+        "vi": "Trên bàn có đặt một chiếc năm kia mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-436",
+    "hanzi": "墙",
+    "traditional": "牆",
+    "pinyin": "qiáng",
+    "pinyinClean": "qiang",
+    "hanViet": "墙",
+    "radical": "土",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tường",
+    "vi_meaning_full": "Danh từ: tường",
+    "vi_meaning_short": "tường",
+    "enMeaning": "wall",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个墙",
+      "新墙",
+      "好墙"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的墙。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qiáng.",
+        "vi": "Trên bàn có đặt một chiếc tường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-437",
+    "hanzi": "青年",
+    "traditional": "青年",
+    "pinyin": "qīngnián",
+    "pinyinClean": "qingnian",
+    "hanViet": "青 年",
+    "radical": "青",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thanh niên",
+    "vi_meaning_full": "Danh từ: thanh niên",
+    "vi_meaning_short": "thanh niên",
+    "enMeaning": "youth; young people",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个青年",
+      "新青年",
+      "好青年"
+    ],
+    "compounds": [
+      "青",
+      "年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的青年。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qīng nián.",
+        "vi": "Trên bàn có đặt một chiếc thanh niên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-438",
+    "hanzi": "青少年",
+    "traditional": "青少年",
+    "pinyin": "qīng-shàonián",
+    "pinyinClean": "qingshaonian",
+    "hanViet": "青 THIỂU 年",
+    "radical": "青",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thanh thiếu niên",
+    "vi_meaning_full": "Danh từ: thanh thiếu niên",
+    "vi_meaning_short": "thanh thiếu niên",
+    "enMeaning": "teenager; youth",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个青少年",
+      "新青少年",
+      "好青少年"
+    ],
+    "compounds": [
+      "青",
+      "少年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的青少年。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qīng shào nián.",
+        "vi": "Trên bàn có đặt một chiếc thanh thiếu niên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-439",
+    "hanzi": "轻",
+    "traditional": "輕",
+    "pinyin": "qīng",
+    "pinyinClean": "qing",
+    "hanViet": "轻",
+    "radical": "车",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "nhẹ",
+    "vi_meaning_full": "Tính từ: nhẹ",
+    "vi_meaning_short": "nhẹ",
+    "enMeaning": "light (weight)",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常轻",
+      "很轻",
+      "真轻"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真轻，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn qīng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật nhẹ, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-440",
+    "hanzi": "清楚",
+    "traditional": "清楚",
+    "pinyin": "qīngchu",
+    "pinyinClean": "qingchu",
+    "hanViet": "清 楚",
+    "radical": "水",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "rõ ràng",
+    "vi_meaning_full": "Tính từ: rõ ràng",
+    "vi_meaning_short": "rõ ràng",
+    "enMeaning": "clear; distinct",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常清楚",
+      "很清楚",
+      "真清楚"
+    ],
+    "compounds": [
+      "清",
+      "楚"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真清楚，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn qīng chǔ, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật rõ ràng, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-442",
+    "hanzi": "晴天",
+    "traditional": "晴天",
+    "pinyin": "qíngtiān",
+    "pinyinClean": "qingtian",
+    "hanViet": "晴 THIÊN",
+    "radical": "日",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngày nắng",
+    "vi_meaning_full": "Danh từ: ngày nắng",
+    "vi_meaning_short": "ngày nắng",
+    "enMeaning": "sunny day",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个晴天",
+      "新晴天",
+      "好晴天"
+    ],
+    "compounds": [
+      "晴",
+      "天"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的晴天。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qíng tiān.",
+        "vi": "Trên bàn có đặt một chiếc ngày nắng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-443",
+    "hanzi": "请客",
+    "traditional": "請客",
+    "pinyin": "qǐng//kè",
+    "pinyinClean": "qingke",
+    "hanViet": "请 KHÁCH",
+    "radical": "言",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "mời khách",
+    "vi_meaning_full": "Động từ: mời khách",
+    "vi_meaning_short": "mời khách",
+    "enMeaning": "treat guests",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备请客",
+      "开始请客",
+      "喜欢请客"
+    ],
+    "compounds": [
+      "请",
+      "客"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去请客。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù qǐng kè.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi mời khách.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-444",
+    "hanzi": "请求",
+    "traditional": "請求",
+    "pinyin": "qǐngqiú",
+    "pinyinClean": "qingqiu",
+    "hanViet": "请 求",
+    "radical": "言",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "yêu cầu, đề nghị",
+    "vi_meaning_full": "Danh từ / động từ: yêu cầu, đề nghị",
+    "vi_meaning_short": "yêu cầu, đề nghị",
+    "enMeaning": "request; ask",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备请求",
+      "开始请求",
+      "喜欢请求"
+    ],
+    "compounds": [
+      "请",
+      "求"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去请求。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù qǐng qiú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi yêu cầu, đề nghị.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-445",
+    "hanzi": "秋天",
+    "traditional": "秋天",
+    "pinyin": "qiūtiān",
+    "pinyinClean": "qiutian",
+    "hanViet": "秋 THIÊN",
+    "radical": "口",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mùa thu",
+    "vi_meaning_full": "Danh từ: mùa thu",
+    "vi_meaning_short": "mùa thu",
+    "enMeaning": "autumn; fall",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个秋天",
+      "新秋天",
+      "好秋天"
+    ],
+    "compounds": [
+      "秋",
+      "天"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的秋天。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qiū tiān.",
+        "vi": "Trên bàn có đặt một chiếc mùa thu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-446",
+    "hanzi": "求",
+    "traditional": "求",
+    "pinyin": "qiú",
+    "pinyinClean": "qiu",
+    "hanViet": "求",
+    "radical": "水",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cầu, xin",
+    "vi_meaning_full": "Động từ: cầu, xin",
+    "vi_meaning_short": "cầu, xin",
+    "enMeaning": "to beg; request",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备求",
+      "开始求",
+      "喜欢求"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去求。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù qiú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cầu, xin.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-447",
+    "hanzi": "球场",
+    "traditional": "球場",
+    "pinyin": "qiúchǎng",
+    "pinyinClean": "qiuchang",
+    "hanViet": "CẦU TRƯỜNG",
+    "radical": "王",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "sân bóng",
+    "vi_meaning_full": "Danh từ: sân bóng",
+    "vi_meaning_short": "sân bóng",
+    "enMeaning": "sports ground",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个球场",
+      "新球场",
+      "好球场"
+    ],
+    "compounds": [
+      "球",
+      "场"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的球场。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qiú chǎng.",
+        "vi": "Trên bàn có đặt một chiếc sân bóng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-448",
+    "hanzi": "球队",
+    "traditional": "球隊",
+    "pinyin": "qiúduì",
+    "pinyinClean": "qiudui",
+    "hanViet": "CẦU ĐỘI",
+    "radical": "王",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đội bóng",
+    "vi_meaning_full": "Danh từ: đội bóng",
+    "vi_meaning_short": "đội bóng",
+    "enMeaning": "sports team",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个球队",
+      "新球队",
+      "好球队"
+    ],
+    "compounds": [
+      "球",
+      "队"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的球队。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qiú duì.",
+        "vi": "Trên bàn có đặt một chiếc đội bóng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-449",
+    "hanzi": "球鞋",
+    "traditional": "球鞋",
+    "pinyin": "qiúxié",
+    "pinyinClean": "qiuxie",
+    "hanViet": "CẦU 鞋",
+    "radical": "王",
+    "strokeCount": 26,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "giày thề thao",
+    "vi_meaning_full": "Danh từ: giày thề thao",
+    "vi_meaning_short": "giày thề thao",
+    "enMeaning": "sneakers; sports shoes",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个球鞋",
+      "新球鞋",
+      "好球鞋"
+    ],
+    "compounds": [
+      "球",
+      "鞋"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的球鞋。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de qiú xié.",
+        "vi": "Trên bàn có đặt một chiếc giày thề thao mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-450",
+    "hanzi": "取",
+    "traditional": "取",
+    "pinyin": "qǔ",
+    "pinyinClean": "qu",
+    "hanViet": "取",
+    "radical": "又",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "lấy",
+    "vi_meaning_full": "Động từ: lấy",
+    "vi_meaning_short": "lấy",
+    "enMeaning": "to take; get",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备取",
+      "开始取",
+      "喜欢取"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去取。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù qǔ.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi lấy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-451",
+    "hanzi": "取得",
+    "traditional": "取得",
+    "pinyin": "qǔdé",
+    "pinyinClean": "qude",
+    "hanViet": "取 ĐẮC",
+    "radical": "又",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đạt được",
+    "vi_meaning_full": "Động từ: đạt được",
+    "vi_meaning_short": "đạt được",
+    "enMeaning": "to gain; acquire",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备取得",
+      "开始取得",
+      "喜欢取得"
+    ],
+    "compounds": [
+      "取",
+      "得"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去取得。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù qǔ dé.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đạt được.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-452",
+    "hanzi": "全",
+    "traditional": "全",
+    "pinyin": "quán",
+    "pinyinClean": "quan",
+    "hanViet": "TOÀN",
+    "radical": "人",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "hoàn toàn, hết sức, đầy đủ / toàn bộ, đầy đủ, sẵn sàng",
+    "vi_meaning_full": "Tính từ: hoàn toàn, hết sức, đầy đủ / toàn bộ, đầy đủ, sẵn sàng",
+    "vi_meaning_short": "hoàn toàn, hết s",
+    "enMeaning": "whole; complete",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常全",
+      "很全",
+      "真全"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真全，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn quán, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật hoàn toàn, hết sức, đầy đủ, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-453",
+    "hanzi": "全部",
+    "traditional": "全部",
+    "pinyin": "quánbù",
+    "pinyinClean": "quanbu",
+    "hanViet": "TOÀN BỘ",
+    "radical": "人",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tất cả",
+    "vi_meaning_full": "Danh từ: tất cả",
+    "vi_meaning_short": "tất cả",
+    "enMeaning": "all; whole",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个全部",
+      "新全部",
+      "好全部"
+    ],
+    "compounds": [
+      "全",
+      "部"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的全部。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de quán bù.",
+        "vi": "Trên bàn có đặt một chiếc tất cả mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-454",
+    "hanzi": "全国",
+    "traditional": "全國",
+    "pinyin": "quánguó",
+    "pinyinClean": "quanguo",
+    "hanViet": "TOÀN QUỐC",
+    "radical": "人",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "toàn quốc",
+    "vi_meaning_full": "Danh từ: toàn quốc",
+    "vi_meaning_short": "toàn quốc",
+    "enMeaning": "nationwide",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个全国",
+      "新全国",
+      "好全国"
+    ],
+    "compounds": [
+      "全",
+      "国"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的全国。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de quán guó.",
+        "vi": "Trên bàn có đặt một chiếc toàn quốc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-455",
+    "hanzi": "全家",
+    "traditional": "全家",
+    "pinyin": "quánjiā",
+    "pinyinClean": "quanjia",
+    "hanViet": "TOÀN GIA",
+    "radical": "人",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cả nhà",
+    "vi_meaning_full": "Danh từ: cả nhà",
+    "vi_meaning_short": "cả nhà",
+    "enMeaning": "whole family",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个全家",
+      "新全家",
+      "好全家"
+    ],
+    "compounds": [
+      "全",
+      "家"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的全家。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de quán jiā.",
+        "vi": "Trên bàn có đặt một chiếc cả nhà mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-456",
+    "hanzi": "全年",
+    "traditional": "全年",
+    "pinyin": "quánnián",
+    "pinyinClean": "quannian",
+    "hanViet": "TOÀN 年",
+    "radical": "人",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cả năm",
+    "vi_meaning_full": "Danh từ: cả năm",
+    "vi_meaning_short": "cả năm",
+    "enMeaning": "all year round",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个全年",
+      "新全年",
+      "好全年"
+    ],
+    "compounds": [
+      "全",
+      "年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的全年。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de quán nián.",
+        "vi": "Trên bàn có đặt một chiếc cả năm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-457",
+    "hanzi": "全身",
+    "traditional": "全身",
+    "pinyin": "quánshēn",
+    "pinyinClean": "quanshen",
+    "hanViet": "TOÀN 身",
+    "radical": "人",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "toàn thân",
+    "vi_meaning_full": "Danh từ: toàn thân",
+    "vi_meaning_short": "toàn thân",
+    "enMeaning": "whole body",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个全身",
+      "新全身",
+      "好全身"
+    ],
+    "compounds": [
+      "全",
+      "身"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的全身。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de quán shēn.",
+        "vi": "Trên bàn có đặt một chiếc toàn thân mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-458",
+    "hanzi": "全体",
+    "traditional": "全體",
+    "pinyin": "quántǐ",
+    "pinyinClean": "quanti",
+    "hanViet": "TOÀN 体",
+    "radical": "人",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "toàn thể",
+    "vi_meaning_full": "Danh từ: toàn thể",
+    "vi_meaning_short": "toàn thể",
+    "enMeaning": "all; entire staff",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个全体",
+      "新全体",
+      "好全体"
+    ],
+    "compounds": [
+      "全",
+      "体"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的全体。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de quán tǐ.",
+        "vi": "Trên bàn có đặt một chiếc toàn thể mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-459",
+    "hanzi": "然后",
+    "traditional": "然後",
+    "pinyin": "ránhòu",
+    "pinyinClean": "ranhou",
+    "hanViet": "NHIÊN HẬU",
+    "radical": "火",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "sau đó",
+    "vi_meaning_full": "Liên từ: sau đó",
+    "vi_meaning_short": "sau đó",
+    "enMeaning": "then; afterwards",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "然后...而且...",
+      "虽然...然后..."
+    ],
+    "compounds": [
+      "然",
+      "后"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他然后会说英语，还会说汉语。",
+        "pinyin": "Tā rán hòu huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy sau đó biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-461",
+    "hanzi": "热情",
+    "traditional": "熱情",
+    "pinyin": "rèqíng",
+    "pinyinClean": "reqing",
+    "hanViet": "热 TÌNH",
+    "radical": "火",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "sự nhiệt tình, lòng nhiệt tình / nhiệt tình, thân thiện, niềm nở",
+    "vi_meaning_full": "Danh từ: sự nhiệt tình, lòng nhiệt tình / nhiệt tình, thân thiện, niềm nở",
+    "vi_meaning_short": "sự nhiệt tình, l",
+    "enMeaning": "enthusiastic; warm",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个热情",
+      "新热情",
+      "好热情"
+    ],
+    "compounds": [
+      "热",
+      "情"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的热情。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de rè qíng.",
+        "vi": "Trên bàn có đặt một chiếc sự nhiệt tình, lòng nhiệt tình mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-462",
+    "hanzi": "人口",
+    "traditional": "人口",
+    "pinyin": "rénkǒu",
+    "pinyinClean": "renkou",
+    "hanViet": "NHÂN KHẨU",
+    "radical": "人",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "dân số",
+    "vi_meaning_full": "Danh từ: dân số",
+    "vi_meaning_short": "dân số",
+    "enMeaning": "population",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个人口",
+      "新人口",
+      "好人口"
+    ],
+    "compounds": [
+      "人",
+      "口"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的人口。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de rén kǒu.",
+        "vi": "Trên bàn có đặt một chiếc dân số mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-463",
+    "hanzi": "人们",
+    "traditional": "人們",
+    "pinyin": "rénmen",
+    "pinyinClean": "renmen",
+    "hanViet": "NHÂN 们",
+    "radical": "人",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mọi người",
+    "vi_meaning_full": "Danh từ: mọi người",
+    "vi_meaning_short": "mọi người",
+    "enMeaning": "people",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个人们",
+      "新人们",
+      "好人们"
+    ],
+    "compounds": [
+      "人",
+      "们"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的人们。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de rén men.",
+        "vi": "Trên bàn có đặt một chiếc mọi người mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-464",
+    "hanzi": "人数",
+    "traditional": "人數",
+    "pinyin": "rénshù",
+    "pinyinClean": "renshu",
+    "hanViet": "NHÂN 数",
+    "radical": "人",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "số người",
+    "vi_meaning_full": "Danh từ: số người",
+    "vi_meaning_short": "số người",
+    "enMeaning": "number of people",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个人数",
+      "新人数",
+      "好人数"
+    ],
+    "compounds": [
+      "人",
+      "数"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的人数。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de rén shù.",
+        "vi": "Trên bàn có đặt một chiếc số người mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-465",
+    "hanzi": "认为",
+    "traditional": "認爲",
+    "pinyin": "rènwéi",
+    "pinyinClean": "renwei",
+    "hanViet": "认 VI",
+    "radical": "言",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cho rằng",
+    "vi_meaning_full": "Động từ: cho rằng",
+    "vi_meaning_short": "cho rằng",
+    "enMeaning": "to think; believe",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备认为",
+      "开始认为",
+      "喜欢认为"
+    ],
+    "compounds": [
+      "认",
+      "为"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去认为。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù rèn wéi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cho rằng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-466",
+    "hanzi": "日报",
+    "traditional": "日報",
+    "pinyin": "rìbào",
+    "pinyinClean": "ribao",
+    "hanViet": "日 BÁO",
+    "radical": "日",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "báo ngày, nhật báo",
+    "vi_meaning_full": "Danh từ: báo ngày, nhật báo",
+    "vi_meaning_short": "báo ngày, nhật b",
+    "enMeaning": "daily newspaper",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个日报",
+      "新日报",
+      "好日报"
+    ],
+    "compounds": [
+      "日",
+      "报"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的日报。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de rì bào.",
+        "vi": "Trên bàn có đặt một chiếc báo ngày, nhật báo mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-467",
+    "hanzi": "日子",
+    "traditional": "日子",
+    "pinyin": "rìzi",
+    "pinyinClean": "rizi",
+    "hanViet": "日 TỬ",
+    "radical": "日",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngày tháng",
+    "vi_meaning_full": "Danh từ: ngày tháng",
+    "vi_meaning_short": "ngày tháng",
+    "enMeaning": "days; life",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个日子",
+      "新日子",
+      "好日子"
+    ],
+    "compounds": [
+      "日",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的日子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de rì zi.",
+        "vi": "Trên bàn có đặt một chiếc ngày tháng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-468",
+    "hanzi": "如果",
+    "traditional": "如果",
+    "pinyin": "rúguǒ",
+    "pinyinClean": "ruguo",
+    "hanViet": "NHƯ 果",
+    "radical": "女",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "nếu như",
+    "vi_meaning_full": "Liên từ: nếu như",
+    "vi_meaning_short": "nếu như",
+    "enMeaning": "if; in case",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "如果...而且...",
+      "虽然...如果..."
+    ],
+    "compounds": [
+      "如",
+      "果"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他如果会说英语，还会说汉语。",
+        "pinyin": "Tā rú guǒ huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy nếu như biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-469",
+    "hanzi": "入口",
+    "traditional": "入口",
+    "pinyin": "rùkǒu",
+    "pinyinClean": "rukou",
+    "hanViet": "入 KHẨU",
+    "radical": "口",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lối vào",
+    "vi_meaning_full": "Danh từ: lối vào",
+    "vi_meaning_short": "lối vào",
+    "enMeaning": "entrance",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个入口",
+      "新入口",
+      "好入口"
+    ],
+    "compounds": [
+      "入",
+      "口"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的入口。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de rù kǒu.",
+        "vi": "Trên bàn có đặt một chiếc lối vào mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-470",
+    "hanzi": "商量",
+    "traditional": "商量",
+    "pinyin": "shāngliang",
+    "pinyinClean": "shangliang",
+    "hanViet": "商 LƯỢNG",
+    "radical": "口",
+    "strokeCount": 23,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thảo luận",
+    "vi_meaning_full": "Động từ: thảo luận",
+    "vi_meaning_short": "thảo luận",
+    "enMeaning": "discuss; consult",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备商量",
+      "开始商量",
+      "喜欢商量"
+    ],
+    "compounds": [
+      "商",
+      "量"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去商量。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shāng liáng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thảo luận.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-471",
+    "hanzi": "商人",
+    "traditional": "商人",
+    "pinyin": "shāngrén",
+    "pinyinClean": "shangren",
+    "hanViet": "商 NHÂN",
+    "radical": "口",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thương nhân",
+    "vi_meaning_full": "Danh từ: thương nhân",
+    "vi_meaning_short": "thương nhân",
+    "enMeaning": "merchant; businessman",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个商人",
+      "新商人",
+      "好商人"
+    ],
+    "compounds": [
+      "商",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的商人。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shāng rén.",
+        "vi": "Trên bàn có đặt một chiếc thương nhân mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-472",
+    "hanzi": "上周",
+    "traditional": "上週",
+    "pinyin": "shàng zhōu",
+    "pinyinClean": "shangzhou",
+    "hanViet": "THƯỢNG CHU",
+    "radical": "一",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tuần trước",
+    "vi_meaning_full": "Danh từ: tuần trước",
+    "vi_meaning_short": "tuần trước",
+    "enMeaning": "last week",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "上周五",
+      "上周开始",
+      "上周买的"
+    ],
+    "compounds": [
+      "上个月",
+      "周末"
+    ],
+    "synonyms": [
+      "上个星期"
+    ],
+    "antonyms": [
+      "下周",
+      "本周"
+    ],
+    "confusableWords": "下周",
+    "sentences": [
+      {
+        "zh": "上周我们刚考完汉语水平考试。",
+        "pinyin": "Shàng zhōu wǒmen gāng kǎowán Hànyǔ shuǐpíng kǎoshì.",
+        "vi": "Tuần trước chúng tôi vừa thi xong kỳ thi năng lực Hán ngữ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-473",
+    "hanzi": "少数",
+    "traditional": "少數",
+    "pinyin": "shǎoshù",
+    "pinyinClean": "shaoshu",
+    "hanViet": "THIỂU 数",
+    "radical": "小",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thiểu số",
+    "vi_meaning_full": "Danh từ: thiểu số",
+    "vi_meaning_short": "thiểu số",
+    "enMeaning": "minority; a few",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个少数",
+      "新少数",
+      "好少数"
+    ],
+    "compounds": [
+      "少",
+      "数"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的少数。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shǎo shù.",
+        "vi": "Trên bàn có đặt một chiếc thiểu số mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-474",
+    "hanzi": "少年",
+    "traditional": "少年",
+    "pinyin": "shàonián",
+    "pinyinClean": "shaonian",
+    "hanViet": "THIỂU 年",
+    "radical": "小",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thiếu niên",
+    "vi_meaning_full": "Danh từ: thiếu niên",
+    "vi_meaning_short": "thiếu niên",
+    "enMeaning": "youngster",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个少年",
+      "新少年",
+      "好少年"
+    ],
+    "compounds": [
+      "少",
+      "年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的少年。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shào nián.",
+        "vi": "Trên bàn có đặt một chiếc thiếu niên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-475",
+    "hanzi": "身边",
+    "traditional": "身邊",
+    "pinyin": "shēnbiān",
+    "pinyinClean": "shenbian",
+    "hanViet": "身 BIÊN",
+    "radical": "身",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bên cạnh",
+    "vi_meaning_full": "Danh từ: bên cạnh",
+    "vi_meaning_short": "bên cạnh",
+    "enMeaning": "by one's side",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个身边",
+      "新身边",
+      "好身边"
+    ],
+    "compounds": [
+      "身",
+      "边"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的身边。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shēn biān.",
+        "vi": "Trên bàn có đặt một chiếc bên cạnh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-476",
+    "hanzi": "什么样",
+    "traditional": "什麼樣",
+    "pinyin": "shénmeyàng",
+    "pinyinClean": "shenmeyang",
+    "hanViet": "什 么 样",
+    "radical": "人",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "như thế nào",
+    "vi_meaning_full": "Đại từ: như thế nào",
+    "vi_meaning_short": "như thế nào",
+    "enMeaning": "what kind of",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说什么样",
+      "用什么样"
+    ],
+    "compounds": [
+      "什",
+      "么样"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，什么样是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, shén me yàng shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 什么样 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-477",
+    "hanzi": "生",
+    "traditional": "生",
+    "pinyin": "shēng",
+    "pinyinClean": "sheng",
+    "hanViet": "SANH",
+    "radical": "生",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "sinh, sống",
+    "vi_meaning_full": "Động từ: sinh, sống",
+    "vi_meaning_short": "sinh, sống",
+    "enMeaning": "to give birth; raw; unacquainted",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备生",
+      "开始生",
+      "喜欢生"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去生。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shēng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi sinh, sống.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-478",
+    "hanzi": "生词",
+    "traditional": "生詞",
+    "pinyin": "shēngcí",
+    "pinyinClean": "shengci",
+    "hanViet": "SANH TỪ",
+    "radical": "生",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "từ mới",
+    "vi_meaning_full": "Danh từ: từ mới",
+    "vi_meaning_short": "từ mới",
+    "enMeaning": "new word",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个生词",
+      "新生词",
+      "好生词"
+    ],
+    "compounds": [
+      "生",
+      "词"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的生词。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shēng cí.",
+        "vi": "Trên bàn có đặt một chiếc từ mới mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-479",
+    "hanzi": "生活",
+    "traditional": "生活",
+    "pinyin": "shēnghuó",
+    "pinyinClean": "shenghuo",
+    "hanViet": "SANH HOẠT",
+    "radical": "生",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "cuộc sống, đời sống, sinh hoạt / sống, sinh sống, sinh hoạt",
+    "vi_meaning_full": "Danh từ / động từ: cuộc sống, đời sống, sinh hoạt / sống, sinh sống, sinh hoạt",
+    "vi_meaning_short": "cuộc sống, đời s",
+    "enMeaning": "life; living",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备生活",
+      "开始生活",
+      "喜欢生活"
+    ],
+    "compounds": [
+      "生",
+      "活"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去生活。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shēng huó.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cuộc sống, đời sống, sinh hoạt.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-480",
+    "hanzi": "声音",
+    "traditional": "聲音",
+    "pinyin": "shēngyīn",
+    "pinyinClean": "shengyin",
+    "hanViet": "THANH ÂM",
+    "radical": "士",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "âm thanh",
+    "vi_meaning_full": "Danh từ: âm thanh",
+    "vi_meaning_short": "âm thanh",
+    "enMeaning": "sound; voice",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个声音",
+      "新声音",
+      "好声音"
+    ],
+    "compounds": [
+      "声",
+      "音"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的声音。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shēng yīn.",
+        "vi": "Trên bàn có đặt một chiếc âm thanh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-481",
+    "hanzi": "省①",
+    "traditional": "省①",
+    "pinyin": "shěng",
+    "pinyinClean": "sheng",
+    "hanViet": "省 ①",
+    "radical": "目",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tinh",
+    "vi_meaning_full": "Danh từ: tinh",
+    "vi_meaning_short": "tinh",
+    "enMeaning": "province",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个省①",
+      "新省①",
+      "好省①"
+    ],
+    "compounds": [
+      "省",
+      "①"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的省①。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shěng ①.",
+        "vi": "Trên bàn có đặt một chiếc tinh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-482",
+    "hanzi": "省②",
+    "traditional": "省②",
+    "pinyin": "shěng",
+    "pinyinClean": "sheng",
+    "hanViet": "省 ②",
+    "radical": "目",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tiết kiệm",
+    "vi_meaning_full": "Động từ: tiết kiệm",
+    "vi_meaning_short": "tiết kiệm",
+    "enMeaning": "to save; economize",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备省②",
+      "开始省②",
+      "喜欢省②"
+    ],
+    "compounds": [
+      "省",
+      "②"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去省②。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shěng ②.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tiết kiệm.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-483",
+    "hanzi": "十分",
+    "traditional": "十分",
+    "pinyin": "shífēn",
+    "pinyinClean": "shifen",
+    "hanViet": "十 PHÂN",
+    "radical": "十",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "rất, vô cùng",
+    "vi_meaning_full": "Phó từ: rất, vô cùng",
+    "vi_meaning_short": "rất, vô cùng",
+    "enMeaning": "very; extremely",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "十分好",
+      "十分去",
+      "十分看"
+    ],
+    "compounds": [
+      "十",
+      "分"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家十分准备好了，随时可以出发。",
+        "pinyin": "Dà jiā shí fēn zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người rất, vô cùng chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-484",
+    "hanzi": "实际",
+    "traditional": "實際",
+    "pinyin": "shíjì",
+    "pinyinClean": "shiji",
+    "hanViet": "实 TẾ",
+    "radical": "宀",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thực tế, tình hình thực tế / thực tế, thực tiễn, có thật",
+    "vi_meaning_full": "Danh từ: thực tế, tình hình thực tế / thực tế, thực tiễn, có thật",
+    "vi_meaning_short": "thực tế, tình hì",
+    "enMeaning": "practical; reality",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个实际",
+      "新实际",
+      "好实际"
+    ],
+    "compounds": [
+      "实",
+      "际"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的实际。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shí jì.",
+        "vi": "Trên bàn có đặt một chiếc thực tế, tình hình thực tế mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-485",
+    "hanzi": "实习",
+    "traditional": "實習",
+    "pinyin": "shíxí",
+    "pinyinClean": "shixi",
+    "hanViet": "实 习",
+    "radical": "宀",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "thực tập / kỳ thực tập, đợt thực tập",
+    "vi_meaning_full": "Danh từ / động từ: thực tập / kỳ thực tập, đợt thực tập",
+    "vi_meaning_short": "thực tập",
+    "enMeaning": "internship; practice",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备实习",
+      "开始实习",
+      "喜欢实习"
+    ],
+    "compounds": [
+      "实",
+      "习"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去实习。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shí xí.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thực tập.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-486",
+    "hanzi": "实现",
+    "traditional": "實現",
+    "pinyin": "shíxiàn",
+    "pinyinClean": "shixian",
+    "hanViet": "实 HIỆN",
+    "radical": "宀",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thực hiện",
+    "vi_meaning_full": "Động từ: thực hiện",
+    "vi_meaning_short": "thực hiện",
+    "enMeaning": "to realize; achieve",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备实现",
+      "开始实现",
+      "喜欢实现"
+    ],
+    "compounds": [
+      "实",
+      "现"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去实现。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shí xiàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thực hiện.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-487",
+    "hanzi": "实在",
+    "traditional": "實在",
+    "pinyin": "shízài",
+    "pinyinClean": "shizai",
+    "hanViet": "实 在",
+    "radical": "宀",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "thực sự / chân thật",
+    "vi_meaning_full": "Tính từ: thực sự / chân thật",
+    "vi_meaning_short": "thực sự",
+    "enMeaning": "honest; really",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常实在",
+      "很实在",
+      "真实在"
+    ],
+    "compounds": [
+      "实",
+      "在"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真实在，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn shí zài, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật thực sự, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-489",
+    "hanzi": "食物",
+    "traditional": "食物",
+    "pinyin": "shíwù",
+    "pinyinClean": "shiwu",
+    "hanViet": "食 VẬT",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thức ăn",
+    "vi_meaning_full": "Danh từ: thức ăn",
+    "vi_meaning_short": "thức ăn",
+    "enMeaning": "food",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个食物",
+      "新食物",
+      "好食物"
+    ],
+    "compounds": [
+      "食",
+      "物"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的食物。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shí wù.",
+        "vi": "Trên bàn có đặt một chiếc thức ăn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-490",
+    "hanzi": "使用",
+    "traditional": "使用",
+    "pinyin": "shǐyòng",
+    "pinyinClean": "shiyong",
+    "hanViet": "使 DỤNG",
+    "radical": "人",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "sử dụng",
+    "vi_meaning_full": "Động từ: sử dụng",
+    "vi_meaning_short": "sử dụng",
+    "enMeaning": "to use; employ",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备使用",
+      "开始使用",
+      "喜欢使用"
+    ],
+    "compounds": [
+      "使",
+      "用"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去使用。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shǐ yòng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi sử dụng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-491",
+    "hanzi": "市",
+    "traditional": "市",
+    "pinyin": "shì",
+    "pinyinClean": "shi",
+    "hanViet": "THỊ",
+    "radical": "巾",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thành phố",
+    "vi_meaning_full": "Danh từ: thành phố",
+    "vi_meaning_short": "thành phố",
+    "enMeaning": "city; market",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个市",
+      "新市",
+      "好市"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的市。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shì.",
+        "vi": "Trên bàn có đặt một chiếc thành phố mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-492",
+    "hanzi": "市长",
+    "traditional": "市長",
+    "pinyin": "shìzhǎng",
+    "pinyinClean": "shizhang",
+    "hanViet": "THỊ TRƯỞNG",
+    "radical": "巾",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thị trường",
+    "vi_meaning_full": "Danh từ: thị trường",
+    "vi_meaning_short": "thị trường",
+    "enMeaning": "mayor",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个市长",
+      "新市长",
+      "好市长"
+    ],
+    "compounds": [
+      "市",
+      "长"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的市长。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shì zhǎng.",
+        "vi": "Trên bàn có đặt một chiếc thị trường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-494",
+    "hanzi": "收",
+    "traditional": "收",
+    "pinyin": "shōu",
+    "pinyinClean": "shou",
+    "hanViet": "收",
+    "radical": "攵",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thu, nhận",
+    "vi_meaning_full": "Động từ: thu, nhận",
+    "vi_meaning_short": "thu, nhận",
+    "enMeaning": "to receive; collect",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备收",
+      "开始收",
+      "喜欢收"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去收。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shōu.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thu, nhận.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-495",
+    "hanzi": "收到",
+    "traditional": "收到",
+    "pinyin": "shōudào",
+    "pinyinClean": "shoudao",
+    "hanViet": "收 到",
+    "radical": "攵",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nhận được",
+    "vi_meaning_full": "Động từ: nhận được",
+    "vi_meaning_short": "nhận được",
+    "enMeaning": "received",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备收到",
+      "开始收到",
+      "喜欢收到"
+    ],
+    "compounds": [
+      "收",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去收到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shōu dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nhận được.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-496",
+    "hanzi": "收入",
+    "traditional": "收入",
+    "pinyin": "shōurù",
+    "pinyinClean": "shouru",
+    "hanViet": "收 入",
+    "radical": "攵",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "thu vào, nhận vào / thu nhập",
+    "vi_meaning_full": "Danh từ / động từ: thu vào, nhận vào / thu nhập",
+    "vi_meaning_short": "thu vào, nhận và",
+    "enMeaning": "income; revenue",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备收入",
+      "开始收入",
+      "喜欢收入"
+    ],
+    "compounds": [
+      "收",
+      "入"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去收入。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shōu rù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thu vào, nhận vào.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-498",
+    "hanzi": "受到",
+    "traditional": "受到",
+    "pinyin": "shòudào",
+    "pinyinClean": "shoudao",
+    "hanViet": "受 到",
+    "radical": "又",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "chịu, nhận",
+    "vi_meaning_full": "Động từ: chịu, nhận",
+    "vi_meaning_short": "chịu, nhận",
+    "enMeaning": "suffered; received",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备受到",
+      "开始受到",
+      "喜欢受到"
+    ],
+    "compounds": [
+      "受",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去受到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shòu dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi chịu, nhận.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-499",
+    "hanzi": "舒服",
+    "traditional": "舒服",
+    "pinyin": "shūfu",
+    "pinyinClean": "shufu",
+    "hanViet": "舒 服",
+    "radical": "舌",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "thoái mái",
+    "vi_meaning_full": "Tính từ: thoái mái",
+    "vi_meaning_short": "thoái mái",
+    "enMeaning": "comfortable",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常舒服",
+      "很舒服",
+      "真舒服"
+    ],
+    "compounds": [
+      "舒",
+      "服"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真舒服，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn shū fú, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật thoái mái, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-500",
+    "hanzi": "熟",
+    "traditional": "熟",
+    "pinyin": "shú",
+    "pinyinClean": "shu",
+    "hanViet": "THỤC",
+    "radical": "灬",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "quen, chín, thành thạo",
+    "vi_meaning_full": "Tính từ: quen, chín, thành thạo",
+    "vi_meaning_short": "quen, chín, thàn",
+    "enMeaning": "cooked, ripe, familiar, skilled",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "很熟",
+      "饭熟了",
+      "很熟悉"
+    ],
+    "compounds": [
+      "熟悉",
+      "成熟"
+    ],
+    "synonyms": [
+      "熟悉",
+      "熟练"
+    ],
+    "antonyms": [
+      "生",
+      "生疏"
+    ],
+    "confusableWords": "生",
+    "sentences": [
+      {
+        "zh": "我和他是大学同班同学，彼此非常熟。",
+        "pinyin": "Wǒ hé tā shì dàxué tóngbān tóngxué, bǐcǐ fēicháng shú.",
+        "vi": "Tôi và cậu ấy là bạn cùng lớp đại học, với nhau vô cùng thân quen.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-501",
+    "hanzi": "数",
+    "traditional": "數",
+    "pinyin": "shǔ",
+    "pinyinClean": "shu",
+    "hanViet": "数",
+    "radical": "攵",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đểm",
+    "vi_meaning_full": "Động từ: đểm",
+    "vi_meaning_short": "đểm",
+    "enMeaning": "to count",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备数",
+      "开始数",
+      "喜欢数"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去数。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đểm.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-502",
+    "hanzi": "数字",
+    "traditional": "數字",
+    "pinyin": "shùzì",
+    "pinyinClean": "shuzi",
+    "hanViet": "数 字",
+    "radical": "攵",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chữ số",
+    "vi_meaning_full": "Danh từ: chữ số",
+    "vi_meaning_short": "chữ số",
+    "enMeaning": "digit; number",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个数字",
+      "新数字",
+      "好数字"
+    ],
+    "compounds": [
+      "数",
+      "字"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的数字。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shù zì.",
+        "vi": "Trên bàn có đặt một chiếc chữ số mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-503",
+    "hanzi": "水平",
+    "traditional": "水平",
+    "pinyin": "shuǐpíng",
+    "pinyinClean": "shuiping",
+    "hanViet": "水 BÌNH",
+    "radical": "水",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trình độ",
+    "vi_meaning_full": "Danh từ: trình độ",
+    "vi_meaning_short": "trình độ",
+    "enMeaning": "level; standard",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个水平",
+      "新水平",
+      "好水平"
+    ],
+    "compounds": [
+      "水",
+      "平"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的水平。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de shuǐ píng.",
+        "vi": "Trên bàn có đặt một chiếc trình độ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-504",
+    "hanzi": "顺利",
+    "traditional": "順利",
+    "pinyin": "shùnlì",
+    "pinyinClean": "shunli",
+    "hanViet": "顺 利",
+    "radical": "页",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "thuận lợi",
+    "vi_meaning_full": "Tính từ: thuận lợi",
+    "vi_meaning_short": "thuận lợi",
+    "enMeaning": "smoothly; successful",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常顺利",
+      "很顺利",
+      "真顺利"
+    ],
+    "compounds": [
+      "顺",
+      "利"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真顺利，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn shùn lì, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật thuận lợi, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-505",
+    "hanzi": "说明",
+    "traditional": "說明",
+    "pinyin": "shuōmíng",
+    "pinyinClean": "shuoming",
+    "hanViet": "THUYẾT 明",
+    "radical": "言",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "giải thích, trình bày, làm rõ / lời giải thích, hướng dẫn",
+    "vi_meaning_full": "Danh từ / động từ: giải thích, trình bày, làm rõ / lời giải thích, hướng dẫn",
+    "vi_meaning_short": "giải thích, trìn",
+    "enMeaning": "explain; instruction",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备说明",
+      "开始说明",
+      "喜欢说明"
+    ],
+    "compounds": [
+      "说",
+      "明"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去说明。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù shuō míng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi giải thích, trình bày, làm rõ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-506",
+    "hanzi": "司机",
+    "traditional": "司機",
+    "pinyin": "sījī",
+    "pinyinClean": "siji",
+    "hanViet": "TI CƠ",
+    "radical": "口",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tài xế",
+    "vi_meaning_full": "Danh từ: tài xế",
+    "vi_meaning_short": "tài xế",
+    "enMeaning": "driver",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个司机",
+      "新司机",
+      "好司机"
+    ],
+    "compounds": [
+      "司",
+      "机"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的司机。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de sī jī.",
+        "vi": "Trên bàn có đặt một chiếc tài xế mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-507",
+    "hanzi": "送到",
+    "traditional": "送到",
+    "pinyin": "sòngdào",
+    "pinyinClean": "songdao",
+    "hanViet": "送 到",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "gửi đến",
+    "vi_meaning_full": "Động từ: gửi đến",
+    "vi_meaning_short": "gửi đến",
+    "enMeaning": "deliver to",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备送到",
+      "开始送到",
+      "喜欢送到"
+    ],
+    "compounds": [
+      "送",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去送到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù sòng dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi gửi đến.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-508",
+    "hanzi": "送给",
+    "traditional": "送給",
+    "pinyin": "sòng gěi",
+    "pinyinClean": "songgei",
+    "hanViet": "TỐNG CẤP",
+    "radical": "辶",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tặng cho",
+    "vi_meaning_full": "Động từ: tặng cho",
+    "vi_meaning_short": "tặng cho",
+    "enMeaning": "to give as a gift to, to present",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "送给朋友",
+      "送给他一件礼物",
+      "送给老师"
+    ],
+    "compounds": [
+      "送别",
+      "送礼"
+    ],
+    "synonyms": [
+      "赠给",
+      "赠送"
+    ],
+    "antonyms": [
+      "收取",
+      "收受"
+    ],
+    "confusableWords": "交给",
+    "sentences": [
+      {
+        "zh": "这是我亲手制作的礼物，送给你！",
+        "pinyin": "Zhè shì wǒ qīnshǒu zhìzuò de lǐwù, sòng gěi nǐ!",
+        "vi": "Đây là món quà do chính tay tôi làm, tặng cho bạn nè!",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-509",
+    "hanzi": "算",
+    "traditional": "算",
+    "pinyin": "suàn",
+    "pinyinClean": "suan",
+    "hanViet": "TOÁN",
+    "radical": "竹",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tính toán",
+    "vi_meaning_full": "Động từ: tính toán",
+    "vi_meaning_short": "tính toán",
+    "enMeaning": "calculate; count",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备算",
+      "开始算",
+      "喜欢算"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去算。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù suàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tính toán.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-511",
+    "hanzi": "随便",
+    "traditional": "隨便",
+    "pinyin": "suíbiàn",
+    "pinyinClean": "suibian",
+    "hanViet": "随 TIỆN",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "tuỳ ý",
+    "vi_meaning_full": "Tính từ: tuỳ ý",
+    "vi_meaning_short": "tuỳ ý",
+    "enMeaning": "casual; as one pleases",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常随便",
+      "很随便",
+      "真随便"
+    ],
+    "compounds": [
+      "随",
+      "便"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真随便，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn suí biàn, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật tuỳ ý, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-512",
+    "hanzi": "随时",
+    "traditional": "隨時",
+    "pinyin": "suíshí",
+    "pinyinClean": "suishi",
+    "hanViet": "随 THỜI",
+    "radical": "口",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "bất cứ lúc nào",
+    "vi_meaning_full": "Phó từ: bất cứ lúc nào",
+    "vi_meaning_short": "bất cứ lúc nào",
+    "enMeaning": "at any time",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "随时好",
+      "随时去",
+      "随时看"
+    ],
+    "compounds": [
+      "随",
+      "时"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家随时准备好了，随时可以出发。",
+        "pinyin": "Dà jiā suí shí zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người bất cứ lúc nào chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-514",
+    "hanzi": "所有",
+    "traditional": "所有",
+    "pinyin": "suǒyǒu",
+    "pinyinClean": "suoyou",
+    "hanViet": "所 有",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "tất cả",
+    "vi_meaning_full": "Tính từ: tất cả",
+    "vi_meaning_short": "tất cả",
+    "enMeaning": "all; possess",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常所有",
+      "很所有",
+      "真所有"
+    ],
+    "compounds": [
+      "所",
+      "有"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真所有，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn suǒ yǒu, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật tất cả, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-516",
+    "hanzi": "它们",
+    "traditional": "它們",
+    "pinyin": "tāmen",
+    "pinyinClean": "tamen",
+    "hanViet": "它 们",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "chúng nó",
+    "vi_meaning_full": "Đại từ: chúng nó",
+    "vi_meaning_short": "chúng nó",
+    "enMeaning": "they (non-human)",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说它们",
+      "用它们"
+    ],
+    "compounds": [
+      "它",
+      "们"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，它们是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, tā men shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 它们 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-517",
+    "hanzi": "太太",
+    "traditional": "太太",
+    "pinyin": "tàitai",
+    "pinyinClean": "taitai",
+    "hanViet": "THÁI THÁI",
+    "radical": "大",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bà, vợ",
+    "vi_meaning_full": "Danh từ: bà, vợ",
+    "vi_meaning_short": "bà, vợ",
+    "enMeaning": "wife; Mrs.",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个太太",
+      "新太太",
+      "好太太"
+    ],
+    "compounds": [
+      "太",
+      "太"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的太太。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tài tài.",
+        "vi": "Trên bàn có đặt một chiếc bà, vợ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-518",
+    "hanzi": "太阳",
+    "traditional": "太陽",
+    "pinyin": "tài-yáng",
+    "pinyinClean": "taiyang",
+    "hanViet": "THÁI 阳",
+    "radical": "大",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mặt trời",
+    "vi_meaning_full": "Danh từ: mặt trời",
+    "vi_meaning_short": "mặt trời",
+    "enMeaning": "sun",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个太阳",
+      "新太阳",
+      "好太阳"
+    ],
+    "compounds": [
+      "太",
+      "阳"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的太阳。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tài yáng.",
+        "vi": "Trên bàn có đặt một chiếc mặt trời mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-519",
+    "hanzi": "态度",
+    "traditional": "態度",
+    "pinyin": "tài-dù",
+    "pinyinClean": "taidu",
+    "hanViet": "态 ĐỘ",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thái độ",
+    "vi_meaning_full": "Danh từ: thái độ",
+    "vi_meaning_short": "thái độ",
+    "enMeaning": "attitude",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个态度",
+      "新态度",
+      "好态度"
+    ],
+    "compounds": [
+      "态",
+      "度"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的态度。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tài dù.",
+        "vi": "Trên bàn có đặt một chiếc thái độ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-520",
+    "hanzi": "讨论",
+    "traditional": "討論",
+    "pinyin": "tǎolùn",
+    "pinyinClean": "taolun",
+    "hanViet": "讨 论",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thảo luận",
+    "vi_meaning_full": "Động từ: thảo luận",
+    "vi_meaning_short": "thảo luận",
+    "enMeaning": "to discuss",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备讨论",
+      "开始讨论",
+      "喜欢讨论"
+    ],
+    "compounds": [
+      "讨",
+      "论"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去讨论。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tǎo lùn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thảo luận.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-521",
+    "hanzi": "套",
+    "traditional": "套",
+    "pinyin": "tào",
+    "pinyinClean": "tao",
+    "hanViet": "套",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "bộ",
+    "vi_meaning_full": "Lượng từ: bộ",
+    "vi_meaning_short": "bộ",
+    "enMeaning": "set; suit (measure word)",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一套",
+      "两套",
+      "这套"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一套这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī tào zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một bộ nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-522",
+    "hanzi": "特别",
+    "traditional": "特別",
+    "pinyin": "tèbié",
+    "pinyinClean": "tebie",
+    "hanViet": "特 别",
+    "radical": "牛",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "đặc biệt / vô cùng, đặc biệt",
+    "vi_meaning_full": "Tính từ: đặc biệt / vô cùng, đặc biệt",
+    "vi_meaning_short": "đặc biệt",
+    "enMeaning": "special; especially",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常特别",
+      "很特别",
+      "真特别"
+    ],
+    "compounds": [
+      "特",
+      "别"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真特别，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn tè bié, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật đặc biệt, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-523",
+    "hanzi": "特点",
+    "traditional": "特點",
+    "pinyin": "tèdiǎn",
+    "pinyinClean": "tedian",
+    "hanViet": "特 ĐIỂM",
+    "radical": "牛",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đặc điểm",
+    "vi_meaning_full": "Danh từ: đặc điểm",
+    "vi_meaning_short": "đặc điểm",
+    "enMeaning": "characteristic; feature",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个特点",
+      "新特点",
+      "好特点"
+    ],
+    "compounds": [
+      "特",
+      "点"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的特点。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tè diǎn.",
+        "vi": "Trên bàn có đặt một chiếc đặc điểm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-524",
+    "hanzi": "疼",
+    "traditional": "疼",
+    "pinyin": "téng",
+    "pinyinClean": "teng",
+    "hanViet": "疼",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đau",
+    "vi_meaning_full": "Động từ: đau",
+    "vi_meaning_short": "đau",
+    "enMeaning": "painful; ache",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备疼",
+      "开始疼",
+      "喜欢疼"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去疼。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù téng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đau.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-525",
+    "hanzi": "提",
+    "traditional": "提",
+    "pinyin": "tí",
+    "pinyinClean": "ti",
+    "hanViet": "提",
+    "radical": "手",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "xách, cầm, đề cập, nêu ra",
+    "vi_meaning_full": "Động từ: xách, cầm, đề cập, nêu ra",
+    "vi_meaning_short": "xách, cầm, đề cậ",
+    "enMeaning": "to carry; mention",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备提",
+      "开始提",
+      "喜欢提"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去提。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tí.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi xách, cầm, đề cập, nêu ra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-526",
+    "hanzi": "提出",
+    "traditional": "提出",
+    "pinyin": "tíchū",
+    "pinyinClean": "tichu",
+    "hanViet": "提 XUẤT",
+    "radical": "手",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đề xuất",
+    "vi_meaning_full": "Động từ: đề xuất",
+    "vi_meaning_short": "đề xuất",
+    "enMeaning": "put forward; raise",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备提出",
+      "开始提出",
+      "喜欢提出"
+    ],
+    "compounds": [
+      "提",
+      "出"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去提出。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tí chū.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đề xuất.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-527",
+    "hanzi": "提到",
+    "traditional": "提到",
+    "pinyin": "tídào",
+    "pinyinClean": "tidao",
+    "hanViet": "提 到",
+    "radical": "手",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nhắc đến",
+    "vi_meaning_full": "Động từ: nhắc đến",
+    "vi_meaning_short": "nhắc đến",
+    "enMeaning": "mention; refer to",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备提到",
+      "开始提到",
+      "喜欢提到"
+    ],
+    "compounds": [
+      "提",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去提到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tí dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nhắc đến.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-528",
+    "hanzi": "提高",
+    "traditional": "提高",
+    "pinyin": "tí//gāo",
+    "pinyinClean": "tigao",
+    "hanViet": "提 CAO",
+    "radical": "手",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nâng cao",
+    "vi_meaning_full": "Động từ: nâng cao",
+    "vi_meaning_short": "nâng cao",
+    "enMeaning": "improve; raise",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备提高",
+      "开始提高",
+      "喜欢提高"
+    ],
+    "compounds": [
+      "提",
+      "高"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去提高。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tí gāo.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nâng cao.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-530",
+    "hanzi": "体育",
+    "traditional": "體育",
+    "pinyin": "tǐyù",
+    "pinyinClean": "tiyu",
+    "hanViet": "体 DỤC",
+    "radical": "人",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thề dục",
+    "vi_meaning_full": "Danh từ: thề dục",
+    "vi_meaning_short": "thề dục",
+    "enMeaning": "physical education; sports",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个体育",
+      "新体育",
+      "好体育"
+    ],
+    "compounds": [
+      "体",
+      "育"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的体育。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tǐ yù.",
+        "vi": "Trên bàn có đặt một chiếc thề dục mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-531",
+    "hanzi": "体育场",
+    "traditional": "體育場",
+    "pinyin": "tǐyùchǎng",
+    "pinyinClean": "tiyuchang",
+    "hanViet": "体 DỤC TRƯỜNG",
+    "radical": "人",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "sân vận động",
+    "vi_meaning_full": "Danh từ: sân vận động",
+    "vi_meaning_short": "sân vận động",
+    "enMeaning": "stadium",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个体育场",
+      "新体育场",
+      "好体育场"
+    ],
+    "compounds": [
+      "体",
+      "育场"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的体育场。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tǐ yù chǎng.",
+        "vi": "Trên bàn có đặt một chiếc sân vận động mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-532",
+    "hanzi": "体育馆",
+    "traditional": "體育館",
+    "pinyin": "tǐyùguǎn",
+    "pinyinClean": "tiyuguan",
+    "hanViet": "体 DỤC QUÁN",
+    "radical": "人",
+    "strokeCount": 26,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nhà thi đấu",
+    "vi_meaning_full": "Danh từ: nhà thi đấu",
+    "vi_meaning_short": "nhà thi đấu",
+    "enMeaning": "gymnasium",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个体育馆",
+      "新体育馆",
+      "好体育馆"
+    ],
+    "compounds": [
+      "体",
+      "育馆"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的体育馆。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tǐ yù guǎn.",
+        "vi": "Trên bàn có đặt một chiếc nhà thi đấu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-533",
+    "hanzi": "天上",
+    "traditional": "天上",
+    "pinyin": "tiānshàng",
+    "pinyinClean": "tianshang",
+    "hanViet": "THIÊN 上",
+    "radical": "大",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trên trời",
+    "vi_meaning_full": "Danh từ: trên trời",
+    "vi_meaning_short": "trên trời",
+    "enMeaning": "in the sky",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个天上",
+      "新天上",
+      "好天上"
+    ],
+    "compounds": [
+      "天",
+      "上"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的天上。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tiān shàng.",
+        "vi": "Trên bàn có đặt một chiếc trên trời mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-534",
+    "hanzi": "条",
+    "traditional": "條",
+    "pinyin": "tiáo",
+    "pinyinClean": "tiao",
+    "hanViet": "条",
+    "radical": "夂",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "cái, chiếc (dài)",
+    "vi_meaning_full": "Lượng từ: cái, chiếc (dài)",
+    "vi_meaning_short": "cái, chiếc",
+    "enMeaning": "strip; item (measure word)",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一条",
+      "两条",
+      "这条"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一条这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī tiáo zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một cái, chiếc nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-535",
+    "hanzi": "条件",
+    "traditional": "條件",
+    "pinyin": "tiáojiàn",
+    "pinyinClean": "tiaojian",
+    "hanViet": "条 KIỆN",
+    "radical": "夂",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "điều kiện",
+    "vi_meaning_full": "Danh từ: điều kiện",
+    "vi_meaning_short": "điều kiện",
+    "enMeaning": "condition; term",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个条件",
+      "新条件",
+      "好条件"
+    ],
+    "compounds": [
+      "条",
+      "件"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的条件。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tiáo jiàn.",
+        "vi": "Trên bàn có đặt một chiếc điều kiện mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-536",
+    "hanzi": "听讲",
+    "traditional": "聽講",
+    "pinyin": "tīng//jiǎng",
+    "pinyinClean": "tingjiang",
+    "hanViet": "听 GIẢNG",
+    "radical": "口",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nghe giảng",
+    "vi_meaning_full": "Động từ: nghe giảng",
+    "vi_meaning_short": "nghe giảng",
+    "enMeaning": "listen to lecture",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备听讲",
+      "开始听讲",
+      "喜欢听讲"
+    ],
+    "compounds": [
+      "听",
+      "讲"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去听讲。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tīng jiǎng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nghe giảng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-537",
+    "hanzi": "听说",
+    "traditional": "聽說",
+    "pinyin": "tīngshuō",
+    "pinyinClean": "tingshuo",
+    "hanViet": "听 THUYẾT",
+    "radical": "口",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nghe nói",
+    "vi_meaning_full": "Động từ: nghe nói",
+    "vi_meaning_short": "nghe nói",
+    "enMeaning": "hear of; hearsay",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备听说",
+      "开始听说",
+      "喜欢听说"
+    ],
+    "compounds": [
+      "听",
+      "说"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去听说。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tīng shuō.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nghe nói.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-538",
+    "hanzi": "停",
+    "traditional": "停",
+    "pinyin": "tíng",
+    "pinyinClean": "ting",
+    "hanViet": "停",
+    "radical": "人",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "dừng",
+    "vi_meaning_full": "Động từ: dừng",
+    "vi_meaning_short": "dừng",
+    "enMeaning": "to stop",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备停",
+      "开始停",
+      "喜欢停"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去停。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tíng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi dừng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-539",
+    "hanzi": "停车",
+    "traditional": "停車",
+    "pinyin": "tíng//chē",
+    "pinyinClean": "tingche",
+    "hanViet": "停 XA",
+    "radical": "人",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đỗ xe",
+    "vi_meaning_full": "Động từ: đỗ xe",
+    "vi_meaning_short": "đỗ xe",
+    "enMeaning": "park a car",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备停车",
+      "开始停车",
+      "喜欢停车"
+    ],
+    "compounds": [
+      "停",
+      "车"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去停车。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tíng chē.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đỗ xe.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-540",
+    "hanzi": "停车场",
+    "traditional": "停車場",
+    "pinyin": "tíngchēchǎng",
+    "pinyinClean": "tingchechang",
+    "hanViet": "停 XA TRƯỜNG",
+    "radical": "人",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bãi đỗ xe",
+    "vi_meaning_full": "Danh từ: bãi đỗ xe",
+    "vi_meaning_short": "bãi đỗ xe",
+    "enMeaning": "parking lot",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个停车场",
+      "新停车场",
+      "好停车场"
+    ],
+    "compounds": [
+      "停",
+      "车场"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的停车场。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tíng chē chǎng.",
+        "vi": "Trên bàn có đặt một chiếc bãi đỗ xe mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-541",
+    "hanzi": "挺",
+    "traditional": "挺",
+    "pinyin": "tǐng",
+    "pinyinClean": "ting",
+    "hanViet": "挺",
+    "radical": "手",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "rất/khá",
+    "vi_meaning_full": "Phó từ: rất/khá",
+    "vi_meaning_short": "rất",
+    "enMeaning": "very; quite",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "挺好",
+      "挺去",
+      "挺看"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家挺准备好了，随时可以出发。",
+        "pinyin": "Dà jiā tǐng zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người rất chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-542",
+    "hanzi": "挺好",
+    "traditional": "挺好",
+    "pinyin": "tǐng hǎo",
+    "pinyinClean": "tinghao",
+    "hanViet": "ĐĨNH HẢO",
+    "radical": "扌",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "rất tốt, khá tốt",
+    "vi_meaning_full": "Tính từ: rất tốt, khá tốt",
+    "vi_meaning_short": "rất tốt, khá tốt",
+    "enMeaning": "very good, pretty good",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "挺好的",
+      "觉得挺好",
+      "身体挺好"
+    ],
+    "compounds": [
+      "挺拔",
+      "良好"
+    ],
+    "synonyms": [
+      "很好",
+      "不错"
+    ],
+    "antonyms": [
+      "很差",
+      "糟糕"
+    ],
+    "confusableWords": "正好",
+    "sentences": [
+      {
+        "zh": "最近我的身体挺好，工作也很顺利。",
+        "pinyin": "Zuìjìn wǒ de shēntǐ tǐng hǎo, gōngzuò yě hěn shùnlì.",
+        "vi": "Dạo này sức khỏe tôi rất tốt, công việc cũng rất thuận lợi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-543",
+    "hanzi": "通",
+    "traditional": "通",
+    "pinyin": "tōng",
+    "pinyinClean": "tong",
+    "hanViet": "THÔNG",
+    "radical": "辶",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thông qua, hiểu / thuận lợi",
+    "vi_meaning_full": "Động từ: thông qua, hiểu / thuận lợi",
+    "vi_meaning_short": "thông qua, hiểu",
+    "enMeaning": "through; understand",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备通",
+      "开始通",
+      "喜欢通"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去通。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tōng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thông qua, hiểu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-544",
+    "hanzi": "通过",
+    "traditional": "通過",
+    "pinyin": "tōngguò",
+    "pinyinClean": "tongguo",
+    "hanViet": "THÔNG QUÁ",
+    "radical": "辶",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thông qua, bằng cách, nhờ vào / đi qua, vượt qua, đỗ",
+    "vi_meaning_full": "Động từ: thông qua, bằng cách, nhờ vào / đi qua, vượt qua, đỗ",
+    "vi_meaning_short": "thông qua, bằng",
+    "enMeaning": "pass through; by means of",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备通过",
+      "开始通过",
+      "喜欢通过"
+    ],
+    "compounds": [
+      "通",
+      "过"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去通过。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tōng guò.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thông qua, bằng cách, nhờ vào.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-545",
+    "hanzi": "通知",
+    "traditional": "通知",
+    "pinyin": "tōngzhī",
+    "pinyinClean": "tongzhi",
+    "hanViet": "THÔNG 知",
+    "radical": "辶",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "thông báo, báo cho biết / thông báo (văn bản, nội dung thông báo)",
+    "vi_meaning_full": "Danh từ / động từ: thông báo, báo cho biết / thông báo (văn bản, nội dung thông báo)",
+    "vi_meaning_short": "thông báo, báo c",
+    "enMeaning": "notify; notice",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备通知",
+      "开始通知",
+      "喜欢通知"
+    ],
+    "compounds": [
+      "通",
+      "知"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去通知。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tōng zhī.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thông báo, báo cho biết.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-546",
+    "hanzi": "同时",
+    "traditional": "同時",
+    "pinyin": "tóngshí",
+    "pinyinClean": "tongshi",
+    "hanViet": "ĐỒNG THỜI",
+    "radical": "口",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đồng thời, cùng lúc / cùng lúc, trong khi",
+    "vi_meaning_full": "Danh từ: đồng thời, cùng lúc / cùng lúc, trong khi",
+    "vi_meaning_short": "đồng thời, cùng",
+    "enMeaning": "at the same time",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个同时",
+      "新同时",
+      "好同时"
+    ],
+    "compounds": [
+      "同",
+      "时"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的同时。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tóng shí.",
+        "vi": "Trên bàn có đặt một chiếc đồng thời, cùng lúc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-547",
+    "hanzi": "同事",
+    "traditional": "同事",
+    "pinyin": "tóngshì",
+    "pinyinClean": "tongshi",
+    "hanViet": "ĐỒNG 事",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đồng nghiệp",
+    "vi_meaning_full": "Danh từ: đồng nghiệp",
+    "vi_meaning_short": "đồng nghiệp",
+    "enMeaning": "colleague; coworker",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个同事",
+      "新同事",
+      "好同事"
+    ],
+    "compounds": [
+      "同",
+      "事"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的同事。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tóng shì.",
+        "vi": "Trên bàn có đặt một chiếc đồng nghiệp mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-548",
+    "hanzi": "同样",
+    "traditional": "同樣",
+    "pinyin": "tóngyàng",
+    "pinyinClean": "tongyang",
+    "hanViet": "ĐỒNG 样",
+    "radical": "口",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "giống nhau, như nhau, tương tự / cũng, tương tự như",
+    "vi_meaning_full": "Tính từ: giống nhau, như nhau, tương tự / cũng, tương tự như",
+    "vi_meaning_short": "giống nhau, như",
+    "enMeaning": "same; similar",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常同样",
+      "很同样",
+      "真同样"
+    ],
+    "compounds": [
+      "同",
+      "样"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真同样，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn tóng yàng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật giống nhau, như nhau, tương tự, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-549",
+    "hanzi": "头",
+    "traditional": "頭",
+    "pinyin": "tóu",
+    "pinyinClean": "tou",
+    "hanViet": "ĐẦU",
+    "radical": "大",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đầu, phần đầu / dùng để đếm gia súc, vật nuôi lớn (trâu,",
+    "vi_meaning_full": "Danh từ: đầu, phần đầu / dùng để đếm gia súc, vật nuôi lớn (trâu,",
+    "vi_meaning_short": "đầu, phần đầu",
+    "enMeaning": "head; top",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个头",
+      "新头",
+      "好头"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的头。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tóu.",
+        "vi": "Trên bàn có đặt một chiếc đầu, phần đầu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-550",
+    "hanzi": "里头",
+    "traditional": "裏頭",
+    "pinyin": "lǐtou",
+    "pinyinClean": "litou",
+    "hanViet": "LÝ ĐẦU",
+    "radical": "里",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bên trong, phía trong",
+    "vi_meaning_full": "Danh từ: bên trong, phía trong",
+    "vi_meaning_short": "bên trong, phía",
+    "enMeaning": "inside, interior",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "在里头",
+      "房间里头",
+      "包里头"
+    ],
+    "compounds": [
+      "里面",
+      "头顶"
+    ],
+    "synonyms": [
+      "里面",
+      "内部"
+    ],
+    "antonyms": [
+      "外头",
+      "外面"
+    ],
+    "confusableWords": "外面",
+    "sentences": [
+      {
+        "zh": "屋子里面开着空调，比外头凉快多了。",
+        "pinyin": "Wūzi lǐtou kāizhe kōngtiáo, bǐ wàitou liángkuai duō le.",
+        "vi": "Trong nhà đang bật điều hòa, mát hơn bên ngoài nhiều.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-551",
+    "hanzi": "头发",
+    "traditional": "頭髮",
+    "pinyin": "tóufa",
+    "pinyinClean": "toufa",
+    "hanViet": "ĐẦU PHÁT",
+    "radical": "大",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tóc",
+    "vi_meaning_full": "Danh từ: tóc",
+    "vi_meaning_short": "tóc",
+    "enMeaning": "hair",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个头发",
+      "新头发",
+      "好头发"
+    ],
+    "compounds": [
+      "头",
+      "发"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的头发。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tóu fà.",
+        "vi": "Trên bàn có đặt một chiếc tóc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-552",
+    "hanzi": "图片",
+    "traditional": "圖片",
+    "pinyin": "túpiàn",
+    "pinyinClean": "tupian",
+    "hanViet": "图 片",
+    "radical": "囗",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "hình ảnh",
+    "vi_meaning_full": "Danh từ: hình ảnh",
+    "vi_meaning_short": "hình ảnh",
+    "enMeaning": "picture; image",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个图片",
+      "新图片",
+      "好图片"
+    ],
+    "compounds": [
+      "图",
+      "片"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的图片。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tú piàn.",
+        "vi": "Trên bàn có đặt một chiếc hình ảnh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-553",
+    "hanzi": "推",
+    "traditional": "推",
+    "pinyin": "tuī",
+    "pinyinClean": "tui",
+    "hanViet": "推",
+    "radical": "手",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đầy",
+    "vi_meaning_full": "Động từ: đầy",
+    "vi_meaning_short": "đầy",
+    "enMeaning": "to push",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备推",
+      "开始推",
+      "喜欢推"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去推。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù tuī.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đầy.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-554",
+    "hanzi": "腿",
+    "traditional": "腿",
+    "pinyin": "tuǐ",
+    "pinyinClean": "tui",
+    "hanViet": "腿",
+    "radical": "月",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chân",
+    "vi_meaning_full": "Danh từ: chân",
+    "vi_meaning_short": "chân",
+    "enMeaning": "leg",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个腿",
+      "新腿",
+      "好腿"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的腿。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de tuǐ.",
+        "vi": "Trên bàn có đặt một chiếc chân mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-555",
+    "hanzi": "外地",
+    "traditional": "外地",
+    "pinyin": "wàidì",
+    "pinyinClean": "waidi",
+    "hanViet": "外 ĐỊA",
+    "radical": "夕",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngoại tinh/nơi khác",
+    "vi_meaning_full": "Danh từ: ngoại tinh/nơi khác",
+    "vi_meaning_short": "ngoại tinh",
+    "enMeaning": "other places; non-local",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个外地",
+      "新外地",
+      "好外地"
+    ],
+    "compounds": [
+      "外",
+      "地"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的外地。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wài dì.",
+        "vi": "Trên bàn có đặt một chiếc ngoại tinh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-556",
+    "hanzi": "外卖",
+    "traditional": "外賣",
+    "pinyin": "wàimài",
+    "pinyinClean": "waimai",
+    "hanViet": "外 卖",
+    "radical": "夕",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "đồ ăn giao tận nơi, suất ăn mang về / giao đồ ăn",
+    "vi_meaning_full": "Danh từ / động từ: đồ ăn giao tận nơi, suất ăn mang về / giao đồ ăn",
+    "vi_meaning_short": "đồ ăn giao tận n",
+    "enMeaning": "takeout food",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备外卖",
+      "开始外卖",
+      "喜欢外卖"
+    ],
+    "compounds": [
+      "外",
+      "卖"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去外卖。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù wài mài.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đồ ăn giao tận nơi, suất ăn mang về.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-558",
+    "hanzi": "完成",
+    "traditional": "完成",
+    "pinyin": "wán//chéng",
+    "pinyinClean": "wancheng",
+    "hanViet": "完 THÀNH",
+    "radical": "宀",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "hoàn thành",
+    "vi_meaning_full": "Động từ: hoàn thành",
+    "vi_meaning_short": "hoàn thành",
+    "enMeaning": "to accomplish; finish",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备完成",
+      "开始完成",
+      "喜欢完成"
+    ],
+    "compounds": [
+      "完",
+      "成"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去完成。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù wán chéng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi hoàn thành.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-559",
+    "hanzi": "完全",
+    "traditional": "完全",
+    "pinyin": "wánquán",
+    "pinyinClean": "wanquan",
+    "hanViet": "完 TOÀN",
+    "radical": "宀",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "hoàn toàn, trọn vẹn, đầy đủ / hoàn toàn, tuyệt đối",
+    "vi_meaning_full": "Tính từ: hoàn toàn, trọn vẹn, đầy đủ / hoàn toàn, tuyệt đối",
+    "vi_meaning_short": "hoàn toàn, trọn",
+    "enMeaning": "completely; fully",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常完全",
+      "很完全",
+      "真完全"
+    ],
+    "compounds": [
+      "完",
+      "全"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真完全，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn wán quán, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật hoàn toàn, trọn vẹn, đầy đủ, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-560",
+    "hanzi": "晚安",
+    "traditional": "晚安",
+    "pinyin": "wǎn'ān",
+    "pinyinClean": "wanan",
+    "hanViet": "晚 AN",
+    "radical": "日",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "chúc ngũ ngon",
+    "vi_meaning_full": "Động từ: chúc ngũ ngon",
+    "vi_meaning_short": "chúc ngũ ngon",
+    "enMeaning": "good night",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备晚安",
+      "开始晚安",
+      "喜欢晚安"
+    ],
+    "compounds": [
+      "晚",
+      "安"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去晚安。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù wǎn ān.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi chúc ngũ ngon.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-561",
+    "hanzi": "晚报",
+    "traditional": "晚報",
+    "pinyin": "wǎnbào",
+    "pinyinClean": "wanbao",
+    "hanViet": "晚 BÁO",
+    "radical": "日",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "báo buổi tối",
+    "vi_meaning_full": "Danh từ: báo buổi tối",
+    "vi_meaning_short": "báo buổi tối",
+    "enMeaning": "evening paper",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个晚报",
+      "新晚报",
+      "好晚报"
+    ],
+    "compounds": [
+      "晚",
+      "报"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的晚报。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wǎn bào.",
+        "vi": "Trên bàn có đặt một chiếc báo buổi tối mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-562",
+    "hanzi": "晚餐",
+    "traditional": "晚餐",
+    "pinyin": "wǎncān",
+    "pinyinClean": "wancan",
+    "hanViet": "晚 餐",
+    "radical": "日",
+    "strokeCount": 27,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bữa tối",
+    "vi_meaning_full": "Danh từ: bữa tối",
+    "vi_meaning_short": "bữa tối",
+    "enMeaning": "dinner; supper",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个晚餐",
+      "新晚餐",
+      "好晚餐"
+    ],
+    "compounds": [
+      "晚",
+      "餐"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的晚餐。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wǎn cān.",
+        "vi": "Trên bàn có đặt một chiếc bữa tối mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-563",
+    "hanzi": "晚会",
+    "traditional": "晚會",
+    "pinyin": "wǎnhuì",
+    "pinyinClean": "wanhui",
+    "hanViet": "晚 HỘI",
+    "radical": "日",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "dạ hội",
+    "vi_meaning_full": "Danh từ: dạ hội",
+    "vi_meaning_short": "dạ hội",
+    "enMeaning": "evening party",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个晚会",
+      "新晚会",
+      "好晚会"
+    ],
+    "compounds": [
+      "晚",
+      "会"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的晚会。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wǎn huì.",
+        "vi": "Trên bàn có đặt một chiếc dạ hội mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-564",
+    "hanzi": "碗",
+    "traditional": "碗",
+    "pinyin": "wǎn",
+    "pinyinClean": "wan",
+    "hanViet": "碗",
+    "radical": "石",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bát",
+    "vi_meaning_full": "Danh từ: bát",
+    "vi_meaning_short": "bát",
+    "enMeaning": "bowl",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个碗",
+      "新碗",
+      "好碗"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的碗。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wǎn.",
+        "vi": "Trên bàn có đặt một chiếc bát mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-565",
+    "hanzi": "万",
+    "traditional": "萬",
+    "pinyin": "wàn",
+    "pinyinClean": "wan",
+    "hanViet": "万",
+    "radical": "一",
+    "strokeCount": 3,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "số từ",
+    "viet": "mười nghìn",
+    "vi_meaning_full": "Số từ: mười nghìn",
+    "vi_meaning_short": "mười nghìn",
+    "enMeaning": "ten thousand",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说万",
+      "用万"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，万是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, wàn shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 万 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-566",
+    "hanzi": "网",
+    "traditional": "網",
+    "pinyin": "wǎng",
+    "pinyinClean": "wang",
+    "hanViet": "网",
+    "radical": "冂",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mạng/lưới",
+    "vi_meaning_full": "Danh từ: mạng/lưới",
+    "vi_meaning_short": "mạng",
+    "enMeaning": "net; network",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个网",
+      "新网",
+      "好网"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的网。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wǎng.",
+        "vi": "Trên bàn có đặt một chiếc mạng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-567",
+    "hanzi": "网球",
+    "traditional": "網球",
+    "pinyin": "wǎngqiú",
+    "pinyinClean": "wangqiu",
+    "hanViet": "网 CẦU",
+    "radical": "冂",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "quần vợt",
+    "vi_meaning_full": "Danh từ: quần vợt",
+    "vi_meaning_short": "quần vợt",
+    "enMeaning": "tennis",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个网球",
+      "新网球",
+      "好网球"
+    ],
+    "compounds": [
+      "网",
+      "球"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的网球。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wǎng qiú.",
+        "vi": "Trên bàn có đặt một chiếc quần vợt mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-568",
+    "hanzi": "网站",
+    "traditional": "網站",
+    "pinyin": "wǎngzhàn",
+    "pinyinClean": "wangzhan",
+    "hanViet": "网 TRẠM",
+    "radical": "冂",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trang web",
+    "vi_meaning_full": "Danh từ: trang web",
+    "vi_meaning_short": "trang web",
+    "enMeaning": "website",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个网站",
+      "新网站",
+      "好网站"
+    ],
+    "compounds": [
+      "网",
+      "站"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的网站。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wǎng zhàn.",
+        "vi": "Trên bàn có đặt một chiếc trang web mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-570",
+    "hanzi": "为",
+    "traditional": "爲",
+    "pinyin": "wèi",
+    "pinyinClean": "wei",
+    "hanViet": "VI",
+    "radical": "丶",
+    "strokeCount": 4,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "giới từ",
+    "viet": "vi/cho",
+    "vi_meaning_full": "Giới từ: vi/cho",
+    "vi_meaning_short": "vi",
+    "enMeaning": "for; because of",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说为",
+      "用为"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，为是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, wèi shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 为 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-572",
+    "hanzi": "位",
+    "traditional": "位",
+    "pinyin": "wèi",
+    "pinyinClean": "wei",
+    "hanViet": "VỊ",
+    "radical": "人",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "dùng để chi người (vị, người)",
+    "vi_meaning_full": "Lượng từ: dùng để chi người (vị, người)",
+    "vi_meaning_short": "dùng để chi ngườ",
+    "enMeaning": "respectful measure word for people",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一位",
+      "两位",
+      "这位"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一位这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī wèi zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một dùng để chi người nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-573",
+    "hanzi": "味道",
+    "traditional": "味道",
+    "pinyin": "wèi·dào",
+    "pinyinClean": "weidao",
+    "hanViet": "味 ĐẠO",
+    "radical": "口",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mùi vị",
+    "vi_meaning_full": "Danh từ: mùi vị",
+    "vi_meaning_short": "mùi vị",
+    "enMeaning": "taste; flavor",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个味道",
+      "新味道",
+      "好味道"
+    ],
+    "compounds": [
+      "味",
+      "道"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的味道。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wèi dào.",
+        "vi": "Trên bàn có đặt một chiếc mùi vị mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-575",
+    "hanzi": "温度",
+    "traditional": "溫度",
+    "pinyin": "wēndù",
+    "pinyinClean": "wendu",
+    "hanViet": "温 ĐỘ",
+    "radical": "水",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nhiệt độ",
+    "vi_meaning_full": "Danh từ: nhiệt độ",
+    "vi_meaning_short": "nhiệt độ",
+    "enMeaning": "temperature",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个温度",
+      "新温度",
+      "好温度"
+    ],
+    "compounds": [
+      "温",
+      "度"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的温度。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wēn dù.",
+        "vi": "Trên bàn có đặt một chiếc nhiệt độ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-576",
+    "hanzi": "闻",
+    "traditional": "聞",
+    "pinyin": "wén",
+    "pinyinClean": "wen",
+    "hanViet": "闻",
+    "radical": "门",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "ngửi/nghe thấy",
+    "vi_meaning_full": "Động từ: ngửi/nghe thấy",
+    "vi_meaning_short": "ngửi",
+    "enMeaning": "smell; hear",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备闻",
+      "开始闻",
+      "喜欢闻"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去闻。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù wén.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ngửi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-577",
+    "hanzi": "问路",
+    "traditional": "問路",
+    "pinyin": "wènlù",
+    "pinyinClean": "wenlu",
+    "hanViet": "问 LỘ",
+    "radical": "口",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "hỏi đường",
+    "vi_meaning_full": "Động từ: hỏi đường",
+    "vi_meaning_short": "hỏi đường",
+    "enMeaning": "ask for directions",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备问路",
+      "开始问路",
+      "喜欢问路"
+    ],
+    "compounds": [
+      "问",
+      "路"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去问路。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù wèn lù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi hỏi đường.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-579",
+    "hanzi": "午餐",
+    "traditional": "午餐",
+    "pinyin": "wǔcān",
+    "pinyinClean": "wucan",
+    "hanViet": "午 餐",
+    "radical": "十",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bữa trưa",
+    "vi_meaning_full": "Danh từ: bữa trưa",
+    "vi_meaning_short": "bữa trưa",
+    "enMeaning": "lunch",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个午餐",
+      "新午餐",
+      "好午餐"
+    ],
+    "compounds": [
+      "午",
+      "餐"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的午餐。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de wǔ cān.",
+        "vi": "Trên bàn có đặt một chiếc bữa trưa mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-580",
+    "hanzi": "午睡",
+    "traditional": "午睡",
+    "pinyin": "wǔshuì",
+    "pinyinClean": "wushui",
+    "hanViet": "午 睡",
+    "radical": "十",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "giấc ngủ trưa",
+    "vi_meaning_full": "Danh từ / động từ: giấc ngủ trưa",
+    "vi_meaning_short": "giấc ngủ trưa",
+    "enMeaning": "nap at noon",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备午睡",
+      "开始午睡",
+      "喜欢午睡"
+    ],
+    "compounds": [
+      "午",
+      "睡"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去午睡。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù wǔ shuì.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi giấc ngủ trưa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-581",
+    "hanzi": "西北",
+    "traditional": "西北",
+    "pinyin": "xīběi",
+    "pinyinClean": "xibei",
+    "hanViet": "西 BẮC",
+    "radical": "覀",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tây bắc, hướng tây bắc",
+    "vi_meaning_full": "Danh từ: tây bắc, hướng tây bắc",
+    "vi_meaning_short": "tây bắc, hướng t",
+    "enMeaning": "northwest",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个西北",
+      "新西北",
+      "好西北"
+    ],
+    "compounds": [
+      "西",
+      "北"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的西北。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xī běi.",
+        "vi": "Trên bàn có đặt một chiếc tây bắc, hướng tây bắc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-582",
+    "hanzi": "西餐",
+    "traditional": "西餐",
+    "pinyin": "xīcān",
+    "pinyinClean": "xican",
+    "hanViet": "西 餐",
+    "radical": "覀",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đồ ăn phương tây",
+    "vi_meaning_full": "Danh từ: đồ ăn phương tây",
+    "vi_meaning_short": "đồ ăn phương tây",
+    "enMeaning": "Western food",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个西餐",
+      "新西餐",
+      "好西餐"
+    ],
+    "compounds": [
+      "西",
+      "餐"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的西餐。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xī cān.",
+        "vi": "Trên bàn có đặt một chiếc đồ ăn phương tây mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-583",
+    "hanzi": "西方",
+    "traditional": "西方",
+    "pinyin": "xīfāng",
+    "pinyinClean": "xifang",
+    "hanViet": "西 PHƯƠNG",
+    "radical": "覀",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phía tây, phương tây",
+    "vi_meaning_full": "Danh từ: phía tây, phương tây",
+    "vi_meaning_short": "phía tây, phương",
+    "enMeaning": "the West; western region",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个西方",
+      "新西方",
+      "好西方"
+    ],
+    "compounds": [
+      "西",
+      "方"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的西方。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xī fāng.",
+        "vi": "Trên bàn có đặt một chiếc phía tây, phương tây mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-584",
+    "hanzi": "西南",
+    "traditional": "西南",
+    "pinyin": "xīnán",
+    "pinyinClean": "xinan",
+    "hanViet": "西 NAM",
+    "radical": "覀",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tây nam, hướng tây nam",
+    "vi_meaning_full": "Danh từ: tây nam, hướng tây nam",
+    "vi_meaning_short": "tây nam, hướng t",
+    "enMeaning": "southwest",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个西南",
+      "新西南",
+      "好西南"
+    ],
+    "compounds": [
+      "西",
+      "南"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的西南。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xī nán.",
+        "vi": "Trên bàn có đặt một chiếc tây nam, hướng tây nam mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-585",
+    "hanzi": "西医",
+    "traditional": "西醫",
+    "pinyin": "x᭄ȳ",
+    "pinyinClean": "xy",
+    "hanViet": "西 医",
+    "radical": "覀",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tây y",
+    "vi_meaning_full": "Danh từ: tây y",
+    "vi_meaning_short": "tây y",
+    "enMeaning": "Western medicine",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个西医",
+      "新西医",
+      "好西医"
+    ],
+    "compounds": [
+      "西",
+      "医"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的西医。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xī yī.",
+        "vi": "Trên bàn có đặt một chiếc tây y mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-586",
+    "hanzi": "习惯",
+    "traditional": "習慣",
+    "pinyin": "xíguàn",
+    "pinyinClean": "xiguan",
+    "hanViet": "习 惯",
+    "radical": "乛",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "thói quen, tập quán / quen với, thích nghi với",
+    "vi_meaning_full": "Danh từ / động từ: thói quen, tập quán / quen với, thích nghi với",
+    "vi_meaning_short": "thói quen, tập q",
+    "enMeaning": "habit; custom",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备习惯",
+      "开始习惯",
+      "喜欢习惯"
+    ],
+    "compounds": [
+      "习",
+      "惯"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去习惯。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xí guàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thói quen, tập quán.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-587",
+    "hanzi": "洗衣机",
+    "traditional": "洗衣機",
+    "pinyin": "xǭȳj̄j",
+    "pinyinClean": "xoyjj",
+    "hanViet": "洗 Y CƠ",
+    "radical": "口",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "máy giặt",
+    "vi_meaning_full": "Danh từ: máy giặt",
+    "vi_meaning_short": "máy giặt",
+    "enMeaning": "washing machine",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个洗衣机",
+      "新洗衣机",
+      "好洗衣机"
+    ],
+    "compounds": [
+      "洗",
+      "衣机"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的洗衣机。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xǐ yī jī.",
+        "vi": "Trên bàn có đặt một chiếc máy giặt mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-588",
+    "hanzi": "洗澡",
+    "traditional": "洗澡",
+    "pinyin": "xǭ//zǎo",
+    "pinyinClean": "xozao",
+    "hanViet": "洗 澡",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tắm",
+    "vi_meaning_full": "Động từ: tắm",
+    "vi_meaning_short": "tắm",
+    "enMeaning": "take a bath/shower",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备洗澡",
+      "开始洗澡",
+      "喜欢洗澡"
+    ],
+    "compounds": [
+      "洗",
+      "澡"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去洗澡。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xǐ zǎo.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tắm.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-590",
+    "hanzi": "下雪",
+    "traditional": "下雪",
+    "pinyin": "xià xuě",
+    "pinyinClean": "xiaxue",
+    "hanViet": "HẠ TUYẾT",
+    "radical": "一",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tuyết rơi",
+    "vi_meaning_full": "Động từ: tuyết rơi",
+    "vi_meaning_short": "tuyết rơi",
+    "enMeaning": "to snow",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "开始下雪",
+      "下大雪",
+      "明天会下雪"
+    ],
+    "compounds": [
+      "雪人",
+      "下雨"
+    ],
+    "synonyms": [
+      "降雪"
+    ],
+    "antonyms": [
+      "天晴"
+    ],
+    "confusableWords": "下雨",
+    "sentences": [
+      {
+        "zh": "外边下雪了，地面很滑，走路要小心。",
+        "pinyin": "Wàibian xiàxuě le, dìmiàn hěn huá, zǒulù yào xiǎoxīn.",
+        "vi": "Bên ngoài tuyết rơi rồi, mặt đường rất trơn, đi lại phải cẩn thận.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-591",
+    "hanzi": "下周",
+    "traditional": "下週",
+    "pinyin": "xià zhōu",
+    "pinyinClean": "xiazhou",
+    "hanViet": "HẠ CHU",
+    "radical": "一",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tuần sau",
+    "vi_meaning_full": "Danh từ: tuần sau",
+    "vi_meaning_short": "tuần sau",
+    "enMeaning": "next week",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "下周一开始",
+      "下周见",
+      "下周出差"
+    ],
+    "compounds": [
+      "下个月",
+      "周日"
+    ],
+    "synonyms": [
+      "下个星期"
+    ],
+    "antonyms": [
+      "上周",
+      "这周"
+    ],
+    "confusableWords": "上周",
+    "sentences": [
+      {
+        "zh": "下周一我们要进行一次汉语测验。",
+        "pinyin": "Xià zhōu yī wǒmen yào jìnxíng yí cì Hànyǔ cèyàn.",
+        "vi": "Thứ Hai tuần sau chúng tôi sẽ làm một bài kiểm tra tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-592",
+    "hanzi": "夏天",
+    "traditional": "夏天",
+    "pinyin": "xiàtiān",
+    "pinyinClean": "xiatian",
+    "hanViet": "夏 THIÊN",
+    "radical": "夂",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mùa hè",
+    "vi_meaning_full": "Danh từ: mùa hè",
+    "vi_meaning_short": "mùa hè",
+    "enMeaning": "summer",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个夏天",
+      "新夏天",
+      "好夏天"
+    ],
+    "compounds": [
+      "夏",
+      "天"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的夏天。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xià tiān.",
+        "vi": "Trên bàn có đặt một chiếc mùa hè mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-593",
+    "hanzi": "相同",
+    "traditional": "相同",
+    "pinyin": "xiāngtóng",
+    "pinyinClean": "xiangtong",
+    "hanViet": "相 ĐỒNG",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "giống nhau",
+    "vi_meaning_full": "Tính từ: giống nhau",
+    "vi_meaning_short": "giống nhau",
+    "enMeaning": "same; identical",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常相同",
+      "很相同",
+      "真相同"
+    ],
+    "compounds": [
+      "相",
+      "同"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真相同，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn xiàng tóng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật giống nhau, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-594",
+    "hanzi": "相信",
+    "traditional": "相信",
+    "pinyin": "xiāngxìn",
+    "pinyinClean": "xiangxin",
+    "hanViet": "相 TÍN",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tin tưởng",
+    "vi_meaning_full": "Động từ: tin tưởng",
+    "vi_meaning_short": "tin tưởng",
+    "enMeaning": "to believe; trust",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备相信",
+      "开始相信",
+      "喜欢相信"
+    ],
+    "compounds": [
+      "相",
+      "信"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去相信。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xiāng xìn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tin tưởng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-595",
+    "hanzi": "响",
+    "traditional": "響",
+    "pinyin": "xiǎng",
+    "pinyinClean": "xiang",
+    "hanViet": "响",
+    "radical": "口",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "to (âm thanh)",
+    "vi_meaning_full": "Tính từ: to (âm thanh)",
+    "vi_meaning_short": "to",
+    "enMeaning": "loud; sound",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常响",
+      "很响",
+      "真响"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真响，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn xiǎng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật to, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-596",
+    "hanzi": "想到",
+    "traditional": "想到",
+    "pinyin": "xiǎngdào",
+    "pinyinClean": "xiangdao",
+    "hanViet": "想 到",
+    "radical": "心",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nghĩ đến",
+    "vi_meaning_full": "Động từ: nghĩ đến",
+    "vi_meaning_short": "nghĩ đến",
+    "enMeaning": "think of; expect",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备想到",
+      "开始想到",
+      "喜欢想到"
+    ],
+    "compounds": [
+      "想",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去想到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xiǎng dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nghĩ đến.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-597",
+    "hanzi": "想法",
+    "traditional": "想法",
+    "pinyin": "xiǎng-fǎ",
+    "pinyinClean": "xiangfa",
+    "hanViet": "想 PHÁP",
+    "radical": "心",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ý tưởng",
+    "vi_meaning_full": "Danh từ: ý tưởng",
+    "vi_meaning_short": "ý tưởng",
+    "enMeaning": "idea; opinion",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个想法",
+      "新想法",
+      "好想法"
+    ],
+    "compounds": [
+      "想",
+      "法"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的想法。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xiǎng fǎ.",
+        "vi": "Trên bàn có đặt một chiếc ý tưởng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-598",
+    "hanzi": "想起",
+    "traditional": "想起",
+    "pinyin": "xiǎngqǐ",
+    "pinyinClean": "xiangqi",
+    "hanViet": "想 起",
+    "radical": "心",
+    "strokeCount": 23,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nhớ lại",
+    "vi_meaning_full": "Động từ: nhớ lại",
+    "vi_meaning_short": "nhớ lại",
+    "enMeaning": "remember; recall",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备想起",
+      "开始想起",
+      "喜欢想起"
+    ],
+    "compounds": [
+      "想",
+      "起"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去想起。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xiǎng qǐ.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nhớ lại.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-599",
+    "hanzi": "向",
+    "traditional": "向",
+    "pinyin": "xiàng",
+    "pinyinClean": "xiang",
+    "hanViet": "向",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "về / hướng về, nhìn về",
+    "vi_meaning_full": "Động từ: về / hướng về, nhìn về",
+    "vi_meaning_short": "về",
+    "enMeaning": "towards; face",
+    "image": "https://images.pexels.com/photos/31078928/pexels-photo-31078928.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备向",
+      "开始向",
+      "喜欢向"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去向。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xiàng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi về.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-600",
+    "hanzi": "相机",
+    "traditional": "相機",
+    "pinyin": "xiàngj̄",
+    "pinyinClean": "xiangj",
+    "hanViet": "相 CƠ",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "máy ảnh",
+    "vi_meaning_full": "Danh từ: máy ảnh",
+    "vi_meaning_short": "máy ảnh",
+    "enMeaning": "camera",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个相机",
+      "新相机",
+      "好相机"
+    ],
+    "compounds": [
+      "相",
+      "机"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的相机。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xiàng jī.",
+        "vi": "Trên bàn có đặt một chiếc máy ảnh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-601",
+    "hanzi": "像",
+    "traditional": "像",
+    "pinyin": "xiàng",
+    "pinyinClean": "xiang",
+    "hanViet": "像",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "giống",
+    "vi_meaning_full": "Động từ: giống",
+    "vi_meaning_short": "giống",
+    "enMeaning": "resemble; look like",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备像",
+      "开始像",
+      "喜欢像"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去像。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xiàng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi giống.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-602",
+    "hanzi": "小",
+    "traditional": "小",
+    "pinyin": "xiǎo",
+    "pinyinClean": "xiao",
+    "hanViet": "TIỂU",
+    "radical": "小",
+    "strokeCount": 3,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "nhỏ, bé (tiểu Vương)",
+    "vi_meaning_full": "Tính từ: nhỏ, bé (tiểu Vương)",
+    "vi_meaning_short": "nhỏ, bé",
+    "enMeaning": "small, little (used affectionately before surname)",
+    "image": "https://images.pexels.com/photos/15373305/pexels-photo-15373305.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "小王",
+      "小李",
+      "小孩",
+      "小猫"
+    ],
+    "compounds": [
+      "小心",
+      "大小"
+    ],
+    "synonyms": [
+      "微小",
+      "幼小"
+    ],
+    "antonyms": [
+      "大",
+      "老"
+    ],
+    "confusableWords": "少",
+    "sentences": [
+      {
+        "zh": "小李今天身体不舒服，请假休息了。",
+        "pinyin": "Xiǎo Lǐ jīntiān shēntǐ bù shūfu, qǐngjià xiūxi le.",
+        "vi": "Tiểu Lý hôm nay trong người không khỏe, đã xin nghỉ ngơi rồi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-603",
+    "hanzi": "小声",
+    "traditional": "小聲",
+    "pinyin": "xiǎo shēng",
+    "pinyinClean": "xiaosheng",
+    "hanViet": "TIỂU THANH",
+    "radical": "小",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "nói nhỏ, nhỏ giọng, khẽ",
+    "vi_meaning_full": "Phó từ: nói nhỏ, nhỏ giọng, khẽ",
+    "vi_meaning_short": "nói nhỏ, nhỏ giọ",
+    "enMeaning": "in a low voice, whisper",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "小声说话",
+      "小声点儿",
+      "小声商量"
+    ],
+    "compounds": [
+      "大小",
+      "名声"
+    ],
+    "synonyms": [
+      "轻声",
+      "低声"
+    ],
+    "antonyms": [
+      "大声",
+      "高声"
+    ],
+    "confusableWords": "大声",
+    "sentences": [
+      {
+        "zh": "图书馆里请大家小声说话，以免打扰别人。",
+        "pinyin": "Túshūguǎn lǐ qǐng dàjiā xiǎoshēng shuōhuà, yǐmiǎn dǎrǎo biérén.",
+        "vi": "Trong thư viện xin mọi người nói nhỏ tiếng để tránh làm phiền người khác.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-604",
+    "hanzi": "小时候",
+    "traditional": "小時候",
+    "pinyin": "xiǎoshíhou",
+    "pinyinClean": "xiaoshihou",
+    "hanViet": "TIỂU THỜI 候",
+    "radical": "小",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lúc nhỏ",
+    "vi_meaning_full": "Danh từ: lúc nhỏ",
+    "vi_meaning_short": "lúc nhỏ",
+    "enMeaning": "in one's childhood",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个小时候",
+      "新小时候",
+      "好小时候"
+    ],
+    "compounds": [
+      "小",
+      "时候"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的小时候。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xiǎo shí hòu.",
+        "vi": "Trên bàn có đặt một chiếc lúc nhỏ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-605",
+    "hanzi": "小说",
+    "traditional": "小說",
+    "pinyin": "xiǎoshuō",
+    "pinyinClean": "xiaoshuo",
+    "hanViet": "TIỂU THUYẾT",
+    "radical": "小",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tiểu thuyết",
+    "vi_meaning_full": "Danh từ: tiểu thuyết",
+    "vi_meaning_short": "tiểu thuyết",
+    "enMeaning": "novel; fiction",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个小说",
+      "新小说",
+      "好小说"
+    ],
+    "compounds": [
+      "小",
+      "说"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的小说。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xiǎo shuō.",
+        "vi": "Trên bàn có đặt một chiếc tiểu thuyết mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-606",
+    "hanzi": "小心",
+    "traditional": "小心",
+    "pinyin": "xiǎoxīn",
+    "pinyinClean": "xiaoxin",
+    "hanViet": "TIỂU TÂM",
+    "radical": "小",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cần thận, thận trọng / cần thận, coi chừng, đề phòng",
+    "vi_meaning_full": "Động từ: cần thận, thận trọng / cần thận, coi chừng, đề phòng",
+    "vi_meaning_short": "cần thận, thận t",
+    "enMeaning": "be careful; cautious",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备小心",
+      "开始小心",
+      "喜欢小心"
+    ],
+    "compounds": [
+      "小",
+      "心"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去小心。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xiǎo xīn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cần thận, thận trọng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-607",
+    "hanzi": "小组",
+    "traditional": "小組",
+    "pinyin": "xiǎozǔ",
+    "pinyinClean": "xiaozu",
+    "hanViet": "TIỂU 组",
+    "radical": "小",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nhóm",
+    "vi_meaning_full": "Danh từ: nhóm",
+    "vi_meaning_short": "nhóm",
+    "enMeaning": "group; team",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个小组",
+      "新小组",
+      "好小组"
+    ],
+    "compounds": [
+      "小",
+      "组"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的小组。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xiǎo zǔ.",
+        "vi": "Trên bàn có đặt một chiếc nhóm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-608",
+    "hanzi": "校园",
+    "traditional": "校園",
+    "pinyin": "xiàoyuán",
+    "pinyinClean": "xiaoyuan",
+    "hanViet": "校 VIÊN",
+    "radical": "口",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khuôn viên trường",
+    "vi_meaning_full": "Danh từ: khuôn viên trường",
+    "vi_meaning_short": "khuôn viên trườn",
+    "enMeaning": "campus",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个校园",
+      "新校园",
+      "好校园"
+    ],
+    "compounds": [
+      "校",
+      "园"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的校园。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xiào yuán.",
+        "vi": "Trên bàn có đặt một chiếc khuôn viên trường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-609",
+    "hanzi": "校长",
+    "traditional": "校長",
+    "pinyin": "xiàozhǎng",
+    "pinyinClean": "xiaozhang",
+    "hanViet": "校 TRƯỞNG",
+    "radical": "口",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "hiệu trưởng",
+    "vi_meaning_full": "Danh từ: hiệu trưởng",
+    "vi_meaning_short": "hiệu trưởng",
+    "enMeaning": "principal; headmaster",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个校长",
+      "新校长",
+      "好校长"
+    ],
+    "compounds": [
+      "校",
+      "长"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的校长。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xiào zhǎng.",
+        "vi": "Trên bàn có đặt một chiếc hiệu trưởng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-610",
+    "hanzi": "笑话",
+    "traditional": "笑話",
+    "pinyin": "xiàohua",
+    "pinyinClean": "xiaohua",
+    "hanViet": "笑 THOẠI",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "truyện cười",
+    "vi_meaning_full": "Động từ: truyện cười",
+    "vi_meaning_short": "truyện cười",
+    "enMeaning": "joke",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备笑话",
+      "开始笑话",
+      "喜欢笑话"
+    ],
+    "compounds": [
+      "笑",
+      "话"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去笑话。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xiào huà.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi truyện cười.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-611",
+    "hanzi": "笑话儿",
+    "traditional": "笑話兒",
+    "pinyin": "xiàohuar",
+    "pinyinClean": "xiaohuar",
+    "hanViet": "笑 THOẠI NHI",
+    "radical": "口",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trò đùa",
+    "vi_meaning_full": "Danh từ: trò đùa",
+    "vi_meaning_short": "trò đùa",
+    "enMeaning": "funny story",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个笑话儿",
+      "新笑话儿",
+      "好笑话儿"
+    ],
+    "compounds": [
+      "笑",
+      "话儿"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的笑话儿。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xiào huà ér.",
+        "vi": "Trên bàn có đặt một chiếc trò đùa mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-612",
+    "hanzi": "鞋",
+    "traditional": "鞋",
+    "pinyin": "xié",
+    "pinyinClean": "xie",
+    "hanViet": "鞋",
+    "radical": "革",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "giày",
+    "vi_meaning_full": "Danh từ: giày",
+    "vi_meaning_short": "giày",
+    "enMeaning": "shoe",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个鞋",
+      "新鞋",
+      "好鞋"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的鞋。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xié.",
+        "vi": "Trên bàn có đặt một chiếc giày mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-613",
+    "hanzi": "心里",
+    "traditional": "心裏",
+    "pinyin": "xīn-lǐ",
+    "pinyinClean": "xinli",
+    "hanViet": "TÂM 里",
+    "radical": "心",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trong lòng",
+    "vi_meaning_full": "Danh từ: trong lòng",
+    "vi_meaning_short": "trong lòng",
+    "enMeaning": "in one's heart/mind",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个心里",
+      "新心里",
+      "好心里"
+    ],
+    "compounds": [
+      "心",
+      "里"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的心里。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xīn lǐ.",
+        "vi": "Trên bàn có đặt một chiếc trong lòng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-614",
+    "hanzi": "心情",
+    "traditional": "心情",
+    "pinyin": "xīnqíng",
+    "pinyinClean": "xinqing",
+    "hanViet": "TÂM TÌNH",
+    "radical": "心",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tâm trạng",
+    "vi_meaning_full": "Danh từ: tâm trạng",
+    "vi_meaning_short": "tâm trạng",
+    "enMeaning": "mood; frame of mind",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个心情",
+      "新心情",
+      "好心情"
+    ],
+    "compounds": [
+      "心",
+      "情"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的心情。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xīn qíng.",
+        "vi": "Trên bàn có đặt một chiếc tâm trạng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-615",
+    "hanzi": "心中",
+    "traditional": "心中",
+    "pinyin": "xīnzhōng",
+    "pinyinClean": "xinzhong",
+    "hanViet": "TÂM TRUNG",
+    "radical": "心",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trong tim",
+    "vi_meaning_full": "Danh từ: trong tim",
+    "vi_meaning_short": "trong tim",
+    "enMeaning": "in one's heart",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个心中",
+      "新心中",
+      "好心中"
+    ],
+    "compounds": [
+      "心",
+      "中"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的心中。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xīn zhōng.",
+        "vi": "Trên bàn có đặt một chiếc trong tim mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-616",
+    "hanzi": "新闻",
+    "traditional": "新聞",
+    "pinyin": "xīnwén",
+    "pinyinClean": "xinwen",
+    "hanViet": "TÂN 闻",
+    "radical": "斤",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tin tức",
+    "vi_meaning_full": "Danh từ: tin tức",
+    "vi_meaning_short": "tin tức",
+    "enMeaning": "news",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个新闻",
+      "新新闻",
+      "好新闻"
+    ],
+    "compounds": [
+      "新",
+      "闻"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的新闻。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xīn wén.",
+        "vi": "Trên bàn có đặt một chiếc tin tức mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-617",
+    "hanzi": "信",
+    "traditional": "信",
+    "pinyin": "xìn",
+    "pinyinClean": "xin",
+    "hanViet": "TÍN",
+    "radical": "人",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tin",
+    "vi_meaning_full": "Danh từ: tin",
+    "vi_meaning_short": "tin",
+    "enMeaning": "letter; belief",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个信",
+      "新信",
+      "好信"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的信。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xìn.",
+        "vi": "Trên bàn có đặt một chiếc tin mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-618",
+    "hanzi": "信号",
+    "traditional": "信號",
+    "pinyin": "xìnhào",
+    "pinyinClean": "xinhao",
+    "hanViet": "TÍN 号",
+    "radical": "人",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tín hiệu",
+    "vi_meaning_full": "Danh từ: tín hiệu",
+    "vi_meaning_short": "tín hiệu",
+    "enMeaning": "signal",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个信号",
+      "新信号",
+      "好信号"
+    ],
+    "compounds": [
+      "信",
+      "号"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的信号。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xìn hào.",
+        "vi": "Trên bàn có đặt một chiếc tín hiệu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-619",
+    "hanzi": "信息",
+    "traditional": "信息",
+    "pinyin": "xìn xī",
+    "pinyinClean": "xinxi",
+    "hanViet": "TÍN 息",
+    "radical": "人",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thông tin",
+    "vi_meaning_full": "Danh từ: thông tin",
+    "vi_meaning_short": "thông tin",
+    "enMeaning": "information; message",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个信息",
+      "新信息",
+      "好信息"
+    ],
+    "compounds": [
+      "信",
+      "息"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的信息。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xìn xī.",
+        "vi": "Trên bàn có đặt một chiếc thông tin mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-620",
+    "hanzi": "信心",
+    "traditional": "信心",
+    "pinyin": "xìn xīn",
+    "pinyinClean": "xinxin",
+    "hanViet": "TÍN TÂM",
+    "radical": "人",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "niềm tin",
+    "vi_meaning_full": "Danh từ: niềm tin",
+    "vi_meaning_short": "niềm tin",
+    "enMeaning": "confidence; faith",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个信心",
+      "新信心",
+      "好信心"
+    ],
+    "compounds": [
+      "信",
+      "心"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的信心。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xìn xīn.",
+        "vi": "Trên bàn có đặt một chiếc niềm tin mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-621",
+    "hanzi": "信用卡",
+    "traditional": "信用卡",
+    "pinyin": "xìn yòng kă",
+    "pinyinClean": "xinyongka",
+    "hanViet": "TÍN DỤNG 卡",
+    "radical": "人",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thẻ tín dụng",
+    "vi_meaning_full": "Danh từ: thẻ tín dụng",
+    "vi_meaning_short": "thẻ tín dụng",
+    "enMeaning": "credit card",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个信用卡",
+      "新信用卡",
+      "好信用卡"
+    ],
+    "compounds": [
+      "信",
+      "用卡"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的信用卡。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xìn yòng kǎ.",
+        "vi": "Trên bàn có đặt một chiếc thẻ tín dụng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-622",
+    "hanzi": "星星",
+    "traditional": "星星",
+    "pinyin": "xīngxìng",
+    "pinyinClean": "xingxing",
+    "hanViet": "星 星",
+    "radical": "日",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngôi sao",
+    "vi_meaning_full": "Danh từ: ngôi sao",
+    "vi_meaning_short": "ngôi sao",
+    "enMeaning": "star in sky",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个星星",
+      "新星星",
+      "好星星"
+    ],
+    "compounds": [
+      "星",
+      "星"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的星星。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xīng xīng.",
+        "vi": "Trên bàn có đặt một chiếc ngôi sao mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-623",
+    "hanzi": "行动",
+    "traditional": "行動",
+    "pinyin": "xíngdòng",
+    "pinyinClean": "xingdong",
+    "hanViet": "HÀNH ĐỘNG",
+    "radical": "行",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "hành động, bất tay vào làm / hành động, hoạt động",
+    "vi_meaning_full": "Danh từ / động từ: hành động, bất tay vào làm / hành động, hoạt động",
+    "vi_meaning_short": "hành động, bất t",
+    "enMeaning": "action; operation",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备行动",
+      "开始行动",
+      "喜欢行动"
+    ],
+    "compounds": [
+      "行",
+      "动"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去行动。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xíng dòng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi hành động, bất tay vào làm.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-624",
+    "hanzi": "行人",
+    "traditional": "行人",
+    "pinyin": "xíngrén",
+    "pinyinClean": "xingren",
+    "hanViet": "HÀNH NHÂN",
+    "radical": "行",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "người đi đường",
+    "vi_meaning_full": "Danh từ: người đi đường",
+    "vi_meaning_short": "người đi đường",
+    "enMeaning": "pedestrian",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个行人",
+      "新行人",
+      "好行人"
+    ],
+    "compounds": [
+      "行",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的行人。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xíng rén.",
+        "vi": "Trên bàn có đặt một chiếc người đi đường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-625",
+    "hanzi": "行为",
+    "traditional": "行爲",
+    "pinyin": "xíngwéi",
+    "pinyinClean": "xingwei",
+    "hanViet": "HÀNH VI",
+    "radical": "行",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "hành vi",
+    "vi_meaning_full": "Danh từ: hành vi",
+    "vi_meaning_short": "hành vi",
+    "enMeaning": "behavior; conduct",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个行为",
+      "新行为",
+      "好行为"
+    ],
+    "compounds": [
+      "行",
+      "为"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的行为。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xíng wéi.",
+        "vi": "Trên bàn có đặt một chiếc hành vi mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-627",
+    "hanzi": "姓名",
+    "traditional": "姓名",
+    "pinyin": "xìngmíng",
+    "pinyinClean": "xingming",
+    "hanViet": "姓 DANH",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "họ tên",
+    "vi_meaning_full": "Danh từ: họ tên",
+    "vi_meaning_short": "họ tên",
+    "enMeaning": "full name",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个姓名",
+      "新姓名",
+      "好姓名"
+    ],
+    "compounds": [
+      "姓",
+      "名"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的姓名。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xìng míng.",
+        "vi": "Trên bàn có đặt một chiếc họ tên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-628",
+    "hanzi": "休假",
+    "traditional": "休假",
+    "pinyin": "xiū//jià",
+    "pinyinClean": "xiujia",
+    "hanViet": "休 GIẢ",
+    "radical": "口",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nghi phép",
+    "vi_meaning_full": "Động từ: nghi phép",
+    "vi_meaning_short": "nghi phép",
+    "enMeaning": "take a vacation",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备休假",
+      "开始休假",
+      "喜欢休假"
+    ],
+    "compounds": [
+      "休",
+      "假"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去休假。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xiū jià.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nghi phép.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-629",
+    "hanzi": "许多",
+    "traditional": "許多",
+    "pinyin": "xǔduō",
+    "pinyinClean": "xuduo",
+    "hanViet": "许 ĐA",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "số từ",
+    "viet": "nhiều",
+    "vi_meaning_full": "Số từ: nhiều",
+    "vi_meaning_short": "nhiều",
+    "enMeaning": "many; a lot of",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说许多",
+      "用许多"
+    ],
+    "compounds": [
+      "许",
+      "多"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，许多是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, xǔ duō shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 许多 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-630",
+    "hanzi": "选",
+    "traditional": "選",
+    "pinyin": "xuǎn",
+    "pinyinClean": "xuan",
+    "hanViet": "选",
+    "radical": "辶",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "chọn",
+    "vi_meaning_full": "Động từ: chọn",
+    "vi_meaning_short": "chọn",
+    "enMeaning": "to choose; select",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备选",
+      "开始选",
+      "喜欢选"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去选。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù xuǎn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi chọn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-631",
+    "hanzi": "学期",
+    "traditional": "學期",
+    "pinyin": "xuéqī",
+    "pinyinClean": "xueqi",
+    "hanViet": "HỌC KỲ",
+    "radical": "子",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "học kỳ",
+    "vi_meaning_full": "Danh từ: học kỳ",
+    "vi_meaning_short": "học kỳ",
+    "enMeaning": "semester; term",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个学期",
+      "新学期",
+      "好学期"
+    ],
+    "compounds": [
+      "学",
+      "期"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的学期。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de xué qī.",
+        "vi": "Trên bàn có đặt một chiếc học kỳ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-634",
+    "hanzi": "眼",
+    "traditional": "眼",
+    "pinyin": "yǎn",
+    "pinyinClean": "yan",
+    "hanViet": "眼",
+    "radical": "目",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mất / cái, miệng (dùng cho giếng)",
+    "vi_meaning_full": "Danh từ: mất / cái, miệng (dùng cho giếng)",
+    "vi_meaning_short": "mất",
+    "enMeaning": "eye",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个眼",
+      "新眼",
+      "好眼"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的眼。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yǎn.",
+        "vi": "Trên bàn có đặt một chiếc mất mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-636",
+    "hanzi": "养",
+    "traditional": "養",
+    "pinyin": "yǎng",
+    "pinyinClean": "yang",
+    "hanViet": "养",
+    "radical": "丷",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nuôi",
+    "vi_meaning_full": "Động từ: nuôi",
+    "vi_meaning_short": "nuôi",
+    "enMeaning": "to raise; nurture",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备养",
+      "开始养",
+      "喜欢养"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去养。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù yǎng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nuôi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-637",
+    "hanzi": "样子",
+    "traditional": "樣子",
+    "pinyin": "yàngzi",
+    "pinyinClean": "yangzi",
+    "hanViet": "样 TỬ",
+    "radical": "木",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "dáng về",
+    "vi_meaning_full": "Danh từ: dáng về",
+    "vi_meaning_short": "dáng về",
+    "enMeaning": "appearance; shape",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个样子",
+      "新样子",
+      "好样子"
+    ],
+    "compounds": [
+      "样",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的样子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yàng zi.",
+        "vi": "Trên bàn có đặt một chiếc dáng về mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-638",
+    "hanzi": "要求",
+    "traditional": "要求",
+    "pinyin": "yāoqiú",
+    "pinyinClean": "yaoqiu",
+    "hanViet": "YẾU 求",
+    "radical": "女",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "yêu cầu, đòi hỏi / nguyện vọng, yêu cầu, đòi hỏi",
+    "vi_meaning_full": "Danh từ / động từ: yêu cầu, đòi hỏi / nguyện vọng, yêu cầu, đòi hỏi",
+    "vi_meaning_short": "yêu cầu, đòi hỏi",
+    "enMeaning": "demand; request",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备要求",
+      "开始要求",
+      "喜欢要求"
+    ],
+    "compounds": [
+      "要",
+      "求"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去要求。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù yāo qiú.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi yêu cầu, đòi hỏi.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-640",
+    "hanzi": "药店",
+    "traditional": "藥店",
+    "pinyin": "yàodiàn",
+    "pinyinClean": "yaodian",
+    "hanViet": "药 ĐIẾM",
+    "radical": "艹",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "hiệu thuốc",
+    "vi_meaning_full": "Danh từ: hiệu thuốc",
+    "vi_meaning_short": "hiệu thuốc",
+    "enMeaning": "pharmacy; drugstore",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个药店",
+      "新药店",
+      "好药店"
+    ],
+    "compounds": [
+      "药",
+      "店"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的药店。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yào diàn.",
+        "vi": "Trên bàn có đặt một chiếc hiệu thuốc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-641",
+    "hanzi": "药片",
+    "traditional": "藥片",
+    "pinyin": "yàopiàn",
+    "pinyinClean": "yaopian",
+    "hanViet": "药 片",
+    "radical": "艹",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thuốc viên",
+    "vi_meaning_full": "Danh từ: thuốc viên",
+    "vi_meaning_short": "thuốc viên",
+    "enMeaning": "medicine tablet",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个药片",
+      "新药片",
+      "好药片"
+    ],
+    "compounds": [
+      "药",
+      "片"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的药片。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yào piàn.",
+        "vi": "Trên bàn có đặt một chiếc thuốc viên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-642",
+    "hanzi": "药水",
+    "traditional": "藥水",
+    "pinyin": "yàoshuǐ",
+    "pinyinClean": "yaoshui",
+    "hanViet": "药 水",
+    "radical": "艹",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thuốc nước",
+    "vi_meaning_full": "Danh từ: thuốc nước",
+    "vi_meaning_short": "thuốc nước",
+    "enMeaning": "liquid medicine",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个药水",
+      "新药水",
+      "好药水"
+    ],
+    "compounds": [
+      "药",
+      "水"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的药水。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yào shuǐ.",
+        "vi": "Trên bàn có đặt một chiếc thuốc nước mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-643",
+    "hanzi": "也许",
+    "traditional": "也許",
+    "pinyin": "yěxǔ",
+    "pinyinClean": "yexu",
+    "hanViet": "也 许",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "có lẽ",
+    "vi_meaning_full": "Phó từ: có lẽ",
+    "vi_meaning_short": "có lẽ",
+    "enMeaning": "perhaps; maybe",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "也许好",
+      "也许去",
+      "也许看"
+    ],
+    "compounds": [
+      "也",
+      "许"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家也许准备好了，随时可以出发。",
+        "pinyin": "Dà jiā yě xǔ zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người có lẽ chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-644",
+    "hanzi": "夜",
+    "traditional": "夜",
+    "pinyin": "yè",
+    "pinyinClean": "ye",
+    "hanViet": "DẠ",
+    "radical": "夕",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đêm",
+    "vi_meaning_full": "Danh từ: đêm",
+    "vi_meaning_short": "đêm",
+    "enMeaning": "night",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个夜",
+      "新夜",
+      "好夜"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的夜。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yè.",
+        "vi": "Trên bàn có đặt một chiếc đêm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-645",
+    "hanzi": "夜里",
+    "traditional": "夜裏",
+    "pinyin": "yè-lǐ",
+    "pinyinClean": "yeli",
+    "hanViet": "DẠ 里",
+    "radical": "夕",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ban đêm",
+    "vi_meaning_full": "Danh từ: ban đêm",
+    "vi_meaning_short": "ban đêm",
+    "enMeaning": "at night",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个夜里",
+      "新夜里",
+      "好夜里"
+    ],
+    "compounds": [
+      "夜",
+      "里"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的夜里。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yè lǐ.",
+        "vi": "Trên bàn có đặt một chiếc ban đêm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-646",
+    "hanzi": "一部分",
+    "traditional": "一部分",
+    "pinyin": "yí bùfen",
+    "pinyinClean": "yibufen",
+    "hanViet": "NHẤT BỘ PHẦN",
+    "radical": "一",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "một phần",
+    "vi_meaning_full": "Danh từ: một phần",
+    "vi_meaning_short": "một phần",
+    "enMeaning": "a portion, a part, one section",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "其中一部分",
+      "一部分人",
+      "占一部分"
+    ],
+    "compounds": [
+      "一个",
+      "部分"
+    ],
+    "synonyms": [
+      "一部分",
+      "局部"
+    ],
+    "antonyms": [
+      "全部",
+      "总体"
+    ],
+    "confusableWords": "全部",
+    "sentences": [
+      {
+        "zh": "只有一部分学生按时完成了这项作业。",
+        "pinyin": "Zhǐyǒu yí bùfen xuésheng ànshí wánchéng le zhè xiàng zuòyè.",
+        "vi": "Chỉ có một bộ phận học sinh hoàn thành đúng hạn bài tập này.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-647",
+    "hanzi": "一定",
+    "traditional": "一定",
+    "pinyin": "ýdìng",
+    "pinyinClean": "yding",
+    "hanViet": "一 ĐỊNH",
+    "radical": "一",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "nhất định, cố định, xác định / nhất định, chắc chắn",
+    "vi_meaning_full": "Tính từ: nhất định, cố định, xác định / nhất định, chắc chắn",
+    "vi_meaning_short": "nhất định, cố đị",
+    "enMeaning": "certainly; definite",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常一定",
+      "很一定",
+      "真一定"
+    ],
+    "compounds": [
+      "一",
+      "定"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真一定，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn yí dìng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật nhất định, cố định, xác định, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-648",
+    "hanzi": "一共",
+    "traditional": "一共",
+    "pinyin": "ýgòng",
+    "pinyinClean": "ygong",
+    "hanViet": "一 共",
+    "radical": "一",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "tổng cộng",
+    "vi_meaning_full": "Phó từ: tổng cộng",
+    "vi_meaning_short": "tổng cộng",
+    "enMeaning": "altogether; in total",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一共好",
+      "一共去",
+      "一共看"
+    ],
+    "compounds": [
+      "一",
+      "共"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家一共准备好了，随时可以出发。",
+        "pinyin": "Dà jiā yī gòng zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người tổng cộng chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-649",
+    "hanzi": "一会儿",
+    "traditional": "一會兒",
+    "pinyin": "yíhuìr",
+    "pinyinClean": "yihuir",
+    "hanViet": "一 HỘI NHI",
+    "radical": "一",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "một lúc",
+    "vi_meaning_full": "Phó từ: một lúc",
+    "vi_meaning_short": "một lúc",
+    "enMeaning": "a little while",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一会儿好",
+      "一会儿去",
+      "一会儿看"
+    ],
+    "compounds": [
+      "一",
+      "会儿"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家一会儿准备好了，随时可以出发。",
+        "pinyin": "Dà jiā yī huì er zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người một lúc chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-650",
+    "hanzi": "一路平安",
+    "traditional": "一路平安",
+    "pinyin": "yílu-píng'ān",
+    "pinyinClean": "yilupingan",
+    "hanViet": "一 LỘ BÌNH AN",
+    "radical": "一",
+    "strokeCount": 25,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "từ ngữ",
+    "viet": "thượng lộ bình an",
+    "vi_meaning_full": "Từ ngữ: thượng lộ bình an",
+    "vi_meaning_short": "thượng lộ bình a",
+    "enMeaning": "have a safe trip",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说一路平安",
+      "用一路平安"
+    ],
+    "compounds": [
+      "一",
+      "路平安"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，一路平安是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, yí lù píng ān shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 一路平安 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-651",
+    "hanzi": "一路顺风",
+    "traditional": "一路順風",
+    "pinyin": "yílu-shùnfēng",
+    "pinyinClean": "yilushunfeng",
+    "hanViet": "一 LỘ 顺 风",
+    "radical": "一",
+    "strokeCount": 29,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "từ ngữ",
+    "viet": "thuận buồm xuôi gió",
+    "vi_meaning_full": "Từ ngữ: thuận buồm xuôi gió",
+    "vi_meaning_short": "thuận buồm xuôi",
+    "enMeaning": "bon voyage; smooth sailing",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说一路顺风",
+      "用一路顺风"
+    ],
+    "compounds": [
+      "一",
+      "路顺风"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，一路顺风是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, yī lù shùn fēng shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 一路顺风 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-654",
+    "hanzi": "以前",
+    "traditional": "以前",
+    "pinyin": "yǐqián",
+    "pinyinClean": "yiqian",
+    "hanViet": "以 前",
+    "radical": "人",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trước đây",
+    "vi_meaning_full": "Danh từ: trước đây",
+    "vi_meaning_short": "trước đây",
+    "enMeaning": "before; previously",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个以前",
+      "新以前",
+      "好以前"
+    ],
+    "compounds": [
+      "以",
+      "前"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的以前。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yǐ qián.",
+        "vi": "Trên bàn có đặt một chiếc trước đây mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-655",
+    "hanzi": "以上",
+    "traditional": "以上",
+    "pinyin": "yǐshàng",
+    "pinyinClean": "yishang",
+    "hanViet": "以 上",
+    "radical": "人",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trở lên",
+    "vi_meaning_full": "Danh từ: trở lên",
+    "vi_meaning_short": "trở lên",
+    "enMeaning": "above; over",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个以上",
+      "新以上",
+      "好以上"
+    ],
+    "compounds": [
+      "以",
+      "上"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的以上。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yǐ shàng.",
+        "vi": "Trên bàn có đặt một chiếc trở lên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-656",
+    "hanzi": "以外",
+    "traditional": "以外",
+    "pinyin": "yǐwài",
+    "pinyinClean": "yiwai",
+    "hanViet": "以 外",
+    "radical": "人",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngoài ra",
+    "vi_meaning_full": "Danh từ: ngoài ra",
+    "vi_meaning_short": "ngoài ra",
+    "enMeaning": "besides; except",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个以外",
+      "新以外",
+      "好以外"
+    ],
+    "compounds": [
+      "以",
+      "外"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的以外。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yǐ wài.",
+        "vi": "Trên bàn có đặt một chiếc ngoài ra mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-657",
+    "hanzi": "以为",
+    "traditional": "以爲",
+    "pinyin": "yǐwéi",
+    "pinyinClean": "yiwei",
+    "hanViet": "以 VI",
+    "radical": "人",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cho rằng",
+    "vi_meaning_full": "Động từ: cho rằng",
+    "vi_meaning_short": "cho rằng",
+    "enMeaning": "think mistakenly",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备以为",
+      "开始以为",
+      "喜欢以为"
+    ],
+    "compounds": [
+      "以",
+      "为"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去以为。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù yǐ wéi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cho rằng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-658",
+    "hanzi": "以下",
+    "traditional": "以下",
+    "pinyin": "yǐxià",
+    "pinyinClean": "yixia",
+    "hanViet": "以 下",
+    "radical": "人",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phía dưới",
+    "vi_meaning_full": "Danh từ: phía dưới",
+    "vi_meaning_short": "phía dưới",
+    "enMeaning": "below; under",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个以下",
+      "新以下",
+      "好以下"
+    ],
+    "compounds": [
+      "以",
+      "下"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的以下。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yǐ xià.",
+        "vi": "Trên bàn có đặt một chiếc phía dưới mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-660",
+    "hanzi": "一般",
+    "traditional": "一般",
+    "pinyin": "yíbān",
+    "pinyinClean": "yiban",
+    "hanViet": "一 般",
+    "radical": "一",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "thông thường",
+    "vi_meaning_full": "Tính từ: thông thường",
+    "vi_meaning_short": "thông thường",
+    "enMeaning": "general; usually",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常一般",
+      "很一般",
+      "真一般"
+    ],
+    "compounds": [
+      "一",
+      "般"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真一般，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn yì bān, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật thông thường, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-661",
+    "hanzi": "一点点",
+    "traditional": "一點點",
+    "pinyin": "yìdiǎndiǎn",
+    "pinyinClean": "yidiandian",
+    "hanViet": "一 ĐIỂM ĐIỂM",
+    "radical": "一",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "một ít",
+    "vi_meaning_full": "Danh từ: một ít",
+    "vi_meaning_short": "một ít",
+    "enMeaning": "a tiny bit",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个一点点",
+      "新一点点",
+      "好一点点"
+    ],
+    "compounds": [
+      "一",
+      "点点"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的一点点。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yì diǎn diǎn.",
+        "vi": "Trên bàn có đặt một chiếc một ít mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-662",
+    "hanzi": "一生",
+    "traditional": "一生",
+    "pinyin": "yìshēng",
+    "pinyinClean": "yisheng",
+    "hanViet": "一 SANH",
+    "radical": "一",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cả đời",
+    "vi_meaning_full": "Danh từ: cả đời",
+    "vi_meaning_short": "cả đời",
+    "enMeaning": "whole life",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个一生",
+      "新一生",
+      "好一生"
+    ],
+    "compounds": [
+      "一",
+      "生"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的一生。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yī shēng.",
+        "vi": "Trên bàn có đặt một chiếc cả đời mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-664",
+    "hanzi": "亿",
+    "traditional": "億",
+    "pinyin": "yì",
+    "pinyinClean": "yi",
+    "hanViet": "亿",
+    "radical": "人",
+    "strokeCount": 3,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "số từ",
+    "viet": "tỷ",
+    "vi_meaning_full": "Số từ: tỷ",
+    "vi_meaning_short": "tỷ",
+    "enMeaning": "one hundred million",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说亿",
+      "用亿"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，亿是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, yì shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 亿 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-665",
+    "hanzi": "意见",
+    "traditional": "意見",
+    "pinyin": "yìjiàn",
+    "pinyinClean": "yijian",
+    "hanViet": "Ý KIẾN",
+    "radical": "心",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ý kiến",
+    "vi_meaning_full": "Danh từ: ý kiến",
+    "vi_meaning_short": "ý kiến",
+    "enMeaning": "opinion; suggestion",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个意见",
+      "新意见",
+      "好意见"
+    ],
+    "compounds": [
+      "意",
+      "见"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的意见。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yì jiàn.",
+        "vi": "Trên bàn có đặt một chiếc ý kiến mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-669",
+    "hanzi": "阴天",
+    "traditional": "陰天",
+    "pinyin": "yīntiān",
+    "pinyinClean": "yintian",
+    "hanViet": "阴 THIÊN",
+    "radical": "阝",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trời âm u",
+    "vi_meaning_full": "Danh từ: trời âm u",
+    "vi_meaning_short": "trời âm u",
+    "enMeaning": "cloudy day",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个阴天",
+      "新阴天",
+      "好阴天"
+    ],
+    "compounds": [
+      "阴",
+      "天"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的阴天。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yīn tiān.",
+        "vi": "Trên bàn có đặt một chiếc trời âm u mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-670",
+    "hanzi": "音乐节",
+    "traditional": "音樂節",
+    "pinyin": "yīnyuèjié",
+    "pinyinClean": "yinyuejie",
+    "hanViet": "ÂM 乐 TIẾT",
+    "radical": "音",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lễ hội âm nhạc",
+    "vi_meaning_full": "Danh từ: lễ hội âm nhạc",
+    "vi_meaning_short": "lễ hội âm nhạc",
+    "enMeaning": "music festival",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个音乐节",
+      "新音乐节",
+      "好音乐节"
+    ],
+    "compounds": [
+      "音",
+      "乐节"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的音乐节。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yīn yuè jié.",
+        "vi": "Trên bàn có đặt một chiếc lễ hội âm nhạc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-671",
+    "hanzi": "音乐",
+    "traditional": "音樂",
+    "pinyin": "yīnyuè",
+    "pinyinClean": "yinyue",
+    "hanViet": "ÂM 乐",
+    "radical": "音",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "âm nhạc",
+    "vi_meaning_full": "Danh từ: âm nhạc",
+    "vi_meaning_short": "âm nhạc",
+    "enMeaning": "music",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个音乐",
+      "新音乐",
+      "好音乐"
+    ],
+    "compounds": [
+      "音",
+      "乐"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的音乐。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yīn yuè.",
+        "vi": "Trên bàn có đặt một chiếc âm nhạc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-672",
+    "hanzi": "音乐会",
+    "traditional": "音樂會",
+    "pinyin": "yīnyuèhuì",
+    "pinyinClean": "yinyuehui",
+    "hanViet": "ÂM 乐 HỘI",
+    "radical": "音",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "buổi hòa nhạc",
+    "vi_meaning_full": "Danh từ: buổi hòa nhạc",
+    "vi_meaning_short": "buổi hòa nhạc",
+    "enMeaning": "concert",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个音乐会",
+      "新音乐会",
+      "好音乐会"
+    ],
+    "compounds": [
+      "音",
+      "乐会"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的音乐会。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yīn yuè huì.",
+        "vi": "Trên bàn có đặt một chiếc buổi hòa nhạc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-673",
+    "hanzi": "银行",
+    "traditional": "銀行",
+    "pinyin": "yínháng",
+    "pinyinClean": "yinhang",
+    "hanViet": "银 HÀNH",
+    "radical": "金",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngân hàng",
+    "vi_meaning_full": "Danh từ: ngân hàng",
+    "vi_meaning_short": "ngân hàng",
+    "enMeaning": "bank",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个银行",
+      "新银行",
+      "好银行"
+    ],
+    "compounds": [
+      "银",
+      "行"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的银行。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yín háng.",
+        "vi": "Trên bàn có đặt một chiếc ngân hàng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-674",
+    "hanzi": "银行卡",
+    "traditional": "銀行卡",
+    "pinyin": "yínhángkǎ",
+    "pinyinClean": "yinhangka",
+    "hanViet": "银 HÀNH 卡",
+    "radical": "金",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "thẻ ngân hàng",
+    "vi_meaning_full": "Danh từ: thẻ ngân hàng",
+    "vi_meaning_short": "thẻ ngân hàng",
+    "enMeaning": "bank card",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个银行卡",
+      "新银行卡",
+      "好银行卡"
+    ],
+    "compounds": [
+      "银",
+      "行卡"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的银行卡。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yín háng kǎ.",
+        "vi": "Trên bàn có đặt một chiếc thẻ ngân hàng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-675",
+    "hanzi": "应该",
+    "traditional": "應該",
+    "pinyin": "yīnggāi",
+    "pinyinClean": "yinggai",
+    "hanViet": "ỨNG 该",
+    "radical": "广",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nền",
+    "vi_meaning_full": "Động từ: nền",
+    "vi_meaning_short": "nền",
+    "enMeaning": "should; ought to",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备应该",
+      "开始应该",
+      "喜欢应该"
+    ],
+    "compounds": [
+      "应",
+      "该"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去应该。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù yīng gāi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nền.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-676",
+    "hanzi": "英文",
+    "traditional": "英文",
+    "pinyin": "yīngwén",
+    "pinyinClean": "yingwen",
+    "hanViet": "英 文",
+    "radical": "艹",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tiếng Anh (văn viết)",
+    "vi_meaning_full": "Danh từ: tiếng Anh (văn viết)",
+    "vi_meaning_short": "tiếng Anh",
+    "enMeaning": "English language (written)",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个英文",
+      "新英文",
+      "好英文"
+    ],
+    "compounds": [
+      "英",
+      "文"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的英文。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yīng wén.",
+        "vi": "Trên bàn có đặt một chiếc tiếng Anh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-677",
+    "hanzi": "英语",
+    "traditional": "英語",
+    "pinyin": "yīngyǔ",
+    "pinyinClean": "yingyu",
+    "hanViet": "英 NGỮ",
+    "radical": "艹",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tiếng Anh",
+    "vi_meaning_full": "Danh từ: tiếng Anh",
+    "vi_meaning_short": "tiếng Anh",
+    "enMeaning": "English language (spoken)",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个英语",
+      "新英语",
+      "好英语"
+    ],
+    "compounds": [
+      "英",
+      "语"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的英语。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yīng yǔ.",
+        "vi": "Trên bàn có đặt một chiếc tiếng Anh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-678",
+    "hanzi": "影片",
+    "traditional": "影片",
+    "pinyin": "yǐngpiàn",
+    "pinyinClean": "yingpian",
+    "hanViet": "影 片",
+    "radical": "彡",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "phim",
+    "vi_meaning_full": "Danh từ: phim",
+    "vi_meaning_short": "phim",
+    "enMeaning": "film; movie",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个影片",
+      "新影片",
+      "好影片"
+    ],
+    "compounds": [
+      "影",
+      "片"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的影片。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yǐng piàn.",
+        "vi": "Trên bàn có đặt một chiếc phim mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-679",
+    "hanzi": "影响",
+    "traditional": "影響",
+    "pinyin": "yǐngxiǎng",
+    "pinyinClean": "yingxiang",
+    "hanViet": "影 响",
+    "radical": "彡",
+    "strokeCount": 24,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "ảnh hưởng, tác động đến / sự ảnh hưởng, tác động",
+    "vi_meaning_full": "Danh từ / động từ: ảnh hưởng, tác động đến / sự ảnh hưởng, tác động",
+    "vi_meaning_short": "ảnh hưởng, tác đ",
+    "enMeaning": "influence; affect",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备影响",
+      "开始影响",
+      "喜欢影响"
+    ],
+    "compounds": [
+      "影",
+      "响"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去影响。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù yǐng xiǎng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi ảnh hưởng, tác động đến.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-680",
+    "hanzi": "永远",
+    "traditional": "永遠",
+    "pinyin": "yǒngyuǎn",
+    "pinyinClean": "yongyuan",
+    "hanViet": "永 远",
+    "radical": "水",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "mãi mãi",
+    "vi_meaning_full": "Phó từ: mãi mãi",
+    "vi_meaning_short": "mãi mãi",
+    "enMeaning": "forever; eternal",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "永远好",
+      "永远去",
+      "永远看"
+    ],
+    "compounds": [
+      "永",
+      "远"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家永远准备好了，随时可以出发。",
+        "pinyin": "Dà jiā yǒng yuǎn zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người mãi mãi chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-681",
+    "hanzi": "油",
+    "traditional": "油",
+    "pinyin": "yóu",
+    "pinyinClean": "you",
+    "hanViet": "DU",
+    "radical": "水",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "dầu",
+    "vi_meaning_full": "Danh từ: dầu",
+    "vi_meaning_short": "dầu",
+    "enMeaning": "oil; grease",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个油",
+      "新油",
+      "好油"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的油。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yóu.",
+        "vi": "Trên bàn có đặt một chiếc dầu mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-682",
+    "hanzi": "游客",
+    "traditional": "遊客",
+    "pinyin": "yóukè",
+    "pinyinClean": "youke",
+    "hanViet": "游 KHÁCH",
+    "radical": "水",
+    "strokeCount": 21,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "khách du lịch",
+    "vi_meaning_full": "Danh từ: khách du lịch",
+    "vi_meaning_short": "khách du lịch",
+    "enMeaning": "tourist; visitor",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个游客",
+      "新游客",
+      "好游客"
+    ],
+    "compounds": [
+      "游",
+      "客"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的游客。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yóu kè.",
+        "vi": "Trên bàn có đặt một chiếc khách du lịch mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-683",
+    "hanzi": "友好",
+    "traditional": "友好",
+    "pinyin": "yǒuhǎo",
+    "pinyinClean": "youhao",
+    "hanViet": "HỮU HẢO",
+    "radical": "又",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "thân thiện",
+    "vi_meaning_full": "Tính từ: thân thiện",
+    "vi_meaning_short": "thân thiện",
+    "enMeaning": "friendly; amicable",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常友好",
+      "很友好",
+      "真友好"
+    ],
+    "compounds": [
+      "友",
+      "好"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真友好，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn yǒu hǎo, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật thân thiện, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-684",
+    "hanzi": "有空儿",
+    "traditional": "有空兒",
+    "pinyin": "yǒukòngr",
+    "pinyinClean": "youkongr",
+    "hanViet": "有 空 NHI",
+    "radical": "口",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "rành",
+    "vi_meaning_full": "Động từ: rành",
+    "vi_meaning_short": "rành",
+    "enMeaning": "have free time",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备有空儿",
+      "开始有空儿",
+      "喜欢有空儿"
+    ],
+    "compounds": [
+      "有",
+      "空儿"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去有空儿。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù yǒu kòng er.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi rành.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-685",
+    "hanzi": "有人",
+    "traditional": "有人",
+    "pinyin": "yǒurén",
+    "pinyinClean": "youren",
+    "hanViet": "有 NHÂN",
+    "radical": "口",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "có người",
+    "vi_meaning_full": "Động từ: có người",
+    "vi_meaning_short": "có người",
+    "enMeaning": "someone; occupied",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备有人",
+      "开始有人",
+      "喜欢有人"
+    ],
+    "compounds": [
+      "有",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去有人。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù yǒu rén.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi có người.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-686",
+    "hanzi": "有(一点儿)",
+    "traditional": "有(一點兒)",
+    "pinyin": "yǒu(yì)diǎnr",
+    "pinyinClean": "youyidianr",
+    "hanViet": "有 ( 一 ĐIỂM NHI )",
+    "radical": "口",
+    "strokeCount": 30,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "hơi, một chút",
+    "vi_meaning_full": "Phó từ: hơi, một chút",
+    "vi_meaning_short": "hơi, một chút",
+    "enMeaning": "a little bit",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "有(一点儿)好",
+      "有(一点儿)去",
+      "有(一点儿)看"
+    ],
+    "compounds": [
+      "有",
+      "(一点儿)"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家有(一点儿)准备好了，随时可以出发。",
+        "pinyin": "Dà jiā yǒu ( yì diǎn ér ) zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người hơi, một chút chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-688",
+    "hanzi": "又",
+    "traditional": "又",
+    "pinyin": "yòu",
+    "pinyinClean": "you",
+    "hanViet": "又",
+    "radical": "又",
+    "strokeCount": 2,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "lại",
+    "vi_meaning_full": "Phó từ: lại",
+    "vi_meaning_short": "lại",
+    "enMeaning": "again (past)",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "又好",
+      "又去",
+      "又看"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家又准备好了，随时可以出发。",
+        "pinyin": "Dà jiā yòu zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người lại chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-690",
+    "hanzi": "语言",
+    "traditional": "語言",
+    "pinyin": "yǔyán",
+    "pinyinClean": "yuyan",
+    "hanViet": "NGỮ 言",
+    "radical": "言",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ngôn ngữ",
+    "vi_meaning_full": "Danh từ: ngôn ngữ",
+    "vi_meaning_short": "ngôn ngữ",
+    "enMeaning": "language",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个语言",
+      "新语言",
+      "好语言"
+    ],
+    "compounds": [
+      "语",
+      "言"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的语言。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yǔ yán.",
+        "vi": "Trên bàn có đặt một chiếc ngôn ngữ mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-691",
+    "hanzi": "原来",
+    "traditional": "原來",
+    "pinyin": "yuánlái",
+    "pinyinClean": "yuanlai",
+    "hanViet": "原 LAI",
+    "radical": "厂",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "ban đầu, vốn dĩ / thì ra là..., hóa ra là...",
+    "vi_meaning_full": "Tính từ: ban đầu, vốn dĩ / thì ra là..., hóa ra là...",
+    "vi_meaning_short": "ban đầu, vốn dĩ",
+    "enMeaning": "originally; turn out to be",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常原来",
+      "很原来",
+      "真原来"
+    ],
+    "compounds": [
+      "原",
+      "来"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真原来，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn yuán lái, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật ban đầu, vốn dĩ, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-692",
+    "hanzi": "原因",
+    "traditional": "原因",
+    "pinyin": "yuányīn",
+    "pinyinClean": "yuanyin",
+    "hanViet": "原 因",
+    "radical": "厂",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nguyên nhân",
+    "vi_meaning_full": "Danh từ: nguyên nhân",
+    "vi_meaning_short": "nguyên nhân",
+    "enMeaning": "reason; cause",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个原因",
+      "新原因",
+      "好原因"
+    ],
+    "compounds": [
+      "原",
+      "因"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的原因。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yuán yīn.",
+        "vi": "Trên bàn có đặt một chiếc nguyên nhân mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-693",
+    "hanzi": "院",
+    "traditional": "院",
+    "pinyin": "yuàn",
+    "pinyinClean": "yuan",
+    "hanViet": "VIỆN",
+    "radical": "阝",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "viện",
+    "vi_meaning_full": "Danh từ: viện",
+    "vi_meaning_short": "viện",
+    "enMeaning": "courtyard; institution",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个院",
+      "新院",
+      "好院"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的院。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yuàn.",
+        "vi": "Trên bàn có đặt một chiếc viện mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-694",
+    "hanzi": "院长",
+    "traditional": "院長",
+    "pinyin": "yuànzhǎng",
+    "pinyinClean": "yuanzhang",
+    "hanViet": "VIỆN TRƯỞNG",
+    "radical": "阝",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "viện trưởng",
+    "vi_meaning_full": "Danh từ: viện trưởng",
+    "vi_meaning_short": "viện trưởng",
+    "enMeaning": "dean; director",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个院长",
+      "新院长",
+      "好院长"
+    ],
+    "compounds": [
+      "院",
+      "长"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的院长。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yuàn zhǎng.",
+        "vi": "Trên bàn có đặt một chiếc viện trưởng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-695",
+    "hanzi": "院子",
+    "traditional": "院子",
+    "pinyin": "yuànzi",
+    "pinyinClean": "yuanzi",
+    "hanViet": "VIỆN TỬ",
+    "radical": "阝",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "sân, sân nhà",
+    "vi_meaning_full": "Danh từ: sân, sân nhà",
+    "vi_meaning_short": "sân, sân nhà",
+    "enMeaning": "courtyard; yard",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个院子",
+      "新院子",
+      "好院子"
+    ],
+    "compounds": [
+      "院",
+      "子"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的院子。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yuàn zi.",
+        "vi": "Trên bàn có đặt một chiếc sân, sân nhà mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-696",
+    "hanzi": "愿意",
+    "traditional": "願意",
+    "pinyin": "yuànyì",
+    "pinyinClean": "yuanyi",
+    "hanViet": "愿 Ý",
+    "radical": "心",
+    "strokeCount": 27,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đồng ý, bằng lòng",
+    "vi_meaning_full": "Động từ: đồng ý, bằng lòng",
+    "vi_meaning_short": "đồng ý, bằng lòn",
+    "enMeaning": "be willing to",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备愿意",
+      "开始愿意",
+      "喜欢愿意"
+    ],
+    "compounds": [
+      "愿",
+      "意"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去愿意。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù yuàn yì.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đồng ý, bằng lòng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-697",
+    "hanzi": "月份",
+    "traditional": "月份",
+    "pinyin": "yuèfèn",
+    "pinyinClean": "yuefen",
+    "hanViet": "月 份",
+    "radical": "月",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tháng",
+    "vi_meaning_full": "Danh từ: tháng",
+    "vi_meaning_short": "tháng",
+    "enMeaning": "month",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个月份",
+      "新月份",
+      "好月份"
+    ],
+    "compounds": [
+      "月",
+      "份"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的月份。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yuè fèn.",
+        "vi": "Trên bàn có đặt một chiếc tháng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-698",
+    "hanzi": "月亮",
+    "traditional": "月亮",
+    "pinyin": "yuèliang",
+    "pinyinClean": "yueliang",
+    "hanViet": "月 亮",
+    "radical": "月",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mặt trăng",
+    "vi_meaning_full": "Danh từ: mặt trăng",
+    "vi_meaning_short": "mặt trăng",
+    "enMeaning": "moon",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个月亮",
+      "新月亮",
+      "好月亮"
+    ],
+    "compounds": [
+      "月",
+      "亮"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的月亮。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yuè liàng.",
+        "vi": "Trên bàn có đặt một chiếc mặt trăng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-699",
+    "hanzi": "越",
+    "traditional": "越",
+    "pinyin": "yuè",
+    "pinyinClean": "yue",
+    "hanViet": "越",
+    "radical": "走",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "càng",
+    "vi_meaning_full": "Phó từ: càng",
+    "vi_meaning_short": "càng",
+    "enMeaning": "the more...",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "越好",
+      "越去",
+      "越看"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家越准备好了，随时可以出发。",
+        "pinyin": "Dà jiā yuè zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người càng chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-700",
+    "hanzi": "越来越",
+    "traditional": "越來越",
+    "pinyin": "yuè lái yuè",
+    "pinyinClean": "yuelaiyue",
+    "hanViet": "VIỆT LAI VIỆT",
+    "radical": "走",
+    "strokeCount": 26,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "ngày càng, càng ngày càng",
+    "vi_meaning_full": "Phó từ: ngày càng, càng ngày càng",
+    "vi_meaning_short": "ngày càng, càng",
+    "enMeaning": "more and more, increasingly",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "越来越好",
+      "越来越漂亮",
+      "越来越冷"
+    ],
+    "compounds": [
+      "越过",
+      "来回"
+    ],
+    "synonyms": [
+      "愈加",
+      "逐渐"
+    ],
+    "antonyms": [
+      "不变"
+    ],
+    "confusableWords": "越...越...",
+    "sentences": [
+      {
+        "zh": "学汉语越学越有意思，我的听力越来越好。",
+        "pinyin": "Xué Hànyǔ yuè xué yuè yǒu yìsi, wǒ de tīnglì yuè lái yuè hǎo.",
+        "vi": "Học tiếng Trung càng học càng thấy thú vị, khả năng nghe của tôi ngày càng tốt hơn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-701",
+    "hanzi": "云",
+    "traditional": "雲",
+    "pinyin": "yún",
+    "pinyinClean": "yun",
+    "hanViet": "云",
+    "radical": "二",
+    "strokeCount": 4,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "mây",
+    "vi_meaning_full": "Danh từ: mây",
+    "vi_meaning_short": "mây",
+    "enMeaning": "cloud",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个云",
+      "新云",
+      "好云"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的云。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de yún.",
+        "vi": "Trên bàn có đặt một chiếc mây mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-703",
+    "hanzi": "咱",
+    "traditional": "咱",
+    "pinyin": "zán",
+    "pinyinClean": "zan",
+    "hanViet": "咱",
+    "radical": "口",
+    "strokeCount": 9,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "chúng ta",
+    "vi_meaning_full": "Đại từ: chúng ta",
+    "vi_meaning_short": "chúng ta",
+    "enMeaning": "we; us (inclusive)",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说咱",
+      "用咱"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，咱是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, zán shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 咱 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-704",
+    "hanzi": "咱们",
+    "traditional": "咱們",
+    "pinyin": "zánmen",
+    "pinyinClean": "zanmen",
+    "hanViet": "咱 们",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "chúng ta",
+    "vi_meaning_full": "Đại từ: chúng ta",
+    "vi_meaning_short": "chúng ta",
+    "enMeaning": "we; us (inclusive)",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说咱们",
+      "用咱们"
+    ],
+    "compounds": [
+      "咱",
+      "们"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，咱们是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, zán men shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 咱们 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-705",
+    "hanzi": "脏",
+    "traditional": "髒",
+    "pinyin": "zāng",
+    "pinyinClean": "zang",
+    "hanViet": "脏",
+    "radical": "月",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "bản",
+    "vi_meaning_full": "Tính từ: bản",
+    "vi_meaning_short": "bản",
+    "enMeaning": "dirty",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常脏",
+      "很脏",
+      "真脏"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真脏，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zàng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật bản, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-706",
+    "hanzi": "早餐",
+    "traditional": "早餐",
+    "pinyin": "zǎocān",
+    "pinyinClean": "zaocan",
+    "hanViet": "早 餐",
+    "radical": "日",
+    "strokeCount": 22,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bữa sáng",
+    "vi_meaning_full": "Danh từ: bữa sáng",
+    "vi_meaning_short": "bữa sáng",
+    "enMeaning": "breakfast",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个早餐",
+      "新早餐",
+      "好早餐"
+    ],
+    "compounds": [
+      "早",
+      "餐"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的早餐。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zǎo cān.",
+        "vi": "Trên bàn có đặt một chiếc bữa sáng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-707",
+    "hanzi": "早晨",
+    "traditional": "早晨",
+    "pinyin": "zǎochen",
+    "pinyinClean": "zaochen",
+    "hanViet": "早 晨",
+    "radical": "日",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "buổi sáng sớm",
+    "vi_meaning_full": "Danh từ: buổi sáng sớm",
+    "vi_meaning_short": "buổi sáng sớm",
+    "enMeaning": "early morning",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个早晨",
+      "新早晨",
+      "好早晨"
+    ],
+    "compounds": [
+      "早",
+      "晨"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的早晨。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zǎo chén.",
+        "vi": "Trên bàn có đặt một chiếc buổi sáng sớm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-708",
+    "hanzi": "早就",
+    "traditional": "早就",
+    "pinyin": "zǎo jiù",
+    "pinyinClean": "zaojiu",
+    "hanViet": "TẢO TỰU",
+    "radical": "日",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "đã... từ lâu",
+    "vi_meaning_full": "Phó từ: đã... từ lâu",
+    "vi_meaning_short": "đã... từ lâu",
+    "enMeaning": "long since, already (for a long time)",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "早就知道",
+      "早就想买",
+      "早就准备好"
+    ],
+    "compounds": [
+      "早上",
+      "就是"
+    ],
+    "synonyms": [
+      "早前",
+      "早已"
+    ],
+    "antonyms": [
+      "刚",
+      "刚不久"
+    ],
+    "confusableWords": "早就与刚",
+    "sentences": [
+      {
+        "zh": "这件事我早就听说了，你不用再告诉我。",
+        "pinyin": "Zhè jiàn shì wǒ zǎo jiù tīngshuō le, nǐ bú yòng zài gàosu wǒ.",
+        "vi": "Chuyện này tôi đã nghe từ lâu rồi, bạn không cần phải nói lại nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-709",
+    "hanzi": "怎么办",
+    "traditional": "怎麼辦",
+    "pinyin": "zěnme bàn",
+    "pinyinClean": "zenmeban",
+    "hanViet": "CHẨM MA BIỆN",
+    "radical": "心",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "cụm từ",
+    "viet": "làm sao đây, giải quyết thế nào",
+    "vi_meaning_full": "Cụm từ: làm sao đây, giải quyết thế nào",
+    "vi_meaning_short": "làm sao đây, giả",
+    "enMeaning": "what to do, what can be done",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "不知道怎么办",
+      "你说怎么办",
+      "该怎么办"
+    ],
+    "compounds": [
+      "怎么",
+      "办法"
+    ],
+    "synonyms": [
+      "如何是好"
+    ],
+    "antonyms": [
+      "已有办法"
+    ],
+    "confusableWords": "怎么样",
+    "sentences": [
+      {
+        "zh": "钥匙找不到了，我们进不去屋子，怎么办？",
+        "pinyin": "Yàoshi zhǎo búdào le, wǒmen jìn bú qù wūzi, zěnme bàn?",
+        "vi": "Chìa khóa không tìm thấy nữa, chúng ta không vào được phòng, làm sao đây?",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-711",
+    "hanzi": "怎样",
+    "traditional": "怎樣",
+    "pinyin": "zěnyàng",
+    "pinyinClean": "zenyang",
+    "hanViet": "怎 样",
+    "radical": "心",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "như thế nào",
+    "vi_meaning_full": "Đại từ: như thế nào",
+    "vi_meaning_short": "như thế nào",
+    "enMeaning": "how; in what way",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说怎样",
+      "用怎样"
+    ],
+    "compounds": [
+      "怎",
+      "样"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，怎样是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, zěn yàng shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 怎样 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-712",
+    "hanzi": "占",
+    "traditional": "佔",
+    "pinyin": "zhàn",
+    "pinyinClean": "zhan",
+    "hanViet": "占",
+    "radical": "卜",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "chiếm, giữ",
+    "vi_meaning_full": "Động từ: chiếm, giữ",
+    "vi_meaning_short": "chiếm, giữ",
+    "enMeaning": "occupy; account for",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备占",
+      "开始占",
+      "喜欢占"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去占。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi chiếm, giữ.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-713",
+    "hanzi": "站",
+    "traditional": "站",
+    "pinyin": "zhàn",
+    "pinyinClean": "zhan",
+    "hanViet": "TRẠM",
+    "radical": "立",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đứng",
+    "vi_meaning_full": "Động từ: đứng",
+    "vi_meaning_short": "đứng",
+    "enMeaning": "station; stand",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备站",
+      "开始站",
+      "喜欢站"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去站。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đứng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-714",
+    "hanzi": "站住",
+    "traditional": "站住",
+    "pinyin": "zhàn//zhù",
+    "pinyinClean": "zhanzhu",
+    "hanViet": "TRẠM 住",
+    "radical": "立",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đứng lại",
+    "vi_meaning_full": "Động từ: đứng lại",
+    "vi_meaning_short": "đứng lại",
+    "enMeaning": "halt; stop",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备站住",
+      "开始站住",
+      "喜欢站住"
+    ],
+    "compounds": [
+      "站",
+      "住"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去站住。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhàn zhù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đứng lại.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-716",
+    "hanzi": "长大",
+    "traditional": "長大",
+    "pinyin": "zhǎngdà",
+    "pinyinClean": "zhangda",
+    "hanViet": "TRƯỞNG ĐẠI",
+    "radical": "长",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "trường thành",
+    "vi_meaning_full": "Động từ: trường thành",
+    "vi_meaning_short": "trường thành",
+    "enMeaning": "grow up",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备长大",
+      "开始长大",
+      "喜欢长大"
+    ],
+    "compounds": [
+      "长",
+      "大"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去长大。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhǎng dà.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi trường thành.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-717",
+    "hanzi": "找出",
+    "traditional": "找出",
+    "pinyin": "zhǎochū",
+    "pinyinClean": "zhaochu",
+    "hanViet": "找 XUẤT",
+    "radical": "手",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tìm ra",
+    "vi_meaning_full": "Động từ: tìm ra",
+    "vi_meaning_short": "tìm ra",
+    "enMeaning": "find out; discover",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备找出",
+      "开始找出",
+      "喜欢找出"
+    ],
+    "compounds": [
+      "找",
+      "出"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去找出。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhǎo chū.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tìm ra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-718",
+    "hanzi": "照顾",
+    "traditional": "照顧",
+    "pinyin": "zhàogù",
+    "pinyinClean": "zhaogu",
+    "hanViet": "CHIẾU 顾",
+    "radical": "火",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "chăm sóc",
+    "vi_meaning_full": "Động từ: chăm sóc",
+    "vi_meaning_short": "chăm sóc",
+    "enMeaning": "take care of",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备照顾",
+      "开始照顾",
+      "喜欢照顾"
+    ],
+    "compounds": [
+      "照",
+      "顾"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去照顾。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhào gù.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi chăm sóc.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-719",
+    "hanzi": "照片",
+    "traditional": "照片",
+    "pinyin": "zhàopiàn",
+    "pinyinClean": "zhaopian",
+    "hanViet": "CHIẾU 片",
+    "radical": "火",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "ảnh",
+    "vi_meaning_full": "Danh từ: ảnh",
+    "vi_meaning_short": "ảnh",
+    "enMeaning": "photograph",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个照片",
+      "新照片",
+      "好照片"
+    ],
+    "compounds": [
+      "照",
+      "片"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的照片。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhào piān.",
+        "vi": "Trên bàn có đặt một chiếc ảnh mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-720",
+    "hanzi": "照相",
+    "traditional": "照相",
+    "pinyin": "zhào//xiàng",
+    "pinyinClean": "zhaoxiang",
+    "hanViet": "CHIẾU 相",
+    "radical": "火",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "chụp ảnh",
+    "vi_meaning_full": "Động từ: chụp ảnh",
+    "vi_meaning_short": "chụp ảnh",
+    "enMeaning": "take a photo",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备照相",
+      "开始照相",
+      "喜欢照相"
+    ],
+    "compounds": [
+      "照",
+      "相"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去照相。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhào xiàng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi chụp ảnh.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-721",
+    "hanzi": "这么",
+    "traditional": "這麼",
+    "pinyin": "zhème",
+    "pinyinClean": "zheme",
+    "hanViet": "这 么",
+    "radical": "辶",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "như thế này",
+    "vi_meaning_full": "Đại từ: như thế này",
+    "vi_meaning_short": "như thế này",
+    "enMeaning": "so; this way",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说这么",
+      "用这么"
+    ],
+    "compounds": [
+      "这",
+      "么"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，这么是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, zhè me shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 这么 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-722",
+    "hanzi": "这时候",
+    "traditional": "這時候",
+    "pinyin": "zhè shíhou",
+    "pinyinClean": "zheshihou",
+    "hanViet": "GIÁ THỜI HẬU",
+    "radical": "辶",
+    "strokeCount": 26,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "lúc này, khi này",
+    "vi_meaning_full": "Danh từ: lúc này, khi này",
+    "vi_meaning_short": "lúc này, khi này",
+    "enMeaning": "at this time, right now",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "在这个时候",
+      "每到这时候",
+      "这时候出发"
+    ],
+    "compounds": [
+      "这个",
+      "时间"
+    ],
+    "synonyms": [
+      "此刻",
+      "此时"
+    ],
+    "antonyms": [
+      "那时候",
+      "彼时"
+    ],
+    "confusableWords": "那时候",
+    "sentences": [
+      {
+        "zh": "这时候路上车很多，容易堵车，坐地铁更好。",
+        "pinyin": "Zhè shíhou lùshang chē hěn duō, róngyì dǔchē, zuò dìtiě gèng hǎo.",
+        "vi": "Lúc này trên đường rất nhiều xe, dễ tắc đường, đi tàu điện ngầm tốt hơn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-723",
+    "hanzi": "这样",
+    "traditional": "這樣",
+    "pinyin": "zhèyàng",
+    "pinyinClean": "zheyang",
+    "hanViet": "这 样",
+    "radical": "辶",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "như vậy",
+    "vi_meaning_full": "Đại từ: như vậy",
+    "vi_meaning_short": "như vậy",
+    "enMeaning": "like this; so",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说这样",
+      "用这样"
+    ],
+    "compounds": [
+      "这",
+      "样"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，这样是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, zhè yàng shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 这样 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-724",
+    "hanzi": "真正",
+    "traditional": "真正",
+    "pinyin": "zhēnzhèng",
+    "pinyinClean": "zhenzheng",
+    "hanViet": "真 正",
+    "radical": "目",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "chân chính, thật sự",
+    "vi_meaning_full": "Tính từ: chân chính, thật sự",
+    "vi_meaning_short": "chân chính, thật",
+    "enMeaning": "genuine; real",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常真正",
+      "很真正",
+      "真真正"
+    ],
+    "compounds": [
+      "真",
+      "正"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真真正，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zhēn zhèng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật chân chính, thật sự, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-725",
+    "hanzi": "正常",
+    "traditional": "正常",
+    "pinyin": "zhèngcháng",
+    "pinyinClean": "zhengchang",
+    "hanViet": "正 THƯỜNG",
+    "radical": "口",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "bình thường",
+    "vi_meaning_full": "Tính từ: bình thường",
+    "vi_meaning_short": "bình thường",
+    "enMeaning": "normal; regular",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常正常",
+      "很正常",
+      "真正常"
+    ],
+    "compounds": [
+      "正",
+      "常"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真正常，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zhèng cháng, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật bình thường, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-726",
+    "hanzi": "正好",
+    "traditional": "正好",
+    "pinyin": "zhènghǎo",
+    "pinyinClean": "zhenghao",
+    "hanViet": "正 HẢO",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "vừa đúng, vừa khít, vừa đủ / đúng lúc, đúng dịp, vừa hay",
+    "vi_meaning_full": "Tính từ: vừa đúng, vừa khít, vừa đủ / đúng lúc, đúng dịp, vừa hay",
+    "vi_meaning_short": "vừa đúng, vừa kh",
+    "enMeaning": "just right; happen to",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常正好",
+      "很正好",
+      "真正好"
+    ],
+    "compounds": [
+      "正",
+      "好"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真正好，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zhèng hǎo, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật vừa đúng, vừa khít, vừa đủ, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-727",
+    "hanzi": "正确",
+    "traditional": "正確",
+    "pinyin": "zhèngquè",
+    "pinyinClean": "zhengque",
+    "hanViet": "正 确",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "chính xác",
+    "vi_meaning_full": "Tính từ: chính xác",
+    "vi_meaning_short": "chính xác",
+    "enMeaning": "correct; accurate",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常正确",
+      "很正确",
+      "真正确"
+    ],
+    "compounds": [
+      "正",
+      "确"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真正确，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zhèng què, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật chính xác, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-728",
+    "hanzi": "正是",
+    "traditional": "正是",
+    "pinyin": "zhèng shì",
+    "pinyinClean": "zhengshi",
+    "hanViet": "CHÍNH THỊ",
+    "radical": "止",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "chính là, đích thực là",
+    "vi_meaning_full": "Phó từ: chính là, đích thực là",
+    "vi_meaning_short": "chính là, đích t",
+    "enMeaning": "precisely, exactly, just is",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "正是时候",
+      "正是这样",
+      "正是我想的"
+    ],
+    "compounds": [
+      "正常",
+      "是不是"
+    ],
+    "synonyms": [
+      "恰是",
+      "恰好是"
+    ],
+    "antonyms": [
+      "不是",
+      "绝非"
+    ],
+    "confusableWords": "正式",
+    "sentences": [
+      {
+        "zh": "站在门外的那个人正是我们找了好久的李老师。",
+        "pinyin": "Zhàn zài mén wài de nàge rén zhèng shì wǒmen zhǎole hǎojiǔ de Lǐ lǎoshī.",
+        "vi": "Người đứng ở ngoài cửa chính là thầy Lý mà chúng tôi tìm kiếm bấy lâu nay.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-729",
+    "hanzi": "直接",
+    "traditional": "直接",
+    "pinyin": "zhíjiē",
+    "pinyinClean": "zhijie",
+    "hanViet": "直 TIẾP",
+    "radical": "目",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "trực tiếp",
+    "vi_meaning_full": "Tính từ: trực tiếp",
+    "vi_meaning_short": "trực tiếp",
+    "enMeaning": "direct; immediate",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常直接",
+      "很直接",
+      "真直接"
+    ],
+    "compounds": [
+      "直",
+      "接"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真直接，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zhí jiē, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật trực tiếp, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-730",
+    "hanzi": "只",
+    "traditional": "只",
+    "pinyin": "zhǐ",
+    "pinyinClean": "zhi",
+    "hanViet": "只",
+    "radical": "口",
+    "strokeCount": 5,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "chi",
+    "vi_meaning_full": "Phó từ: chi",
+    "vi_meaning_short": "chi",
+    "enMeaning": "only; measure word for animals",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "只好",
+      "只去",
+      "只看"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "大家只准备好了，随时可以出发。",
+        "pinyin": "Dà jiā zhǐ zhǔn bèi hǎo le, suí shí kě yǐ chū fā.",
+        "vi": "Mọi người chi chuẩn bị xong rồi, lúc nào cũng có thể xuất phát.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-731",
+    "hanzi": "只能",
+    "traditional": "只能",
+    "pinyin": "zhǐ néng",
+    "pinyinClean": "zhineng",
+    "hanViet": "CHỈ NĂNG",
+    "radical": "口",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "phó từ",
+    "viet": "chỉ có thể",
+    "vi_meaning_full": "Phó từ: chỉ có thể",
+    "vi_meaning_short": "chỉ có thể",
+    "enMeaning": "can only, have no choice but to",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "只能这样",
+      "只能等",
+      "只能选一个"
+    ],
+    "compounds": [
+      "只要",
+      "能力"
+    ],
+    "synonyms": [
+      "唯有",
+      "只好"
+    ],
+    "antonyms": [
+      "不仅能",
+      "不仅可以"
+    ],
+    "confusableWords": "只是",
+    "sentences": [
+      {
+        "zh": "下大雨了，我们只能待在家里看电影。",
+        "pinyin": "Xià dà yǔ le, wǒmen zhǐ néng dāi zài jiālǐ kàn diànyǐng.",
+        "vi": "Trời mưa to rồi, chúng tôi chỉ có thể ở trong nhà xem phim.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-732",
+    "hanzi": "只要",
+    "traditional": "只要",
+    "pinyin": "zhǐyào",
+    "pinyinClean": "zhiyao",
+    "hanViet": "只 YẾU",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "liên từ",
+    "viet": "chỉ cần",
+    "vi_meaning_full": "Liên từ: chỉ cần",
+    "vi_meaning_short": "chỉ cần",
+    "enMeaning": "as long as",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "只要...而且...",
+      "虽然...只要..."
+    ],
+    "compounds": [
+      "只",
+      "要"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "他只要会说英语，还会说汉语。",
+        "pinyin": "Tā zhǐ yào huì shuō yīng yǔ, hái huì shuō hàn yǔ.",
+        "vi": "Anh ấy chỉ cần biết nói tiếng Anh, còn biết nói tiếng Trung.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-733",
+    "hanzi": "纸",
+    "traditional": "紙",
+    "pinyin": "zhǐ",
+    "pinyinClean": "zhi",
+    "hanViet": "CHỈ",
+    "radical": "纟",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "giấy",
+    "vi_meaning_full": "Danh từ: giấy",
+    "vi_meaning_short": "giấy",
+    "enMeaning": "paper",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个纸",
+      "新纸",
+      "好纸"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的纸。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhǐ.",
+        "vi": "Trên bàn có đặt một chiếc giấy mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-734",
+    "hanzi": "中餐",
+    "traditional": "中餐",
+    "pinyin": "zhōngcān",
+    "pinyinClean": "zhongcan",
+    "hanViet": "TRUNG 餐",
+    "radical": "丨",
+    "strokeCount": 20,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "món ăn Trung Quốc",
+    "vi_meaning_full": "Danh từ: món ăn Trung Quốc",
+    "vi_meaning_short": "món ăn Trung Quố",
+    "enMeaning": "Chinese food",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个中餐",
+      "新中餐",
+      "好中餐"
+    ],
+    "compounds": [
+      "中",
+      "餐"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的中餐。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhōng cān.",
+        "vi": "Trên bàn có đặt một chiếc món ăn Trung Quốc mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-735",
+    "hanzi": "中级",
+    "traditional": "中級",
+    "pinyin": "zhōngjí",
+    "pinyinClean": "zhongji",
+    "hanViet": "TRUNG CẤP",
+    "radical": "丨",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "trung cấp",
+    "vi_meaning_full": "Tính từ: trung cấp",
+    "vi_meaning_short": "trung cấp",
+    "enMeaning": "intermediate level",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常中级",
+      "很中级",
+      "真中级"
+    ],
+    "compounds": [
+      "中",
+      "级"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真中级，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zhōng jí, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật trung cấp, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-736",
+    "hanzi": "中年",
+    "traditional": "中年",
+    "pinyin": "zhōngnián",
+    "pinyinClean": "zhongnian",
+    "hanViet": "TRUNG 年",
+    "radical": "丨",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trung niên",
+    "vi_meaning_full": "Danh từ: trung niên",
+    "vi_meaning_short": "trung niên",
+    "enMeaning": "middle age",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个中年",
+      "新中年",
+      "好中年"
+    ],
+    "compounds": [
+      "中",
+      "年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的中年。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhōng nián.",
+        "vi": "Trên bàn có đặt một chiếc trung niên mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-737",
+    "hanzi": "中小学",
+    "traditional": "中小學",
+    "pinyin": "zhōng-xiǎoxué",
+    "pinyinClean": "zhongxiaoxue",
+    "hanViet": "TRUNG TIỂU HỌC",
+    "radical": "丨",
+    "strokeCount": 15,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trường tiểu học và trung học",
+    "vi_meaning_full": "Danh từ: trường tiểu học và trung học",
+    "vi_meaning_short": "trường tiểu học",
+    "enMeaning": "primary and secondary school",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个中小学",
+      "新中小学",
+      "好中小学"
+    ],
+    "compounds": [
+      "中",
+      "小学"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的中小学。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhōng xiǎo xué.",
+        "vi": "Trên bàn có đặt một chiếc trường tiểu học và trung học mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-738",
+    "hanzi": "中心",
+    "traditional": "中心",
+    "pinyin": "zhōngxīn",
+    "pinyinClean": "zhongxin",
+    "hanViet": "TRUNG TÂM",
+    "radical": "丨",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trung tâm",
+    "vi_meaning_full": "Danh từ: trung tâm",
+    "vi_meaning_short": "trung tâm",
+    "enMeaning": "center; core",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个中心",
+      "新中心",
+      "好中心"
+    ],
+    "compounds": [
+      "中",
+      "心"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的中心。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhōng xīn.",
+        "vi": "Trên bàn có đặt một chiếc trung tâm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-739",
+    "hanzi": "中医",
+    "traditional": "中醫",
+    "pinyin": "zhōngyī",
+    "pinyinClean": "zhongyi",
+    "hanViet": "TRUNG 医",
+    "radical": "丨",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "đồng y",
+    "vi_meaning_full": "Danh từ: đồng y",
+    "vi_meaning_short": "đồng y",
+    "enMeaning": "traditional Chinese medicine",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个中医",
+      "新中医",
+      "好中医"
+    ],
+    "compounds": [
+      "中",
+      "医"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的中医。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhōng yī.",
+        "vi": "Trên bàn có đặt một chiếc đồng y mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-740",
+    "hanzi": "重点",
+    "traditional": "重點",
+    "pinyin": "zhòngdiǎn",
+    "pinyinClean": "zhongdian",
+    "hanViet": "TRỌNG ĐIỂM",
+    "radical": "里",
+    "strokeCount": 18,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "trọng điểm, nội dung chính / nhấn mạnh, coi trọng, chủ trọng",
+    "vi_meaning_full": "Danh từ: trọng điểm, nội dung chính / nhấn mạnh, coi trọng, chủ trọng",
+    "vi_meaning_short": "trọng điểm, nội",
+    "enMeaning": "key point; focus",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个重点",
+      "新重点",
+      "好重点"
+    ],
+    "compounds": [
+      "重",
+      "点"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的重点。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhòng diǎn.",
+        "vi": "Trên bàn có đặt một chiếc trọng điểm, nội dung chính mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-741",
+    "hanzi": "重视",
+    "traditional": "重視",
+    "pinyin": "zhòngshì",
+    "pinyinClean": "zhongshi",
+    "hanViet": "TRỌNG THỊ",
+    "radical": "里",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "coi trọng, xem trọng",
+    "vi_meaning_full": "Động từ: coi trọng, xem trọng",
+    "vi_meaning_short": "coi trọng, xem t",
+    "enMeaning": "to attach importance to, to value",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "重视教育",
+      "非常重视",
+      "受到重视"
+    ],
+    "compounds": [
+      "重要",
+      "视觉"
+    ],
+    "synonyms": [
+      "看重",
+      "注重"
+    ],
+    "antonyms": [
+      "轻视",
+      "忽视"
+    ],
+    "confusableWords": "重要",
+    "sentences": [
+      {
+        "zh": "学校非常重视培养学生的口语表达能力。",
+        "pinyin": "Xuéxiào fēicháng zhòngshì péiyǎng xuésheng de kǒuyǔ biǎodá nénglì.",
+        "vi": "Nhà trường rất coi trọng việc bồi dưỡng năng lực diễn đạt khẩu ngữ của học sinh.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-742",
+    "hanzi": "周",
+    "traditional": "周",
+    "pinyin": "zhōu",
+    "pinyinClean": "zhou",
+    "hanViet": "周",
+    "radical": "口",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "tuần",
+    "vi_meaning_full": "Lượng từ: tuần",
+    "vi_meaning_short": "tuần",
+    "enMeaning": "week; cycle",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一周",
+      "两周",
+      "这周"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一周这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī zhōu zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một tuần nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-743",
+    "hanzi": "周末",
+    "traditional": "週末",
+    "pinyin": "zhōumò",
+    "pinyinClean": "zhoumo",
+    "hanViet": "周 末",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cuối tuần",
+    "vi_meaning_full": "Danh từ: cuối tuần",
+    "vi_meaning_short": "cuối tuần",
+    "enMeaning": "weekend",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个周末",
+      "新周末",
+      "好周末"
+    ],
+    "compounds": [
+      "周",
+      "末"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的周末。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhōu mò.",
+        "vi": "Trên bàn có đặt một chiếc cuối tuần mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-744",
+    "hanzi": "周年",
+    "traditional": "週年",
+    "pinyin": "zhōunián",
+    "pinyinClean": "zhounian",
+    "hanViet": "周 年",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "một năm tròn",
+    "vi_meaning_full": "Danh từ: một năm tròn",
+    "vi_meaning_short": "một năm tròn",
+    "enMeaning": "anniversary",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个周年",
+      "新周年",
+      "好周年"
+    ],
+    "compounds": [
+      "周",
+      "年"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的周年。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhōu nián.",
+        "vi": "Trên bàn có đặt một chiếc một năm tròn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-745",
+    "hanzi": "主人",
+    "traditional": "主人",
+    "pinyin": "zhǔ · rén",
+    "pinyinClean": "zhuren",
+    "hanViet": "主 NHÂN",
+    "radical": "丶",
+    "strokeCount": 7,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chủ nhân",
+    "vi_meaning_full": "Danh từ: chủ nhân",
+    "vi_meaning_short": "chủ nhân",
+    "enMeaning": "host; owner",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个主人",
+      "新主人",
+      "好主人"
+    ],
+    "compounds": [
+      "主",
+      "人"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的主人。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhǔ rén.",
+        "vi": "Trên bàn có đặt một chiếc chủ nhân mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-746",
+    "hanzi": "主要",
+    "traditional": "主要",
+    "pinyin": "zhǔyào",
+    "pinyinClean": "zhuyao",
+    "hanViet": "主 YẾU",
+    "radical": "丶",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "chú yếu",
+    "vi_meaning_full": "Tính từ: chú yếu",
+    "vi_meaning_short": "chú yếu",
+    "enMeaning": "main; principal",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常主要",
+      "很主要",
+      "真主要"
+    ],
+    "compounds": [
+      "主",
+      "要"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真主要，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zhǔ yào, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật chú yếu, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-747",
+    "hanzi": "住房",
+    "traditional": "住房",
+    "pinyin": "zhùfáng",
+    "pinyinClean": "zhufang",
+    "hanViet": "住 房",
+    "radical": "人",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nhà ở",
+    "vi_meaning_full": "Danh từ: nhà ở",
+    "vi_meaning_short": "nhà ở",
+    "enMeaning": "housing; residence",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个住房",
+      "新住房",
+      "好住房"
+    ],
+    "compounds": [
+      "住",
+      "房"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的住房。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zhù fáng.",
+        "vi": "Trên bàn có đặt một chiếc nhà ở mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-748",
+    "hanzi": "住院",
+    "traditional": "住院",
+    "pinyin": "zhù//yuàn",
+    "pinyinClean": "zhuyuan",
+    "hanViet": "住 VIỆN",
+    "radical": "人",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nhập viện",
+    "vi_meaning_full": "Động từ: nhập viện",
+    "vi_meaning_short": "nhập viện",
+    "enMeaning": "be hospitalized",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备住院",
+      "开始住院",
+      "喜欢住院"
+    ],
+    "compounds": [
+      "住",
+      "院"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去住院。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhù yuàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nhập viện.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-749",
+    "hanzi": "装",
+    "traditional": "裝",
+    "pinyin": "zhuāng",
+    "pinyinClean": "zhuang",
+    "hanViet": "装",
+    "radical": "衣",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "trang trí, lắp đặt",
+    "vi_meaning_full": "Động từ: trang trí, lắp đặt",
+    "vi_meaning_short": "trang trí, lắp đ",
+    "enMeaning": "install; load; dress up",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备装",
+      "开始装",
+      "喜欢装"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去装。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zhuāng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi trang trí, lắp đặt.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-750",
+    "hanzi": "准确",
+    "traditional": "準確",
+    "pinyin": "zhǔnquè",
+    "pinyinClean": "zhunque",
+    "hanViet": "准 确",
+    "radical": "冫",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "tính từ",
+    "viet": "chính xác",
+    "vi_meaning_full": "Tính từ: chính xác",
+    "vi_meaning_short": "chính xác",
+    "enMeaning": "accurate; precise",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "非常准确",
+      "很准确",
+      "真准确"
+    ],
+    "compounds": [
+      "准",
+      "确"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "今天的天气真准确，让人感觉很舒服。",
+        "pinyin": "Jīn tiān de tiān qì zhēn zhǔn què, ràng rén gǎn jué hěn shū fú.",
+        "vi": "Thời tiết hôm nay thật chính xác, khiến người ta cảm thấy rất dễ chịu.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-751",
+    "hanzi": "自己",
+    "traditional": "自己",
+    "pinyin": "zìjǐ",
+    "pinyinClean": "ziji",
+    "hanViet": "TỰ 己",
+    "radical": "自",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "đại từ",
+    "viet": "tự mình",
+    "vi_meaning_full": "Đại từ: tự mình",
+    "vi_meaning_short": "tự mình",
+    "enMeaning": "oneself",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "说自己",
+      "用自己"
+    ],
+    "compounds": [
+      "自",
+      "己"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "在日常交际中，自己是一个常用的词语。",
+        "pinyin": "Zài rì cháng jiāo jì zhōng, zì jǐ shì yí gè cháng yòng de cí yǔ.",
+        "vi": "Trong giao tiếp hàng ngày, 自己 là một từ ngữ thường dùng.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-753",
+    "hanzi": "自由",
+    "traditional": "自由",
+    "pinyin": "zìyóu",
+    "pinyinClean": "ziyou",
+    "hanViet": "TỰ 由",
+    "radical": "自",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "sự tự do, quyền tự do / tự do, thoải mái",
+    "vi_meaning_full": "Danh từ: sự tự do, quyền tự do / tự do, thoải mái",
+    "vi_meaning_short": "sự tự do, quyền",
+    "enMeaning": "freedom; free",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个自由",
+      "新自由",
+      "好自由"
+    ],
+    "compounds": [
+      "自",
+      "由"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的自由。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zì yóu.",
+        "vi": "Trên bàn có đặt một chiếc sự tự do, quyền tự do mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-754",
+    "hanzi": "字典",
+    "traditional": "字典",
+    "pinyin": "zìdiǎn",
+    "pinyinClean": "zidian",
+    "hanViet": "字 ĐIỂN",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tự điền",
+    "vi_meaning_full": "Danh từ: tự điền",
+    "vi_meaning_short": "tự điền",
+    "enMeaning": "dictionary of characters",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个字典",
+      "新字典",
+      "好字典"
+    ],
+    "compounds": [
+      "字",
+      "典"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的字典。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zì diǎn.",
+        "vi": "Trên bàn có đặt một chiếc tự điền mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-755",
+    "hanzi": "走过",
+    "traditional": "走過",
+    "pinyin": "zǒuguò",
+    "pinyinClean": "zouguo",
+    "hanViet": "走 QUÁ",
+    "radical": "走",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đi qua",
+    "vi_meaning_full": "Động từ: đi qua",
+    "vi_meaning_short": "đi qua",
+    "enMeaning": "walk past",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备走过",
+      "开始走过",
+      "喜欢走过"
+    ],
+    "compounds": [
+      "走",
+      "过"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去走过。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zǒu guò.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đi qua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-756",
+    "hanzi": "走进",
+    "traditional": "走進",
+    "pinyin": "zǒujìn",
+    "pinyinClean": "zoujin",
+    "hanViet": "走 进",
+    "radical": "走",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "đi vào",
+    "vi_meaning_full": "Động từ: đi vào",
+    "vi_meaning_short": "đi vào",
+    "enMeaning": "walk into",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备走进",
+      "开始走进",
+      "喜欢走进"
+    ],
+    "compounds": [
+      "走",
+      "进"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去走进。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zǒu jìn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi đi vào.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-757",
+    "hanzi": "走开",
+    "traditional": "走開",
+    "pinyin": "zǒukāi",
+    "pinyinClean": "zoukai",
+    "hanViet": "走 KHAI",
+    "radical": "走",
+    "strokeCount": 11,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "tránh ra",
+    "vi_meaning_full": "Động từ: tránh ra",
+    "vi_meaning_short": "tránh ra",
+    "enMeaning": "walk away; go away",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备走开",
+      "开始走开",
+      "喜欢走开"
+    ],
+    "compounds": [
+      "走",
+      "开"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去走开。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zǒu kāi.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tránh ra.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-758",
+    "hanzi": "租",
+    "traditional": "租",
+    "pinyin": "zū",
+    "pinyinClean": "zu",
+    "hanViet": "TÔ",
+    "radical": "禾",
+    "strokeCount": 10,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "thuê",
+    "vi_meaning_full": "Động từ: thuê",
+    "vi_meaning_short": "thuê",
+    "enMeaning": "rent",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备租",
+      "开始租",
+      "喜欢租"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去租。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zū.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi thuê.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-759",
+    "hanzi": "组",
+    "traditional": "組",
+    "pinyin": "zǔ",
+    "pinyinClean": "zu",
+    "hanViet": "组",
+    "radical": "纟",
+    "strokeCount": 8,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ / động từ",
+    "viet": "tổ chức, lập nhóm / nhóm, tổ, đội",
+    "vi_meaning_full": "Danh từ / động từ: tổ chức, lập nhóm / nhóm, tổ, đội",
+    "vi_meaning_short": "tổ chức, lập nhó",
+    "enMeaning": "group; set",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备组",
+      "开始组",
+      "喜欢组"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去组。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zǔ.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi tổ chức, lập nhóm.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-760",
+    "hanzi": "组成",
+    "traditional": "組成",
+    "pinyin": "zǔchéng",
+    "pinyinClean": "zucheng",
+    "hanViet": "组 THÀNH",
+    "radical": "纟",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "cấu thành",
+    "vi_meaning_full": "Động từ: cấu thành",
+    "vi_meaning_short": "cấu thành",
+    "enMeaning": "compose; form",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备组成",
+      "开始组成",
+      "喜欢组成"
+    ],
+    "compounds": [
+      "组",
+      "成"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去组成。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zǔ chéng.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi cấu thành.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-761",
+    "hanzi": "组长",
+    "traditional": "組長",
+    "pinyin": "zǔzhǎng",
+    "pinyinClean": "zuzhang",
+    "hanViet": "组 TRƯỞNG",
+    "radical": "纟",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tổ trường",
+    "vi_meaning_full": "Danh từ: tổ trường",
+    "vi_meaning_short": "tổ trường",
+    "enMeaning": "group leader",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个组长",
+      "新组长",
+      "好组长"
+    ],
+    "compounds": [
+      "组",
+      "长"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的组长。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zǔ zhǎng.",
+        "vi": "Trên bàn có đặt một chiếc tổ trường mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-762",
+    "hanzi": "嘴",
+    "traditional": "嘴",
+    "pinyin": "zuǐ",
+    "pinyinClean": "zui",
+    "hanViet": "嘴",
+    "radical": "口",
+    "strokeCount": 16,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "miệng",
+    "vi_meaning_full": "Danh từ: miệng",
+    "vi_meaning_short": "miệng",
+    "enMeaning": "mouth",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个嘴",
+      "新嘴",
+      "好嘴"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的嘴。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zuǐ.",
+        "vi": "Trên bàn có đặt một chiếc miệng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-763",
+    "hanzi": "最近",
+    "traditional": "最近",
+    "pinyin": "zuìjìn",
+    "pinyinClean": "zuijin",
+    "hanViet": "最 近",
+    "radical": "日",
+    "strokeCount": 19,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "gần đây",
+    "vi_meaning_full": "Danh từ: gần đây",
+    "vi_meaning_short": "gần đây",
+    "enMeaning": "recently; lately",
+    "image": "https://images.pexels.com/photos/10566223/pexels-photo-10566223.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个最近",
+      "新最近",
+      "好最近"
+    ],
+    "compounds": [
+      "最",
+      "近"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的最近。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zuì jìn.",
+        "vi": "Trên bàn có đặt một chiếc gần đây mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-764",
+    "hanzi": "作家",
+    "traditional": "作家",
+    "pinyin": "zuòjiā",
+    "pinyinClean": "zuojia",
+    "hanViet": "TÁC GIA",
+    "radical": "人",
+    "strokeCount": 17,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "nhà văn",
+    "vi_meaning_full": "Danh từ: nhà văn",
+    "vi_meaning_short": "nhà văn",
+    "enMeaning": "writer; author",
+    "image": "https://images.pexels.com/photos/9451314/pexels-photo-9451314.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个作家",
+      "新作家",
+      "好作家"
+    ],
+    "compounds": [
+      "作",
+      "家"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的作家。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zuò jiā.",
+        "vi": "Trên bàn có đặt một chiếc nhà văn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-765",
+    "hanzi": "作文",
+    "traditional": "作文",
+    "pinyin": "zuòwén",
+    "pinyinClean": "zuowen",
+    "hanViet": "TÁC 文",
+    "radical": "人",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bài văn",
+    "vi_meaning_full": "Danh từ: bài văn",
+    "vi_meaning_short": "bài văn",
+    "enMeaning": "composition; essay",
+    "image": "https://images.pexels.com/photos/18672933/pexels-photo-18672933.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个作文",
+      "新作文",
+      "好作文"
+    ],
+    "compounds": [
+      "作",
+      "文"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的作文。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zuò wén.",
+        "vi": "Trên bàn có đặt một chiếc bài văn mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-766",
+    "hanzi": "作业",
+    "traditional": "作業",
+    "pinyin": "zuòyè",
+    "pinyinClean": "zuoye",
+    "hanViet": "TÁC 业",
+    "radical": "人",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "bài tập",
+    "vi_meaning_full": "Danh từ: bài tập",
+    "vi_meaning_short": "bài tập",
+    "enMeaning": "homework; assignment",
+    "image": "https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个作业",
+      "新作业",
+      "好作业"
+    ],
+    "compounds": [
+      "作",
+      "业"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的作业。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zuò yè.",
+        "vi": "Trên bàn có đặt một chiếc bài tập mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-767",
+    "hanzi": "作用",
+    "traditional": "作用",
+    "pinyin": "zuòyòng",
+    "pinyinClean": "zuoyong",
+    "hanViet": "TÁC DỤNG",
+    "radical": "人",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "tác dụng",
+    "vi_meaning_full": "Danh từ: tác dụng",
+    "vi_meaning_short": "tác dụng",
+    "enMeaning": "effect; function",
+    "image": "https://images.pexels.com/photos/7658310/pexels-photo-7658310.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个作用",
+      "新作用",
+      "好作用"
+    ],
+    "compounds": [
+      "作",
+      "用"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的作用。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zuò yòng.",
+        "vi": "Trên bàn có đặt một chiếc tác dụng mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-768",
+    "hanzi": "座",
+    "traditional": "座",
+    "pinyin": "zuò",
+    "pinyinClean": "zuo",
+    "hanViet": "座",
+    "radical": "口",
+    "strokeCount": 6,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "lượng từ",
+    "viet": "cái, tòa",
+    "vi_meaning_full": "Lượng từ: cái, tòa",
+    "vi_meaning_short": "cái, tòa",
+    "enMeaning": "seat; measure word for large structures",
+    "image": "https://images.pexels.com/photos/27638159/pexels-photo-27638159.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一座",
+      "两座",
+      "这座"
+    ],
+    "compounds": [],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我想再看一座这本书。",
+        "pinyin": "Wǒ xiǎng zài kàn yī zuò zhè běn shū.",
+        "vi": "Tôi muốn đọc lại cuốn sách này một cái, tòa nữa.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-769",
+    "hanzi": "座位",
+    "traditional": "座位",
+    "pinyin": "zuò · wèi",
+    "pinyinClean": "zuowei",
+    "hanViet": "座 VỊ",
+    "radical": "口",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "chỗ ngồi",
+    "vi_meaning_full": "Danh từ: chỗ ngồi",
+    "vi_meaning_short": "chỗ ngồi",
+    "enMeaning": "seat; place",
+    "image": "https://images.pexels.com/photos/33379388/pexels-photo-33379388.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个座位",
+      "新座位",
+      "好座位"
+    ],
+    "compounds": [
+      "座",
+      "位"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的座位。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zuò wèi.",
+        "vi": "Trên bàn có đặt một chiếc chỗ ngồi mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-770",
+    "hanzi": "做到",
+    "traditional": "做到",
+    "pinyin": "zuò dào",
+    "pinyinClean": "zuodao",
+    "hanViet": "做 到",
+    "radical": "口",
+    "strokeCount": 12,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "làm được",
+    "vi_meaning_full": "Động từ: làm được",
+    "vi_meaning_short": "làm được",
+    "enMeaning": "achieve; accomplish",
+    "image": "https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备做到",
+      "开始做到",
+      "喜欢做到"
+    ],
+    "compounds": [
+      "做",
+      "到"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去做到。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zuò dào.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi làm được.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-771",
+    "hanzi": "做法",
+    "traditional": "做法",
+    "pinyin": "zuò · fǎ",
+    "pinyinClean": "zuofa",
+    "hanViet": "做 PHÁP",
+    "radical": "口",
+    "strokeCount": 14,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "danh từ",
+    "viet": "cách làm",
+    "vi_meaning_full": "Danh từ: cách làm",
+    "vi_meaning_short": "cách làm",
+    "enMeaning": "way of doing; recipe",
+    "image": "https://images.pexels.com/photos/7876037/pexels-photo-7876037.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "一个做法",
+      "新做法",
+      "好做法"
+    ],
+    "compounds": [
+      "做",
+      "法"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "桌子上放着一个新买的做法。",
+        "pinyin": "Zhuō zi shàng fàng zhe yí gè xīn mǎi de zuò fǎ.",
+        "vi": "Trên bàn có đặt một chiếc cách làm mới mua.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
+  },
+  {
+    "id": "hsk2-0-772",
+    "hanzi": "做饭",
+    "traditional": "做飯",
+    "pinyin": "zuò // fàn",
+    "pinyinClean": "zuofan",
+    "hanViet": "做 PHẠN",
+    "radical": "口",
+    "strokeCount": 13,
+    "hskLevel": 2,
+    "lesson": 0,
+    "partOfSpeech": "động từ",
+    "viet": "nấu ăn",
+    "vi_meaning_full": "Động từ: nấu ăn",
+    "vi_meaning_short": "nấu ăn",
+    "enMeaning": "cook meal",
+    "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "collocations": [
+      "准备做饭",
+      "开始做饭",
+      "喜欢做饭"
+    ],
+    "compounds": [
+      "做",
+      "饭"
+    ],
+    "synonyms": [],
+    "antonyms": [],
+    "confusableWords": "",
+    "sentences": [
+      {
+        "zh": "我们打算明天一起去做饭。",
+        "pinyin": "Wǒ men dǎ suàn míng tiān yì qǐ qù zuò fàn.",
+        "vi": "Chúng tôi dự định ngày mai cùng nhau đi nấu ăn.",
+        "tag": "Ngữ cảnh HSK 3.0"
+      }
+    ],
+    "isHsk3Format": true
   }
 ];
 

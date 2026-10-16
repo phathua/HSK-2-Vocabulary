@@ -426,9 +426,15 @@
                   <span class="px-2.5 py-1 rounded-xl text-xs font-black bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200/50 dark:border-rose-900/40">
                     HSK {currentWord.hskLevel}
                   </span>
-                  <span class="px-2 py-0.5 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-[#282A2C] text-slate-500 dark:text-[#8E918F]">
-                    Bài {currentWord.lesson}
-                  </span>
+                  {#if currentWord.isHsk3Format}
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-black bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200/50 dark:border-amber-900/40">
+                      CHUẨN FORMAT HSK3.0
+                    </span>
+                  {:else}
+                    <span class="px-2 py-0.5 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-[#282A2C] text-slate-500 dark:text-[#8E918F]">
+                      Bài {currentWord.lesson}
+                    </span>
+                  {/if}
                 </div>
 
                 <!-- Pinyin & Âm Hán Việt -->
@@ -980,7 +986,7 @@
                 <span class={`text-[9px] px-1 py-0.2 rounded-full font-black ${
                   currentWord?.id === r.id ? 'bg-white/20 text-white' : 'bg-slate-200 dark:bg-[#37393B] text-slate-600 dark:text-[#C4C7C5]'
                 }`}>
-                  H{r.hskLevel}
+                  {r.isHsk3Format ? '3.0' : `H${r.hskLevel}`}
                 </span>
               </button>
             {/each}
