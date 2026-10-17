@@ -239,7 +239,31 @@
             album: 'HSK Online Listening'
           });
 
-          // Mẹo an toàn cho iOS Safari: chỉ cập nhật position state khi duration là số hữu hạn
+          // Cơ chế Live Stream Masking: Đặt duration vô hạn để iOS Safari ẩn thanh tua (scrubber knob) trên Lock Screen & Control Center
+          if ('setPositionState' in navigator.mediaSession) {
+            try {
+              navigator.mediaSession.setPositionState({
+                duration: Infinity,
+                playbackRate: 1,
+                position: 0
+              });
+            } catch {
+              try {
+                navigator.mediaSession.setPositionState({
+                  duration: Number.MAX_SAFE_INTEGER,
+                  playbackRate: 1,
+                  position: 0
+                });
+              } catch {}
+            }
+          }
+        } else {
+          navigator.mediaSession.metadata = new MediaMetadata({
+            title: `Audio ${examCode}`,
+            artist: 'HSK 2 Ôn Luyện Nghe',
+            album: 'HSK Online Listening'
+          });
+
           if ('setPositionState' in navigator.mediaSession) {
             try {
               if (Number.isFinite(duration) && duration > 0) {
@@ -251,12 +275,6 @@
               }
             } catch {}
           }
-        } else {
-          navigator.mediaSession.metadata = new MediaMetadata({
-            title: `Audio ${examCode}`,
-            artist: 'HSK 2 Ôn Luyện Nghe',
-            album: 'HSK Online Listening'
-          });
         }
       } catch {}
     }
